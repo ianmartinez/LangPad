@@ -1273,6 +1273,10 @@ Public Class frmMain
             btnUnderline_Click(Me, Nothing)
         ElseIf e.Control And e.KeyCode.ToString = "I" Then
             btnItalic_Click(Me, Nothing)
+
+            'The richtextbox wants to insent a tab here, so:
+            e.Handled = True
+            e.SuppressKeyPress = True
         ElseIf e.Control And e.KeyCode.ToString = "S" Then
             btnStrikethrough_Click(Me, Nothing)
         ElseIf e.Control And e.KeyCode.ToString = "F" Then
@@ -1285,6 +1289,22 @@ Public Class frmMain
             btnRight_Click(Me, Nothing)
         ElseIf e.Control And e.KeyCode.ToString = "P" Then
             btnPrint_Click(Me, Nothing)
+
+            'Language Pad specific key combos
+        ElseIf e.Control And e.KeyCode.ToString = "T" Then
+            btnAdd_Click(Me, Nothing)
+        ElseIf e.Control And e.KeyCode.ToString = "W" Then
+            btnRemove_Click(Me, Nothing)
+
+        ElseIf e.Control And e.KeyCode.ToString = "D" Then
+            btnDefault_Click(Me, Nothing)
+        ElseIf e.Control And e.KeyCode.ToString = "G" Then
+            btnApply_Click(Me, Nothing)
+
+        ElseIf e.Control And e.KeyCode.ToString = "J" Then
+            If Not tcNotebook.SelectedIndex = 0 Then tcNotebook.SelectedIndex -= 1
+        ElseIf e.Control And e.KeyCode.ToString = "K" Then
+            If Not tcNotebook.SelectedIndex = tcNotebook.TabPages.Count - 1 Then tcNotebook.SelectedIndex += 1
         End If
     End Sub
 End Class
