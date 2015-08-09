@@ -110,7 +110,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>JwMPvu/gHn53xo/b3sF0SdknQUs=</dsig:DigestValue>
+        <dsig:DigestValue>uP9HANZX7EFKfM4YyB6N80Tnlas=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -144,13 +144,13 @@
       <dsig:DigestValue>razJ7U/reN67NLNiAOMjCuUzdQk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Language Pad.exe.config" size="3270">
+  <file name="Language Pad.exe.config" size="3269">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>NMPM35bknnkLMI7iCTXKLLYahRI=</dsig:DigestValue>
+      <dsig:DigestValue>DR3+qQLzVMsZxSWBYoFxD3vtSgo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Update.txt" size="815">
