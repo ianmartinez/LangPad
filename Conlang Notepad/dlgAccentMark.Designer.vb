@@ -32,17 +32,15 @@ Partial Class dlgAccentMark
         Me.btnAdd = New Tundra.StylizedButton()
         Me.lblResult = New System.Windows.Forms.Label()
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
-        Me.pnlTabs = New Tundra.StylizedPanel()
         Me.cbAccents = New Language_Pad.CenteredComboBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.StylizedPanel1.SuspendLayout()
-        Me.pnlTabs.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 16)
+        Me.Label1.Location = New System.Drawing.Point(11, 16)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(56, 13)
@@ -52,17 +50,17 @@ Partial Class dlgAccentMark
         'txtCharacter
         '
         Me.txtCharacter.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCharacter.Location = New System.Drawing.Point(75, 10)
-        Me.txtCharacter.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCharacter.Location = New System.Drawing.Point(71, 11)
+        Me.txtCharacter.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCharacter.MaxLength = 100
         Me.txtCharacter.Name = "txtCharacter"
-        Me.txtCharacter.Size = New System.Drawing.Size(216, 25)
+        Me.txtCharacter.Size = New System.Drawing.Size(209, 25)
         Me.txtCharacter.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 44)
+        Me.Label2.Location = New System.Drawing.Point(11, 45)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
@@ -77,7 +75,7 @@ Partial Class dlgAccentMark
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(199, 70)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(199, 75)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -97,7 +95,7 @@ Partial Class dlgAccentMark
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
         Me.btnCancel.Location = New System.Drawing.Point(75, 2)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnCancel.Size = New System.Drawing.Size(69, 24)
@@ -119,7 +117,7 @@ Partial Class dlgAccentMark
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.ForeColor = System.Drawing.Color.Black
         Me.btnOK.Location = New System.Drawing.Point(2, 2)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnOK.Size = New System.Drawing.Size(69, 24)
@@ -143,8 +141,8 @@ Partial Class dlgAccentMark
         Me.btnAdd.ForeColor = System.Drawing.Color.Black
         Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
         Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdd.Location = New System.Drawing.Point(11, 71)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAdd.Location = New System.Drawing.Point(11, 76)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnAdd.Size = New System.Drawing.Size(168, 26)
@@ -164,7 +162,7 @@ Partial Class dlgAccentMark
         Me.lblResult.Location = New System.Drawing.Point(1, 1)
         Me.lblResult.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(49, 49)
+        Me.lblResult.Size = New System.Drawing.Size(60, 53)
         Me.lblResult.TabIndex = 69
         Me.lblResult.Text = "a"
         Me.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -173,34 +171,14 @@ Partial Class dlgAccentMark
         '
         Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
         Me.StylizedPanel1.Controls.Add(Me.lblResult)
-        Me.StylizedPanel1.Location = New System.Drawing.Point(294, 10)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.StylizedPanel1.Location = New System.Drawing.Point(284, 11)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(1)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(51, 51)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(62, 55)
         Me.StylizedPanel1.Style = "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Colors=~255|~255" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~190" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text C" &
     "olor=#252b2f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.StylizedPanel1.TabIndex = 70
-        '
-        'pnlTabs
-        '
-        Me.pnlTabs.BackColor = System.Drawing.Color.Transparent
-        Me.pnlTabs.Controls.Add(Me.btnAdd)
-        Me.pnlTabs.Controls.Add(Me.Label1)
-        Me.pnlTabs.Controls.Add(Me.TableLayoutPanel1)
-        Me.pnlTabs.Controls.Add(Me.StylizedPanel1)
-        Me.pnlTabs.Controls.Add(Me.cbAccents)
-        Me.pnlTabs.Controls.Add(Me.txtCharacter)
-        Me.pnlTabs.Controls.Add(Me.Label2)
-        Me.pnlTabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlTabs.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTabs.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
-        Me.pnlTabs.Name = "pnlTabs"
-        Me.pnlTabs.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
-        Me.pnlTabs.Size = New System.Drawing.Size(357, 110)
-        Me.pnlTabs.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color" &
-    "$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.pnlTabs.TabIndex = 73
         '
         'cbAccents
         '
@@ -208,10 +186,10 @@ Partial Class dlgAccentMark
         Me.cbAccents.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbAccents.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbAccents.FormattingEnabled = True
-        Me.cbAccents.Location = New System.Drawing.Point(74, 37)
+        Me.cbAccents.Location = New System.Drawing.Point(71, 40)
         Me.cbAccents.Margin = New System.Windows.Forms.Padding(2)
         Me.cbAccents.Name = "cbAccents"
-        Me.cbAccents.Size = New System.Drawing.Size(217, 26)
+        Me.cbAccents.Size = New System.Drawing.Size(210, 26)
         Me.cbAccents.TabIndex = 1
         '
         'dlgAccentMark
@@ -221,8 +199,14 @@ Partial Class dlgAccentMark
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(357, 110)
-        Me.Controls.Add(Me.pnlTabs)
+        Me.ClientSize = New System.Drawing.Size(357, 115)
+        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.StylizedPanel1)
+        Me.Controls.Add(Me.txtCharacter)
+        Me.Controls.Add(Me.cbAccents)
         Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -233,9 +217,8 @@ Partial Class dlgAccentMark
         Me.Text = "Accent Mark"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.StylizedPanel1.ResumeLayout(False)
-        Me.pnlTabs.ResumeLayout(False)
-        Me.pnlTabs.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -248,6 +231,5 @@ Partial Class dlgAccentMark
     Friend WithEvents btnAdd As Tundra.StylizedButton
     Friend WithEvents lblResult As System.Windows.Forms.Label
     Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
-    Friend WithEvents pnlTabs As Tundra.StylizedPanel
 
 End Class

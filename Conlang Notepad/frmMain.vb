@@ -1277,7 +1277,7 @@ Public Class frmMain
             'The richtextbox wants to insent a tab here, so:
             e.Handled = True
             e.SuppressKeyPress = True
-        ElseIf e.Control And e.KeyCode.ToString = "S" Then
+        ElseIf e.Control And e.KeyCode.ToString = "M" Then
             btnStrikethrough_Click(Me, Nothing)
         ElseIf e.Control And e.KeyCode.ToString = "F" Then
             btnFindReplace_Click(Me, Nothing)

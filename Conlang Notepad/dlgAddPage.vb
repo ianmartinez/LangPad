@@ -53,7 +53,7 @@ Public Class dlgAddPage
 
     End Sub
 
-    Private Sub pnlTabs_Paint(sender As Object, e As PaintEventArgs) Handles pnlTabs.Paint
+    Private Sub pnlTabs_Paint(sender As Object, e As PaintEventArgs) 
 
     End Sub
 End Class

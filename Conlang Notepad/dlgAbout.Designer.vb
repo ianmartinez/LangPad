@@ -32,14 +32,12 @@ Partial Class dlgAbout
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.btnOK = New Tundra.StylizedButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.pnlTabs = New Tundra.StylizedPanel()
         Me.lblLanguagePad = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlTabs.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -47,7 +45,7 @@ Partial Class dlgAbout
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Location = New System.Drawing.Point(9, 45)
+        Me.TabControl1.Location = New System.Drawing.Point(11, 46)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(380, 193)
@@ -143,7 +141,7 @@ Partial Class dlgAbout
         Me.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.ForeColor = System.Drawing.Color.Black
-        Me.btnOK.Location = New System.Drawing.Point(321, 243)
+        Me.btnOK.Location = New System.Drawing.Point(323, 244)
         Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
@@ -159,34 +157,17 @@ Partial Class dlgAbout
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox1.Location = New System.Drawing.Point(10, 11)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(26, 28)
         Me.PictureBox1.TabIndex = 11
         Me.PictureBox1.TabStop = False
         '
-        'pnlTabs
-        '
-        Me.pnlTabs.BackColor = System.Drawing.Color.Transparent
-        Me.pnlTabs.Controls.Add(Me.lblLanguagePad)
-        Me.pnlTabs.Controls.Add(Me.PictureBox1)
-        Me.pnlTabs.Controls.Add(Me.TabControl1)
-        Me.pnlTabs.Controls.Add(Me.btnOK)
-        Me.pnlTabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlTabs.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTabs.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
-        Me.pnlTabs.Name = "pnlTabs"
-        Me.pnlTabs.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
-        Me.pnlTabs.Size = New System.Drawing.Size(401, 278)
-        Me.pnlTabs.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color" &
-    "$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1"
-        Me.pnlTabs.TabIndex = 72
-        '
         'lblLanguagePad
         '
         Me.lblLanguagePad.Font = New System.Drawing.Font("Calibri Light", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLanguagePad.ForeColor = System.Drawing.Color.Maroon
-        Me.lblLanguagePad.Location = New System.Drawing.Point(41, 11)
+        Me.lblLanguagePad.Location = New System.Drawing.Point(43, 12)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
         Me.lblLanguagePad.Size = New System.Drawing.Size(348, 28)
@@ -202,7 +183,10 @@ Partial Class dlgAbout
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(401, 278)
-        Me.Controls.Add(Me.pnlTabs)
+        Me.Controls.Add(Me.lblLanguagePad)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.btnOK)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -218,7 +202,6 @@ Partial Class dlgAbout
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlTabs.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -229,7 +212,6 @@ Partial Class dlgAbout
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents btnOK As Tundra.StylizedButton
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents pnlTabs As Tundra.StylizedPanel
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents lblLanguagePad As Label

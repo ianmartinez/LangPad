@@ -194,21 +194,21 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnDeleteAll.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAC4klEQVQ4T22Ty09TQRTG79/g
-        yrgycW1c+EcYXWgkcSEmgBIT5FViqKhIxZTe2/YWaEsQGmtLQR6htEChpaUU6LsUCmKi1CKKQCmlKBF5
-        ufqcuYiCcJPvLubM+c13zplhamtrT0ilUjFKpVKqUCiW5BwH7j/J5fIlGqf7TgWQYMZobMFEdBLJ1BpW
-        qFZTWE6uCgqFIzAYjKD7TiRTqlzOIbWewdPKZ7iXfx8lZQ9R8bgSkuoasHIlTG2dSK6lBTfHkrVaLcPz
-        PMNxLDa+fRcA12/cxJWr15CVdQs5efkoLi2DpuEl1jc2wLHsPwA9WaPRMGq1mqGBUDiKDIFs7+xid28f
-        e/u/sLO7h62f20il1zExOXXoQEVPtSgUcqhUPFQ8D5lMBpd7FIvLK3j/YQ7mnl40NDbDbOlFIBRBPDGP
-        Ua//AECS7zQ169BjtWElmULi0wK0Gg26zRahcfH4R1h7bWjS6WHtsyEUmURiYQHjviCdBmjDVju7egi9
-        Dw6nG5lMBnanCyzLoUryHPME2G9zQPfKgP4BO7Eeg4zEvIHQAYDWu/ljS6jXbOlHOp1GJDoFWU0N3J4x
-        fFn8iqLiEugNJhQWlSA6NY3PZO0YIEXmbB9yYXDIKZzo9YdIfSxyc+9iLp6A3eESAIMOJ6KxGbCkdt8h
-        QEF+tgEHqSkAz5gXsZlZjIx6SZCD0dSGsXEfSkVl0BtbUXSaA3KbwNepwSp4BMMTAsg5PEJumQI5uXnQ
-        vzbCNewRAIIDAqD98QXCf0rguHQgGML021mEo1EM2J1o7+omAF5onFrbiAeFhTCY3pBelP51MO7zg7wV
-        MAUFBU/aOzoxR2br9nhhtvaTMWrxqKIC1S+kqFdroapVo6W1Q+hTbOYd/IEgmnU6CthkyHdGIpF4eFoK
-        rxSsV1VV2cXl5Y1SqTQlEolwOzsb9fV19PEItsmE1sRisZ7kXqIA+l0gunxE54nOEl08snZUdP0cwzDM
-        b6qwmFmwpoa4AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALiSURBVDhPbZPLT1NBFMbv3+DKuDJxbVz4RxhdaCRx
+        ISaAEhPkVWKoqEjFlN7b9hZoSxAaa0tBHqG0QKGlpRTouxQKYqLUIopAKaUoEXm5+py5iIJwk+8u5sz5
+        zXfOmWFqa2tPSKVSMUqlUqpQKJbkHAfuP8nl8iUap/tOBZBgxmhswUR0EsnUGlaoVlNYTq4KCoUjMBiM
+        oPtOJFOqXM4htZ7B08pnuJd/HyVlD1HxuBKS6hqwciVMbZ1IrqUFN8eStVotw/M8w3EsNr59FwDXb9zE
+        lavXkJV1Czl5+SguLYOm4SXWNzbAsew/AD1Zo9EwarWaoYFQOIoMgWzv7GJ3bx97+7+ws7uHrZ/bSKXX
+        MTE5dehARU+1KBRyqFQ8VDwPmUwGl3sUi8sreP9hDuaeXjQ0NsNs6UUgFEE8MY9Rr/8AQJLvNDXr0GO1
+        YSWZQuLTArQaDbrNFqFx8fhHWHttaNLpYe2zIRSZRGJhAeO+IJ0GaMNWO7t6CL0PDqcbmUwGdqcLLMuh
+        SvIc8wTYb3NA98qA/gE7sR6DjMS8gdABgNa7+WNLqNds6Uc6nUYkOgVZTQ3cnjF8WfyKouIS6A0mFBaV
+        IDo1jc9k7RggReZsH3JhcMgpnOj1h0h9LHJz72IunoDd4RIAgw4norEZsKR23yFAQX62AQepKQDPmBex
+        mVmMjHpJkIPR1IaxcR9KRWXQG1tRdJoDcpvA16nBKngEwxMCyDk8Qm6ZAjm5edC/NsI17BEAggMCoP3x
+        BcJ/SuC4dCAYwvTbWYSjUQzYnWjv6iYAXmicWtuIB4WFMJjekF6U/nUw7vODvBUwBQUFT9o7OjFHZuv2
+        eGG29pMxavGoogLVL6SoV2uhqlWjpbVD6FNs5h38gSCadToK2GTId0YikXh4WgqvFKxXVVXZxeXljVKp
+        NCUSiXA7Oxv19XX08Qi2yYTWxGKxnuReogD6XSC6fETnic4SXTyydlR0/RzDMMxvqrCYWbCmhrgAAAAA
+        SUVORK5CYII=
 </value>
   </data>
   <data name="btnDeleteAll.Style" xml:space="preserve">

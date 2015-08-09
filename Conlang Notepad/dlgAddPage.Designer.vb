@@ -28,15 +28,13 @@ Partial Class dlgAddPage
         Me.btnCancel = New Tundra.StylizedButton()
         Me.btnOK = New Tundra.StylizedButton()
         Me.txtName = New System.Windows.Forms.TextBox()
-        Me.pnlTabs = New Tundra.StylizedPanel()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.pnlTabs.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 11)
+        Me.Label1.Location = New System.Drawing.Point(8, 14)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(38, 13)
@@ -51,7 +49,7 @@ Partial Class dlgAddPage
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(43, 44)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(42, 44)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -71,7 +69,7 @@ Partial Class dlgAddPage
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
         Me.btnCancel.Location = New System.Drawing.Point(75, 2)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnCancel.Size = New System.Drawing.Size(69, 24)
@@ -93,7 +91,7 @@ Partial Class dlgAddPage
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.ForeColor = System.Drawing.Color.Black
         Me.btnOK.Location = New System.Drawing.Point(2, 2)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnOK.Size = New System.Drawing.Size(69, 24)
@@ -105,27 +103,11 @@ Partial Class dlgAddPage
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(50, 9)
-        Me.txtName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtName.Location = New System.Drawing.Point(50, 11)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(139, 20)
         Me.txtName.TabIndex = 0
-        '
-        'pnlTabs
-        '
-        Me.pnlTabs.BackColor = System.Drawing.Color.Transparent
-        Me.pnlTabs.Controls.Add(Me.txtName)
-        Me.pnlTabs.Controls.Add(Me.TableLayoutPanel1)
-        Me.pnlTabs.Controls.Add(Me.Label1)
-        Me.pnlTabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlTabs.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTabs.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
-        Me.pnlTabs.Name = "pnlTabs"
-        Me.pnlTabs.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
-        Me.pnlTabs.Size = New System.Drawing.Size(200, 84)
-        Me.pnlTabs.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color" &
-    "$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.pnlTabs.TabIndex = 74
         '
         'dlgAddPage
         '
@@ -135,7 +117,9 @@ Partial Class dlgAddPage
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(200, 84)
-        Me.Controls.Add(Me.pnlTabs)
+        Me.Controls.Add(Me.txtName)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -143,9 +127,8 @@ Partial Class dlgAddPage
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.pnlTabs.ResumeLayout(False)
-        Me.pnlTabs.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -153,6 +136,5 @@ Partial Class dlgAddPage
     Friend WithEvents btnCancel As Tundra.StylizedButton
     Friend WithEvents btnOK As Tundra.StylizedButton
     Friend WithEvents txtName As System.Windows.Forms.TextBox
-    Friend WithEvents pnlTabs As Tundra.StylizedPanel
 
 End Class

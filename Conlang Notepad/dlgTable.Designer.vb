@@ -32,12 +32,10 @@ Partial Class dlgTable
         Me.Label2 = New System.Windows.Forms.Label()
         Me.nudColumns = New System.Windows.Forms.NumericUpDown()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.pnlTabs = New Tundra.StylizedPanel()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.nudRows, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudWidth, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudColumns, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlTabs.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -48,7 +46,7 @@ Partial Class dlgTable
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(72, 92)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(68, 92)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -68,7 +66,7 @@ Partial Class dlgTable
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
         Me.btnCancel.Location = New System.Drawing.Point(75, 2)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnCancel.Size = New System.Drawing.Size(69, 24)
@@ -90,7 +88,7 @@ Partial Class dlgTable
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.ForeColor = System.Drawing.Color.Black
         Me.btnOK.Location = New System.Drawing.Point(2, 2)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnOK.Size = New System.Drawing.Size(69, 24)
@@ -103,7 +101,7 @@ Partial Class dlgTable
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 19)
+        Me.Label1.Location = New System.Drawing.Point(11, 13)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(37, 13)
@@ -112,30 +110,30 @@ Partial Class dlgTable
         '
         'nudRows
         '
-        Me.nudRows.Location = New System.Drawing.Point(88, 17)
-        Me.nudRows.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.nudRows.Location = New System.Drawing.Point(90, 11)
+        Me.nudRows.Margin = New System.Windows.Forms.Padding(2)
         Me.nudRows.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudRows.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudRows.Name = "nudRows"
-        Me.nudRows.Size = New System.Drawing.Size(130, 20)
+        Me.nudRows.Size = New System.Drawing.Size(125, 20)
         Me.nudRows.TabIndex = 7
         Me.nudRows.Value = New Decimal(New Integer() {2, 0, 0, 0})
         '
         'nudWidth
         '
-        Me.nudWidth.Location = New System.Drawing.Point(88, 63)
-        Me.nudWidth.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.nudWidth.Location = New System.Drawing.Point(91, 59)
+        Me.nudWidth.Margin = New System.Windows.Forms.Padding(2)
         Me.nudWidth.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.nudWidth.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudWidth.Name = "nudWidth"
-        Me.nudWidth.Size = New System.Drawing.Size(130, 20)
+        Me.nudWidth.Size = New System.Drawing.Size(125, 20)
         Me.nudWidth.TabIndex = 9
         Me.nudWidth.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 64)
+        Me.Label2.Location = New System.Drawing.Point(11, 61)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(76, 13)
@@ -144,44 +142,24 @@ Partial Class dlgTable
         '
         'nudColumns
         '
-        Me.nudColumns.Location = New System.Drawing.Point(88, 40)
-        Me.nudColumns.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.nudColumns.Location = New System.Drawing.Point(90, 35)
+        Me.nudColumns.Margin = New System.Windows.Forms.Padding(2)
         Me.nudColumns.Maximum = New Decimal(New Integer() {50, 0, 0, 0})
         Me.nudColumns.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudColumns.Name = "nudColumns"
-        Me.nudColumns.Size = New System.Drawing.Size(130, 20)
+        Me.nudColumns.Size = New System.Drawing.Size(125, 20)
         Me.nudColumns.TabIndex = 8
         Me.nudColumns.Value = New Decimal(New Integer() {2, 0, 0, 0})
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 41)
+        Me.Label3.Location = New System.Drawing.Point(11, 37)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(50, 13)
         Me.Label3.TabIndex = 74
         Me.Label3.Text = "Columns:"
-        '
-        'pnlTabs
-        '
-        Me.pnlTabs.BackColor = System.Drawing.Color.Transparent
-        Me.pnlTabs.Controls.Add(Me.nudColumns)
-        Me.pnlTabs.Controls.Add(Me.TableLayoutPanel1)
-        Me.pnlTabs.Controls.Add(Me.Label3)
-        Me.pnlTabs.Controls.Add(Me.Label1)
-        Me.pnlTabs.Controls.Add(Me.nudWidth)
-        Me.pnlTabs.Controls.Add(Me.nudRows)
-        Me.pnlTabs.Controls.Add(Me.Label2)
-        Me.pnlTabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlTabs.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTabs.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
-        Me.pnlTabs.Name = "pnlTabs"
-        Me.pnlTabs.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
-        Me.pnlTabs.Size = New System.Drawing.Size(226, 132)
-        Me.pnlTabs.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color" &
-    "$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.pnlTabs.TabIndex = 75
         '
         'dlgTable
         '
@@ -191,7 +169,13 @@ Partial Class dlgTable
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(226, 132)
-        Me.Controls.Add(Me.pnlTabs)
+        Me.Controls.Add(Me.nudColumns)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.nudRows)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.nudWidth)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -203,9 +187,8 @@ Partial Class dlgTable
         CType(Me.nudRows, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudWidth, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudColumns, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlTabs.ResumeLayout(False)
-        Me.pnlTabs.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
@@ -217,6 +200,5 @@ Partial Class dlgTable
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents nudColumns As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents pnlTabs As Tundra.StylizedPanel
 
 End Class

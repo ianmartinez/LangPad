@@ -28,17 +28,15 @@ Partial Class dlgCustomZoom
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnCancel = New Tundra.StylizedButton()
         Me.btnOK = New Tundra.StylizedButton()
-        Me.pnlTabs = New Tundra.StylizedPanel()
         CType(Me.nudZoom, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.pnlTabs.SuspendLayout()
         Me.SuspendLayout()
         '
         'nudZoom
         '
         Me.nudZoom.DecimalPlaces = 3
-        Me.nudZoom.Location = New System.Drawing.Point(82, 10)
-        Me.nudZoom.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.nudZoom.Location = New System.Drawing.Point(82, 11)
+        Me.nudZoom.Margin = New System.Windows.Forms.Padding(2)
         Me.nudZoom.Maximum = New Decimal(New Integer() {64, 0, 0, 0})
         Me.nudZoom.Minimum = New Decimal(New Integer() {15626, 0, 0, 393216})
         Me.nudZoom.Name = "nudZoom"
@@ -49,7 +47,7 @@ Partial Class dlgCustomZoom
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 11)
+        Me.Label2.Location = New System.Drawing.Point(8, 13)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 13)
@@ -84,7 +82,7 @@ Partial Class dlgCustomZoom
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
         Me.btnCancel.Location = New System.Drawing.Point(75, 2)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnCancel.Size = New System.Drawing.Size(69, 24)
@@ -106,7 +104,7 @@ Partial Class dlgCustomZoom
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.ForeColor = System.Drawing.Color.Black
         Me.btnOK.Location = New System.Drawing.Point(2, 2)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnOK.Size = New System.Drawing.Size(69, 24)
@@ -116,22 +114,6 @@ Partial Class dlgCustomZoom
         Me.btnOK.UseCompatibleTextRendering = True
         Me.btnOK.UseVisualStyleBackColor = False
         '
-        'pnlTabs
-        '
-        Me.pnlTabs.BackColor = System.Drawing.Color.Transparent
-        Me.pnlTabs.Controls.Add(Me.nudZoom)
-        Me.pnlTabs.Controls.Add(Me.TableLayoutPanel1)
-        Me.pnlTabs.Controls.Add(Me.Label2)
-        Me.pnlTabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlTabs.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTabs.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
-        Me.pnlTabs.Name = "pnlTabs"
-        Me.pnlTabs.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
-        Me.pnlTabs.Size = New System.Drawing.Size(265, 82)
-        Me.pnlTabs.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color" &
-    "$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.pnlTabs.TabIndex = 76
-        '
         'dlgCustomZoom
         '
         Me.AcceptButton = Me.btnOK
@@ -140,7 +122,9 @@ Partial Class dlgCustomZoom
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(265, 82)
-        Me.Controls.Add(Me.pnlTabs)
+        Me.Controls.Add(Me.nudZoom)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -150,9 +134,8 @@ Partial Class dlgCustomZoom
         Me.Text = "Custom Zoom"
         CType(Me.nudZoom, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.pnlTabs.ResumeLayout(False)
-        Me.pnlTabs.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents nudZoom As System.Windows.Forms.NumericUpDown
@@ -160,6 +143,5 @@ Partial Class dlgCustomZoom
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents btnCancel As Tundra.StylizedButton
     Friend WithEvents btnOK As Tundra.StylizedButton
-    Friend WithEvents pnlTabs As Tundra.StylizedPanel
 
 End Class

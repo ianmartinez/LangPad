@@ -43,14 +43,12 @@ Partial Class dlgTextArt
         Me.nudSize = New System.Windows.Forms.NumericUpDown()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
-        Me.pnlTabs = New Tundra.StylizedPanel()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.nudAngle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudShadowX, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudShadowY, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudSize, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StylizedPanel1.SuspendLayout()
-        Me.pnlTabs.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -61,7 +59,7 @@ Partial Class dlgTextArt
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(265, 302)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(267, 303)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -142,7 +140,7 @@ Partial Class dlgTextArt
         Me.btnColor2.ForeColor = System.Drawing.Color.Black
         Me.btnColor2.Image = CType(resources.GetObject("btnColor2.Image"), System.Drawing.Image)
         Me.btnColor2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnColor2.Location = New System.Drawing.Point(84, 162)
+        Me.btnColor2.Location = New System.Drawing.Point(86, 163)
         Me.btnColor2.Margin = New System.Windows.Forms.Padding(2)
         Me.btnColor2.MinimumSize = New System.Drawing.Size(2, 24)
         Me.btnColor2.Name = "btnColor2"
@@ -169,7 +167,7 @@ Partial Class dlgTextArt
         Me.btnColor1.ForeColor = System.Drawing.Color.Black
         Me.btnColor1.Image = CType(resources.GetObject("btnColor1.Image"), System.Drawing.Image)
         Me.btnColor1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnColor1.Location = New System.Drawing.Point(9, 162)
+        Me.btnColor1.Location = New System.Drawing.Point(11, 163)
         Me.btnColor1.Margin = New System.Windows.Forms.Padding(2)
         Me.btnColor1.MinimumSize = New System.Drawing.Size(2, 24)
         Me.btnColor1.Name = "btnColor1"
@@ -196,7 +194,7 @@ Partial Class dlgTextArt
         Me.btnBorderColor.ForeColor = System.Drawing.Color.Black
         Me.btnBorderColor.Image = CType(resources.GetObject("btnBorderColor.Image"), System.Drawing.Image)
         Me.btnBorderColor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBorderColor.Location = New System.Drawing.Point(159, 162)
+        Me.btnBorderColor.Location = New System.Drawing.Point(161, 163)
         Me.btnBorderColor.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBorderColor.MinimumSize = New System.Drawing.Size(2, 24)
         Me.btnBorderColor.Name = "btnBorderColor"
@@ -223,7 +221,7 @@ Partial Class dlgTextArt
         Me.btnShadowColor.ForeColor = System.Drawing.Color.Black
         Me.btnShadowColor.Image = CType(resources.GetObject("btnShadowColor.Image"), System.Drawing.Image)
         Me.btnShadowColor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnShadowColor.Location = New System.Drawing.Point(253, 162)
+        Me.btnShadowColor.Location = New System.Drawing.Point(255, 163)
         Me.btnShadowColor.Margin = New System.Windows.Forms.Padding(2)
         Me.btnShadowColor.MinimumSize = New System.Drawing.Size(2, 24)
         Me.btnShadowColor.Name = "btnShadowColor"
@@ -240,7 +238,7 @@ Partial Class dlgTextArt
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(8, 196)
+        Me.Label1.Location = New System.Drawing.Point(10, 197)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(37, 13)
@@ -249,7 +247,7 @@ Partial Class dlgTextArt
         '
         'nudAngle
         '
-        Me.nudAngle.Location = New System.Drawing.Point(48, 194)
+        Me.nudAngle.Location = New System.Drawing.Point(50, 195)
         Me.nudAngle.Margin = New System.Windows.Forms.Padding(2)
         Me.nudAngle.Maximum = New Decimal(New Integer() {360, 0, 0, 0})
         Me.nudAngle.Minimum = New Decimal(New Integer() {360, 0, 0, -2147483648})
@@ -260,7 +258,7 @@ Partial Class dlgTextArt
         '
         'nudShadowX
         '
-        Me.nudShadowX.Location = New System.Drawing.Point(152, 194)
+        Me.nudShadowX.Location = New System.Drawing.Point(154, 195)
         Me.nudShadowX.Margin = New System.Windows.Forms.Padding(2)
         Me.nudShadowX.Maximum = New Decimal(New Integer() {360, 0, 0, 0})
         Me.nudShadowX.Minimum = New Decimal(New Integer() {360, 0, 0, -2147483648})
@@ -272,7 +270,7 @@ Partial Class dlgTextArt
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(91, 196)
+        Me.Label2.Location = New System.Drawing.Point(93, 197)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(59, 13)
@@ -281,7 +279,7 @@ Partial Class dlgTextArt
         '
         'nudShadowY
         '
-        Me.nudShadowY.Location = New System.Drawing.Point(256, 194)
+        Me.nudShadowY.Location = New System.Drawing.Point(258, 195)
         Me.nudShadowY.Margin = New System.Windows.Forms.Padding(2)
         Me.nudShadowY.Maximum = New Decimal(New Integer() {360, 0, 0, 0})
         Me.nudShadowY.Minimum = New Decimal(New Integer() {360, 0, 0, -2147483648})
@@ -293,7 +291,7 @@ Partial Class dlgTextArt
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(195, 196)
+        Me.Label3.Location = New System.Drawing.Point(197, 197)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(59, 13)
@@ -302,7 +300,7 @@ Partial Class dlgTextArt
         '
         'txtText
         '
-        Me.txtText.Location = New System.Drawing.Point(9, 220)
+        Me.txtText.Location = New System.Drawing.Point(11, 221)
         Me.txtText.Margin = New System.Windows.Forms.Padding(2)
         Me.txtText.Multiline = True
         Me.txtText.Name = "txtText"
@@ -320,7 +318,7 @@ Partial Class dlgTextArt
         Me.btnFont.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnFont.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFont.ForeColor = System.Drawing.Color.Black
-        Me.btnFont.Location = New System.Drawing.Point(346, 162)
+        Me.btnFont.Location = New System.Drawing.Point(348, 163)
         Me.btnFont.Margin = New System.Windows.Forms.Padding(2)
         Me.btnFont.Name = "btnFont"
         Me.btnFont.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
@@ -337,7 +335,7 @@ Partial Class dlgTextArt
         '
         'nudSize
         '
-        Me.nudSize.Location = New System.Drawing.Point(367, 194)
+        Me.nudSize.Location = New System.Drawing.Point(369, 195)
         Me.nudSize.Margin = New System.Windows.Forms.Padding(2)
         Me.nudSize.Maximum = New Decimal(New Integer() {360, 0, 0, 0})
         Me.nudSize.Name = "nudSize"
@@ -348,7 +346,7 @@ Partial Class dlgTextArt
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(299, 196)
+        Me.Label4.Location = New System.Drawing.Point(301, 197)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(64, 13)
@@ -359,7 +357,7 @@ Partial Class dlgTextArt
         '
         Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
         Me.StylizedPanel1.Controls.Add(Me.StylizedText1)
-        Me.StylizedPanel1.Location = New System.Drawing.Point(9, 10)
+        Me.StylizedPanel1.Location = New System.Drawing.Point(11, 11)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(1)
@@ -367,35 +365,6 @@ Partial Class dlgTextArt
         Me.StylizedPanel1.Style = "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Colors=~255|~255" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text C" &
     "olor=#252b2f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
         Me.StylizedPanel1.TabIndex = 83
-        '
-        'pnlTabs
-        '
-        Me.pnlTabs.BackColor = System.Drawing.Color.Transparent
-        Me.pnlTabs.Controls.Add(Me.nudSize)
-        Me.pnlTabs.Controls.Add(Me.StylizedPanel1)
-        Me.pnlTabs.Controls.Add(Me.Label4)
-        Me.pnlTabs.Controls.Add(Me.TableLayoutPanel1)
-        Me.pnlTabs.Controls.Add(Me.btnFont)
-        Me.pnlTabs.Controls.Add(Me.btnColor1)
-        Me.pnlTabs.Controls.Add(Me.txtText)
-        Me.pnlTabs.Controls.Add(Me.btnColor2)
-        Me.pnlTabs.Controls.Add(Me.nudShadowY)
-        Me.pnlTabs.Controls.Add(Me.btnBorderColor)
-        Me.pnlTabs.Controls.Add(Me.Label3)
-        Me.pnlTabs.Controls.Add(Me.btnShadowColor)
-        Me.pnlTabs.Controls.Add(Me.nudShadowX)
-        Me.pnlTabs.Controls.Add(Me.Label1)
-        Me.pnlTabs.Controls.Add(Me.Label2)
-        Me.pnlTabs.Controls.Add(Me.nudAngle)
-        Me.pnlTabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlTabs.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTabs.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
-        Me.pnlTabs.Name = "pnlTabs"
-        Me.pnlTabs.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
-        Me.pnlTabs.Size = New System.Drawing.Size(420, 341)
-        Me.pnlTabs.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color" &
-    "$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.pnlTabs.TabIndex = 84
         '
         'dlgTextArt
         '
@@ -405,7 +374,22 @@ Partial Class dlgTextArt
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(420, 341)
-        Me.Controls.Add(Me.pnlTabs)
+        Me.Controls.Add(Me.nudSize)
+        Me.Controls.Add(Me.StylizedPanel1)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.nudAngle)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.btnFont)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnColor1)
+        Me.Controls.Add(Me.nudShadowX)
+        Me.Controls.Add(Me.txtText)
+        Me.Controls.Add(Me.btnShadowColor)
+        Me.Controls.Add(Me.btnColor2)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.nudShadowY)
+        Me.Controls.Add(Me.btnBorderColor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -419,9 +403,8 @@ Partial Class dlgTextArt
         CType(Me.nudShadowY, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudSize, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StylizedPanel1.ResumeLayout(False)
-        Me.pnlTabs.ResumeLayout(False)
-        Me.pnlTabs.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
@@ -444,6 +427,5 @@ Partial Class dlgTextArt
     Friend WithEvents nudSize As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
-    Friend WithEvents pnlTabs As Tundra.StylizedPanel
 
 End Class

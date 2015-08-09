@@ -41,11 +41,9 @@ Partial Class dlgWebcam
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnCancel = New Tundra.StylizedButton()
         Me.btnOK = New Tundra.StylizedButton()
-        Me.pnlTabs = New Tundra.StylizedPanel()
         Me.wfMain = New Language_Pad.WebcamFrame()
         Me.cmsColor.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.pnlTabs.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnFlash
@@ -63,7 +61,7 @@ Partial Class dlgWebcam
         Me.btnFlash.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFlash.ForeColor = System.Drawing.Color.Black
         Me.btnFlash.Image = CType(resources.GetObject("btnFlash.Image"), System.Drawing.Image)
-        Me.btnFlash.Location = New System.Drawing.Point(71, 326)
+        Me.btnFlash.Location = New System.Drawing.Point(71, 327)
         Me.btnFlash.Margin = New System.Windows.Forms.Padding(2)
         Me.btnFlash.Name = "btnFlash"
         Me.btnFlash.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
@@ -162,7 +160,7 @@ Partial Class dlgWebcam
         Me.btnPause.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPause.ForeColor = System.Drawing.Color.Black
         Me.btnPause.Image = CType(resources.GetObject("btnPause.Image"), System.Drawing.Image)
-        Me.btnPause.Location = New System.Drawing.Point(41, 326)
+        Me.btnPause.Location = New System.Drawing.Point(41, 327)
         Me.btnPause.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPause.Name = "btnPause"
         Me.btnPause.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
@@ -186,7 +184,7 @@ Partial Class dlgWebcam
         Me.btnPlay.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPlay.ForeColor = System.Drawing.Color.Black
         Me.btnPlay.Image = CType(resources.GetObject("btnPlay.Image"), System.Drawing.Image)
-        Me.btnPlay.Location = New System.Drawing.Point(11, 326)
+        Me.btnPlay.Location = New System.Drawing.Point(11, 327)
         Me.btnPlay.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPlay.Name = "btnPlay"
         Me.btnPlay.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
@@ -256,24 +254,6 @@ Partial Class dlgWebcam
         Me.btnOK.UseCompatibleTextRendering = True
         Me.btnOK.UseVisualStyleBackColor = False
         '
-        'pnlTabs
-        '
-        Me.pnlTabs.BackColor = System.Drawing.Color.Transparent
-        Me.pnlTabs.Controls.Add(Me.wfMain)
-        Me.pnlTabs.Controls.Add(Me.TableLayoutPanel1)
-        Me.pnlTabs.Controls.Add(Me.btnFlash)
-        Me.pnlTabs.Controls.Add(Me.btnPause)
-        Me.pnlTabs.Controls.Add(Me.btnPlay)
-        Me.pnlTabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlTabs.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTabs.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
-        Me.pnlTabs.Name = "pnlTabs"
-        Me.pnlTabs.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
-        Me.pnlTabs.Size = New System.Drawing.Size(427, 357)
-        Me.pnlTabs.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color" &
-    "$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.pnlTabs.TabIndex = 74
-        '
         'wfMain
         '
         Me.wfMain.BackColor = System.Drawing.Color.White
@@ -294,7 +274,11 @@ Partial Class dlgWebcam
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(427, 357)
-        Me.Controls.Add(Me.pnlTabs)
+        Me.Controls.Add(Me.wfMain)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.btnFlash)
+        Me.Controls.Add(Me.btnPause)
+        Me.Controls.Add(Me.btnPlay)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -305,7 +289,6 @@ Partial Class dlgWebcam
         Me.Text = "Webcam"
         Me.cmsColor.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.pnlTabs.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -327,6 +310,5 @@ Partial Class dlgWebcam
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents btnCancel As Tundra.StylizedButton
     Friend WithEvents btnOK As Tundra.StylizedButton
-    Friend WithEvents pnlTabs As Tundra.StylizedPanel
 
 End Class
