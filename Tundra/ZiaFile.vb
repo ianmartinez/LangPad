@@ -31,7 +31,7 @@ Public Module ZiaFile
 
     Public Function Read(ByVal Data As String) As Dictionary(Of String, String)
         On Error Resume Next
-        Dim Lines As String() = Data.Split(New String() {Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+        Dim Lines As String() = Data.Split(New String() {Environment.NewLine, vbCrLf, vbCr, vbLf}, StringSplitOptions.RemoveEmptyEntries)
         Dim TemporaryDictionary As New Dictionary(Of String, String)
         For Each Line As String In Lines
             If Line.StartsWith("!") Then Continue For

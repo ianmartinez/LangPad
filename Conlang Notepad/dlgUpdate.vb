@@ -31,7 +31,7 @@ Public Class dlgUpdate
 
     Public Sub FetchUpdateData()
         'On Error Resume Next
-        Dim updatefile As String = "https://drive.google.com/uc?export=download&id=0ByovbnZG1bHnR2tDUHJIT21tRDg"
+        Dim updatefile As String = "https://raw.githubusercontent.com/ianmartinez/Language-Pad/master/Conlang%20Notepad/Update.txt"
         Dim fileName As String = Application.LocalUserAppDataPath & "\update.txt"
         If System.IO.File.Exists(fileName) Then System.IO.File.Delete(fileName)
 
@@ -39,6 +39,8 @@ Public Class dlgUpdate
         downloadclient.DownloadFile(updatefile, fileName)
 
         UpdateFileText = IO.File.ReadAllText(fileName)
+
+        MessageBox.Show(UpdateFileText)
         NewestVersion = GetValue(UpdateFileText, "Version")
         Description = FromCompatibleString(GetValue(UpdateFileText, "Description"))
         DownloadLink = FromCompatibleString(GetValue(UpdateFileText, "DownloadLink"))
