@@ -373,7 +373,7 @@ Partial Class dlgTextArt
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(420, 341)
+        Me.ClientSize = New System.Drawing.Size(425, 341)
         Me.Controls.Add(Me.nudSize)
         Me.Controls.Add(Me.StylizedPanel1)
         Me.Controls.Add(Me.Label4)
