@@ -40,7 +40,6 @@ Public Class dlgUpdate
 
         UpdateFileText = IO.File.ReadAllText(fileName)
 
-        MessageBox.Show(UpdateFileText)
         NewestVersion = GetValue(UpdateFileText, "Version")
         Description = FromCompatibleString(GetValue(UpdateFileText, "Description"))
         DownloadLink = FromCompatibleString(GetValue(UpdateFileText, "DownloadLink"))
