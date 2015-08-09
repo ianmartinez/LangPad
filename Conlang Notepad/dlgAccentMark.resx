@@ -184,9 +184,9 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnAdd.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAKgAAAAaCAYAAAAjSRfKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAoSURBVHhe7cEBDQAAAMKg909tDwcEAAAAAAAAAAAAAAAA
-        AAAAANypAURaAAFFdo9uAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAKgAAAAYCAYAAABugbbBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAnSURBVHhe7cExAQAAAMKg9U9tDQ8gAAAAAAAAAAAAAAAA
+        AAAAuFUDPxgAAQrXP8IAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

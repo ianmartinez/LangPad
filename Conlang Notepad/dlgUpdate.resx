@@ -213,25 +213,25 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnReddit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJkAAAAaCAYAAACkeP7MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAmSURBVGhD7cEBDQAAAMKg909tDwcEAAAAAAAAAAAAAAAA
-        AADAhRo+QgABMQ+x7wAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAJkAAAAYCAYAAADpsF/HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAkSURBVGhD7cEBAQAAAIIg/6+uIUAAAAAAAAAAAAAAAAAA
+        AFwNOXgAAQQxJ34AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnReddit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACLElEQVQ4T5WS3UvTYRTH94fU
-        Td34s73klu4lukwvJKMXiIiw/ReVrcuom0gjI8uCvRiE1IUGgU7mLkq3lEjnW24KFeQLMzMopu3TOY8b
-        mxZYBw7P75znez6cc36PTe16LDUZio5yLTKy0yUXiqYIxdLm3I5HUb3WATabXEwmZvPkvkJurVhxiRc3
-        4ONP+FSQ88d2nFuHxOyagRjAzd53ZKWgc2STjtcF7r5R3+ReGh6KpKnlLG6nxfHmU9wfh87UloFrJwbQ
-        0Z9hPl/kQXqLR2ObdL8t0C1nOAONjU0EGjwqpN5lEZ6GrrHtDnVEA2gXQFbaikjB0xnokTM2UeTZPASO
-        ODh9vhWv20HLmXP0LkJUIAvfEECpg/b+KbKSqDmwD6+njluxJC/moE/EvjqLV1/g5We4/Xwcf0M91sH9
-        LHwXgCzVAO70ZZjO6zdsrOfx+70MSNHgsgDcduIrMLAk3fh9cr9mdLJD2sodKGCqBEgOJ3A57OIWLrvF
-        Yacd56EavD4fx44GGE4kjG5mB0BGmJMdnDzRTDAYZHBoyIh222B8iEty33rxAh9k5LZIeQQBKLEnGjbC
-        vUx1s/IbKwAZYWKlaC6NueSBOfWRVZnGmi9ZZnXXDt4vbZkLYyr+G6AqN7lc5Gq49A5uyEvMVHfwDza1
-        Wqx0cPlxMhuX/6hJHWVC2jOu38u//sipLj6T58qTZNYAxGo1UKK2tZerTvVaVwao1Yp7/sNVL0vB9hvB
-        ZfhvwxhEOgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAIsSURBVDhPlZLdS9NhFMf3h9RN3fizveSW7iW6TC8k
+        oxeIiLD9F5Wty6ibSCMjy4K9GITUhQaBTuYuSreUSOdbbgoV5AszMyim7dM5jxubFlgHDs/vnOd7Ppxz
+        fo9N7XosNRmKjnItMrLTJReKpgjF0ubcjkdRvdYBNptcTCZm8+S+Qm6tWHGJFzfg40/4VJDzx3acW4fE
+        7JqBGMDN3ndkpaBzZJOO1wXuvlHf5F4aHoqkqeUsbqfF8eZT3B+HztSWgWsnBtDRn2E+X+RBeotHY5t0
+        vy3QLWc4A42NTQQaPCqk3mURnoause0OdUQDaBdAVtqKSMHTGeiRMzZR5Nk8BI44OH2+Fa/bQcuZc/Qu
+        QlQgC98QQKmD9v4pspKoObAPr6eOW7EkL+agT8S+OotXX+DlZ7j9fBx/Qz3Wwf0sfBeALNUA7vRlmM7r
+        N2ys5/H7vQxI0eCyANx24iswsCTd+H1yv2Z0skPayh0oYKoESA4ncDns4hYuu8Vhpx3noRq8Ph/HjgYY
+        TiSMbmYHQEaYkx2cPNFMMBhkcGjIiHbbYHyIS3LfevECH2Tktkh5BAEosScaNsK9THWz8hsrABlhYqVo
+        Lo255IE59ZFVmcaaL1lmddcO3i9tmQtjKv4boCo3uVzkarj0Dm7IS8xUd/APNrVarHRw+XEyG5f/qEkd
+        ZULaM67fy7/+yKkuPpPnypNk1gDEajVQora1l6tO9VpXBqjVinv+w1UvS8H2G8Fl+G/DGEQ6AAAAAElF
+        TkSuQmCC
 </value>
   </data>
   <data name="btnReddit.Style" xml:space="preserve">

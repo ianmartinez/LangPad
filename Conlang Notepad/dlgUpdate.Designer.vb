@@ -143,7 +143,6 @@ Partial Class dlgUpdate
         '
         'btnReddit
         '
-        Me.btnReddit.AutoSize = True
         Me.btnReddit.BackColor = System.Drawing.Color.Transparent
         Me.btnReddit.BackgroundImage = CType(resources.GetObject("btnReddit.BackgroundImage"), System.Drawing.Image)
         Me.btnReddit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -155,11 +154,11 @@ Partial Class dlgUpdate
         Me.btnReddit.ForeColor = System.Drawing.Color.Black
         Me.btnReddit.Image = CType(resources.GetObject("btnReddit.Image"), System.Drawing.Image)
         Me.btnReddit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnReddit.Location = New System.Drawing.Point(12, 328)
+        Me.btnReddit.Location = New System.Drawing.Point(12, 331)
         Me.btnReddit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnReddit.Name = "btnReddit"
         Me.btnReddit.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnReddit.Size = New System.Drawing.Size(153, 26)
+        Me.btnReddit.Size = New System.Drawing.Size(153, 24)
         Me.btnReddit.Style = resources.GetString("btnReddit.Style")
         Me.btnReddit.TabIndex = 76
         Me.btnReddit.Text = " View Reddit Thread"

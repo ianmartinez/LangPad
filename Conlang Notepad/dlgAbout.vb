@@ -7,4 +7,8 @@
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
 
     End Sub
+
+    Private Sub btnGitHub_Click(sender As Object, e As EventArgs) Handles btnGitHub.Click
+        Process.Start("https://github.com/ianmartinez/Language-Pad")
+    End Sub
 End Class

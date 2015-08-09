@@ -129,7 +129,6 @@ Partial Class dlgAccentMark
         '
         'btnAdd
         '
-        Me.btnAdd.AutoSize = True
         Me.btnAdd.BackColor = System.Drawing.Color.Transparent
         Me.btnAdd.BackgroundImage = CType(resources.GetObject("btnAdd.BackgroundImage"), System.Drawing.Image)
         Me.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -141,11 +140,11 @@ Partial Class dlgAccentMark
         Me.btnAdd.ForeColor = System.Drawing.Color.Black
         Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
         Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdd.Location = New System.Drawing.Point(11, 76)
+        Me.btnAdd.Location = New System.Drawing.Point(11, 77)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnAdd.Size = New System.Drawing.Size(168, 26)
+        Me.btnAdd.Size = New System.Drawing.Size(168, 24)
         Me.btnAdd.Style = resources.GetString("btnAdd.Style")
         Me.btnAdd.TabIndex = 3
         Me.btnAdd.Text = " Add to custom symbols"

@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>Copyright (c) 2015, Ian Martinez
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
+  </data>
   <data name="TextBox2.Text" xml:space="preserve">
     <value>Version 5.2 (August 9, 2015)
    •Keyboard shortcuts
@@ -356,18 +368,6 @@ Version 1.1 (May 3, 2015)
 Version 1.0 (April 24, 2015)
    •Initial Release</value>
   </data>
-  <data name="TextBox1.Text" xml:space="preserve">
-    <value>Copyright (c) 2015, Ian Martinez
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-
-1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnOK.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -429,5 +429,52 @@ Pressed Highlight Color=$0</value>
         VUmpCcxwqebcxMaVWdJe57xYPd6QukgSvTU/R62QmsAMDykgsAhn7Z5Ha8p/LfjqlYaqUbpEjRIW3ZCS
         EA2KF0ta9FJFC7UoWhCg+S9VGCBOv2Vu0uF/AKQp/xTq9Le6AAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="btnGitHub.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGwAAAAYCAYAAAAf1RgaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAhSURBVGhD7cExAQAAAMKg9U9tCU8gAAAAAAAAAAAAgIsa
+        KJgAAc5SUlMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnGitHub.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACT0lEQVQ4T51PTUiTcRz20sVT
+        UCev1XWEnSLDhN53r69zbs5t6jan29K17+19x9SECOxih0LylMbC0BlShi7MLn0wEEqhDh2Gs0M3rwW1
+        09P/+Tc1PPbAf789n2xNJ5HPT8zljcIvMzcOMyueuOTUG5EjAGh8EzDNcV8maWLp5Qp2v39G7ec+aj++
+        yUtOPZMyYeQKaqNyPJDN5n1iANt7O3hVe4NkeQJqsQ9t87q85NTpMyfycuRoIDaWwqfaLqYr99FedOD6
+        ohvKkhfqsldecur0mWOePTkQiybmnj4v4cHOAjoWRankh/1xEJGpOGJGWl5y6vSZY549OTA6Ev39dn8b
+        15YHoT4bRk8xjPjNNGya3Th/7oLS1+O+S06dPnPMsycHbgRHMfNlHsrqCLS1CILjUThszmnxC0+Ld0q8
+        s52KblCnzxzz7MmBiD+C9PaMMMegbUQRzadgVbU2/sdD2Lrsl6nT71yLyjx7ciA0EIK2lUTnehzO1wZm
+        Zx+i3zMYa3QlBI9TVzdi0NcTMs+eHAh6h+rdqxnom1ko5QTeVz9iOBCCbyCQY5mX/IPQlXJS5pgPegJ1
+        OWDX7Y/6EyHo7wpQtwzcq5awsvkCHpe3ygFe8jtfn8AqfOY8ZhjsyQGBFrfDc+CajECvTMFamYQvEUbr
+        xVYXTV6/4FrllvSZY569wwHC0tvlPOiND6G7mIHL5qoLrfmv1dRMTp0+c0Kz0Ph3gLAoHcqC0+bE1Svt
+        txuaBDl1+oLKMnFygGgR75J4ZyQ7Bjl1+keQA/z4/4emPy5U2MzVCqVdAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnGitHub.Style" xml:space="preserve">
+    <value>Radius=0
+
+Active Colors=$0|$0
+Active Positions=0|1
+Active Angle=90
+Active Border Color=$0
+Active Text Color=$2
+Active Highlight Color=$0
+
+Hover Colors=#e5f1fb|#e5f1fb
+Hover Positions=0|1
+Hover Angle=90
+Hover Border Color=#0078d7
+Hover Text Color=$2
+Hover Highlight Color=$0
+
+Pressed Colors=#cce4f7|#cce4f7
+Pressed Positions=0|1
+Pressed Angle=90
+Pressed Border Color=#005499
+Pressed Text Color=$2
+Pressed Highlight Color=$0</value>
   </data>
 </root>

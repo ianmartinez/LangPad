@@ -33,6 +33,7 @@ Partial Class dlgAbout
         Me.btnOK = New Tundra.StylizedButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblLanguagePad = New System.Windows.Forms.Label()
+        Me.btnGitHub = New Tundra.StylizedButton()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -48,7 +49,7 @@ Partial Class dlgAbout
         Me.TabControl1.Location = New System.Drawing.Point(11, 46)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(380, 193)
+        Me.TabControl1.Size = New System.Drawing.Size(380, 192)
         Me.TabControl1.TabIndex = 9
         '
         'TabPage1
@@ -57,7 +58,7 @@ Partial Class dlgAbout
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(372, 167)
+        Me.TabPage1.Size = New System.Drawing.Size(372, 166)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "License"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -73,7 +74,7 @@ Partial Class dlgAbout
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(366, 161)
+        Me.TextBox1.Size = New System.Drawing.Size(366, 160)
         Me.TextBox1.TabIndex = 7
         Me.TextBox1.Text = resources.GetString("TextBox1.Text")
         '
@@ -175,6 +176,32 @@ Partial Class dlgAbout
         Me.lblLanguagePad.Text = "Language Pad 5.2"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'btnGitHub
+        '
+        Me.btnGitHub.BackColor = System.Drawing.Color.Transparent
+        Me.btnGitHub.BackgroundImage = CType(resources.GetObject("btnGitHub.BackgroundImage"), System.Drawing.Image)
+        Me.btnGitHub.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnGitHub.FlatAppearance.BorderSize = 0
+        Me.btnGitHub.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnGitHub.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnGitHub.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnGitHub.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGitHub.ForeColor = System.Drawing.Color.Black
+        Me.btnGitHub.Image = CType(resources.GetObject("btnGitHub.Image"), System.Drawing.Image)
+        Me.btnGitHub.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGitHub.Location = New System.Drawing.Point(11, 244)
+        Me.btnGitHub.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnGitHub.Name = "btnGitHub"
+        Me.btnGitHub.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnGitHub.Size = New System.Drawing.Size(108, 24)
+        Me.btnGitHub.Style = resources.GetString("btnGitHub.Style")
+        Me.btnGitHub.TabIndex = 77
+        Me.btnGitHub.Text = " Source Code"
+        Me.btnGitHub.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGitHub.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnGitHub.UseCompatibleTextRendering = True
+        Me.btnGitHub.UseVisualStyleBackColor = False
+        '
         'dlgAbout
         '
         Me.AcceptButton = Me.btnOK
@@ -183,6 +210,7 @@ Partial Class dlgAbout
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(401, 278)
+        Me.Controls.Add(Me.btnGitHub)
         Me.Controls.Add(Me.lblLanguagePad)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControl1)
@@ -215,4 +243,5 @@ Partial Class dlgAbout
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents lblLanguagePad As Label
+    Friend WithEvents btnGitHub As Tundra.StylizedButton
 End Class
