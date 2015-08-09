@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAYCAYAAACsnTAAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABhSURBVFhH7dCxCcAwDABB77+LQPO40wpeIEYkasKP8MXB
+        178yc0fEo1f/WB1VpU//cMqPU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTwEw5
+        HRpxLtMLEhBTC1JrAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnCancel.Style" xml:space="preserve">
+    <value>Radius=0
+
+Active Colors=~225|~225
+Active Positions=0|1
+Active Angle=90
+Active Border Color=~173
+Active Text Color=$2
+Active Highlight Color=$0
+
+Hover Colors=#e5f1fb|#e5f1fb
+Hover Positions=0|1
+Hover Angle=90
+Hover Border Color=#0078d7
+Hover Text Color=$2
+Hover Highlight Color=$0
+
+Pressed Colors=#cce4f7|#cce4f7
+Pressed Positions=0|1
+Pressed Angle=90
+Pressed Border Color=#005499
+Pressed Text Color=$2
+Pressed Highlight Color=$0</value>
+  </data>
+  <data name="btnOK.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAYCAYAAACsnTAAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABhSURBVFhH7dCxCcAwDABB77+LQPO40wpeIEYkasKP8MXB
+        178yc0fEo1f/WB1VpU//cMqPU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTwEw5
+        HRpxLtMLEhBTC1JrAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnOK.Style" xml:space="preserve">
+    <value>Radius=0
+
+Active Colors=~225|~225
+Active Positions=0|1
+Active Angle=90
+Active Border Color=~173
+Active Text Color=$2
+Active Highlight Color=$0
+
+Hover Colors=#e5f1fb|#e5f1fb
+Hover Positions=0|1
+Hover Angle=90
+Hover Border Color=#0078d7
+Hover Text Color=$2
+Hover Highlight Color=$0
+
+Pressed Colors=#cce4f7|#cce4f7
+Pressed Positions=0|1
+Pressed Angle=90
+Pressed Border Color=#005499
+Pressed Text Color=$2
+Pressed Highlight Color=$0</value>
+  </data>
+  <data name="PictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="btnReddit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAJkAAAAaCAYAAACkeP7MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAmSURBVGhD7cEBDQAAAMKg909tDwcEAAAAAAAAAAAAAAAA
+        AADAhRo+QgABMQ+x7wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnReddit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACLElEQVQ4T5WS3UvTYRTH94fU
+        Td34s73klu4lukwvJKMXiIiw/ReVrcuom0gjI8uCvRiE1IUGgU7mLkq3lEjnW24KFeQLMzMopu3TOY8b
+        mxZYBw7P75znez6cc36PTe16LDUZio5yLTKy0yUXiqYIxdLm3I5HUb3WATabXEwmZvPkvkJurVhxiRc3
+        4ONP+FSQ88d2nFuHxOyagRjAzd53ZKWgc2STjtcF7r5R3+ReGh6KpKnlLG6nxfHmU9wfh87UloFrJwbQ
+        0Z9hPl/kQXqLR2ObdL8t0C1nOAONjU0EGjwqpN5lEZ6GrrHtDnVEA2gXQFbaikjB0xnokTM2UeTZPASO
+        ODh9vhWv20HLmXP0LkJUIAvfEECpg/b+KbKSqDmwD6+njluxJC/moE/EvjqLV1/g5We4/Xwcf0M91sH9
+        LHwXgCzVAO70ZZjO6zdsrOfx+70MSNHgsgDcduIrMLAk3fh9cr9mdLJD2sodKGCqBEgOJ3A57OIWLrvF
+        Yacd56EavD4fx44GGE4kjG5mB0BGmJMdnDzRTDAYZHBoyIh222B8iEty33rxAh9k5LZIeQQBKLEnGjbC
+        vUx1s/IbKwAZYWKlaC6NueSBOfWRVZnGmi9ZZnXXDt4vbZkLYyr+G6AqN7lc5Gq49A5uyEvMVHfwDza1
+        Wqx0cPlxMhuX/6hJHWVC2jOu38u//sipLj6T58qTZNYAxGo1UKK2tZerTvVaVwao1Yp7/sNVL0vB9hvB
+        ZfhvwxhEOgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnReddit.Style" xml:space="preserve">
+    <value>Radius=0
+
+Active Colors=$0|$0
+Active Positions=0|1
+Active Angle=90
+Active Border Color=$0
+Active Text Color=$2
+Active Highlight Color=$0
+
+Hover Colors=#e5f1fb|#e5f1fb
+Hover Positions=0|1
+Hover Angle=90
+Hover Border Color=#0078d7
+Hover Text Color=$2
+Hover Highlight Color=$0
+
+Pressed Colors=#cce4f7|#cce4f7
+Pressed Positions=0|1
+Pressed Angle=90
+Pressed Border Color=#005499
+Pressed Text Color=$2
+Pressed Highlight Color=$0</value>
+  </data>
+</root>
