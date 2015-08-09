@@ -132,6 +132,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
   <data name="TextBox2.Text" xml:space="preserve">
     <value>Version 5.2 (August 9, 2015)
    •Keyboard shortcuts
+   •Massive internal improvements
+   •Improved updating system
+   •Small UI improvements
    •Added to github
    •Microsoft Sans Serif fonts are no longer forced by default
 Version 5.1 (August 7, 2015)
@@ -167,7 +170,7 @@ Version 4.3 (July 9, 2015)
 Version 4.2 (July 4, 2015)
    •Fixed missing functionality on the new button
    •Fixed RTF editor ribbon colors to match main ribbon
-   •Fixed the symbol tabs' padding
+   •Fixed the symbol tab's padding
    •The current page is now saved when moving pages 
    •Fixed tab order   
    •Saving on close doesn't cancel the closing process anymore
@@ -440,17 +443,16 @@ Pressed Highlight Color=$0</value>
   <data name="btnGitHub.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACT0lEQVQ4T51PTUiTcRz20sVT
-        UCev1XWEnSLDhN53r69zbs5t6jan29K17+19x9SECOxih0LylMbC0BlShi7MLn0wEEqhDh2Gs0M3rwW1
-        09P/+Tc1PPbAf789n2xNJ5HPT8zljcIvMzcOMyueuOTUG5EjAGh8EzDNcV8maWLp5Qp2v39G7ec+aj++
-        yUtOPZMyYeQKaqNyPJDN5n1iANt7O3hVe4NkeQJqsQ9t87q85NTpMyfycuRoIDaWwqfaLqYr99FedOD6
-        ohvKkhfqsldecur0mWOePTkQiybmnj4v4cHOAjoWRankh/1xEJGpOGJGWl5y6vSZY549OTA6Ev39dn8b
-        15YHoT4bRk8xjPjNNGya3Th/7oLS1+O+S06dPnPMsycHbgRHMfNlHsrqCLS1CILjUThszmnxC0+Ld0q8
-        s52KblCnzxzz7MmBiD+C9PaMMMegbUQRzadgVbU2/sdD2Lrsl6nT71yLyjx7ciA0EIK2lUTnehzO1wZm
-        Zx+i3zMYa3QlBI9TVzdi0NcTMs+eHAh6h+rdqxnom1ko5QTeVz9iOBCCbyCQY5mX/IPQlXJS5pgPegJ1
-        OWDX7Y/6EyHo7wpQtwzcq5awsvkCHpe3ygFe8jtfn8AqfOY8ZhjsyQGBFrfDc+CajECvTMFamYQvEUbr
-        xVYXTV6/4FrllvSZY569wwHC0tvlPOiND6G7mIHL5qoLrfmv1dRMTp0+c0Kz0Ph3gLAoHcqC0+bE1Svt
-        txuaBDl1+oLKMnFygGgR75J4ZyQ7Bjl1+keQA/z4/4emPy5U2MzVCqVdAAAAAElFTkSuQmCC
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAACDElEQVQ4T52TyW7TUBSG8xJs
+        eI0iKLBiaMKwoEgpElJBChK8RNaR2LFNbJS3QFFpSifaAGlLOiVtRrcBmtiu4yENcQZ+zrlkqBdFiGt9
+        vsP5z++re6598Xj8jSzLkCQJsszIf0Ea6GRwHgCfjyetny5KZQXlioKKcnQhHGcd6zlPGEhSDKZt4V1i
+        Dom5+QtIIvGeoDHrWM95IwOjYWJ+YRHJD0tILi6PWBiyNIDGrGO9x+BUb2BlNQXTsmDZjocfJ3WsrX/G
+        6scUadaxvLIGXTe8Bpp+ii/pLUxcuYprkzcwef2mgMe8trGZQerTBpEWZqquew1UVcfm123s7GWRPcij
+        0+2h2+sL3E4XzbMWbKeJWl1Feisj9B4DDmS2d7Gzu49sLo87dwPw33uIwAB/4AGm/Pdx6/YU9vYPUFe1
+        sUEsxjvQKJATHOaLcNsuevT1fn9Ms9kSJczRDjVNB+eNDWjhMF9AvlCkeit4NB1EcOYpZp78gcfTj4Pi
+        LhSKJaH3GOh0iKVyRXBc/UZn0MEverjxu+22qRo1KEfH4jKx/pxBFIbRQLX6XXBCZZt9FkLoxUvilehn
+        n4dQq6kjDes5b2AQg2U5QsDwCRuGCdO0YZmO6HnO60MN60c74J/DdTtwmmewCe4dKhuXbgjPz8dZz3nC
+        IBwOv+ZJNBr9Z1gfiUTeCgNql4iJ/+AyAN9vrJQI5j/01TAAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnGitHub.Style" xml:space="preserve">
