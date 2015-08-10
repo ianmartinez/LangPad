@@ -4,7 +4,6 @@ Imports System.Speech.Synthesis
 Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports System.Drawing.Printing
-
 Public Class frmMain
     Private dlgColor As New ColorDialog
     Public Event EditText()

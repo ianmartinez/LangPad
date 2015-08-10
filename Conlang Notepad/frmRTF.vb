@@ -1,7 +1,10 @@
 ﻿Public Class frmRTF
 
     Private Sub frmRTF_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Font = New Font("Microsoft Sans Serif", "8.25")
+        If My.Settings.ForceSansSerif = True Then
+            Me.Font = New Font("Microsoft Sans Serif", "8.25")
+        End If
+
         pnlTop.Height = pnlTabs.Height + pnlMain.Height
         Me.txtRTF.Text = frmMain.SelectedDocument.Rtf
     End Sub
