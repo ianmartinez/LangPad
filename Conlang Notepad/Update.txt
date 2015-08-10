@@ -1,4 +1,4 @@
-﻿Version=5.1
-DownloadLink=https://docs.google.com/uc?authuser:eq:0&id:eq:0ByovbnZG1bHndDNOaDVvNDhmc2s&export:eq:download
-Description=   •A link to the associated reddit thread now shows with update:cr:   •Font changes now happen much faster:cr:   •You can now individually choose what you want to load at startup:cr:   •Ability to save and quickly apply font styles:cr:   •Dialogs now only ask you to save if the file has been modified:cr:   •Help file updated:cr:   •Splash screen made even prettier:cr:   •Fixed bug during size changes with numerous different fonts:cr:   •Fixed tab order on notebook tab:cr:   •Fixed bug that required multiple undos to undo a single font change
-RedditThread=https://www.reddit.com/r/conlangs/comments/3g7xlx/language_pad_51_a_text_editor_for_conlanging/
+﻿Version=5.2
+DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Conlang%20Notepad/Release/Language%20Pad%205.2.zip?raw:eq:true
+Description=   •Keyboard shortcuts:cr:   •Massive internal improvements:cr:   •Improved updating system:cr:   •Small UI improvements:cr:   •Added to github:cr:   •Microsoft Sans Serif fonts are no longer forced by default
+RedditThread=https://www.reddit.com/r/conlangs/comments/3gi5bu/language_pad_52_a_word_processor_for_conlanging/
