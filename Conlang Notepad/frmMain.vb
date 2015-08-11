@@ -1304,4 +1304,20 @@ Public Class frmMain
             If Not tcNotebook.SelectedIndex = tcNotebook.TabPages.Count - 1 Then tcNotebook.SelectedIndex += 1
         End If
     End Sub
+
+    Private Sub btnQuickUndo_Click(sender As Object, e As EventArgs) Handles btnQuickUndo.Click
+        btnUndo_Click(Me, e)
+    End Sub
+
+    Private Sub btnQuickRedo_Click(sender As Object, e As EventArgs) Handles btnQuickRedo.Click
+        btnRedo_Click(Me, e)
+    End Sub
+
+    Private Sub btnQuickSymbols_Click(sender As Object, e As EventArgs) Handles btnQuickSymbols.Click
+        btnSymbols_Click(Me, e)
+    End Sub
+
+    Private Sub btnQuickAccents_Click(sender As Object, e As EventArgs) Handles btnQuickAccents.Click
+        btnAccentMark_Click(Me, e)
+    End Sub
 End Class

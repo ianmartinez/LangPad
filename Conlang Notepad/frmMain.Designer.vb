@@ -184,7 +184,6 @@ Partial Class frmMain
         Me.StylizedButton100 = New Tundra.StylizedButton()
         Me.StylizedButton102 = New Tundra.StylizedButton()
         Me.ClipArtLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.StylizedPanel2 = New Tundra.StylizedPanel()
         Me.btnClose = New Tundra.StylizedButton()
         Me.btnEmotesTab = New Tundra.StylizedRadioButton()
@@ -327,6 +326,13 @@ Partial Class frmMain
         Me.btnLinguistics = New Tundra.StylizedRadioButton()
         Me.btnHome = New Tundra.StylizedRadioButton()
         Me.btnConlangNotepad = New Tundra.StylizedRadioButton()
+        Me.DoubleBufferedPanel17 = New Tundra.DoubleBufferedPanel()
+        Me.btnQuickRedo = New Tundra.StylizedButton()
+        Me.btnQuickUndo = New Tundra.StylizedButton()
+        Me.btnQuickSymbols = New Tundra.StylizedButton()
+        Me.btnQuickAccents = New Tundra.StylizedButton()
+        Me.DoubleBufferedPanel21 = New Tundra.DoubleBufferedPanel()
+        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.tcSymbols.SuspendLayout()
         Me.ConsonantsTabPage.SuspendLayout()
         Me.AffricatesTabPage.SuspendLayout()
@@ -867,7 +873,7 @@ Partial Class frmMain
         Me.SplitContainer2.Panel2.Controls.Add(Me.StylizedPanel1)
         Me.SplitContainer2.Panel2MinSize = 235
         Me.SplitContainer2.Size = New System.Drawing.Size(977, 241)
-        Me.SplitContainer2.SplitterDistance = 716
+        Me.SplitContainer2.SplitterDistance = 718
         Me.SplitContainer2.SplitterWidth = 2
         Me.SplitContainer2.TabIndex = 1
         '
@@ -878,7 +884,7 @@ Partial Class frmMain
         Me.tcNotebook.Margin = New System.Windows.Forms.Padding(2)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(716, 239)
+        Me.tcNotebook.Size = New System.Drawing.Size(718, 239)
         Me.tcNotebook.TabIndex = 73
         '
         'StylizedPanel1
@@ -893,7 +899,7 @@ Partial Class frmMain
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(259, 241)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(257, 241)
         Me.StylizedPanel1.Style = "Colors=~245|~245" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight" &
     " Color=$0"
         Me.StylizedPanel1.TabIndex = 13
@@ -1004,7 +1010,7 @@ Partial Class frmMain
         Me.EmoteLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.EmoteLayoutPanel.Name = "EmoteLayoutPanel"
         Me.EmoteLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.EmoteLayoutPanel.Size = New System.Drawing.Size(259, 46)
+        Me.EmoteLayoutPanel.Size = New System.Drawing.Size(257, 46)
         Me.EmoteLayoutPanel.TabIndex = 8
         '
         'StylizedButton3
@@ -3053,19 +3059,8 @@ Partial Class frmMain
         Me.ClipArtLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ClipArtLayoutPanel.Name = "ClipArtLayoutPanel"
         Me.ClipArtLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.ClipArtLayoutPanel.Size = New System.Drawing.Size(259, 46)
+        Me.ClipArtLayoutPanel.Size = New System.Drawing.Size(257, 46)
         Me.ClipArtLayoutPanel.TabIndex = 7
-        '
-        'NotebookEditor1
-        '
-        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
-        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 26)
-        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(2)
-        Me.NotebookEditor1.Name = "NotebookEditor1"
-        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.NotebookEditor1.Size = New System.Drawing.Size(259, 41)
-        Me.NotebookEditor1.TabIndex = 72
         '
         'StylizedPanel2
         '
@@ -3079,7 +3074,7 @@ Partial Class frmMain
         Me.StylizedPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
         Me.StylizedPanel2.Name = "StylizedPanel2"
         Me.StylizedPanel2.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.StylizedPanel2.Size = New System.Drawing.Size(259, 26)
+        Me.StylizedPanel2.Size = New System.Drawing.Size(257, 26)
         Me.StylizedPanel2.Style = "Colors=~255|~255" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight" &
     " Color$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1"
         Me.StylizedPanel2.TabIndex = 71
@@ -3096,7 +3091,7 @@ Partial Class frmMain
         Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClose.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
-        Me.btnClose.Location = New System.Drawing.Point(235, 2)
+        Me.btnClose.Location = New System.Drawing.Point(233, 2)
         Me.btnClose.Margin = New System.Windows.Forms.Padding(2)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
@@ -3727,7 +3722,7 @@ Partial Class frmMain
         Me.pnlControl.Controls.Add(Me.btnZoomIn)
         Me.pnlControl.Controls.Add(Me.Label12)
         Me.pnlControl.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlControl.Location = New System.Drawing.Point(0, 431)
+        Me.pnlControl.Location = New System.Drawing.Point(0, 430)
         Me.pnlControl.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlControl.Name = "pnlControl"
         Me.pnlControl.Size = New System.Drawing.Size(960, 81)
@@ -3977,7 +3972,7 @@ Partial Class frmMain
         Me.pnlInsert.Controls.Add(Me.btnAddBullets)
         Me.pnlInsert.Controls.Add(Me.Label10)
         Me.pnlInsert.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlInsert.Location = New System.Drawing.Point(0, 350)
+        Me.pnlInsert.Location = New System.Drawing.Point(0, 349)
         Me.pnlInsert.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlInsert.Name = "pnlInsert"
         Me.pnlInsert.Size = New System.Drawing.Size(960, 81)
@@ -4363,7 +4358,7 @@ Partial Class frmMain
         Me.pnlNotebook.Controls.Add(Me.btnAdd)
         Me.pnlNotebook.Controls.Add(Me.Label22)
         Me.pnlNotebook.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlNotebook.Location = New System.Drawing.Point(0, 269)
+        Me.pnlNotebook.Location = New System.Drawing.Point(0, 268)
         Me.pnlNotebook.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlNotebook.Name = "pnlNotebook"
         Me.pnlNotebook.Size = New System.Drawing.Size(960, 81)
@@ -4606,7 +4601,7 @@ Partial Class frmMain
         Me.pnlLinguistics.Controls.Add(Me.btnSymbols)
         Me.pnlLinguistics.Controls.Add(Me.Label8)
         Me.pnlLinguistics.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlLinguistics.Location = New System.Drawing.Point(0, 188)
+        Me.pnlLinguistics.Location = New System.Drawing.Point(0, 187)
         Me.pnlLinguistics.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlLinguistics.Name = "pnlLinguistics"
         Me.pnlLinguistics.Size = New System.Drawing.Size(960, 81)
@@ -4793,7 +4788,7 @@ Partial Class frmMain
         Me.pnlMain.Controls.Add(Me.DoubleBufferedPanel3)
         Me.pnlMain.Controls.Add(Me.Label1)
         Me.pnlMain.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlMain.Location = New System.Drawing.Point(0, 107)
+        Me.pnlMain.Location = New System.Drawing.Point(0, 106)
         Me.pnlMain.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlMain.Name = "pnlMain"
         Me.pnlMain.Size = New System.Drawing.Size(960, 81)
@@ -5199,7 +5194,7 @@ Partial Class frmMain
         Me.pnlFile.Controls.Add(Me.btnNew)
         Me.pnlFile.Controls.Add(Me.Label16)
         Me.pnlFile.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlFile.Location = New System.Drawing.Point(0, 26)
+        Me.pnlFile.Location = New System.Drawing.Point(0, 25)
         Me.pnlFile.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlFile.Name = "pnlFile"
         Me.pnlFile.Size = New System.Drawing.Size(960, 81)
@@ -5572,18 +5567,24 @@ Partial Class frmMain
         'pnlTabs
         '
         Me.pnlTabs.BackColor = System.Drawing.Color.Transparent
+        Me.pnlTabs.Controls.Add(Me.btnQuickUndo)
+        Me.pnlTabs.Controls.Add(Me.btnQuickRedo)
+        Me.pnlTabs.Controls.Add(Me.DoubleBufferedPanel17)
         Me.pnlTabs.Controls.Add(Me.btnControl)
         Me.pnlTabs.Controls.Add(Me.btnInsert)
         Me.pnlTabs.Controls.Add(Me.btnNotebook)
-        Me.pnlTabs.Controls.Add(Me.StatusStrip1)
         Me.pnlTabs.Controls.Add(Me.btnLinguistics)
         Me.pnlTabs.Controls.Add(Me.btnHome)
         Me.pnlTabs.Controls.Add(Me.btnConlangNotepad)
+        Me.pnlTabs.Controls.Add(Me.btnQuickSymbols)
+        Me.pnlTabs.Controls.Add(Me.btnQuickAccents)
+        Me.pnlTabs.Controls.Add(Me.DoubleBufferedPanel21)
+        Me.pnlTabs.Controls.Add(Me.StatusStrip1)
         Me.pnlTabs.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTabs.Location = New System.Drawing.Point(0, 0)
         Me.pnlTabs.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
         Me.pnlTabs.Name = "pnlTabs"
-        Me.pnlTabs.Size = New System.Drawing.Size(960, 26)
+        Me.pnlTabs.Size = New System.Drawing.Size(960, 25)
         Me.pnlTabs.Style = "Colors=$1|~249" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight C" &
     "olor$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1"
         Me.pnlTabs.TabIndex = 71
@@ -5606,7 +5607,7 @@ Partial Class frmMain
         Me.btnControl.Margin = New System.Windows.Forms.Padding(2)
         Me.btnControl.Name = "btnControl"
         Me.btnControl.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.btnControl.Size = New System.Drawing.Size(50, 26)
+        Me.btnControl.Size = New System.Drawing.Size(50, 25)
         Me.btnControl.Style = resources.GetString("btnControl.Style")
         Me.btnControl.TabIndex = 5
         Me.btnControl.Text = "Control"
@@ -5631,7 +5632,7 @@ Partial Class frmMain
         Me.btnInsert.Margin = New System.Windows.Forms.Padding(2)
         Me.btnInsert.Name = "btnInsert"
         Me.btnInsert.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.btnInsert.Size = New System.Drawing.Size(43, 26)
+        Me.btnInsert.Size = New System.Drawing.Size(43, 25)
         Me.btnInsert.Style = resources.GetString("btnInsert.Style")
         Me.btnInsert.TabIndex = 4
         Me.btnInsert.Text = "Insert"
@@ -5656,7 +5657,7 @@ Partial Class frmMain
         Me.btnNotebook.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNotebook.Name = "btnNotebook"
         Me.btnNotebook.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.btnNotebook.Size = New System.Drawing.Size(64, 26)
+        Me.btnNotebook.Size = New System.Drawing.Size(64, 25)
         Me.btnNotebook.Style = resources.GetString("btnNotebook.Style")
         Me.btnNotebook.TabIndex = 3
         Me.btnNotebook.Text = "Notebook"
@@ -5672,7 +5673,7 @@ Partial Class frmMain
         Me.StatusStrip1.Location = New System.Drawing.Point(774, 0)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(2, 0, 10, 0)
-        Me.StatusStrip1.Size = New System.Drawing.Size(186, 26)
+        Me.StatusStrip1.Size = New System.Drawing.Size(186, 25)
         Me.StatusStrip1.SizingGrip = False
         Me.StatusStrip1.TabIndex = 13
         '
@@ -5681,7 +5682,7 @@ Partial Class frmMain
         Me.lblCharCount.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         Me.lblCharCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.lblCharCount.Name = "lblCharCount"
-        Me.lblCharCount.Size = New System.Drawing.Size(96, 21)
+        Me.lblCharCount.Size = New System.Drawing.Size(96, 20)
         Me.lblCharCount.Text = "Character Count: 0"
         '
         'lblWordCount
@@ -5689,7 +5690,7 @@ Partial Class frmMain
         Me.lblWordCount.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         Me.lblWordCount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.lblWordCount.Name = "lblWordCount"
-        Me.lblWordCount.Size = New System.Drawing.Size(76, 21)
+        Me.lblWordCount.Size = New System.Drawing.Size(76, 20)
         Me.lblWordCount.Text = "Word Count: 0"
         '
         'btnLinguistics
@@ -5710,7 +5711,7 @@ Partial Class frmMain
         Me.btnLinguistics.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLinguistics.Name = "btnLinguistics"
         Me.btnLinguistics.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.btnLinguistics.Size = New System.Drawing.Size(66, 26)
+        Me.btnLinguistics.Size = New System.Drawing.Size(66, 25)
         Me.btnLinguistics.Style = resources.GetString("btnLinguistics.Style")
         Me.btnLinguistics.TabIndex = 2
         Me.btnLinguistics.Text = "Linguistics"
@@ -5736,7 +5737,7 @@ Partial Class frmMain
         Me.btnHome.Margin = New System.Windows.Forms.Padding(2)
         Me.btnHome.Name = "btnHome"
         Me.btnHome.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.btnHome.Size = New System.Drawing.Size(45, 26)
+        Me.btnHome.Size = New System.Drawing.Size(45, 25)
         Me.btnHome.Style = resources.GetString("btnHome.Style")
         Me.btnHome.TabIndex = 1
         Me.btnHome.TabStop = True
@@ -5763,11 +5764,144 @@ Partial Class frmMain
         Me.btnConlangNotepad.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.btnConlangNotepad.Name = "btnConlangNotepad"
         Me.btnConlangNotepad.Padding = New System.Windows.Forms.Padding(0, 1, 2, 2)
-        Me.btnConlangNotepad.Size = New System.Drawing.Size(24, 26)
+        Me.btnConlangNotepad.Size = New System.Drawing.Size(24, 25)
         Me.btnConlangNotepad.Style = resources.GetString("btnConlangNotepad.Style")
         Me.btnConlangNotepad.TabIndex = 0
         Me.btnConlangNotepad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnConlangNotepad.UseVisualStyleBackColor = False
+        '
+        'DoubleBufferedPanel17
+        '
+        Me.DoubleBufferedPanel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
+        Me.DoubleBufferedPanel17.Dock = System.Windows.Forms.DockStyle.Right
+        Me.DoubleBufferedPanel17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DoubleBufferedPanel17.Location = New System.Drawing.Point(722, 0)
+        Me.DoubleBufferedPanel17.Margin = New System.Windows.Forms.Padding(2)
+        Me.DoubleBufferedPanel17.Name = "DoubleBufferedPanel17"
+        Me.DoubleBufferedPanel17.Size = New System.Drawing.Size(1, 25)
+        Me.DoubleBufferedPanel17.TabIndex = 87
+        '
+        'btnQuickRedo
+        '
+        Me.btnQuickRedo.BackColor = System.Drawing.Color.Transparent
+        Me.btnQuickRedo.BackgroundImage = CType(resources.GetObject("btnQuickRedo.BackgroundImage"), System.Drawing.Image)
+        Me.btnQuickRedo.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnQuickRedo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnQuickRedo.FlatAppearance.BorderSize = 0
+        Me.btnQuickRedo.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickRedo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickRedo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickRedo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnQuickRedo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnQuickRedo.ForeColor = System.Drawing.Color.Black
+        Me.btnQuickRedo.Image = CType(resources.GetObject("btnQuickRedo.Image"), System.Drawing.Image)
+        Me.btnQuickRedo.Location = New System.Drawing.Point(697, 0)
+        Me.btnQuickRedo.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnQuickRedo.Name = "btnQuickRedo"
+        Me.btnQuickRedo.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
+        Me.btnQuickRedo.Size = New System.Drawing.Size(25, 25)
+        Me.btnQuickRedo.Style = resources.GetString("btnQuickRedo.Style")
+        Me.btnQuickRedo.TabIndex = 90
+        Me.ttMain.SetToolTip(Me.btnQuickRedo, "Redo")
+        Me.btnQuickRedo.UseCompatibleTextRendering = True
+        Me.btnQuickRedo.UseVisualStyleBackColor = False
+        '
+        'btnQuickUndo
+        '
+        Me.btnQuickUndo.BackColor = System.Drawing.Color.Transparent
+        Me.btnQuickUndo.BackgroundImage = CType(resources.GetObject("btnQuickUndo.BackgroundImage"), System.Drawing.Image)
+        Me.btnQuickUndo.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnQuickUndo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnQuickUndo.FlatAppearance.BorderSize = 0
+        Me.btnQuickUndo.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickUndo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickUndo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnQuickUndo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnQuickUndo.ForeColor = System.Drawing.Color.Black
+        Me.btnQuickUndo.Image = CType(resources.GetObject("btnQuickUndo.Image"), System.Drawing.Image)
+        Me.btnQuickUndo.Location = New System.Drawing.Point(672, 0)
+        Me.btnQuickUndo.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnQuickUndo.Name = "btnQuickUndo"
+        Me.btnQuickUndo.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
+        Me.btnQuickUndo.Size = New System.Drawing.Size(25, 25)
+        Me.btnQuickUndo.Style = resources.GetString("btnQuickUndo.Style")
+        Me.btnQuickUndo.TabIndex = 89
+        Me.ttMain.SetToolTip(Me.btnQuickUndo, "Undo")
+        Me.btnQuickUndo.UseCompatibleTextRendering = True
+        Me.btnQuickUndo.UseVisualStyleBackColor = False
+        '
+        'btnQuickSymbols
+        '
+        Me.btnQuickSymbols.BackColor = System.Drawing.Color.Transparent
+        Me.btnQuickSymbols.BackgroundImage = CType(resources.GetObject("btnQuickSymbols.BackgroundImage"), System.Drawing.Image)
+        Me.btnQuickSymbols.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnQuickSymbols.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnQuickSymbols.FlatAppearance.BorderSize = 0
+        Me.btnQuickSymbols.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickSymbols.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickSymbols.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickSymbols.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnQuickSymbols.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnQuickSymbols.ForeColor = System.Drawing.Color.Black
+        Me.btnQuickSymbols.Image = CType(resources.GetObject("btnQuickSymbols.Image"), System.Drawing.Image)
+        Me.btnQuickSymbols.Location = New System.Drawing.Point(723, 0)
+        Me.btnQuickSymbols.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnQuickSymbols.Name = "btnQuickSymbols"
+        Me.btnQuickSymbols.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
+        Me.btnQuickSymbols.Size = New System.Drawing.Size(25, 25)
+        Me.btnQuickSymbols.Style = resources.GetString("btnQuickSymbols.Style")
+        Me.btnQuickSymbols.TabIndex = 91
+        Me.ttMain.SetToolTip(Me.btnQuickSymbols, "Symbols")
+        Me.btnQuickSymbols.UseCompatibleTextRendering = True
+        Me.btnQuickSymbols.UseVisualStyleBackColor = False
+        '
+        'btnQuickAccents
+        '
+        Me.btnQuickAccents.BackColor = System.Drawing.Color.Transparent
+        Me.btnQuickAccents.BackgroundImage = CType(resources.GetObject("btnQuickAccents.BackgroundImage"), System.Drawing.Image)
+        Me.btnQuickAccents.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnQuickAccents.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnQuickAccents.FlatAppearance.BorderSize = 0
+        Me.btnQuickAccents.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickAccents.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickAccents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickAccents.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnQuickAccents.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnQuickAccents.ForeColor = System.Drawing.Color.Black
+        Me.btnQuickAccents.Image = CType(resources.GetObject("btnQuickAccents.Image"), System.Drawing.Image)
+        Me.btnQuickAccents.Location = New System.Drawing.Point(748, 0)
+        Me.btnQuickAccents.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnQuickAccents.Name = "btnQuickAccents"
+        Me.btnQuickAccents.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
+        Me.btnQuickAccents.Size = New System.Drawing.Size(25, 25)
+        Me.btnQuickAccents.Style = resources.GetString("btnQuickAccents.Style")
+        Me.btnQuickAccents.TabIndex = 92
+        Me.ttMain.SetToolTip(Me.btnQuickAccents, "Accent Mark")
+        Me.btnQuickAccents.UseCompatibleTextRendering = True
+        Me.btnQuickAccents.UseVisualStyleBackColor = False
+        '
+        'DoubleBufferedPanel21
+        '
+        Me.DoubleBufferedPanel21.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
+        Me.DoubleBufferedPanel21.Dock = System.Windows.Forms.DockStyle.Right
+        Me.DoubleBufferedPanel21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DoubleBufferedPanel21.Location = New System.Drawing.Point(773, 0)
+        Me.DoubleBufferedPanel21.Margin = New System.Windows.Forms.Padding(2)
+        Me.DoubleBufferedPanel21.Name = "DoubleBufferedPanel21"
+        Me.DoubleBufferedPanel21.Size = New System.Drawing.Size(1, 25)
+        Me.DoubleBufferedPanel21.TabIndex = 93
+        '
+        'NotebookEditor1
+        '
+        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
+        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 26)
+        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(2)
+        Me.NotebookEditor1.Name = "NotebookEditor1"
+        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.NotebookEditor1.Size = New System.Drawing.Size(257, 41)
+        Me.NotebookEditor1.TabIndex = 72
         '
         'frmMain
         '
@@ -6133,4 +6267,10 @@ Partial Class frmMain
     Friend WithEvents btnApply As Tundra.StylizedButton
     Friend WithEvents btnDefault As Tundra.StylizedButton
     Friend WithEvents Label13 As Label
+    Friend WithEvents btnQuickUndo As Tundra.StylizedButton
+    Friend WithEvents btnQuickRedo As Tundra.StylizedButton
+    Friend WithEvents DoubleBufferedPanel17 As Tundra.DoubleBufferedPanel
+    Friend WithEvents btnQuickSymbols As Tundra.StylizedButton
+    Friend WithEvents btnQuickAccents As Tundra.StylizedButton
+    Friend WithEvents DoubleBufferedPanel21 As Tundra.DoubleBufferedPanel
 End Class
