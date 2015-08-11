@@ -49,12 +49,12 @@ Partial Class dlgSettings
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(127, 226)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(127, 229)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 28)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 29)
         Me.TableLayoutPanel1.TabIndex = 70
         '
         'btnCancel
@@ -73,7 +73,7 @@ Partial Class dlgSettings
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(69, 24)
+        Me.btnCancel.Size = New System.Drawing.Size(69, 25)
         Me.btnCancel.Style = resources.GetString("btnCancel.Style")
         Me.btnCancel.TabIndex = 1
         Me.btnCancel.Text = "Cancel"
@@ -95,7 +95,7 @@ Partial Class dlgSettings
         Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnOK.Size = New System.Drawing.Size(69, 24)
+        Me.btnOK.Size = New System.Drawing.Size(69, 25)
         Me.btnOK.Style = resources.GetString("btnOK.Style")
         Me.btnOK.TabIndex = 0
         Me.btnOK.Text = "OK"
@@ -247,7 +247,7 @@ Partial Class dlgSettings
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(285, 266)
+        Me.ClientSize = New System.Drawing.Size(285, 270)
         Me.Controls.Add(Me.cbForceSans)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cbUpdates)

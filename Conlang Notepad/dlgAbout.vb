@@ -13,6 +13,10 @@
     End Sub
 
     Private Sub dlgAbout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblLanguagePad.Text = LangPadVersion
+    End Sub
 
+    Private Sub btnCheckUpdates_Click(sender As Object, e As EventArgs) Handles btnCheckUpdates.Click
+        frmMain.btnCheckUpdate_Click(Me, e)
     End Sub
 End Class

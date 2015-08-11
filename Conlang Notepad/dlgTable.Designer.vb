@@ -46,11 +46,11 @@ Partial Class dlgTable
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(68, 92)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(68, 91)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 28)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 29)
         Me.TableLayoutPanel1.TabIndex = 69
         '
         'btnCancel
@@ -69,7 +69,7 @@ Partial Class dlgTable
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(69, 24)
+        Me.btnCancel.Size = New System.Drawing.Size(69, 25)
         Me.btnCancel.Style = resources.GetString("btnCancel.Style")
         Me.btnCancel.TabIndex = 5
         Me.btnCancel.Text = "Cancel"
@@ -91,7 +91,7 @@ Partial Class dlgTable
         Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnOK.Size = New System.Drawing.Size(69, 24)
+        Me.btnOK.Size = New System.Drawing.Size(69, 25)
         Me.btnOK.Style = resources.GetString("btnOK.Style")
         Me.btnOK.TabIndex = 4
         Me.btnOK.Text = "OK"

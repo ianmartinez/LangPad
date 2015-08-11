@@ -120,9 +120,10 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAppend.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAD0AAAAYCAYAAABJA/VsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABJSURBVFhH7c8xDQAwDMTA8ucSKXi6hUIItHoc9nCSV5/u
-        vlX1KPJ7EjODkV+nCZymcJrCaQqnKZymcJrCaQqnKZymQE9vgqP2A9nSYiOE/f0QAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAD0AAAAZCAYAAACCXybJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVFhH7c8xDQAwCABB/HshQU83LGCgDUNV/A+X/PpR
+        VSczL8X+xkZ3Y+yv0wROUzhN4TSF0xROUzhN4TSF0xROUzhN8adngyPnAb39PpR/XDW0AAAAAElFTkSu
+        QmCC
 </value>
   </data>
   <data name="btnAppend.Style" xml:space="preserve">
@@ -151,10 +152,10 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAD4AAAAYCAYAAACiNE5vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABbSURBVFhH7c+xCQBBDAPB678Xg+v5zC1cA384VwXSBgMC
-        RXu6+6uqP8k2nx0zE2WbCU9CuDqdEa5OZ4Sr0xnh6nRGuDqdEa5OZ4Sr0xnh6nRGuDqdxYffHVnqPtzc
-        uBtd49A+AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAD4AAAAZCAYAAABpaJ3KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABfSURBVFhH7c+xCQAwDAPB7L+LwfOk8wpZIMFFOk0gf3Eg
+        UPUrM3dE3Em6efWoqlG6mfBJCFenM8LV6YxwdTojXJ3OCFenM8LV6YxwdTojXJ3OCFenM8LV6eyHnx6z
+        xHmR5ZguoAvQBAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnCancel.Style" xml:space="preserve">
@@ -183,9 +184,10 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnReplace.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAD0AAAAYCAYAAABJA/VsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABJSURBVFhH7c8xDQAwDMTA8ucSKXi6hUIItHoc9nCSV5/u
-        vlX1KPJ7EjODkV+nCZymcJrCaQqnKZymcJrCaQqnKZymQE9vgqP2A9nSYiOE/f0QAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAD0AAAAZCAYAAACCXybJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVFhH7c8xDQAwCABB/HshQU83LGCgDUNV/A+X/PpR
+        VSczL8X+xkZ3Y+yv0wROUzhN4TSF0xROUzhN4TSF0xROUzhN8adngyPnAb39PpR/XDW0AAAAAElFTkSu
+        QmCC
 </value>
   </data>
   <data name="btnReplace.Style" xml:space="preserve">

@@ -58,7 +58,7 @@ Partial Class ssLoading
         Me.lblLanguagePad.Name = "lblLanguagePad"
         Me.lblLanguagePad.Size = New System.Drawing.Size(188, 28)
         Me.lblLanguagePad.TabIndex = 9
-        Me.lblLanguagePad.Text = "Language Pad 5.2"
+        Me.lblLanguagePad.Text = "Language Pad X.x"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblLoading

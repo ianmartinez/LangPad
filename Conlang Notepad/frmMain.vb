@@ -310,6 +310,8 @@ Public Class frmMain
     End Sub
     Private Sub RichTextEditor_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         On Error Resume Next
+        Me.Text = LangPadVersion
+
         pnlTabs.Refresh()
         Title = Me.Text
         cmsMain.ImageScalingSize = New Size(16, 16)
@@ -1169,7 +1171,7 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub btnCheckUpdate_Click(sender As Object, e As EventArgs) Handles btnCheckUpdate.Click
+    Public Sub btnCheckUpdate_Click(sender As Object, e As EventArgs) Handles btnCheckUpdate.Click
         dlgUpdate.SkipFetch = False
         dlgUpdate.TopMost = False
         dlgUpdate.ShowDialog()
@@ -1177,10 +1179,6 @@ Public Class frmMain
 
     Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
         dlgSettings.ShowDialog()
-    End Sub
-
-    Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles StatusStrip1.ItemClicked
-
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click

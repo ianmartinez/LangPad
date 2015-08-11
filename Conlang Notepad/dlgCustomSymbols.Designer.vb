@@ -22,6 +22,7 @@ Partial Class dlgCustomSymbols
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgCustomSymbols))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnCancel = New Tundra.StylizedButton()
@@ -33,6 +34,7 @@ Partial Class dlgCustomSymbols
         Me.btnSave = New Tundra.StylizedButton()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
+        Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.dgvSymbols, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -45,11 +47,11 @@ Partial Class dlgCustomSymbols
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(132, 280)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(131, 279)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 28)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 29)
         Me.TableLayoutPanel1.TabIndex = 67
         '
         'btnCancel
@@ -68,7 +70,7 @@ Partial Class dlgCustomSymbols
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(69, 24)
+        Me.btnCancel.Size = New System.Drawing.Size(69, 25)
         Me.btnCancel.Style = resources.GetString("btnCancel.Style")
         Me.btnCancel.TabIndex = 1
         Me.btnCancel.Text = "Cancel"
@@ -90,7 +92,7 @@ Partial Class dlgCustomSymbols
         Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnOK.Size = New System.Drawing.Size(69, 24)
+        Me.btnOK.Size = New System.Drawing.Size(69, 25)
         Me.btnOK.Style = resources.GetString("btnOK.Style")
         Me.btnOK.TabIndex = 0
         Me.btnOK.Text = "OK"
@@ -132,13 +134,13 @@ Partial Class dlgCustomSymbols
         Me.btnDeleteAll.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDeleteAll.ForeColor = System.Drawing.Color.Black
         Me.btnDeleteAll.Image = CType(resources.GetObject("btnDeleteAll.Image"), System.Drawing.Image)
-        Me.btnDeleteAll.Location = New System.Drawing.Point(71, 281)
+        Me.btnDeleteAll.Location = New System.Drawing.Point(69, 281)
         Me.btnDeleteAll.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDeleteAll.Name = "btnDeleteAll"
-        Me.btnDeleteAll.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnDeleteAll.Size = New System.Drawing.Size(26, 26)
+        Me.btnDeleteAll.Size = New System.Drawing.Size(25, 25)
         Me.btnDeleteAll.Style = resources.GetString("btnDeleteAll.Style")
         Me.btnDeleteAll.TabIndex = 5
+        Me.ttMain.SetToolTip(Me.btnDeleteAll, "Clear")
         Me.btnDeleteAll.UseCompatibleTextRendering = True
         Me.btnDeleteAll.UseVisualStyleBackColor = False
         '
@@ -158,10 +160,10 @@ Partial Class dlgCustomSymbols
         Me.btnOpen.Location = New System.Drawing.Point(11, 281)
         Me.btnOpen.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOpen.Name = "btnOpen"
-        Me.btnOpen.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnOpen.Size = New System.Drawing.Size(26, 26)
+        Me.btnOpen.Size = New System.Drawing.Size(25, 25)
         Me.btnOpen.Style = resources.GetString("btnOpen.Style")
         Me.btnOpen.TabIndex = 3
+        Me.ttMain.SetToolTip(Me.btnOpen, "Open")
         Me.btnOpen.UseCompatibleTextRendering = True
         Me.btnOpen.UseVisualStyleBackColor = False
         '
@@ -178,13 +180,13 @@ Partial Class dlgCustomSymbols
         Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.Black
         Me.btnSave.Image = CType(resources.GetObject("btnSave.Image"), System.Drawing.Image)
-        Me.btnSave.Location = New System.Drawing.Point(41, 281)
+        Me.btnSave.Location = New System.Drawing.Point(40, 281)
         Me.btnSave.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnSave.Size = New System.Drawing.Size(26, 26)
+        Me.btnSave.Size = New System.Drawing.Size(25, 25)
         Me.btnSave.Style = resources.GetString("btnSave.Style")
         Me.btnSave.TabIndex = 4
+        Me.ttMain.SetToolTip(Me.btnSave, "Save")
         Me.btnSave.UseCompatibleTextRendering = True
         Me.btnSave.UseVisualStyleBackColor = False
         '
@@ -231,4 +233,5 @@ Partial Class dlgCustomSymbols
     Friend WithEvents dlgOpen As System.Windows.Forms.OpenFileDialog
     Friend WithEvents dlgSave As System.Windows.Forms.SaveFileDialog
     Friend WithEvents Symbol As DataGridViewTextBoxColumn
+    Friend WithEvents ttMain As ToolTip
 End Class

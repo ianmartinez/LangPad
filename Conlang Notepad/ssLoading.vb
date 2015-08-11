@@ -16,14 +16,6 @@ Public NotInheritable Class ssLoading
         End If
     End Sub
 
-    Private Sub StylizedPanel1_Paint(sender As Object, e As PaintEventArgs) Handles StylizedPanel1.Paint
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
-
     Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
         Dim delta As New Size(e.X - PreviousPosition.X, e.Y - PreviousPosition.Y)
         If (e.Button = MouseButtons.Left) Then
@@ -32,10 +24,6 @@ Public NotInheritable Class ssLoading
         Else
             PreviousPosition = e.Location
         End If
-    End Sub
-
-    Private Sub lblLoading_Click(sender As Object, e As EventArgs) Handles lblLoading.Click
-
     End Sub
 
     Private Sub lblLoading_MouseMove(sender As Object, e As MouseEventArgs) Handles lblLoading.MouseMove
@@ -58,18 +46,6 @@ Public NotInheritable Class ssLoading
         End If
     End Sub
 
-    Private Sub pbLoading_Paint(sender As Object, e As PaintEventArgs) Handles pbLoading.Paint
-
-    End Sub
-
-    Private Sub ssLoading_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub lblLanguagePad_Click(sender As Object, e As EventArgs) Handles lblLanguagePad.Click
-
-    End Sub
-
     Private Sub lblLanguagePad_MouseMove(sender As Object, e As MouseEventArgs) Handles lblLanguagePad.MouseMove
         Dim delta As New Size(e.X - PreviousPosition.X, e.Y - PreviousPosition.Y)
         If (e.Button = MouseButtons.Left) Then
@@ -78,5 +54,9 @@ Public NotInheritable Class ssLoading
         Else
             PreviousPosition = e.Location
         End If
+    End Sub
+
+    Private Sub ssLoading_Load(sender As Object, e As EventArgs) Handles Me.Load
+        lblLanguagePad.Text = LangPadVersion
     End Sub
 End Class

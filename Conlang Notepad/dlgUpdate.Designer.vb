@@ -22,6 +22,7 @@ Partial Class dlgUpdate
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgUpdate))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnCancel = New Tundra.StylizedButton()
@@ -31,6 +32,8 @@ Partial Class dlgUpdate
         Me.txtDecription = New System.Windows.Forms.TextBox()
         Me.lblLanguagePad = New System.Windows.Forms.Label()
         Me.btnReddit = New Tundra.StylizedButton()
+        Me.btnSource = New Tundra.StylizedButton()
+        Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -158,14 +161,40 @@ Partial Class dlgUpdate
         Me.btnReddit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnReddit.Name = "btnReddit"
         Me.btnReddit.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnReddit.Size = New System.Drawing.Size(153, 24)
+        Me.btnReddit.Size = New System.Drawing.Size(24, 24)
         Me.btnReddit.Style = resources.GetString("btnReddit.Style")
         Me.btnReddit.TabIndex = 76
-        Me.btnReddit.Text = " View Reddit Thread"
         Me.btnReddit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnReddit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ttMain.SetToolTip(Me.btnReddit, "Reddit")
         Me.btnReddit.UseCompatibleTextRendering = True
         Me.btnReddit.UseVisualStyleBackColor = False
+        '
+        'btnSource
+        '
+        Me.btnSource.BackColor = System.Drawing.Color.Transparent
+        Me.btnSource.BackgroundImage = CType(resources.GetObject("btnSource.BackgroundImage"), System.Drawing.Image)
+        Me.btnSource.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnSource.FlatAppearance.BorderSize = 0
+        Me.btnSource.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnSource.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnSource.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnSource.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSource.ForeColor = System.Drawing.Color.Black
+        Me.btnSource.Image = CType(resources.GetObject("btnSource.Image"), System.Drawing.Image)
+        Me.btnSource.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSource.Location = New System.Drawing.Point(40, 331)
+        Me.btnSource.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSource.Name = "btnSource"
+        Me.btnSource.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnSource.Size = New System.Drawing.Size(24, 24)
+        Me.btnSource.Style = resources.GetString("btnSource.Style")
+        Me.btnSource.TabIndex = 77
+        Me.btnSource.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSource.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ttMain.SetToolTip(Me.btnSource, "Source")
+        Me.btnSource.UseCompatibleTextRendering = True
+        Me.btnSource.UseVisualStyleBackColor = False
         '
         'dlgUpdate
         '
@@ -175,6 +204,7 @@ Partial Class dlgUpdate
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(435, 369)
+        Me.Controls.Add(Me.btnSource)
         Me.Controls.Add(Me.btnReddit)
         Me.Controls.Add(Me.txtDecription)
         Me.Controls.Add(Me.Label3)
@@ -204,4 +234,6 @@ Partial Class dlgUpdate
     Friend WithEvents txtDecription As TextBox
     Friend WithEvents lblLanguagePad As Label
     Friend WithEvents btnReddit As Tundra.StylizedButton
+    Friend WithEvents btnSource As Tundra.StylizedButton
+    Friend WithEvents ttMain As ToolTip
 End Class

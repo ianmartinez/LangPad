@@ -22,6 +22,7 @@ Partial Class dlgAbout
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgAbout))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -34,6 +35,8 @@ Partial Class dlgAbout
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblLanguagePad = New System.Windows.Forms.Label()
         Me.btnGitHub = New Tundra.StylizedButton()
+        Me.btnCheckUpdates = New Tundra.StylizedButton()
+        Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -173,7 +176,7 @@ Partial Class dlgAbout
         Me.lblLanguagePad.Name = "lblLanguagePad"
         Me.lblLanguagePad.Size = New System.Drawing.Size(348, 28)
         Me.lblLanguagePad.TabIndex = 12
-        Me.lblLanguagePad.Text = "Language Pad 5.2"
+        Me.lblLanguagePad.Text = "Language Pad X.x"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnGitHub
@@ -192,15 +195,39 @@ Partial Class dlgAbout
         Me.btnGitHub.Location = New System.Drawing.Point(11, 244)
         Me.btnGitHub.Margin = New System.Windows.Forms.Padding(2)
         Me.btnGitHub.Name = "btnGitHub"
-        Me.btnGitHub.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnGitHub.Size = New System.Drawing.Size(108, 24)
+        Me.btnGitHub.Size = New System.Drawing.Size(25, 25)
         Me.btnGitHub.Style = resources.GetString("btnGitHub.Style")
         Me.btnGitHub.TabIndex = 77
-        Me.btnGitHub.Text = " Source Code"
         Me.btnGitHub.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGitHub.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ttMain.SetToolTip(Me.btnGitHub, "View source")
         Me.btnGitHub.UseCompatibleTextRendering = True
         Me.btnGitHub.UseVisualStyleBackColor = False
+        '
+        'btnCheckUpdates
+        '
+        Me.btnCheckUpdates.BackColor = System.Drawing.Color.Transparent
+        Me.btnCheckUpdates.BackgroundImage = CType(resources.GetObject("btnCheckUpdates.BackgroundImage"), System.Drawing.Image)
+        Me.btnCheckUpdates.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnCheckUpdates.FlatAppearance.BorderSize = 0
+        Me.btnCheckUpdates.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnCheckUpdates.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnCheckUpdates.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnCheckUpdates.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCheckUpdates.ForeColor = System.Drawing.Color.Black
+        Me.btnCheckUpdates.Image = CType(resources.GetObject("btnCheckUpdates.Image"), System.Drawing.Image)
+        Me.btnCheckUpdates.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCheckUpdates.Location = New System.Drawing.Point(40, 244)
+        Me.btnCheckUpdates.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCheckUpdates.Name = "btnCheckUpdates"
+        Me.btnCheckUpdates.Size = New System.Drawing.Size(25, 25)
+        Me.btnCheckUpdates.Style = resources.GetString("btnCheckUpdates.Style")
+        Me.btnCheckUpdates.TabIndex = 78
+        Me.btnCheckUpdates.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCheckUpdates.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ttMain.SetToolTip(Me.btnCheckUpdates, "Check for updates")
+        Me.btnCheckUpdates.UseCompatibleTextRendering = True
+        Me.btnCheckUpdates.UseVisualStyleBackColor = False
         '
         'dlgAbout
         '
@@ -210,6 +237,7 @@ Partial Class dlgAbout
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(401, 278)
+        Me.Controls.Add(Me.btnCheckUpdates)
         Me.Controls.Add(Me.btnGitHub)
         Me.Controls.Add(Me.lblLanguagePad)
         Me.Controls.Add(Me.PictureBox1)
@@ -244,4 +272,6 @@ Partial Class dlgAbout
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents lblLanguagePad As Label
     Friend WithEvents btnGitHub As Tundra.StylizedButton
+    Friend WithEvents ttMain As ToolTip
+    Friend WithEvents btnCheckUpdates As Tundra.StylizedButton
 End Class

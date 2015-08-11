@@ -62,4 +62,8 @@ Public Class dlgUpdate
     Private Sub btnReddit_Click(sender As Object, e As EventArgs) Handles btnReddit.Click
         Process.Start(RedditThread)
     End Sub
+
+    Private Sub btnSource_Click(sender As Object, e As EventArgs) Handles btnSource.Click
+        Process.Start("https://github.com/ianmartinez/Language-Pad")
+    End Sub
 End Class

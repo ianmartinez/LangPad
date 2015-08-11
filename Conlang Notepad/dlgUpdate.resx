@@ -213,9 +213,9 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnReddit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJkAAAAYCAYAAADpsF/HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAkSURBVGhD7cEBAQAAAIIg/6+uIUAAAAAAAAAAAAAAAAAA
-        AFwNOXgAAQQxJ34AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYSURBVEhL7cEBAQAAAIIg/6+uIUAAAFwNCRgAAdACW14A
+        AAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnReddit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -235,6 +235,56 @@ Pressed Highlight Color=$0</value>
 </value>
   </data>
   <data name="btnReddit.Style" xml:space="preserve">
+    <value>Radius=0
+
+Active Colors=$0|$0
+Active Positions=0|1
+Active Angle=90
+Active Border Color=$0
+Active Text Color=$2
+Active Highlight Color=$0
+
+Hover Colors=#e5f1fb|#e5f1fb
+Hover Positions=0|1
+Hover Angle=90
+Hover Border Color=#0078d7
+Hover Text Color=$2
+Hover Highlight Color=$0
+
+Pressed Colors=#cce4f7|#cce4f7
+Pressed Positions=0|1
+Pressed Angle=90
+Pressed Border Color=#005499
+Pressed Text Color=$2
+Pressed Highlight Color=$0</value>
+  </data>
+  <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="btnSource.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYSURBVEhL7cEBAQAAAIIg/6+uIUAAAFwNCRgAAdACW14A
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnSource.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJPSURBVDhPnU9NSJNxHPbSxVNQJ6/VdYSdIsOE3nev
+        r3Nuzm3qNqfb0rXv7X3H1IQI7GKHQvKUxsLQGVKGLswufTAQSqEOHYazQzevBbXT0//5NzU89sB/vz2f
+        bE0nkc9PzOWNwi8zNw4zK5645NQbkSMAaHwTMM1xXyZpYunlCna/f0bt5z5qP77JS049kzJh5Apqo3I8
+        kM3mfWIA23s7eFV7g2R5AmqxD23zurzk1OkzJ/Jy5GggNpbCp9oupiv30V504PqiG8qSF+qyV15y6vSZ
+        Y549ORCLJuaePi/hwc4COhZFqeSH/XEQkak4YkZaXnLq9Jljnj05MDoS/f12fxvXlgehPhtGTzGM+M00
+        bJrdOH/ugtLX475LTp0+c8yzJwduBEcx82UeyuoItLUIguNROGzOafELT4t3SryznYpuUKfPHPPsyYGI
+        P4L09owwx6BtRBHNp2BVtTb+x0PYuuyXqdPvXIvKPHtyIDQQgraVROd6HM7XBmZnH6LfMxhrdCUEj1NX
+        N2LQ1xMyz54cCHqH6t2rGeibWSjlBN5XP2I4EIJvIJBjmZf8g9CVclLmmA96AnU5YNftj/oTIejvClC3
+        DNyrlrCy+QIel7fKAV7yO1+fwCp85jxmGOzJAYEWt8Nz4JqMQK9MwVqZhC8RRuvFVhdNXr/gWuWW9Jlj
+        nr3DAcLS2+U86I0PobuYgcvmqgut+a/V1ExOnT5zQrPQ+HeAsCgdyoLT5sTVK+23G5oEOXX6gsoycXKA
+        aBHvknhnJDsGOXX6R5AD/Pj/h6Y/LlTYzNUKpV0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnSource.Style" xml:space="preserve">
     <value>Radius=0
 
 Active Colors=$0|$0

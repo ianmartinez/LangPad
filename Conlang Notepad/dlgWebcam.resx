@@ -120,9 +120,9 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnFlash.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAaSURBVEhL7cExAQAAAMKg9U9tDQ8gAAA4VAMKqgAB9LRk
-        QwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZSURBVEhL7cEBDQAAAMKg909tDwcEAMCLGgndAAFmfTmF
+        AAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="cmsColor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -168,11 +168,14 @@ Pressed Border Color=#005499
 Pressed Text Color=$2
 Pressed Highlight Color=$0</value>
   </data>
+  <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>104, 17</value>
+  </metadata>
   <data name="btnPause.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAaSURBVEhL7cExAQAAAMKg9U9tDQ8gAAA4VAMKqgAB9LRk
-        QwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZSURBVEhL7cEBDQAAAMKg909tDwcEAMCLGgndAAFmfTmF
+        AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnPause.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -216,9 +219,9 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnPlay.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAaSURBVEhL7cExAQAAAMKg9U9tDQ8gAAA4VAMKqgAB9LRk
-        QwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZSURBVEhL7cEBDQAAAMKg909tDwcEAMCLGgndAAFmfTmF
+        AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnPlay.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -263,10 +266,10 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAYCAYAAACsnTAAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABhSURBVFhH7dCxCcAwDABB77+LQPO40wpeIEYkasKP8MXB
-        178yc0fEo1f/WB1VpU//cMqPU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTwEw5
-        HRpxLtMLEhBTC1JrAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAZCAYAAABnweOlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABjSURBVFhH7dCxCcAwDABB77+LQPO40wpeIEYkasKP8MXB
+        178yc0fEo1f/WB1VpU//cMqPU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFPA
+        TDkdGnEumvoLkfBpvwAAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnCancel.Style" xml:space="preserve">
@@ -295,10 +298,10 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnOK.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAYCAYAAACsnTAAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABhSURBVFhH7dCxCcAwDABB77+LQPO40wpeIEYkasKP8MXB
-        178yc0fEo1f/WB1VpU//cMqPU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTwEw5
-        HRpxLtMLEhBTC1JrAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAEUAAAAZCAYAAABnweOlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABjSURBVFhH7dCxCcAwDABB77+LQPO40wpeIEYkasKP8MXB
+        178yc0fEo1f/WB1VpU//cMqPU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFOAU4BTgFPA
+        TDkdGnEumvoLkfBpvwAAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnOK.Style" xml:space="preserve">

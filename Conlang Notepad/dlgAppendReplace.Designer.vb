@@ -41,11 +41,11 @@ Partial Class dlgAppendReplace
         Me.TableLayoutPanel1.Controls.Add(Me.btnAppend, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnReplace, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(65, 71)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(65, 70)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(196, 28)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(196, 29)
         Me.TableLayoutPanel1.TabIndex = 73
         '
         'btnAppend
@@ -64,7 +64,7 @@ Partial Class dlgAppendReplace
         Me.btnAppend.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAppend.Name = "btnAppend"
         Me.btnAppend.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnAppend.Size = New System.Drawing.Size(61, 24)
+        Me.btnAppend.Size = New System.Drawing.Size(61, 25)
         Me.btnAppend.Style = resources.GetString("btnAppend.Style")
         Me.btnAppend.TabIndex = 0
         Me.btnAppend.Text = "Append"
@@ -87,7 +87,7 @@ Partial Class dlgAppendReplace
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(62, 24)
+        Me.btnCancel.Size = New System.Drawing.Size(62, 25)
         Me.btnCancel.Style = resources.GetString("btnCancel.Style")
         Me.btnCancel.TabIndex = 2
         Me.btnCancel.Text = "Cancel"
@@ -109,7 +109,7 @@ Partial Class dlgAppendReplace
         Me.btnReplace.Margin = New System.Windows.Forms.Padding(2)
         Me.btnReplace.Name = "btnReplace"
         Me.btnReplace.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnReplace.Size = New System.Drawing.Size(61, 24)
+        Me.btnReplace.Size = New System.Drawing.Size(61, 25)
         Me.btnReplace.Style = resources.GetString("btnReplace.Style")
         Me.btnReplace.TabIndex = 1
         Me.btnReplace.Text = "Replace"

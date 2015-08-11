@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Language Pad.exe" version="5.2.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Language Pad.exe" version="5.2.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="LangPad4.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="961944">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="967064">
       <assemblyIdentity name="Language Pad" version="5.2.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>uP9HANZX7EFKfM4YyB6N80Tnlas=</dsig:DigestValue>
+        <dsig:DigestValue>bPkDb4Woq0DaT+T45O/OxLQUJFI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -144,22 +144,22 @@
       <dsig:DigestValue>razJ7U/reN67NLNiAOMjCuUzdQk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Language Pad.exe.config" size="3269">
+  <file name="Language Pad.exe.config" size="3311">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>DR3+qQLzVMsZxSWBYoFxD3vtSgo=</dsig:DigestValue>
+      <dsig:DigestValue>OLdeZcXs1LL8K7LVOaTGWXZCRuQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Update.txt" size="815">
+  <file name="Update.txt" size="495">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>NCBjMbRulNK+F6ta/U4NyK9MeRg=</dsig:DigestValue>
+      <dsig:DigestValue>/PMfDkJe1A8CDsgRrWeSiFlaF0I=</dsig:DigestValue>
     </hash>
   </file>
   <asmv3:application xmlns="urn:schemas-microsoft-com:asm.v1">

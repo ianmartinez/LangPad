@@ -60,4 +60,8 @@ Public Class dlgAccentMark
             frmMain.CustomLayoutPanel.Controls.Add(IPAButton)
         Next
     End Sub
+
+    Private Sub btnCopy_Click(sender As Object, e As EventArgs) Handles btnCopy.Click
+        Clipboard.SetText(lblResult.Text)
+    End Sub
 End Class

@@ -42,6 +42,7 @@ Partial Class dlgWebcam
         Me.btnCancel = New Tundra.StylizedButton()
         Me.btnOK = New Tundra.StylizedButton()
         Me.wfMain = New Language_Pad.WebcamFrame()
+        Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.cmsColor.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -61,13 +62,13 @@ Partial Class dlgWebcam
         Me.btnFlash.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFlash.ForeColor = System.Drawing.Color.Black
         Me.btnFlash.Image = CType(resources.GetObject("btnFlash.Image"), System.Drawing.Image)
-        Me.btnFlash.Location = New System.Drawing.Point(71, 327)
+        Me.btnFlash.Location = New System.Drawing.Point(66, 327)
         Me.btnFlash.Margin = New System.Windows.Forms.Padding(2)
         Me.btnFlash.Name = "btnFlash"
-        Me.btnFlash.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnFlash.Size = New System.Drawing.Size(26, 26)
+        Me.btnFlash.Size = New System.Drawing.Size(25, 25)
         Me.btnFlash.Style = resources.GetString("btnFlash.Style")
         Me.btnFlash.TabIndex = 10
+        Me.ttMain.SetToolTip(Me.btnFlash, "Flash")
         Me.btnFlash.UseCompatibleTextRendering = True
         Me.btnFlash.UseVisualStyleBackColor = False
         '
@@ -160,13 +161,13 @@ Partial Class dlgWebcam
         Me.btnPause.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPause.ForeColor = System.Drawing.Color.Black
         Me.btnPause.Image = CType(resources.GetObject("btnPause.Image"), System.Drawing.Image)
-        Me.btnPause.Location = New System.Drawing.Point(41, 327)
+        Me.btnPause.Location = New System.Drawing.Point(37, 327)
         Me.btnPause.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPause.Name = "btnPause"
-        Me.btnPause.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnPause.Size = New System.Drawing.Size(26, 26)
+        Me.btnPause.Size = New System.Drawing.Size(25, 25)
         Me.btnPause.Style = resources.GetString("btnPause.Style")
         Me.btnPause.TabIndex = 9
+        Me.ttMain.SetToolTip(Me.btnPause, "Pause")
         Me.btnPause.UseCompatibleTextRendering = True
         Me.btnPause.UseVisualStyleBackColor = False
         '
@@ -184,13 +185,13 @@ Partial Class dlgWebcam
         Me.btnPlay.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPlay.ForeColor = System.Drawing.Color.Black
         Me.btnPlay.Image = CType(resources.GetObject("btnPlay.Image"), System.Drawing.Image)
-        Me.btnPlay.Location = New System.Drawing.Point(11, 327)
+        Me.btnPlay.Location = New System.Drawing.Point(8, 327)
         Me.btnPlay.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPlay.Name = "btnPlay"
-        Me.btnPlay.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnPlay.Size = New System.Drawing.Size(26, 26)
+        Me.btnPlay.Size = New System.Drawing.Size(25, 25)
         Me.btnPlay.Style = resources.GetString("btnPlay.Style")
         Me.btnPlay.TabIndex = 7
+        Me.ttMain.SetToolTip(Me.btnPlay, "Resume")
         Me.btnPlay.UseCompatibleTextRendering = True
         Me.btnPlay.UseVisualStyleBackColor = False
         '
@@ -206,7 +207,7 @@ Partial Class dlgWebcam
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 28)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 29)
         Me.TableLayoutPanel1.TabIndex = 70
         '
         'btnCancel
@@ -225,7 +226,7 @@ Partial Class dlgWebcam
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(69, 24)
+        Me.btnCancel.Size = New System.Drawing.Size(69, 25)
         Me.btnCancel.Style = resources.GetString("btnCancel.Style")
         Me.btnCancel.TabIndex = 5
         Me.btnCancel.Text = "Cancel"
@@ -247,7 +248,7 @@ Partial Class dlgWebcam
         Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnOK.Size = New System.Drawing.Size(69, 24)
+        Me.btnOK.Size = New System.Drawing.Size(69, 25)
         Me.btnOK.Style = resources.GetString("btnOK.Style")
         Me.btnOK.TabIndex = 4
         Me.btnOK.Text = "OK"
@@ -310,5 +311,5 @@ Partial Class dlgWebcam
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents btnCancel As Tundra.StylizedButton
     Friend WithEvents btnOK As Tundra.StylizedButton
-
+    Friend WithEvents ttMain As ToolTip
 End Class

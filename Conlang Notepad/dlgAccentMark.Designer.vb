@@ -22,6 +22,7 @@ Partial Class dlgAccentMark
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgAccentMark))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCharacter = New System.Windows.Forms.TextBox()
@@ -33,6 +34,8 @@ Partial Class dlgAccentMark
         Me.lblResult = New System.Windows.Forms.Label()
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
         Me.cbAccents = New Language_Pad.CenteredComboBox()
+        Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnCopy = New Tundra.StylizedButton()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.StylizedPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -79,7 +82,7 @@ Partial Class dlgAccentMark
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 28)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 29)
         Me.TableLayoutPanel1.TabIndex = 68
         '
         'btnCancel
@@ -98,7 +101,7 @@ Partial Class dlgAccentMark
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(69, 24)
+        Me.btnCancel.Size = New System.Drawing.Size(69, 25)
         Me.btnCancel.Style = resources.GetString("btnCancel.Style")
         Me.btnCancel.TabIndex = 5
         Me.btnCancel.Text = "Cancel"
@@ -120,7 +123,7 @@ Partial Class dlgAccentMark
         Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnOK.Size = New System.Drawing.Size(69, 24)
+        Me.btnOK.Size = New System.Drawing.Size(69, 25)
         Me.btnOK.Style = resources.GetString("btnOK.Style")
         Me.btnOK.TabIndex = 4
         Me.btnOK.Text = "OK"
@@ -144,10 +147,9 @@ Partial Class dlgAccentMark
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnAdd.Size = New System.Drawing.Size(168, 24)
+        Me.btnAdd.Size = New System.Drawing.Size(25, 25)
         Me.btnAdd.Style = resources.GetString("btnAdd.Style")
-        Me.btnAdd.TabIndex = 3
-        Me.btnAdd.Text = " Add to custom symbols"
+        Me.btnAdd.TabIndex = 7
         Me.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnAdd.UseCompatibleTextRendering = True
@@ -191,6 +193,32 @@ Partial Class dlgAccentMark
         Me.cbAccents.Size = New System.Drawing.Size(210, 26)
         Me.cbAccents.TabIndex = 1
         '
+        'btnCopy
+        '
+        Me.btnCopy.BackColor = System.Drawing.Color.Transparent
+        Me.btnCopy.BackgroundImage = CType(resources.GetObject("btnCopy.BackgroundImage"), System.Drawing.Image)
+        Me.btnCopy.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnCopy.FlatAppearance.BorderSize = 0
+        Me.btnCopy.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnCopy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnCopy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCopy.ForeColor = System.Drawing.Color.Black
+        Me.btnCopy.Image = CType(resources.GetObject("btnCopy.Image"), System.Drawing.Image)
+        Me.btnCopy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCopy.Location = New System.Drawing.Point(40, 77)
+        Me.btnCopy.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCopy.Name = "btnCopy"
+        Me.btnCopy.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnCopy.Size = New System.Drawing.Size(25, 25)
+        Me.btnCopy.Style = resources.GetString("btnCopy.Style")
+        Me.btnCopy.TabIndex = 8
+        Me.btnCopy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCopy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ttMain.SetToolTip(Me.btnCopy, "Copy to clipboard")
+        Me.btnCopy.UseCompatibleTextRendering = True
+        Me.btnCopy.UseVisualStyleBackColor = False
+        '
         'dlgAccentMark
         '
         Me.AcceptButton = Me.btnOK
@@ -199,6 +227,7 @@ Partial Class dlgAccentMark
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(357, 115)
+        Me.Controls.Add(Me.btnCopy)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -230,5 +259,6 @@ Partial Class dlgAccentMark
     Friend WithEvents btnAdd As Tundra.StylizedButton
     Friend WithEvents lblResult As System.Windows.Forms.Label
     Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
-
+    Friend WithEvents ttMain As ToolTip
+    Friend WithEvents btnCopy As Tundra.StylizedButton
 End Class
