@@ -27,10 +27,10 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="ClipArt" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="Updates" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="ForceSansSerif" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

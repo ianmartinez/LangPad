@@ -211,8 +211,6 @@ Partial Class dlgSettings
         'cbClipArt
         '
         Me.cbClipArt.AutoSize = True
-        Me.cbClipArt.Checked = True
-        Me.cbClipArt.CheckState = System.Windows.Forms.CheckState.Checked
         Me.cbClipArt.Location = New System.Drawing.Point(147, 28)
         Me.cbClipArt.Name = "cbClipArt"
         Me.cbClipArt.Size = New System.Drawing.Size(59, 17)
