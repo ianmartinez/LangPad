@@ -62,9 +62,10 @@ Partial Class dlgWebcam
         Me.btnFlash.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFlash.ForeColor = System.Drawing.Color.Black
         Me.btnFlash.Image = CType(resources.GetObject("btnFlash.Image"), System.Drawing.Image)
-        Me.btnFlash.Location = New System.Drawing.Point(66, 327)
+        Me.btnFlash.Location = New System.Drawing.Point(66, 325)
         Me.btnFlash.Margin = New System.Windows.Forms.Padding(2)
         Me.btnFlash.Name = "btnFlash"
+        Me.btnFlash.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnFlash.Size = New System.Drawing.Size(25, 25)
         Me.btnFlash.Style = resources.GetString("btnFlash.Style")
         Me.btnFlash.TabIndex = 10
@@ -161,9 +162,10 @@ Partial Class dlgWebcam
         Me.btnPause.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPause.ForeColor = System.Drawing.Color.Black
         Me.btnPause.Image = CType(resources.GetObject("btnPause.Image"), System.Drawing.Image)
-        Me.btnPause.Location = New System.Drawing.Point(37, 327)
+        Me.btnPause.Location = New System.Drawing.Point(37, 325)
         Me.btnPause.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPause.Name = "btnPause"
+        Me.btnPause.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnPause.Size = New System.Drawing.Size(25, 25)
         Me.btnPause.Style = resources.GetString("btnPause.Style")
         Me.btnPause.TabIndex = 9
@@ -185,9 +187,10 @@ Partial Class dlgWebcam
         Me.btnPlay.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPlay.ForeColor = System.Drawing.Color.Black
         Me.btnPlay.Image = CType(resources.GetObject("btnPlay.Image"), System.Drawing.Image)
-        Me.btnPlay.Location = New System.Drawing.Point(8, 327)
+        Me.btnPlay.Location = New System.Drawing.Point(8, 325)
         Me.btnPlay.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPlay.Name = "btnPlay"
+        Me.btnPlay.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnPlay.Size = New System.Drawing.Size(25, 25)
         Me.btnPlay.Style = resources.GetString("btnPlay.Style")
         Me.btnPlay.TabIndex = 7
@@ -203,7 +206,7 @@ Partial Class dlgWebcam
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(278, 325)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(278, 323)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -274,7 +277,7 @@ Partial Class dlgWebcam
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(427, 357)
+        Me.ClientSize = New System.Drawing.Size(427, 355)
         Me.Controls.Add(Me.wfMain)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.btnFlash)
