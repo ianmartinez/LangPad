@@ -33,9 +33,9 @@ Partial Class dlgAccentMark
         Me.btnAdd = New Tundra.StylizedButton()
         Me.lblResult = New System.Windows.Forms.Label()
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
-        Me.cbAccents = New Language_Pad.CenteredComboBox()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnCopy = New Tundra.StylizedButton()
+        Me.cbAccents = New Language_Pad.CenteredComboBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.StylizedPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -78,7 +78,7 @@ Partial Class dlgAccentMark
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(199, 75)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(200, 74)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -143,7 +143,7 @@ Partial Class dlgAccentMark
         Me.btnAdd.ForeColor = System.Drawing.Color.Black
         Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
         Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdd.Location = New System.Drawing.Point(11, 77)
+        Me.btnAdd.Location = New System.Drawing.Point(11, 76)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
@@ -181,18 +181,6 @@ Partial Class dlgAccentMark
     "olor=#252b2f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.StylizedPanel1.TabIndex = 70
         '
-        'cbAccents
-        '
-        Me.cbAccents.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbAccents.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbAccents.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbAccents.FormattingEnabled = True
-        Me.cbAccents.Location = New System.Drawing.Point(71, 40)
-        Me.cbAccents.Margin = New System.Windows.Forms.Padding(2)
-        Me.cbAccents.Name = "cbAccents"
-        Me.cbAccents.Size = New System.Drawing.Size(210, 26)
-        Me.cbAccents.TabIndex = 1
-        '
         'btnCopy
         '
         Me.btnCopy.BackColor = System.Drawing.Color.Transparent
@@ -206,7 +194,7 @@ Partial Class dlgAccentMark
         Me.btnCopy.ForeColor = System.Drawing.Color.Black
         Me.btnCopy.Image = CType(resources.GetObject("btnCopy.Image"), System.Drawing.Image)
         Me.btnCopy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCopy.Location = New System.Drawing.Point(40, 77)
+        Me.btnCopy.Location = New System.Drawing.Point(40, 76)
         Me.btnCopy.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCopy.Name = "btnCopy"
         Me.btnCopy.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
@@ -218,6 +206,18 @@ Partial Class dlgAccentMark
         Me.ttMain.SetToolTip(Me.btnCopy, "Copy to clipboard")
         Me.btnCopy.UseCompatibleTextRendering = True
         Me.btnCopy.UseVisualStyleBackColor = False
+        '
+        'cbAccents
+        '
+        Me.cbAccents.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbAccents.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbAccents.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbAccents.FormattingEnabled = True
+        Me.cbAccents.Location = New System.Drawing.Point(71, 40)
+        Me.cbAccents.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbAccents.Name = "cbAccents"
+        Me.cbAccents.Size = New System.Drawing.Size(210, 26)
+        Me.cbAccents.TabIndex = 1
         '
         'dlgAccentMark
         '

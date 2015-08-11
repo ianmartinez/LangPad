@@ -240,15 +240,15 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnCopy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABdElEQVQ4T4WT3U7CQBCFuTPR
-        h5HE55B7ExPFkMhzGaCA/SMk6ivIvdeSCEqhtS20FaFknTMua6sVvuRkl2X27JxtW+r1+75h20I3TXEL
-        GQaPhmUJ07afSvtA4X84jgMjTZYWg5PB83CoBG4aDR5hQp00ZPlf0C54GY3FaPzKI3gcDJRJl2KhUxwm
-        o+lyOxnQn2AycYQzmfI4ny94bUur05Gzb3LRtgYz1xWu57Ewn85mLNBst6mzEc9/RdOVgR8EOb37PgvA
-        4I06A9loiKMMFouoUAAGruup31twf8ogST4KBZqaJsIw5HjZaNirnkKapiJdr/OiNQCDKI5FQCbZaGyA
-        t3AfiLBcfoooinPR2IBuMsRlqNdYqqvrQqPH16LNd/cPYrVaU6RlLhobEMfX9frFVa12Dl1Wq2enlUoF
-        ncVJwo8UmzebzU9MGY0vUXJEOszogDrjol3gEKotxur15jDhrzQTjUVriI0aWV5ImXSyW6XyF8ELzYUw
-        EtkrAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF0SURBVDhPhZPdTsJAEIW5M9GHkcTnkHsTE8WQyHMZ
+        oID9IyTqK8i915IISqG1LbQVoWSdMy5rqxW+5GSXZfbsnG1b6vX7vmHbQjdNcQsZBo+GZQnTtp9K+0Dh
+        fziOAyNNlhaDk8HzcKgEbhoNHmFCnTRk+V/QLngZjcVo/MojeBwMlEmXYqFTHCaj6XI7GdCfYDJxhDOZ
+        8jifL3htS6vTkbNvctG2BjPXFa7nsTCfzmYs0Gy3qbMRz39F05WBHwQ5vfs+C8DgjToD2WiIowwWi6hQ
+        AAau66nfW3B/yiBJPgoFmpomwjDkeNlo2KueQpqmIl2v86I1AIMojkVAJtlobIC3cB+IsFx+iiiKc9HY
+        gG4yxGWo11iqq+tCo8fXos139w9itVpTpGUuGhsQx9f1+sVVrXYOXVarZ6eVSgWdxUnCjxSbN5vNT0wZ
+        jS9RckQ6zOiAOuOiXeAQqi3G6vXmMOGvNBONRWuIjRpZXkiZdLJbpfIXwQvNhTAS2SsAAAAASUVORK5C
+        YII=
 </value>
   </data>
   <data name="btnCopy.Style" xml:space="preserve">
