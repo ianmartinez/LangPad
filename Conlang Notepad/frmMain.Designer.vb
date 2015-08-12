@@ -332,10 +332,10 @@ Partial Class frmMain
         Me.btnQuickSymbols = New Tundra.StylizedButton()
         Me.btnQuickAccents = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel21 = New Tundra.DoubleBufferedPanel()
-        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.btnQuickOpen = New Tundra.StylizedButton()
         Me.btnQuickSave = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel22 = New Tundra.DoubleBufferedPanel()
+        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.tcSymbols.SuspendLayout()
         Me.ConsonantsTabPage.SuspendLayout()
         Me.AffricatesTabPage.SuspendLayout()
@@ -629,61 +629,61 @@ Partial Class frmMain
         '
         'cmsMain
         '
-        Me.cmsMain.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.cmsMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.CutToolStripMenuItem, Me.ToolStripSeparator1, Me.SelectAllToolStripMenuItem, Me.DeselectAllToolStripMenuItem, Me.ToolStripMenuItem1, Me.NarrateToolStripMenuItem})
         Me.cmsMain.Name = "cmsMain"
-        Me.cmsMain.Size = New System.Drawing.Size(140, 172)
+        Me.cmsMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.cmsMain.Size = New System.Drawing.Size(136, 148)
         '
         'CopyToolStripMenuItem
         '
         Me.CopyToolStripMenuItem.Image = CType(resources.GetObject("CopyToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Image = CType(resources.GetObject("PasteToolStripMenuItem.Image"), System.Drawing.Image)
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'CutToolStripMenuItem
         '
         Me.CutToolStripMenuItem.Image = CType(resources.GetObject("CutToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.CutToolStripMenuItem.Text = "Cut"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(136, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(132, 6)
         '
         'SelectAllToolStripMenuItem
         '
         Me.SelectAllToolStripMenuItem.Image = CType(resources.GetObject("SelectAllToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.SelectAllToolStripMenuItem.Text = "Select All"
         '
         'DeselectAllToolStripMenuItem
         '
         Me.DeselectAllToolStripMenuItem.Image = CType(resources.GetObject("DeselectAllToolStripMenuItem.Image"), System.Drawing.Image)
         Me.DeselectAllToolStripMenuItem.Name = "DeselectAllToolStripMenuItem"
-        Me.DeselectAllToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
+        Me.DeselectAllToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.DeselectAllToolStripMenuItem.Text = "Deselect All"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(136, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(132, 6)
         '
         'NarrateToolStripMenuItem
         '
         Me.NarrateToolStripMenuItem.Image = CType(resources.GetObject("NarrateToolStripMenuItem.Image"), System.Drawing.Image)
         Me.NarrateToolStripMenuItem.Name = "NarrateToolStripMenuItem"
-        Me.NarrateToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
+        Me.NarrateToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.NarrateToolStripMenuItem.Text = "Narrate"
         '
         'cmsTextHighlight
@@ -5570,6 +5570,9 @@ Partial Class frmMain
         'pnlTabs
         '
         Me.pnlTabs.BackColor = System.Drawing.Color.Transparent
+        Me.pnlTabs.Controls.Add(Me.btnQuickOpen)
+        Me.pnlTabs.Controls.Add(Me.btnQuickSave)
+        Me.pnlTabs.Controls.Add(Me.DoubleBufferedPanel22)
         Me.pnlTabs.Controls.Add(Me.btnQuickUndo)
         Me.pnlTabs.Controls.Add(Me.btnQuickRedo)
         Me.pnlTabs.Controls.Add(Me.DoubleBufferedPanel17)
@@ -5579,9 +5582,6 @@ Partial Class frmMain
         Me.pnlTabs.Controls.Add(Me.btnLinguistics)
         Me.pnlTabs.Controls.Add(Me.btnHome)
         Me.pnlTabs.Controls.Add(Me.btnConlangNotepad)
-        Me.pnlTabs.Controls.Add(Me.btnQuickOpen)
-        Me.pnlTabs.Controls.Add(Me.btnQuickSave)
-        Me.pnlTabs.Controls.Add(Me.DoubleBufferedPanel22)
         Me.pnlTabs.Controls.Add(Me.btnQuickSymbols)
         Me.pnlTabs.Controls.Add(Me.btnQuickAccents)
         Me.pnlTabs.Controls.Add(Me.DoubleBufferedPanel21)
@@ -5781,7 +5781,7 @@ Partial Class frmMain
         Me.DoubleBufferedPanel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
         Me.DoubleBufferedPanel17.Dock = System.Windows.Forms.DockStyle.Right
         Me.DoubleBufferedPanel17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel17.Location = New System.Drawing.Point(671, 0)
+        Me.DoubleBufferedPanel17.Location = New System.Drawing.Point(722, 0)
         Me.DoubleBufferedPanel17.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel17.Name = "DoubleBufferedPanel17"
         Me.DoubleBufferedPanel17.Size = New System.Drawing.Size(1, 25)
@@ -5801,13 +5801,13 @@ Partial Class frmMain
         Me.btnQuickRedo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnQuickRedo.ForeColor = System.Drawing.Color.Black
         Me.btnQuickRedo.Image = CType(resources.GetObject("btnQuickRedo.Image"), System.Drawing.Image)
-        Me.btnQuickRedo.Location = New System.Drawing.Point(646, 0)
+        Me.btnQuickRedo.Location = New System.Drawing.Point(697, 0)
         Me.btnQuickRedo.Margin = New System.Windows.Forms.Padding(2)
         Me.btnQuickRedo.Name = "btnQuickRedo"
         Me.btnQuickRedo.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnQuickRedo.Size = New System.Drawing.Size(25, 25)
         Me.btnQuickRedo.Style = resources.GetString("btnQuickRedo.Style")
-        Me.btnQuickRedo.TabIndex = 90
+        Me.btnQuickRedo.TabIndex = 97
         Me.ttMain.SetToolTip(Me.btnQuickRedo, "Redo")
         Me.btnQuickRedo.UseCompatibleTextRendering = True
         Me.btnQuickRedo.UseVisualStyleBackColor = False
@@ -5826,13 +5826,13 @@ Partial Class frmMain
         Me.btnQuickUndo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnQuickUndo.ForeColor = System.Drawing.Color.Black
         Me.btnQuickUndo.Image = CType(resources.GetObject("btnQuickUndo.Image"), System.Drawing.Image)
-        Me.btnQuickUndo.Location = New System.Drawing.Point(621, 0)
+        Me.btnQuickUndo.Location = New System.Drawing.Point(672, 0)
         Me.btnQuickUndo.Margin = New System.Windows.Forms.Padding(2)
         Me.btnQuickUndo.Name = "btnQuickUndo"
         Me.btnQuickUndo.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnQuickUndo.Size = New System.Drawing.Size(25, 25)
         Me.btnQuickUndo.Style = resources.GetString("btnQuickUndo.Style")
-        Me.btnQuickUndo.TabIndex = 89
+        Me.btnQuickUndo.TabIndex = 96
         Me.ttMain.SetToolTip(Me.btnQuickUndo, "Undo")
         Me.btnQuickUndo.UseCompatibleTextRendering = True
         Me.btnQuickUndo.UseVisualStyleBackColor = False
@@ -5857,7 +5857,7 @@ Partial Class frmMain
         Me.btnQuickSymbols.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnQuickSymbols.Size = New System.Drawing.Size(25, 25)
         Me.btnQuickSymbols.Style = resources.GetString("btnQuickSymbols.Style")
-        Me.btnQuickSymbols.TabIndex = 91
+        Me.btnQuickSymbols.TabIndex = 98
         Me.ttMain.SetToolTip(Me.btnQuickSymbols, "Symbols")
         Me.btnQuickSymbols.UseCompatibleTextRendering = True
         Me.btnQuickSymbols.UseVisualStyleBackColor = False
@@ -5882,7 +5882,7 @@ Partial Class frmMain
         Me.btnQuickAccents.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnQuickAccents.Size = New System.Drawing.Size(25, 25)
         Me.btnQuickAccents.Style = resources.GetString("btnQuickAccents.Style")
-        Me.btnQuickAccents.TabIndex = 92
+        Me.btnQuickAccents.TabIndex = 99
         Me.ttMain.SetToolTip(Me.btnQuickAccents, "Accent Mark")
         Me.btnQuickAccents.UseCompatibleTextRendering = True
         Me.btnQuickAccents.UseVisualStyleBackColor = False
@@ -5898,17 +5898,6 @@ Partial Class frmMain
         Me.DoubleBufferedPanel21.Size = New System.Drawing.Size(1, 25)
         Me.DoubleBufferedPanel21.TabIndex = 93
         '
-        'NotebookEditor1
-        '
-        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
-        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 26)
-        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(2)
-        Me.NotebookEditor1.Name = "NotebookEditor1"
-        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.NotebookEditor1.Size = New System.Drawing.Size(257, 41)
-        Me.NotebookEditor1.TabIndex = 72
-        '
         'btnQuickOpen
         '
         Me.btnQuickOpen.BackColor = System.Drawing.Color.Transparent
@@ -5923,7 +5912,7 @@ Partial Class frmMain
         Me.btnQuickOpen.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnQuickOpen.ForeColor = System.Drawing.Color.Black
         Me.btnQuickOpen.Image = CType(resources.GetObject("btnQuickOpen.Image"), System.Drawing.Image)
-        Me.btnQuickOpen.Location = New System.Drawing.Point(672, 0)
+        Me.btnQuickOpen.Location = New System.Drawing.Point(621, 0)
         Me.btnQuickOpen.Margin = New System.Windows.Forms.Padding(2)
         Me.btnQuickOpen.Name = "btnQuickOpen"
         Me.btnQuickOpen.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
@@ -5948,7 +5937,7 @@ Partial Class frmMain
         Me.btnQuickSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnQuickSave.ForeColor = System.Drawing.Color.Black
         Me.btnQuickSave.Image = CType(resources.GetObject("btnQuickSave.Image"), System.Drawing.Image)
-        Me.btnQuickSave.Location = New System.Drawing.Point(697, 0)
+        Me.btnQuickSave.Location = New System.Drawing.Point(646, 0)
         Me.btnQuickSave.Margin = New System.Windows.Forms.Padding(2)
         Me.btnQuickSave.Name = "btnQuickSave"
         Me.btnQuickSave.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
@@ -5964,11 +5953,22 @@ Partial Class frmMain
         Me.DoubleBufferedPanel22.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
         Me.DoubleBufferedPanel22.Dock = System.Windows.Forms.DockStyle.Right
         Me.DoubleBufferedPanel22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel22.Location = New System.Drawing.Point(722, 0)
+        Me.DoubleBufferedPanel22.Location = New System.Drawing.Point(671, 0)
         Me.DoubleBufferedPanel22.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel22.Name = "DoubleBufferedPanel22"
         Me.DoubleBufferedPanel22.Size = New System.Drawing.Size(1, 25)
         Me.DoubleBufferedPanel22.TabIndex = 96
+        '
+        'NotebookEditor1
+        '
+        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
+        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 26)
+        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(2)
+        Me.NotebookEditor1.Name = "NotebookEditor1"
+        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.NotebookEditor1.Size = New System.Drawing.Size(257, 41)
+        Me.NotebookEditor1.TabIndex = 72
         '
         'frmMain
         '
