@@ -220,6 +220,7 @@ Partial Class dlgAbout
         Me.btnCheckUpdates.Location = New System.Drawing.Point(40, 244)
         Me.btnCheckUpdates.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCheckUpdates.Name = "btnCheckUpdates"
+        Me.btnCheckUpdates.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnCheckUpdates.Size = New System.Drawing.Size(25, 25)
         Me.btnCheckUpdates.Style = resources.GetString("btnCheckUpdates.Style")
         Me.btnCheckUpdates.TabIndex = 78

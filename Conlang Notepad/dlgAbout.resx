@@ -130,7 +130,13 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
   </data>
   <data name="TextBox2.Text" xml:space="preserve">
-    <value>Version 5.2 (August 10, 2015)
+    <value>Version 5.3 (August 12, 2015)
+   •Standardized buttons on dialogs
+   •Centralized version naming
+   •Copy button in accent mark dialog
+   •Clip art loading turned off by default
+   •Quick access buttons
+Version 5.2 (August 10, 2015)
    •Keyboard shortcuts
    •Massive internal improvements
    •Improved updating system
@@ -433,6 +439,9 @@ Pressed Highlight Color=$0</value>
         EA2KF0ta9FJFC7UoWhCg+S9VGCBOv2Vu0uF/AKQp/xTq9Le6AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="btnGitHub.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -442,18 +451,18 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnGitHub.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
   </data>
   <data name="btnGitHub.Style" xml:space="preserve">
@@ -480,9 +489,6 @@ Pressed Border Color=#005499
 Pressed Text Color=$2
 Pressed Highlight Color=$0</value>
   </data>
-  <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="btnCheckUpdates.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -492,20 +498,20 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnCheckUpdates.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
+        yEw1ZC2AAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnCheckUpdates.Style" xml:space="preserve">
@@ -532,4 +538,7 @@ Pressed Border Color=#005499
 Pressed Text Color=$2
 Pressed Highlight Color=$0</value>
   </data>
+  <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

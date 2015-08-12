@@ -242,6 +242,7 @@ Partial Class dlgStyle
         Me.btnSave.Location = New System.Drawing.Point(40, 159)
         Me.btnSave.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSave.Name = "btnSave"
+        Me.btnSave.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnSave.Size = New System.Drawing.Size(25, 25)
         Me.btnSave.Style = resources.GetString("btnSave.Style")
         Me.btnSave.TabIndex = 94
@@ -266,6 +267,7 @@ Partial Class dlgStyle
         Me.btnOpen.Location = New System.Drawing.Point(11, 159)
         Me.btnOpen.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOpen.Name = "btnOpen"
+        Me.btnOpen.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnOpen.Size = New System.Drawing.Size(25, 25)
         Me.btnOpen.Style = resources.GetString("btnOpen.Style")
         Me.btnOpen.TabIndex = 93
@@ -358,6 +360,7 @@ Partial Class dlgStyle
         Me.btnDeleteAll.Location = New System.Drawing.Point(69, 159)
         Me.btnDeleteAll.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDeleteAll.Name = "btnDeleteAll"
+        Me.btnDeleteAll.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnDeleteAll.Size = New System.Drawing.Size(25, 25)
         Me.btnDeleteAll.Style = resources.GetString("btnDeleteAll.Style")
         Me.btnDeleteAll.TabIndex = 95
@@ -381,7 +384,7 @@ Partial Class dlgStyle
         Me.btnClose.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnClose.Size = New System.Drawing.Size(68, 26)
         Me.btnClose.Style = resources.GetString("btnClose.Style")
-        Me.btnClose.TabIndex = 96
+        Me.btnClose.TabIndex = 11
         Me.btnClose.Text = "Close"
         Me.btnClose.UseCompatibleTextRendering = True
         Me.btnClose.UseVisualStyleBackColor = False

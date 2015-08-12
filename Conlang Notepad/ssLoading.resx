@@ -134,11 +134,11 @@ Background Colors=~35|~35
 Background Positions=0|1
 Background Angle=90
 Background Border Color=~50
-Background Highlight Color=130,255,255,255
+Background Highlight Color=0,255,255,255
 
-Progress Colors=#cc2b00|#de5b14
+Progress Colors=#de5b14|#e02713
 Progress Positions=0|1
-Progress Angle=-90
+Progress Angle=90
 Progress Border Color=~0
 Progress Highlight Color=20,255,255,255
 

@@ -1320,4 +1320,12 @@ Public Class frmMain
     Private Sub btnQuickAccents_Click(sender As Object, e As EventArgs) Handles btnQuickAccents.Click
         btnAccentMark_Click(Me, e)
     End Sub
+
+    Private Sub btnQuickOpen_Click(sender As Object, e As EventArgs) Handles btnQuickOpen.Click
+        btnOpen_Click(Me, e)
+    End Sub
+
+    Private Sub btnQuickSave_Click(sender As Object, e As EventArgs) Handles btnQuickSave.Click
+        btnSave_Click(Me, e)
+    End Sub
 End Class

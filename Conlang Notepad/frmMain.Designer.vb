@@ -333,6 +333,9 @@ Partial Class frmMain
         Me.btnQuickAccents = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel21 = New Tundra.DoubleBufferedPanel()
         Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
+        Me.btnQuickOpen = New Tundra.StylizedButton()
+        Me.btnQuickSave = New Tundra.StylizedButton()
+        Me.DoubleBufferedPanel22 = New Tundra.DoubleBufferedPanel()
         Me.tcSymbols.SuspendLayout()
         Me.ConsonantsTabPage.SuspendLayout()
         Me.AffricatesTabPage.SuspendLayout()
@@ -5576,6 +5579,9 @@ Partial Class frmMain
         Me.pnlTabs.Controls.Add(Me.btnLinguistics)
         Me.pnlTabs.Controls.Add(Me.btnHome)
         Me.pnlTabs.Controls.Add(Me.btnConlangNotepad)
+        Me.pnlTabs.Controls.Add(Me.btnQuickOpen)
+        Me.pnlTabs.Controls.Add(Me.btnQuickSave)
+        Me.pnlTabs.Controls.Add(Me.DoubleBufferedPanel22)
         Me.pnlTabs.Controls.Add(Me.btnQuickSymbols)
         Me.pnlTabs.Controls.Add(Me.btnQuickAccents)
         Me.pnlTabs.Controls.Add(Me.DoubleBufferedPanel21)
@@ -5775,7 +5781,7 @@ Partial Class frmMain
         Me.DoubleBufferedPanel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
         Me.DoubleBufferedPanel17.Dock = System.Windows.Forms.DockStyle.Right
         Me.DoubleBufferedPanel17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel17.Location = New System.Drawing.Point(722, 0)
+        Me.DoubleBufferedPanel17.Location = New System.Drawing.Point(671, 0)
         Me.DoubleBufferedPanel17.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel17.Name = "DoubleBufferedPanel17"
         Me.DoubleBufferedPanel17.Size = New System.Drawing.Size(1, 25)
@@ -5795,7 +5801,7 @@ Partial Class frmMain
         Me.btnQuickRedo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnQuickRedo.ForeColor = System.Drawing.Color.Black
         Me.btnQuickRedo.Image = CType(resources.GetObject("btnQuickRedo.Image"), System.Drawing.Image)
-        Me.btnQuickRedo.Location = New System.Drawing.Point(697, 0)
+        Me.btnQuickRedo.Location = New System.Drawing.Point(646, 0)
         Me.btnQuickRedo.Margin = New System.Windows.Forms.Padding(2)
         Me.btnQuickRedo.Name = "btnQuickRedo"
         Me.btnQuickRedo.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
@@ -5820,7 +5826,7 @@ Partial Class frmMain
         Me.btnQuickUndo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnQuickUndo.ForeColor = System.Drawing.Color.Black
         Me.btnQuickUndo.Image = CType(resources.GetObject("btnQuickUndo.Image"), System.Drawing.Image)
-        Me.btnQuickUndo.Location = New System.Drawing.Point(672, 0)
+        Me.btnQuickUndo.Location = New System.Drawing.Point(621, 0)
         Me.btnQuickUndo.Margin = New System.Windows.Forms.Padding(2)
         Me.btnQuickUndo.Name = "btnQuickUndo"
         Me.btnQuickUndo.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
@@ -5902,6 +5908,67 @@ Partial Class frmMain
         Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
         Me.NotebookEditor1.Size = New System.Drawing.Size(257, 41)
         Me.NotebookEditor1.TabIndex = 72
+        '
+        'btnQuickOpen
+        '
+        Me.btnQuickOpen.BackColor = System.Drawing.Color.Transparent
+        Me.btnQuickOpen.BackgroundImage = CType(resources.GetObject("btnQuickOpen.BackgroundImage"), System.Drawing.Image)
+        Me.btnQuickOpen.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnQuickOpen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnQuickOpen.FlatAppearance.BorderSize = 0
+        Me.btnQuickOpen.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnQuickOpen.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnQuickOpen.ForeColor = System.Drawing.Color.Black
+        Me.btnQuickOpen.Image = CType(resources.GetObject("btnQuickOpen.Image"), System.Drawing.Image)
+        Me.btnQuickOpen.Location = New System.Drawing.Point(672, 0)
+        Me.btnQuickOpen.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnQuickOpen.Name = "btnQuickOpen"
+        Me.btnQuickOpen.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
+        Me.btnQuickOpen.Size = New System.Drawing.Size(25, 25)
+        Me.btnQuickOpen.Style = resources.GetString("btnQuickOpen.Style")
+        Me.btnQuickOpen.TabIndex = 94
+        Me.ttMain.SetToolTip(Me.btnQuickOpen, "Open")
+        Me.btnQuickOpen.UseCompatibleTextRendering = True
+        Me.btnQuickOpen.UseVisualStyleBackColor = False
+        '
+        'btnQuickSave
+        '
+        Me.btnQuickSave.BackColor = System.Drawing.Color.Transparent
+        Me.btnQuickSave.BackgroundImage = CType(resources.GetObject("btnQuickSave.BackgroundImage"), System.Drawing.Image)
+        Me.btnQuickSave.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnQuickSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnQuickSave.FlatAppearance.BorderSize = 0
+        Me.btnQuickSave.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnQuickSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnQuickSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnQuickSave.ForeColor = System.Drawing.Color.Black
+        Me.btnQuickSave.Image = CType(resources.GetObject("btnQuickSave.Image"), System.Drawing.Image)
+        Me.btnQuickSave.Location = New System.Drawing.Point(697, 0)
+        Me.btnQuickSave.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnQuickSave.Name = "btnQuickSave"
+        Me.btnQuickSave.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
+        Me.btnQuickSave.Size = New System.Drawing.Size(25, 25)
+        Me.btnQuickSave.Style = resources.GetString("btnQuickSave.Style")
+        Me.btnQuickSave.TabIndex = 95
+        Me.ttMain.SetToolTip(Me.btnQuickSave, "Save")
+        Me.btnQuickSave.UseCompatibleTextRendering = True
+        Me.btnQuickSave.UseVisualStyleBackColor = False
+        '
+        'DoubleBufferedPanel22
+        '
+        Me.DoubleBufferedPanel22.BackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(210, Byte), Integer))
+        Me.DoubleBufferedPanel22.Dock = System.Windows.Forms.DockStyle.Right
+        Me.DoubleBufferedPanel22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DoubleBufferedPanel22.Location = New System.Drawing.Point(722, 0)
+        Me.DoubleBufferedPanel22.Margin = New System.Windows.Forms.Padding(2)
+        Me.DoubleBufferedPanel22.Name = "DoubleBufferedPanel22"
+        Me.DoubleBufferedPanel22.Size = New System.Drawing.Size(1, 25)
+        Me.DoubleBufferedPanel22.TabIndex = 96
         '
         'frmMain
         '
@@ -6273,4 +6340,7 @@ Partial Class frmMain
     Friend WithEvents btnQuickSymbols As Tundra.StylizedButton
     Friend WithEvents btnQuickAccents As Tundra.StylizedButton
     Friend WithEvents DoubleBufferedPanel21 As Tundra.DoubleBufferedPanel
+    Friend WithEvents btnQuickOpen As Tundra.StylizedButton
+    Friend WithEvents btnQuickSave As Tundra.StylizedButton
+    Friend WithEvents DoubleBufferedPanel22 As Tundra.DoubleBufferedPanel
 End Class

@@ -103,7 +103,7 @@ Partial Class dlgAccentMark
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnCancel.Size = New System.Drawing.Size(69, 25)
         Me.btnCancel.Style = resources.GetString("btnCancel.Style")
-        Me.btnCancel.TabIndex = 5
+        Me.btnCancel.TabIndex = 3
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseCompatibleTextRendering = True
         Me.btnCancel.UseVisualStyleBackColor = False
@@ -125,7 +125,7 @@ Partial Class dlgAccentMark
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnOK.Size = New System.Drawing.Size(69, 25)
         Me.btnOK.Style = resources.GetString("btnOK.Style")
-        Me.btnOK.TabIndex = 4
+        Me.btnOK.TabIndex = 2
         Me.btnOK.Text = "OK"
         Me.btnOK.UseCompatibleTextRendering = True
         Me.btnOK.UseVisualStyleBackColor = False
@@ -146,10 +146,9 @@ Partial Class dlgAccentMark
         Me.btnAdd.Location = New System.Drawing.Point(11, 76)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnAdd.Size = New System.Drawing.Size(25, 25)
         Me.btnAdd.Style = resources.GetString("btnAdd.Style")
-        Me.btnAdd.TabIndex = 7
+        Me.btnAdd.TabIndex = 4
         Me.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnAdd.UseCompatibleTextRendering = True
@@ -197,10 +196,9 @@ Partial Class dlgAccentMark
         Me.btnCopy.Location = New System.Drawing.Point(40, 76)
         Me.btnCopy.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCopy.Name = "btnCopy"
-        Me.btnCopy.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnCopy.Size = New System.Drawing.Size(25, 25)
         Me.btnCopy.Style = resources.GetString("btnCopy.Style")
-        Me.btnCopy.TabIndex = 8
+        Me.btnCopy.TabIndex = 5
         Me.btnCopy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCopy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnCopy, "Copy to clipboard")
