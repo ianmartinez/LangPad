@@ -15,8 +15,6 @@
     Private Sub btnGoWebsite_Click(sender As Object, e As EventArgs) Handles btnGoWebsite.Click
         If Not txtWebsite.Text.StartsWith("http://") Then
             Process.Start("http://" & txtWebsite.Text)
-        ElseIf txtWebsite.Text = "" Then
-            Process.Start(txtWebsite.Text)
         Else
             Process.Start(txtWebsite.Text)
         End If
