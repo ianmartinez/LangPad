@@ -1,0 +1,4 @@
+﻿Version=5.2
+DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Conlang%20Notepad/Release/Language%20Pad%205.2.zip?raw:eq:true
+Description=   •Keyboard shortcuts:cr:   •Massive internal improvements:cr:   •Improved updating system:cr:   •Small UI improvements:cr:   •Added to github:cr:   •Microsoft Sans Serif fonts are no longer forced by default
+RedditThread=https://www.reddit.com/r/conlangs/comments/3gi5bu/language_pad_52_a_word_processor_for_conlanging/
