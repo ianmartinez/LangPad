@@ -402,7 +402,7 @@ Public Class frmMain
         SelectedDocument_TextChanged(Me, e)
         'SplitContainer2.SplitterDistance = 788
 
-        If dlgUpdate.NewestVersion > dlgUpdate.CurrentVersion Then
+        If dlgUpdate.NewestVersion > CurrentVersion Then
             dlgUpdate.SkipFetch = True
             dlgUpdate.TopMost = True
             dlgUpdate.Show()

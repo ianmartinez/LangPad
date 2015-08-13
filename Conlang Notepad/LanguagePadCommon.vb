@@ -4,8 +4,8 @@
     Public NTVersion As Decimal = 1.1
     Public FirstTabUpdate As Boolean = False
     Public Initialized As Boolean = False
-    Public LangPadVersion As String = "Language Pad 5.3"
-
+    Public CurrentVersion As Decimal = (Application.ProductVersion.Split(".").GetValue(0) & "." & Application.ProductVersion.Split(".").GetValue(1))
+    Public LangPadVersion As String = "Language Pad " & CurrentVersion.ToString
     Public Function GetTextFromRTF(ByVal RTF As String)
         Dim rtb As New RichTextBox
         rtb.Rtf = RTF

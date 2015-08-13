@@ -3,7 +3,7 @@ Imports Tundra.ZiaFile
 Imports System.Windows.Forms
 Public Class dlgUpdate
     Public UpdateFileText As String
-    Public CurrentVersion As Decimal = (Application.ProductVersion.Split(".").GetValue(0) & "." & Application.ProductVersion.Split(".").GetValue(1))
+
     Public NewestVersion As Decimal
     Public Description As String = ""
     Public DownloadLink As String = ""
