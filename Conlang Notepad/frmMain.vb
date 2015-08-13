@@ -659,6 +659,7 @@ Public Class frmMain
             btnSaveAs_Click(Me, e)
             Exit Sub
         Else
+            Me.Cursor = Cursors.WaitCursor
             Dim strExt As String
             strExt = System.IO.Path.GetExtension(currentFile)
             strExt = strExt.ToUpper()
@@ -684,10 +685,13 @@ Public Class frmMain
                 SetTitle()
             End If
         End If
+        Me.Cursor = Cursors.Default
     End Sub
 
     Private Sub btnSaveAs_Click(sender As Object, e As EventArgs) Handles btnSaveAs.Click
+
         If dlgSave.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Me.Cursor = Cursors.WaitCursor
             If dlgSave.FileName = "" Then Exit Sub
 
             CurrentDocument.Save(dlgSave.FileName)
@@ -695,6 +699,7 @@ Public Class frmMain
 
             SelectedDocument.Modified = False
             SetTitle()
+            Me.Cursor = Cursors.Default
         End If
     End Sub
 
@@ -1030,6 +1035,8 @@ Public Class frmMain
         SaveTabs()
         dlgAddPage.AddPage = False
         dlgAddPage.DuplicatePage = False
+        dlgAddPage.txtName.Text = CurrentDocument.Pages.Item(tcNotebook.SelectedIndex).Title
+        dlgAddPage.CurrentPos = tcNotebook.SelectedIndex
         dlgAddPage.ShowDialog()
     End Sub
 

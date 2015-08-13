@@ -3,10 +3,20 @@
 Public Class dlgAddPage
     Public AddPage As Boolean = False
     Public DuplicatePage As Boolean = False
+    Public CurrentPos As Integer = 0
     Public Function CheckDuplicates(PageName As String) As Boolean
-        For Each p As NotebookPage In LanguagePadCommon.CurrentDocument.Pages
-            If PageName = p.Title Then
-                Return True
+        For p = 0 To CurrentDocument.Pages.Count - 1
+            Dim CurrentPage As NotebookPage = CurrentDocument.Pages.Item(p)
+            If AddPage = True Then
+                If PageName = CurrentPage.Title Then
+                    Return True
+                End If
+            Else
+                If p = CurrentPos Then Continue For
+
+                If PageName = CurrentPage.Title Then
+                    Return True
+                End If
             End If
         Next
 
