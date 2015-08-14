@@ -5182,6 +5182,45 @@ Checked Text Color=120,0,0
 Checked Highlight Color=$0
 </value>
   </data>
+  <data name="StylizedRadioButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAAAaCAYAAAAHfFpPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAdSURBVFhH7cEBAQAAAIIg/69uSEAAAAAAAABcqAEaGgAB
+        Ln3UdgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="StylizedRadioButton1.Style" xml:space="preserve">
+    <value>Radius=0
+
+Active Colors=$0|$0
+Active Positions=0|1
+Active Angle=90
+Active Border Color=$0
+Active Text Color=~38
+Active Highlight Color=$0
+
+Hover Colors=$0|$0
+Hover Positions=0|1
+Hover Angle=90
+Hover Border Color=$0
+Hover Text Color=120,0,0
+Hover Highlight Color=$0
+
+Pressed Colors=~239|~233
+Pressed Positions=0|1
+Pressed Angle=90
+Pressed Border Color=~220
+Pressed Text Color=120,0,0
+Pressed Highlight Color=$0
+
+Checked Colors=~239|~233
+Checked Positions=0|1
+Checked Angle=90
+Checked Border Color=~220
+Checked Text Color=120,0,0
+Checked Highlight Color=$0
+</value>
+  </data>
   <data name="btnNotebookTab.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAAAaCAYAAAAHfFpPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -7227,6 +7266,57 @@ Pressed Highlight Color=$0
 </value>
   </data>
   <data name="btnAddBullets.Style" xml:space="preserve">
+    <value>Radius=0
+
+Active Colors=$0|$0
+Active Positions=0|1
+Active Angle=90
+Active Border Color=$0
+Active Text Color=$2
+Active Highlight Color=$0
+
+Hover Colors=#e5f1fb|#e5f1fb
+Hover Positions=0|1
+Hover Angle=90
+Hover Border Color=#0078d7
+Hover Text Color=$2
+Hover Highlight Color=$0
+
+Pressed Colors=#cce4f7|#cce4f7
+Pressed Positions=0|1
+Pressed Angle=90
+Pressed Border Color=#005499
+Pressed Text Color=$2
+Pressed Highlight Color=$0
+
+</value>
+  </data>
+  <data name="StylizedButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGIAAAAaCAYAAABM1ImiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAhSURBVGhD7cExAQAAAMKg9U9tDQ8gAAAAAAAAAAAA4FYN
+        J+oAAWV3iz8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="StylizedButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALQSURBVDhPlZJbSFRRFIbXU0REFHQjoqQsL41kpYmG
+        WROjpGH4kM2MHTVLiDEJibKiSG30qKWZD1lp1Ngk5TxEOOV1UgntnoRmN3NMTI+lVuZkWfC39kxKEAVt
+        +Nh7/etnnb3XWRSabaNQ2UZhch1TS5qsGne1sRoh6VUITqv8A6GLvPAJP60/fpfUuU2kya7nQrWkTr9R
+        tKf0PuqeKWh+PYimjoEJRCx0kRc+4aeTehUVat25SDNp+Cbr0isdp2peIJ/Rn7uDrWeaEc2IXcRCF3nh
+        C83iAjmxAZQXs5yC8x6TWq7XhOfYUHy7EwbzI7xUhvH7ErHQRT6CfZrMmjCS44IoV/KnAp0HBRtvmQ2l
+        D2G0PkWi6QESLtxH7Pl7kEruOncRC13kk0zOZ1i4wBqSpYDFJ3TLsEGuQ+q1dqRYniCprMWJ4TfGNZE/
+        cK0NoeynrNggytD6FdlOJ2FuggVzpVLMijExYmf0fNZfnGDmr32eZMKSnZdAmVIgpUWvdCgPizF92xXg
+        7U2M9lRhpP8WRhQbHN2VcNitcHRWTDBqrwB6b4CIVpExJiAsLzEE6L+OKVougHamE0PzJ8Gx1pvPHcBY
+        G/Ct1cUY84NBG9x2mHV0JNrP0mjeh8+vShBvLMZkvQW03YqPnjPwNdwPFF+ByToLF7+KqfpyzJDKMSeu
+        DAsSzPDcdRmUrvXHwPOzGGwtwFBLJj60pKGv9RiGvGbjS0Qgupv3otdmgML0VRuQv9XDdfVxMnT+OBSp
+        wv6NS12EeyBlszcGFk7DiHolUiK9kLrJEweZI1EqyLoVKJRUtCjZSt67LSQaiE/KPbzvasQ7ez3TAOVN
+        I3q6XShdDU7tPWvD7BNfFXNTKPmQW3KlKLCCG6JwY7qA7/a/I/LsY79O5j+XGxdA+bH8igz96uGjW3xx
+        OMqHUf0DHwgf/zXIPDtiALN5isXydTbj//i1iH4C2uRUUm8ZINEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="StylizedButton2.Style" xml:space="preserve">
     <value>Radius=0
 
 Active Colors=$0|$0
