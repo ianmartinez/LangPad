@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="997272">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="1030040">
       <assemblyIdentity name="Language Pad" version="6.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>LtcnIj4R1Je6WEPZESGUWhww97Q=</dsig:DigestValue>
+        <dsig:DigestValue>/95tk5Nd5GOCKwWukfPDD8VHUlE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -122,7 +122,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>JI3OCye42Qr77qylxqEn2AMIymA=</dsig:DigestValue>
+        <dsig:DigestValue>5Lg7MHsYGkE6Nk1qwgVAphbQBtw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -153,13 +153,13 @@
       <dsig:DigestValue>l7hxqfVlmBU5fDHCh3b43anOpb0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Update.txt" size="495">
+  <file name="Update.txt" size="585">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>/PMfDkJe1A8CDsgRrWeSiFlaF0I=</dsig:DigestValue>
+      <dsig:DigestValue>CRhPexNoPjBTNxL0mEGuDfCShZs=</dsig:DigestValue>
     </hash>
   </file>
   <asmv3:application xmlns="urn:schemas-microsoft-com:asm.v1">

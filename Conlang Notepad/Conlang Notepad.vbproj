@@ -253,8 +253,17 @@
     <Compile Include="ssLoading.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SymbolButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="WebcamFrame.vb">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WordCard.Designer.vb">
+      <DependentUpon>WordCard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WordCard.vb">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -294,6 +303,9 @@
     <EmbeddedResource Include="Dialogs\dlgWebcam.resx">
       <DependentUpon>dlgWebcam.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDictionary.resx">
+      <DependentUpon>frmDictionary.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ssLoading.resx">
       <DependentUpon>ssLoading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordCard.resx">
+      <DependentUpon>WordCard.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

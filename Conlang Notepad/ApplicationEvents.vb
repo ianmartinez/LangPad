@@ -15,175 +15,167 @@ Namespace My
 
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
             On Error Resume Next
+            'Dim stpw As New Stopwatch
+            'stpw.Reset()
+            'stpw.Start()
+
             ssLoading.pbLoading.SetProgress(0)
-            Dim IPAFont = New Font("Segoe UI", 11, FontStyle.Regular)
-            Dim IPAPadding = New Padding(0)
-            Dim IPAMargin = New Padding(1)
-            Dim IPAMin = New Size(45, 32)
+            ssLoading.lblLoading.Text = "Loading..."
 
             If My.Settings.AccentMarks = True Then
                 ssLoading.lblLoading.Text = "Loading Accent Marks..."
                 For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.Accents)
-                    Dim IPAButton As New StylizedButton
-                    IPAButton.Style = My.Resources.KeyStyle
-                    IPAButton.Padding = IPAPadding
-                    IPAButton.Font = IPAFont
-                    IPAButton.AutoSize = True
-                    IPAButton.MinimumSize = IPAMin
-                    IPAButton.Margin = IPAMargin
-                    IPAButton.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
-                    IPAButton.Text = IPA.Value
-                    AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
-                    frmMain.AccentsLayoutPanel.Controls.Add(IPAButton)
+                    Dim SymbolButton As New SymbolButton
+                    SymbolButton.Text = IPA.Value
+                    AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
+                    frmMain.AccentsLayoutPanel.Controls.Add(SymbolButton)
+
+                    Dim SymbolButtonDictionary As New SymbolButton
+                    SymbolButtonDictionary.Text = IPA.Value
+                    AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
+                    frmDictionary.AccentsLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
                 ssLoading.pbLoading.SetProgress(10)
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.AccentsTabPage)
+                frmDictionary.tcSymbols.TabPages.Remove(frmMain.AccentsTabPage)
             End If
 
             If My.Settings.IPAAffricates = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Affricates..."
                 For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.Affricates)
-                    Dim IPAButton As New StylizedButton
-                    IPAButton.Style = My.Resources.KeyStyle
-                    IPAButton.Padding = IPAPadding
-                    IPAButton.Font = IPAFont
-                    IPAButton.AutoSize = True
-                    IPAButton.MinimumSize = IPAMin
-                    IPAButton.Margin = IPAMargin
-                    IPAButton.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
-                    IPAButton.Text = IPA.Value
-                    AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
-                    frmMain.AffricatesLayoutPanel.Controls.Add(IPAButton)
+                    Dim SymbolButton As New SymbolButton
+                    SymbolButton.Text = IPA.Value
+                    AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
+                    frmMain.AffricatesLayoutPanel.Controls.Add(SymbolButton)
+
+                    Dim SymbolButtonDictionary As New SymbolButton
+                    SymbolButtonDictionary.Text = IPA.Value
+                    AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
+                    frmDictionary.AffricatesLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
                 ssLoading.pbLoading.SetProgress(20)
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.AffricatesTabPage)
+                frmDictionary.tcSymbols.TabPages.Remove(frmMain.AffricatesTabPage)
             End If
 
             If My.Settings.IPAConsonants = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Consonants..."
                 For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.Consonants)
-                    Dim IPAButton As New StylizedButton
-                    IPAButton.Style = My.Resources.KeyStyle
-                    IPAButton.Padding = IPAPadding
-                    IPAButton.Font = IPAFont
-                    IPAButton.AutoSize = True
-                    IPAButton.MinimumSize = IPAMin
-                    IPAButton.Margin = IPAMargin
-                    IPAButton.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
-                    IPAButton.Text = IPA.Value
-                    AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
-                    frmMain.ConsonantsLayoutPanel.Controls.Add(IPAButton)
+                    Dim SymbolButton As New SymbolButton
+                    SymbolButton.Text = IPA.Value
+                    AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
+                    frmMain.ConsonantsLayoutPanel.Controls.Add(SymbolButton)
+
+                    Dim SymbolButtonDictionary As New SymbolButton
+                    SymbolButtonDictionary.Text = IPA.Value
+                    AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
+                    frmDictionary.ConsonantsLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
                 ssLoading.pbLoading.SetProgress(30)
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.ConsonantsTabPage)
+                frmDictionary.tcSymbols.TabPages.Remove(frmMain.ConsonantsTabPage)
             End If
 
             If My.Settings.IPATones = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Tones..."
                 For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.ToneIntonation)
-                    Dim IPAButton As New StylizedButton
-                    IPAButton.Style = My.Resources.KeyStyle
-                    IPAButton.Padding = IPAPadding
-                    IPAButton.Font = IPAFont
-                    IPAButton.AutoSize = True
-                    IPAButton.MinimumSize = IPAMin
-                    IPAButton.Margin = IPAMargin
-                    IPAButton.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
-                    IPAButton.Text = IPA.Value
-                    AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
-                    frmMain.ToneIntonationLayoutPanel.Controls.Add(IPAButton)
+                    Dim SymbolButton As New SymbolButton
+                    SymbolButton.Text = IPA.Value
+                    AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
+                    frmMain.ToneIntonationLayoutPanel.Controls.Add(SymbolButton)
+
+                    Dim SymbolButtonDictionary As New SymbolButton
+                    SymbolButtonDictionary.Text = IPA.Value
+                    AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
+                    frmDictionary.ToneIntonationLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
                 ssLoading.pbLoading.SetProgress(40)
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.ToneIntonationTabPage)
+                frmDictionary.tcSymbols.TabPages.Remove(frmMain.ToneIntonationTabPage)
             End If
 
             If My.Settings.IPAVowels = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Vowels..."
                 For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.Vowels)
-                    Dim IPAButton As New StylizedButton
-                    IPAButton.Style = My.Resources.KeyStyle
-                    IPAButton.Padding = IPAPadding
-                    IPAButton.Font = IPAFont
-                    IPAButton.AutoSize = True
-                    IPAButton.MinimumSize = IPAMin
-                    IPAButton.Margin = IPAMargin
-                    IPAButton.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
-                    IPAButton.Text = IPA.Value
-                    AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
-                    frmMain.VowelsLayoutPanel.Controls.Add(IPAButton)
+                    Dim SymbolButton As New SymbolButton
+                    SymbolButton.Text = IPA.Value
+                    AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
+                    frmMain.VowelsLayoutPanel.Controls.Add(SymbolButton)
+
+                    Dim SymbolButtonDictionary As New SymbolButton
+                    SymbolButtonDictionary.Text = IPA.Value
+                    AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
+                    frmDictionary.VowelsLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
                 ssLoading.pbLoading.SetProgress(50)
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.VowelsTabPage)
+                frmDictionary.tcSymbols.TabPages.Remove(frmMain.VowelsTabPage)
             End If
 
             If My.Settings.OtherIPA = True Then
                 ssLoading.lblLoading.Text = "Loading Other IPA Characters..."
                 For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.Other)
-                    Dim IPAButton As New StylizedButton
-                    IPAButton.Style = My.Resources.KeyStyle
-                    IPAButton.Padding = IPAPadding
-                    IPAButton.Font = IPAFont
-                    IPAButton.AutoSize = True
-                    IPAButton.MinimumSize = IPAMin
-                    IPAButton.Margin = IPAMargin
-                    IPAButton.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
-                    IPAButton.Text = IPA.Value
-                    AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
-                    frmMain.OtherLayoutPanel.Controls.Add(IPAButton)
+                    Dim SymbolButton As New SymbolButton
+                    SymbolButton.Text = IPA.Value
+                    AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
+                    frmMain.OtherLayoutPanel.Controls.Add(SymbolButton)
+
+                    Dim SymbolButtonDictionary As New SymbolButton
+                    SymbolButtonDictionary.Text = IPA.Value
+                    AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
+                    frmDictionary.OtherLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
                 ssLoading.pbLoading.SetProgress(60)
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.OtherTabPage)
+                frmDictionary.tcSymbols.TabPages.Remove(frmMain.OtherTabPage)
             End If
 
             If My.Settings.CommonChar = True Then
                 ssLoading.lblLoading.Text = "Loading Common Characters..."
                 For Each IPA As String In My.Resources.Common.Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
-                    Dim IPAButton As New StylizedButton
-                    IPAButton.Style = My.Resources.KeyStyle
-                    IPAButton.Padding = IPAPadding
-                    IPAButton.Font = IPAFont
-                    IPAButton.AutoSize = True
-                    IPAButton.MinimumSize = IPAMin
-                    IPAButton.Margin = IPAMargin
-                    IPAButton.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
-                    IPAButton.Text = IPA
-                    AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
-                    frmMain.CommonLayoutPanel.Controls.Add(IPAButton)
+                    Dim SymbolButton As New SymbolButton
+                    SymbolButton.Text = IPA
+                    AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
+                    frmMain.CommonLayoutPanel.Controls.Add(SymbolButton)
+
+                    Dim SymbolButtonDictionary As New SymbolButton
+                    SymbolButtonDictionary.Text = IPA
+                    AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
+                    frmDictionary.CommonLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
                 ssLoading.pbLoading.SetProgress(70)
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.CommonTabPage)
+                frmDictionary.tcSymbols.TabPages.Remove(frmMain.CommonTabPage)
             End If
 
             ssLoading.lblLoading.Text = "Loading Custom Characters..."
-                Dim LineList As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-                For Each IPA As String In LineList
-                    Dim IPAButton As New StylizedButton
-                    IPAButton.Style = My.Resources.KeyStyle
-                    IPAButton.Padding = IPAPadding
-                    IPAButton.Font = IPAFont
-                    IPAButton.AutoSize = True
-                    IPAButton.MinimumSize = IPAMin
-                    IPAButton.Margin = IPAMargin
-                    IPAButton.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
-                    IPAButton.Text = IPA
-                    AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
-                    frmMain.CustomLayoutPanel.Controls.Add(IPAButton)
-                Next
-                ssLoading.pbLoading.SetProgress(80)
+            Dim LineList As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+            For Each IPA As String In LineList
+                Dim SymbolButton As New SymbolButton
+                SymbolButton.Text = IPA
+                AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
+                frmMain.CustomLayoutPanel.Controls.Add(SymbolButton)
+
+                Dim SymbolButtonDictionary As New SymbolButton
+                SymbolButtonDictionary.Text = IPA
+                AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
+                frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
+            Next
+            ssLoading.pbLoading.SetProgress(80)
             ssLoading.Refresh()
 
             If My.Settings.ClipArt = True Then
@@ -197,8 +189,7 @@ Namespace My
                         Dim ImageFile = Image.FromFile(FilePaths.Item(i))
                         Dim ImageButton As New StylizedButton
                         ImageButton.Style = My.Resources.KeyStyle
-                        ImageButton.Padding = IPAPadding
-                        ImageButton.Font = IPAFont
+                        ImageButton.Padding = New Padding(0)
                         ImageButton.ImageAlign = ContentAlignment.MiddleCenter
                         ImageButton.Size = New Size(76, 76)
                         ImageButton.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
@@ -221,9 +212,10 @@ Namespace My
 
             ssLoading.pbLoading.SetProgress(100)
             ssLoading.Refresh()
+            'stpw.Stop()
+            'MessageBox.Show(stpw.Elapsed.TotalSeconds)
+
         End Sub
     End Class
-
-
 End Namespace
 

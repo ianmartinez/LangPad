@@ -7349,51 +7349,6 @@ Pressed Highlight Color=$0
         J+oAAWV3iz8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="StylizedButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALdSURBVDhPdZJZT1pBFMfnvR+gadInjVEwtYvtYz9C
-        k740/RR2izXFpc81qTW1YmtcgoKKglqU/Qr3XsAqglK1CEEJFhAFwaV1AVz+nXtxSYw9yT9zkpnzn985
-        M0RayxAbayVR3zjhDQOVnFH9jLNosrxpEKyhT88Z+iIOQz84vdLH6hTPqSpTYS+x8yyRyqyESGTMNsMy
-        iPw0YMk9gpCnD4GeGmxZ25HNxRF2yBGeHUM0OIU/W2uIhuaxHnKD4eyQyKzbpEw2gc2gFUecAkljM1aG
-        6uEtJti5fxNHpymE+VYMq9pg1muxt5NBLnuIk70kMn4Lyt4xIKUyGzYCZuBxCRIPbsBdRDCrlCG6wuIo
-        n0CY+4KwV4dUxAeXg4fH48XC3DRSiyaUCgYiwaIOvuAsnDM26M0aDKmawVmHcJylLXAtIoGFEuzvZpDP
-        HeCYEiTn9ZcGWz4tHjVFcPulB+SpDRp1F9b9BhwfxkQDkWCVEjh5eL0Fgo053aVBZnYAIb8L85OjdNrd
-        +N77AQ7LwIXBVQJhBgnvyJlBrQ1pjwoPP0Zwq4oSPJnAkLoTCb/+wmDlfAYXBG4kZjTnBDYkppTIrTLY
-        XuhHzCnHuLIRrFmNozMDrVIO85jwCukCwX4KsWk1NZgoGESdPfDyOjCjHdB2NWLVJUdm2YL8QQzL9s9I
-        LplwsBkEz7GYmfGIM/j9Q3VmQFuIOLqRjzvo245Q506EKUV6mf6NwzhW2BZsUIO9ZAC0JxTiLyL00lI6
-        PyKptSPuUuB0w4XdoA6xqQ74Lc1YdquRXlvEL4b+xOlBJAIcLTwp1COLxHQ/JPRyUtFgh6vrDazt1TB/
-        q4alvUaUkebG3iaqT2Ju+voaJvkLGFurYG57BWfHK9yhteTe22GuooFFeQMHaT1PV15cS+qcmFTUiRJy
-        ab2wX1A5lVAj1BIaxVSVV1VRrbXcfc9CkJBfd4ZKqP1vFFGdHxTya4KQfxpVuNhbUxoZAAAAAElFTkSu
-        QmCC
-</value>
-  </data>
-  <data name="StylizedButton1.Style" xml:space="preserve">
-    <value>Radius=0
-
-Active Colors=$0|$0
-Active Positions=0|1
-Active Angle=90
-Active Border Color=$0
-Active Text Color=$2
-Active Highlight Color=$0
-
-Hover Colors=#e5f1fb|#e5f1fb
-Hover Positions=0|1
-Hover Angle=90
-Hover Border Color=#0078d7
-Hover Text Color=$2
-Hover Highlight Color=$0
-
-Pressed Colors=#cce4f7|#cce4f7
-Pressed Positions=0|1
-Pressed Angle=90
-Pressed Border Color=#005499
-Pressed Text Color=$2
-Pressed Highlight Color=$0
-
-</value>
-  </data>
   <data name="btnDuplicate.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHwAAAAaCAYAAAB1szj5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

@@ -184,10 +184,12 @@ Partial Class frmMain
         Me.StylizedButton100 = New Tundra.StylizedButton()
         Me.StylizedButton102 = New Tundra.StylizedButton()
         Me.ClipArtLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.StylizedPanel2 = New Tundra.StylizedPanel()
         Me.btnClose = New Tundra.StylizedButton()
         Me.btnEmotesTab = New Tundra.StylizedRadioButton()
         Me.btnClipArtTab = New Tundra.StylizedRadioButton()
+        Me.StylizedRadioButton1 = New Tundra.StylizedRadioButton()
         Me.btnNotebookTab = New Tundra.StylizedRadioButton()
         Me.dlgSaveNotebook = New System.Windows.Forms.SaveFileDialog()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
@@ -257,6 +259,10 @@ Partial Class frmMain
         Me.btnAddBullets = New Tundra.StylizedButton()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.pnlNotebook = New Tundra.DoubleBufferedPanel()
+        Me.StylizedButton2 = New Tundra.StylizedButton()
+        Me.DoubleBufferedPanel23 = New Tundra.DoubleBufferedPanel()
+        Me.lblDictionary = New System.Windows.Forms.Label()
+        Me.StylizedButton1 = New Tundra.StylizedButton()
         Me.btnDuplicate = New Tundra.StylizedButton()
         Me.btnExportPage = New Tundra.StylizedButton()
         Me.btnImportPage = New Tundra.StylizedButton()
@@ -335,12 +341,6 @@ Partial Class frmMain
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblCharCount = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblWordCount = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.StylizedButton1 = New Tundra.StylizedButton()
-        Me.StylizedRadioButton1 = New Tundra.StylizedRadioButton()
-        Me.lblDictionary = New System.Windows.Forms.Label()
-        Me.DoubleBufferedPanel23 = New Tundra.DoubleBufferedPanel()
-        Me.StylizedButton2 = New Tundra.StylizedButton()
-        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.tcSymbols.SuspendLayout()
         Me.ConsonantsTabPage.SuspendLayout()
         Me.AffricatesTabPage.SuspendLayout()
@@ -881,7 +881,7 @@ Partial Class frmMain
         Me.SplitContainer2.Panel2.Controls.Add(Me.StylizedPanel1)
         Me.SplitContainer2.Panel2MinSize = 235
         Me.SplitContainer2.Size = New System.Drawing.Size(977, 241)
-        Me.SplitContainer2.SplitterDistance = 720
+        Me.SplitContainer2.SplitterDistance = 722
         Me.SplitContainer2.SplitterWidth = 2
         Me.SplitContainer2.TabIndex = 1
         '
@@ -892,7 +892,7 @@ Partial Class frmMain
         Me.tcNotebook.Margin = New System.Windows.Forms.Padding(2)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(720, 239)
+        Me.tcNotebook.Size = New System.Drawing.Size(722, 239)
         Me.tcNotebook.TabIndex = 73
         '
         'StylizedPanel1
@@ -907,7 +907,7 @@ Partial Class frmMain
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(255, 241)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(253, 241)
         Me.StylizedPanel1.Style = "Colors=~245|~245" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight" &
     " Color=$0"
         Me.StylizedPanel1.TabIndex = 13
@@ -1018,7 +1018,7 @@ Partial Class frmMain
         Me.EmoteLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.EmoteLayoutPanel.Name = "EmoteLayoutPanel"
         Me.EmoteLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.EmoteLayoutPanel.Size = New System.Drawing.Size(255, 46)
+        Me.EmoteLayoutPanel.Size = New System.Drawing.Size(253, 46)
         Me.EmoteLayoutPanel.TabIndex = 8
         '
         'StylizedButton3
@@ -3067,8 +3067,19 @@ Partial Class frmMain
         Me.ClipArtLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ClipArtLayoutPanel.Name = "ClipArtLayoutPanel"
         Me.ClipArtLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.ClipArtLayoutPanel.Size = New System.Drawing.Size(255, 46)
+        Me.ClipArtLayoutPanel.Size = New System.Drawing.Size(253, 46)
         Me.ClipArtLayoutPanel.TabIndex = 7
+        '
+        'NotebookEditor1
+        '
+        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
+        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 28)
+        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(2)
+        Me.NotebookEditor1.Name = "NotebookEditor1"
+        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.NotebookEditor1.Size = New System.Drawing.Size(253, 41)
+        Me.NotebookEditor1.TabIndex = 72
         '
         'StylizedPanel2
         '
@@ -3083,7 +3094,7 @@ Partial Class frmMain
         Me.StylizedPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
         Me.StylizedPanel2.Name = "StylizedPanel2"
         Me.StylizedPanel2.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.StylizedPanel2.Size = New System.Drawing.Size(255, 28)
+        Me.StylizedPanel2.Size = New System.Drawing.Size(253, 28)
         Me.StylizedPanel2.Style = "Colors=~255|~255" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight" &
     " Color$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1"
         Me.StylizedPanel2.TabIndex = 71
@@ -3100,7 +3111,7 @@ Partial Class frmMain
         Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClose.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
-        Me.btnClose.Location = New System.Drawing.Point(229, 2)
+        Me.btnClose.Location = New System.Drawing.Point(227, 2)
         Me.btnClose.Margin = New System.Windows.Forms.Padding(2)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
@@ -3159,6 +3170,31 @@ Partial Class frmMain
         Me.btnClipArtTab.Text = "Clip Art"
         Me.btnClipArtTab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnClipArtTab.UseVisualStyleBackColor = False
+        '
+        'StylizedRadioButton1
+        '
+        Me.StylizedRadioButton1.Appearance = System.Windows.Forms.Appearance.Button
+        Me.StylizedRadioButton1.AutoSize = True
+        Me.StylizedRadioButton1.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedRadioButton1.BackgroundImage = CType(resources.GetObject("StylizedRadioButton1.BackgroundImage"), System.Drawing.Image)
+        Me.StylizedRadioButton1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.StylizedRadioButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.StylizedRadioButton1.FlatAppearance.BorderSize = 0
+        Me.StylizedRadioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.StylizedRadioButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.StylizedRadioButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.StylizedRadioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.StylizedRadioButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.StylizedRadioButton1.Location = New System.Drawing.Point(64, 2)
+        Me.StylizedRadioButton1.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedRadioButton1.Name = "StylizedRadioButton1"
+        Me.StylizedRadioButton1.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
+        Me.StylizedRadioButton1.Size = New System.Drawing.Size(64, 26)
+        Me.StylizedRadioButton1.Style = resources.GetString("StylizedRadioButton1.Style")
+        Me.StylizedRadioButton1.TabIndex = 63
+        Me.StylizedRadioButton1.Text = "Dictionary"
+        Me.StylizedRadioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.StylizedRadioButton1.UseVisualStyleBackColor = False
         '
         'btnNotebookTab
         '
@@ -4527,6 +4563,76 @@ Partial Class frmMain
         Me.pnlNotebook.Size = New System.Drawing.Size(960, 81)
         Me.pnlNotebook.TabIndex = 76
         Me.pnlNotebook.Visible = False
+        '
+        'StylizedButton2
+        '
+        Me.StylizedButton2.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedButton2.BackgroundImage = CType(resources.GetObject("StylizedButton2.BackgroundImage"), System.Drawing.Image)
+        Me.StylizedButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.StylizedButton2.FlatAppearance.BorderSize = 0
+        Me.StylizedButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.StylizedButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.StylizedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.StylizedButton2.ForeColor = System.Drawing.Color.Black
+        Me.StylizedButton2.Image = CType(resources.GetObject("StylizedButton2.Image"), System.Drawing.Image)
+        Me.StylizedButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.StylizedButton2.Location = New System.Drawing.Point(501, 32)
+        Me.StylizedButton2.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedButton2.Name = "StylizedButton2"
+        Me.StylizedButton2.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
+        Me.StylizedButton2.Size = New System.Drawing.Size(98, 26)
+        Me.StylizedButton2.Style = resources.GetString("StylizedButton2.Style")
+        Me.StylizedButton2.TabIndex = 53
+        Me.StylizedButton2.Text = " Viewer"
+        Me.StylizedButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.StylizedButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.StylizedButton2.UseCompatibleTextRendering = True
+        Me.StylizedButton2.UseVisualStyleBackColor = False
+        '
+        'DoubleBufferedPanel23
+        '
+        Me.DoubleBufferedPanel23.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.DoubleBufferedPanel23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DoubleBufferedPanel23.Location = New System.Drawing.Point(603, 7)
+        Me.DoubleBufferedPanel23.Margin = New System.Windows.Forms.Padding(2)
+        Me.DoubleBufferedPanel23.Name = "DoubleBufferedPanel23"
+        Me.DoubleBufferedPanel23.Size = New System.Drawing.Size(1, 70)
+        Me.DoubleBufferedPanel23.TabIndex = 84
+        '
+        'lblDictionary
+        '
+        Me.lblDictionary.BackColor = System.Drawing.Color.Transparent
+        Me.lblDictionary.ForeColor = System.Drawing.Color.Gray
+        Me.lblDictionary.Location = New System.Drawing.Point(498, 58)
+        Me.lblDictionary.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblDictionary.Name = "lblDictionary"
+        Me.lblDictionary.Size = New System.Drawing.Size(101, 19)
+        Me.lblDictionary.TabIndex = 85
+        Me.lblDictionary.Text = "Dictionary"
+        Me.lblDictionary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'StylizedButton1
+        '
+        Me.StylizedButton1.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedButton1.BackgroundImage = CType(resources.GetObject("StylizedButton1.BackgroundImage"), System.Drawing.Image)
+        Me.StylizedButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.StylizedButton1.FlatAppearance.BorderSize = 0
+        Me.StylizedButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.StylizedButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.StylizedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.StylizedButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.StylizedButton1.Location = New System.Drawing.Point(501, 2)
+        Me.StylizedButton1.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedButton1.Name = "StylizedButton1"
+        Me.StylizedButton1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
+        Me.StylizedButton1.Size = New System.Drawing.Size(98, 26)
+        Me.StylizedButton1.Style = Nothing
+        Me.StylizedButton1.TabIndex = 52
+        Me.StylizedButton1.Text = " Editor"
+        Me.StylizedButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.StylizedButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.StylizedButton1.UseCompatibleTextRendering = True
+        Me.StylizedButton1.UseVisualStyleBackColor = False
         '
         'btnDuplicate
         '
@@ -5968,114 +6074,6 @@ Partial Class frmMain
         Me.lblWordCount.Name = "lblWordCount"
         Me.lblWordCount.Size = New System.Drawing.Size(76, 20)
         Me.lblWordCount.Text = "Word Count: 0"
-        '
-        'StylizedButton1
-        '
-        Me.StylizedButton1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton1.BackgroundImage = CType(resources.GetObject("StylizedButton1.BackgroundImage"), System.Drawing.Image)
-        Me.StylizedButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedButton1.FlatAppearance.BorderSize = 0
-        Me.StylizedButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StylizedButton1.ForeColor = System.Drawing.Color.Black
-        Me.StylizedButton1.Image = CType(resources.GetObject("StylizedButton1.Image"), System.Drawing.Image)
-        Me.StylizedButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton1.Location = New System.Drawing.Point(501, 2)
-        Me.StylizedButton1.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedButton1.Name = "StylizedButton1"
-        Me.StylizedButton1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.StylizedButton1.Size = New System.Drawing.Size(98, 26)
-        Me.StylizedButton1.Style = resources.GetString("StylizedButton1.Style")
-        Me.StylizedButton1.TabIndex = 52
-        Me.StylizedButton1.Text = " Editor"
-        Me.StylizedButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.StylizedButton1.UseCompatibleTextRendering = True
-        Me.StylizedButton1.UseVisualStyleBackColor = False
-        '
-        'StylizedRadioButton1
-        '
-        Me.StylizedRadioButton1.Appearance = System.Windows.Forms.Appearance.Button
-        Me.StylizedRadioButton1.AutoSize = True
-        Me.StylizedRadioButton1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedRadioButton1.BackgroundImage = CType(resources.GetObject("StylizedRadioButton1.BackgroundImage"), System.Drawing.Image)
-        Me.StylizedRadioButton1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedRadioButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedRadioButton1.FlatAppearance.BorderSize = 0
-        Me.StylizedRadioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.StylizedRadioButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.StylizedRadioButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.StylizedRadioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StylizedRadioButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.StylizedRadioButton1.Location = New System.Drawing.Point(64, 2)
-        Me.StylizedRadioButton1.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedRadioButton1.Name = "StylizedRadioButton1"
-        Me.StylizedRadioButton1.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.StylizedRadioButton1.Size = New System.Drawing.Size(64, 26)
-        Me.StylizedRadioButton1.Style = resources.GetString("StylizedRadioButton1.Style")
-        Me.StylizedRadioButton1.TabIndex = 63
-        Me.StylizedRadioButton1.Text = "Dictionary"
-        Me.StylizedRadioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.StylizedRadioButton1.UseVisualStyleBackColor = False
-        '
-        'lblDictionary
-        '
-        Me.lblDictionary.BackColor = System.Drawing.Color.Transparent
-        Me.lblDictionary.ForeColor = System.Drawing.Color.Gray
-        Me.lblDictionary.Location = New System.Drawing.Point(498, 58)
-        Me.lblDictionary.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.lblDictionary.Name = "lblDictionary"
-        Me.lblDictionary.Size = New System.Drawing.Size(101, 19)
-        Me.lblDictionary.TabIndex = 85
-        Me.lblDictionary.Text = "Dictionary"
-        Me.lblDictionary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'DoubleBufferedPanel23
-        '
-        Me.DoubleBufferedPanel23.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.DoubleBufferedPanel23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel23.Location = New System.Drawing.Point(603, 7)
-        Me.DoubleBufferedPanel23.Margin = New System.Windows.Forms.Padding(2)
-        Me.DoubleBufferedPanel23.Name = "DoubleBufferedPanel23"
-        Me.DoubleBufferedPanel23.Size = New System.Drawing.Size(1, 70)
-        Me.DoubleBufferedPanel23.TabIndex = 84
-        '
-        'StylizedButton2
-        '
-        Me.StylizedButton2.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton2.BackgroundImage = CType(resources.GetObject("StylizedButton2.BackgroundImage"), System.Drawing.Image)
-        Me.StylizedButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedButton2.FlatAppearance.BorderSize = 0
-        Me.StylizedButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StylizedButton2.ForeColor = System.Drawing.Color.Black
-        Me.StylizedButton2.Image = CType(resources.GetObject("StylizedButton2.Image"), System.Drawing.Image)
-        Me.StylizedButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton2.Location = New System.Drawing.Point(501, 32)
-        Me.StylizedButton2.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedButton2.Name = "StylizedButton2"
-        Me.StylizedButton2.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.StylizedButton2.Size = New System.Drawing.Size(98, 26)
-        Me.StylizedButton2.Style = resources.GetString("StylizedButton2.Style")
-        Me.StylizedButton2.TabIndex = 53
-        Me.StylizedButton2.Text = " Viewer"
-        Me.StylizedButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.StylizedButton2.UseCompatibleTextRendering = True
-        Me.StylizedButton2.UseVisualStyleBackColor = False
-        '
-        'NotebookEditor1
-        '
-        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
-        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 28)
-        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(2)
-        Me.NotebookEditor1.Name = "NotebookEditor1"
-        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.NotebookEditor1.Size = New System.Drawing.Size(255, 41)
-        Me.NotebookEditor1.TabIndex = 72
         '
         'frmMain
         '

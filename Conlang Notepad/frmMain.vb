@@ -88,7 +88,7 @@ Public Class frmMain
             Me.Text = Title & " - " & FileName
         End If
     End Sub
-    Public Shared Function ResizeImage(ByVal image As Image, _
+    Public Shared Function ResizeImage(ByVal image As Image,
   ByVal size As Size, Optional ByVal preserveAspectRatio As Boolean = True) As Image
         Dim newWidth As Integer
         Dim newHeight As Integer
@@ -423,7 +423,7 @@ Public Class frmMain
 
 
     Public Sub InsertIPA(sender As Object, e As EventArgs)
-        Dim Button As StylizedButton = CType(sender, StylizedButton)
+        Dim Button As Button = CType(sender, Button)
         InsertText(SelectedDocument, Button.Text)
     End Sub
 
@@ -1171,7 +1171,7 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-     
+
     End Sub
 
     Private Sub pnlTabs_Paint(sender As Object, e As PaintEventArgs) Handles pnlTabs.Paint
@@ -1337,10 +1337,6 @@ Public Class frmMain
     End Sub
 
     Private Sub StylizedButton1_Click(sender As Object, e As EventArgs) Handles StylizedButton1.Click
-
-    End Sub
-
-    Private Sub StylizedButton2_Click(sender As Object, e As EventArgs) Handles StylizedButton2.Click
-
+        frmDictionary.Show()
     End Sub
 End Class

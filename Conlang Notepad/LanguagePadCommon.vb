@@ -1,4 +1,6 @@
-﻿Module LanguagePadCommon
+﻿Imports System.Reflection
+
+Module LanguagePadCommon
 
     Public CurrentDocument As New NotebookFile
     Public NTVersion As Decimal = 1.1
@@ -10,5 +12,17 @@
         Dim rtb As New RichTextBox
         rtb.Rtf = RTF
         Return rtb.Text
+    End Function
+
+    Public Function CloneControl(ByVal control As Object) As Object
+        Dim type As Type = control.GetType()
+        Dim properties As PropertyInfo() = type.GetProperties()
+        Dim retObject As Object = type.InvokeMember("", System.Reflection.BindingFlags.CreateInstance, Nothing, control, Nothing)
+        For Each p As PropertyInfo In properties
+            If p.CanWrite Then
+                p.SetValue(retObject, p.GetValue(control, Nothing), Nothing)
+            End If
+        Next
+        Return retObject
     End Function
 End Module

@@ -124,3 +124,5 @@ C:\Users\ianma\Desktop\Code\Conlang Notepad\Conlang Notepad\obj\Debug\Language P
 C:\Users\ianma\Desktop\Code\Conlang Notepad\Conlang Notepad\obj\Debug\Language_Pad.dlgUpdate.resources
 C:\Users\ianma\Desktop\Code\Conlang Notepad\Conlang Notepad\obj\Debug\Language_Pad.dlgSettings.resources
 C:\Users\ianma\Desktop\Code\Conlang Notepad\Conlang Notepad\obj\Debug\Language_Pad.dlgStyle.resources
+C:\Users\ianma\Desktop\Code\Conlang Notepad\Conlang Notepad\obj\Debug\Language_Pad.frmDictionary.resources
+C:\Users\ianma\Desktop\Code\Conlang Notepad\Conlang Notepad\obj\Debug\Language_Pad.WordCard.resources
