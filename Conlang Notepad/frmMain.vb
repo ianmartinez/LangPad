@@ -409,7 +409,7 @@ Public Class frmMain
             dlgUpdate.BringToFront()
         End If
 
-        If My.Settings.AccentMarks = True Then
+        If My.Settings.ClipArt = False Then
             btnClipArt.Hide()
             btnClipArtTab.Hide()
         End If
