@@ -90,7 +90,7 @@ Partial Class frmRTF
         Me.pnlMain.Controls.Add(Me.DoubleBufferedPanel3)
         Me.pnlMain.Controls.Add(Me.Label1)
         Me.pnlMain.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlMain.Location = New System.Drawing.Point(0, 26)
+        Me.pnlMain.Location = New System.Drawing.Point(0, 25)
         Me.pnlMain.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlMain.Name = "pnlMain"
         Me.pnlMain.Size = New System.Drawing.Size(680, 81)
@@ -320,7 +320,7 @@ Partial Class frmRTF
         Me.pnlTabs.Location = New System.Drawing.Point(0, 0)
         Me.pnlTabs.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
         Me.pnlTabs.Name = "pnlTabs"
-        Me.pnlTabs.Size = New System.Drawing.Size(680, 26)
+        Me.pnlTabs.Size = New System.Drawing.Size(680, 25)
         Me.pnlTabs.Style = "Colors=$1|~249" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight C" &
     "olor$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.pnlTabs.TabIndex = 71
@@ -344,7 +344,7 @@ Partial Class frmRTF
         Me.btnHome.Margin = New System.Windows.Forms.Padding(2)
         Me.btnHome.Name = "btnHome"
         Me.btnHome.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.btnHome.Size = New System.Drawing.Size(45, 26)
+        Me.btnHome.Size = New System.Drawing.Size(45, 25)
         Me.btnHome.Style = resources.GetString("btnHome.Style")
         Me.btnHome.TabIndex = 2
         Me.btnHome.TabStop = True

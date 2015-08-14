@@ -1339,4 +1339,8 @@ Public Class frmMain
     Private Sub StylizedButton1_Click(sender As Object, e As EventArgs) Handles StylizedButton1.Click
 
     End Sub
+
+    Private Sub StylizedButton2_Click(sender As Object, e As EventArgs) Handles StylizedButton2.Click
+
+    End Sub
 End Class

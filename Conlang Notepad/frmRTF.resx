@@ -411,10 +411,10 @@ Pressed Highlight Color=$0
   </data>
   <data name="btnHome.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAaCAYAAAAjZdWPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABnSURBVFhH7c7LCQAhEARR8w/R0QB0/IAJ7DKXCaGhoQ8P
-        6lil915bax+L+C0R914a8cs7fc6hoWkUTaPk9N6bhqZRcnqtRUPTKNzT7k5D0yiaRsnpOScNTaPk9BiD
-        Bu+0mb0IFmb2flhFGPTAc93YAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAZCAYAAACl8achAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABlSURBVFhH7c7LCQAhDABR+y/RxAL8RMEGdsnFEgIDOTyY
+        45TWWlXVj8J/i8c5B8N/udN7b4ycjsKeNjOMnI7yptdaGDkdJaejvOk5J0ZOR2FPjzEwcjrKm+69Y3Cn
+        ReR6UIjI/QHuPm99UDiKZQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnHome.Style" xml:space="preserve">
