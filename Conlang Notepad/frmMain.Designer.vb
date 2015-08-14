@@ -184,7 +184,6 @@ Partial Class frmMain
         Me.StylizedButton100 = New Tundra.StylizedButton()
         Me.StylizedButton102 = New Tundra.StylizedButton()
         Me.ClipArtLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.StylizedPanel2 = New Tundra.StylizedPanel()
         Me.btnClose = New Tundra.StylizedButton()
         Me.btnEmotesTab = New Tundra.StylizedRadioButton()
@@ -259,7 +258,6 @@ Partial Class frmMain
         Me.btnAddBullets = New Tundra.StylizedButton()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.pnlNotebook = New Tundra.DoubleBufferedPanel()
-        Me.StylizedButton2 = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel23 = New Tundra.DoubleBufferedPanel()
         Me.lblDictionary = New System.Windows.Forms.Label()
         Me.StylizedButton1 = New Tundra.StylizedButton()
@@ -341,6 +339,7 @@ Partial Class frmMain
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblCharCount = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblWordCount = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.tcSymbols.SuspendLayout()
         Me.ConsonantsTabPage.SuspendLayout()
         Me.AffricatesTabPage.SuspendLayout()
@@ -3070,17 +3069,6 @@ Partial Class frmMain
         Me.ClipArtLayoutPanel.Size = New System.Drawing.Size(253, 46)
         Me.ClipArtLayoutPanel.TabIndex = 7
         '
-        'NotebookEditor1
-        '
-        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
-        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 28)
-        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(2)
-        Me.NotebookEditor1.Name = "NotebookEditor1"
-        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.NotebookEditor1.Size = New System.Drawing.Size(253, 41)
-        Me.NotebookEditor1.TabIndex = 72
-        '
         'StylizedPanel2
         '
         Me.StylizedPanel2.BackColor = System.Drawing.Color.Transparent
@@ -4541,7 +4529,6 @@ Partial Class frmMain
         '
         Me.pnlNotebook.AutoScroll = True
         Me.pnlNotebook.BackColor = System.Drawing.Color.Transparent
-        Me.pnlNotebook.Controls.Add(Me.StylizedButton2)
         Me.pnlNotebook.Controls.Add(Me.DoubleBufferedPanel23)
         Me.pnlNotebook.Controls.Add(Me.lblDictionary)
         Me.pnlNotebook.Controls.Add(Me.StylizedButton1)
@@ -4563,31 +4550,6 @@ Partial Class frmMain
         Me.pnlNotebook.Size = New System.Drawing.Size(960, 81)
         Me.pnlNotebook.TabIndex = 76
         Me.pnlNotebook.Visible = False
-        '
-        'StylizedButton2
-        '
-        Me.StylizedButton2.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton2.BackgroundImage = CType(resources.GetObject("StylizedButton2.BackgroundImage"), System.Drawing.Image)
-        Me.StylizedButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedButton2.FlatAppearance.BorderSize = 0
-        Me.StylizedButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StylizedButton2.ForeColor = System.Drawing.Color.Black
-        Me.StylizedButton2.Image = CType(resources.GetObject("StylizedButton2.Image"), System.Drawing.Image)
-        Me.StylizedButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton2.Location = New System.Drawing.Point(501, 32)
-        Me.StylizedButton2.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedButton2.Name = "StylizedButton2"
-        Me.StylizedButton2.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.StylizedButton2.Size = New System.Drawing.Size(98, 26)
-        Me.StylizedButton2.Style = resources.GetString("StylizedButton2.Style")
-        Me.StylizedButton2.TabIndex = 53
-        Me.StylizedButton2.Text = " Viewer"
-        Me.StylizedButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.StylizedButton2.UseCompatibleTextRendering = True
-        Me.StylizedButton2.UseVisualStyleBackColor = False
         '
         'DoubleBufferedPanel23
         '
@@ -4620,6 +4582,7 @@ Partial Class frmMain
         Me.StylizedButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.StylizedButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.StylizedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.StylizedButton1.Image = CType(resources.GetObject("StylizedButton1.Image"), System.Drawing.Image)
         Me.StylizedButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.StylizedButton1.Location = New System.Drawing.Point(501, 2)
         Me.StylizedButton1.Margin = New System.Windows.Forms.Padding(2)
@@ -6075,6 +6038,17 @@ Partial Class frmMain
         Me.lblWordCount.Size = New System.Drawing.Size(76, 20)
         Me.lblWordCount.Text = "Word Count: 0"
         '
+        'NotebookEditor1
+        '
+        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
+        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 28)
+        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(2)
+        Me.NotebookEditor1.Name = "NotebookEditor1"
+        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.NotebookEditor1.Size = New System.Drawing.Size(253, 41)
+        Me.NotebookEditor1.TabIndex = 72
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -6450,7 +6424,6 @@ Partial Class frmMain
     Friend WithEvents DoubleBufferedPanel22 As Tundra.DoubleBufferedPanel
     Friend WithEvents StylizedButton1 As Tundra.StylizedButton
     Friend WithEvents StylizedRadioButton1 As Tundra.StylizedRadioButton
-    Friend WithEvents StylizedButton2 As Tundra.StylizedButton
     Friend WithEvents DoubleBufferedPanel23 As Tundra.DoubleBufferedPanel
     Friend WithEvents lblDictionary As Label
 End Class
