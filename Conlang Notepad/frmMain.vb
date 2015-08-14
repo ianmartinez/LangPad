@@ -1335,4 +1335,8 @@ Public Class frmMain
     Private Sub btnQuickSave_Click(sender As Object, e As EventArgs) Handles btnQuickSave.Click
         btnSave_Click(Me, e)
     End Sub
+
+    Private Sub StylizedButton1_Click(sender As Object, e As EventArgs) Handles StylizedButton1.Click
+
+    End Sub
 End Class
