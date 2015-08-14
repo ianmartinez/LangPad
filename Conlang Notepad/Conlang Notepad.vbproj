@@ -133,76 +133,82 @@
     <Compile Include="CenteredComboBox.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="dlgAbout.Designer.vb">
+    <Compile Include="Dialogs\dlgAbout.Designer.vb">
       <DependentUpon>dlgAbout.vb</DependentUpon>
     </Compile>
-    <Compile Include="dlgAbout.vb">
+    <Compile Include="Dialogs\dlgAbout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dlgAccentMark.Designer.vb">
+    <Compile Include="Dialogs\dlgAccentMark.Designer.vb">
       <DependentUpon>dlgAccentMark.vb</DependentUpon>
     </Compile>
-    <Compile Include="dlgAccentMark.vb">
+    <Compile Include="Dialogs\dlgAccentMark.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dlgAddPage.Designer.vb">
+    <Compile Include="Dialogs\dlgAddPage.Designer.vb">
       <DependentUpon>dlgAddPage.vb</DependentUpon>
     </Compile>
-    <Compile Include="dlgAddPage.vb">
+    <Compile Include="Dialogs\dlgAddPage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dlgAppendReplace.Designer.vb">
+    <Compile Include="Dialogs\dlgAppendReplace.Designer.vb">
       <DependentUpon>dlgAppendReplace.vb</DependentUpon>
     </Compile>
-    <Compile Include="dlgAppendReplace.vb">
+    <Compile Include="Dialogs\dlgAppendReplace.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dlgCustomSymbols.Designer.vb">
+    <Compile Include="Dialogs\dlgCustomSymbols.Designer.vb">
       <DependentUpon>dlgCustomSymbols.vb</DependentUpon>
     </Compile>
-    <Compile Include="dlgCustomSymbols.vb">
+    <Compile Include="Dialogs\dlgCustomSymbols.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dlgCustomZoom.Designer.vb">
+    <Compile Include="Dialogs\dlgCustomZoom.Designer.vb">
       <DependentUpon>dlgCustomZoom.vb</DependentUpon>
     </Compile>
-    <Compile Include="dlgCustomZoom.vb">
+    <Compile Include="Dialogs\dlgCustomZoom.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dlgSettings.Designer.vb">
+    <Compile Include="Dialogs\dlgSettings.Designer.vb">
       <DependentUpon>dlgSettings.vb</DependentUpon>
     </Compile>
-    <Compile Include="dlgSettings.vb">
+    <Compile Include="Dialogs\dlgSettings.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dlgStyle.Designer.vb">
+    <Compile Include="Dialogs\dlgStyle.Designer.vb">
       <DependentUpon>dlgStyle.vb</DependentUpon>
     </Compile>
-    <Compile Include="dlgStyle.vb">
+    <Compile Include="Dialogs\dlgStyle.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dlgTable.Designer.vb">
+    <Compile Include="Dialogs\dlgTable.Designer.vb">
       <DependentUpon>dlgTable.vb</DependentUpon>
     </Compile>
-    <Compile Include="dlgTable.vb">
+    <Compile Include="Dialogs\dlgTable.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dlgTextArt.Designer.vb">
+    <Compile Include="Dialogs\dlgTextArt.Designer.vb">
       <DependentUpon>dlgTextArt.vb</DependentUpon>
     </Compile>
-    <Compile Include="dlgTextArt.vb">
+    <Compile Include="Dialogs\dlgTextArt.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dlgUpdate.Designer.vb">
+    <Compile Include="Dialogs\dlgUpdate.Designer.vb">
       <DependentUpon>dlgUpdate.vb</DependentUpon>
     </Compile>
-    <Compile Include="dlgUpdate.vb">
+    <Compile Include="Dialogs\dlgUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dlgWebcam.Designer.vb">
+    <Compile Include="Dialogs\dlgWebcam.Designer.vb">
       <DependentUpon>dlgWebcam.vb</DependentUpon>
     </Compile>
-    <Compile Include="dlgWebcam.vb">
+    <Compile Include="Dialogs\dlgWebcam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDictionary.Designer.vb">
+      <DependentUpon>frmDictionary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDictionary.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.vb">
@@ -234,13 +240,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="NotebookEditor.Designer.vb">
+    <Compile Include="Notebook\NotebookEditor.Designer.vb">
       <DependentUpon>NotebookEditor.vb</DependentUpon>
     </Compile>
-    <Compile Include="NotebookEditor.vb">
+    <Compile Include="Notebook\NotebookEditor.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NotebookFile.vb" />
+    <Compile Include="Notebook\NotebookFile.vb" />
     <Compile Include="ssLoading.Designer.vb">
       <DependentUpon>ssLoading.vb</DependentUpon>
     </Compile>
@@ -252,40 +258,40 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="dlgAbout.resx">
+    <EmbeddedResource Include="Dialogs\dlgAbout.resx">
       <DependentUpon>dlgAbout.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dlgAccentMark.resx">
+    <EmbeddedResource Include="Dialogs\dlgAccentMark.resx">
       <DependentUpon>dlgAccentMark.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dlgAddPage.resx">
+    <EmbeddedResource Include="Dialogs\dlgAddPage.resx">
       <DependentUpon>dlgAddPage.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dlgAppendReplace.resx">
+    <EmbeddedResource Include="Dialogs\dlgAppendReplace.resx">
       <DependentUpon>dlgAppendReplace.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dlgCustomSymbols.resx">
+    <EmbeddedResource Include="Dialogs\dlgCustomSymbols.resx">
       <DependentUpon>dlgCustomSymbols.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dlgCustomZoom.resx">
+    <EmbeddedResource Include="Dialogs\dlgCustomZoom.resx">
       <DependentUpon>dlgCustomZoom.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dlgSettings.resx">
+    <EmbeddedResource Include="Dialogs\dlgSettings.resx">
       <DependentUpon>dlgSettings.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dlgStyle.resx">
+    <EmbeddedResource Include="Dialogs\dlgStyle.resx">
       <DependentUpon>dlgStyle.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dlgTable.resx">
+    <EmbeddedResource Include="Dialogs\dlgTable.resx">
       <DependentUpon>dlgTable.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dlgTextArt.resx">
+    <EmbeddedResource Include="Dialogs\dlgTextArt.resx">
       <DependentUpon>dlgTextArt.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dlgUpdate.resx">
+    <EmbeddedResource Include="Dialogs\dlgUpdate.resx">
       <DependentUpon>dlgUpdate.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dlgWebcam.resx">
+    <EmbeddedResource Include="Dialogs\dlgWebcam.resx">
       <DependentUpon>dlgWebcam.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
@@ -300,7 +306,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="NotebookEditor.resx">
+    <EmbeddedResource Include="Notebook\NotebookEditor.resx">
       <DependentUpon>NotebookEditor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ssLoading.resx">
