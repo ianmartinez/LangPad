@@ -4582,6 +4582,7 @@ Partial Class frmMain
         Me.StylizedButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.StylizedButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.StylizedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.StylizedButton1.ForeColor = System.Drawing.Color.Black
         Me.StylizedButton1.Image = CType(resources.GetObject("StylizedButton1.Image"), System.Drawing.Image)
         Me.StylizedButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.StylizedButton1.Location = New System.Drawing.Point(501, 2)
@@ -4589,7 +4590,7 @@ Partial Class frmMain
         Me.StylizedButton1.Name = "StylizedButton1"
         Me.StylizedButton1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
         Me.StylizedButton1.Size = New System.Drawing.Size(98, 26)
-        Me.StylizedButton1.Style = Nothing
+        Me.StylizedButton1.Style = resources.GetString("StylizedButton1.Style")
         Me.StylizedButton1.TabIndex = 52
         Me.StylizedButton1.Text = " Editor"
         Me.StylizedButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
