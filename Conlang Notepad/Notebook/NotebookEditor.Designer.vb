@@ -52,6 +52,7 @@ Partial Class NotebookEditor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlControls = New Tundra.StylizedPanel()
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
+        Me.btnDictionary = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel1.SuspendLayout()
         Me.DoubleBufferedPanel2.SuspendLayout()
         Me.pnlControls.SuspendLayout()
@@ -68,7 +69,7 @@ Partial Class NotebookEditor
         Me.lbPages.Location = New System.Drawing.Point(1, 0)
         Me.lbPages.Margin = New System.Windows.Forms.Padding(2)
         Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(224, 291)
+        Me.lbPages.Size = New System.Drawing.Size(224, 265)
         Me.lbPages.TabIndex = 15
         '
         'btnSave
@@ -379,6 +380,7 @@ Partial Class NotebookEditor
         'DoubleBufferedPanel2
         '
         Me.DoubleBufferedPanel2.BackColor = System.Drawing.Color.Transparent
+        Me.DoubleBufferedPanel2.Controls.Add(Me.btnDictionary)
         Me.DoubleBufferedPanel2.Controls.Add(Me.Label4)
         Me.DoubleBufferedPanel2.Controls.Add(Me.txtInfo)
         Me.DoubleBufferedPanel2.Controls.Add(Me.btnGoWebsite)
@@ -394,7 +396,7 @@ Partial Class NotebookEditor
         Me.DoubleBufferedPanel2.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel2.Name = "DoubleBufferedPanel2"
         Me.DoubleBufferedPanel2.Padding = New System.Windows.Forms.Padding(1)
-        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(225, 151)
+        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(225, 177)
         Me.DoubleBufferedPanel2.TabIndex = 78
         '
         'Label4
@@ -498,7 +500,7 @@ Partial Class NotebookEditor
         Me.pnlControls.BackColor = System.Drawing.Color.Transparent
         Me.pnlControls.Controls.Add(Me.DoubleBufferedPanel1)
         Me.pnlControls.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlControls.Location = New System.Drawing.Point(0, 151)
+        Me.pnlControls.Location = New System.Drawing.Point(0, 177)
         Me.pnlControls.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
         Me.pnlControls.Name = "pnlControls"
         Me.pnlControls.Size = New System.Drawing.Size(225, 26)
@@ -511,14 +513,39 @@ Partial Class NotebookEditor
         Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
         Me.StylizedPanel1.Controls.Add(Me.lbPages)
         Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 177)
+        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 203)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(225, 291)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(225, 265)
         Me.StylizedPanel1.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Col" &
     "or$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
         Me.StylizedPanel1.TabIndex = 80
+        '
+        'btnDictionary
+        '
+        Me.btnDictionary.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnDictionary.BackColor = System.Drawing.Color.Transparent
+        Me.btnDictionary.BackgroundImage = CType(resources.GetObject("btnDictionary.BackgroundImage"), System.Drawing.Image)
+        Me.btnDictionary.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnDictionary.FlatAppearance.BorderSize = 0
+        Me.btnDictionary.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnDictionary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnDictionary.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDictionary.ForeColor = System.Drawing.Color.Black
+        Me.btnDictionary.Image = CType(resources.GetObject("btnDictionary.Image"), System.Drawing.Image)
+        Me.btnDictionary.Location = New System.Drawing.Point(4, 148)
+        Me.btnDictionary.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnDictionary.Name = "btnDictionary"
+        Me.btnDictionary.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnDictionary.Size = New System.Drawing.Size(218, 24)
+        Me.btnDictionary.Style = resources.GetString("btnDictionary.Style")
+        Me.btnDictionary.TabIndex = 79
+        Me.btnDictionary.Text = " Dictionary"
+        Me.btnDictionary.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnDictionary.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnDictionary.UseCompatibleTextRendering = True
+        Me.btnDictionary.UseVisualStyleBackColor = False
         '
         'NotebookEditor
         '
@@ -568,5 +595,5 @@ Partial Class NotebookEditor
     Friend WithEvents btnDuplicate As Tundra.StylizedButton
     Friend WithEvents pnlControls As Tundra.StylizedPanel
     Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
-
+    Friend WithEvents btnDictionary As Tundra.StylizedButton
 End Class

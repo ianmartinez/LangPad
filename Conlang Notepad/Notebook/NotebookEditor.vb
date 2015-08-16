@@ -96,4 +96,8 @@
     Private Sub btnDuplicate_Click(sender As Object, e As EventArgs) Handles btnDuplicate.Click
         frmMain.btnDuplicate_Click(Me, e)
     End Sub
+
+    Private Sub btnDictionary_Click(sender As Object, e As EventArgs) Handles btnDictionary.Click
+        frmMain.btnDictionary_Click(Me, e)
+    End Sub
 End Class

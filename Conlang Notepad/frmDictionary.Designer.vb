@@ -25,10 +25,10 @@ Partial Class frmDictionary
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDictionary))
         Me.pnlTop = New Tundra.StylizedPanel()
         Me.pnlHome = New Tundra.DoubleBufferedPanel()
-        Me.StylizedButton3 = New Tundra.StylizedButton()
-        Me.StylizedButton4 = New Tundra.StylizedButton()
+        Me.btnRemove = New Tundra.StylizedButton()
+        Me.btnAdd = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel1 = New Tundra.DoubleBufferedPanel()
-        Me.StylizedButton5 = New Tundra.StylizedButton()
+        Me.btnFindReplace = New Tundra.StylizedButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnCustomSymbols = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel15 = New Tundra.DoubleBufferedPanel()
@@ -103,10 +103,10 @@ Partial Class frmDictionary
         '
         Me.pnlHome.AutoScroll = True
         Me.pnlHome.BackColor = System.Drawing.Color.Transparent
-        Me.pnlHome.Controls.Add(Me.StylizedButton3)
-        Me.pnlHome.Controls.Add(Me.StylizedButton4)
+        Me.pnlHome.Controls.Add(Me.btnRemove)
+        Me.pnlHome.Controls.Add(Me.btnAdd)
         Me.pnlHome.Controls.Add(Me.DoubleBufferedPanel1)
-        Me.pnlHome.Controls.Add(Me.StylizedButton5)
+        Me.pnlHome.Controls.Add(Me.btnFindReplace)
         Me.pnlHome.Controls.Add(Me.Label1)
         Me.pnlHome.Controls.Add(Me.btnCustomSymbols)
         Me.pnlHome.Controls.Add(Me.DoubleBufferedPanel15)
@@ -125,55 +125,55 @@ Partial Class frmDictionary
         Me.pnlHome.Size = New System.Drawing.Size(922, 81)
         Me.pnlHome.TabIndex = 75
         '
-        'StylizedButton3
+        'btnRemove
         '
-        Me.StylizedButton3.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton3.BackgroundImage = CType(resources.GetObject("StylizedButton3.BackgroundImage"), System.Drawing.Image)
-        Me.StylizedButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedButton3.FlatAppearance.BorderSize = 0
-        Me.StylizedButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StylizedButton3.ForeColor = System.Drawing.Color.Black
-        Me.StylizedButton3.Image = CType(resources.GetObject("StylizedButton3.Image"), System.Drawing.Image)
-        Me.StylizedButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton3.Location = New System.Drawing.Point(412, 33)
-        Me.StylizedButton3.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedButton3.Name = "StylizedButton3"
-        Me.StylizedButton3.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.StylizedButton3.Size = New System.Drawing.Size(85, 26)
-        Me.StylizedButton3.Style = resources.GetString("StylizedButton3.Style")
-        Me.StylizedButton3.TabIndex = 70
-        Me.StylizedButton3.Text = " Remove"
-        Me.StylizedButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.StylizedButton3.UseCompatibleTextRendering = True
-        Me.StylizedButton3.UseVisualStyleBackColor = False
+        Me.btnRemove.BackColor = System.Drawing.Color.Transparent
+        Me.btnRemove.BackgroundImage = CType(resources.GetObject("btnRemove.BackgroundImage"), System.Drawing.Image)
+        Me.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnRemove.FlatAppearance.BorderSize = 0
+        Me.btnRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRemove.ForeColor = System.Drawing.Color.Black
+        Me.btnRemove.Image = CType(resources.GetObject("btnRemove.Image"), System.Drawing.Image)
+        Me.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRemove.Location = New System.Drawing.Point(412, 33)
+        Me.btnRemove.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
+        Me.btnRemove.Size = New System.Drawing.Size(85, 26)
+        Me.btnRemove.Style = resources.GetString("btnRemove.Style")
+        Me.btnRemove.TabIndex = 70
+        Me.btnRemove.Text = " Remove"
+        Me.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnRemove.UseCompatibleTextRendering = True
+        Me.btnRemove.UseVisualStyleBackColor = False
         '
-        'StylizedButton4
+        'btnAdd
         '
-        Me.StylizedButton4.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton4.BackgroundImage = CType(resources.GetObject("StylizedButton4.BackgroundImage"), System.Drawing.Image)
-        Me.StylizedButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedButton4.FlatAppearance.BorderSize = 0
-        Me.StylizedButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StylizedButton4.ForeColor = System.Drawing.Color.Black
-        Me.StylizedButton4.Image = CType(resources.GetObject("StylizedButton4.Image"), System.Drawing.Image)
-        Me.StylizedButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton4.Location = New System.Drawing.Point(412, 2)
-        Me.StylizedButton4.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedButton4.Name = "StylizedButton4"
-        Me.StylizedButton4.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.StylizedButton4.Size = New System.Drawing.Size(85, 26)
-        Me.StylizedButton4.Style = resources.GetString("StylizedButton4.Style")
-        Me.StylizedButton4.TabIndex = 69
-        Me.StylizedButton4.Text = " Add"
-        Me.StylizedButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.StylizedButton4.UseCompatibleTextRendering = True
-        Me.StylizedButton4.UseVisualStyleBackColor = False
+        Me.btnAdd.BackColor = System.Drawing.Color.Transparent
+        Me.btnAdd.BackgroundImage = CType(resources.GetObject("btnAdd.BackgroundImage"), System.Drawing.Image)
+        Me.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnAdd.FlatAppearance.BorderSize = 0
+        Me.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdd.ForeColor = System.Drawing.Color.Black
+        Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
+        Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdd.Location = New System.Drawing.Point(412, 2)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
+        Me.btnAdd.Size = New System.Drawing.Size(85, 26)
+        Me.btnAdd.Style = resources.GetString("btnAdd.Style")
+        Me.btnAdd.TabIndex = 69
+        Me.btnAdd.Text = " Add"
+        Me.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnAdd.UseCompatibleTextRendering = True
+        Me.btnAdd.UseVisualStyleBackColor = False
         '
         'DoubleBufferedPanel1
         '
@@ -185,30 +185,30 @@ Partial Class frmDictionary
         Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(1, 70)
         Me.DoubleBufferedPanel1.TabIndex = 67
         '
-        'StylizedButton5
+        'btnFindReplace
         '
-        Me.StylizedButton5.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton5.BackgroundImage = CType(resources.GetObject("StylizedButton5.BackgroundImage"), System.Drawing.Image)
-        Me.StylizedButton5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedButton5.FlatAppearance.BorderSize = 0
-        Me.StylizedButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StylizedButton5.ForeColor = System.Drawing.Color.Black
-        Me.StylizedButton5.Image = CType(resources.GetObject("StylizedButton5.Image"), System.Drawing.Image)
-        Me.StylizedButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton5.Location = New System.Drawing.Point(501, 2)
-        Me.StylizedButton5.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedButton5.Name = "StylizedButton5"
-        Me.StylizedButton5.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.StylizedButton5.Size = New System.Drawing.Size(110, 26)
-        Me.StylizedButton5.Style = resources.GetString("StylizedButton5.Style")
-        Me.StylizedButton5.TabIndex = 71
-        Me.StylizedButton5.Text = " Find/Replace"
-        Me.StylizedButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.StylizedButton5.UseCompatibleTextRendering = True
-        Me.StylizedButton5.UseVisualStyleBackColor = False
+        Me.btnFindReplace.BackColor = System.Drawing.Color.Transparent
+        Me.btnFindReplace.BackgroundImage = CType(resources.GetObject("btnFindReplace.BackgroundImage"), System.Drawing.Image)
+        Me.btnFindReplace.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnFindReplace.FlatAppearance.BorderSize = 0
+        Me.btnFindReplace.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnFindReplace.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnFindReplace.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFindReplace.ForeColor = System.Drawing.Color.Black
+        Me.btnFindReplace.Image = CType(resources.GetObject("btnFindReplace.Image"), System.Drawing.Image)
+        Me.btnFindReplace.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnFindReplace.Location = New System.Drawing.Point(501, 2)
+        Me.btnFindReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnFindReplace.Name = "btnFindReplace"
+        Me.btnFindReplace.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
+        Me.btnFindReplace.Size = New System.Drawing.Size(110, 26)
+        Me.btnFindReplace.Style = resources.GetString("btnFindReplace.Style")
+        Me.btnFindReplace.TabIndex = 71
+        Me.btnFindReplace.Text = " Find/Replace"
+        Me.btnFindReplace.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnFindReplace.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnFindReplace.UseCompatibleTextRendering = True
+        Me.btnFindReplace.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -691,6 +691,7 @@ Partial Class frmDictionary
         '
         'dgvDictionary
         '
+        Me.dgvDictionary.AllowUserToAddRows = False
         Me.dgvDictionary.BackgroundColor = System.Drawing.Color.White
         Me.dgvDictionary.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvDictionary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
@@ -777,10 +778,10 @@ Partial Class frmDictionary
     Friend WithEvents Label16 As Label
     Friend WithEvents pnlTabs As Tundra.StylizedPanel
     Friend WithEvents btnHome As Tundra.StylizedRadioButton
-    Friend WithEvents StylizedButton3 As Tundra.StylizedButton
-    Friend WithEvents StylizedButton4 As Tundra.StylizedButton
+    Friend WithEvents btnRemove As Tundra.StylizedButton
+    Friend WithEvents btnAdd As Tundra.StylizedButton
     Friend WithEvents DoubleBufferedPanel1 As Tundra.DoubleBufferedPanel
-    Friend WithEvents StylizedButton5 As Tundra.StylizedButton
+    Friend WithEvents btnFindReplace As Tundra.StylizedButton
     Friend WithEvents Label1 As Label
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents dgvDictionary As DataGridView

@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="StylizedButton3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnRemove.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFUAAAAaCAYAAADG+xDjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAgSURBVGhD7cExAQAAAMKg9U9tCj8gAAAAAAAAAAA4qgEi
         ogABY6G0iwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="StylizedButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnRemove.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHrSURBVDhPjZJNS1RxGMXvJ/AjzCrIectUUmscIxdD
@@ -140,7 +140,7 @@
         gg==
 </value>
   </data>
-  <data name="StylizedButton3.Style" xml:space="preserve">
+  <data name="btnRemove.Style" xml:space="preserve">
     <value>Radius=0
 
 Active Colors=$0|$0
@@ -166,14 +166,14 @@ Pressed Highlight Color=$0
 
 </value>
   </data>
-  <data name="StylizedButton4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAdd.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFUAAAAaCAYAAADG+xDjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAgSURBVGhD7cExAQAAAMKg9U9tCj8gAAAAAAAAAAA4qgEi
         ogABY6G0iwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="StylizedButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAIcSURBVDhPpZM9aJNhFIVvKzpk8G+QuHQoOAlCyOJe
@@ -188,7 +188,7 @@ Pressed Highlight Color=$0
         0SHppBXKVVOPM1Wz1AwguRhHGPrnNYZq6m0JgP0G6eEvU19cZSYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="StylizedButton4.Style" xml:space="preserve">
+  <data name="btnAdd.Style" xml:space="preserve">
     <value>Radius=0
 
 Active Colors=$0|$0
@@ -214,14 +214,14 @@ Pressed Highlight Color=$0
 
 </value>
   </data>
-  <data name="StylizedButton5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnFindReplace.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAG4AAAAaCAYAAABW6GksAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAiSURBVGhD7cExAQAAAMKg9U9tCy8gAAAAAAAAAAAAAICz
         GizKAAFVFuBNAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="StylizedButton5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnFindReplace.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJQSURBVDhPfVNrTxNBFJ3/wk/wP5D4UUX6fuz2RV/W
@@ -237,7 +237,7 @@ Pressed Highlight Color=$0
         bjMB5uB/HPaJxvq1ngmW769LOGTsL418Nh47j18/AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="StylizedButton5.Style" xml:space="preserve">
+  <data name="btnFindReplace.Style" xml:space="preserve">
     <value>Radius=0
 
 Active Colors=$0|$0

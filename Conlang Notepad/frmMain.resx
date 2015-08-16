@@ -7291,14 +7291,14 @@ Pressed Highlight Color=$0
 
 </value>
   </data>
-  <data name="StylizedButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDictionary.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHgAAAAaCAYAAAB8WJiDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAjSURBVGhD7cExAQAAAMKg9U9tDB8gAAAAAAAAAAAAAACA
         kxow2gABk1DM5wAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="StylizedButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDictionary.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALdSURBVDhPdZJZT1pBFMfnvR+gadInjVEwtYvtYz9C
@@ -7317,7 +7317,7 @@ Pressed Highlight Color=$0
         QmCC
 </value>
   </data>
-  <data name="StylizedButton1.Style" xml:space="preserve">
+  <data name="btnDictionary.Style" xml:space="preserve">
     <value>Radius=0
 
 Active Colors=$0|$0

@@ -1336,7 +1336,7 @@ Public Class frmMain
         btnSave_Click(Me, e)
     End Sub
 
-    Private Sub StylizedButton1_Click(sender As Object, e As EventArgs) Handles StylizedButton1.Click
+    Public Sub btnDictionary_Click(sender As Object, e As EventArgs) Handles btnDictionary.Click
         frmDictionary.Show()
     End Sub
 End Class

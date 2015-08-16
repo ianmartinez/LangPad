@@ -120,14 +120,14 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pbLoading.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAO0AAAATCAYAAAB81YrmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABZSURBVHhe7dNBDcAwDACxcQmD8OfWSn2Mw0l+GIK/3T1A
-        x0s7M0CAtBAjLcRICzHSQoy0ECMtxEgLMdJCjLQQIy3ESAsx0kKMtBAjLcRICzHSQsyfFqjYcwEoKhcc
-        cg+IhwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAO0AAAAOCAYAAADDnZujAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABXSURBVGhD7drRCYAwFATB10s6SP+9KQpaQxbmYErYv5tn
+        e+8LON8f7FoLCHjDFS10iBZiRAsxooUY0UKMaCFGtBAjWogRLcSIFmJECzFvtN//GDjfzMwNrPOMNX9z
+        zTsAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="pbLoading.Style" xml:space="preserve">
-    <value>Radius=0
+    <value>Radius=1
 Padding=0
 
 Background Colors=~35|~35
