@@ -12,22 +12,19 @@ Public Class dlgCustomSymbols
         Next
         My.Settings.CustomSymbols = CustomTXT
 
-        Dim IPAFont = New Font("Segoe UI", 11, FontStyle.Regular)
-        Dim IPAPadding = New Padding(0)
         frmMain.CustomLayoutPanel.Controls.Clear()
+        frmDictionary.CustomLayoutPanel.Controls.Clear()
         Dim LineList As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
         For Each IPA As String In LineList
-            Dim IPAButton As New StylizedButton
-            IPAButton.Style = My.Resources.KeyStyle
-            IPAButton.Padding = IPAPadding
-            IPAButton.Font = IPAFont
-            IPAButton.AutoSize = True
-            IPAButton.MinimumSize = New Size(40, 32)
-            IPAButton.Margin = New Padding(1)
-            IPAButton.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
+            Dim IPAButton As New SymbolButton
             IPAButton.Text = IPA
             AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
             frmMain.CustomLayoutPanel.Controls.Add(IPAButton)
+
+            Dim DictionaryIPAButton As New SymbolButton
+            DictionaryIPAButton.Text = IPA
+            AddHandler DictionaryIPAButton.Click, AddressOf frmDictionary.InsertIPA
+            frmDictionary.CustomLayoutPanel.Controls.Add(DictionaryIPAButton)
         Next
 
         Me.DialogResult = System.Windows.Forms.DialogResult.OK

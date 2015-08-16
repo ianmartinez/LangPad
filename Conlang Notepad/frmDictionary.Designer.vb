@@ -43,11 +43,6 @@ Partial Class frmDictionary
         Me.pnlTabs = New Tundra.StylizedPanel()
         Me.btnHome = New Tundra.StylizedRadioButton()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.dgvSymbols = New System.Windows.Forms.DataGridView()
-        Me.Word = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Pronunciation = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Definition = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Notes = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tcSymbols = New System.Windows.Forms.TabControl()
         Me.ConsonantsTabPage = New System.Windows.Forms.TabPage()
         Me.ConsonantsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
@@ -65,6 +60,11 @@ Partial Class frmDictionary
         Me.CommonLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.CustomTabPage = New System.Windows.Forms.TabPage()
         Me.CustomLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.dgvDictionary = New System.Windows.Forms.DataGridView()
+        Me.Word = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Pronunciation = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Definition = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Notes = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlTop.SuspendLayout()
         Me.pnlHome.SuspendLayout()
         Me.pnlTabs.SuspendLayout()
@@ -72,7 +72,6 @@ Partial Class frmDictionary
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        CType(Me.dgvSymbols, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tcSymbols.SuspendLayout()
         Me.ConsonantsTabPage.SuspendLayout()
         Me.AffricatesTabPage.SuspendLayout()
@@ -82,6 +81,7 @@ Partial Class frmDictionary
         Me.OtherTabPage.SuspendLayout()
         Me.CommonTabPage.SuspendLayout()
         Me.CustomTabPage.SuspendLayout()
+        CType(Me.dgvDictionary, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlTop
@@ -472,50 +472,11 @@ Partial Class frmDictionary
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.dgvSymbols)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.dgvDictionary)
         Me.SplitContainer1.Size = New System.Drawing.Size(922, 471)
         Me.SplitContainer1.SplitterDistance = 124
         Me.SplitContainer1.SplitterWidth = 2
         Me.SplitContainer1.TabIndex = 74
-        '
-        'dgvSymbols
-        '
-        Me.dgvSymbols.BackgroundColor = System.Drawing.Color.White
-        Me.dgvSymbols.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvSymbols.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgvSymbols.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSymbols.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Word, Me.Pronunciation, Me.Definition, Me.Notes})
-        Me.dgvSymbols.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvSymbols.GridColor = System.Drawing.Color.Gainsboro
-        Me.dgvSymbols.Location = New System.Drawing.Point(0, 0)
-        Me.dgvSymbols.Margin = New System.Windows.Forms.Padding(2)
-        Me.dgvSymbols.Name = "dgvSymbols"
-        Me.dgvSymbols.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgvSymbols.RowTemplate.Height = 24
-        Me.dgvSymbols.Size = New System.Drawing.Size(922, 345)
-        Me.dgvSymbols.TabIndex = 3
-        '
-        'Word
-        '
-        Me.Word.HeaderText = "Word"
-        Me.Word.Name = "Word"
-        '
-        'Pronunciation
-        '
-        Me.Pronunciation.HeaderText = "Pronunciation"
-        Me.Pronunciation.Name = "Pronunciation"
-        '
-        'Definition
-        '
-        Me.Definition.HeaderText = "Definition"
-        Me.Definition.Name = "Definition"
-        Me.Definition.Width = 255
-        '
-        'Notes
-        '
-        Me.Notes.HeaderText = "Notes"
-        Me.Notes.Name = "Notes"
-        Me.Notes.Width = 255
         '
         'tcSymbols
         '
@@ -566,7 +527,7 @@ Partial Class frmDictionary
         Me.AffricatesTabPage.Location = New System.Drawing.Point(4, 22)
         Me.AffricatesTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.AffricatesTabPage.Name = "AffricatesTabPage"
-        Me.AffricatesTabPage.Size = New System.Drawing.Size(969, 96)
+        Me.AffricatesTabPage.Size = New System.Drawing.Size(914, 96)
         Me.AffricatesTabPage.TabIndex = 5
         Me.AffricatesTabPage.Text = "Affricates"
         Me.AffricatesTabPage.UseVisualStyleBackColor = True
@@ -581,7 +542,7 @@ Partial Class frmDictionary
         Me.AffricatesLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AffricatesLayoutPanel.Name = "AffricatesLayoutPanel"
         Me.AffricatesLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(969, 96)
+        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(914, 96)
         Me.AffricatesLayoutPanel.TabIndex = 8
         '
         'VowelsTabPage
@@ -590,7 +551,7 @@ Partial Class frmDictionary
         Me.VowelsTabPage.Location = New System.Drawing.Point(4, 22)
         Me.VowelsTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.VowelsTabPage.Name = "VowelsTabPage"
-        Me.VowelsTabPage.Size = New System.Drawing.Size(969, 96)
+        Me.VowelsTabPage.Size = New System.Drawing.Size(914, 96)
         Me.VowelsTabPage.TabIndex = 1
         Me.VowelsTabPage.Text = "Vowels"
         Me.VowelsTabPage.UseVisualStyleBackColor = True
@@ -605,7 +566,7 @@ Partial Class frmDictionary
         Me.VowelsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.VowelsLayoutPanel.Name = "VowelsLayoutPanel"
         Me.VowelsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(969, 96)
+        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(914, 96)
         Me.VowelsLayoutPanel.TabIndex = 8
         '
         'AccentsTabPage
@@ -614,7 +575,7 @@ Partial Class frmDictionary
         Me.AccentsTabPage.Location = New System.Drawing.Point(4, 22)
         Me.AccentsTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.AccentsTabPage.Name = "AccentsTabPage"
-        Me.AccentsTabPage.Size = New System.Drawing.Size(969, 96)
+        Me.AccentsTabPage.Size = New System.Drawing.Size(914, 96)
         Me.AccentsTabPage.TabIndex = 3
         Me.AccentsTabPage.Text = "Accents"
         Me.AccentsTabPage.UseVisualStyleBackColor = True
@@ -629,7 +590,7 @@ Partial Class frmDictionary
         Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(969, 96)
+        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(914, 96)
         Me.AccentsLayoutPanel.TabIndex = 9
         '
         'ToneIntonationTabPage
@@ -638,7 +599,7 @@ Partial Class frmDictionary
         Me.ToneIntonationTabPage.Location = New System.Drawing.Point(4, 22)
         Me.ToneIntonationTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.ToneIntonationTabPage.Name = "ToneIntonationTabPage"
-        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(969, 96)
+        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(914, 96)
         Me.ToneIntonationTabPage.TabIndex = 4
         Me.ToneIntonationTabPage.Text = "Tone & Intonation"
         Me.ToneIntonationTabPage.UseVisualStyleBackColor = True
@@ -653,7 +614,7 @@ Partial Class frmDictionary
         Me.ToneIntonationLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ToneIntonationLayoutPanel.Name = "ToneIntonationLayoutPanel"
         Me.ToneIntonationLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(969, 96)
+        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(914, 96)
         Me.ToneIntonationLayoutPanel.TabIndex = 10
         '
         'OtherTabPage
@@ -662,7 +623,7 @@ Partial Class frmDictionary
         Me.OtherTabPage.Location = New System.Drawing.Point(4, 22)
         Me.OtherTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.OtherTabPage.Name = "OtherTabPage"
-        Me.OtherTabPage.Size = New System.Drawing.Size(969, 96)
+        Me.OtherTabPage.Size = New System.Drawing.Size(914, 96)
         Me.OtherTabPage.TabIndex = 2
         Me.OtherTabPage.Text = "Other"
         Me.OtherTabPage.UseVisualStyleBackColor = True
@@ -677,7 +638,7 @@ Partial Class frmDictionary
         Me.OtherLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.OtherLayoutPanel.Name = "OtherLayoutPanel"
         Me.OtherLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.OtherLayoutPanel.Size = New System.Drawing.Size(969, 96)
+        Me.OtherLayoutPanel.Size = New System.Drawing.Size(914, 96)
         Me.OtherLayoutPanel.TabIndex = 8
         '
         'CommonTabPage
@@ -686,7 +647,7 @@ Partial Class frmDictionary
         Me.CommonTabPage.Location = New System.Drawing.Point(4, 22)
         Me.CommonTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.CommonTabPage.Name = "CommonTabPage"
-        Me.CommonTabPage.Size = New System.Drawing.Size(969, 96)
+        Me.CommonTabPage.Size = New System.Drawing.Size(914, 96)
         Me.CommonTabPage.TabIndex = 7
         Me.CommonTabPage.Text = "Common"
         Me.CommonTabPage.UseVisualStyleBackColor = True
@@ -701,7 +662,7 @@ Partial Class frmDictionary
         Me.CommonLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.CommonLayoutPanel.Name = "CommonLayoutPanel"
         Me.CommonLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.CommonLayoutPanel.Size = New System.Drawing.Size(969, 96)
+        Me.CommonLayoutPanel.Size = New System.Drawing.Size(914, 96)
         Me.CommonLayoutPanel.TabIndex = 9
         '
         'CustomTabPage
@@ -710,7 +671,7 @@ Partial Class frmDictionary
         Me.CustomTabPage.Location = New System.Drawing.Point(4, 22)
         Me.CustomTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.CustomTabPage.Name = "CustomTabPage"
-        Me.CustomTabPage.Size = New System.Drawing.Size(969, 96)
+        Me.CustomTabPage.Size = New System.Drawing.Size(914, 96)
         Me.CustomTabPage.TabIndex = 6
         Me.CustomTabPage.Text = "Custom"
         Me.CustomTabPage.UseVisualStyleBackColor = True
@@ -725,8 +686,47 @@ Partial Class frmDictionary
         Me.CustomLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.CustomLayoutPanel.Name = "CustomLayoutPanel"
         Me.CustomLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.CustomLayoutPanel.Size = New System.Drawing.Size(969, 96)
+        Me.CustomLayoutPanel.Size = New System.Drawing.Size(914, 96)
         Me.CustomLayoutPanel.TabIndex = 9
+        '
+        'dgvDictionary
+        '
+        Me.dgvDictionary.BackgroundColor = System.Drawing.Color.White
+        Me.dgvDictionary.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvDictionary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvDictionary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDictionary.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Word, Me.Pronunciation, Me.Definition, Me.Notes})
+        Me.dgvDictionary.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvDictionary.GridColor = System.Drawing.Color.Gainsboro
+        Me.dgvDictionary.Location = New System.Drawing.Point(0, 0)
+        Me.dgvDictionary.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvDictionary.Name = "dgvDictionary"
+        Me.dgvDictionary.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgvDictionary.RowTemplate.Height = 24
+        Me.dgvDictionary.Size = New System.Drawing.Size(922, 345)
+        Me.dgvDictionary.TabIndex = 3
+        '
+        'Word
+        '
+        Me.Word.HeaderText = "Word"
+        Me.Word.Name = "Word"
+        '
+        'Pronunciation
+        '
+        Me.Pronunciation.HeaderText = "Pronunciation"
+        Me.Pronunciation.Name = "Pronunciation"
+        '
+        'Definition
+        '
+        Me.Definition.HeaderText = "Definition"
+        Me.Definition.Name = "Definition"
+        Me.Definition.Width = 255
+        '
+        'Notes
+        '
+        Me.Notes.HeaderText = "Notes"
+        Me.Notes.Name = "Notes"
+        Me.Notes.Width = 255
         '
         'frmDictionary
         '
@@ -748,7 +748,6 @@ Partial Class frmDictionary
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        CType(Me.dgvSymbols, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tcSymbols.ResumeLayout(False)
         Me.ConsonantsTabPage.ResumeLayout(False)
         Me.ConsonantsTabPage.PerformLayout()
@@ -759,6 +758,7 @@ Partial Class frmDictionary
         Me.OtherTabPage.ResumeLayout(False)
         Me.CommonTabPage.ResumeLayout(False)
         Me.CustomTabPage.ResumeLayout(False)
+        CType(Me.dgvDictionary, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -783,7 +783,7 @@ Partial Class frmDictionary
     Friend WithEvents StylizedButton5 As Tundra.StylizedButton
     Friend WithEvents Label1 As Label
     Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents dgvSymbols As DataGridView
+    Friend WithEvents dgvDictionary As DataGridView
     Friend WithEvents Word As DataGridViewTextBoxColumn
     Friend WithEvents Pronunciation As DataGridViewTextBoxColumn
     Friend WithEvents Definition As DataGridViewTextBoxColumn

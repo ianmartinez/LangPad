@@ -112,7 +112,7 @@ Partial Class dlgCustomSymbols
         Me.dgvSymbols.Name = "dgvSymbols"
         Me.dgvSymbols.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvSymbols.RowTemplate.Height = 24
-        Me.dgvSymbols.Size = New System.Drawing.Size(267, 264)
+        Me.dgvSymbols.Size = New System.Drawing.Size(267, 263)
         Me.dgvSymbols.TabIndex = 2
         '
         'Symbol
@@ -137,6 +137,7 @@ Partial Class dlgCustomSymbols
         Me.btnDeleteAll.Location = New System.Drawing.Point(69, 281)
         Me.btnDeleteAll.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDeleteAll.Name = "btnDeleteAll"
+        Me.btnDeleteAll.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnDeleteAll.Size = New System.Drawing.Size(25, 25)
         Me.btnDeleteAll.Style = resources.GetString("btnDeleteAll.Style")
         Me.btnDeleteAll.TabIndex = 5
@@ -160,6 +161,7 @@ Partial Class dlgCustomSymbols
         Me.btnOpen.Location = New System.Drawing.Point(11, 281)
         Me.btnOpen.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOpen.Name = "btnOpen"
+        Me.btnOpen.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnOpen.Size = New System.Drawing.Size(25, 25)
         Me.btnOpen.Style = resources.GetString("btnOpen.Style")
         Me.btnOpen.TabIndex = 3
@@ -183,6 +185,7 @@ Partial Class dlgCustomSymbols
         Me.btnSave.Location = New System.Drawing.Point(40, 281)
         Me.btnSave.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSave.Name = "btnSave"
+        Me.btnSave.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnSave.Size = New System.Drawing.Size(25, 25)
         Me.btnSave.Style = resources.GetString("btnSave.Style")
         Me.btnSave.TabIndex = 4
