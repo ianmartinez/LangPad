@@ -21,6 +21,7 @@ Public Class frmDictionary
 
 
     Public Sub InsertIPA(sender As Object, e As EventArgs)
+        On Error Resume Next
         Dim Button As Button = CType(sender, Button)
         dgvDictionary.Focus()
         dgvDictionary.BeginEdit(False)
@@ -99,5 +100,22 @@ Public Class frmDictionary
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
         dgvDictionary.Rows.RemoveAt(dgvDictionary.CurrentCell.RowIndex)
+    End Sub
+
+    Private Sub dgvDictionary_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles dgvDictionary.RowPostPaint
+        Dim grid As DataGridView = CType(sender, DataGridView)
+        Dim rowIdx As String = (e.RowIndex + 1).ToString()
+        Dim rowFont As System.Drawing.Font = Me.Font
+
+        Dim centerFormat = New StringFormat()
+        centerFormat.Alignment = StringAlignment.Center
+        centerFormat.LineAlignment = StringAlignment.Center
+
+        Dim headerBounds As Rectangle = New Rectangle(e.RowBounds.Left, e.RowBounds.Top, grid.RowHeadersWidth, e.RowBounds.Height)
+        e.Graphics.DrawString(rowIdx, rowFont, SystemBrushes.ControlText, headerBounds, centerFormat)
+    End Sub
+
+    Private Sub btnCheckExisting_Click(sender As Object, e As EventArgs) Handles btnCheckExisting.Click
+        dlgCheckExisting.ShowDialog()
     End Sub
 End Class

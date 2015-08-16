@@ -92,7 +92,7 @@ Partial Class NotebookEditor
         Me.btnSave.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnSave.Size = New System.Drawing.Size(24, 24)
         Me.btnSave.Style = resources.GetString("btnSave.Style")
-        Me.btnSave.TabIndex = 14
+        Me.btnSave.TabIndex = 15
         Me.ttMain.SetToolTip(Me.btnSave, "Save notebook")
         Me.btnSave.UseCompatibleTextRendering = True
         Me.btnSave.UseVisualStyleBackColor = False
@@ -117,7 +117,7 @@ Partial Class NotebookEditor
         Me.btnExport.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnExport.Size = New System.Drawing.Size(24, 24)
         Me.btnExport.Style = resources.GetString("btnExport.Style")
-        Me.btnExport.TabIndex = 13
+        Me.btnExport.TabIndex = 14
         Me.ttMain.SetToolTip(Me.btnExport, "Export page")
         Me.btnExport.UseCompatibleTextRendering = True
         Me.btnExport.UseVisualStyleBackColor = False
@@ -142,7 +142,7 @@ Partial Class NotebookEditor
         Me.btnImport.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnImport.Size = New System.Drawing.Size(24, 24)
         Me.btnImport.Style = resources.GetString("btnImport.Style")
-        Me.btnImport.TabIndex = 12
+        Me.btnImport.TabIndex = 13
         Me.ttMain.SetToolTip(Me.btnImport, "Import page")
         Me.btnImport.UseCompatibleTextRendering = True
         Me.btnImport.UseVisualStyleBackColor = False
@@ -167,7 +167,7 @@ Partial Class NotebookEditor
         Me.btnRename.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnRename.Size = New System.Drawing.Size(24, 24)
         Me.btnRename.Style = resources.GetString("btnRename.Style")
-        Me.btnRename.TabIndex = 10
+        Me.btnRename.TabIndex = 11
         Me.ttMain.SetToolTip(Me.btnRename, "Rename page")
         Me.btnRename.UseCompatibleTextRendering = True
         Me.btnRename.UseVisualStyleBackColor = False
@@ -192,7 +192,7 @@ Partial Class NotebookEditor
         Me.btnRemove.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnRemove.Size = New System.Drawing.Size(24, 24)
         Me.btnRemove.Style = resources.GetString("btnRemove.Style")
-        Me.btnRemove.TabIndex = 9
+        Me.btnRemove.TabIndex = 10
         Me.ttMain.SetToolTip(Me.btnRemove, "Remove page")
         Me.btnRemove.UseCompatibleTextRendering = True
         Me.btnRemove.UseVisualStyleBackColor = False
@@ -217,7 +217,7 @@ Partial Class NotebookEditor
         Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnAdd.Size = New System.Drawing.Size(24, 24)
         Me.btnAdd.Style = resources.GetString("btnAdd.Style")
-        Me.btnAdd.TabIndex = 8
+        Me.btnAdd.TabIndex = 9
         Me.ttMain.SetToolTip(Me.btnAdd, "Add page")
         Me.btnAdd.UseCompatibleTextRendering = True
         Me.btnAdd.UseVisualStyleBackColor = False
@@ -242,7 +242,7 @@ Partial Class NotebookEditor
         Me.btnDown.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnDown.Size = New System.Drawing.Size(24, 24)
         Me.btnDown.Style = resources.GetString("btnDown.Style")
-        Me.btnDown.TabIndex = 7
+        Me.btnDown.TabIndex = 8
         Me.ttMain.SetToolTip(Me.btnDown, "Move page down")
         Me.btnDown.UseCompatibleTextRendering = True
         Me.btnDown.UseVisualStyleBackColor = False
@@ -267,7 +267,7 @@ Partial Class NotebookEditor
         Me.btnUp.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnUp.Size = New System.Drawing.Size(24, 24)
         Me.btnUp.Style = resources.GetString("btnUp.Style")
-        Me.btnUp.TabIndex = 6
+        Me.btnUp.TabIndex = 7
         Me.ttMain.SetToolTip(Me.btnUp, "Move page up")
         Me.btnUp.UseCompatibleTextRendering = True
         Me.btnUp.UseVisualStyleBackColor = False
@@ -317,7 +317,7 @@ Partial Class NotebookEditor
         Me.btnDuplicate.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnDuplicate.Size = New System.Drawing.Size(24, 24)
         Me.btnDuplicate.Style = resources.GetString("btnDuplicate.Style")
-        Me.btnDuplicate.TabIndex = 11
+        Me.btnDuplicate.TabIndex = 12
         Me.ttMain.SetToolTip(Me.btnDuplicate, "Duplicate page")
         Me.btnDuplicate.UseCompatibleTextRendering = True
         Me.btnDuplicate.UseVisualStyleBackColor = False
@@ -537,10 +537,10 @@ Partial Class NotebookEditor
         Me.btnDictionary.Location = New System.Drawing.Point(4, 148)
         Me.btnDictionary.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDictionary.Name = "btnDictionary"
-        Me.btnDictionary.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnDictionary.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.btnDictionary.Size = New System.Drawing.Size(218, 24)
         Me.btnDictionary.Style = resources.GetString("btnDictionary.Style")
-        Me.btnDictionary.TabIndex = 79
+        Me.btnDictionary.TabIndex = 6
         Me.btnDictionary.Text = " Dictionary"
         Me.btnDictionary.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnDictionary.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
