@@ -35,7 +35,7 @@ Public Class frmDictionary
             Me.Font = New Font("Microsoft Sans Serif", "8.25")
         End If
 
-        pnlTop.Height = pnlTabs.Height + pnlHome.Height
+        pnlTop.Height = pnlHome.Height
 
 
     End Sub

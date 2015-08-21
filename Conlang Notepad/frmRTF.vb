@@ -5,7 +5,7 @@
             Me.Font = New Font("Microsoft Sans Serif", "8.25")
         End If
 
-        pnlTop.Height = pnlTabs.Height + pnlMain.Height
+        pnlTop.Height = pnlMain.Height
         Me.txtRTF.Text = frmMain.SelectedDocument.Rtf
     End Sub
 

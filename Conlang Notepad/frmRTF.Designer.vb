@@ -38,11 +38,8 @@ Partial Class frmRTF
         Me.btnUndo = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel3 = New Tundra.DoubleBufferedPanel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.pnlTabs = New Tundra.StylizedPanel()
-        Me.btnHome = New Tundra.StylizedRadioButton()
         Me.pnlTop.SuspendLayout()
         Me.pnlMain.SuspendLayout()
-        Me.pnlTabs.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtRTF
@@ -63,14 +60,13 @@ Partial Class frmRTF
         Me.pnlTop.AutoScroll = True
         Me.pnlTop.BackColor = System.Drawing.Color.Transparent
         Me.pnlTop.Controls.Add(Me.pnlMain)
-        Me.pnlTop.Controls.Add(Me.pnlTabs)
         Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTop.Location = New System.Drawing.Point(0, 0)
         Me.pnlTop.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlTop.Name = "pnlTop"
         Me.pnlTop.Size = New System.Drawing.Size(680, 116)
         Me.pnlTop.Style = "Colors=~245|~245|~239" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|0.8|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
-    "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+    "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.pnlTop.TabIndex = 13
         '
         'pnlMain
@@ -90,10 +86,10 @@ Partial Class frmRTF
         Me.pnlMain.Controls.Add(Me.DoubleBufferedPanel3)
         Me.pnlMain.Controls.Add(Me.Label1)
         Me.pnlMain.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlMain.Location = New System.Drawing.Point(0, 25)
+        Me.pnlMain.Location = New System.Drawing.Point(0, 0)
         Me.pnlMain.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlMain.Name = "pnlMain"
-        Me.pnlMain.Size = New System.Drawing.Size(680, 81)
+        Me.pnlMain.Size = New System.Drawing.Size(680, 83)
         Me.pnlMain.TabIndex = 43
         '
         'btnRefresh
@@ -108,7 +104,7 @@ Partial Class frmRTF
         Me.btnRefresh.ForeColor = System.Drawing.Color.Black
         Me.btnRefresh.Image = CType(resources.GetObject("btnRefresh.Image"), System.Drawing.Image)
         Me.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRefresh.Location = New System.Drawing.Point(224, 2)
+        Me.btnRefresh.Location = New System.Drawing.Point(224, 4)
         Me.btnRefresh.Margin = New System.Windows.Forms.Padding(2)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
@@ -125,7 +121,7 @@ Partial Class frmRTF
         '
         Me.DoubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DoubleBufferedPanel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(310, 7)
+        Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(310, 9)
         Me.DoubleBufferedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel1.Name = "DoubleBufferedPanel1"
         Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(1, 70)
@@ -135,7 +131,7 @@ Partial Class frmRTF
         '
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.Color.Gray
-        Me.Label3.Location = New System.Drawing.Point(223, 60)
+        Me.Label3.Location = New System.Drawing.Point(223, 62)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(86, 19)
@@ -155,7 +151,7 @@ Partial Class frmRTF
         Me.btnPaste.ForeColor = System.Drawing.Color.Black
         Me.btnPaste.Image = CType(resources.GetObject("btnPaste.Image"), System.Drawing.Image)
         Me.btnPaste.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPaste.Location = New System.Drawing.Point(77, 33)
+        Me.btnPaste.Location = New System.Drawing.Point(77, 35)
         Me.btnPaste.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPaste.Name = "btnPaste"
         Me.btnPaste.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
@@ -180,7 +176,7 @@ Partial Class frmRTF
         Me.btnCut.ForeColor = System.Drawing.Color.Black
         Me.btnCut.Image = CType(resources.GetObject("btnCut.Image"), System.Drawing.Image)
         Me.btnCut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCut.Location = New System.Drawing.Point(148, 2)
+        Me.btnCut.Location = New System.Drawing.Point(148, 4)
         Me.btnCut.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCut.Name = "btnCut"
         Me.btnCut.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
@@ -205,7 +201,7 @@ Partial Class frmRTF
         Me.btnCopy.ForeColor = System.Drawing.Color.Black
         Me.btnCopy.Image = CType(resources.GetObject("btnCopy.Image"), System.Drawing.Image)
         Me.btnCopy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCopy.Location = New System.Drawing.Point(77, 2)
+        Me.btnCopy.Location = New System.Drawing.Point(77, 4)
         Me.btnCopy.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCopy.Name = "btnCopy"
         Me.btnCopy.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
@@ -222,7 +218,7 @@ Partial Class frmRTF
         '
         Me.DoubleBufferedPanel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DoubleBufferedPanel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel4.Location = New System.Drawing.Point(219, 7)
+        Me.DoubleBufferedPanel4.Location = New System.Drawing.Point(219, 9)
         Me.DoubleBufferedPanel4.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel4.Name = "DoubleBufferedPanel4"
         Me.DoubleBufferedPanel4.Size = New System.Drawing.Size(1, 70)
@@ -232,7 +228,7 @@ Partial Class frmRTF
         '
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.Gray
-        Me.Label2.Location = New System.Drawing.Point(76, 60)
+        Me.Label2.Location = New System.Drawing.Point(76, 62)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(142, 19)
@@ -252,7 +248,7 @@ Partial Class frmRTF
         Me.btnRedo.ForeColor = System.Drawing.Color.Black
         Me.btnRedo.Image = CType(resources.GetObject("btnRedo.Image"), System.Drawing.Image)
         Me.btnRedo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRedo.Location = New System.Drawing.Point(5, 33)
+        Me.btnRedo.Location = New System.Drawing.Point(5, 35)
         Me.btnRedo.Margin = New System.Windows.Forms.Padding(2)
         Me.btnRedo.Name = "btnRedo"
         Me.btnRedo.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
@@ -277,7 +273,7 @@ Partial Class frmRTF
         Me.btnUndo.ForeColor = System.Drawing.Color.Black
         Me.btnUndo.Image = CType(resources.GetObject("btnUndo.Image"), System.Drawing.Image)
         Me.btnUndo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUndo.Location = New System.Drawing.Point(5, 2)
+        Me.btnUndo.Location = New System.Drawing.Point(5, 4)
         Me.btnUndo.Margin = New System.Windows.Forms.Padding(2)
         Me.btnUndo.Name = "btnUndo"
         Me.btnUndo.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
@@ -294,7 +290,7 @@ Partial Class frmRTF
         '
         Me.DoubleBufferedPanel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DoubleBufferedPanel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel3.Location = New System.Drawing.Point(72, 7)
+        Me.DoubleBufferedPanel3.Location = New System.Drawing.Point(72, 9)
         Me.DoubleBufferedPanel3.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel3.Name = "DoubleBufferedPanel3"
         Me.DoubleBufferedPanel3.Size = New System.Drawing.Size(1, 70)
@@ -304,53 +300,13 @@ Partial Class frmRTF
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.ForeColor = System.Drawing.Color.Gray
-        Me.Label1.Location = New System.Drawing.Point(4, 60)
+        Me.Label1.Location = New System.Drawing.Point(4, 62)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 19)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "History"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'pnlTabs
-        '
-        Me.pnlTabs.BackColor = System.Drawing.Color.Transparent
-        Me.pnlTabs.Controls.Add(Me.btnHome)
-        Me.pnlTabs.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlTabs.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTabs.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
-        Me.pnlTabs.Name = "pnlTabs"
-        Me.pnlTabs.Size = New System.Drawing.Size(680, 25)
-        Me.pnlTabs.Style = "Colors=$1|~249" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight C" &
-    "olor$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.pnlTabs.TabIndex = 71
-        '
-        'btnHome
-        '
-        Me.btnHome.Appearance = System.Windows.Forms.Appearance.Button
-        Me.btnHome.AutoSize = True
-        Me.btnHome.BackColor = System.Drawing.Color.Transparent
-        Me.btnHome.BackgroundImage = CType(resources.GetObject("btnHome.BackgroundImage"), System.Drawing.Image)
-        Me.btnHome.Checked = True
-        Me.btnHome.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnHome.FlatAppearance.BorderSize = 0
-        Me.btnHome.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(120, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnHome.Location = New System.Drawing.Point(0, 0)
-        Me.btnHome.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnHome.Name = "btnHome"
-        Me.btnHome.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.btnHome.Size = New System.Drawing.Size(45, 25)
-        Me.btnHome.Style = resources.GetString("btnHome.Style")
-        Me.btnHome.TabIndex = 2
-        Me.btnHome.TabStop = True
-        Me.btnHome.Text = "Home"
-        Me.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnHome.UseVisualStyleBackColor = False
         '
         'frmRTF
         '
@@ -367,8 +323,6 @@ Partial Class frmRTF
         Me.Text = "RTF Editor"
         Me.pnlTop.ResumeLayout(False)
         Me.pnlMain.ResumeLayout(False)
-        Me.pnlTabs.ResumeLayout(False)
-        Me.pnlTabs.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -383,8 +337,6 @@ Partial Class frmRTF
     Friend WithEvents btnUndo As Tundra.StylizedButton
     Friend WithEvents DoubleBufferedPanel3 As Tundra.DoubleBufferedPanel
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents pnlTabs As Tundra.StylizedPanel
-    Friend WithEvents btnHome As Tundra.StylizedRadioButton
     Friend WithEvents DoubleBufferedPanel4 As Tundra.DoubleBufferedPanel
     Friend WithEvents btnRefresh As Tundra.StylizedButton
     Friend WithEvents DoubleBufferedPanel1 As Tundra.DoubleBufferedPanel
