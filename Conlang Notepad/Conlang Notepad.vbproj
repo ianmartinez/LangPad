@@ -205,6 +205,7 @@
     <Compile Include="Dialogs\dlgWebcam.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Notebook\DictionaryFile.vb" />
     <Compile Include="dlgCheckExisting.Designer.vb">
       <DependentUpon>dlgCheckExisting.vb</DependentUpon>
     </Compile>

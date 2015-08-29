@@ -195,6 +195,7 @@ Partial Class dlgAbout
         Me.btnGitHub.Location = New System.Drawing.Point(11, 244)
         Me.btnGitHub.Margin = New System.Windows.Forms.Padding(2)
         Me.btnGitHub.Name = "btnGitHub"
+        Me.btnGitHub.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnGitHub.Size = New System.Drawing.Size(25, 25)
         Me.btnGitHub.Style = resources.GetString("btnGitHub.Style")
         Me.btnGitHub.TabIndex = 77

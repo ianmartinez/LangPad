@@ -14,17 +14,18 @@ Public Class dlgCustomSymbols
 
         frmMain.CustomLayoutPanel.Controls.Clear()
         frmDictionary.CustomLayoutPanel.Controls.Clear()
-        Dim LineList As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-        For Each IPA As String In LineList
-            Dim IPAButton As New SymbolButton
-            IPAButton.Text = IPA
-            AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
-            frmMain.CustomLayoutPanel.Controls.Add(IPAButton)
 
-            Dim DictionaryIPAButton As New SymbolButton
-            DictionaryIPAButton.Text = IPA
-            AddHandler DictionaryIPAButton.Click, AddressOf frmDictionary.InsertIPA
-            frmDictionary.CustomLayoutPanel.Controls.Add(DictionaryIPAButton)
+        Dim LineList2 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+        For Each IPA As String In LineList2
+            Dim SymbolButton As New SymbolButton
+            SymbolButton.Text = IPA
+            AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
+            frmMain.CustomLayoutPanel.Controls.Add(SymbolButton)
+
+            Dim SymbolButtonDictionary As New SymbolButton
+            SymbolButtonDictionary.Text = IPA
+            AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
+            frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
         Next
 
         Me.DialogResult = System.Windows.Forms.DialogResult.OK

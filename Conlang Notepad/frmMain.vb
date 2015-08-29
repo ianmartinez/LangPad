@@ -419,6 +419,7 @@ Public Class frmMain
 
 
         KeyPreview = True
+
     End Sub
 
 

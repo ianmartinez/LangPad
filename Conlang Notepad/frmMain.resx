@@ -5182,45 +5182,6 @@ Checked Text Color=120,0,0
 Checked Highlight Color=$0
 </value>
   </data>
-  <data name="StylizedRadioButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAAAaCAYAAAAHfFpPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAdSURBVFhH7cEBAQAAAIIg/69uSEAAAAAAAABcqAEaGgAB
-        Ln3UdgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="StylizedRadioButton1.Style" xml:space="preserve">
-    <value>Radius=0
-
-Active Colors=$0|$0
-Active Positions=0|1
-Active Angle=90
-Active Border Color=$0
-Active Text Color=~38
-Active Highlight Color=$0
-
-Hover Colors=$0|$0
-Hover Positions=0|1
-Hover Angle=90
-Hover Border Color=$0
-Hover Text Color=120,0,0
-Hover Highlight Color=$0
-
-Pressed Colors=~239|~233
-Pressed Positions=0|1
-Pressed Angle=90
-Pressed Border Color=~220
-Pressed Text Color=120,0,0
-Pressed Highlight Color=$0
-
-Checked Colors=~239|~233
-Checked Positions=0|1
-Checked Angle=90
-Checked Border Color=~220
-Checked Text Color=120,0,0
-Checked Highlight Color=$0
-</value>
-  </data>
   <data name="btnNotebookTab.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAAAaCAYAAAAHfFpPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

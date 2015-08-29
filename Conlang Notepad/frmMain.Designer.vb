@@ -184,12 +184,10 @@ Partial Class frmMain
         Me.StylizedButton100 = New Tundra.StylizedButton()
         Me.StylizedButton102 = New Tundra.StylizedButton()
         Me.ClipArtLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.StylizedPanel2 = New Tundra.StylizedPanel()
         Me.btnClose = New Tundra.StylizedButton()
         Me.btnEmotesTab = New Tundra.StylizedRadioButton()
         Me.btnClipArtTab = New Tundra.StylizedRadioButton()
-        Me.StylizedRadioButton1 = New Tundra.StylizedRadioButton()
         Me.btnNotebookTab = New Tundra.StylizedRadioButton()
         Me.dlgSaveNotebook = New System.Windows.Forms.SaveFileDialog()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
@@ -338,6 +336,7 @@ Partial Class frmMain
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblCharCount = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblWordCount = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.tcSymbols.SuspendLayout()
         Me.ConsonantsTabPage.SuspendLayout()
         Me.AffricatesTabPage.SuspendLayout()
@@ -878,7 +877,7 @@ Partial Class frmMain
         Me.SplitContainer2.Panel2.Controls.Add(Me.StylizedPanel1)
         Me.SplitContainer2.Panel2MinSize = 235
         Me.SplitContainer2.Size = New System.Drawing.Size(977, 241)
-        Me.SplitContainer2.SplitterDistance = 724
+        Me.SplitContainer2.SplitterDistance = 726
         Me.SplitContainer2.SplitterWidth = 2
         Me.SplitContainer2.TabIndex = 1
         '
@@ -889,7 +888,7 @@ Partial Class frmMain
         Me.tcNotebook.Margin = New System.Windows.Forms.Padding(2)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(724, 239)
+        Me.tcNotebook.Size = New System.Drawing.Size(726, 239)
         Me.tcNotebook.TabIndex = 73
         '
         'StylizedPanel1
@@ -904,7 +903,7 @@ Partial Class frmMain
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(251, 241)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(249, 241)
         Me.StylizedPanel1.Style = "Colors=~245|~245" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight" &
     " Color=$0"
         Me.StylizedPanel1.TabIndex = 13
@@ -1015,7 +1014,7 @@ Partial Class frmMain
         Me.EmoteLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.EmoteLayoutPanel.Name = "EmoteLayoutPanel"
         Me.EmoteLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.EmoteLayoutPanel.Size = New System.Drawing.Size(251, 46)
+        Me.EmoteLayoutPanel.Size = New System.Drawing.Size(249, 46)
         Me.EmoteLayoutPanel.TabIndex = 8
         '
         'StylizedButton3
@@ -3064,19 +3063,8 @@ Partial Class frmMain
         Me.ClipArtLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ClipArtLayoutPanel.Name = "ClipArtLayoutPanel"
         Me.ClipArtLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.ClipArtLayoutPanel.Size = New System.Drawing.Size(251, 46)
+        Me.ClipArtLayoutPanel.Size = New System.Drawing.Size(249, 46)
         Me.ClipArtLayoutPanel.TabIndex = 7
-        '
-        'NotebookEditor1
-        '
-        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
-        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 28)
-        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(2)
-        Me.NotebookEditor1.Name = "NotebookEditor1"
-        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.NotebookEditor1.Size = New System.Drawing.Size(251, 41)
-        Me.NotebookEditor1.TabIndex = 72
         '
         'StylizedPanel2
         '
@@ -3084,14 +3072,13 @@ Partial Class frmMain
         Me.StylizedPanel2.Controls.Add(Me.btnClose)
         Me.StylizedPanel2.Controls.Add(Me.btnEmotesTab)
         Me.StylizedPanel2.Controls.Add(Me.btnClipArtTab)
-        Me.StylizedPanel2.Controls.Add(Me.StylizedRadioButton1)
         Me.StylizedPanel2.Controls.Add(Me.btnNotebookTab)
         Me.StylizedPanel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.StylizedPanel2.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
         Me.StylizedPanel2.Name = "StylizedPanel2"
         Me.StylizedPanel2.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.StylizedPanel2.Size = New System.Drawing.Size(251, 28)
+        Me.StylizedPanel2.Size = New System.Drawing.Size(249, 28)
         Me.StylizedPanel2.Style = "Colors=~255|~255" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight" &
     " Color$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1"
         Me.StylizedPanel2.TabIndex = 71
@@ -3108,7 +3095,7 @@ Partial Class frmMain
         Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClose.ForeColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
-        Me.btnClose.Location = New System.Drawing.Point(225, 2)
+        Me.btnClose.Location = New System.Drawing.Point(223, 2)
         Me.btnClose.Margin = New System.Windows.Forms.Padding(2)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
@@ -3132,7 +3119,7 @@ Partial Class frmMain
         Me.btnEmotesTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnEmotesTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEmotesTab.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.btnEmotesTab.Location = New System.Drawing.Point(178, 2)
+        Me.btnEmotesTab.Location = New System.Drawing.Point(114, 2)
         Me.btnEmotesTab.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEmotesTab.Name = "btnEmotesTab"
         Me.btnEmotesTab.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
@@ -3157,7 +3144,7 @@ Partial Class frmMain
         Me.btnClipArtTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnClipArtTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClipArtTab.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.btnClipArtTab.Location = New System.Drawing.Point(128, 2)
+        Me.btnClipArtTab.Location = New System.Drawing.Point(64, 2)
         Me.btnClipArtTab.Margin = New System.Windows.Forms.Padding(2)
         Me.btnClipArtTab.Name = "btnClipArtTab"
         Me.btnClipArtTab.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
@@ -3167,31 +3154,6 @@ Partial Class frmMain
         Me.btnClipArtTab.Text = "Clip Art"
         Me.btnClipArtTab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnClipArtTab.UseVisualStyleBackColor = False
-        '
-        'StylizedRadioButton1
-        '
-        Me.StylizedRadioButton1.Appearance = System.Windows.Forms.Appearance.Button
-        Me.StylizedRadioButton1.AutoSize = True
-        Me.StylizedRadioButton1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedRadioButton1.BackgroundImage = CType(resources.GetObject("StylizedRadioButton1.BackgroundImage"), System.Drawing.Image)
-        Me.StylizedRadioButton1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedRadioButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedRadioButton1.FlatAppearance.BorderSize = 0
-        Me.StylizedRadioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.StylizedRadioButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.StylizedRadioButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.StylizedRadioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StylizedRadioButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.StylizedRadioButton1.Location = New System.Drawing.Point(64, 2)
-        Me.StylizedRadioButton1.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedRadioButton1.Name = "StylizedRadioButton1"
-        Me.StylizedRadioButton1.Padding = New System.Windows.Forms.Padding(0, 2, 0, 2)
-        Me.StylizedRadioButton1.Size = New System.Drawing.Size(64, 26)
-        Me.StylizedRadioButton1.Style = resources.GetString("StylizedRadioButton1.Style")
-        Me.StylizedRadioButton1.TabIndex = 63
-        Me.StylizedRadioButton1.Text = "Dictionary"
-        Me.StylizedRadioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.StylizedRadioButton1.UseVisualStyleBackColor = False
         '
         'btnNotebookTab
         '
@@ -6024,6 +5986,17 @@ Partial Class frmMain
         Me.lblWordCount.Size = New System.Drawing.Size(76, 20)
         Me.lblWordCount.Text = "Word Count: 0"
         '
+        'NotebookEditor1
+        '
+        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
+        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 28)
+        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(2)
+        Me.NotebookEditor1.Name = "NotebookEditor1"
+        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.NotebookEditor1.Size = New System.Drawing.Size(249, 41)
+        Me.NotebookEditor1.TabIndex = 72
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -6398,5 +6371,4 @@ Partial Class frmMain
     Friend WithEvents btnQuickSave As Tundra.StylizedButton
     Friend WithEvents DoubleBufferedPanel22 As Tundra.DoubleBufferedPanel
     Friend WithEvents btnDictionary As Tundra.StylizedButton
-    Friend WithEvents StylizedRadioButton1 As Tundra.StylizedRadioButton
 End Class

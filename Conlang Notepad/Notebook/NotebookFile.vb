@@ -168,24 +168,20 @@ Module NotebookFileAccess
             Else
             End If
 
-            Dim IPAFont = New Font("Segoe UI", 11, FontStyle.Regular)
-            Dim IPAPadding = New Padding(0)
-            Dim IPAMargin = New Padding(1)
-            Dim IPAMin = New Size(45, 32)
+            frmMain.CustomLayoutPanel.Controls.Clear()
+            frmDictionary.CustomLayoutPanel.Controls.Clear()
 
             Dim LineList2 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
             For Each IPA As String In LineList2
-                Dim IPAButton As New StylizedButton
-                IPAButton.Style = My.Resources.KeyStyle
-                IPAButton.Padding = IPAPadding
-                IPAButton.Font = IPAFont
-                IPAButton.AutoSize = True
-                IPAButton.MinimumSize = IPAMin
-                IPAButton.Margin = IPAMargin
-                IPAButton.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
-                IPAButton.Text = IPA
-                AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
-                frmMain.CustomLayoutPanel.Controls.Add(IPAButton)
+                Dim SymbolButton As New SymbolButton
+                SymbolButton.Text = IPA
+                AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
+                frmMain.CustomLayoutPanel.Controls.Add(SymbolButton)
+
+                Dim SymbolButtonDictionary As New SymbolButton
+                SymbolButtonDictionary.Text = IPA
+                AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
+                frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
             Next
         End If
 
