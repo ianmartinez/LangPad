@@ -30,7 +30,7 @@ Public Class NotebookFile
     Public Info As String
 
     Public Pages As New List(Of NotebookPage)
-
+    Public WordDictionary As New DictionaryFile
 
     Public Sub Save(ByVal FilePath As String)
         If File.Exists(FilePath) Then File.Delete(FilePath)
@@ -50,6 +50,7 @@ Public Class NotebookFile
         Me.Info = NewNotebook.Info
         Me.CustomSymbols = NewNotebook.CustomSymbols
         Me.EmbedSymbols = NewNotebook.EmbedSymbols
+        Me.WordDictionary = NewNotebook.WordDictionary
     End Sub
 
     Public Sub New()

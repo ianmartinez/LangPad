@@ -206,12 +206,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Notebook\DictionaryFile.vb" />
-    <Compile Include="dlgCheckExisting.Designer.vb">
-      <DependentUpon>dlgCheckExisting.vb</DependentUpon>
-    </Compile>
-    <Compile Include="dlgCheckExisting.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmDictionary.Designer.vb">
       <DependentUpon>frmDictionary.vb</DependentUpon>
     </Compile>
@@ -303,9 +297,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgWebcam.resx">
       <DependentUpon>dlgWebcam.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="dlgCheckExisting.resx">
-      <DependentUpon>dlgCheckExisting.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDictionary.resx">
       <DependentUpon>frmDictionary.vb</DependentUpon>

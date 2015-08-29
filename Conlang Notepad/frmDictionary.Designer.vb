@@ -23,16 +23,12 @@ Partial Class frmDictionary
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDictionary))
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlTop = New Tundra.StylizedPanel()
         Me.pnlHome = New Tundra.DoubleBufferedPanel()
-        Me.DoubleBufferedPanel2 = New Tundra.DoubleBufferedPanel()
-        Me.StylizedButton2 = New Tundra.StylizedButton()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.StylizedButton1 = New Tundra.StylizedButton()
         Me.btnRemove = New Tundra.StylizedButton()
         Me.btnAdd = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel1 = New Tundra.DoubleBufferedPanel()
-        Me.btnCheckExisting = New Tundra.StylizedButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnCustomSymbols = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel15 = New Tundra.DoubleBufferedPanel()
@@ -67,6 +63,8 @@ Partial Class frmDictionary
         Me.Pronunciation = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Definition = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Notes = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
+        Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.pnlTop.SuspendLayout()
         Me.pnlHome.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,14 +101,9 @@ Partial Class frmDictionary
         '
         Me.pnlHome.AutoScroll = True
         Me.pnlHome.BackColor = System.Drawing.Color.Transparent
-        Me.pnlHome.Controls.Add(Me.DoubleBufferedPanel2)
-        Me.pnlHome.Controls.Add(Me.StylizedButton2)
-        Me.pnlHome.Controls.Add(Me.Label2)
-        Me.pnlHome.Controls.Add(Me.StylizedButton1)
         Me.pnlHome.Controls.Add(Me.btnRemove)
         Me.pnlHome.Controls.Add(Me.btnAdd)
         Me.pnlHome.Controls.Add(Me.DoubleBufferedPanel1)
-        Me.pnlHome.Controls.Add(Me.btnCheckExisting)
         Me.pnlHome.Controls.Add(Me.Label1)
         Me.pnlHome.Controls.Add(Me.btnCustomSymbols)
         Me.pnlHome.Controls.Add(Me.DoubleBufferedPanel15)
@@ -128,78 +121,6 @@ Partial Class frmDictionary
         Me.pnlHome.Name = "pnlHome"
         Me.pnlHome.Size = New System.Drawing.Size(757, 83)
         Me.pnlHome.TabIndex = 75
-        '
-        'DoubleBufferedPanel2
-        '
-        Me.DoubleBufferedPanel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.DoubleBufferedPanel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel2.Location = New System.Drawing.Point(744, 9)
-        Me.DoubleBufferedPanel2.Margin = New System.Windows.Forms.Padding(2)
-        Me.DoubleBufferedPanel2.Name = "DoubleBufferedPanel2"
-        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(1, 70)
-        Me.DoubleBufferedPanel2.TabIndex = 75
-        '
-        'StylizedButton2
-        '
-        Me.StylizedButton2.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton2.BackgroundImage = CType(resources.GetObject("StylizedButton2.BackgroundImage"), System.Drawing.Image)
-        Me.StylizedButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedButton2.FlatAppearance.BorderSize = 0
-        Me.StylizedButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StylizedButton2.ForeColor = System.Drawing.Color.Black
-        Me.StylizedButton2.Image = CType(resources.GetObject("StylizedButton2.Image"), System.Drawing.Image)
-        Me.StylizedButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton2.Location = New System.Drawing.Point(638, 34)
-        Me.StylizedButton2.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedButton2.Name = "StylizedButton2"
-        Me.StylizedButton2.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.StylizedButton2.Size = New System.Drawing.Size(102, 26)
-        Me.StylizedButton2.Style = resources.GetString("StylizedButton2.Style")
-        Me.StylizedButton2.TabIndex = 74
-        Me.StylizedButton2.Text = " Unmark"
-        Me.StylizedButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.StylizedButton2.UseCompatibleTextRendering = True
-        Me.StylizedButton2.UseVisualStyleBackColor = False
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.ForeColor = System.Drawing.Color.Gray
-        Me.Label2.Location = New System.Drawing.Point(635, 63)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(105, 19)
-        Me.Label2.TabIndex = 73
-        Me.Label2.Text = "Marking"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'StylizedButton1
-        '
-        Me.StylizedButton1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton1.BackgroundImage = CType(resources.GetObject("StylizedButton1.BackgroundImage"), System.Drawing.Image)
-        Me.StylizedButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedButton1.FlatAppearance.BorderSize = 0
-        Me.StylizedButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.StylizedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StylizedButton1.ForeColor = System.Drawing.Color.Black
-        Me.StylizedButton1.Image = CType(resources.GetObject("StylizedButton1.Image"), System.Drawing.Image)
-        Me.StylizedButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton1.Location = New System.Drawing.Point(638, 4)
-        Me.StylizedButton1.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedButton1.Name = "StylizedButton1"
-        Me.StylizedButton1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.StylizedButton1.Size = New System.Drawing.Size(102, 26)
-        Me.StylizedButton1.Style = resources.GetString("StylizedButton1.Style")
-        Me.StylizedButton1.TabIndex = 72
-        Me.StylizedButton1.Text = " Mark"
-        Me.StylizedButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.StylizedButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.StylizedButton1.UseCompatibleTextRendering = True
-        Me.StylizedButton1.UseVisualStyleBackColor = False
         '
         'btnRemove
         '
@@ -255,36 +176,11 @@ Partial Class frmDictionary
         '
         Me.DoubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DoubleBufferedPanel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(633, 9)
+        Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(501, 9)
         Me.DoubleBufferedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel1.Name = "DoubleBufferedPanel1"
         Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(1, 70)
         Me.DoubleBufferedPanel1.TabIndex = 67
-        '
-        'btnCheckExisting
-        '
-        Me.btnCheckExisting.BackColor = System.Drawing.Color.Transparent
-        Me.btnCheckExisting.BackgroundImage = CType(resources.GetObject("btnCheckExisting.BackgroundImage"), System.Drawing.Image)
-        Me.btnCheckExisting.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCheckExisting.FlatAppearance.BorderSize = 0
-        Me.btnCheckExisting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnCheckExisting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnCheckExisting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCheckExisting.ForeColor = System.Drawing.Color.Black
-        Me.btnCheckExisting.Image = CType(resources.GetObject("btnCheckExisting.Image"), System.Drawing.Image)
-        Me.btnCheckExisting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCheckExisting.Location = New System.Drawing.Point(501, 4)
-        Me.btnCheckExisting.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnCheckExisting.Name = "btnCheckExisting"
-        Me.btnCheckExisting.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.btnCheckExisting.Size = New System.Drawing.Size(128, 26)
-        Me.btnCheckExisting.Style = resources.GetString("btnCheckExisting.Style")
-        Me.btnCheckExisting.TabIndex = 71
-        Me.btnCheckExisting.Text = " Check For Existing"
-        Me.btnCheckExisting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCheckExisting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnCheckExisting.UseCompatibleTextRendering = True
-        Me.btnCheckExisting.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -293,7 +189,7 @@ Partial Class frmDictionary
         Me.Label1.Location = New System.Drawing.Point(410, 62)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(222, 19)
+        Me.Label1.Size = New System.Drawing.Size(87, 19)
         Me.Label1.TabIndex = 66
         Me.Label1.Text = "Words"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -564,7 +460,7 @@ Partial Class frmDictionary
         Me.AffricatesTabPage.Location = New System.Drawing.Point(4, 22)
         Me.AffricatesTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.AffricatesTabPage.Name = "AffricatesTabPage"
-        Me.AffricatesTabPage.Size = New System.Drawing.Size(914, 96)
+        Me.AffricatesTabPage.Size = New System.Drawing.Size(749, 96)
         Me.AffricatesTabPage.TabIndex = 5
         Me.AffricatesTabPage.Text = "Affricates"
         Me.AffricatesTabPage.UseVisualStyleBackColor = True
@@ -579,7 +475,7 @@ Partial Class frmDictionary
         Me.AffricatesLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AffricatesLayoutPanel.Name = "AffricatesLayoutPanel"
         Me.AffricatesLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(914, 96)
+        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(749, 96)
         Me.AffricatesLayoutPanel.TabIndex = 8
         '
         'VowelsTabPage
@@ -588,7 +484,7 @@ Partial Class frmDictionary
         Me.VowelsTabPage.Location = New System.Drawing.Point(4, 22)
         Me.VowelsTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.VowelsTabPage.Name = "VowelsTabPage"
-        Me.VowelsTabPage.Size = New System.Drawing.Size(914, 96)
+        Me.VowelsTabPage.Size = New System.Drawing.Size(749, 96)
         Me.VowelsTabPage.TabIndex = 1
         Me.VowelsTabPage.Text = "Vowels"
         Me.VowelsTabPage.UseVisualStyleBackColor = True
@@ -603,7 +499,7 @@ Partial Class frmDictionary
         Me.VowelsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.VowelsLayoutPanel.Name = "VowelsLayoutPanel"
         Me.VowelsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(914, 96)
+        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(749, 96)
         Me.VowelsLayoutPanel.TabIndex = 8
         '
         'AccentsTabPage
@@ -612,7 +508,7 @@ Partial Class frmDictionary
         Me.AccentsTabPage.Location = New System.Drawing.Point(4, 22)
         Me.AccentsTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.AccentsTabPage.Name = "AccentsTabPage"
-        Me.AccentsTabPage.Size = New System.Drawing.Size(914, 96)
+        Me.AccentsTabPage.Size = New System.Drawing.Size(749, 96)
         Me.AccentsTabPage.TabIndex = 3
         Me.AccentsTabPage.Text = "Accents"
         Me.AccentsTabPage.UseVisualStyleBackColor = True
@@ -627,7 +523,7 @@ Partial Class frmDictionary
         Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(914, 96)
+        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(749, 96)
         Me.AccentsLayoutPanel.TabIndex = 9
         '
         'ToneIntonationTabPage
@@ -636,7 +532,7 @@ Partial Class frmDictionary
         Me.ToneIntonationTabPage.Location = New System.Drawing.Point(4, 22)
         Me.ToneIntonationTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.ToneIntonationTabPage.Name = "ToneIntonationTabPage"
-        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(914, 96)
+        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(749, 96)
         Me.ToneIntonationTabPage.TabIndex = 4
         Me.ToneIntonationTabPage.Text = "Tone & Intonation"
         Me.ToneIntonationTabPage.UseVisualStyleBackColor = True
@@ -651,7 +547,7 @@ Partial Class frmDictionary
         Me.ToneIntonationLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ToneIntonationLayoutPanel.Name = "ToneIntonationLayoutPanel"
         Me.ToneIntonationLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(914, 96)
+        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(749, 96)
         Me.ToneIntonationLayoutPanel.TabIndex = 10
         '
         'OtherTabPage
@@ -660,7 +556,7 @@ Partial Class frmDictionary
         Me.OtherTabPage.Location = New System.Drawing.Point(4, 22)
         Me.OtherTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.OtherTabPage.Name = "OtherTabPage"
-        Me.OtherTabPage.Size = New System.Drawing.Size(914, 96)
+        Me.OtherTabPage.Size = New System.Drawing.Size(749, 96)
         Me.OtherTabPage.TabIndex = 2
         Me.OtherTabPage.Text = "Other"
         Me.OtherTabPage.UseVisualStyleBackColor = True
@@ -675,7 +571,7 @@ Partial Class frmDictionary
         Me.OtherLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.OtherLayoutPanel.Name = "OtherLayoutPanel"
         Me.OtherLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.OtherLayoutPanel.Size = New System.Drawing.Size(914, 96)
+        Me.OtherLayoutPanel.Size = New System.Drawing.Size(749, 96)
         Me.OtherLayoutPanel.TabIndex = 8
         '
         'CommonTabPage
@@ -684,7 +580,7 @@ Partial Class frmDictionary
         Me.CommonTabPage.Location = New System.Drawing.Point(4, 22)
         Me.CommonTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.CommonTabPage.Name = "CommonTabPage"
-        Me.CommonTabPage.Size = New System.Drawing.Size(914, 96)
+        Me.CommonTabPage.Size = New System.Drawing.Size(749, 96)
         Me.CommonTabPage.TabIndex = 7
         Me.CommonTabPage.Text = "Common"
         Me.CommonTabPage.UseVisualStyleBackColor = True
@@ -699,7 +595,7 @@ Partial Class frmDictionary
         Me.CommonLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.CommonLayoutPanel.Name = "CommonLayoutPanel"
         Me.CommonLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.CommonLayoutPanel.Size = New System.Drawing.Size(914, 96)
+        Me.CommonLayoutPanel.Size = New System.Drawing.Size(749, 96)
         Me.CommonLayoutPanel.TabIndex = 9
         '
         'CustomTabPage
@@ -708,7 +604,7 @@ Partial Class frmDictionary
         Me.CustomTabPage.Location = New System.Drawing.Point(4, 22)
         Me.CustomTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.CustomTabPage.Name = "CustomTabPage"
-        Me.CustomTabPage.Size = New System.Drawing.Size(914, 96)
+        Me.CustomTabPage.Size = New System.Drawing.Size(749, 96)
         Me.CustomTabPage.TabIndex = 6
         Me.CustomTabPage.Text = "Custom"
         Me.CustomTabPage.UseVisualStyleBackColor = True
@@ -723,7 +619,7 @@ Partial Class frmDictionary
         Me.CustomLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.CustomLayoutPanel.Name = "CustomLayoutPanel"
         Me.CustomLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.CustomLayoutPanel.Size = New System.Drawing.Size(914, 96)
+        Me.CustomLayoutPanel.Size = New System.Drawing.Size(749, 96)
         Me.CustomLayoutPanel.TabIndex = 9
         '
         'dgvDictionary
@@ -734,6 +630,14 @@ Partial Class frmDictionary
         Me.dgvDictionary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvDictionary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDictionary.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Word, Me.Pronunciation, Me.Definition, Me.Notes})
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvDictionary.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvDictionary.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvDictionary.GridColor = System.Drawing.Color.Gainsboro
         Me.dgvDictionary.Location = New System.Drawing.Point(3, 3)
@@ -765,6 +669,14 @@ Partial Class frmDictionary
         Me.Notes.HeaderText = "Notes"
         Me.Notes.Name = "Notes"
         Me.Notes.Width = 255
+        '
+        'dlgOpen
+        '
+        Me.dlgOpen.Filter = "Dictionary file (*.dict)|*.dict|Text files (*.txt)|*.txt|All files (*.*)|*.*"
+        '
+        'dlgSave
+        '
+        Me.dlgSave.Filter = "Dictionary file (*.dict)|*.dict|Text files (*.txt)|*.txt|All files (*.*)|*.*"
         '
         'frmDictionary
         '
@@ -814,7 +726,6 @@ Partial Class frmDictionary
     Friend WithEvents btnRemove As Tundra.StylizedButton
     Friend WithEvents btnAdd As Tundra.StylizedButton
     Friend WithEvents DoubleBufferedPanel1 As Tundra.DoubleBufferedPanel
-    Friend WithEvents btnCheckExisting As Tundra.StylizedButton
     Friend WithEvents Label1 As Label
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents dgvDictionary As DataGridView
@@ -839,8 +750,6 @@ Partial Class frmDictionary
     Friend WithEvents CommonLayoutPanel As FlowLayoutPanel
     Friend WithEvents CustomTabPage As TabPage
     Friend WithEvents CustomLayoutPanel As FlowLayoutPanel
-    Friend WithEvents DoubleBufferedPanel2 As Tundra.DoubleBufferedPanel
-    Friend WithEvents StylizedButton2 As Tundra.StylizedButton
-    Friend WithEvents Label2 As Label
-    Friend WithEvents StylizedButton1 As Tundra.StylizedButton
+    Friend WithEvents dlgOpen As OpenFileDialog
+    Friend WithEvents dlgSave As SaveFileDialog
 End Class

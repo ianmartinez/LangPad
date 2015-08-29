@@ -17,7 +17,6 @@ Public Class DictionaryWord
     Public Pronunciation As String
     Public Definition As String
     Public Notes As String
-    Public Marked As Boolean = False
 End Class
 
 <Serializable()>
@@ -48,8 +47,8 @@ Module DictionaryFileAccess
 
         For i = 0 To Dictionary.Words.Count - 1
             Dim CurrentWord As DictionaryWord = Dictionary.Words.Item(i)
-            Dim Value As String = String.Format("{0}|{1}|{2}|{3}|{4}", ToCompatibleString(CurrentWord.Word), ToCompatibleString(CurrentWord.Pronunciation),
-                                                ToCompatibleString(CurrentWord.Definition), ToCompatibleString(CurrentWord.Notes), CurrentWord.Marked)
+            Dim Value As String = String.Format("{0}|{1}|{2}|{3}", ToCompatibleString(CurrentWord.Word), ToCompatibleString(CurrentWord.Pronunciation),
+                                                ToCompatibleString(CurrentWord.Definition), ToCompatibleString(CurrentWord.Notes))
             DictionaryString.Add(New ZiaLine(LineType.KeyValue, "Word " & i, Value))
         Next
 
@@ -68,7 +67,6 @@ Module DictionaryFileAccess
             NewWord.Pronunciation = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(1))
             NewWord.Definition = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(2))
             NewWord.Notes = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(3))
-            NewWord.Marked = CurrentLine.Value.Split("|").GetValue(4)
 
             NewDictionary.Words.Add(NewWord)
         Next

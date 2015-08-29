@@ -4,6 +4,35 @@ Imports Tundra
 Public Class frmDictionary
     Dim c As TextBox
     Dim SelectedCell As DataGridViewCell
+    Public Sub LoadDictionary()
+        dgvDictionary.Rows.Clear()
+
+        For Each w As DictionaryWord In CurrentDocument.WordDictionary.Words
+            Dim r As New DataGridViewRow
+            r.CreateCells(dgvDictionary)
+            r.Cells.Item(0).Value = w.Word
+            r.Cells.Item(1).Value = w.Pronunciation
+            r.Cells.Item(2).Value = w.Definition
+            r.Cells.Item(3).Value = w.Notes
+
+            dgvDictionary.Rows.Add(r)
+        Next
+
+        dgvDictionary.Refresh()
+    End Sub
+
+    Public Sub SaveDictionary()
+        CurrentDocument.WordDictionary.Words.Clear()
+        For i = 0 To dgvDictionary.RowCount - 1
+            Dim NewWord As New DictionaryWord
+            NewWord.Word = dgvDictionary.Rows.Item(i).Cells.Item(0).Value
+            NewWord.Pronunciation = dgvDictionary.Rows.Item(i).Cells.Item(1).Value
+            NewWord.Definition = dgvDictionary.Rows.Item(i).Cells.Item(2).Value
+            NewWord.Notes = dgvDictionary.Rows.Item(i).Cells.Item(3).Value
+
+            CurrentDocument.WordDictionary.Words.Add(NewWord)
+        Next
+    End Sub
 
     Public Sub InsertText(ByVal Textbox As TextBox, ByVal Text As String)
         On Error Resume Next
@@ -115,7 +144,23 @@ Public Class frmDictionary
         e.Graphics.DrawString(rowIdx, rowFont, SystemBrushes.ControlText, headerBounds, centerFormat)
     End Sub
 
-    Private Sub btnCheckExisting_Click(sender As Object, e As EventArgs) Handles btnCheckExisting.Click
-        dlgCheckExisting.ShowDialog()
+    Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
+        If MessageBox.Show("This cannot be undone. Are you sure you want to continue? ", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes Then
+            dgvDictionary.Rows.Clear()
+        End If
+    End Sub
+
+    Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
+        If dlgOpen.ShowDialog = DialogResult.OK Then
+            CurrentDocument.WordDictionary.Open(dlgOpen.FileName)
+            LoadDictionary()
+        End If
+    End Sub
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        SaveDictionary()
+        If dlgSave.ShowDialog = DialogResult.OK Then
+            CurrentDocument.WordDictionary.Save(dlgSave.FileName)
+        End If
     End Sub
 End Class
