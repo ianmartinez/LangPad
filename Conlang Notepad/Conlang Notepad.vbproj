@@ -266,12 +266,6 @@
     <Compile Include="WebcamFrame.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WordCard.Designer.vb">
-      <DependentUpon>WordCard.vb</DependentUpon>
-    </Compile>
-    <Compile Include="WordCard.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dialogs\dlgAbout.resx">
@@ -333,9 +327,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ssLoading.resx">
       <DependentUpon>ssLoading.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WordCard.resx">
-      <DependentUpon>WordCard.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
