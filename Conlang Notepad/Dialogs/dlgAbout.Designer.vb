@@ -201,7 +201,7 @@ Partial Class dlgAbout
         Me.btnGitHub.TabIndex = 77
         Me.btnGitHub.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGitHub.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ttMain.SetToolTip(Me.btnGitHub, "View source")
+        Me.ttMain.SetToolTip(Me.btnGitHub, "View source on github")
         Me.btnGitHub.UseCompatibleTextRendering = True
         Me.btnGitHub.UseVisualStyleBackColor = False
         '

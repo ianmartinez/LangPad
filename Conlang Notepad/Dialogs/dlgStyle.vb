@@ -3,7 +3,7 @@ Imports System.Windows.Forms
 
 Public Class dlgStyle
     Public StyleFont As Font = New Font("Calibri", 11)
-    Public StyleAlignment As HorizontalAlignment = HorizontalAlignment.Left
+    Public StyleAlignment As New HorizontalAlignment
     Public StyleColor As Color = Color.Black
     Public StyleHighlight As Color = Color.White
     Public StyleIndent As Integer = 0

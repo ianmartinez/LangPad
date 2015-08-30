@@ -24,8 +24,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>6.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>6.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -318,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ssLoading.resx">
       <DependentUpon>ssLoading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SymbolButton.resx">
+      <DependentUpon>SymbolButton.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

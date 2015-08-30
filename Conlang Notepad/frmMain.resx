@@ -124,7 +124,7 @@
     <value>566, 17</value>
   </metadata>
   <metadata name="dlgSavePage.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>876, 66</value>
+    <value>580, 56</value>
   </metadata>
   <metadata name="dlgPrintPreview.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1250, 17</value>
@@ -304,16 +304,16 @@
 </value>
   </data>
   <metadata name="dlgPrint.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 60</value>
+    <value>166, 56</value>
   </metadata>
   <metadata name="dlgOpenPage.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>714, 66</value>
+    <value>454, 56</value>
   </metadata>
   <metadata name="dlgSetup.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>243, 60</value>
+    <value>260, 56</value>
   </metadata>
   <metadata name="pdMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>361, 60</value>
+    <value>361, 56</value>
   </metadata>
   <metadata name="dlgSaveNarration.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>675, 17</value>
@@ -5223,16 +5223,16 @@ Checked Highlight Color=$0
 </value>
   </data>
   <metadata name="dlgSaveNotebook.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>529, 33</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="dlgOpen.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1040, 66</value>
+    <value>701, 56</value>
   </metadata>
   <metadata name="dlgSave.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1210, 66</value>
+    <value>800, 56</value>
   </metadata>
   <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1320, 66</value>
+    <value>894, 56</value>
   </metadata>
   <data name="btnSaveSpeech.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -6179,7 +6179,7 @@ Pressed Highlight Color=$0
 </value>
   </data>
   <metadata name="dlgSaveImage.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>438, 94</value>
+    <value>981, 56</value>
   </metadata>
   <data name="btnFindNext.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

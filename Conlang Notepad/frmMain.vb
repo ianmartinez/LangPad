@@ -1226,7 +1226,7 @@ Public Class frmMain
         TempRTF.Dispose()
         ResumeLayout()
 
-
+        SelectedDocument.SelectionAlignment = dlgStyle.StyleAlignment
     End Sub
 
     Private Sub btnDefault_Click(sender As Object, e As EventArgs) Handles btnDefault.Click
@@ -1261,6 +1261,8 @@ Public Class frmMain
 
         TempRTF.Dispose()
         ResumeLayout()
+
+        SelectedDocument.SelectionAlignment = HorizontalAlignment.Left
     End Sub
 
     Private Sub frmMain_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
@@ -1339,5 +1341,9 @@ Public Class frmMain
 
     Public Sub btnDictionary_Click(sender As Object, e As EventArgs) Handles btnDictionary.Click
         frmDictionary.Show()
+    End Sub
+
+    Private Sub StylizedButton9_Click(sender As Object, e As EventArgs) Handles StylizedButton9.Click
+
     End Sub
 End Class
