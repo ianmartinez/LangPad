@@ -66,6 +66,7 @@ Public Class frmDictionary
 
         pnlTop.Height = pnlHome.Height
 
+        LoadDictionary()
 
     End Sub
 

@@ -116,6 +116,7 @@ Module NotebookFileAccess
         System.IO.File.WriteAllText(tmp & "\data.txt", SettingsFile)
         System.IO.File.WriteAllText(tmp & "\info.txt", Notebook.Info)
         System.IO.File.WriteAllText(tmp & "\custom_symbols.txt", Notebook.CustomSymbols)
+        Notebook.WordDictionary.Save(tmp & "\dictionary.txt")
 
         Notebook.DocumentPath = FilePath
         zip.AddDirectory(tmp)
@@ -153,7 +154,7 @@ Module NotebookFileAccess
         NewNotebook.NTSpecificationVersion = Search(LineList, "NTVersion")
         NewNotebook.CustomSymbols = File.ReadAllText(tmp & "\custom_symbols.txt")
         NewNotebook.Info = File.ReadAllText(tmp & "\info.txt")
-
+        NewNotebook.WordDictionary.Open(tmp & "\dictionary.txt")
 
         If Not (NewNotebook.CustomSymbols = "") Then NewNotebook.EmbedSymbols = True
 

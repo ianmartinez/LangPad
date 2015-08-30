@@ -28,7 +28,7 @@ Public Class DictionaryFile
         DictionaryFileAccess.Save(FilePath, Me)
     End Sub
 
-    Public Sub Open(ByVal FilePath As String, Optional ByVal Opening As Boolean = False)
+    Public Sub Open(ByVal FilePath As String)
         Dim NewDictionary As DictionaryFile = DictionaryFileAccess.Open(FilePath)
         Me.Words = NewDictionary.Words
     End Sub
