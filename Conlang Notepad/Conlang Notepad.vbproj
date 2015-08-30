@@ -336,6 +336,8 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="Release\Language Pad 5.2.zip" />
+    <None Include="Release\Language Pad 5.3.zip" />
+    <None Include="Release\Language Pag 6.0.zip" />
     <None Include="Resources\Transparent2.png" />
   </ItemGroup>
   <ItemGroup>
