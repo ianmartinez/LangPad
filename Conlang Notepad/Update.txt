@@ -1,4 +1,4 @@
-﻿Version=5.3
-DownloadLink=https://github.com/ianmartinez/Language-Pad/raw/master/Conlang%20Notepad/Release/Language%20Pad%205.3.zip
-Description=   •Standardized buttons on dialogs:cr:   •Centralized version naming:cr:   •Changed symbols and accent mark icons:cr:   •Copy button in accent mark dialog:cr:   •Clip art loading turned off by default:cr:   •Quick access buttons:cr:   •Changed right click menu style:cr:   •Fixed a bug when renaming a page 
-RedditThread=https://www.reddit.com/r/conlangs/comments/3gx296/language_pad_53_a_word_processor_for_conlanging/
+﻿Version=6.0
+DownloadLink=https://github.com/ianmartinez/Language-Pad/raw/master/Conlang%20Notepad/Release/Language%20Pag%206.0.zip
+Description=   •Dictionaries:cr:   •Removed tab bar on RTF Editor
+RedditThread=https://www.reddit.com/r/conlangs/comments/3ix6v7/language_pad_60_a_word_processor_for_conlanging/
