@@ -23,7 +23,7 @@ Partial Class frmDictionary
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDictionary))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlTop = New Tundra.StylizedPanel()
         Me.pnlHome = New Tundra.DoubleBufferedPanel()
         Me.btnRemove = New Tundra.StylizedButton()
@@ -92,7 +92,7 @@ Partial Class frmDictionary
         Me.pnlTop.Location = New System.Drawing.Point(0, 0)
         Me.pnlTop.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlTop.Name = "pnlTop"
-        Me.pnlTop.Size = New System.Drawing.Size(757, 116)
+        Me.pnlTop.Size = New System.Drawing.Size(780, 116)
         Me.pnlTop.Style = "Colors=~245|~245|~239" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|0.8|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
     "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
         Me.pnlTop.TabIndex = 13
@@ -119,7 +119,7 @@ Partial Class frmDictionary
         Me.pnlHome.Location = New System.Drawing.Point(0, 0)
         Me.pnlHome.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlHome.Name = "pnlHome"
-        Me.pnlHome.Size = New System.Drawing.Size(757, 83)
+        Me.pnlHome.Size = New System.Drawing.Size(780, 83)
         Me.pnlHome.TabIndex = 75
         '
         'btnRemove
@@ -406,7 +406,7 @@ Partial Class frmDictionary
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.dgvDictionary)
         Me.SplitContainer1.Panel2.Padding = New System.Windows.Forms.Padding(3, 3, 0, 0)
-        Me.SplitContainer1.Size = New System.Drawing.Size(757, 391)
+        Me.SplitContainer1.Size = New System.Drawing.Size(780, 391)
         Me.SplitContainer1.SplitterDistance = 124
         Me.SplitContainer1.SplitterWidth = 2
         Me.SplitContainer1.TabIndex = 74
@@ -426,7 +426,7 @@ Partial Class frmDictionary
         Me.tcSymbols.Margin = New System.Windows.Forms.Padding(2)
         Me.tcSymbols.Name = "tcSymbols"
         Me.tcSymbols.SelectedIndex = 0
-        Me.tcSymbols.Size = New System.Drawing.Size(757, 122)
+        Me.tcSymbols.Size = New System.Drawing.Size(780, 122)
         Me.tcSymbols.TabIndex = 73
         '
         'ConsonantsTabPage
@@ -435,7 +435,7 @@ Partial Class frmDictionary
         Me.ConsonantsTabPage.Location = New System.Drawing.Point(4, 22)
         Me.ConsonantsTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.ConsonantsTabPage.Name = "ConsonantsTabPage"
-        Me.ConsonantsTabPage.Size = New System.Drawing.Size(749, 96)
+        Me.ConsonantsTabPage.Size = New System.Drawing.Size(772, 96)
         Me.ConsonantsTabPage.TabIndex = 0
         Me.ConsonantsTabPage.Text = "Consonants"
         Me.ConsonantsTabPage.UseVisualStyleBackColor = True
@@ -451,7 +451,7 @@ Partial Class frmDictionary
         Me.ConsonantsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ConsonantsLayoutPanel.Name = "ConsonantsLayoutPanel"
         Me.ConsonantsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(749, 96)
+        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(772, 96)
         Me.ConsonantsLayoutPanel.TabIndex = 7
         '
         'AffricatesTabPage
@@ -630,14 +630,14 @@ Partial Class frmDictionary
         Me.dgvDictionary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvDictionary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDictionary.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Word, Me.Pronunciation, Me.Definition, Me.Notes})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvDictionary.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvDictionary.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvDictionary.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvDictionary.GridColor = System.Drawing.Color.Gainsboro
         Me.dgvDictionary.Location = New System.Drawing.Point(3, 3)
@@ -645,7 +645,7 @@ Partial Class frmDictionary
         Me.dgvDictionary.Name = "dgvDictionary"
         Me.dgvDictionary.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvDictionary.RowTemplate.Height = 24
-        Me.dgvDictionary.Size = New System.Drawing.Size(754, 262)
+        Me.dgvDictionary.Size = New System.Drawing.Size(777, 262)
         Me.dgvDictionary.TabIndex = 3
         '
         'Word
@@ -683,7 +683,7 @@ Partial Class frmDictionary
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(757, 507)
+        Me.ClientSize = New System.Drawing.Size(780, 507)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.pnlTop)
         Me.ForeColor = System.Drawing.Color.Black
