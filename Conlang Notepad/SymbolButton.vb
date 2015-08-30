@@ -15,8 +15,4 @@
         Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.UseCompatibleTextRendering = True
     End Sub
-
-    Public Sub ApplyChanges()
-
-    End Sub
 End Class
