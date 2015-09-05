@@ -96,6 +96,7 @@ Public Class frmDictionary
 
     Private Sub frmDictionary_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         e.Cancel = True
+        SaveDictionary()
         Me.Hide()
     End Sub
 
