@@ -88,6 +88,9 @@ Public Class SymbolButton
 
     Private Sub SymbolButton_Click(sender As Object, e As EventArgs) Handles Me.Click
         If My.Computer.Keyboard.CtrlKeyDown Then
+            Dim LineList1 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+            If LineList1.Contains(Me.Text) Then Exit Sub
+
             My.Settings.CustomSymbols = My.Settings.CustomSymbols & Environment.NewLine & Me.Text
 
             frmMain.CustomLayoutPanel.Controls.Clear()
