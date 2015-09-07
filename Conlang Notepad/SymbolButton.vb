@@ -45,6 +45,10 @@
 
         newArgs2.DrawText()
     End Sub
+
+    Private Sub InitializeComponent()
+
+    End Sub
 End Class
 Public Class SymbolButton
     Inherits Button
@@ -68,7 +72,6 @@ Public Class SymbolButton
         Me.UseCompatibleTextRendering = True
 
     End Sub
-
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         Me.ResumeLayout(False)
@@ -77,5 +80,32 @@ Public Class SymbolButton
 
     Private Sub SymbolButton_TextChanged(sender As Object, e As EventArgs) Handles Me.TextChanged
         ttIPa.SetToolTip(Me, Me.Text)
+    End Sub
+
+    Private Sub SymbolButton_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+
+    End Sub
+
+    Private Sub SymbolButton_Click(sender As Object, e As EventArgs) Handles Me.Click
+        If My.Computer.Keyboard.CtrlKeyDown Then
+            My.Settings.CustomSymbols = My.Settings.CustomSymbols & Environment.NewLine & Me.Text
+
+            frmMain.CustomLayoutPanel.Controls.Clear()
+            frmDictionary.CustomLayoutPanel.Controls.Clear()
+
+            Dim LineList2 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+            For Each IPA As String In LineList2
+                Dim SymbolButton As New SymbolButton
+                SymbolButton.Text = IPA
+                AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
+                frmMain.CustomLayoutPanel.Controls.Add(SymbolButton)
+
+                Dim SymbolButtonDictionary As New SymbolButton
+                SymbolButtonDictionary.Text = IPA
+                AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
+                frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
+            Next
+        End If
+
     End Sub
 End Class

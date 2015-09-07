@@ -425,6 +425,7 @@ Public Class frmMain
 
     Public Sub InsertIPA(sender As Object, e As EventArgs)
         Dim Button As Button = CType(sender, Button)
+        If My.Computer.Keyboard.CtrlKeyDown Then Exit Sub
         InsertText(SelectedDocument, Button.Text)
     End Sub
 

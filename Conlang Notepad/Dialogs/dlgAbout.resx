@@ -133,9 +133,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <value>Version 6.1 (September 5, 2015)
    •Find/Replace in dictionary
    •Custom font in dictionary
+   •Duplicate word button
    •Alignment now works on styles
    •Symbol buttons now use Calibri
    •Large tooltips on symbol buttons for easy viewing
+   •Export to excel for dictionaries
 Version 6.0 (August 29, 2015)
    •Dictionaries
    •Removed tab bar on RTF Editor
