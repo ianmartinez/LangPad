@@ -130,14 +130,18 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
   </data>
   <data name="TextBox2.Text" xml:space="preserve">
-    <value>Version 6.1 (September 5, 2015)
+    <value>Version 7.0 (September 7, 2015)
    •Find/Replace in dictionary
    •Custom font in dictionary
-   •Duplicate word button
    •Alignment now works on styles
    •Symbol buttons now use Calibri
    •Large tooltips on symbol buttons for easy viewing
-   •Export to excel for dictionaries
+   •Export to CSV for dictionaries
+   •Pin to custom on symbol buttons (CTRL + Click)
+   •Custom hyperlinks
+   •Improved help system
+   •Default font in dictionary is now Calibri
+   •Fixed saving issues on dictionaries
 Version 6.0 (August 29, 2015)
    •Dictionaries
    •Removed tab bar on RTF Editor
@@ -453,6 +457,9 @@ Pressed Highlight Color=$0</value>
         EA2KF0ta9FJFC7UoWhCg+S9VGCBOv2Vu0uF/AKQp/xTq9Le6AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="btnGitHub.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -500,9 +507,6 @@ Pressed Border Color=#005499
 Pressed Text Color=$2
 Pressed Highlight Color=$0</value>
   </data>
-  <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="btnCheckUpdates.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -552,4 +556,7 @@ Pressed Border Color=#005499
 Pressed Text Color=$2
 Pressed Highlight Color=$0</value>
   </data>
+  <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

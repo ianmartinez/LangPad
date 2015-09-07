@@ -50,11 +50,11 @@ Partial Class ssLoading
         'lblLanguagePad
         '
         Me.lblLanguagePad.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLanguagePad.ForeColor = System.Drawing.Color.Salmon
-        Me.lblLanguagePad.Location = New System.Drawing.Point(38, 11)
+        Me.lblLanguagePad.ForeColor = System.Drawing.Color.RosyBrown
+        Me.lblLanguagePad.Location = New System.Drawing.Point(49, 12)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(188, 28)
+        Me.lblLanguagePad.Size = New System.Drawing.Size(177, 28)
         Me.lblLanguagePad.TabIndex = 9
         Me.lblLanguagePad.Text = "Language Pad X.x"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -64,7 +64,7 @@ Partial Class ssLoading
         Me.lblLoading.AutoSize = True
         Me.lblLoading.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLoading.ForeColor = System.Drawing.Color.Gray
-        Me.lblLoading.Location = New System.Drawing.Point(39, 39)
+        Me.lblLoading.Location = New System.Drawing.Point(50, 40)
         Me.lblLoading.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblLoading.Name = "lblLoading"
         Me.lblLoading.Size = New System.Drawing.Size(50, 15)
@@ -77,9 +77,9 @@ Partial Class ssLoading
         Me.pbLoading.BackgroundImage = CType(resources.GetObject("pbLoading.BackgroundImage"), System.Drawing.Image)
         Me.pbLoading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.pbLoading.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pbLoading.Location = New System.Drawing.Point(0, 61)
+        Me.pbLoading.Location = New System.Drawing.Point(0, 65)
         Me.pbLoading.Name = "pbLoading"
-        Me.pbLoading.Size = New System.Drawing.Size(237, 14)
+        Me.pbLoading.Size = New System.Drawing.Size(237, 10)
         Me.pbLoading.Style = resources.GetString("pbLoading.Style")
         Me.pbLoading.TabIndex = 6
         '
@@ -88,9 +88,9 @@ Partial Class ssLoading
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox1.Location = New System.Drawing.Point(10, 11)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(26, 28)
+        Me.PictureBox1.Size = New System.Drawing.Size(32, 43)
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
         '

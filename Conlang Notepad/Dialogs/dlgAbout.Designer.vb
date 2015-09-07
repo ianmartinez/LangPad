@@ -170,7 +170,7 @@ Partial Class dlgAbout
         'lblLanguagePad
         '
         Me.lblLanguagePad.Font = New System.Drawing.Font("Calibri Light", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLanguagePad.ForeColor = System.Drawing.Color.Maroon
+        Me.lblLanguagePad.ForeColor = System.Drawing.Color.Sienna
         Me.lblLanguagePad.Location = New System.Drawing.Point(43, 12)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"

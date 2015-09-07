@@ -63,6 +63,12 @@ Module NotebookFileAccess
         On Error Resume Next
         frmMain.SaveTabs()
 
+        If frmDictionary.Loaded = False Then
+            frmDictionary.LoadDictionary()
+        End If
+
+        frmDictionary.SaveDictionary()
+
         Dim zip As New ZipFile
         zip.CompressionLevel = Ionic.Zlib.CompressionLevel.BestCompression
 

@@ -1,9 +1,12 @@
 ﻿Imports System.ComponentModel
+Imports System.IO
+Imports System.Text
 Imports Tundra
 
 Public Class frmDictionary
     Dim c As TextBox
     Dim SelectedCell As DataGridViewCell
+    Public Loaded As Boolean = False
     Public Sub LoadDictionary()
         dgvDictionary.Rows.Clear()
 
@@ -67,7 +70,7 @@ Public Class frmDictionary
         pnlTop.Height = pnlHome.Height
 
         LoadDictionary()
-
+        Loaded = True
     End Sub
 
     Private Sub dgvDictionary_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellContentClick
@@ -164,5 +167,44 @@ Public Class frmDictionary
         If dlgSave.ShowDialog = DialogResult.OK Then
             CurrentDocument.WordDictionary.Save(dlgSave.FileName)
         End If
+    End Sub
+
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        If dlgExport.ShowDialog = DialogResult.OK Then
+            Dim cols As Integer
+            Dim wr As New StreamWriter(New FileStream(dlgExport.FileName, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
+
+            cols = dgvDictionary.Columns.Count
+            For i As Integer = 0 To cols - 1
+                wr.Write(dgvDictionary.Columns(i).Name.ToString().ToUpper() + ",")
+            Next
+            wr.WriteLine()
+
+            'write rows to excel file
+            For i As Integer = 0 To dgvDictionary.Rows.Count - 1
+                For j As Integer = 0 To cols - 1
+                    If dgvDictionary.Rows(i).Cells(j).Value IsNot Nothing Then
+                        wr.Write(dgvDictionary.Rows(i).Cells(j).Value + ",")
+                    Else
+                        wr.Write(",")
+                    End If
+                Next
+
+                wr.WriteLine()
+            Next
+            wr.Close()
+        End If
+    End Sub
+
+    Private Sub btnFont_Click(sender As Object, e As EventArgs) Handles btnFont.Click
+        dlgFont.Font = dgvDictionary.DefaultCellStyle.Font
+        If dlgFont.ShowDialog = DialogResult.OK Then
+            dgvDictionary.DefaultCellStyle.Font = dlgFont.Font
+        End If
+    End Sub
+
+
+    Private Sub btnFind_Click(sender As Object, e As EventArgs) Handles btnFind.Click
+
     End Sub
 End Class
