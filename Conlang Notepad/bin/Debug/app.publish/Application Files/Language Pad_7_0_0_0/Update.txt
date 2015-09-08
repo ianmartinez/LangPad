@@ -1,0 +1,4 @@
+﻿Version=6.0
+DownloadLink=https://github.com/ianmartinez/Language-Pad/raw/master/Conlang%20Notepad/Release/Language%20Pag%206.0.zip
+Description=   •Dictionaries:cr:   •Removed tab bar on RTF Editor
+RedditThread=https://www.reddit.com/r/conlangs/comments/3ix6v7/language_pad_60_a_word_processor_for_conlanging/
