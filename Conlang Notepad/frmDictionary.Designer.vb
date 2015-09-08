@@ -30,7 +30,6 @@ Partial Class frmDictionary
         Me.DoubleBufferedPanel2 = New Tundra.DoubleBufferedPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnExport = New Tundra.StylizedButton()
-        Me.btnFind = New Tundra.StylizedButton()
         Me.btnRemove = New Tundra.StylizedButton()
         Me.btnAdd = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel1 = New Tundra.DoubleBufferedPanel()
@@ -112,7 +111,6 @@ Partial Class frmDictionary
         Me.pnlHome.Controls.Add(Me.DoubleBufferedPanel2)
         Me.pnlHome.Controls.Add(Me.Label2)
         Me.pnlHome.Controls.Add(Me.btnExport)
-        Me.pnlHome.Controls.Add(Me.btnFind)
         Me.pnlHome.Controls.Add(Me.btnRemove)
         Me.pnlHome.Controls.Add(Me.btnAdd)
         Me.pnlHome.Controls.Add(Me.DoubleBufferedPanel1)
@@ -146,7 +144,7 @@ Partial Class frmDictionary
         Me.btnFont.ForeColor = System.Drawing.Color.Black
         Me.btnFont.Image = CType(resources.GetObject("btnFont.Image"), System.Drawing.Image)
         Me.btnFont.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFont.Location = New System.Drawing.Point(600, 4)
+        Me.btnFont.Location = New System.Drawing.Point(506, 4)
         Me.btnFont.Margin = New System.Windows.Forms.Padding(2)
         Me.btnFont.Name = "btnFont"
         Me.btnFont.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
@@ -163,7 +161,7 @@ Partial Class frmDictionary
         '
         Me.DoubleBufferedPanel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DoubleBufferedPanel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel2.Location = New System.Drawing.Point(689, 9)
+        Me.DoubleBufferedPanel2.Location = New System.Drawing.Point(595, 9)
         Me.DoubleBufferedPanel2.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel2.Name = "DoubleBufferedPanel2"
         Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(1, 70)
@@ -173,7 +171,7 @@ Partial Class frmDictionary
         '
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.Gray
-        Me.Label2.Location = New System.Drawing.Point(598, 62)
+        Me.Label2.Location = New System.Drawing.Point(504, 62)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(87, 19)
@@ -205,31 +203,6 @@ Partial Class frmDictionary
         Me.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnExport.UseCompatibleTextRendering = True
         Me.btnExport.UseVisualStyleBackColor = False
-        '
-        'btnFind
-        '
-        Me.btnFind.BackColor = System.Drawing.Color.Transparent
-        Me.btnFind.BackgroundImage = CType(resources.GetObject("btnFind.BackgroundImage"), System.Drawing.Image)
-        Me.btnFind.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnFind.FlatAppearance.BorderSize = 0
-        Me.btnFind.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnFind.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFind.ForeColor = System.Drawing.Color.Black
-        Me.btnFind.Image = CType(resources.GetObject("btnFind.Image"), System.Drawing.Image)
-        Me.btnFind.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFind.Location = New System.Drawing.Point(501, 4)
-        Me.btnFind.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnFind.Name = "btnFind"
-        Me.btnFind.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.btnFind.Size = New System.Drawing.Size(90, 26)
-        Me.btnFind.Style = resources.GetString("btnFind.Style")
-        Me.btnFind.TabIndex = 72
-        Me.btnFind.Text = " Find"
-        Me.btnFind.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnFind.UseCompatibleTextRendering = True
-        Me.btnFind.UseVisualStyleBackColor = False
         '
         'btnRemove
         '
@@ -285,7 +258,7 @@ Partial Class frmDictionary
         '
         Me.DoubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DoubleBufferedPanel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(595, 9)
+        Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(501, 9)
         Me.DoubleBufferedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel1.Name = "DoubleBufferedPanel1"
         Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(1, 70)
@@ -298,7 +271,7 @@ Partial Class frmDictionary
         Me.Label1.Location = New System.Drawing.Point(410, 62)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(184, 19)
+        Me.Label1.Size = New System.Drawing.Size(87, 19)
         Me.Label1.TabIndex = 66
         Me.Label1.Text = "Words"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -870,7 +843,6 @@ Partial Class frmDictionary
     Friend WithEvents dlgOpen As OpenFileDialog
     Friend WithEvents dlgSave As SaveFileDialog
     Friend WithEvents btnExport As Tundra.StylizedButton
-    Friend WithEvents btnFind As Tundra.StylizedButton
     Friend WithEvents dlgExport As SaveFileDialog
     Friend WithEvents btnFont As Tundra.StylizedButton
     Friend WithEvents DoubleBufferedPanel2 As Tundra.DoubleBufferedPanel

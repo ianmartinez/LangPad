@@ -666,13 +666,7 @@ Public Class frmMain
             strExt = System.IO.Path.GetExtension(currentFile)
             strExt = strExt.ToUpper()
             If strExt = "RTF" Then
-                Dim txtWriter As System.IO.StreamWriter
-                txtWriter = New System.IO.StreamWriter(currentFile)
-                txtWriter.Write(SelectedDocument.Rtf)
-                txtWriter.Close()
-                txtWriter = Nothing
-                SelectedDocument.SelectionStart = 0
-                SelectedDocument.SelectionLength = 0
+                SelectedDocument.SaveFile(currentFile)
             ElseIf strExt = "TXT" Then
                 Dim txtWriter As System.IO.StreamWriter
                 txtWriter = New System.IO.StreamWriter(currentFile)

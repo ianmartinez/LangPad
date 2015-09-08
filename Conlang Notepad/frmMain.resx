@@ -5066,41 +5066,36 @@ Pressed Highlight Color=$0
         QwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFn
-        ZVJlYWR5ccllPAAAAPRJREFUOE+dkLEKg0AQRP2n/J1/YGEhWAgWgoVgL4ogCBaCjY2NfzPJbHLLnW5S
-        ZGDgdub2KRcBiJziOAb9GW+69rLrACzO8xRbEKtXAIPjOJAkiZhnH/KtDwD7viNNUzVn5r86Bbz0YLBt
-        G7IsU3O2Mt7ljg+gBLKuK/I8N83OLXPhCqAEsiwLiqIIzMxfpiyAvMc8zyjLMjCzD0B1A/DCNE2oqso0
-        Ox8SAFiM44i6rtWcrcxBFMBgGAY0TaPmzPxXFwD6vkfbtmKemb0+wgeTh7V6BbhLXdeJvWUns/cBlFwy
-        lp1u/RVAyS+/j6aCXgH/G9ETyeUM0TJB6CwAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btnClose.Style" xml:space="preserve">
-    <value>Radius=1
+    <value>Radius=0
 
 Active Colors=$0|$0
 Active Positions=0|1
 Active Angle=90
 Active Border Color=$0
-Active Text Color=#252b2f
+Active Text Color=~38
 Active Highlight Color=$0
 
-Hover Colors=#ecf4fc|#dcecfc
+Hover Colors=$0|$0
 Hover Positions=0|1
 Hover Angle=90
-Hover Border Color=#7eb4ea
-Hover Text Color=#252b2f
+Hover Border Color=$0
+Hover Text Color=160,0,0
 Hover Highlight Color=$0
 
-Pressed Colors=#daecfc|#c4e0fc
+Pressed Colors=~239|~233
 Pressed Positions=0|1
 Pressed Angle=90
-Pressed Border Color=#569de5
-Pressed Text Color=#252b2f
+Pressed Border Color=~220
+Pressed Text Color=160,0,0
 Pressed Highlight Color=$0
 
+Checked Colors=~239|~233
+Checked Positions=0|1
+Checked Angle=90
+Checked Border Color=~220
+Checked Text Color=160,0,0
+Checked Highlight Color=$0
 
 </value>
   </data>

@@ -204,7 +204,7 @@ Public Class frmDictionary
     End Sub
 
 
-    Private Sub btnFind_Click(sender As Object, e As EventArgs) Handles btnFind.Click
+    Private Sub btnFind_Click(sender As Object, e As EventArgs) 
 
     End Sub
 End Class
