@@ -49,7 +49,6 @@ Partial Class frmMain
         Me.dlgOpenPage = New System.Windows.Forms.OpenFileDialog()
         Me.dlgSetup = New System.Windows.Forms.PageSetupDialog()
         Me.pdMain = New System.Drawing.Printing.PrintDocument()
-        Me.dlgSaveNarration = New System.Windows.Forms.SaveFileDialog()
         Me.cmsMain = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CopyContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -61,7 +60,6 @@ Partial Class frmMain
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.tcNotebook = New System.Windows.Forms.TabControl()
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
-        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.dlgSaveNotebook = New System.Windows.Forms.SaveFileDialog()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
@@ -100,6 +98,7 @@ Partial Class frmMain
         Me.AlignLeftToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.AlignCenterToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.AlignRightToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.IndentToolStripComboBox = New System.Windows.Forms.ToolStripComboBox()
         Me.IndentToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.MainMenu = New System.Windows.Forms.MenuStrip()
@@ -174,7 +173,7 @@ Partial Class frmMain
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.tcSymbols.SuspendLayout()
         Me.ConsonantsTabPage.SuspendLayout()
         Me.AffricatesTabPage.SuspendLayout()
@@ -452,56 +451,56 @@ Partial Class frmMain
         'pdMain
         '
         '
-        'dlgSaveNarration
-        '
-        Me.dlgSaveNarration.Filter = "Audio files (*.wav)|*.wav|All files (*.*)|*.*"
-        '
         'cmsMain
         '
         Me.cmsMain.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.cmsMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyContextMenuItem, Me.PasteContextMenuItem, Me.CutContextMenuItem, Me.ToolStripSeparator1, Me.SelectAllContextMenuItem, Me.DeselectAllContextMenuItem})
         Me.cmsMain.Name = "cmsMain"
         Me.cmsMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.cmsMain.Size = New System.Drawing.Size(232, 200)
+        Me.cmsMain.Size = New System.Drawing.Size(224, 190)
         '
         'CopyContextMenuItem
         '
         Me.CopyContextMenuItem.Image = CType(resources.GetObject("CopyContextMenuItem.Image"), System.Drawing.Image)
+        Me.CopyContextMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CopyContextMenuItem.Name = "CopyContextMenuItem"
-        Me.CopyContextMenuItem.Size = New System.Drawing.Size(231, 38)
+        Me.CopyContextMenuItem.Size = New System.Drawing.Size(223, 36)
         Me.CopyContextMenuItem.Text = "Copy"
         '
         'PasteContextMenuItem
         '
         Me.PasteContextMenuItem.Image = CType(resources.GetObject("PasteContextMenuItem.Image"), System.Drawing.Image)
+        Me.PasteContextMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PasteContextMenuItem.Name = "PasteContextMenuItem"
-        Me.PasteContextMenuItem.Size = New System.Drawing.Size(231, 38)
+        Me.PasteContextMenuItem.Size = New System.Drawing.Size(223, 36)
         Me.PasteContextMenuItem.Text = "Paste"
         '
         'CutContextMenuItem
         '
         Me.CutContextMenuItem.Image = CType(resources.GetObject("CutContextMenuItem.Image"), System.Drawing.Image)
+        Me.CutContextMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CutContextMenuItem.Name = "CutContextMenuItem"
-        Me.CutContextMenuItem.Size = New System.Drawing.Size(231, 38)
+        Me.CutContextMenuItem.Size = New System.Drawing.Size(223, 36)
         Me.CutContextMenuItem.Text = "Cut"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(228, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(220, 6)
         '
         'SelectAllContextMenuItem
         '
         Me.SelectAllContextMenuItem.Image = CType(resources.GetObject("SelectAllContextMenuItem.Image"), System.Drawing.Image)
+        Me.SelectAllContextMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.SelectAllContextMenuItem.Name = "SelectAllContextMenuItem"
-        Me.SelectAllContextMenuItem.Size = New System.Drawing.Size(231, 38)
+        Me.SelectAllContextMenuItem.Size = New System.Drawing.Size(223, 36)
         Me.SelectAllContextMenuItem.Text = "Select All"
         '
         'DeselectAllContextMenuItem
         '
-        Me.DeselectAllContextMenuItem.Image = CType(resources.GetObject("DeselectAllContextMenuItem.Image"), System.Drawing.Image)
+        Me.DeselectAllContextMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.DeselectAllContextMenuItem.Name = "DeselectAllContextMenuItem"
-        Me.DeselectAllContextMenuItem.Size = New System.Drawing.Size(231, 38)
+        Me.DeselectAllContextMenuItem.Size = New System.Drawing.Size(223, 36)
         Me.DeselectAllContextMenuItem.Text = "Deselect All"
         '
         'SplitContainer1
@@ -570,18 +569,6 @@ Partial Class frmMain
     " Color=$0"
         Me.StylizedPanel1.TabIndex = 13
         '
-        'NotebookEditor1
-        '
-        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
-        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 0)
-        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(4)
-        Me.NotebookEditor1.MinimumSize = New System.Drawing.Size(524, 0)
-        Me.NotebookEditor1.Name = "NotebookEditor1"
-        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
-        Me.NotebookEditor1.Size = New System.Drawing.Size(540, 988)
-        Me.NotebookEditor1.TabIndex = 72
-        '
         'dlgSaveNotebook
         '
         Me.dlgSaveNotebook.Filter = "Notebook file (*.nt)|*.nt|Zip file (*.zip)|*.nt|All files (*.*)|*.*"
@@ -601,22 +588,31 @@ Partial Class frmMain
         'ToolStripContainer1
         '
         '
+        'ToolStripContainer1.BottomToolStripPanel
+        '
+        '
         'ToolStripContainer1.ContentPanel
         '
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.SplitContainer1)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.pnlFindReplace)
         Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1910, 1283)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        '
+        'ToolStripContainer1.LeftToolStripPanel
+        '
         Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 40)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        '
+        'ToolStripContainer1.RightToolStripPanel
+        '
         Me.ToolStripContainer1.Size = New System.Drawing.Size(1910, 1323)
         Me.ToolStripContainer1.TabIndex = 74
         Me.ToolStripContainer1.Text = "ToolStripContainer1"
         '
         'ToolStripContainer1.TopToolStripPanel
         '
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.FontToolStrip)
         Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.FileToolStrip)
+        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.FontToolStrip)
         '
         'pnlFindReplace
         '
@@ -874,9 +870,9 @@ Partial Class frmMain
         Me.FontToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.FontToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.FontToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripButton, Me.ToolStripSeparator9, Me.BoldToolStripButton, Me.ItalicToolStripButton, Me.UnderlineToolStripButton, Me.StrikeToolStripButton, Me.ToolStripSeparator5, Me.AlignLeftToolStripButton, Me.AlignCenterToolStripButton, Me.AlignRightToolStripButton, Me.ToolStripSeparator8, Me.IndentToolStripComboBox, Me.IndentToolStripButton})
-        Me.FontToolStrip.Location = New System.Drawing.Point(279, 0)
+        Me.FontToolStrip.Location = New System.Drawing.Point(280, 0)
         Me.FontToolStrip.Name = "FontToolStrip"
-        Me.FontToolStrip.Size = New System.Drawing.Size(446, 40)
+        Me.FontToolStrip.Size = New System.Drawing.Size(384, 40)
         Me.FontToolStrip.TabIndex = 1
         '
         'FontToolStripButton
@@ -969,8 +965,14 @@ Partial Class frmMain
         Me.AlignRightToolStripButton.Size = New System.Drawing.Size(28, 37)
         Me.AlignRightToolStripButton.Text = "Align Right"
         '
+        'ToolStripSeparator8
+        '
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 40)
+        '
         'IndentToolStripComboBox
         '
+        Me.IndentToolStripComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IndentToolStripComboBox.Name = "IndentToolStripComboBox"
         Me.IndentToolStripComboBox.Size = New System.Drawing.Size(100, 40)
         '
@@ -1502,10 +1504,17 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(194, 38)
         Me.AboutToolStripMenuItem.Text = "About..."
         '
-        'ToolStripSeparator8
+        'NotebookEditor1
         '
-        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 40)
+        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
+        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 0)
+        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(4)
+        Me.NotebookEditor1.MinimumSize = New System.Drawing.Size(524, 0)
+        Me.NotebookEditor1.Name = "NotebookEditor1"
+        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
+        Me.NotebookEditor1.Size = New System.Drawing.Size(540, 988)
+        Me.NotebookEditor1.TabIndex = 72
         '
         'frmMain
         '
@@ -1583,7 +1592,6 @@ Partial Class frmMain
     Friend WithEvents dlgOpenPage As System.Windows.Forms.OpenFileDialog
     Friend WithEvents dlgSetup As System.Windows.Forms.PageSetupDialog
     Friend WithEvents pdMain As System.Drawing.Printing.PrintDocument
-    Friend WithEvents dlgSaveNarration As System.Windows.Forms.SaveFileDialog
     Friend WithEvents pnlFindReplace As Tundra.StylizedPanel
     Friend WithEvents btnReplace As Tundra.StylizedButton
     Friend WithEvents btnFind As Tundra.StylizedButton

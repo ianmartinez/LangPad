@@ -71,7 +71,7 @@ Partial Class NotebookEditor
         Me.lbPages.Location = New System.Drawing.Point(2, 0)
         Me.lbPages.Margin = New System.Windows.Forms.Padding(4)
         Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(522, 466)
+        Me.lbPages.Size = New System.Drawing.Size(522, 459)
         Me.lbPages.TabIndex = 15
         '
         'btnGoWebsite
@@ -248,7 +248,7 @@ Partial Class NotebookEditor
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 0)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(524, 466)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(524, 459)
         Me.StylizedPanel1.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Col" &
     "or$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
         Me.StylizedPanel1.TabIndex = 80
@@ -261,7 +261,7 @@ Partial Class NotebookEditor
         Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton})
         Me.DocumentToolStrip.Location = New System.Drawing.Point(3, 0)
         Me.DocumentToolStrip.Name = "DocumentToolStrip"
-        Me.DocumentToolStrip.Size = New System.Drawing.Size(245, 31)
+        Me.DocumentToolStrip.Size = New System.Drawing.Size(307, 38)
         Me.DocumentToolStrip.TabIndex = 0
         '
         'PageUpToolStripButton
@@ -271,7 +271,7 @@ Partial Class NotebookEditor
         Me.PageUpToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PageUpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PageUpToolStripButton.Name = "PageUpToolStripButton"
-        Me.PageUpToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.PageUpToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.PageUpToolStripButton.Text = "Move Page Up"
         '
         'PageDownToolStripButton
@@ -281,13 +281,13 @@ Partial Class NotebookEditor
         Me.PageDownToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PageDownToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PageDownToolStripButton.Name = "PageDownToolStripButton"
-        Me.PageDownToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.PageDownToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.PageDownToolStripButton.Text = "Move Page Down"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 38)
         '
         'AddToolStripButton
         '
@@ -296,7 +296,7 @@ Partial Class NotebookEditor
         Me.AddToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.AddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AddToolStripButton.Name = "AddToolStripButton"
-        Me.AddToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.AddToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.AddToolStripButton.Text = "Add Page"
         '
         'RemoveToolStripButton
@@ -306,7 +306,7 @@ Partial Class NotebookEditor
         Me.RemoveToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RemoveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RemoveToolStripButton.Name = "RemoveToolStripButton"
-        Me.RemoveToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.RemoveToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.RemoveToolStripButton.Text = "Remove Page"
         '
         'DuplicateToolStripButton
@@ -316,13 +316,13 @@ Partial Class NotebookEditor
         Me.DuplicateToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.DuplicateToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DuplicateToolStripButton.Name = "DuplicateToolStripButton"
-        Me.DuplicateToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.DuplicateToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.DuplicateToolStripButton.Text = "Duplicate Page"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 31)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
         '
         'RenameToolStripButton
         '
@@ -331,13 +331,13 @@ Partial Class NotebookEditor
         Me.RenameToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RenameToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RenameToolStripButton.Name = "RenameToolStripButton"
-        Me.RenameToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.RenameToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.RenameToolStripButton.Text = "Rename Page"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 31)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
         '
         'ImportToolStripButton
         '
@@ -346,7 +346,7 @@ Partial Class NotebookEditor
         Me.ImportToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ImportToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ImportToolStripButton.Name = "ImportToolStripButton"
-        Me.ImportToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.ImportToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.ImportToolStripButton.Text = "Import Page"
         '
         'ExportToolStripButton
@@ -356,19 +356,28 @@ Partial Class NotebookEditor
         Me.ExportToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ExportToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ExportToolStripButton.Name = "ExportToolStripButton"
-        Me.ExportToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.ExportToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.ExportToolStripButton.Text = "Export Page"
         '
         'DocumentToolStripContainer
         '
         '
+        'DocumentToolStripContainer.BottomToolStripPanel
+        '
+        '
         'DocumentToolStripContainer.ContentPanel
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel1)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(524, 466)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(524, 459)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
+        '
+        'DocumentToolStripContainer.LeftToolStripPanel
+        '
         Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 403)
         Me.DocumentToolStripContainer.Name = "DocumentToolStripContainer"
+        '
+        'DocumentToolStripContainer.RightToolStripPanel
+        '
         Me.DocumentToolStripContainer.Size = New System.Drawing.Size(524, 497)
         Me.DocumentToolStripContainer.TabIndex = 81
         Me.DocumentToolStripContainer.Text = "ToolStripContainer1"

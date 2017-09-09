@@ -305,6 +305,7 @@ Public Class frmMain
         Me.Text = LangPadVersion
 
         MainMenu.Renderer = New clsMenuRenderer
+        cmsMain.Renderer = New clsMenuRenderer
         FileToolStrip.Renderer = New clsToolstripRenderer
         FontToolStrip.Renderer = New clsToolstripRenderer
 
@@ -374,6 +375,11 @@ Public Class frmMain
 
         SplitContainer2.SplitterDistance = (SplitContainer2.Width - NotebookEditor1.MinimumSize.Width) - 30
 
+        For i As Integer = 1 To 50
+            IndentToolStripComboBox.Items.Add(i)
+        Next
+
+        IndentToolStripComboBox.SelectedItem = 1
     End Sub
 
     Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
@@ -393,35 +399,6 @@ Public Class frmMain
         Dim Button As Button = CType(sender, Button)
         If My.Computer.Keyboard.CtrlKeyDown Then Exit Sub
         InsertText(SelectedDocument, Button.Text)
-    End Sub
-
-    Private Sub btnBold_Click(sender As Object, e As EventArgs)
-        ApplyStyle(SelectedDocument, FontStyle.Bold)
-
-    End Sub
-
-    Private Sub btnItalic_Click(sender As Object, e As EventArgs)
-        ApplyStyle(SelectedDocument, FontStyle.Italic)
-    End Sub
-
-    Private Sub btnUnderline_Click(sender As Object, e As EventArgs)
-        ApplyStyle(SelectedDocument, FontStyle.Underline)
-    End Sub
-
-    Private Sub btnStrikethrough_Click(sender As Object, e As EventArgs)
-        ApplyStyle(SelectedDocument, FontStyle.Strikeout)
-    End Sub
-
-    Private Sub btnLeft_Click(sender As Object, e As EventArgs)
-        SelectedDocument.SelectionAlignment = HorizontalAlignment.Left
-    End Sub
-
-    Private Sub btnCenter_Click(sender As Object, e As EventArgs)
-        SelectedDocument.SelectionAlignment = HorizontalAlignment.Center
-    End Sub
-
-    Private Sub btnRight_Click(sender As Object, e As EventArgs)
-        SelectedDocument.SelectionAlignment = HorizontalAlignment.Right
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs)
@@ -546,25 +523,25 @@ Public Class frmMain
         ElseIf e.Control And e.KeyCode.ToString = "F" Then
             FindToolStripMenuItem_Click(Me, Nothing)
         ElseIf e.Control And e.KeyCode.ToString = "B" Then
-            btnBold_Click(Me, Nothing)
+            BoldToolStripButton_Click(Me, Nothing)
         ElseIf e.Control And e.KeyCode.ToString = "U" Then
-            btnUnderline_Click(Me, Nothing)
+            UnderlineToolStripButton_Click(Me, Nothing)
         ElseIf e.Control And e.KeyCode.ToString = "I" Then
-            btnItalic_Click(Me, Nothing)
+            ItalicToolStripButton_Click(Me, Nothing)
 
             'The richtextbox wants to insent a tab here, so:
             e.Handled = True
             e.SuppressKeyPress = True
         ElseIf e.Control And e.KeyCode.ToString = "M" Then
-            btnStrikethrough_Click(Me, Nothing)
+            StrikeToolStripButton_Click(Me, Nothing)
         ElseIf e.Control And e.KeyCode.ToString = "F" Then
             FindToolStripMenuItem_Click(Me, Nothing)
         ElseIf e.Control And e.KeyCode.ToString = "L" Then
-            btnLeft_Click(Me, Nothing)
+            AlignLeftToolStripButton_Click(Me, Nothing)
         ElseIf e.Control And e.KeyCode.ToString = "E" Then
-            btnCenter_Click(Me, Nothing)
+            AlignCenterToolStripButton_Click(Me, Nothing)
         ElseIf e.Control And e.KeyCode.ToString = "R" Then
-            btnRight_Click(Me, Nothing)
+            AlignRightToolStripButton_Click(Me, Nothing)
         ElseIf e.Control And e.KeyCode.ToString = "P" Then
             PrintToolStripMenuItem_Click(Me, Nothing)
 
@@ -1098,18 +1075,34 @@ Public Class frmMain
     End Sub
 
     Private Sub AlignLeftToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignLeftToolStripButton.Click
-
+        SelectedDocument.SelectionAlignment = HorizontalAlignment.Left
     End Sub
 
     Private Sub AlignCenterToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignCenterToolStripButton.Click
-
+        SelectedDocument.SelectionAlignment = HorizontalAlignment.Center
     End Sub
 
     Private Sub AlignRightToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignRightToolStripButton.Click
-
+        SelectedDocument.SelectionAlignment = HorizontalAlignment.Right
     End Sub
 
     Private Sub IndentToolStripButton_Click(sender As Object, e As EventArgs) Handles IndentToolStripButton.Click
-        SelectedDocument.SelectionIndent = IndentToolStripComboBox.SelectedText
+        SelectedDocument.SelectionIndent = IndentToolStripComboBox.SelectedItem
+    End Sub
+
+    Private Sub BoldToolStripButton_Click(sender As Object, e As EventArgs) Handles BoldToolStripButton.Click
+        ApplyStyle(SelectedDocument, FontStyle.Bold)
+    End Sub
+
+    Private Sub ItalicToolStripButton_Click(sender As Object, e As EventArgs) Handles ItalicToolStripButton.Click
+        ApplyStyle(SelectedDocument, FontStyle.Italic)
+    End Sub
+
+    Private Sub UnderlineToolStripButton_Click(sender As Object, e As EventArgs) Handles UnderlineToolStripButton.Click
+        ApplyStyle(SelectedDocument, FontStyle.Underline)
+    End Sub
+
+    Private Sub StrikeToolStripButton_Click(sender As Object, e As EventArgs) Handles StrikeToolStripButton.Click
+        ApplyStyle(SelectedDocument, FontStyle.Strikeout)
     End Sub
 End Class

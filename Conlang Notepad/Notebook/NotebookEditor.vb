@@ -100,14 +100,22 @@ Public Class NotebookEditor
         DocumentToolStrip.Renderer = New clsToolstripRenderer
     End Sub
 
-    Private Sub ToolStripContainer1_TopToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles DocumentToolStripContainer.TopToolStripPanel.Paint
+    Private Sub ToolStripContainer1_TopToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles DocumentToolStripContainer.TopToolStripPanel.Paint,
+            DocumentToolStripContainer.BottomToolStripPanel.Paint, DocumentToolStripContainer.LeftToolStripPanel.Paint, DocumentToolStripContainer.RightToolStripPanel.Paint
+
         Dim g As Graphics = e.Graphics
         Dim rect As New Rectangle(0, 0, DocumentToolStrip.Width, Me.Height)
         Dim b As New LinearGradientBrush(rect, clrHorBG_GrayBlue, clrHorBG_White, LinearGradientMode.Horizontal)
         g.FillRectangle(b, rect)
     End Sub
 
-    Private Sub ToolStripContainer1_TopToolStripPanel_SizeChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DocumentToolStripContainer.TopToolStripPanel.SizeChanged
+    Private Sub ToolStripContainer1_TopToolStripPanel_SizeChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DocumentToolStripContainer.TopToolStripPanel.SizeChanged,
+            DocumentToolStripContainer.BottomToolStripPanel.SizeChanged, DocumentToolStripContainer.LeftToolStripPanel.SizeChanged, DocumentToolStripContainer.RightToolStripPanel.SizeChanged
+
         DocumentToolStripContainer.Invalidate()
+    End Sub
+
+    Private Sub DocumentToolStripContainer_Click(sender As Object, e As EventArgs) Handles DocumentToolStripContainer.Click
+
     End Sub
 End Class
