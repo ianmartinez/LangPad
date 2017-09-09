@@ -59,4 +59,8 @@ Public NotInheritable Class ssLoading
     Private Sub ssLoading_Load(sender As Object, e As EventArgs) Handles Me.Load
         lblLanguagePad.Text = LangPadVersion
     End Sub
+
+    Private Sub StylizedPanel1_Paint(sender As Object, e As PaintEventArgs) Handles StylizedPanel1.Paint
+
+    End Sub
 End Class

@@ -41,11 +41,12 @@ Partial Class dlgAppendReplace
         Me.TableLayoutPanel1.Controls.Add(Me.btnAppend, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnReplace, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(65, 70)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(130, 135)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(196, 29)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(392, 56)
         Me.TableLayoutPanel1.TabIndex = 73
         '
         'btnAppend
@@ -60,11 +61,11 @@ Partial Class dlgAppendReplace
         Me.btnAppend.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnAppend.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAppend.ForeColor = System.Drawing.Color.Black
-        Me.btnAppend.Location = New System.Drawing.Point(2, 2)
-        Me.btnAppend.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnAppend.Location = New System.Drawing.Point(4, 4)
+        Me.btnAppend.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAppend.Name = "btnAppend"
-        Me.btnAppend.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnAppend.Size = New System.Drawing.Size(61, 25)
+        Me.btnAppend.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.btnAppend.Size = New System.Drawing.Size(122, 48)
         Me.btnAppend.Style = resources.GetString("btnAppend.Style")
         Me.btnAppend.TabIndex = 0
         Me.btnAppend.Text = "Append"
@@ -83,11 +84,11 @@ Partial Class dlgAppendReplace
         Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
-        Me.btnCancel.Location = New System.Drawing.Point(132, 2)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCancel.Location = New System.Drawing.Point(264, 4)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(62, 25)
+        Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.btnCancel.Size = New System.Drawing.Size(124, 48)
         Me.btnCancel.Style = resources.GetString("btnCancel.Style")
         Me.btnCancel.TabIndex = 2
         Me.btnCancel.Text = "Cancel"
@@ -105,11 +106,11 @@ Partial Class dlgAppendReplace
         Me.btnReplace.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnReplace.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReplace.ForeColor = System.Drawing.Color.Black
-        Me.btnReplace.Location = New System.Drawing.Point(67, 2)
-        Me.btnReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnReplace.Location = New System.Drawing.Point(134, 4)
+        Me.btnReplace.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnReplace.Name = "btnReplace"
-        Me.btnReplace.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnReplace.Size = New System.Drawing.Size(61, 25)
+        Me.btnReplace.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.btnReplace.Size = New System.Drawing.Size(122, 48)
         Me.btnReplace.Style = resources.GetString("btnReplace.Style")
         Me.btnReplace.TabIndex = 1
         Me.btnReplace.Text = "Replace"
@@ -118,10 +119,10 @@ Partial Class dlgAppendReplace
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(11, 9)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(22, 17)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(250, 51)
+        Me.Label1.Size = New System.Drawing.Size(500, 98)
         Me.Label1.TabIndex = 74
         Me.Label1.Text = "This document has embedded custom symbols. Would you like to append or replace yo" &
     "ur current custom symbols?"
@@ -129,15 +130,14 @@ Partial Class dlgAppendReplace
         'dlgAppendReplace
         '
         Me.AcceptButton = Me.btnAppend
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(273, 111)
+        Me.ClientSize = New System.Drawing.Size(546, 213)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Label1)
-        Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgAppendReplace"

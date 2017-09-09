@@ -41,8 +41,9 @@ Partial Class ssLoading
         Me.StylizedPanel1.Controls.Add(Me.PictureBox1)
         Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(237, 75)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(654, 186)
         Me.StylizedPanel1.Style = "Colors=~20|~20" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight " &
     "Color=~50" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1"
         Me.StylizedPanel1.TabIndex = 9
@@ -50,11 +51,11 @@ Partial Class ssLoading
         'lblLanguagePad
         '
         Me.lblLanguagePad.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLanguagePad.ForeColor = System.Drawing.Color.RosyBrown
-        Me.lblLanguagePad.Location = New System.Drawing.Point(49, 12)
-        Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblLanguagePad.ForeColor = System.Drawing.Color.LightCyan
+        Me.lblLanguagePad.Location = New System.Drawing.Point(126, 23)
+        Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(177, 28)
+        Me.lblLanguagePad.Size = New System.Drawing.Size(354, 54)
         Me.lblLanguagePad.TabIndex = 9
         Me.lblLanguagePad.Text = "Language Pad X.x"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -64,10 +65,10 @@ Partial Class ssLoading
         Me.lblLoading.AutoSize = True
         Me.lblLoading.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLoading.ForeColor = System.Drawing.Color.Gray
-        Me.lblLoading.Location = New System.Drawing.Point(50, 40)
-        Me.lblLoading.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblLoading.Location = New System.Drawing.Point(128, 77)
+        Me.lblLoading.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLoading.Name = "lblLoading"
-        Me.lblLoading.Size = New System.Drawing.Size(50, 15)
+        Me.lblLoading.Size = New System.Drawing.Size(98, 32)
         Me.lblLoading.TabIndex = 8
         Me.lblLoading.Text = "Loading"
         '
@@ -77,9 +78,10 @@ Partial Class ssLoading
         Me.pbLoading.BackgroundImage = CType(resources.GetObject("pbLoading.BackgroundImage"), System.Drawing.Image)
         Me.pbLoading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.pbLoading.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pbLoading.Location = New System.Drawing.Point(0, 65)
+        Me.pbLoading.Location = New System.Drawing.Point(0, 149)
+        Me.pbLoading.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.pbLoading.Name = "pbLoading"
-        Me.pbLoading.Size = New System.Drawing.Size(237, 10)
+        Me.pbLoading.Size = New System.Drawing.Size(654, 37)
         Me.pbLoading.Style = resources.GetString("pbLoading.Style")
         Me.pbLoading.TabIndex = 6
         '
@@ -87,29 +89,30 @@ Partial Class ssLoading
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(24, 23)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(32, 43)
+        Me.PictureBox1.Size = New System.Drawing.Size(92, 92)
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
         '
         'ssLoading
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightCyan
-        Me.ClientSize = New System.Drawing.Size(237, 75)
+        Me.BackColor = System.Drawing.Color.MistyRose
+        Me.ClientSize = New System.Drawing.Size(654, 186)
         Me.ControlBox = False
         Me.Controls.Add(Me.StylizedPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "ssLoading"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.TransparencyKey = System.Drawing.Color.LightCyan
+        Me.TransparencyKey = System.Drawing.Color.MistyRose
         Me.StylizedPanel1.ResumeLayout(False)
         Me.StylizedPanel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

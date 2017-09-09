@@ -8,7 +8,7 @@
 
     End Sub
 
-    Private Sub btnGitHub_Click(sender As Object, e As EventArgs) Handles btnGitHub.Click
+    Private Sub btnGitHub_Click(sender As Object, e As EventArgs)
         Process.Start("https://github.com/ianmartinez/Language-Pad")
     End Sub
 
@@ -16,7 +16,9 @@
         lblLanguagePad.Text = LangPadVersion
     End Sub
 
-    Private Sub btnCheckUpdates_Click(sender As Object, e As EventArgs) Handles btnCheckUpdates.Click
-        frmMain.btnCheckUpdate_Click(Me, e)
+    Private Sub btnCheckUpdates_Click(sender As Object, e As EventArgs)
+        dlgUpdate.SkipFetch = False
+        dlgUpdate.TopMost = False
+        dlgUpdate.ShowDialog()
     End Sub
 End Class

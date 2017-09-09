@@ -178,32 +178,8 @@ Namespace My
             ssLoading.pbLoading.SetProgress(80)
             ssLoading.Refresh()
 
-            If My.Settings.ClipArt = True Then
-                If Directory.Exists(Windows.Forms.Application.StartupPath & "\Clip Art") Then
-                    ssLoading.lblLoading.Text = "Loading Clip Art..."
-                    Dim FilePaths As List(Of String) = Directory.EnumerateFiles(Windows.Forms.Application.StartupPath & "\Clip Art").ToList
-
-                    For i = 0 To FilePaths.Count - 1
-                        If Not FilePaths.Item(i).Split(".").GetValue(1) = "png" Then Continue For
-                        ssLoading.lblLoading.Text = String.Format("Loading Clip Art ({0}/{1})...", i + 1, FilePaths.Count)
-                        Dim ImageFile = Image.FromFile(FilePaths.Item(i))
-                        Dim ImageButton As New StylizedButton
-                        ImageButton.Style = My.Resources.KeyStyle
-                        ImageButton.Padding = New Padding(0)
-                        ImageButton.ImageAlign = ContentAlignment.MiddleCenter
-                        ImageButton.Size = New Size(76, 76)
-                        ImageButton.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
-                        ImageButton.Margin = New Padding(2)
-                        ImageButton.Padding = New Padding(2, 2, 3, 3)
-                        ImageButton.Text = ""
-                        ImageButton.Image = ImageFile
-                        AddHandler ImageButton.Click, AddressOf frmMain.InsertImageHandler
-                        frmMain.ClipArtLayoutPanel.Controls.Add(ImageButton)
-                    Next
-                End If
-                ssLoading.pbLoading.SetProgress(90)
-                ssLoading.Refresh()
-            End If
+            ssLoading.pbLoading.SetProgress(90)
+            ssLoading.Refresh()
 
             If My.Settings.Updates = True Then
                 ssLoading.lblLoading.Text = "Checking for updates..."

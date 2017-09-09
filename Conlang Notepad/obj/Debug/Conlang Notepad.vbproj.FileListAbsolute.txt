@@ -126,3 +126,38 @@ C:\Users\ianma\Desktop\Code\Conlang Notepad\Conlang Notepad\obj\Debug\Language_P
 C:\Users\ianma\Desktop\Code\Conlang Notepad\Conlang Notepad\obj\Debug\Language_Pad.dlgStyle.resources
 C:\Users\ianma\Desktop\Code\Conlang Notepad\Conlang Notepad\obj\Debug\Language_Pad.frmDictionary.resources
 C:\Users\ianma\Desktop\Code\Conlang Notepad\Conlang Notepad\obj\Debug\Language_Pad.IPAToolTip.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\bin\Debug\Language Pad.exe.config
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\bin\Debug\Language Pad.exe.manifest
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\bin\Debug\Language Pad.application
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\bin\Debug\Language Pad.exe
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\bin\Debug\Language Pad.pdb
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\bin\Debug\Language Pad.xml
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\bin\Debug\Tundra.dll
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\bin\Debug\Tundra.pdb
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\bin\Debug\Tundra.xml
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Conlang Notepad.vbprojResolveAssemblyReference.cache
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.dlgAbout.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.dlgAccentMark.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.dlgAddPage.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.dlgAppendReplace.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.dlgCustomSymbols.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.dlgCustomZoom.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.dlgSettings.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.dlgStyle.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.dlgTable.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.dlgTextArt.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.dlgUpdate.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.frmDictionary.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.frmMain.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.frmRTF.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.Resources.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.NotebookEditor.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.ssLoading.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language_Pad.IPAToolTip.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Conlang Notepad.vbproj.GenerateResource.Cache
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Conlang Notepad.vbproj.CoreCompileInputs.cache
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language Pad.exe.manifest
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language Pad.application
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language Pad.exe
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language Pad.xml
+C:\Users\ianma\Documents\GitHub\Language-Pad\Conlang Notepad\obj\Debug\Language Pad.pdb

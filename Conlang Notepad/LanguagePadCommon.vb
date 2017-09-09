@@ -1,4 +1,5 @@
-﻿Imports System.Reflection
+﻿Imports System.Globalization
+Imports System.Reflection
 
 Module LanguagePadCommon
 
@@ -6,7 +7,8 @@ Module LanguagePadCommon
     Public NTVersion As Decimal = 1.2
     Public FirstTabUpdate As Boolean = False
     Public Initialized As Boolean = False
-    Public CurrentVersion As Decimal = (Application.ProductVersion.Split(".").GetValue(0) & "." & Application.ProductVersion.Split(".").GetValue(1))
+    Public DecimalSep As String = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator
+    Public CurrentVersion As Decimal = (Application.ProductVersion.Split(DecimalSep).GetValue(0) & "." & Application.ProductVersion.Split(DecimalSep).GetValue(1))
     Public LangPadVersion As String = "Language Pad " & CurrentVersion.ToString
     Public Function GetTextFromRTF(ByVal RTF As String)
         Dim rtb As New RichTextBox

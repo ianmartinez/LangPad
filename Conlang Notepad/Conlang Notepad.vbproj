@@ -11,7 +11,7 @@
     <AssemblyName>Language Pad</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
@@ -77,7 +77,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -86,14 +86,6 @@
     <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\AForge.dll</HintPath>
-    </Reference>
-    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\AForge.Video.dll</HintPath>
-    </Reference>
-    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.BZip2, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -129,6 +121,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AeroMenu.vb" />
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="CenteredComboBox.vb">
       <SubType>Component</SubType>
@@ -199,12 +192,6 @@
     <Compile Include="Dialogs\dlgUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\dlgWebcam.Designer.vb">
-      <DependentUpon>dlgWebcam.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Dialogs\dlgWebcam.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Notebook\DictionaryFile.vb" />
     <Compile Include="frmDictionary.Designer.vb">
       <DependentUpon>frmDictionary.vb</DependentUpon>
@@ -257,9 +244,6 @@
     <Compile Include="SymbolButton.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WebcamFrame.vb">
-      <SubType>Component</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dialogs\dlgAbout.resx">
@@ -295,9 +279,6 @@
     <EmbeddedResource Include="Dialogs\dlgUpdate.resx">
       <DependentUpon>dlgUpdate.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgWebcam.resx">
-      <DependentUpon>dlgWebcam.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmDictionary.resx">
       <DependentUpon>frmDictionary.vb</DependentUpon>
     </EmbeddedResource>
@@ -325,7 +306,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Conlang Notepad_TemporaryKey.pfx" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

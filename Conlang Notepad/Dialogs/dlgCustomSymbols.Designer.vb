@@ -47,11 +47,12 @@ Partial Class dlgCustomSymbols
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(131, 279)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(319, 548)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 29)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(292, 56)
         Me.TableLayoutPanel1.TabIndex = 67
         '
         'btnCancel
@@ -66,11 +67,11 @@ Partial Class dlgCustomSymbols
         Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
-        Me.btnCancel.Location = New System.Drawing.Point(75, 2)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCancel.Location = New System.Drawing.Point(150, 4)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(69, 25)
+        Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.btnCancel.Size = New System.Drawing.Size(138, 48)
         Me.btnCancel.Style = resources.GetString("btnCancel.Style")
         Me.btnCancel.TabIndex = 1
         Me.btnCancel.Text = "Cancel"
@@ -88,11 +89,11 @@ Partial Class dlgCustomSymbols
         Me.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.ForeColor = System.Drawing.Color.Black
-        Me.btnOK.Location = New System.Drawing.Point(2, 2)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnOK.Location = New System.Drawing.Point(4, 4)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnOK.Size = New System.Drawing.Size(69, 25)
+        Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.btnOK.Size = New System.Drawing.Size(138, 48)
         Me.btnOK.Style = resources.GetString("btnOK.Style")
         Me.btnOK.TabIndex = 0
         Me.btnOK.Text = "OK"
@@ -101,18 +102,16 @@ Partial Class dlgCustomSymbols
         '
         'dgvSymbols
         '
-        Me.dgvSymbols.BackgroundColor = System.Drawing.Color.White
-        Me.dgvSymbols.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvSymbols.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dgvSymbols.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvSymbols.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSymbols.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Symbol})
-        Me.dgvSymbols.GridColor = System.Drawing.Color.Gainsboro
-        Me.dgvSymbols.Location = New System.Drawing.Point(11, 11)
-        Me.dgvSymbols.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvSymbols.Location = New System.Drawing.Point(22, 21)
+        Me.dgvSymbols.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvSymbols.Name = "dgvSymbols"
         Me.dgvSymbols.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvSymbols.RowTemplate.Height = 24
-        Me.dgvSymbols.Size = New System.Drawing.Size(267, 263)
+        Me.dgvSymbols.Size = New System.Drawing.Size(585, 513)
         Me.dgvSymbols.TabIndex = 2
         '
         'Symbol
@@ -134,11 +133,11 @@ Partial Class dlgCustomSymbols
         Me.btnDeleteAll.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDeleteAll.ForeColor = System.Drawing.Color.Black
         Me.btnDeleteAll.Image = CType(resources.GetObject("btnDeleteAll.Image"), System.Drawing.Image)
-        Me.btnDeleteAll.Location = New System.Drawing.Point(69, 281)
-        Me.btnDeleteAll.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnDeleteAll.Location = New System.Drawing.Point(182, 542)
+        Me.btnDeleteAll.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnDeleteAll.Name = "btnDeleteAll"
-        Me.btnDeleteAll.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnDeleteAll.Size = New System.Drawing.Size(25, 25)
+        Me.btnDeleteAll.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.btnDeleteAll.Size = New System.Drawing.Size(72, 68)
         Me.btnDeleteAll.Style = resources.GetString("btnDeleteAll.Style")
         Me.btnDeleteAll.TabIndex = 5
         Me.ttMain.SetToolTip(Me.btnDeleteAll, "Clear")
@@ -158,11 +157,11 @@ Partial Class dlgCustomSymbols
         Me.btnOpen.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOpen.ForeColor = System.Drawing.Color.Black
         Me.btnOpen.Image = CType(resources.GetObject("btnOpen.Image"), System.Drawing.Image)
-        Me.btnOpen.Location = New System.Drawing.Point(11, 281)
-        Me.btnOpen.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnOpen.Location = New System.Drawing.Point(22, 542)
+        Me.btnOpen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnOpen.Name = "btnOpen"
-        Me.btnOpen.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnOpen.Size = New System.Drawing.Size(25, 25)
+        Me.btnOpen.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.btnOpen.Size = New System.Drawing.Size(72, 68)
         Me.btnOpen.Style = resources.GetString("btnOpen.Style")
         Me.btnOpen.TabIndex = 3
         Me.ttMain.SetToolTip(Me.btnOpen, "Open")
@@ -182,11 +181,11 @@ Partial Class dlgCustomSymbols
         Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.Color.Black
         Me.btnSave.Image = CType(resources.GetObject("btnSave.Image"), System.Drawing.Image)
-        Me.btnSave.Location = New System.Drawing.Point(40, 281)
-        Me.btnSave.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSave.Location = New System.Drawing.Point(102, 542)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnSave.Size = New System.Drawing.Size(25, 25)
+        Me.btnSave.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.btnSave.Size = New System.Drawing.Size(72, 68)
         Me.btnSave.Style = resources.GetString("btnSave.Style")
         Me.btnSave.TabIndex = 4
         Me.ttMain.SetToolTip(Me.btnSave, "Save")
@@ -204,17 +203,17 @@ Partial Class dlgCustomSymbols
         'dlgCustomSymbols
         '
         Me.AcceptButton = Me.btnOK
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(289, 320)
+        Me.ClientSize = New System.Drawing.Size(635, 626)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.dgvSymbols)
         Me.Controls.Add(Me.btnOpen)
         Me.Controls.Add(Me.btnDeleteAll)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgCustomSymbols"

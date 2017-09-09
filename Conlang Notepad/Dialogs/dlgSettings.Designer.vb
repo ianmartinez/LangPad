@@ -35,9 +35,6 @@ Partial Class dlgSettings
         Me.cbOther = New System.Windows.Forms.CheckBox()
         Me.cbCommon = New System.Windows.Forms.CheckBox()
         Me.cbUpdates = New System.Windows.Forms.CheckBox()
-        Me.cbClipArt = New System.Windows.Forms.CheckBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.cbForceSans = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,12 +46,13 @@ Partial Class dlgSettings
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(127, 229)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(254, 403)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 29)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(292, 56)
         Me.TableLayoutPanel1.TabIndex = 70
         '
         'btnCancel
@@ -69,11 +67,11 @@ Partial Class dlgSettings
         Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
-        Me.btnCancel.Location = New System.Drawing.Point(75, 2)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCancel.Location = New System.Drawing.Point(150, 4)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(69, 25)
+        Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.btnCancel.Size = New System.Drawing.Size(138, 48)
         Me.btnCancel.Style = resources.GetString("btnCancel.Style")
         Me.btnCancel.TabIndex = 1
         Me.btnCancel.Text = "Cancel"
@@ -91,11 +89,11 @@ Partial Class dlgSettings
         Me.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.ForeColor = System.Drawing.Color.Black
-        Me.btnOK.Location = New System.Drawing.Point(2, 2)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnOK.Location = New System.Drawing.Point(4, 4)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnOK.Size = New System.Drawing.Size(69, 25)
+        Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.btnOK.Size = New System.Drawing.Size(138, 48)
         Me.btnOK.Style = resources.GetString("btnOK.Style")
         Me.btnOK.TabIndex = 0
         Me.btnOK.Text = "OK"
@@ -105,10 +103,10 @@ Partial Class dlgSettings
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(3)
+        Me.Label1.Location = New System.Drawing.Point(24, 17)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 13)
+        Me.Label1.Size = New System.Drawing.Size(175, 25)
         Me.Label1.TabIndex = 71
         Me.Label1.Text = "Load On Startup:"
         '
@@ -117,9 +115,10 @@ Partial Class dlgSettings
         Me.cbAccent.AutoSize = True
         Me.cbAccent.Checked = True
         Me.cbAccent.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbAccent.Location = New System.Drawing.Point(15, 28)
+        Me.cbAccent.Location = New System.Drawing.Point(30, 54)
+        Me.cbAccent.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.cbAccent.Name = "cbAccent"
-        Me.cbAccent.Size = New System.Drawing.Size(92, 17)
+        Me.cbAccent.Size = New System.Drawing.Size(175, 29)
         Me.cbAccent.TabIndex = 0
         Me.cbAccent.Text = "Accent Marks"
         Me.cbAccent.UseVisualStyleBackColor = True
@@ -129,9 +128,10 @@ Partial Class dlgSettings
         Me.cbAffricates.AutoSize = True
         Me.cbAffricates.Checked = True
         Me.cbAffricates.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbAffricates.Location = New System.Drawing.Point(15, 51)
+        Me.cbAffricates.Location = New System.Drawing.Point(30, 98)
+        Me.cbAffricates.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.cbAffricates.Name = "cbAffricates"
-        Me.cbAffricates.Size = New System.Drawing.Size(90, 17)
+        Me.cbAffricates.Size = New System.Drawing.Size(173, 29)
         Me.cbAffricates.TabIndex = 1
         Me.cbAffricates.Text = "IPA Affricates"
         Me.cbAffricates.UseVisualStyleBackColor = True
@@ -141,9 +141,10 @@ Partial Class dlgSettings
         Me.cbConsonants.AutoSize = True
         Me.cbConsonants.Checked = True
         Me.cbConsonants.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbConsonants.Location = New System.Drawing.Point(15, 74)
+        Me.cbConsonants.Location = New System.Drawing.Point(30, 142)
+        Me.cbConsonants.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.cbConsonants.Name = "cbConsonants"
-        Me.cbConsonants.Size = New System.Drawing.Size(102, 17)
+        Me.cbConsonants.Size = New System.Drawing.Size(198, 29)
         Me.cbConsonants.TabIndex = 2
         Me.cbConsonants.Text = "IPA Consonants"
         Me.cbConsonants.UseVisualStyleBackColor = True
@@ -153,9 +154,10 @@ Partial Class dlgSettings
         Me.cbTones.AutoSize = True
         Me.cbTones.Checked = True
         Me.cbTones.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbTones.Location = New System.Drawing.Point(15, 97)
+        Me.cbTones.Location = New System.Drawing.Point(30, 187)
+        Me.cbTones.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.cbTones.Name = "cbTones"
-        Me.cbTones.Size = New System.Drawing.Size(76, 17)
+        Me.cbTones.Size = New System.Drawing.Size(143, 29)
         Me.cbTones.TabIndex = 3
         Me.cbTones.Text = "IPA Tones"
         Me.cbTones.UseVisualStyleBackColor = True
@@ -165,9 +167,10 @@ Partial Class dlgSettings
         Me.cbVowels.AutoSize = True
         Me.cbVowels.Checked = True
         Me.cbVowels.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbVowels.Location = New System.Drawing.Point(15, 120)
+        Me.cbVowels.Location = New System.Drawing.Point(30, 231)
+        Me.cbVowels.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.cbVowels.Name = "cbVowels"
-        Me.cbVowels.Size = New System.Drawing.Size(80, 17)
+        Me.cbVowels.Size = New System.Drawing.Size(152, 29)
         Me.cbVowels.TabIndex = 4
         Me.cbVowels.Text = "IPA Vowels"
         Me.cbVowels.UseVisualStyleBackColor = True
@@ -177,9 +180,10 @@ Partial Class dlgSettings
         Me.cbOther.AutoSize = True
         Me.cbOther.Checked = True
         Me.cbOther.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbOther.Location = New System.Drawing.Point(15, 143)
+        Me.cbOther.Location = New System.Drawing.Point(30, 275)
+        Me.cbOther.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.cbOther.Name = "cbOther"
-        Me.cbOther.Size = New System.Drawing.Size(126, 17)
+        Me.cbOther.Size = New System.Drawing.Size(247, 29)
         Me.cbOther.TabIndex = 5
         Me.cbOther.Text = "Other IPA Characters"
         Me.cbOther.UseVisualStyleBackColor = True
@@ -189,9 +193,10 @@ Partial Class dlgSettings
         Me.cbCommon.AutoSize = True
         Me.cbCommon.Checked = True
         Me.cbCommon.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbCommon.Location = New System.Drawing.Point(15, 163)
+        Me.cbCommon.Location = New System.Drawing.Point(30, 313)
+        Me.cbCommon.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.cbCommon.Name = "cbCommon"
-        Me.cbCommon.Size = New System.Drawing.Size(121, 17)
+        Me.cbCommon.Size = New System.Drawing.Size(240, 29)
         Me.cbCommon.TabIndex = 6
         Me.cbCommon.Text = "Common Characters"
         Me.cbCommon.UseVisualStyleBackColor = True
@@ -201,55 +206,22 @@ Partial Class dlgSettings
         Me.cbUpdates.AutoSize = True
         Me.cbUpdates.Checked = True
         Me.cbUpdates.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbUpdates.Location = New System.Drawing.Point(147, 51)
+        Me.cbUpdates.Location = New System.Drawing.Point(30, 354)
+        Me.cbUpdates.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.cbUpdates.Name = "cbUpdates"
-        Me.cbUpdates.Size = New System.Drawing.Size(66, 17)
+        Me.cbUpdates.Size = New System.Drawing.Size(124, 29)
         Me.cbUpdates.TabIndex = 9
         Me.cbUpdates.Text = "Updates"
         Me.cbUpdates.UseVisualStyleBackColor = True
         '
-        'cbClipArt
-        '
-        Me.cbClipArt.AutoSize = True
-        Me.cbClipArt.Location = New System.Drawing.Point(147, 28)
-        Me.cbClipArt.Name = "cbClipArt"
-        Me.cbClipArt.Size = New System.Drawing.Size(59, 17)
-        Me.cbClipArt.TabIndex = 8
-        Me.cbClipArt.Text = "Clip Art"
-        Me.cbClipArt.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 186)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(3)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(36, 13)
-        Me.Label2.TabIndex = 72
-        Me.Label2.Text = "Fonts:"
-        '
-        'cbForceSans
-        '
-        Me.cbForceSans.AutoSize = True
-        Me.cbForceSans.Location = New System.Drawing.Point(15, 205)
-        Me.cbForceSans.Name = "cbForceSans"
-        Me.cbForceSans.Size = New System.Drawing.Size(150, 17)
-        Me.cbForceSans.TabIndex = 73
-        Me.cbForceSans.Text = "Force Microsoft Sans Serif"
-        Me.cbForceSans.UseVisualStyleBackColor = True
-        '
         'dlgSettings
         '
         Me.AcceptButton = Me.btnOK
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(285, 270)
-        Me.Controls.Add(Me.cbForceSans)
-        Me.Controls.Add(Me.Label2)
+        Me.ClientSize = New System.Drawing.Size(570, 482)
         Me.Controls.Add(Me.cbUpdates)
-        Me.Controls.Add(Me.cbClipArt)
         Me.Controls.Add(Me.cbCommon)
         Me.Controls.Add(Me.cbOther)
         Me.Controls.Add(Me.cbVowels)
@@ -259,8 +231,8 @@ Partial Class dlgSettings
         Me.Controls.Add(Me.cbAccent)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgSettings"
@@ -285,7 +257,4 @@ Partial Class dlgSettings
     Friend WithEvents cbOther As CheckBox
     Friend WithEvents cbCommon As CheckBox
     Friend WithEvents cbUpdates As CheckBox
-    Friend WithEvents cbClipArt As CheckBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents cbForceSans As CheckBox
 End Class
