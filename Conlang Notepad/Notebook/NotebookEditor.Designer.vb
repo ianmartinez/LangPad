@@ -133,7 +133,9 @@ Partial Class NotebookEditor
         Me.btnDictionary.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDictionary.ForeColor = System.Drawing.Color.Black
         Me.btnDictionary.Location = New System.Drawing.Point(5, 348)
+        Me.btnDictionary.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDictionary.Name = "btnDictionary"
+        Me.btnDictionary.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnDictionary.Size = New System.Drawing.Size(514, 49)
         Me.btnDictionary.Style = resources.GetString("btnDictionary.Style")
         Me.btnDictionary.TabIndex = 6
@@ -384,6 +386,7 @@ Partial Class NotebookEditor
         Me.Controls.Add(Me.DoubleBufferedPanel2)
         Me.DoubleBuffered = True
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MinimumSize = New System.Drawing.Size(524, 0)
         Me.Name = "NotebookEditor"
         Me.Size = New System.Drawing.Size(524, 900)
         Me.DoubleBufferedPanel2.ResumeLayout(False)

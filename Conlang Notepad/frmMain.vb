@@ -8,10 +8,10 @@ Public Class frmMain
     Public Modified As Boolean = False
     Private currentFile As String
     Private checkPrint As Integer
-    Public ReadOnly AssociatedRichTextBox As RichTextBox = Me.SelectedDocument
+    Public ReadOnly AssociatedRichTextBox As RichTextBox = SelectedDocument
     Public Title As String
     Public rtbList As New List(Of ExtendedRichTextBox)
-    Public WithEvents SelectedDocument As New Tundra.ExtendedRichTextBox
+    Public WithEvents SelectedDocument As New ExtendedRichTextBox
     Public SelectedPage As Integer = 0
     Public Notebook As New List(Of String)
     Public Moving As Boolean = False
@@ -307,24 +307,12 @@ Public Class frmMain
         MainMenu.Renderer = New clsMenuRenderer
         FileToolStrip.Renderer = New clsToolstripRenderer
         FontToolStrip.Renderer = New clsToolstripRenderer
-        ParagraphToolStrip.Renderer = New clsToolstripRenderer
 
         Title = Me.Text
         cmsMain.ImageScalingSize = New Size(16, 16)
 
         Dim rectF As New RectangleF(10, 10, 500, 500)
         Dim solidBrush As New SolidBrush(Color.Black)
-
-        Dim family As FontFamily
-        For Each family In FontFamily.Families
-            FontCombo.Items.Add(family.Name)
-        Next family
-
-        For fontSize As Integer = 2 To 256
-            FontSizeCombo.Items.Add(fontSize)
-        Next
-
-        FontCombo.SelectedItem = "Calibri"
 
         SplitContainer1.Panel1Collapsed = True
 
@@ -384,16 +372,20 @@ Public Class frmMain
         Modified = False
         KeyPreview = True
 
+        SplitContainer2.SplitterDistance = (SplitContainer2.Width - NotebookEditor1.MinimumSize.Width) - 30
+
     End Sub
 
-    Private Sub ToolStripContainer1_TopToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint
+    Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
+        ToolStripContainer1.BottomToolStripPanel.Paint, ToolStripContainer1.LeftToolStripPanel.Paint, ToolStripContainer1.RightToolStripPanel.Paint
         Dim g As Graphics = e.Graphics
         Dim rect As New Rectangle(0, 0, ToolStripContainer1.Width, Me.Height)
         Dim b As New LinearGradientBrush(rect, clrHorBG_GrayBlue, clrHorBG_White, LinearGradientMode.Horizontal)
         g.FillRectangle(b, rect)
     End Sub
 
-    Private Sub ToolStripContainer1_TopToolStripPanel_SizeChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripContainer1.TopToolStripPanel.SizeChanged
+    Private Sub ToolStripContainer1_ToolStripPanel_SizeChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripContainer1.TopToolStripPanel.SizeChanged,
+        ToolStripContainer1.BottomToolStripPanel.SizeChanged, ToolStripContainer1.LeftToolStripPanel.SizeChanged, ToolStripContainer1.RightToolStripPanel.SizeChanged
         ToolStripContainer1.Invalidate()
     End Sub
 
@@ -401,31 +393,6 @@ Public Class frmMain
         Dim Button As Button = CType(sender, Button)
         If My.Computer.Keyboard.CtrlKeyDown Then Exit Sub
         InsertText(SelectedDocument, Button.Text)
-    End Sub
-
-    Private Sub cbFont_SelectedIndexChanged(sender As Object, e As EventArgs) Handles FontCombo.SelectedIndexChanged
-        On Error Resume Next
-        If DisableFontChange = True Then Exit Sub
-        Dim NewFont As Font = New Font(FontCombo.SelectedItem.ToString, Integer.Parse(FontSizeCombo.SelectedText))
-        If Not SelectedDocument.SelectionFont Is Nothing Then
-            If New FontFamily(FontCombo.SelectedItem.ToString).IsStyleAvailable(FontStyle.Regular) = False Then
-                If New FontFamily(FontCombo.SelectedItem.ToString).IsStyleAvailable(FontStyle.Bold) = True Then
-                    NewFont = New Font(FontCombo.SelectedItem.ToString, SelectedDocument.SelectionFont.Size, FontStyle.Bold)
-                ElseIf New FontFamily(FontCombo.SelectedItem.ToString).IsStyleAvailable(FontStyle.Italic) = True Then
-                    NewFont = New Font(FontCombo.SelectedItem.ToString, SelectedDocument.SelectionFont.Size, FontStyle.Italic)
-                ElseIf New FontFamily(FontCombo.SelectedItem.ToString).IsStyleAvailable(FontStyle.Strikeout) = True Then
-                    NewFont = New Font(FontCombo.SelectedItem.ToString, SelectedDocument.SelectionFont.Size, FontStyle.Strikeout)
-                ElseIf New FontFamily(FontCombo.SelectedItem.ToString).IsStyleAvailable(FontStyle.Underline) = True Then
-                    NewFont = New Font(FontCombo.SelectedItem.ToString, SelectedDocument.SelectionFont.Size, FontStyle.Underline)
-                Else
-                    NewFont = New Font(FontCombo.SelectedItem.ToString, SelectedDocument.SelectionFont.Size, SelectedDocument.SelectionFont.Style)
-                End If
-            Else
-                NewFont = New Font(FontCombo.SelectedItem.ToString, SelectedDocument.SelectionFont.Size, SelectedDocument.SelectionFont.Style)
-            End If
-        End If
-
-        ApplyFontChange(SelectedDocument, NewFont)
     End Sub
 
     Private Sub btnBold_Click(sender As Object, e As EventArgs)
@@ -443,16 +410,6 @@ Public Class frmMain
 
     Private Sub btnStrikethrough_Click(sender As Object, e As EventArgs)
         ApplyStyle(SelectedDocument, FontStyle.Strikeout)
-    End Sub
-
-    Private Sub nudSize_ValueChanged(sender As Object, e As EventArgs)
-        If DisableFontChange = True Then Exit Sub
-
-        ApplySizeChange(SelectedDocument, Integer.Parse(FontSizeCombo.SelectedText))
-    End Sub
-
-    Private Sub btnIndent_Click(sender As Object, e As EventArgs)
-        'SelectedDocument.SelectionIndent = nudIndent.Value
     End Sub
 
     Private Sub btnLeft_Click(sender As Object, e As EventArgs)
@@ -1083,7 +1040,7 @@ Public Class frmMain
         dlgAbout.ShowDialog()
     End Sub
 
-    Private Sub FontCombo_Click(sender As Object, e As EventArgs) Handles FontCombo.Click
+    Private Sub FontCombo_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -1136,10 +1093,23 @@ Public Class frmMain
         If dlgFont.ShowDialog() = Windows.Forms.DialogResult.OK Then
             SelectedDocument.SelectionColor = dlgFont.Color
             SelectedDocument.SelectionFont = dlgFont.Font
-
-            FontCombo.SelectedItem = dlgFont.Font.FontFamily.Name
-            FontSizeCombo.SelectedText = dlgFont.Font.Size
         End If
         DisableFontChange = False
+    End Sub
+
+    Private Sub AlignLeftToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignLeftToolStripButton.Click
+
+    End Sub
+
+    Private Sub AlignCenterToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignCenterToolStripButton.Click
+
+    End Sub
+
+    Private Sub AlignRightToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignRightToolStripButton.Click
+
+    End Sub
+
+    Private Sub IndentToolStripButton_Click(sender As Object, e As EventArgs) Handles IndentToolStripButton.Click
+        SelectedDocument.SelectionIndent = IndentToolStripComboBox.SelectedText
     End Sub
 End Class
