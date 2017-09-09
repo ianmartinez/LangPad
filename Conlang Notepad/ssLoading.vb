@@ -16,7 +16,7 @@ Public NotInheritable Class ssLoading
         End If
     End Sub
 
-    Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
+    Private Sub PictureBox1_MouseMove(sender As Object, e As MouseEventArgs)
         Dim delta As New Size(e.X - PreviousPosition.X, e.Y - PreviousPosition.Y)
         If (e.Button = MouseButtons.Left) Then
             Me.Location += delta

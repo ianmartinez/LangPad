@@ -104,7 +104,7 @@ Public Class NotebookEditor
             DocumentToolStripContainer.BottomToolStripPanel.Paint, DocumentToolStripContainer.LeftToolStripPanel.Paint, DocumentToolStripContainer.RightToolStripPanel.Paint
 
         Dim g As Graphics = e.Graphics
-        Dim rect As New Rectangle(0, 0, DocumentToolStrip.Width, Me.Height)
+        Dim rect As New Rectangle(0, 0, DocumentToolStripContainer.Width, Me.Height)
         Dim b As New LinearGradientBrush(rect, clrHorBG_GrayBlue, clrHorBG_White, LinearGradientMode.Horizontal)
         g.FillRectangle(b, rect)
     End Sub
@@ -118,4 +118,9 @@ Public Class NotebookEditor
     Private Sub DocumentToolStripContainer_Click(sender As Object, e As EventArgs) Handles DocumentToolStripContainer.Click
 
     End Sub
+
+    Private Sub DocumentToolStripContainer_TopToolStripPanel_Click(sender As Object, e As EventArgs) Handles DocumentToolStripContainer.TopToolStripPanel.Click
+
+    End Sub
+
 End Class
