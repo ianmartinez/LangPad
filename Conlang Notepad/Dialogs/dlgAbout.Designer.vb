@@ -48,7 +48,7 @@ Partial Class dlgAbout
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Location = New System.Drawing.Point(22, 88)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(6)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(760, 369)
@@ -58,9 +58,9 @@ Partial Class dlgAbout
         '
         Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Location = New System.Drawing.Point(8, 39)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(6)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(6)
         Me.TabPage1.Size = New System.Drawing.Size(744, 322)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "License"
@@ -73,7 +73,7 @@ Partial Class dlgAbout
         Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.TextBox1.Location = New System.Drawing.Point(6, 6)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(6)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
@@ -86,9 +86,9 @@ Partial Class dlgAbout
         '
         Me.TabPage2.Controls.Add(Me.TextBox2)
         Me.TabPage2.Location = New System.Drawing.Point(8, 39)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(6)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(6)
         Me.TabPage2.Size = New System.Drawing.Size(744, 322)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Changelog"
@@ -101,7 +101,7 @@ Partial Class dlgAbout
         Me.TextBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.TextBox2.Location = New System.Drawing.Point(6, 6)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(6)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
@@ -114,9 +114,9 @@ Partial Class dlgAbout
         '
         Me.TabPage3.Controls.Add(Me.TextBox3)
         Me.TabPage3.Location = New System.Drawing.Point(8, 39)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Size = New System.Drawing.Size(744, 322)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Credits"
@@ -129,7 +129,7 @@ Partial Class dlgAbout
         Me.TextBox3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.TextBox3.Location = New System.Drawing.Point(4, 4)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(6)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
@@ -149,7 +149,7 @@ Partial Class dlgAbout
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.ForeColor = System.Drawing.Color.Black
         Me.btnOK.Location = New System.Drawing.Point(646, 469)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnOK.Size = New System.Drawing.Size(136, 48)
@@ -165,7 +165,7 @@ Partial Class dlgAbout
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Location = New System.Drawing.Point(24, 23)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(6)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(52, 54)
         Me.PictureBox1.TabIndex = 11
@@ -174,7 +174,7 @@ Partial Class dlgAbout
         'lblLanguagePad
         '
         Me.lblLanguagePad.Font = New System.Drawing.Font("Calibri Light", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLanguagePad.ForeColor = System.Drawing.Color.DarkCyan
+        Me.lblLanguagePad.ForeColor = System.Drawing.Color.Firebrick
         Me.lblLanguagePad.Location = New System.Drawing.Point(86, 23)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
@@ -194,7 +194,7 @@ Partial Class dlgAbout
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.btnOK)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgAbout"

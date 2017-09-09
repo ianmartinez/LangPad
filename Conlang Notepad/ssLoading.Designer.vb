@@ -51,7 +51,7 @@ Partial Class ssLoading
         'lblLanguagePad
         '
         Me.lblLanguagePad.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLanguagePad.ForeColor = System.Drawing.Color.LightCyan
+        Me.lblLanguagePad.ForeColor = System.Drawing.Color.MistyRose
         Me.lblLanguagePad.Location = New System.Drawing.Point(126, 23)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
@@ -78,10 +78,10 @@ Partial Class ssLoading
         Me.pbLoading.BackgroundImage = CType(resources.GetObject("pbLoading.BackgroundImage"), System.Drawing.Image)
         Me.pbLoading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.pbLoading.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pbLoading.Location = New System.Drawing.Point(0, 167)
+        Me.pbLoading.Location = New System.Drawing.Point(0, 141)
         Me.pbLoading.Margin = New System.Windows.Forms.Padding(6)
         Me.pbLoading.Name = "pbLoading"
-        Me.pbLoading.Size = New System.Drawing.Size(654, 19)
+        Me.pbLoading.Size = New System.Drawing.Size(654, 45)
         Me.pbLoading.Style = resources.GetString("pbLoading.Style")
         Me.pbLoading.TabIndex = 6
         '

@@ -126,9 +126,11 @@ Public Class frmMain
             e.HasMorePages = False
         End If
     End Sub
+
     Public Shared Function WordCount(s As String) As Integer
         Return s.Split(New Char() {" "c}, StringSplitOptions.RemoveEmptyEntries).Length
     End Function
+
     Public Sub InsertImage(ByVal RichTextBox As RichTextBox, ByVal Image As Image)
         Dim obj As Object = Clipboard.GetDataObject
         Clipboard.SetImage(Image)
@@ -157,8 +159,8 @@ Public Class frmMain
 
     Private Sub SelectedDocument_TextChanged(sender As System.Object, e As System.EventArgs) Handles SelectedDocument.TextChanged
         RaiseEvent EditText()
-        ' lblCharCount.Text = "Character Count: " & SelectedDocument.TextLength
-        ' lblWordCount.Text = "Word Count: " & WordCount(SelectedDocument.Text)
+        CharCountToolStripLabel.Text = "Character Count: " & SelectedDocument.TextLength
+        WordCountToolStripLabel.Text = "Word Count: " & WordCount(SelectedDocument.Text)
         frmRTF.txtRTF.Text = SelectedDocument.Rtf
     End Sub
 
@@ -308,6 +310,7 @@ Public Class frmMain
         cmsMain.Renderer = New clsMenuRenderer
         FileToolStrip.Renderer = New clsToolstripRenderer
         FontToolStrip.Renderer = New clsToolstripRenderer
+        DataToolStrip.Renderer = New clsToolstripRenderer
 
         Title = Me.Text
         cmsMain.ImageScalingSize = New Size(16, 16)

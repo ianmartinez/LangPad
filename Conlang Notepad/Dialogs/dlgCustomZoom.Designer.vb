@@ -35,19 +35,19 @@ Partial Class dlgCustomZoom
         'nudZoom
         '
         Me.nudZoom.DecimalPlaces = 3
-        Me.nudZoom.Location = New System.Drawing.Point(164, 21)
-        Me.nudZoom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudZoom.Location = New System.Drawing.Point(18, 38)
+        Me.nudZoom.Margin = New System.Windows.Forms.Padding(4)
         Me.nudZoom.Maximum = New Decimal(New Integer() {64, 0, 0, 0})
         Me.nudZoom.Minimum = New Decimal(New Integer() {15626, 0, 0, 393216})
         Me.nudZoom.Name = "nudZoom"
-        Me.nudZoom.Size = New System.Drawing.Size(344, 31)
+        Me.nudZoom.Size = New System.Drawing.Size(490, 31)
         Me.nudZoom.TabIndex = 6
         Me.nudZoom.Value = New Decimal(New Integer() {64, 0, 0, 0})
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 25)
+        Me.Label2.Location = New System.Drawing.Point(13, 9)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(139, 25)
@@ -62,8 +62,8 @@ Partial Class dlgCustomZoom
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(216, 79)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(216, 101)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -83,7 +83,7 @@ Partial Class dlgCustomZoom
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
         Me.btnCancel.Location = New System.Drawing.Point(150, 4)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnCancel.Size = New System.Drawing.Size(138, 48)
@@ -105,7 +105,7 @@ Partial Class dlgCustomZoom
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.ForeColor = System.Drawing.Color.Black
         Me.btnOK.Location = New System.Drawing.Point(4, 4)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnOK.Size = New System.Drawing.Size(138, 48)
@@ -121,12 +121,12 @@ Partial Class dlgCustomZoom
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(530, 158)
+        Me.ClientSize = New System.Drawing.Size(530, 180)
         Me.Controls.Add(Me.nudZoom)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgCustomZoom"

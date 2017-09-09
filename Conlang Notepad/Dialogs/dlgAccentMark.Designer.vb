@@ -54,7 +54,7 @@ Partial Class dlgAccentMark
         '
         Me.txtCharacter.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCharacter.Location = New System.Drawing.Point(142, 21)
-        Me.txtCharacter.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCharacter.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCharacter.MaxLength = 100
         Me.txtCharacter.Name = "txtCharacter"
         Me.txtCharacter.Size = New System.Drawing.Size(414, 43)
@@ -79,7 +79,7 @@ Partial Class dlgAccentMark
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(400, 142)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -99,7 +99,7 @@ Partial Class dlgAccentMark
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
         Me.btnCancel.Location = New System.Drawing.Point(150, 4)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnCancel.Size = New System.Drawing.Size(138, 48)
@@ -121,7 +121,7 @@ Partial Class dlgAccentMark
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.ForeColor = System.Drawing.Color.Black
         Me.btnOK.Location = New System.Drawing.Point(4, 4)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnOK.Size = New System.Drawing.Size(138, 48)
@@ -144,9 +144,8 @@ Partial Class dlgAccentMark
         Me.btnAdd.ForeColor = System.Drawing.Color.Black
         Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
         Me.btnAdd.Location = New System.Drawing.Point(27, 136)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnAdd.Size = New System.Drawing.Size(72, 68)
         Me.btnAdd.Style = resources.GetString("btnAdd.Style")
         Me.btnAdd.TabIndex = 4
@@ -173,9 +172,9 @@ Partial Class dlgAccentMark
         Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
         Me.StylizedPanel1.Controls.Add(Me.lblResult)
         Me.StylizedPanel1.Location = New System.Drawing.Point(568, 21)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Size = New System.Drawing.Size(124, 106)
         Me.StylizedPanel1.Style = "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Colors=~255|~255" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~190" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text C" &
     "olor=#252b2f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
@@ -194,9 +193,8 @@ Partial Class dlgAccentMark
         Me.btnCopy.ForeColor = System.Drawing.Color.Black
         Me.btnCopy.Image = CType(resources.GetObject("btnCopy.Image"), System.Drawing.Image)
         Me.btnCopy.Location = New System.Drawing.Point(107, 136)
-        Me.btnCopy.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCopy.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCopy.Name = "btnCopy"
-        Me.btnCopy.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnCopy.Size = New System.Drawing.Size(72, 68)
         Me.btnCopy.Style = resources.GetString("btnCopy.Style")
         Me.btnCopy.TabIndex = 5
@@ -234,7 +232,7 @@ Partial Class dlgAccentMark
         Me.Controls.Add(Me.txtCharacter)
         Me.Controls.Add(Me.cbAccents)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgAccentMark"

@@ -34,7 +34,7 @@ Partial Class dlgAddPage
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 27)
+        Me.Label1.Location = New System.Drawing.Point(13, 9)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(74, 25)
@@ -49,8 +49,8 @@ Partial Class dlgAddPage
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(84, 83)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(84, 90)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -70,7 +70,7 @@ Partial Class dlgAddPage
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
         Me.btnCancel.Location = New System.Drawing.Point(150, 4)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnCancel.Size = New System.Drawing.Size(138, 48)
@@ -92,7 +92,7 @@ Partial Class dlgAddPage
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.ForeColor = System.Drawing.Color.Black
         Me.btnOK.Location = New System.Drawing.Point(4, 4)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnOK.Size = New System.Drawing.Size(138, 48)
@@ -104,10 +104,10 @@ Partial Class dlgAddPage
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(102, 24)
-        Me.txtName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtName.Location = New System.Drawing.Point(18, 38)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(274, 31)
+        Me.txtName.Size = New System.Drawing.Size(369, 31)
         Me.txtName.TabIndex = 0
         '
         'dlgAddPage
@@ -116,12 +116,12 @@ Partial Class dlgAddPage
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(400, 162)
+        Me.ClientSize = New System.Drawing.Size(400, 169)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgAddPage"

@@ -47,7 +47,7 @@ Partial Class dlgUpdate
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(554, 633)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -68,7 +68,7 @@ Partial Class dlgUpdate
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
         Me.btnCancel.Location = New System.Drawing.Point(150, 4)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnCancel.Size = New System.Drawing.Size(138, 46)
@@ -90,7 +90,7 @@ Partial Class dlgUpdate
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.ForeColor = System.Drawing.Color.Black
         Me.btnOK.Location = New System.Drawing.Point(4, 4)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnOK.Size = New System.Drawing.Size(138, 46)
@@ -104,9 +104,9 @@ Partial Class dlgUpdate
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Location = New System.Drawing.Point(24, 23)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(6)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(52, 54)
         Me.PictureBox1.TabIndex = 70
@@ -127,7 +127,7 @@ Partial Class dlgUpdate
         Me.txtDecription.BackColor = System.Drawing.Color.White
         Me.txtDecription.ForeColor = System.Drawing.Color.Black
         Me.txtDecription.Location = New System.Drawing.Point(24, 113)
-        Me.txtDecription.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.txtDecription.Margin = New System.Windows.Forms.Padding(6)
         Me.txtDecription.Multiline = True
         Me.txtDecription.Name = "txtDecription"
         Me.txtDecription.ReadOnly = True
@@ -139,7 +139,7 @@ Partial Class dlgUpdate
         'lblLanguagePad
         '
         Me.lblLanguagePad.Font = New System.Drawing.Font("Calibri Light", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLanguagePad.ForeColor = System.Drawing.Color.DarkCyan
+        Me.lblLanguagePad.ForeColor = System.Drawing.Color.Firebrick
         Me.lblLanguagePad.Location = New System.Drawing.Point(86, 23)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
@@ -161,9 +161,9 @@ Partial Class dlgUpdate
         Me.btnReddit.ForeColor = System.Drawing.Color.Black
         Me.btnReddit.Image = CType(resources.GetObject("btnReddit.Image"), System.Drawing.Image)
         Me.btnReddit.Location = New System.Drawing.Point(23, 626)
-        Me.btnReddit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnReddit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnReddit.Name = "btnReddit"
-        Me.btnReddit.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.btnReddit.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnReddit.Size = New System.Drawing.Size(72, 68)
         Me.btnReddit.Style = resources.GetString("btnReddit.Style")
         Me.btnReddit.TabIndex = 76
@@ -184,9 +184,9 @@ Partial Class dlgUpdate
         Me.btnSource.ForeColor = System.Drawing.Color.Black
         Me.btnSource.Image = CType(resources.GetObject("btnSource.Image"), System.Drawing.Image)
         Me.btnSource.Location = New System.Drawing.Point(103, 626)
-        Me.btnSource.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSource.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSource.Name = "btnSource"
-        Me.btnSource.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.btnSource.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.btnSource.Size = New System.Drawing.Size(72, 68)
         Me.btnSource.Style = resources.GetString("btnSource.Style")
         Me.btnSource.TabIndex = 77
@@ -209,13 +209,13 @@ Partial Class dlgUpdate
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgUpdate"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "s"
+        Me.Text = "Update"
         Me.TableLayoutPanel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
