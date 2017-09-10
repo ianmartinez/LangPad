@@ -28,7 +28,6 @@ Partial Class NotebookEditor
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnGoWebsite = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel2 = New Tundra.DoubleBufferedPanel()
-        Me.btnDictionary = New Tundra.StylizedButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtInfo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -51,6 +50,8 @@ Partial Class NotebookEditor
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ImportToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ExportToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.DictionaryToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.DocumentToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.DoubleBufferedPanel2.SuspendLayout()
         Me.StylizedPanel1.SuspendLayout()
@@ -102,7 +103,6 @@ Partial Class NotebookEditor
         'DoubleBufferedPanel2
         '
         Me.DoubleBufferedPanel2.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.DoubleBufferedPanel2.Controls.Add(Me.btnDictionary)
         Me.DoubleBufferedPanel2.Controls.Add(Me.Label4)
         Me.DoubleBufferedPanel2.Controls.Add(Me.txtInfo)
         Me.DoubleBufferedPanel2.Controls.Add(Me.btnGoWebsite)
@@ -121,28 +121,6 @@ Partial Class NotebookEditor
         Me.DoubleBufferedPanel2.Padding = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(524, 403)
         Me.DoubleBufferedPanel2.TabIndex = 78
-        '
-        'btnDictionary
-        '
-        Me.btnDictionary.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnDictionary.BackColor = System.Drawing.Color.Transparent
-        Me.btnDictionary.BackgroundImage = CType(resources.GetObject("btnDictionary.BackgroundImage"), System.Drawing.Image)
-        Me.btnDictionary.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnDictionary.FlatAppearance.BorderSize = 0
-        Me.btnDictionary.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnDictionary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnDictionary.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDictionary.ForeColor = System.Drawing.Color.Black
-        Me.btnDictionary.Location = New System.Drawing.Point(5, 348)
-        Me.btnDictionary.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnDictionary.Name = "btnDictionary"
-        Me.btnDictionary.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.btnDictionary.Size = New System.Drawing.Size(514, 49)
-        Me.btnDictionary.Style = resources.GetString("btnDictionary.Style")
-        Me.btnDictionary.TabIndex = 6
-        Me.btnDictionary.Text = "Dictionary"
-        Me.btnDictionary.UseCompatibleTextRendering = True
-        Me.btnDictionary.UseVisualStyleBackColor = False
         '
         'Label4
         '
@@ -163,7 +141,7 @@ Partial Class NotebookEditor
         Me.txtInfo.Multiline = True
         Me.txtInfo.Name = "txtInfo"
         Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo.Size = New System.Drawing.Size(408, 154)
+        Me.txtInfo.Size = New System.Drawing.Size(408, 217)
         Me.txtInfo.TabIndex = 5
         '
         'Label3
@@ -259,10 +237,10 @@ Partial Class NotebookEditor
         Me.DocumentToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.DocumentToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.DocumentToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton})
+        Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton, Me.ToolStripSeparator4, Me.DictionaryToolStripButton})
         Me.DocumentToolStrip.Location = New System.Drawing.Point(3, 0)
         Me.DocumentToolStrip.Name = "DocumentToolStrip"
-        Me.DocumentToolStrip.Size = New System.Drawing.Size(245, 31)
+        Me.DocumentToolStrip.Size = New System.Drawing.Size(279, 31)
         Me.DocumentToolStrip.TabIndex = 0
         '
         'PageUpToolStripButton
@@ -360,6 +338,21 @@ Partial Class NotebookEditor
         Me.ExportToolStripButton.Size = New System.Drawing.Size(28, 28)
         Me.ExportToolStripButton.Text = "Export Page"
         '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 31)
+        '
+        'DictionaryToolStripButton
+        '
+        Me.DictionaryToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.DictionaryToolStripButton.Image = CType(resources.GetObject("DictionaryToolStripButton.Image"), System.Drawing.Image)
+        Me.DictionaryToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.DictionaryToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.DictionaryToolStripButton.Name = "DictionaryToolStripButton"
+        Me.DictionaryToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.DictionaryToolStripButton.Text = "Dictionary"
+        '
         'DocumentToolStripContainer
         '
         '
@@ -426,7 +419,6 @@ Partial Class NotebookEditor
     Friend WithEvents txtInfo As System.Windows.Forms.TextBox
     Friend WithEvents btnGoWebsite As Tundra.StylizedButton
     Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
-    Friend WithEvents btnDictionary As Tundra.StylizedButton
     Friend WithEvents PageUpToolStripButton As ToolStripButton
     Friend WithEvents PageDownToolStripButton As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
@@ -440,4 +432,6 @@ Partial Class NotebookEditor
     Friend WithEvents ExportToolStripButton As ToolStripButton
     Friend WithEvents DocumentToolStrip As ToolStrip
     Friend WithEvents DocumentToolStripContainer As ToolStripContainer
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents DictionaryToolStripButton As ToolStripButton
 End Class

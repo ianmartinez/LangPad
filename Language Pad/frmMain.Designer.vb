@@ -66,13 +66,13 @@ Partial Class frmMain
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.dlgSaveImage = New System.Windows.Forms.SaveFileDialog()
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.ThemeToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ThemeCombo = New System.Windows.Forms.ToolStripComboBox()
         Me.DataToolStrip = New System.Windows.Forms.ToolStrip()
         Me.CharCountToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
         Me.WordCountToolStripLabel = New System.Windows.Forms.ToolStripLabel()
-        Me.ThemeToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ThemeCombo = New System.Windows.Forms.ToolStripComboBox()
         Me.pnlFindReplace = New Tundra.StylizedPanel()
         Me.btnFindNext = New Tundra.StylizedButton()
         Me.btnReplaceAll = New Tundra.StylizedButton()
@@ -204,8 +204,8 @@ Partial Class frmMain
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
-        Me.DataToolStrip.SuspendLayout()
         Me.ThemeToolStrip.SuspendLayout()
+        Me.DataToolStrip.SuspendLayout()
         Me.pnlFindReplace.SuspendLayout()
         Me.FontToolStrip.SuspendLayout()
         Me.FileToolStrip.SuspendLayout()
@@ -530,7 +530,7 @@ Partial Class frmMain
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1910, 1137)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1910, 1175)
         Me.SplitContainer1.SplitterDistance = 161
         Me.SplitContainer1.TabIndex = 73
         '
@@ -551,7 +551,7 @@ Partial Class frmMain
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.StylizedPanel1)
         Me.SplitContainer2.Panel2MinSize = 235
-        Me.SplitContainer2.Size = New System.Drawing.Size(1910, 972)
+        Me.SplitContainer2.Size = New System.Drawing.Size(1910, 1010)
         Me.SplitContainer2.SplitterDistance = 1366
         Me.SplitContainer2.TabIndex = 1
         '
@@ -562,7 +562,7 @@ Partial Class frmMain
         Me.tcNotebook.Margin = New System.Windows.Forms.Padding(4)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(1366, 968)
+        Me.tcNotebook.Size = New System.Drawing.Size(1366, 1006)
         Me.tcNotebook.TabIndex = 73
         '
         'StylizedPanel1
@@ -574,7 +574,7 @@ Partial Class frmMain
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(540, 972)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(540, 1010)
         Me.StylizedPanel1.Style = "Colors=~245|~245" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight" &
     " Color=$0"
         Me.StylizedPanel1.TabIndex = 13
@@ -600,14 +600,14 @@ Partial Class frmMain
         '
         'ToolStripContainer1.BottomToolStripPanel
         '
-        Me.ToolStripContainer1.BottomToolStripPanel.Controls.Add(Me.ThemeToolStrip)
         Me.ToolStripContainer1.BottomToolStripPanel.Controls.Add(Me.DataToolStrip)
+        Me.ToolStripContainer1.BottomToolStripPanel.Controls.Add(Me.ThemeToolStrip)
         '
         'ToolStripContainer1.ContentPanel
         '
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.SplitContainer1)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.pnlFindReplace)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1910, 1205)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1910, 1243)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'ToolStripContainer1.LeftToolStripPanel
@@ -623,44 +623,17 @@ Partial Class frmMain
         '
         'ToolStripContainer1.TopToolStripPanel
         '
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.FontToolStrip)
         Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.FileToolStrip)
-        '
-        'DataToolStrip
-        '
-        Me.DataToolStrip.Dock = System.Windows.Forms.DockStyle.None
-        Me.DataToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.DataToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel})
-        Me.DataToolStrip.Location = New System.Drawing.Point(1510, 0)
-        Me.DataToolStrip.Name = "DataToolStrip"
-        Me.DataToolStrip.Size = New System.Drawing.Size(400, 35)
-        Me.DataToolStrip.TabIndex = 2
-        '
-        'CharCountToolStripLabel
-        '
-        Me.CharCountToolStripLabel.Name = "CharCountToolStripLabel"
-        Me.CharCountToolStripLabel.Size = New System.Drawing.Size(213, 32)
-        Me.CharCountToolStripLabel.Text = "Character Count: 0"
-        '
-        'ToolStripSeparator10
-        '
-        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
-        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 35)
-        '
-        'WordCountToolStripLabel
-        '
-        Me.WordCountToolStripLabel.Name = "WordCountToolStripLabel"
-        Me.WordCountToolStripLabel.Size = New System.Drawing.Size(169, 32)
-        Me.WordCountToolStripLabel.Text = "Word Count: 0"
+        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.FontToolStrip)
         '
         'ThemeToolStrip
         '
         Me.ThemeToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.ThemeToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.ThemeToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ThemeCombo})
-        Me.ThemeToolStrip.Location = New System.Drawing.Point(431, 0)
+        Me.ThemeToolStrip.Location = New System.Drawing.Point(3, 0)
         Me.ThemeToolStrip.Name = "ThemeToolStrip"
-        Me.ThemeToolStrip.Size = New System.Drawing.Size(293, 40)
+        Me.ThemeToolStrip.Size = New System.Drawing.Size(229, 40)
         Me.ThemeToolStrip.TabIndex = 2
         '
         'ToolStripLabel1
@@ -676,6 +649,33 @@ Partial Class frmMain
         Me.ThemeCombo.Items.AddRange(New Object() {"Ice (Default)", "Night", "Luna", "Olive"})
         Me.ThemeCombo.Name = "ThemeCombo"
         Me.ThemeCombo.Size = New System.Drawing.Size(121, 40)
+        '
+        'DataToolStrip
+        '
+        Me.DataToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.DataToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.DataToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel})
+        Me.DataToolStrip.Location = New System.Drawing.Point(232, 0)
+        Me.DataToolStrip.Name = "DataToolStrip"
+        Me.DataToolStrip.Size = New System.Drawing.Size(462, 38)
+        Me.DataToolStrip.TabIndex = 2
+        '
+        'CharCountToolStripLabel
+        '
+        Me.CharCountToolStripLabel.Name = "CharCountToolStripLabel"
+        Me.CharCountToolStripLabel.Size = New System.Drawing.Size(213, 35)
+        Me.CharCountToolStripLabel.Text = "Character Count: 0"
+        '
+        'ToolStripSeparator10
+        '
+        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
+        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 38)
+        '
+        'WordCountToolStripLabel
+        '
+        Me.WordCountToolStripLabel.Name = "WordCountToolStripLabel"
+        Me.WordCountToolStripLabel.Size = New System.Drawing.Size(169, 35)
+        Me.WordCountToolStripLabel.Text = "Word Count: 0"
         '
         'pnlFindReplace
         '
@@ -823,7 +823,7 @@ Partial Class frmMain
         Me.FontToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.FontToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.FontToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripButton, Me.ToolStripSeparator9, Me.BoldToolStripButton, Me.ItalicToolStripButton, Me.UnderlineToolStripButton, Me.StrikeToolStripButton, Me.ToolStripSeparator5, Me.AlignLeftToolStripButton, Me.AlignCenterToolStripButton, Me.AlignRightToolStripButton, Me.ToolStripSeparator8, Me.IndentToolStripComboBox, Me.IndentToolStripButton})
-        Me.FontToolStrip.Location = New System.Drawing.Point(3, 0)
+        Me.FontToolStrip.Location = New System.Drawing.Point(279, 0)
         Me.FontToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.FontToolStrip.Name = "FontToolStrip"
         Me.FontToolStrip.Size = New System.Drawing.Size(384, 40)
@@ -945,7 +945,7 @@ Partial Class frmMain
         Me.FileToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.FileToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.FileToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.toolStripSeparator, Me.CutToolStripButton, Me.CopyToolStripButton, Me.PasteToolStripButton, Me.PastePlainToolStripButton, Me.toolStripSeparator2, Me.UndoToolStripButton, Me.RedoToolStripButton})
-        Me.FileToolStrip.Location = New System.Drawing.Point(3, 40)
+        Me.FileToolStrip.Location = New System.Drawing.Point(3, 0)
         Me.FileToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.FileToolStrip.Name = "FileToolStrip"
         Me.FileToolStrip.Size = New System.Drawing.Size(276, 38)
@@ -1578,7 +1578,7 @@ Partial Class frmMain
         Me.NotebookEditor1.MinimumSize = New System.Drawing.Size(524, 0)
         Me.NotebookEditor1.Name = "NotebookEditor1"
         Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
-        Me.NotebookEditor1.Size = New System.Drawing.Size(540, 972)
+        Me.NotebookEditor1.Size = New System.Drawing.Size(540, 1010)
         Me.NotebookEditor1.TabIndex = 72
         '
         'frmMain
@@ -1621,10 +1621,10 @@ Partial Class frmMain
         Me.ToolStripContainer1.TopToolStripPanel.PerformLayout()
         Me.ToolStripContainer1.ResumeLayout(False)
         Me.ToolStripContainer1.PerformLayout()
-        Me.DataToolStrip.ResumeLayout(False)
-        Me.DataToolStrip.PerformLayout()
         Me.ThemeToolStrip.ResumeLayout(False)
         Me.ThemeToolStrip.PerformLayout()
+        Me.DataToolStrip.ResumeLayout(False)
+        Me.DataToolStrip.PerformLayout()
         Me.pnlFindReplace.ResumeLayout(False)
         Me.pnlFindReplace.PerformLayout()
         Me.FontToolStrip.ResumeLayout(False)

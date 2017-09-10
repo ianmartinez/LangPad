@@ -37,6 +37,9 @@
     Public clNight_DropBorder As Color = Color.FromArgb(255, 205, 149, 63)
     Public clNight_DropShadow As Color = Color.FromArgb(255, 238, 230, 215)
 
+    Public clrNightSep As Color = Color.FromArgb(255, 79, 84, 88)
+    Public clrNightSepWhite As Color = Color.FromArgb(200, 255, 255, 255)
+
     Public Sub DrawRoundedRectangle(ByVal objGraphics As Graphics,
                                 ByVal m_intxAxis As Integer,
                                 ByVal m_intyAxis As Integer,
@@ -212,6 +215,16 @@ End Class
 
 Public Class clsNightToolstripRenderer
     Inherits ToolStripProfessionalRenderer
+
+    Protected Overrides Sub OnRenderSeparator(ByVal e As ToolStripSeparatorRenderEventArgs)
+        ' MyBase.OnRenderSeparator(e)
+
+        'Draws the background of the separators. You can draw anything you want
+        Dim rect As New Rectangle(3, 5, 1, e.Item.Height - 10)
+        Dim rect2 As New Rectangle(4, 6, 1, e.Item.Height - 10)
+        e.Graphics.FillRectangle(New SolidBrush(clrNightSep), rect)
+        e.Graphics.FillRectangle(New SolidBrush(clrNightSepWhite), rect2)
+    End Sub
 
     Protected Overrides Sub OnRenderToolStripBorder(e As ToolStripRenderEventArgs)
         'MyBase.OnRenderToolStripBorder(e)

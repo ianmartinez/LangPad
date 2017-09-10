@@ -40,7 +40,6 @@
     Public clLuna_DropBorder As Color = Color.FromArgb(255, 205, 149, 63)
     Public clLuna_DropShadow As Color = Color.FromArgb(255, 238, 230, 215)
 
-
     Public clrLunaSep As Color = Color.FromArgb(255, 106, 140, 203)
     Public clrLunaSepWhite As Color = Color.FromArgb(255, 232, 251, 255)
 
@@ -219,7 +218,6 @@ End Class
 
 Public Class clsLunaToolstripRenderer
     Inherits ToolStripProfessionalRenderer
-
 
     Protected Overrides Sub OnRenderSeparator(ByVal e As ToolStripSeparatorRenderEventArgs)
         ' MyBase.OnRenderSeparator(e)

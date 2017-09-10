@@ -52,10 +52,6 @@ Public Class NotebookEditor
         If FirstTabUpdate = True Then CurrentDocument.Info = txtInfo.Text
     End Sub
 
-    Private Sub btnDictionary_Click(sender As Object, e As EventArgs) Handles btnDictionary.Click
-        frmMain.DictionaryToolStripMenuItem_Click(Me, e)
-    End Sub
-
     Private Sub PageUpToolStripButton_Click(sender As Object, e As EventArgs) Handles PageUpToolStripButton.Click
         frmMain.SaveTabs()
 
@@ -131,12 +127,7 @@ Public Class NotebookEditor
         DocumentToolStripContainer.Invalidate()
     End Sub
 
-    Private Sub DocumentToolStripContainer_Click(sender As Object, e As EventArgs) Handles DocumentToolStripContainer.Click
-
+    Private Sub DictionaryToolStripButton_Click(sender As Object, e As EventArgs) Handles DictionaryToolStripButton.Click
+        frmMain.DictionaryToolStripMenuItem_Click(Me, e)
     End Sub
-
-    Private Sub DocumentToolStripContainer_TopToolStripPanel_Click(sender As Object, e As EventArgs) Handles DocumentToolStripContainer.TopToolStripPanel.Click
-
-    End Sub
-
 End Class
