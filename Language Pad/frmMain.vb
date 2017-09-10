@@ -1143,6 +1143,8 @@ Public Class frmMain
             SetTheme(New NightTheme)
         ElseIf ThemeCombo.SelectedItem.ToString().Equals("Luna") Then
             SetTheme(New LunaTheme)
+        ElseIf ThemeCombo.SelectedItem.ToString().Equals("Olive") Then
+            SetTheme(New OliveTheme)
         Else
             SetTheme(New IceTheme)
         End If

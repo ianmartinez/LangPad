@@ -116,6 +116,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Themes\OliveTheme.vb" />
     <Compile Include="Themes\LunaTheme.vb" />
     <Compile Include="Themes\NightTheme.vb" />
     <Compile Include="Themes\IceTheme.vb" />

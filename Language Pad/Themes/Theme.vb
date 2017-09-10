@@ -61,7 +61,6 @@ Public Class NightTheme
     End Function
 End Class
 
-
 Public Class LunaTheme
     Inherits Theme
 
@@ -81,5 +80,27 @@ Public Class LunaTheme
 
     Public Overrides Function GetMenuRenderer() As ToolStripRenderer
         Return New clsLunaMenuRenderer
+    End Function
+End Class
+
+Public Class OliveTheme
+    Inherits Theme
+
+    Public Sub New()
+        MyBase.New("Olive")
+
+        Color1 = clrOliveHorBG_Color1
+        Color2 = clrOliveHorBG_Color2
+        PanelBack = Color.FromArgb(255, 241, 240, 228)
+
+        VerticalMenuGradient = False
+    End Sub
+
+    Public Overrides Function GetToolStripRenderer() As ToolStripRenderer
+        Return New clsOliveToolstripRenderer
+    End Function
+
+    Public Overrides Function GetMenuRenderer() As ToolStripRenderer
+        Return New clsOliveMenuRenderer
     End Function
 End Class

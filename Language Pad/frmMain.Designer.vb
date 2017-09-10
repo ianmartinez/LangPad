@@ -631,7 +631,7 @@ Partial Class frmMain
         Me.DataToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.DataToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.DataToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel})
-        Me.DataToolStrip.Location = New System.Drawing.Point(1172, 0)
+        Me.DataToolStrip.Location = New System.Drawing.Point(1510, 0)
         Me.DataToolStrip.Name = "DataToolStrip"
         Me.DataToolStrip.Size = New System.Drawing.Size(400, 35)
         Me.DataToolStrip.TabIndex = 2
@@ -673,7 +673,7 @@ Partial Class frmMain
         'ThemeCombo
         '
         Me.ThemeCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ThemeCombo.Items.AddRange(New Object() {"Ice (Default)", "Night", "Luna", "Olive", "Metallic"})
+        Me.ThemeCombo.Items.AddRange(New Object() {"Ice (Default)", "Night", "Luna", "Olive"})
         Me.ThemeCombo.Name = "ThemeCombo"
         Me.ThemeCombo.Size = New System.Drawing.Size(121, 40)
         '

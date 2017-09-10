@@ -6,8 +6,8 @@ Public Class NotebookEditor
     Public VerticalMenuGradient As Boolean = False
 
     Public Sub SetTheme(Theme As Theme)
-        Color1 = Theme.Color1
-        Color2 = Theme.Color2
+        Color1 = Theme.PanelBack
+        Color2 = Theme.PanelBack
         VerticalMenuGradient = Theme.VerticalMenuGradient
         DoubleBufferedPanel2.BackColor = Theme.PanelBack
         BackColor = Theme.PanelBack
