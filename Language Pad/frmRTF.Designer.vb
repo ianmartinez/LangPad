@@ -49,7 +49,7 @@ Partial Class frmRTF
         Me.txtRTF.Location = New System.Drawing.Point(0, 0)
         Me.txtRTF.Margin = New System.Windows.Forms.Padding(4)
         Me.txtRTF.Name = "txtRTF"
-        Me.txtRTF.Size = New System.Drawing.Size(1360, 940)
+        Me.txtRTF.Size = New System.Drawing.Size(1360, 933)
         Me.txtRTF.TabIndex = 1
         Me.txtRTF.Text = ""
         '
@@ -62,7 +62,7 @@ Partial Class frmRTF
         'ToolStripContainer1.ContentPanel
         '
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.txtRTF)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1360, 940)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1360, 933)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'ToolStripContainer1.LeftToolStripPanel
@@ -87,7 +87,7 @@ Partial Class frmRTF
         Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoToolStripButton, Me.RedoToolStripButton, Me.ToolStripSeparator1, Me.CutToolStripButton, Me.CopyToolStripButton, Me.PasteToolStripButton, Me.ToolStripSeparator2, Me.RefreshToolStripButton})
         Me.MainToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.MainToolStrip.Name = "MainToolStrip"
-        Me.MainToolStrip.Size = New System.Drawing.Size(1360, 31)
+        Me.MainToolStrip.Size = New System.Drawing.Size(1360, 38)
         Me.MainToolStrip.Stretch = True
         Me.MainToolStrip.TabIndex = 0
         '
@@ -98,7 +98,7 @@ Partial Class frmRTF
         Me.UndoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.UndoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.UndoToolStripButton.Name = "UndoToolStripButton"
-        Me.UndoToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.UndoToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.UndoToolStripButton.Text = "Undo"
         '
         'RedoToolStripButton

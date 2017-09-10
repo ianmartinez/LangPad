@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel
+Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports System.Text
 Imports Tundra
@@ -7,6 +8,34 @@ Public Class frmDictionary
     Dim c As TextBox
     Dim SelectedCell As DataGridViewCell
     Public Loaded As Boolean = False
+    Public Color1 As Color
+    Public Color2 As Color
+    Public VerticalMenuGradient As Boolean = False
+
+    Public Sub SetTheme(Theme As Theme)
+        Color1 = Theme.PanelBack
+        Color2 = Theme.PanelBack
+        VerticalMenuGradient = Theme.VerticalMenuGradient
+        BackColor = Theme.PanelBack
+
+        MainToolStrip.Renderer = Theme.GetToolStripRenderer()
+
+        Refresh()
+    End Sub
+
+    Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
+        ToolStripContainer1.BottomToolStripPanel.Paint, ToolStripContainer1.LeftToolStripPanel.Paint, ToolStripContainer1.RightToolStripPanel.Paint
+        Dim g As Graphics = e.Graphics
+        Dim rect As New Rectangle(0, 0, ToolStripContainer1.Width, Me.Height)
+        Dim b As New LinearGradientBrush(rect, Color1, Color2, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
+        g.FillRectangle(b, rect)
+    End Sub
+
+    Private Sub ToolStripContainer1_ToolStripPanel_SizeChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripContainer1.TopToolStripPanel.SizeChanged,
+        ToolStripContainer1.BottomToolStripPanel.SizeChanged, ToolStripContainer1.LeftToolStripPanel.SizeChanged, ToolStripContainer1.RightToolStripPanel.SizeChanged
+        ToolStripContainer1.Invalidate()
+    End Sub
+
     Public Sub LoadDictionary()
         dgvDictionary.Rows.Clear()
 
@@ -50,8 +79,6 @@ Public Class frmDictionary
         Textbox.SelectionLength = 0
     End Sub
 
-
-
     Public Sub InsertIPA(sender As Object, e As EventArgs)
         On Error Resume Next
         Dim Button As Button = CType(sender, Button)
@@ -62,78 +89,18 @@ Public Class frmDictionary
     End Sub
 
     Private Sub frmDictionary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        If My.Settings.ForceSansSerif = True Then
-            Me.Font = New Font("Microsoft Sans Serif", "8.25")
-        End If
-
-        pnlTop.Height = pnlHome.Height
-
         LoadDictionary()
         Loaded = True
-    End Sub
-
-    Private Sub dgvDictionary_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellContentClick
-
     End Sub
 
     Private Sub dgvDictionary_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles dgvDictionary.EditingControlShowing
         c = e.Control
     End Sub
 
-    Private Sub dgvDictionary_EditModeChanged(sender As Object, e As EventArgs) Handles dgvDictionary.EditModeChanged
-
-    End Sub
-
-    Private Sub dgvDictionary_GiveFeedback(sender As Object, e As GiveFeedbackEventArgs) Handles dgvDictionary.GiveFeedback
-
-    End Sub
-
-    Private Sub dgvDictionary_LostFocus(sender As Object, e As EventArgs) Handles dgvDictionary.LostFocus
-
-    End Sub
-
-    Private Sub dgvDictionary_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellEndEdit
-
-    End Sub
-
     Private Sub frmDictionary_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         e.Cancel = True
         SaveDictionary()
         Me.Hide()
-    End Sub
-
-    Private Sub btnSymbols_Click(sender As Object, e As EventArgs) Handles btnSymbols.Click
-        SplitContainer1.Panel1Collapsed = SplitContainer1.Panel1Collapsed Xor True
-    End Sub
-
-    Private Sub btnCustomSymbols_Click(sender As Object, e As EventArgs) Handles btnCustomSymbols.Click
-        dlgCustomSymbols.ShowDialog()
-    End Sub
-
-    Private Sub btnAccentMark_Click(sender As Object, e As EventArgs) Handles btnAccentMark.Click
-        On Error Resume Next
-        dgvDictionary.Focus()
-        dgvDictionary.BeginEdit(False)
-
-        If c.SelectionLength > 0 Then
-            dlgAccentMark.Character = c.SelectedText
-        Else
-            dlgAccentMark.Character = ""
-        End If
-
-        If dlgAccentMark.ShowDialog = DialogResult.OK Then
-            InsertText(c, dlgAccentMark.Character)
-            dlgAccentMark.Character = ""
-        End If
-    End Sub
-
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        dgvDictionary.Rows.Add(1)
-    End Sub
-
-    Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
-        dgvDictionary.Rows.RemoveAt(dgvDictionary.CurrentCell.RowIndex)
     End Sub
 
     Private Sub dgvDictionary_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles dgvDictionary.RowPostPaint
@@ -149,27 +116,27 @@ Public Class frmDictionary
         e.Graphics.DrawString(rowIdx, rowFont, SystemBrushes.ControlText, headerBounds, centerFormat)
     End Sub
 
-    Private Sub btnNew_Click(sender As Object, e As EventArgs) Handles btnNew.Click
+    Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
         If MessageBox.Show("This cannot be undone. Are you sure you want to continue? ", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes Then
             dgvDictionary.Rows.Clear()
         End If
     End Sub
 
-    Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
+    Private Sub OpenToolStripButton_Click(sender As Object, e As EventArgs) Handles OpenToolStripButton.Click
         If dlgOpen.ShowDialog = DialogResult.OK Then
             CurrentDocument.WordDictionary.Open(dlgOpen.FileName)
             LoadDictionary()
         End If
     End Sub
 
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
         SaveDictionary()
         If dlgSave.ShowDialog = DialogResult.OK Then
             CurrentDocument.WordDictionary.Save(dlgSave.FileName)
         End If
     End Sub
 
-    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+    Private Sub ExportToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportToolStripButton.Click
         If dlgExport.ShowDialog = DialogResult.OK Then
             Dim cols As Integer
             Dim wr As New StreamWriter(New FileStream(dlgExport.FileName, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
@@ -196,15 +163,43 @@ Public Class frmDictionary
         End If
     End Sub
 
-    Private Sub btnFont_Click(sender As Object, e As EventArgs) Handles btnFont.Click
+    Private Sub SymbolsToolStripButton_Click(sender As Object, e As EventArgs) Handles SymbolsToolStripButton.Click
+        SplitContainer1.Panel1Collapsed = SplitContainer1.Panel1Collapsed Xor True
+    End Sub
+
+    Private Sub CustomSymbolsToolStripButton_Click(sender As Object, e As EventArgs) Handles CustomSymbolsToolStripButton.Click
+        dlgCustomSymbols.ShowDialog()
+    End Sub
+
+    Private Sub AccentMarkToolStripButton_Click(sender As Object, e As EventArgs) Handles AccentMarkToolStripButton.Click
+        On Error Resume Next
+        dgvDictionary.Focus()
+        dgvDictionary.BeginEdit(False)
+
+        If c.SelectionLength > 0 Then
+            dlgAccentMark.Character = c.SelectedText
+        Else
+            dlgAccentMark.Character = ""
+        End If
+
+        If dlgAccentMark.ShowDialog = DialogResult.OK Then
+            InsertText(c, dlgAccentMark.Character)
+            dlgAccentMark.Character = ""
+        End If
+    End Sub
+
+    Private Sub AddToolStripButton_Click(sender As Object, e As EventArgs) Handles AddToolStripButton.Click
+        dgvDictionary.Rows.Add(1)
+    End Sub
+
+    Private Sub RemoveToolStripButton_Click(sender As Object, e As EventArgs) Handles RemoveToolStripButton.Click
+        dgvDictionary.Rows.RemoveAt(dgvDictionary.CurrentCell.RowIndex)
+    End Sub
+
+    Private Sub FontToolStripButton_Click(sender As Object, e As EventArgs) Handles FontToolStripButton.Click
         dlgFont.Font = dgvDictionary.DefaultCellStyle.Font
         If dlgFont.ShowDialog = DialogResult.OK Then
             dgvDictionary.DefaultCellStyle.Font = dlgFont.Font
         End If
-    End Sub
-
-
-    Private Sub btnFind_Click(sender As Object, e As EventArgs) 
-
     End Sub
 End Class

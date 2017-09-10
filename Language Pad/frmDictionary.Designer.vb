@@ -22,28 +22,8 @@ Partial Class frmDictionary
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDictionary))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.pnlTop = New Tundra.StylizedPanel()
-        Me.pnlHome = New Tundra.DoubleBufferedPanel()
-        Me.btnFont = New Tundra.StylizedButton()
-        Me.DoubleBufferedPanel2 = New Tundra.DoubleBufferedPanel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnExport = New Tundra.StylizedButton()
-        Me.btnRemove = New Tundra.StylizedButton()
-        Me.btnAdd = New Tundra.StylizedButton()
-        Me.DoubleBufferedPanel1 = New Tundra.DoubleBufferedPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnCustomSymbols = New Tundra.StylizedButton()
-        Me.DoubleBufferedPanel15 = New Tundra.DoubleBufferedPanel()
-        Me.DoubleBufferedPanel10 = New Tundra.DoubleBufferedPanel()
-        Me.btnAccentMark = New Tundra.StylizedButton()
-        Me.btnOpen = New Tundra.StylizedButton()
-        Me.btnSymbols = New Tundra.StylizedButton()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.btnSave = New Tundra.StylizedButton()
-        Me.btnNew = New Tundra.StylizedButton()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDictionary))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.tcSymbols = New System.Windows.Forms.TabControl()
         Me.ConsonantsTabPage = New System.Windows.Forms.TabPage()
@@ -71,8 +51,21 @@ Partial Class frmDictionary
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.dlgExport = New System.Windows.Forms.SaveFileDialog()
         Me.dlgFont = New System.Windows.Forms.FontDialog()
-        Me.pnlTop.SuspendLayout()
-        Me.pnlHome.SuspendLayout()
+        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.MainToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ExportToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.CustomSymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.AccentMarkToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.AddToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.RemoveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.FontToolStripButton = New System.Windows.Forms.ToolStripButton()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -87,410 +80,32 @@ Partial Class frmDictionary
         Me.CommonTabPage.SuspendLayout()
         Me.CustomTabPage.SuspendLayout()
         CType(Me.dgvDictionary, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStripContainer1.ContentPanel.SuspendLayout()
+        Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
+        Me.ToolStripContainer1.SuspendLayout()
+        Me.MainToolStrip.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'pnlTop
-        '
-        Me.pnlTop.AutoScroll = True
-        Me.pnlTop.BackColor = System.Drawing.Color.Transparent
-        Me.pnlTop.Controls.Add(Me.pnlHome)
-        Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlTop.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTop.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlTop.Name = "pnlTop"
-        Me.pnlTop.Size = New System.Drawing.Size(780, 116)
-        Me.pnlTop.Style = "Colors=~245|~245|~239" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|0.8|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
-    "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
-        Me.pnlTop.TabIndex = 13
-        '
-        'pnlHome
-        '
-        Me.pnlHome.AutoScroll = True
-        Me.pnlHome.BackColor = System.Drawing.Color.Transparent
-        Me.pnlHome.Controls.Add(Me.btnFont)
-        Me.pnlHome.Controls.Add(Me.DoubleBufferedPanel2)
-        Me.pnlHome.Controls.Add(Me.Label2)
-        Me.pnlHome.Controls.Add(Me.btnExport)
-        Me.pnlHome.Controls.Add(Me.btnRemove)
-        Me.pnlHome.Controls.Add(Me.btnAdd)
-        Me.pnlHome.Controls.Add(Me.DoubleBufferedPanel1)
-        Me.pnlHome.Controls.Add(Me.Label1)
-        Me.pnlHome.Controls.Add(Me.btnCustomSymbols)
-        Me.pnlHome.Controls.Add(Me.DoubleBufferedPanel15)
-        Me.pnlHome.Controls.Add(Me.DoubleBufferedPanel10)
-        Me.pnlHome.Controls.Add(Me.btnAccentMark)
-        Me.pnlHome.Controls.Add(Me.btnOpen)
-        Me.pnlHome.Controls.Add(Me.btnSymbols)
-        Me.pnlHome.Controls.Add(Me.Label8)
-        Me.pnlHome.Controls.Add(Me.btnSave)
-        Me.pnlHome.Controls.Add(Me.btnNew)
-        Me.pnlHome.Controls.Add(Me.Label16)
-        Me.pnlHome.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlHome.Location = New System.Drawing.Point(0, 0)
-        Me.pnlHome.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlHome.Name = "pnlHome"
-        Me.pnlHome.Size = New System.Drawing.Size(780, 83)
-        Me.pnlHome.TabIndex = 75
-        '
-        'btnFont
-        '
-        Me.btnFont.BackColor = System.Drawing.Color.Transparent
-        Me.btnFont.BackgroundImage = CType(resources.GetObject("btnFont.BackgroundImage"), System.Drawing.Image)
-        Me.btnFont.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnFont.FlatAppearance.BorderSize = 0
-        Me.btnFont.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnFont.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnFont.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFont.ForeColor = System.Drawing.Color.Black
-        Me.btnFont.Image = CType(resources.GetObject("btnFont.Image"), System.Drawing.Image)
-        Me.btnFont.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFont.Location = New System.Drawing.Point(506, 4)
-        Me.btnFont.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnFont.Name = "btnFont"
-        Me.btnFont.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.btnFont.Size = New System.Drawing.Size(85, 26)
-        Me.btnFont.Style = resources.GetString("btnFont.Style")
-        Me.btnFont.TabIndex = 76
-        Me.btnFont.Text = " Font"
-        Me.btnFont.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFont.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnFont.UseCompatibleTextRendering = True
-        Me.btnFont.UseVisualStyleBackColor = False
-        '
-        'DoubleBufferedPanel2
-        '
-        Me.DoubleBufferedPanel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.DoubleBufferedPanel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel2.Location = New System.Drawing.Point(595, 9)
-        Me.DoubleBufferedPanel2.Margin = New System.Windows.Forms.Padding(2)
-        Me.DoubleBufferedPanel2.Name = "DoubleBufferedPanel2"
-        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(1, 70)
-        Me.DoubleBufferedPanel2.TabIndex = 75
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.ForeColor = System.Drawing.Color.Gray
-        Me.Label2.Location = New System.Drawing.Point(504, 62)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 19)
-        Me.Label2.TabIndex = 74
-        Me.Label2.Text = "Settings"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnExport
-        '
-        Me.btnExport.BackColor = System.Drawing.Color.Transparent
-        Me.btnExport.BackgroundImage = CType(resources.GetObject("btnExport.BackgroundImage"), System.Drawing.Image)
-        Me.btnExport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnExport.FlatAppearance.BorderSize = 0
-        Me.btnExport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnExport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExport.ForeColor = System.Drawing.Color.Black
-        Me.btnExport.Image = CType(resources.GetObject("btnExport.Image"), System.Drawing.Image)
-        Me.btnExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExport.Location = New System.Drawing.Point(76, 35)
-        Me.btnExport.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnExport.Name = "btnExport"
-        Me.btnExport.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.btnExport.Size = New System.Drawing.Size(76, 26)
-        Me.btnExport.Style = resources.GetString("btnExport.Style")
-        Me.btnExport.TabIndex = 73
-        Me.btnExport.Text = " Export"
-        Me.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnExport.UseCompatibleTextRendering = True
-        Me.btnExport.UseVisualStyleBackColor = False
-        '
-        'btnRemove
-        '
-        Me.btnRemove.BackColor = System.Drawing.Color.Transparent
-        Me.btnRemove.BackgroundImage = CType(resources.GetObject("btnRemove.BackgroundImage"), System.Drawing.Image)
-        Me.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnRemove.FlatAppearance.BorderSize = 0
-        Me.btnRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRemove.ForeColor = System.Drawing.Color.Black
-        Me.btnRemove.Image = CType(resources.GetObject("btnRemove.Image"), System.Drawing.Image)
-        Me.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRemove.Location = New System.Drawing.Point(412, 35)
-        Me.btnRemove.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.btnRemove.Size = New System.Drawing.Size(85, 26)
-        Me.btnRemove.Style = resources.GetString("btnRemove.Style")
-        Me.btnRemove.TabIndex = 70
-        Me.btnRemove.Text = " Remove"
-        Me.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnRemove.UseCompatibleTextRendering = True
-        Me.btnRemove.UseVisualStyleBackColor = False
-        '
-        'btnAdd
-        '
-        Me.btnAdd.BackColor = System.Drawing.Color.Transparent
-        Me.btnAdd.BackgroundImage = CType(resources.GetObject("btnAdd.BackgroundImage"), System.Drawing.Image)
-        Me.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnAdd.FlatAppearance.BorderSize = 0
-        Me.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAdd.ForeColor = System.Drawing.Color.Black
-        Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
-        Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdd.Location = New System.Drawing.Point(412, 4)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.btnAdd.Size = New System.Drawing.Size(85, 26)
-        Me.btnAdd.Style = resources.GetString("btnAdd.Style")
-        Me.btnAdd.TabIndex = 69
-        Me.btnAdd.Text = " Add"
-        Me.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnAdd.UseCompatibleTextRendering = True
-        Me.btnAdd.UseVisualStyleBackColor = False
-        '
-        'DoubleBufferedPanel1
-        '
-        Me.DoubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.DoubleBufferedPanel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(501, 9)
-        Me.DoubleBufferedPanel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.DoubleBufferedPanel1.Name = "DoubleBufferedPanel1"
-        Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(1, 70)
-        Me.DoubleBufferedPanel1.TabIndex = 67
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.ForeColor = System.Drawing.Color.Gray
-        Me.Label1.Location = New System.Drawing.Point(410, 62)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 19)
-        Me.Label1.TabIndex = 66
-        Me.Label1.Text = "Words"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnCustomSymbols
-        '
-        Me.btnCustomSymbols.BackColor = System.Drawing.Color.Transparent
-        Me.btnCustomSymbols.BackgroundImage = CType(resources.GetObject("btnCustomSymbols.BackgroundImage"), System.Drawing.Image)
-        Me.btnCustomSymbols.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCustomSymbols.FlatAppearance.BorderSize = 0
-        Me.btnCustomSymbols.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnCustomSymbols.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnCustomSymbols.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCustomSymbols.ForeColor = System.Drawing.Color.Black
-        Me.btnCustomSymbols.Image = CType(resources.GetObject("btnCustomSymbols.Image"), System.Drawing.Image)
-        Me.btnCustomSymbols.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCustomSymbols.Location = New System.Drawing.Point(267, 4)
-        Me.btnCustomSymbols.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnCustomSymbols.Name = "btnCustomSymbols"
-        Me.btnCustomSymbols.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.btnCustomSymbols.Size = New System.Drawing.Size(134, 26)
-        Me.btnCustomSymbols.Style = resources.GetString("btnCustomSymbols.Style")
-        Me.btnCustomSymbols.TabIndex = 39
-        Me.btnCustomSymbols.Text = " Custom Symbols"
-        Me.btnCustomSymbols.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCustomSymbols.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnCustomSymbols.UseCompatibleTextRendering = True
-        Me.btnCustomSymbols.UseVisualStyleBackColor = False
-        '
-        'DoubleBufferedPanel15
-        '
-        Me.DoubleBufferedPanel15.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.DoubleBufferedPanel15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel15.Location = New System.Drawing.Point(158, 9)
-        Me.DoubleBufferedPanel15.Margin = New System.Windows.Forms.Padding(2)
-        Me.DoubleBufferedPanel15.Name = "DoubleBufferedPanel15"
-        Me.DoubleBufferedPanel15.Size = New System.Drawing.Size(1, 70)
-        Me.DoubleBufferedPanel15.TabIndex = 51
-        '
-        'DoubleBufferedPanel10
-        '
-        Me.DoubleBufferedPanel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.DoubleBufferedPanel10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel10.Location = New System.Drawing.Point(407, 9)
-        Me.DoubleBufferedPanel10.Margin = New System.Windows.Forms.Padding(2)
-        Me.DoubleBufferedPanel10.Name = "DoubleBufferedPanel10"
-        Me.DoubleBufferedPanel10.Size = New System.Drawing.Size(1, 70)
-        Me.DoubleBufferedPanel10.TabIndex = 51
-        '
-        'btnAccentMark
-        '
-        Me.btnAccentMark.BackColor = System.Drawing.Color.Transparent
-        Me.btnAccentMark.BackgroundImage = CType(resources.GetObject("btnAccentMark.BackgroundImage"), System.Drawing.Image)
-        Me.btnAccentMark.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnAccentMark.FlatAppearance.BorderSize = 0
-        Me.btnAccentMark.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnAccentMark.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnAccentMark.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAccentMark.ForeColor = System.Drawing.Color.Black
-        Me.btnAccentMark.Image = CType(resources.GetObject("btnAccentMark.Image"), System.Drawing.Image)
-        Me.btnAccentMark.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAccentMark.Location = New System.Drawing.Point(163, 35)
-        Me.btnAccentMark.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnAccentMark.Name = "btnAccentMark"
-        Me.btnAccentMark.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.btnAccentMark.Size = New System.Drawing.Size(98, 26)
-        Me.btnAccentMark.Style = resources.GetString("btnAccentMark.Style")
-        Me.btnAccentMark.TabIndex = 38
-        Me.btnAccentMark.Text = " Accent Mark"
-        Me.btnAccentMark.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAccentMark.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnAccentMark.UseCompatibleTextRendering = True
-        Me.btnAccentMark.UseVisualStyleBackColor = False
-        '
-        'btnOpen
-        '
-        Me.btnOpen.BackColor = System.Drawing.Color.Transparent
-        Me.btnOpen.BackgroundImage = CType(resources.GetObject("btnOpen.BackgroundImage"), System.Drawing.Image)
-        Me.btnOpen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnOpen.FlatAppearance.BorderSize = 0
-        Me.btnOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOpen.ForeColor = System.Drawing.Color.Black
-        Me.btnOpen.Image = CType(resources.GetObject("btnOpen.Image"), System.Drawing.Image)
-        Me.btnOpen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnOpen.Location = New System.Drawing.Point(8, 35)
-        Me.btnOpen.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnOpen.Name = "btnOpen"
-        Me.btnOpen.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.btnOpen.Size = New System.Drawing.Size(66, 26)
-        Me.btnOpen.Style = resources.GetString("btnOpen.Style")
-        Me.btnOpen.TabIndex = 7
-        Me.btnOpen.Text = " Open"
-        Me.btnOpen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnOpen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnOpen.UseCompatibleTextRendering = True
-        Me.btnOpen.UseVisualStyleBackColor = False
-        '
-        'btnSymbols
-        '
-        Me.btnSymbols.BackColor = System.Drawing.Color.Transparent
-        Me.btnSymbols.BackgroundImage = CType(resources.GetObject("btnSymbols.BackgroundImage"), System.Drawing.Image)
-        Me.btnSymbols.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnSymbols.FlatAppearance.BorderSize = 0
-        Me.btnSymbols.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnSymbols.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnSymbols.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSymbols.ForeColor = System.Drawing.Color.Black
-        Me.btnSymbols.Image = CType(resources.GetObject("btnSymbols.Image"), System.Drawing.Image)
-        Me.btnSymbols.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSymbols.Location = New System.Drawing.Point(163, 4)
-        Me.btnSymbols.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnSymbols.Name = "btnSymbols"
-        Me.btnSymbols.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.btnSymbols.Size = New System.Drawing.Size(98, 26)
-        Me.btnSymbols.Style = resources.GetString("btnSymbols.Style")
-        Me.btnSymbols.TabIndex = 37
-        Me.btnSymbols.Text = " Symbols"
-        Me.btnSymbols.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSymbols.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnSymbols.UseCompatibleTextRendering = True
-        Me.btnSymbols.UseVisualStyleBackColor = False
-        '
-        'Label8
-        '
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.ForeColor = System.Drawing.Color.Gray
-        Me.Label8.Location = New System.Drawing.Point(163, 62)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(242, 19)
-        Me.Label8.TabIndex = 0
-        Me.Label8.Text = "Symbols"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnSave
-        '
-        Me.btnSave.BackColor = System.Drawing.Color.Transparent
-        Me.btnSave.BackgroundImage = CType(resources.GetObject("btnSave.BackgroundImage"), System.Drawing.Image)
-        Me.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnSave.FlatAppearance.BorderSize = 0
-        Me.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.ForeColor = System.Drawing.Color.Black
-        Me.btnSave.Image = CType(resources.GetObject("btnSave.Image"), System.Drawing.Image)
-        Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSave.Location = New System.Drawing.Point(76, 4)
-        Me.btnSave.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.btnSave.Size = New System.Drawing.Size(76, 26)
-        Me.btnSave.Style = resources.GetString("btnSave.Style")
-        Me.btnSave.TabIndex = 8
-        Me.btnSave.Text = " Save"
-        Me.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnSave.UseCompatibleTextRendering = True
-        Me.btnSave.UseVisualStyleBackColor = False
-        '
-        'btnNew
-        '
-        Me.btnNew.BackColor = System.Drawing.Color.Transparent
-        Me.btnNew.BackgroundImage = CType(resources.GetObject("btnNew.BackgroundImage"), System.Drawing.Image)
-        Me.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnNew.FlatAppearance.BorderSize = 0
-        Me.btnNew.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNew.ForeColor = System.Drawing.Color.Black
-        Me.btnNew.Image = CType(resources.GetObject("btnNew.Image"), System.Drawing.Image)
-        Me.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNew.Location = New System.Drawing.Point(8, 4)
-        Me.btnNew.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnNew.Name = "btnNew"
-        Me.btnNew.Padding = New System.Windows.Forms.Padding(0, 0, 2, 1)
-        Me.btnNew.Size = New System.Drawing.Size(66, 26)
-        Me.btnNew.Style = resources.GetString("btnNew.Style")
-        Me.btnNew.TabIndex = 6
-        Me.btnNew.Text = " New"
-        Me.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnNew.UseCompatibleTextRendering = True
-        Me.btnNew.UseVisualStyleBackColor = False
-        '
-        'Label16
-        '
-        Me.Label16.BackColor = System.Drawing.Color.Transparent
-        Me.Label16.ForeColor = System.Drawing.Color.Gray
-        Me.Label16.Location = New System.Drawing.Point(4, 63)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(152, 19)
-        Me.Label16.TabIndex = 50
-        Me.Label16.Text = "File"
-        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 116)
-        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(2)
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(4)
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.Controls.Add(Me.tcSymbols)
-        Me.SplitContainer1.Panel1.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.SplitContainer1.Panel1.Padding = New System.Windows.Forms.Padding(0, 4, 0, 0)
         '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.dgvDictionary)
-        Me.SplitContainer1.Panel2.Padding = New System.Windows.Forms.Padding(3, 3, 0, 0)
-        Me.SplitContainer1.Size = New System.Drawing.Size(780, 391)
+        Me.SplitContainer1.Panel2.Padding = New System.Windows.Forms.Padding(6, 6, 0, 0)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1560, 944)
         Me.SplitContainer1.SplitterDistance = 124
-        Me.SplitContainer1.SplitterWidth = 2
         Me.SplitContainer1.TabIndex = 74
         '
         'tcSymbols
@@ -504,20 +119,20 @@ Partial Class frmDictionary
         Me.tcSymbols.Controls.Add(Me.CommonTabPage)
         Me.tcSymbols.Controls.Add(Me.CustomTabPage)
         Me.tcSymbols.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tcSymbols.Location = New System.Drawing.Point(0, 2)
-        Me.tcSymbols.Margin = New System.Windows.Forms.Padding(2)
+        Me.tcSymbols.Location = New System.Drawing.Point(0, 4)
+        Me.tcSymbols.Margin = New System.Windows.Forms.Padding(4)
         Me.tcSymbols.Name = "tcSymbols"
         Me.tcSymbols.SelectedIndex = 0
-        Me.tcSymbols.Size = New System.Drawing.Size(780, 122)
+        Me.tcSymbols.Size = New System.Drawing.Size(1560, 120)
         Me.tcSymbols.TabIndex = 73
         '
         'ConsonantsTabPage
         '
         Me.ConsonantsTabPage.Controls.Add(Me.ConsonantsLayoutPanel)
-        Me.ConsonantsTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.ConsonantsTabPage.Margin = New System.Windows.Forms.Padding(2)
+        Me.ConsonantsTabPage.Location = New System.Drawing.Point(8, 39)
+        Me.ConsonantsTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.ConsonantsTabPage.Name = "ConsonantsTabPage"
-        Me.ConsonantsTabPage.Size = New System.Drawing.Size(772, 96)
+        Me.ConsonantsTabPage.Size = New System.Drawing.Size(1544, 73)
         Me.ConsonantsTabPage.TabIndex = 0
         Me.ConsonantsTabPage.Text = "Consonants"
         Me.ConsonantsTabPage.UseVisualStyleBackColor = True
@@ -530,19 +145,19 @@ Partial Class frmDictionary
         Me.ConsonantsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ConsonantsLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.ConsonantsLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.ConsonantsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.ConsonantsLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.ConsonantsLayoutPanel.Name = "ConsonantsLayoutPanel"
-        Me.ConsonantsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(772, 96)
+        Me.ConsonantsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
+        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(1544, 73)
         Me.ConsonantsLayoutPanel.TabIndex = 7
         '
         'AffricatesTabPage
         '
         Me.AffricatesTabPage.Controls.Add(Me.AffricatesLayoutPanel)
-        Me.AffricatesTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.AffricatesTabPage.Margin = New System.Windows.Forms.Padding(2)
+        Me.AffricatesTabPage.Location = New System.Drawing.Point(8, 39)
+        Me.AffricatesTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.AffricatesTabPage.Name = "AffricatesTabPage"
-        Me.AffricatesTabPage.Size = New System.Drawing.Size(772, 96)
+        Me.AffricatesTabPage.Size = New System.Drawing.Size(1544, 73)
         Me.AffricatesTabPage.TabIndex = 5
         Me.AffricatesTabPage.Text = "Affricates"
         Me.AffricatesTabPage.UseVisualStyleBackColor = True
@@ -554,19 +169,19 @@ Partial Class frmDictionary
         Me.AffricatesLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AffricatesLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.AffricatesLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.AffricatesLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.AffricatesLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.AffricatesLayoutPanel.Name = "AffricatesLayoutPanel"
-        Me.AffricatesLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(772, 96)
+        Me.AffricatesLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
+        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(1544, 73)
         Me.AffricatesLayoutPanel.TabIndex = 8
         '
         'VowelsTabPage
         '
         Me.VowelsTabPage.Controls.Add(Me.VowelsLayoutPanel)
-        Me.VowelsTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.VowelsTabPage.Margin = New System.Windows.Forms.Padding(2)
+        Me.VowelsTabPage.Location = New System.Drawing.Point(8, 39)
+        Me.VowelsTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.VowelsTabPage.Name = "VowelsTabPage"
-        Me.VowelsTabPage.Size = New System.Drawing.Size(772, 96)
+        Me.VowelsTabPage.Size = New System.Drawing.Size(1544, 73)
         Me.VowelsTabPage.TabIndex = 1
         Me.VowelsTabPage.Text = "Vowels"
         Me.VowelsTabPage.UseVisualStyleBackColor = True
@@ -578,19 +193,19 @@ Partial Class frmDictionary
         Me.VowelsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.VowelsLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.VowelsLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.VowelsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.VowelsLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.VowelsLayoutPanel.Name = "VowelsLayoutPanel"
-        Me.VowelsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(772, 96)
+        Me.VowelsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
+        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(1544, 73)
         Me.VowelsLayoutPanel.TabIndex = 8
         '
         'AccentsTabPage
         '
         Me.AccentsTabPage.Controls.Add(Me.AccentsLayoutPanel)
-        Me.AccentsTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.AccentsTabPage.Margin = New System.Windows.Forms.Padding(2)
+        Me.AccentsTabPage.Location = New System.Drawing.Point(8, 39)
+        Me.AccentsTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.AccentsTabPage.Name = "AccentsTabPage"
-        Me.AccentsTabPage.Size = New System.Drawing.Size(772, 96)
+        Me.AccentsTabPage.Size = New System.Drawing.Size(1544, 73)
         Me.AccentsTabPage.TabIndex = 3
         Me.AccentsTabPage.Text = "Accents"
         Me.AccentsTabPage.UseVisualStyleBackColor = True
@@ -602,19 +217,19 @@ Partial Class frmDictionary
         Me.AccentsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AccentsLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.AccentsLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
-        Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(772, 96)
+        Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
+        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(1544, 73)
         Me.AccentsLayoutPanel.TabIndex = 9
         '
         'ToneIntonationTabPage
         '
         Me.ToneIntonationTabPage.Controls.Add(Me.ToneIntonationLayoutPanel)
-        Me.ToneIntonationTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.ToneIntonationTabPage.Margin = New System.Windows.Forms.Padding(2)
+        Me.ToneIntonationTabPage.Location = New System.Drawing.Point(8, 39)
+        Me.ToneIntonationTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.ToneIntonationTabPage.Name = "ToneIntonationTabPage"
-        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(772, 96)
+        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(1544, 73)
         Me.ToneIntonationTabPage.TabIndex = 4
         Me.ToneIntonationTabPage.Text = "Tone & Intonation"
         Me.ToneIntonationTabPage.UseVisualStyleBackColor = True
@@ -626,19 +241,19 @@ Partial Class frmDictionary
         Me.ToneIntonationLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ToneIntonationLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.ToneIntonationLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.ToneIntonationLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.ToneIntonationLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.ToneIntonationLayoutPanel.Name = "ToneIntonationLayoutPanel"
-        Me.ToneIntonationLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(772, 96)
+        Me.ToneIntonationLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
+        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(1544, 73)
         Me.ToneIntonationLayoutPanel.TabIndex = 10
         '
         'OtherTabPage
         '
         Me.OtherTabPage.Controls.Add(Me.OtherLayoutPanel)
-        Me.OtherTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.OtherTabPage.Margin = New System.Windows.Forms.Padding(2)
+        Me.OtherTabPage.Location = New System.Drawing.Point(8, 39)
+        Me.OtherTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.OtherTabPage.Name = "OtherTabPage"
-        Me.OtherTabPage.Size = New System.Drawing.Size(772, 96)
+        Me.OtherTabPage.Size = New System.Drawing.Size(1544, 73)
         Me.OtherTabPage.TabIndex = 2
         Me.OtherTabPage.Text = "Other"
         Me.OtherTabPage.UseVisualStyleBackColor = True
@@ -650,19 +265,19 @@ Partial Class frmDictionary
         Me.OtherLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.OtherLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.OtherLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.OtherLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.OtherLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.OtherLayoutPanel.Name = "OtherLayoutPanel"
-        Me.OtherLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.OtherLayoutPanel.Size = New System.Drawing.Size(772, 96)
+        Me.OtherLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
+        Me.OtherLayoutPanel.Size = New System.Drawing.Size(1544, 73)
         Me.OtherLayoutPanel.TabIndex = 8
         '
         'CommonTabPage
         '
         Me.CommonTabPage.Controls.Add(Me.CommonLayoutPanel)
-        Me.CommonTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.CommonTabPage.Margin = New System.Windows.Forms.Padding(2)
+        Me.CommonTabPage.Location = New System.Drawing.Point(8, 39)
+        Me.CommonTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.CommonTabPage.Name = "CommonTabPage"
-        Me.CommonTabPage.Size = New System.Drawing.Size(772, 96)
+        Me.CommonTabPage.Size = New System.Drawing.Size(1544, 73)
         Me.CommonTabPage.TabIndex = 7
         Me.CommonTabPage.Text = "Common"
         Me.CommonTabPage.UseVisualStyleBackColor = True
@@ -674,19 +289,19 @@ Partial Class frmDictionary
         Me.CommonLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CommonLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.CommonLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.CommonLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.CommonLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.CommonLayoutPanel.Name = "CommonLayoutPanel"
-        Me.CommonLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.CommonLayoutPanel.Size = New System.Drawing.Size(772, 96)
+        Me.CommonLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
+        Me.CommonLayoutPanel.Size = New System.Drawing.Size(1544, 73)
         Me.CommonLayoutPanel.TabIndex = 9
         '
         'CustomTabPage
         '
         Me.CustomTabPage.Controls.Add(Me.CustomLayoutPanel)
-        Me.CustomTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.CustomTabPage.Margin = New System.Windows.Forms.Padding(2)
+        Me.CustomTabPage.Location = New System.Drawing.Point(8, 39)
+        Me.CustomTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.CustomTabPage.Name = "CustomTabPage"
-        Me.CustomTabPage.Size = New System.Drawing.Size(772, 96)
+        Me.CustomTabPage.Size = New System.Drawing.Size(1544, 73)
         Me.CustomTabPage.TabIndex = 6
         Me.CustomTabPage.Text = "Custom"
         Me.CustomTabPage.UseVisualStyleBackColor = True
@@ -698,10 +313,10 @@ Partial Class frmDictionary
         Me.CustomLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CustomLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.CustomLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.CustomLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.CustomLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.CustomLayoutPanel.Name = "CustomLayoutPanel"
-        Me.CustomLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.CustomLayoutPanel.Size = New System.Drawing.Size(772, 96)
+        Me.CustomLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
+        Me.CustomLayoutPanel.Size = New System.Drawing.Size(1544, 73)
         Me.CustomLayoutPanel.TabIndex = 9
         '
         'dgvDictionary
@@ -715,19 +330,19 @@ Partial Class frmDictionary
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvDictionary.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvDictionary.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvDictionary.GridColor = System.Drawing.Color.Gainsboro
-        Me.dgvDictionary.Location = New System.Drawing.Point(3, 3)
-        Me.dgvDictionary.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvDictionary.Location = New System.Drawing.Point(6, 6)
+        Me.dgvDictionary.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvDictionary.Name = "dgvDictionary"
         Me.dgvDictionary.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvDictionary.RowTemplate.Height = 24
-        Me.dgvDictionary.Size = New System.Drawing.Size(777, 262)
+        Me.dgvDictionary.Size = New System.Drawing.Size(1554, 810)
         Me.dgvDictionary.TabIndex = 3
         '
         'Word
@@ -768,20 +383,160 @@ Partial Class frmDictionary
         '
         Me.dlgFont.ShowColor = True
         '
+        'ToolStripContainer1
+        '
+        '
+        'ToolStripContainer1.ContentPanel
+        '
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.SplitContainer1)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1560, 944)
+        Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(1560, 975)
+        Me.ToolStripContainer1.TabIndex = 75
+        Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        '
+        'ToolStripContainer1.TopToolStripPanel
+        '
+        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.MainToolStrip)
+        '
+        'MainToolStrip
+        '
+        Me.MainToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.MainToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ExportToolStripButton, Me.ToolStripSeparator1, Me.SymbolsToolStripButton, Me.CustomSymbolsToolStripButton, Me.AccentMarkToolStripButton, Me.ToolStripSeparator2, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.ToolStripSeparator3, Me.FontToolStripButton})
+        Me.MainToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.MainToolStrip.Name = "MainToolStrip"
+        Me.MainToolStrip.Size = New System.Drawing.Size(1560, 31)
+        Me.MainToolStrip.Stretch = True
+        Me.MainToolStrip.TabIndex = 1
+        '
+        'NewToolStripButton
+        '
+        Me.NewToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.NewToolStripButton.Image = CType(resources.GetObject("NewToolStripButton.Image"), System.Drawing.Image)
+        Me.NewToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.NewToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.NewToolStripButton.Name = "NewToolStripButton"
+        Me.NewToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.NewToolStripButton.Text = "New"
+        '
+        'OpenToolStripButton
+        '
+        Me.OpenToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.OpenToolStripButton.Image = CType(resources.GetObject("OpenToolStripButton.Image"), System.Drawing.Image)
+        Me.OpenToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.OpenToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.OpenToolStripButton.Name = "OpenToolStripButton"
+        Me.OpenToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.OpenToolStripButton.Text = "Open"
+        '
+        'SaveToolStripButton
+        '
+        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
+        Me.SaveToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveToolStripButton.Name = "SaveToolStripButton"
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.SaveToolStripButton.Text = "Redo"
+        '
+        'ExportToolStripButton
+        '
+        Me.ExportToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ExportToolStripButton.Image = CType(resources.GetObject("ExportToolStripButton.Image"), System.Drawing.Image)
+        Me.ExportToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ExportToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ExportToolStripButton.Name = "ExportToolStripButton"
+        Me.ExportToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.ExportToolStripButton.Text = "Export"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
+        '
+        'SymbolsToolStripButton
+        '
+        Me.SymbolsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SymbolsToolStripButton.Image = CType(resources.GetObject("SymbolsToolStripButton.Image"), System.Drawing.Image)
+        Me.SymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.SymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SymbolsToolStripButton.Name = "SymbolsToolStripButton"
+        Me.SymbolsToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.SymbolsToolStripButton.Text = "Symbols"
+        '
+        'CustomSymbolsToolStripButton
+        '
+        Me.CustomSymbolsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CustomSymbolsToolStripButton.Image = CType(resources.GetObject("CustomSymbolsToolStripButton.Image"), System.Drawing.Image)
+        Me.CustomSymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.CustomSymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.CustomSymbolsToolStripButton.Name = "CustomSymbolsToolStripButton"
+        Me.CustomSymbolsToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.CustomSymbolsToolStripButton.Text = "Custom Symbols"
+        '
+        'AccentMarkToolStripButton
+        '
+        Me.AccentMarkToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.AccentMarkToolStripButton.Image = CType(resources.GetObject("AccentMarkToolStripButton.Image"), System.Drawing.Image)
+        Me.AccentMarkToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.AccentMarkToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.AccentMarkToolStripButton.Name = "AccentMarkToolStripButton"
+        Me.AccentMarkToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.AccentMarkToolStripButton.Text = "Accent Mark"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 31)
+        '
+        'AddToolStripButton
+        '
+        Me.AddToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.AddToolStripButton.Image = CType(resources.GetObject("AddToolStripButton.Image"), System.Drawing.Image)
+        Me.AddToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.AddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.AddToolStripButton.Name = "AddToolStripButton"
+        Me.AddToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.AddToolStripButton.Text = "Add"
+        '
+        'RemoveToolStripButton
+        '
+        Me.RemoveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.RemoveToolStripButton.Image = CType(resources.GetObject("RemoveToolStripButton.Image"), System.Drawing.Image)
+        Me.RemoveToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.RemoveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.RemoveToolStripButton.Name = "RemoveToolStripButton"
+        Me.RemoveToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.RemoveToolStripButton.Text = "Remove"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 31)
+        '
+        'FontToolStripButton
+        '
+        Me.FontToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.FontToolStripButton.Image = CType(resources.GetObject("FontToolStripButton.Image"), System.Drawing.Image)
+        Me.FontToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.FontToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.FontToolStripButton.Name = "FontToolStripButton"
+        Me.FontToolStripButton.Size = New System.Drawing.Size(28, 28)
+        Me.FontToolStripButton.Text = "Font"
+        '
         'frmDictionary
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(780, 507)
-        Me.Controls.Add(Me.SplitContainer1)
-        Me.Controls.Add(Me.pnlTop)
-        Me.ForeColor = System.Drawing.Color.Black
+        Me.ClientSize = New System.Drawing.Size(1560, 975)
+        Me.Controls.Add(Me.ToolStripContainer1)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "frmDictionary"
         Me.ShowIcon = False
         Me.Text = "Dictionary"
-        Me.pnlTop.ResumeLayout(False)
-        Me.pnlHome.ResumeLayout(False)
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -797,26 +552,16 @@ Partial Class frmDictionary
         Me.CommonTabPage.ResumeLayout(False)
         Me.CustomTabPage.ResumeLayout(False)
         CType(Me.dgvDictionary, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStripContainer1.ContentPanel.ResumeLayout(False)
+        Me.ToolStripContainer1.TopToolStripPanel.ResumeLayout(False)
+        Me.ToolStripContainer1.TopToolStripPanel.PerformLayout()
+        Me.ToolStripContainer1.ResumeLayout(False)
+        Me.ToolStripContainer1.PerformLayout()
+        Me.MainToolStrip.ResumeLayout(False)
+        Me.MainToolStrip.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents pnlTop As Tundra.StylizedPanel
-    Friend WithEvents btnCustomSymbols As Tundra.StylizedButton
-    Friend WithEvents DoubleBufferedPanel10 As Tundra.DoubleBufferedPanel
-    Friend WithEvents btnAccentMark As Tundra.StylizedButton
-    Friend WithEvents btnSymbols As Tundra.StylizedButton
-    Friend WithEvents Label8 As Label
-    Friend WithEvents pnlHome As Tundra.DoubleBufferedPanel
-    Friend WithEvents DoubleBufferedPanel15 As Tundra.DoubleBufferedPanel
-    Friend WithEvents btnOpen As Tundra.StylizedButton
-    Friend WithEvents btnSave As Tundra.StylizedButton
-    Friend WithEvents btnNew As Tundra.StylizedButton
-    Friend WithEvents Label16 As Label
-    Friend WithEvents btnRemove As Tundra.StylizedButton
-    Friend WithEvents btnAdd As Tundra.StylizedButton
-    Friend WithEvents DoubleBufferedPanel1 As Tundra.DoubleBufferedPanel
-    Friend WithEvents Label1 As Label
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents dgvDictionary As DataGridView
     Friend WithEvents Word As DataGridViewTextBoxColumn
@@ -842,10 +587,21 @@ Partial Class frmDictionary
     Friend WithEvents CustomLayoutPanel As FlowLayoutPanel
     Friend WithEvents dlgOpen As OpenFileDialog
     Friend WithEvents dlgSave As SaveFileDialog
-    Friend WithEvents btnExport As Tundra.StylizedButton
     Friend WithEvents dlgExport As SaveFileDialog
-    Friend WithEvents btnFont As Tundra.StylizedButton
-    Friend WithEvents DoubleBufferedPanel2 As Tundra.DoubleBufferedPanel
-    Friend WithEvents Label2 As Label
     Friend WithEvents dlgFont As FontDialog
+    Friend WithEvents ToolStripContainer1 As ToolStripContainer
+    Friend WithEvents MainToolStrip As ToolStrip
+    Friend WithEvents NewToolStripButton As ToolStripButton
+    Friend WithEvents OpenToolStripButton As ToolStripButton
+    Friend WithEvents SaveToolStripButton As ToolStripButton
+    Friend WithEvents ExportToolStripButton As ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents SymbolsToolStripButton As ToolStripButton
+    Friend WithEvents CustomSymbolsToolStripButton As ToolStripButton
+    Friend WithEvents AccentMarkToolStripButton As ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents FontToolStripButton As ToolStripButton
+    Friend WithEvents AddToolStripButton As ToolStripButton
+    Friend WithEvents RemoveToolStripButton As ToolStripButton
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
 End Class
