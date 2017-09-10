@@ -43,7 +43,7 @@ Public Class NightTheme
     Inherits Theme
 
     Public Sub New()
-        MyBase.New("Aero")
+        MyBase.New("Night")
 
         Color1 = clrNightHorBG_Color1
         Color2 = clrNightHorBG_Color2
@@ -58,5 +58,28 @@ Public Class NightTheme
 
     Public Overrides Function GetMenuRenderer() As ToolStripRenderer
         Return New clsNightMenuRenderer
+    End Function
+End Class
+
+
+Public Class LunaTheme
+    Inherits Theme
+
+    Public Sub New()
+        MyBase.New("Luna")
+
+        Color1 = clrLunaHorBG_Color1
+        Color2 = clrLunaHorBG_Color2
+        PanelBack = Color.FromArgb(255, 221, 236, 255)
+
+        VerticalMenuGradient = False
+    End Sub
+
+    Public Overrides Function GetToolStripRenderer() As ToolStripRenderer
+        Return New clsLunaToolstripRenderer
+    End Function
+
+    Public Overrides Function GetMenuRenderer() As ToolStripRenderer
+        Return New clsLunaMenuRenderer
     End Function
 End Class

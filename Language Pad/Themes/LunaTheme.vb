@@ -1,41 +1,43 @@
-﻿Module clsNightColors
-    Public clrNightHorBG_GrayBlue As Color = Color.FromArgb(255, 233, 236, 250)
-    Public clrNightHorBG_White As Color = Color.FromArgb(255, 244, 247, 252)
-    Public clrNightSubmenuBG As Color = Color.FromArgb(255, 240, 240, 240)
-    Public clrNightImageMarginBlue As Color = Color.FromArgb(255, 212, 216, 230)
-    Public clrNightImageMarginWhite As Color = Color.FromArgb(255, 216, 226, 235)
-    Public clrNightImageMarginLine As Color = Color.FromArgb(255, 123, 133, 142)
-    Public clrNightSelectedBG_Blue As Color = Color.FromArgb(255, 186, 228, 246)
-    Public clrNightSelectedBG_Header_Blue As Color = Color.FromArgb(255, 146, 202, 230)
-    Public clrNightSelectedBG_White As Color = Color.FromArgb(255, 241, 248, 251)
-    Public clrNightSelectedBG_Border As Color = Color.FromArgb(255, 150, 217, 249)
-    Public clrNightSelectedBG_Drop_Blue As Color = Color.FromArgb(255, 139, 195, 225)
-    Public clrNightSelectedBG_Drop_Border As Color = Color.FromArgb(255, 48, 127, 177)
-    Public clrNightMenuBorder As Color = Color.FromArgb(255, 160, 160, 160)
-    Public clrNightCheckBG As Color = Color.FromArgb(255, 206, 237, 250)
+﻿Module clsLunaColors
+    Public clrLunaHorBG_GrayBlue As Color = Color.FromArgb(255, 233, 236, 250)
+    Public clrLunaHorBG_White As Color = Color.FromArgb(255, 244, 247, 252)
+    Public clrLunaSubmenuBG As Color = Color.FromArgb(255, 240, 240, 240)
+    Public clrLunaImageMarginBlue As Color = Color.FromArgb(255, 212, 216, 230)
+    Public clrLunaImageMarginWhite As Color = Color.FromArgb(255, 232, 251, 255)
+    Public clrLunaImageMarginLine As Color = Color.FromArgb(255, 118, 142, 177)
+    Public clrLunaSelectedBG_Blue As Color = Color.FromArgb(255, 186, 228, 246)
+    Public clrLunaSelectedBG_Header_Blue As Color = Color.FromArgb(255, 146, 202, 230)
+    Public clrLunaSelectedBG_White As Color = Color.FromArgb(255, 241, 248, 251)
+    Public clrLunaSelectedBG_Border As Color = Color.FromArgb(255, 150, 217, 249)
+    Public clrLunaSelectedBG_Drop_Blue As Color = Color.FromArgb(255, 139, 195, 225)
+    Public clrLunaSelectedBG_Drop_Border As Color = Color.FromArgb(255, 48, 127, 177)
+    Public clrLunaMenuBorder As Color = Color.FromArgb(255, 160, 160, 160)
+    Public clrLunaCheckBG As Color = Color.FromArgb(255, 206, 237, 250)
 
-    Public clrNightVerBG_GrayBlue As Color = Color.FromArgb(255, 196, 203, 219)
-    Public clrNightVerBG_White As Color = Color.FromArgb(255, 250, 250, 253)
-    Public clrNightVerBG_Shadow As Color = Color.FromArgb(255, 121, 131, 148)
+    Public clrLunaVerBG_GrayBlue As Color = Color.FromArgb(255, 196, 203, 219)
+    Public clrLunaVerBG_White As Color = Color.FromArgb(255, 250, 250, 253)
+    Public clrLunaVerBG_Shadow As Color = Color.FromArgb(255, 89, 124, 175)
 
-    Public clrNightToolstripBtnGrad_Blue As Color = Color.FromArgb(255, 129, 192, 224)
-    Public clrNightToolstripBtnGrad_White As Color = Color.FromArgb(255, 237, 248, 253)
-    Public clrNightToolstripBtn_Border As Color = Color.FromArgb(255, 124, 133, 150)
-    Public clrNightToolstripBtnGrad_Blue_Pressed As Color = Color.FromArgb(255, 124, 177, 204)
-    Public clrNightToolstripBtnGrad_White_Pressed As Color = Color.FromArgb(255, 228, 245, 252)
+    Public clrLunaToolstripBtnGrad_Blue As Color = Color.FromArgb(255, 129, 192, 224)
+    Public clrLunaToolstripBtnGrad_White As Color = Color.FromArgb(255, 237, 248, 253)
+    Public clrLunaToolstripBtn_Border As Color = Color.FromArgb(255, 124, 133, 150)
+    Public clrLunaToolstripBtnGrad_Blue_Pressed As Color = Color.FromArgb(255, 124, 177, 204)
+    Public clrLunaToolstripBtnGrad_White_Pressed As Color = Color.FromArgb(255, 228, 245, 252)
 
-    Public clrNightHorBG_Color1 As Color = Color.FromArgb(255, 186, 194, 208)
-    Public clrNightHorBG_Color2 As Color = Color.FromArgb(255, 224, 231, 245)
 
-    Public clNight_Selected1 As Color = Color.FromArgb(255, 245, 227, 194)
-    Public clNight_Selected2 As Color = Color.FromArgb(255, 237, 194, 118)
-    Public clNight_SelectedBorder As Color = Color.FromArgb(255, 205, 149, 63)
-    Public clNight_SelectedShadow As Color = Color.FromArgb(255, 238, 230, 215)
 
-    Public clNight_Drop1 As Color = Color.FromArgb(255, 255, 243, 188)
-    Public clNight_Drop2 As Color = Color.FromArgb(255, 255, 218, 134)
-    Public clNight_DropBorder As Color = Color.FromArgb(255, 205, 149, 63)
-    Public clNight_DropShadow As Color = Color.FromArgb(255, 238, 230, 215)
+    Public clrLunaHorBG_Color1 As Color = Color.FromArgb(255, 164, 195, 243)
+    Public clrLunaHorBG_Color2 As Color = Color.FromArgb(255, 164, 195, 243)
+
+    Public clLuna_Selected1 As Color = Color.FromArgb(255, 245, 227, 194)
+    Public clLuna_Selected2 As Color = Color.FromArgb(255, 237, 194, 118)
+    Public clLuna_SelectedBorder As Color = Color.FromArgb(255, 205, 149, 63)
+    Public clLuna_SelectedShadow As Color = Color.FromArgb(255, 238, 230, 215)
+
+    Public clLuna_Drop1 As Color = Color.FromArgb(255, 255, 243, 188)
+    Public clLuna_Drop2 As Color = Color.FromArgb(255, 255, 218, 134)
+    Public clLuna_DropBorder As Color = Color.FromArgb(255, 205, 149, 63)
+    Public clLuna_DropShadow As Color = Color.FromArgb(255, 238, 230, 215)
 
     Public Sub DrawRoundedRectangle(ByVal objGraphics As Graphics,
                                 ByVal m_intxAxis As Integer,
@@ -71,7 +73,7 @@
     End Sub
 End Module
 
-Public Class clsNightMenuRenderer
+Public Class clsLunaMenuRenderer
     Inherits System.Windows.Forms.ToolStripRenderer
     '// Make sure the textcolor is black
     Protected Overrides Sub InitializeItem(ByVal item As System.Windows.Forms.ToolStripItem)
@@ -88,7 +90,7 @@ Public Class clsNightMenuRenderer
     Protected Overrides Sub OnRenderToolStripBackground(ByVal e As ToolStripRenderEventArgs)
         MyBase.OnRenderToolStripBackground(e)
 
-        Dim b As New Drawing2D.LinearGradientBrush(e.AffectedBounds, clrNightHorBG_Color1, clrNightHorBG_Color2,
+        Dim b As New Drawing2D.LinearGradientBrush(e.AffectedBounds, clrLunaHorBG_Color1, clrLunaHorBG_Color2,
             Drawing2D.LinearGradientMode.Horizontal)
         e.Graphics.FillRectangle(b, e.AffectedBounds)
     End Sub
@@ -98,21 +100,21 @@ Public Class clsNightMenuRenderer
         MyBase.OnRenderImageMargin(e)
 
         '// Draw ImageMargin background gradient
-        Dim b As New Drawing2D.LinearGradientBrush(e.AffectedBounds, clrNightHorBG_Color2, clrNightHorBG_Color1,
+        Dim b As New Drawing2D.LinearGradientBrush(e.AffectedBounds, clrLunaHorBG_Color2, clrLunaHorBG_Color1,
             Drawing2D.LinearGradientMode.Horizontal)
 
         '// Shadow at the right of image margin
-        Dim DarkLine As New Drawing.SolidBrush(clrNightImageMarginLine)
+        Dim DarkLine As New Drawing.SolidBrush(clrLunaImageMarginLine)
         Dim WhiteLine As New Drawing.SolidBrush(Color.White)
         Dim rect As New Rectangle(e.AffectedBounds.Width, 2, 1, e.AffectedBounds.Height)
         Dim rect2 As New Rectangle(e.AffectedBounds.Width + 1, 2, 1, e.AffectedBounds.Height)
 
         '// Gray background
-        Dim SubmenuBGbrush As New Drawing.SolidBrush(clrNightSubmenuBG)
+        Dim SubmenuBGbrush As New Drawing.SolidBrush(clrLunaSubmenuBG)
         Dim rect3 As New Rectangle(0, 0, e.ToolStrip.Width, e.ToolStrip.Height)
 
         '// Border
-        Dim borderPen As New Pen(clrNightMenuBorder)
+        Dim borderPen As New Pen(clrLunaMenuBorder)
         Dim rect4 As New Rectangle(0, 1, e.ToolStrip.Width - 1, e.ToolStrip.Height - 2)
 
         e.Graphics.FillRectangle(SubmenuBGbrush, rect3)
@@ -123,13 +125,13 @@ Public Class clsNightMenuRenderer
     End Sub
 
     '// Render Checkmark 
-    Protected Overrides Sub OnRenderItemCheck(ByVal e As System.Windows.Forms.ToolStripItemImageRenderEventArgs)
+    Protected Overrides Sub OnRenderItemCheck(ByVal e As ToolStripItemImageRenderEventArgs)
         MyBase.OnRenderItemCheck(e)
         If e.Item.Selected Then
             Dim rect As New Rectangle(3, 1, 20, 20)
             Dim rect2 As New Rectangle(4, 2, 18, 18)
-            Dim b As New Drawing.SolidBrush(clrNightToolstripBtn_Border)
-            Dim b2 As New Drawing.SolidBrush(clrNightCheckBG)
+            Dim b As New Drawing.SolidBrush(clrLunaToolstripBtn_Border)
+            Dim b2 As New Drawing.SolidBrush(clrLunaCheckBG)
 
             e.Graphics.FillRectangle(b, rect)
             e.Graphics.FillRectangle(b2, rect2)
@@ -137,8 +139,8 @@ Public Class clsNightMenuRenderer
         Else
             Dim rect As New Rectangle(3, 1, 20, 20)
             Dim rect2 As New Rectangle(4, 2, 18, 18)
-            Dim b As New Drawing.SolidBrush(clrNightSelectedBG_Drop_Border)
-            Dim b2 As New Drawing.SolidBrush(clrNightCheckBG)
+            Dim b As New Drawing.SolidBrush(clrLunaSelectedBG_Drop_Border)
+            Dim b2 As New Drawing.SolidBrush(clrLunaCheckBG)
 
             e.Graphics.FillRectangle(b, rect)
             e.Graphics.FillRectangle(b2, rect2)
@@ -150,7 +152,7 @@ Public Class clsNightMenuRenderer
     Protected Overrides Sub OnRenderSeparator(ByVal e As System.Windows.Forms.ToolStripSeparatorRenderEventArgs)
         MyBase.OnRenderSeparator(e)
 
-        Dim DarkLine As New Drawing.SolidBrush(clrNightImageMarginLine)
+        Dim DarkLine As New Drawing.SolidBrush(clrLunaImageMarginLine)
         Dim WhiteLine As New Drawing.SolidBrush(Color.White)
         Dim rect As New Rectangle(32, 3, e.Item.Width - 32, 1)
         Dim rect2 As New Rectangle(32, 4, e.Item.Width - 32, 1)
@@ -173,23 +175,23 @@ Public Class clsNightMenuRenderer
                 '// If item is MenuHeader and selected: draw darkblue border
 
                 Dim rect As New Rectangle(3, 2, e.Item.Width - 6, e.Item.Height - 4)
-                Dim b As New Drawing2D.LinearGradientBrush(rect, clNight_Selected1, clNight_Selected2, Drawing2D.LinearGradientMode.Vertical)
-                Dim b2 As New Drawing.SolidBrush(clrNightToolstripBtn_Border)
+                Dim b As New Drawing2D.LinearGradientBrush(rect, clLuna_Selected1, clLuna_Selected2, Drawing2D.LinearGradientMode.Vertical)
+                Dim b2 As New Drawing.SolidBrush(clrLunaToolstripBtn_Border)
 
                 e.Graphics.FillRectangle(b, rect)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrNightToolstripBtn_Border)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 4, clNight_SelectedShadow)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrLunaToolstripBtn_Border)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 4, clLuna_SelectedShadow)
                 e.Item.ForeColor = Color.Black
 
             ElseIf e.Item.IsOnDropDown AndAlso e.Item.Selected Then
                 '// If item is NOT menuheader (but subitem) and selected: draw lightblue border
 
                 Dim rect As New Rectangle(4, 2, e.Item.Width - 6, e.Item.Height - 4)
-                Dim b As New Drawing2D.LinearGradientBrush(rect, clNight_Selected1, clNight_Selected2, Drawing2D.LinearGradientMode.Vertical)
-                Dim b2 As New Drawing.SolidBrush(clrNightToolstripBtn_Border)
+                Dim b As New Drawing2D.LinearGradientBrush(rect, clLuna_Selected1, clLuna_Selected2, Drawing2D.LinearGradientMode.Vertical)
+                Dim b2 As New Drawing.SolidBrush(clrLunaToolstripBtn_Border)
 
                 e.Graphics.FillRectangle(b, rect)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 6, clrNightToolstripBtn_Border)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 6, clrLunaToolstripBtn_Border)
                 e.Item.ForeColor = Color.Black
 
             End If
@@ -197,12 +199,12 @@ Public Class clsNightMenuRenderer
             '// If item is MenuHeader and menu is dropped down: selection rectangle is now darker
             If CType(e.Item, ToolStripMenuItem).DropDown.Visible AndAlso e.Item.IsOnDropDown = False Then 'CType(e.Item, ToolStripMenuItem).OwnerItem Is Nothing Then
                 Dim rect As New Rectangle(3, 2, e.Item.Width - 6, e.Item.Height - 4)
-                Dim b As New Drawing2D.LinearGradientBrush(rect, clNight_Drop1, clNight_Drop2, Drawing2D.LinearGradientMode.Vertical)
-                Dim b2 As New Drawing.SolidBrush(clrNightSelectedBG_Drop_Border)
+                Dim b As New Drawing2D.LinearGradientBrush(rect, clLuna_Drop1, clLuna_Drop2, Drawing2D.LinearGradientMode.Vertical)
+                Dim b2 As New Drawing.SolidBrush(clrLunaSelectedBG_Drop_Border)
 
                 e.Graphics.FillRectangle(b, rect)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrNightSelectedBG_Drop_Border)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 4, clNight_DropShadow)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrLunaSelectedBG_Drop_Border)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 4, clLuna_DropShadow)
                 e.Item.ForeColor = Color.Black
             End If
         End If
@@ -210,16 +212,24 @@ Public Class clsNightMenuRenderer
 
 End Class
 
-Public Class clsNightToolstripRenderer
+Public Class clsLunaToolstripRenderer
     Inherits ToolStripProfessionalRenderer
+
+    Protected Overrides Sub OnRenderToolStripBorder(e As ToolStripRenderEventArgs)
+        'MyBase.OnRenderToolStripBorder(e)
+
+        Dim shadow As New Pen(Color.FromArgb(90, 255, 255, 255))
+        Dim rect As New Rectangle(e.AffectedBounds.X, e.AffectedBounds.Y, e.AffectedBounds.Width - 1, e.AffectedBounds.Height)
+        e.Graphics.DrawRectangle(shadow, rect)
+    End Sub
 
     '// Render container background gradient
     Protected Overrides Sub OnRenderToolStripBackground(ByVal e As ToolStripRenderEventArgs)
         MyBase.OnRenderToolStripBackground(e)
 
-        Dim b As New Drawing2D.LinearGradientBrush(e.AffectedBounds, Color.FromArgb(255, 215, 224, 236), Color.FromArgb(255, 163, 173, 192),
+        Dim b As New Drawing2D.LinearGradientBrush(e.AffectedBounds, Color.FromArgb(255, 219, 235, 255), Color.FromArgb(255, 136, 175, 233),
             Drawing2D.LinearGradientMode.Vertical)
-        Dim shadow As New SolidBrush(clrNightVerBG_Shadow)
+        Dim shadow As New SolidBrush(clrLunaVerBG_Shadow)
         Dim rect As New Rectangle(0, e.ToolStrip.Height - 2, e.ToolStrip.Width, 1)
         e.Graphics.FillRectangle(b, e.AffectedBounds)
         e.Graphics.FillRectangle(shadow, rect)
@@ -231,7 +241,7 @@ Public Class clsNightToolstripRenderer
         If e.Item.Selected Or CType(e.Item, ToolStripButton).Checked Then
             Dim rectBorder As New Rectangle(0, 0, e.Item.Width - 0, e.Item.Height - 0)
             Dim rect As New Rectangle(1, 1, e.Item.Width - 2, e.Item.Height - 2)
-            Dim b As New Drawing2D.LinearGradientBrush(rect, clNight_Selected1, clNight_Selected2, Drawing2D.LinearGradientMode.Vertical)
+            Dim b As New Drawing2D.LinearGradientBrush(rect, clLuna_Selected1, clLuna_Selected2, Drawing2D.LinearGradientMode.Vertical)
             Dim b2 As New SolidBrush(Color.FromArgb(255, 205, 149, 63))
 
             e.Graphics.FillRectangle(b2, rectBorder)
@@ -240,8 +250,8 @@ Public Class clsNightToolstripRenderer
         If e.Item.Pressed Then
             Dim rectBorder As New Rectangle(0, 0, e.Item.Width - 1, e.Item.Height - 1)
             Dim rect As New Rectangle(1, 1, e.Item.Width - 2, e.Item.Height - 2)
-            Dim b As New Drawing2D.LinearGradientBrush(rect, clNight_Drop1, clNight_Drop2, Drawing2D.LinearGradientMode.Vertical)
-            Dim b2 As New Drawing.SolidBrush(clNight_DropBorder)
+            Dim b As New Drawing2D.LinearGradientBrush(rect, clLuna_Drop1, clLuna_Drop2, Drawing2D.LinearGradientMode.Vertical)
+            Dim b2 As New Drawing.SolidBrush(clLuna_DropBorder)
 
             e.Graphics.FillRectangle(b2, rectBorder)
             e.Graphics.FillRectangle(b, rect)

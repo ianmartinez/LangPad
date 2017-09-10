@@ -10,6 +10,7 @@ Public Class NotebookEditor
         Color2 = Theme.Color2
         VerticalMenuGradient = Theme.VerticalMenuGradient
         DoubleBufferedPanel2.BackColor = Theme.PanelBack
+        BackColor = Theme.PanelBack
         DoubleBufferedPanel2.ForeColor = Theme.PanelText
 
         DocumentToolStrip.Renderer = Theme.GetToolStripRenderer()
