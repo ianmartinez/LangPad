@@ -40,7 +40,7 @@ Partial Class ssLoading
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(547, 154)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(547, 145)
         Me.StylizedPanel1.Style = "Colors=~220|~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~200" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highli" &
     "ght Color=0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1"
         Me.StylizedPanel1.TabIndex = 9
@@ -75,7 +75,7 @@ Partial Class ssLoading
         Me.pbLoading.BackgroundImage = CType(resources.GetObject("pbLoading.BackgroundImage"), System.Drawing.Image)
         Me.pbLoading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.pbLoading.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.pbLoading.Location = New System.Drawing.Point(0, 141)
+        Me.pbLoading.Location = New System.Drawing.Point(0, 132)
         Me.pbLoading.Margin = New System.Windows.Forms.Padding(6)
         Me.pbLoading.Name = "pbLoading"
         Me.pbLoading.Size = New System.Drawing.Size(547, 13)
@@ -87,7 +87,7 @@ Partial Class ssLoading
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MistyRose
-        Me.ClientSize = New System.Drawing.Size(547, 154)
+        Me.ClientSize = New System.Drawing.Size(547, 145)
         Me.ControlBox = False
         Me.Controls.Add(Me.StylizedPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

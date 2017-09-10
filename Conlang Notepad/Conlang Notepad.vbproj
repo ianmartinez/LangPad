@@ -116,7 +116,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AeroMenu.vb" />
+    <Compile Include="Themes\AeroMenu.vb" />
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="CenteredComboBox.vb">
       <SubType>Component</SubType>
@@ -239,6 +239,7 @@
     <Compile Include="SymbolButton.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Themes\Theme.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dialogs\dlgAbout.resx">

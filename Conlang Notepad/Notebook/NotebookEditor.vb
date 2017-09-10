@@ -1,6 +1,17 @@
 ﻿Imports System.Drawing.Drawing2D
 
 Public Class NotebookEditor
+    Public Color1 As Color
+    Public Color2 As Color
+
+    Public Sub SetTheme(Theme As Theme)
+        Color1 = Theme.Color1
+        Color2 = Theme.Color2
+
+        DocumentToolStrip.Renderer = Theme.GetToolStripRenderer()
+
+        Refresh()
+    End Sub
 
     Private Sub txtTitle_TextChanged(sender As Object, e As EventArgs) Handles txtTitle.TextChanged
         If FirstTabUpdate = True Then CurrentDocument.Title = txtTitle.Text
@@ -105,7 +116,7 @@ Public Class NotebookEditor
 
         Dim g As Graphics = e.Graphics
         Dim rect As New Rectangle(0, 0, DocumentToolStripContainer.Width, Me.Height)
-        Dim b As New LinearGradientBrush(rect, clrHorBG_GrayBlue, clrHorBG_White, LinearGradientMode.Horizontal)
+        Dim b As New LinearGradientBrush(rect, Color1, Color2, LinearGradientMode.Horizontal)
         g.FillRectangle(b, rect)
     End Sub
 

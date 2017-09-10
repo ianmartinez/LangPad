@@ -302,15 +302,25 @@ Public Class frmMain
         ResumeLayout()
     End Sub
 
+    Public Color1 As Color
+    Public Color2 As Color
+
+    Public Sub SetTheme(Theme As Theme)
+        Color1 = Theme.Color1
+        Color2 = Theme.Color2
+
+        MainMenu.Renderer = Theme.GetMenuRenderer()
+        FileToolStrip.Renderer = Theme.GetToolStripRenderer()
+        FontToolStrip.Renderer = Theme.GetToolStripRenderer()
+        DataToolStrip.Renderer = Theme.GetToolStripRenderer()
+        NotebookEditor1.SetTheme(Theme)
+
+        Refresh()
+    End Sub
+
     Private Sub RichTextEditor_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         On Error Resume Next
-        Me.Text = LangPadVersion
-
-        MainMenu.Renderer = New clsMenuRenderer
-        cmsMain.Renderer = New clsMenuRenderer
-        FileToolStrip.Renderer = New clsToolstripRenderer
-        FontToolStrip.Renderer = New clsToolstripRenderer
-        DataToolStrip.Renderer = New clsToolstripRenderer
+        Text = LangPadVersion
 
         Title = Me.Text
         cmsMain.ImageScalingSize = New Size(16, 16)
@@ -383,13 +393,15 @@ Public Class frmMain
         Next
 
         IndentToolStripComboBox.SelectedItem = 1
+
+        SetTheme(New AeroTheme())
     End Sub
 
     Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
         ToolStripContainer1.BottomToolStripPanel.Paint, ToolStripContainer1.LeftToolStripPanel.Paint, ToolStripContainer1.RightToolStripPanel.Paint
         Dim g As Graphics = e.Graphics
         Dim rect As New Rectangle(0, 0, ToolStripContainer1.Width, Me.Height)
-        Dim b As New LinearGradientBrush(rect, clrHorBG_GrayBlue, clrHorBG_White, LinearGradientMode.Horizontal)
+        Dim b As New LinearGradientBrush(rect, Color1, Color2, LinearGradientMode.Horizontal)
         g.FillRectangle(b, rect)
     End Sub
 
