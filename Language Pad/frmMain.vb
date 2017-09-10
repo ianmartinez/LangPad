@@ -323,6 +323,7 @@ Public Class frmMain
         ThemeToolStrip.Renderer = Theme.GetToolStripRenderer()
         ThemeToolStrip.MinimumSize = New Size(0, FontToolStrip.Height)
         cmsMain.Renderer = Theme.GetMenuRenderer()
+        frmRTF.SetTheme(Theme)
 
         NotebookEditor1.SetTheme(Theme)
         Refresh()
