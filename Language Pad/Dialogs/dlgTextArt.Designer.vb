@@ -23,9 +23,6 @@ Partial Class dlgTextArt
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgTextArt))
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnCancel = New Tundra.StylizedButton()
-        Me.btnOK = New Tundra.StylizedButton()
         Me.StylizedText1 = New Tundra.StylizedText()
         Me.btnColor2 = New Tundra.StylizedColorButton()
         Me.btnColor1 = New Tundra.StylizedColorButton()
@@ -43,75 +40,16 @@ Partial Class dlgTextArt
         Me.nudSize = New System.Windows.Forms.NumericUpDown()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnOK = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         CType(Me.nudAngle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudShadowX, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudShadowY, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudSize, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StylizedPanel1.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(534, 577)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(292, 56)
-        Me.TableLayoutPanel1.TabIndex = 68
-        '
-        'btnCancel
-        '
-        Me.btnCancel.BackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.BackgroundImage = CType(resources.GetObject("btnCancel.BackgroundImage"), System.Drawing.Image)
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCancel.FlatAppearance.BorderSize = 0
-        Me.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.ForeColor = System.Drawing.Color.Black
-        Me.btnCancel.Location = New System.Drawing.Point(150, 4)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(138, 48)
-        Me.btnCancel.Style = resources.GetString("btnCancel.Style")
-        Me.btnCancel.TabIndex = 1
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseCompatibleTextRendering = True
-        Me.btnCancel.UseVisualStyleBackColor = False
-        '
-        'btnOK
-        '
-        Me.btnOK.BackColor = System.Drawing.Color.Transparent
-        Me.btnOK.BackgroundImage = CType(resources.GetObject("btnOK.BackgroundImage"), System.Drawing.Image)
-        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnOK.FlatAppearance.BorderSize = 0
-        Me.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOK.ForeColor = System.Drawing.Color.Black
-        Me.btnOK.Location = New System.Drawing.Point(4, 4)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnOK.Size = New System.Drawing.Size(138, 48)
-        Me.btnOK.Style = resources.GetString("btnOK.Style")
-        Me.btnOK.TabIndex = 0
-        Me.btnOK.Text = "OK"
-        Me.btnOK.UseCompatibleTextRendering = True
-        Me.btnOK.UseVisualStyleBackColor = False
         '
         'StylizedText1
         '
@@ -121,7 +59,7 @@ Partial Class dlgTextArt
         Me.StylizedText1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.StylizedText1.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StylizedText1.Location = New System.Drawing.Point(2, 2)
-        Me.StylizedText1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.StylizedText1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedText1.Name = "StylizedText1"
         Me.StylizedText1.Size = New System.Drawing.Size(800, 279)
         Me.StylizedText1.Style = "Colors=#e6832a|#c74c4f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Shadow Color=$2" &
@@ -142,7 +80,7 @@ Partial Class dlgTextArt
         Me.btnColor2.Image = CType(resources.GetObject("btnColor2.Image"), System.Drawing.Image)
         Me.btnColor2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnColor2.Location = New System.Drawing.Point(172, 313)
-        Me.btnColor2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnColor2.Margin = New System.Windows.Forms.Padding(4)
         Me.btnColor2.MinimumSize = New System.Drawing.Size(4, 46)
         Me.btnColor2.Name = "btnColor2"
         Me.btnColor2.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
@@ -169,7 +107,7 @@ Partial Class dlgTextArt
         Me.btnColor1.Image = CType(resources.GetObject("btnColor1.Image"), System.Drawing.Image)
         Me.btnColor1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnColor1.Location = New System.Drawing.Point(22, 313)
-        Me.btnColor1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnColor1.Margin = New System.Windows.Forms.Padding(4)
         Me.btnColor1.MinimumSize = New System.Drawing.Size(4, 46)
         Me.btnColor1.Name = "btnColor1"
         Me.btnColor1.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
@@ -196,7 +134,7 @@ Partial Class dlgTextArt
         Me.btnBorderColor.Image = CType(resources.GetObject("btnBorderColor.Image"), System.Drawing.Image)
         Me.btnBorderColor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBorderColor.Location = New System.Drawing.Point(322, 313)
-        Me.btnBorderColor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBorderColor.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBorderColor.MinimumSize = New System.Drawing.Size(4, 46)
         Me.btnBorderColor.Name = "btnBorderColor"
         Me.btnBorderColor.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
@@ -223,7 +161,7 @@ Partial Class dlgTextArt
         Me.btnShadowColor.Image = CType(resources.GetObject("btnShadowColor.Image"), System.Drawing.Image)
         Me.btnShadowColor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnShadowColor.Location = New System.Drawing.Point(510, 313)
-        Me.btnShadowColor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnShadowColor.Margin = New System.Windows.Forms.Padding(4)
         Me.btnShadowColor.MinimumSize = New System.Drawing.Size(4, 46)
         Me.btnShadowColor.Name = "btnShadowColor"
         Me.btnShadowColor.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
@@ -249,7 +187,7 @@ Partial Class dlgTextArt
         'nudAngle
         '
         Me.nudAngle.Location = New System.Drawing.Point(100, 375)
-        Me.nudAngle.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudAngle.Margin = New System.Windows.Forms.Padding(4)
         Me.nudAngle.Maximum = New Decimal(New Integer() {360, 0, 0, 0})
         Me.nudAngle.Minimum = New Decimal(New Integer() {360, 0, 0, -2147483648})
         Me.nudAngle.Name = "nudAngle"
@@ -260,7 +198,7 @@ Partial Class dlgTextArt
         'nudShadowX
         '
         Me.nudShadowX.Location = New System.Drawing.Point(308, 375)
-        Me.nudShadowX.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudShadowX.Margin = New System.Windows.Forms.Padding(4)
         Me.nudShadowX.Maximum = New Decimal(New Integer() {360, 0, 0, 0})
         Me.nudShadowX.Minimum = New Decimal(New Integer() {360, 0, 0, -2147483648})
         Me.nudShadowX.Name = "nudShadowX"
@@ -281,7 +219,7 @@ Partial Class dlgTextArt
         'nudShadowY
         '
         Me.nudShadowY.Location = New System.Drawing.Point(516, 375)
-        Me.nudShadowY.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudShadowY.Margin = New System.Windows.Forms.Padding(4)
         Me.nudShadowY.Maximum = New Decimal(New Integer() {360, 0, 0, 0})
         Me.nudShadowY.Minimum = New Decimal(New Integer() {360, 0, 0, -2147483648})
         Me.nudShadowY.Name = "nudShadowY"
@@ -302,10 +240,10 @@ Partial Class dlgTextArt
         'txtText
         '
         Me.txtText.Location = New System.Drawing.Point(22, 425)
-        Me.txtText.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtText.Margin = New System.Windows.Forms.Padding(4)
         Me.txtText.Multiline = True
         Me.txtText.Name = "txtText"
-        Me.txtText.Size = New System.Drawing.Size(800, 139)
+        Me.txtText.Size = New System.Drawing.Size(800, 150)
         Me.txtText.TabIndex = 11
         Me.txtText.Text = "Text Art"
         '
@@ -320,7 +258,7 @@ Partial Class dlgTextArt
         Me.btnFont.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFont.ForeColor = System.Drawing.Color.Black
         Me.btnFont.Location = New System.Drawing.Point(696, 313)
-        Me.btnFont.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnFont.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFont.Name = "btnFont"
         Me.btnFont.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnFont.Size = New System.Drawing.Size(128, 46)
@@ -337,7 +275,7 @@ Partial Class dlgTextArt
         'nudSize
         '
         Me.nudSize.Location = New System.Drawing.Point(738, 375)
-        Me.nudSize.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudSize.Margin = New System.Windows.Forms.Padding(4)
         Me.nudSize.Maximum = New Decimal(New Integer() {360, 0, 0, 0})
         Me.nudSize.Name = "nudSize"
         Me.nudSize.Size = New System.Drawing.Size(88, 31)
@@ -359,13 +297,50 @@ Partial Class dlgTextArt
         Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
         Me.StylizedPanel1.Controls.Add(Me.StylizedText1)
         Me.StylizedPanel1.Location = New System.Drawing.Point(22, 21)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Size = New System.Drawing.Size(804, 283)
         Me.StylizedPanel1.Style = "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Colors=~255|~255" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text C" &
     "olor=#252b2f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
         Me.StylizedPanel1.TabIndex = 83
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(532, 585)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(292, 56)
+        Me.TableLayoutPanel1.TabIndex = 84
+        '
+        'btnOK
+        '
+        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOK.Location = New System.Drawing.Point(3, 3)
+        Me.btnOK.Name = "btnOK"
+        Me.btnOK.Size = New System.Drawing.Size(140, 50)
+        Me.btnOK.TabIndex = 1
+        Me.btnOK.Text = "OK"
+        Me.btnOK.UseVisualStyleBackColor = True
+        '
+        'btnCancel
+        '
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnCancel.Location = New System.Drawing.Point(149, 3)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(140, 50)
+        Me.btnCancel.TabIndex = 0
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'dlgTextArt
         '
@@ -374,11 +349,11 @@ Partial Class dlgTextArt
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(850, 656)
+        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.nudSize)
         Me.Controls.Add(Me.StylizedPanel1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.nudAngle)
-        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnFont)
         Me.Controls.Add(Me.Label1)
@@ -391,26 +366,23 @@ Partial Class dlgTextArt
         Me.Controls.Add(Me.nudShadowY)
         Me.Controls.Add(Me.btnBorderColor)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgTextArt"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Text Art"
-        Me.TableLayoutPanel1.ResumeLayout(False)
         CType(Me.nudAngle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudShadowX, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudShadowY, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudSize, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StylizedPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents btnCancel As Tundra.StylizedButton
-    Friend WithEvents btnOK As Tundra.StylizedButton
     Friend WithEvents StylizedText1 As Tundra.StylizedText
     Friend WithEvents btnColor2 As Tundra.StylizedColorButton
     Friend WithEvents btnColor1 As Tundra.StylizedColorButton
@@ -428,5 +400,7 @@ Partial Class dlgTextArt
     Friend WithEvents nudSize As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
-
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents btnOK As Button
+    Friend WithEvents btnCancel As Button
 End Class

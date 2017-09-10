@@ -22,6 +22,7 @@ Public Class dlgAddPage
 
         Return False
     End Function
+
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
         On Error Resume Next
         frmMain.SaveTabs()

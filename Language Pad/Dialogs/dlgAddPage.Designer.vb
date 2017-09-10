@@ -22,12 +22,11 @@ Partial Class dlgAddPage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgAddPage))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnCancel = New Tundra.StylizedButton()
-        Me.btnOK = New Tundra.StylizedButton()
         Me.txtName = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnOK = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,67 +40,6 @@ Partial Class dlgAddPage
         Me.Label1.TabIndex = 73
         Me.Label1.Text = "Name:"
         '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(84, 90)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(292, 56)
-        Me.TableLayoutPanel1.TabIndex = 72
-        '
-        'btnCancel
-        '
-        Me.btnCancel.BackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.BackgroundImage = CType(resources.GetObject("btnCancel.BackgroundImage"), System.Drawing.Image)
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCancel.FlatAppearance.BorderSize = 0
-        Me.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.ForeColor = System.Drawing.Color.Black
-        Me.btnCancel.Location = New System.Drawing.Point(150, 4)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(138, 48)
-        Me.btnCancel.Style = resources.GetString("btnCancel.Style")
-        Me.btnCancel.TabIndex = 5
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseCompatibleTextRendering = True
-        Me.btnCancel.UseVisualStyleBackColor = False
-        '
-        'btnOK
-        '
-        Me.btnOK.BackColor = System.Drawing.Color.Transparent
-        Me.btnOK.BackgroundImage = CType(resources.GetObject("btnOK.BackgroundImage"), System.Drawing.Image)
-        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnOK.FlatAppearance.BorderSize = 0
-        Me.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOK.ForeColor = System.Drawing.Color.Black
-        Me.btnOK.Location = New System.Drawing.Point(4, 4)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnOK.Size = New System.Drawing.Size(138, 48)
-        Me.btnOK.Style = resources.GetString("btnOK.Style")
-        Me.btnOK.TabIndex = 4
-        Me.btnOK.Text = "OK"
-        Me.btnOK.UseCompatibleTextRendering = True
-        Me.btnOK.UseVisualStyleBackColor = False
-        '
         'txtName
         '
         Me.txtName.Location = New System.Drawing.Point(18, 38)
@@ -110,6 +48,43 @@ Partial Class dlgAddPage
         Me.txtName.Size = New System.Drawing.Size(369, 31)
         Me.txtName.TabIndex = 0
         '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(95, 98)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(292, 56)
+        Me.TableLayoutPanel1.TabIndex = 74
+        '
+        'btnOK
+        '
+        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOK.Location = New System.Drawing.Point(3, 3)
+        Me.btnOK.Name = "btnOK"
+        Me.btnOK.Size = New System.Drawing.Size(140, 50)
+        Me.btnOK.TabIndex = 1
+        Me.btnOK.Text = "OK"
+        Me.btnOK.UseVisualStyleBackColor = True
+        '
+        'btnCancel
+        '
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnCancel.Location = New System.Drawing.Point(149, 3)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(140, 50)
+        Me.btnCancel.TabIndex = 0
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
         'dlgAddPage
         '
         Me.AcceptButton = Me.btnOK
@@ -117,8 +92,8 @@ Partial Class dlgAddPage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(400, 169)
-        Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(6)
@@ -133,9 +108,8 @@ Partial Class dlgAddPage
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents btnCancel As Tundra.StylizedButton
-    Friend WithEvents btnOK As Tundra.StylizedButton
     Friend WithEvents txtName As System.Windows.Forms.TextBox
-
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents btnOK As Button
+    Friend WithEvents btnCancel As Button
 End Class

@@ -22,82 +22,20 @@ Partial Class dlgTable
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgTable))
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnCancel = New Tundra.StylizedButton()
-        Me.btnOK = New Tundra.StylizedButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.nudRows = New System.Windows.Forms.NumericUpDown()
         Me.nudWidth = New System.Windows.Forms.NumericUpDown()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.nudColumns = New System.Windows.Forms.NumericUpDown()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnOK = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         CType(Me.nudRows, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudWidth, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudColumns, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(136, 175)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(292, 56)
-        Me.TableLayoutPanel1.TabIndex = 69
-        '
-        'btnCancel
-        '
-        Me.btnCancel.BackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.BackgroundImage = CType(resources.GetObject("btnCancel.BackgroundImage"), System.Drawing.Image)
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCancel.FlatAppearance.BorderSize = 0
-        Me.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.ForeColor = System.Drawing.Color.Black
-        Me.btnCancel.Location = New System.Drawing.Point(150, 4)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(138, 48)
-        Me.btnCancel.Style = resources.GetString("btnCancel.Style")
-        Me.btnCancel.TabIndex = 5
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseCompatibleTextRendering = True
-        Me.btnCancel.UseVisualStyleBackColor = False
-        '
-        'btnOK
-        '
-        Me.btnOK.BackColor = System.Drawing.Color.Transparent
-        Me.btnOK.BackgroundImage = CType(resources.GetObject("btnOK.BackgroundImage"), System.Drawing.Image)
-        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnOK.FlatAppearance.BorderSize = 0
-        Me.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOK.ForeColor = System.Drawing.Color.Black
-        Me.btnOK.Location = New System.Drawing.Point(4, 4)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnOK.Size = New System.Drawing.Size(138, 48)
-        Me.btnOK.Style = resources.GetString("btnOK.Style")
-        Me.btnOK.TabIndex = 4
-        Me.btnOK.Text = "OK"
-        Me.btnOK.UseCompatibleTextRendering = True
-        Me.btnOK.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -112,7 +50,7 @@ Partial Class dlgTable
         'nudRows
         '
         Me.nudRows.Location = New System.Drawing.Point(180, 21)
-        Me.nudRows.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudRows.Margin = New System.Windows.Forms.Padding(4)
         Me.nudRows.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudRows.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudRows.Name = "nudRows"
@@ -123,7 +61,7 @@ Partial Class dlgTable
         'nudWidth
         '
         Me.nudWidth.Location = New System.Drawing.Point(182, 113)
-        Me.nudWidth.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudWidth.Margin = New System.Windows.Forms.Padding(4)
         Me.nudWidth.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.nudWidth.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudWidth.Name = "nudWidth"
@@ -144,7 +82,7 @@ Partial Class dlgTable
         'nudColumns
         '
         Me.nudColumns.Location = New System.Drawing.Point(180, 67)
-        Me.nudColumns.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.nudColumns.Margin = New System.Windows.Forms.Padding(4)
         Me.nudColumns.Maximum = New Decimal(New Integer() {50, 0, 0, 0})
         Me.nudColumns.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudColumns.Name = "nudColumns"
@@ -162,6 +100,43 @@ Partial Class dlgTable
         Me.Label3.TabIndex = 74
         Me.Label3.Text = "Columns:"
         '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(140, 183)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(292, 56)
+        Me.TableLayoutPanel1.TabIndex = 76
+        '
+        'btnOK
+        '
+        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnOK.Location = New System.Drawing.Point(3, 3)
+        Me.btnOK.Name = "btnOK"
+        Me.btnOK.Size = New System.Drawing.Size(140, 50)
+        Me.btnOK.TabIndex = 1
+        Me.btnOK.Text = "OK"
+        Me.btnOK.UseVisualStyleBackColor = True
+        '
+        'btnCancel
+        '
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnCancel.Location = New System.Drawing.Point(149, 3)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(140, 50)
+        Me.btnCancel.TabIndex = 0
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
         'dlgTable
         '
         Me.AcceptButton = Me.btnOK
@@ -169,37 +144,36 @@ Partial Class dlgTable
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(452, 254)
-        Me.Controls.Add(Me.nudColumns)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.nudColumns)
         Me.Controls.Add(Me.nudRows)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.nudWidth)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgTable"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Table"
-        Me.TableLayoutPanel1.ResumeLayout(False)
         CType(Me.nudRows, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudWidth, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudColumns, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents btnCancel As Tundra.StylizedButton
-    Friend WithEvents btnOK As Tundra.StylizedButton
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents nudRows As System.Windows.Forms.NumericUpDown
     Friend WithEvents nudWidth As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents nudColumns As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label3 As System.Windows.Forms.Label
-
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents btnOK As Button
+    Friend WithEvents btnCancel As Button
 End Class

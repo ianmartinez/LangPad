@@ -47,10 +47,6 @@ Public Class dlgCustomSymbols
         Next
     End Sub
 
-    Private Sub dgvSymbols_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSymbols.CellContentClick
-
-    End Sub
-
     Private Sub btnDeleteAll_Click(sender As Object, e As EventArgs) Handles btnDeleteAll.Click
         dgvSymbols.Rows.Clear()
     End Sub
@@ -88,7 +84,7 @@ Public Class dlgCustomSymbols
 
     End Sub
 
-    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 End Class

@@ -64,10 +64,6 @@ Public Class dlgStyle
 
     End Sub
 
-    Private Sub btnColor_Click(sender As Object, e As EventArgs) Handles btnColor.Click
-
-    End Sub
-
     Private Sub btnColor_ColorChanged(sender As Object, e As EventArgs) Handles btnColor.ColorChanged
         StyleColor = btnColor.Color
         ApplyStyle()
@@ -134,9 +130,5 @@ Public Class dlgStyle
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()
-    End Sub
-
-    Private Sub btnHighlight_Click(sender As Object, e As EventArgs) Handles btnHighlight.Click
-
     End Sub
 End Class

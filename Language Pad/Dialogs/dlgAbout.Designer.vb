@@ -31,10 +31,10 @@ Partial Class dlgAbout
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.btnOK = New Tundra.StylizedButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblLanguagePad = New System.Windows.Forms.Label()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnOK = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -138,27 +138,6 @@ Partial Class dlgAbout
         Me.TextBox3.TabIndex = 9
         Me.TextBox3.Text = "Most of the icons" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "   •Adwaita Icons https://github.com/GNOME/adwaita-icon-theme"
         '
-        'btnOK
-        '
-        Me.btnOK.BackColor = System.Drawing.Color.Transparent
-        Me.btnOK.BackgroundImage = CType(resources.GetObject("btnOK.BackgroundImage"), System.Drawing.Image)
-        Me.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnOK.FlatAppearance.BorderSize = 0
-        Me.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOK.ForeColor = System.Drawing.Color.Black
-        Me.btnOK.Location = New System.Drawing.Point(646, 469)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnOK.Size = New System.Drawing.Size(136, 48)
-        Me.btnOK.Style = resources.GetString("btnOK.Style")
-        Me.btnOK.TabIndex = 0
-        Me.btnOK.Text = "OK"
-        Me.btnOK.UseCompatibleTextRendering = True
-        Me.btnOK.UseVisualStyleBackColor = False
-        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
@@ -183,16 +162,24 @@ Partial Class dlgAbout
         Me.lblLanguagePad.Text = "Language Pad X.x"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'btnOK
+        '
+        Me.btnOK.Location = New System.Drawing.Point(646, 475)
+        Me.btnOK.Name = "btnOK"
+        Me.btnOK.Size = New System.Drawing.Size(136, 48)
+        Me.btnOK.TabIndex = 13
+        Me.btnOK.Text = "OK"
+        Me.btnOK.UseVisualStyleBackColor = True
+        '
         'dlgAbout
         '
-        Me.AcceptButton = Me.btnOK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(802, 535)
+        Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.lblLanguagePad)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.btnOK)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
@@ -217,10 +204,10 @@ Partial Class dlgAbout
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents btnOK As Tundra.StylizedButton
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents lblLanguagePad As Label
     Friend WithEvents ttMain As ToolTip
+    Friend WithEvents btnOK As Button
 End Class

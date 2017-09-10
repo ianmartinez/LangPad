@@ -22,100 +22,13 @@ Partial Class dlgAppendReplace
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgAppendReplace))
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnAppend = New Tundra.StylizedButton()
-        Me.btnCancel = New Tundra.StylizedButton()
-        Me.btnReplace = New Tundra.StylizedButton()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnAppend = New System.Windows.Forms.Button()
+        Me.btnReplace = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 3
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel1.Controls.Add(Me.btnAppend, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnReplace, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(130, 135)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(392, 56)
-        Me.TableLayoutPanel1.TabIndex = 73
-        '
-        'btnAppend
-        '
-        Me.btnAppend.BackColor = System.Drawing.Color.Transparent
-        Me.btnAppend.BackgroundImage = CType(resources.GetObject("btnAppend.BackgroundImage"), System.Drawing.Image)
-        Me.btnAppend.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnAppend.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnAppend.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnAppend.FlatAppearance.BorderSize = 0
-        Me.btnAppend.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnAppend.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnAppend.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAppend.ForeColor = System.Drawing.Color.Black
-        Me.btnAppend.Location = New System.Drawing.Point(4, 4)
-        Me.btnAppend.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnAppend.Name = "btnAppend"
-        Me.btnAppend.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnAppend.Size = New System.Drawing.Size(122, 48)
-        Me.btnAppend.Style = resources.GetString("btnAppend.Style")
-        Me.btnAppend.TabIndex = 0
-        Me.btnAppend.Text = "Append"
-        Me.btnAppend.UseCompatibleTextRendering = True
-        Me.btnAppend.UseVisualStyleBackColor = False
-        '
-        'btnCancel
-        '
-        Me.btnCancel.BackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.BackgroundImage = CType(resources.GetObject("btnCancel.BackgroundImage"), System.Drawing.Image)
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCancel.FlatAppearance.BorderSize = 0
-        Me.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.ForeColor = System.Drawing.Color.Black
-        Me.btnCancel.Location = New System.Drawing.Point(264, 4)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnCancel.Size = New System.Drawing.Size(124, 48)
-        Me.btnCancel.Style = resources.GetString("btnCancel.Style")
-        Me.btnCancel.TabIndex = 2
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseCompatibleTextRendering = True
-        Me.btnCancel.UseVisualStyleBackColor = False
-        '
-        'btnReplace
-        '
-        Me.btnReplace.BackColor = System.Drawing.Color.Transparent
-        Me.btnReplace.BackgroundImage = CType(resources.GetObject("btnReplace.BackgroundImage"), System.Drawing.Image)
-        Me.btnReplace.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnReplace.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnReplace.FlatAppearance.BorderSize = 0
-        Me.btnReplace.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnReplace.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnReplace.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReplace.ForeColor = System.Drawing.Color.Black
-        Me.btnReplace.Location = New System.Drawing.Point(134, 4)
-        Me.btnReplace.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnReplace.Name = "btnReplace"
-        Me.btnReplace.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnReplace.Size = New System.Drawing.Size(122, 48)
-        Me.btnReplace.Style = resources.GetString("btnReplace.Style")
-        Me.btnReplace.TabIndex = 1
-        Me.btnReplace.Text = "Replace"
-        Me.btnReplace.UseCompatibleTextRendering = True
-        Me.btnReplace.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -127,6 +40,56 @@ Partial Class dlgAppendReplace
         Me.Label1.Text = "This document has embedded custom symbols. Would you like to append or replace yo" &
     "ur current custom symbols?"
         '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.ColumnCount = 3
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnReplace, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.btnAppend, 0, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(92, 142)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(439, 56)
+        Me.TableLayoutPanel1.TabIndex = 75
+        '
+        'btnAppend
+        '
+        Me.btnAppend.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnAppend.Location = New System.Drawing.Point(3, 3)
+        Me.btnAppend.Name = "btnAppend"
+        Me.btnAppend.Size = New System.Drawing.Size(140, 50)
+        Me.btnAppend.TabIndex = 1
+        Me.btnAppend.Text = "Append"
+        Me.btnAppend.UseVisualStyleBackColor = True
+        '
+        'btnReplace
+        '
+        Me.btnReplace.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnReplace.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnReplace.Location = New System.Drawing.Point(149, 3)
+        Me.btnReplace.Name = "btnReplace"
+        Me.btnReplace.Size = New System.Drawing.Size(130, 50)
+        Me.btnReplace.TabIndex = 2
+        Me.btnReplace.Text = "Replace"
+        Me.btnReplace.UseVisualStyleBackColor = True
+        '
+        'btnCancel
+        '
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnCancel.Location = New System.Drawing.Point(285, 3)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(151, 50)
+        Me.btnCancel.TabIndex = 3
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
         'dlgAppendReplace
         '
         Me.AcceptButton = Me.btnAppend
@@ -137,7 +100,7 @@ Partial Class dlgAppendReplace
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgAppendReplace"
@@ -148,10 +111,9 @@ Partial Class dlgAppendReplace
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents btnCancel As Tundra.StylizedButton
-    Friend WithEvents btnReplace As Tundra.StylizedButton
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents btnAppend As Tundra.StylizedButton
-
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents btnAppend As Button
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents btnReplace As Button
 End Class
