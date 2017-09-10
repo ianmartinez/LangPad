@@ -101,7 +101,7 @@ Partial Class NotebookEditor
         '
         'DoubleBufferedPanel2
         '
-        Me.DoubleBufferedPanel2.BackColor = System.Drawing.Color.Transparent
+        Me.DoubleBufferedPanel2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.DoubleBufferedPanel2.Controls.Add(Me.btnDictionary)
         Me.DoubleBufferedPanel2.Controls.Add(Me.Label4)
         Me.DoubleBufferedPanel2.Controls.Add(Me.txtInfo)
@@ -114,6 +114,7 @@ Partial Class NotebookEditor
         Me.DoubleBufferedPanel2.Controls.Add(Me.Label2)
         Me.DoubleBufferedPanel2.Controls.Add(Me.Label1)
         Me.DoubleBufferedPanel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.DoubleBufferedPanel2.ForeColor = System.Drawing.Color.Black
         Me.DoubleBufferedPanel2.Location = New System.Drawing.Point(0, 0)
         Me.DoubleBufferedPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.DoubleBufferedPanel2.Name = "DoubleBufferedPanel2"

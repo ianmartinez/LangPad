@@ -185,6 +185,11 @@ Public Class frmMain
     End Sub
 
     Private Sub ApplyStyle(ByVal rtb As ExtendedRichTextBox, ByVal FontStyle As FontStyle)
+        If rtb.SelectionLength = 0 Then
+            rtb.SelectionFont = New Font(rtb.SelectionFont, rtb.SelectionFont.Style Xor FontStyle)
+            Exit Sub
+        End If
+
         SuspendLayout()
         Dim TempRTF As New ExtendedRichTextBox
         TempRTF.Rtf = rtb.Rtf
@@ -304,17 +309,21 @@ Public Class frmMain
 
     Public Color1 As Color
     Public Color2 As Color
+    Public VerticalMenuGradient As Boolean = False
 
     Public Sub SetTheme(Theme As Theme)
         Color1 = Theme.Color1
         Color2 = Theme.Color2
+        VerticalMenuGradient = Theme.VerticalMenuGradient
 
         MainMenu.Renderer = Theme.GetMenuRenderer()
         FileToolStrip.Renderer = Theme.GetToolStripRenderer()
         FontToolStrip.Renderer = Theme.GetToolStripRenderer()
         DataToolStrip.Renderer = Theme.GetToolStripRenderer()
-        NotebookEditor1.SetTheme(Theme)
+        ThemeToolStrip.Renderer = Theme.GetToolStripRenderer()
+        cmsMain.Renderer = Theme.GetMenuRenderer()
 
+        NotebookEditor1.SetTheme(Theme)
         Refresh()
     End Sub
 
@@ -394,14 +403,16 @@ Public Class frmMain
 
         IndentToolStripComboBox.SelectedItem = 1
 
-        SetTheme(New AeroTheme())
+        SetTheme(New IceTheme())
+
+        ThemeCombo.SelectedIndex = 0
     End Sub
 
     Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
         ToolStripContainer1.BottomToolStripPanel.Paint, ToolStripContainer1.LeftToolStripPanel.Paint, ToolStripContainer1.RightToolStripPanel.Paint
         Dim g As Graphics = e.Graphics
         Dim rect As New Rectangle(0, 0, ToolStripContainer1.Width, Me.Height)
-        Dim b As New LinearGradientBrush(rect, Color1, Color2, LinearGradientMode.Horizontal)
+        Dim b As New LinearGradientBrush(rect, Color1, Color2, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
         g.FillRectangle(b, rect)
     End Sub
 
@@ -1119,5 +1130,19 @@ Public Class frmMain
 
     Private Sub StrikeToolStripButton_Click(sender As Object, e As EventArgs) Handles StrikeToolStripButton.Click
         ApplyStyle(SelectedDocument, FontStyle.Strikeout)
+    End Sub
+
+    Private Sub ThemeCombo_Click(sender As Object, e As EventArgs) Handles ThemeCombo.Click
+
+    End Sub
+
+    Private Sub ThemeCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ThemeCombo.SelectedIndexChanged
+        If ThemeCombo.SelectedItem.ToString().Equals("Ice (Default)") Then
+            SetTheme(New IceTheme)
+        ElseIf ThemeCombo.SelectedItem.ToString().Equals("Night") Then
+            SetTheme(New NightTheme)
+        Else
+            SetTheme(New IceTheme)
+        End If
     End Sub
 End Class

@@ -3,10 +3,14 @@
 Public Class NotebookEditor
     Public Color1 As Color
     Public Color2 As Color
+    Public VerticalMenuGradient As Boolean = False
 
     Public Sub SetTheme(Theme As Theme)
         Color1 = Theme.Color1
         Color2 = Theme.Color2
+        VerticalMenuGradient = Theme.VerticalMenuGradient
+        DoubleBufferedPanel2.BackColor = Theme.PanelBack
+        DoubleBufferedPanel2.ForeColor = Theme.PanelText
 
         DocumentToolStrip.Renderer = Theme.GetToolStripRenderer()
 
@@ -116,7 +120,7 @@ Public Class NotebookEditor
 
         Dim g As Graphics = e.Graphics
         Dim rect As New Rectangle(0, 0, DocumentToolStripContainer.Width, Me.Height)
-        Dim b As New LinearGradientBrush(rect, Color1, Color2, LinearGradientMode.Horizontal)
+        Dim b As New LinearGradientBrush(rect, Color1, Color2, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
         g.FillRectangle(b, rect)
     End Sub
 
