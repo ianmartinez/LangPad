@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>muHPQNJE0JJCOKt5EHfFDN5icIptRBWnXN63TAVqiNA=</dsig:DigestValue>
+        <dsig:DigestValue>57vP1l0LFjdQWS/Wkd2QM00TgLduZBu6nns0vgCdhrM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,7 +114,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>FTnqrdJLoopPyHdgLSJiuC6M7eiEPRXE64rntfUK+hE=</dsig:DigestValue>
+      <dsig:DigestValue>MnlC3C4g7XFIFdtLpDN3in5wA4tgktZcNVqoHVfnyBQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Update.txt" size="754">

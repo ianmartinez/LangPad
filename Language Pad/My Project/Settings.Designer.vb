@@ -176,13 +176,13 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property ForceSansSerif() As Boolean
+         Global.System.Configuration.DefaultSettingValueAttribute("Ice (Default)")>  _
+        Public Property Theme() As String
             Get
-                Return CType(Me("ForceSansSerif"),Boolean)
+                Return CType(Me("Theme"),String)
             End Get
             Set
-                Me("ForceSansSerif") = value
+                Me("Theme") = value
             End Set
         End Property
     End Class

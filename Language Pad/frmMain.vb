@@ -178,6 +178,8 @@ Public Class frmMain
                 e.Cancel = True
             End If
         End If
+
+        My.Settings.Theme = ThemeCombo.SelectedItem
     End Sub
 
     Private Sub InsertImage(sender As Object, e As EventArgs)
@@ -408,7 +410,7 @@ Public Class frmMain
 
         SetTheme(New IceTheme())
 
-        ThemeCombo.SelectedIndex = 0
+        ThemeCombo.SelectedItem = My.Settings.Theme
     End Sub
 
     Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,

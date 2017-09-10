@@ -32,8 +32,8 @@
     <Setting Name="Updates" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="ForceSansSerif" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+    <Setting Name="Theme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Ice (Default)</Value>
     </Setting>
   </Settings>
 </SettingsFile>
