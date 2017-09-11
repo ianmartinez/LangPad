@@ -2,7 +2,6 @@
 Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports System.Text
-Imports Tundra
 
 Public Class frmDictionary
     Dim c As TextBox
@@ -106,7 +105,7 @@ Public Class frmDictionary
     Private Sub dgvDictionary_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles dgvDictionary.RowPostPaint
         Dim grid As DataGridView = CType(sender, DataGridView)
         Dim rowIdx As String = (e.RowIndex + 1).ToString()
-        Dim rowFont As System.Drawing.Font = Me.Font
+        Dim rowFont As Font = Font
 
         Dim centerFormat = New StringFormat()
         centerFormat.Alignment = StringAlignment.Center
@@ -124,7 +123,11 @@ Public Class frmDictionary
 
     Private Sub OpenToolStripButton_Click(sender As Object, e As EventArgs) Handles OpenToolStripButton.Click
         If dlgOpen.ShowDialog = DialogResult.OK Then
-            CurrentDocument.WordDictionary.Open(dlgOpen.FileName)
+            If Path.GetExtension(dlgOpen.FileName).ToLower() = ".csv" Then
+                CurrentDocument.WordDictionary.OpenCSV(dlgOpen.FileName)
+            Else
+                CurrentDocument.WordDictionary.Open(dlgOpen.FileName)
+            End If
             LoadDictionary()
         End If
     End Sub
@@ -132,34 +135,33 @@ Public Class frmDictionary
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
         SaveDictionary()
         If dlgSave.ShowDialog = DialogResult.OK Then
-            CurrentDocument.WordDictionary.Save(dlgSave.FileName)
-        End If
-    End Sub
+            If Path.GetExtension(dlgSave.FileName).ToLower() = ".csv" Then
+                Dim cols As Integer
+                Dim wr As New StreamWriter(New FileStream(dlgSave.FileName, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
+                wr.Write("Word,Pronunciation,Definition,Notes")
 
-    Private Sub ExportToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportToolStripButton.Click
-        If dlgExport.ShowDialog = DialogResult.OK Then
-            Dim cols As Integer
-            Dim wr As New StreamWriter(New FileStream(dlgExport.FileName, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
-
-            cols = dgvDictionary.Columns.Count
-            For i As Integer = 0 To cols - 1
-                wr.Write(dgvDictionary.Columns(i).Name.ToString().ToUpper() + ",")
-            Next
-            wr.WriteLine()
-
-            'write rows to excel file
-            For i As Integer = 0 To dgvDictionary.Rows.Count - 1
-                For j As Integer = 0 To cols - 1
-                    If dgvDictionary.Rows(i).Cells(j).Value IsNot Nothing Then
-                        wr.Write(dgvDictionary.Rows(i).Cells(j).Value + ",")
-                    Else
-                        wr.Write(",")
-                    End If
+                cols = dgvDictionary.Columns.Count
+                For i As Integer = 0 To cols - 1
+                    wr.Write(dgvDictionary.Columns(i).Name.ToString().ToUpper() + ",")
                 Next
-
                 wr.WriteLine()
-            Next
-            wr.Close()
+
+                ' Write rows to CSV
+                For i As Integer = 0 To dgvDictionary.Rows.Count - 1
+                    For j As Integer = 0 To cols - 1
+                        If dgvDictionary.Rows(i).Cells(j).Value IsNot Nothing Then
+                            wr.Write(dgvDictionary.Rows(i).Cells(j).Value + ",")
+                        Else
+                            wr.Write(",")
+                        End If
+                    Next
+
+                    wr.WriteLine()
+                Next
+                wr.Close()
+            Else
+                CurrentDocument.WordDictionary.Save(dlgSave.FileName)
+            End If
         End If
     End Sub
 

@@ -52,8 +52,6 @@ Public Class frmMain
             rtbList.Add(rtbDoc)
         Next
 
-
-
         tcNotebook.SelectedIndex = 0
         SelectedDocument = rtbList.Item(0)
         ResumeLayout()
@@ -67,6 +65,8 @@ Public Class frmMain
 
         NotebookEditor1.lbPages.SelectedIndex = 0
         FirstTabUpdate = True
+
+        lblPageCount.Text = "Page Count: " & CurrentDocument.Pages.Count
     End Sub
 
     Public Sub ModifiedHandler(sender As Object, e As EventArgs)
@@ -322,8 +322,6 @@ Public Class frmMain
         FileToolStrip.Renderer = Theme.GetToolStripRenderer()
         FontToolStrip.Renderer = Theme.GetToolStripRenderer()
         DataToolStrip.Renderer = Theme.GetToolStripRenderer()
-        ThemeToolStrip.Renderer = Theme.GetToolStripRenderer()
-        ThemeToolStrip.MinimumSize = New Size(0, FontToolStrip.Height)
         cmsMain.Renderer = Theme.GetMenuRenderer()
         frmRTF.SetTheme(Theme)
         frmDictionary.SetTheme(Theme)
@@ -1135,10 +1133,6 @@ Public Class frmMain
 
     Private Sub StrikeToolStripButton_Click(sender As Object, e As EventArgs) Handles StrikeToolStripButton.Click
         ApplyStyle(SelectedDocument, FontStyle.Strikeout)
-    End Sub
-
-    Private Sub ThemeCombo_Click(sender As Object, e As EventArgs) Handles ThemeCombo.Click
-
     End Sub
 
     Private Sub ThemeCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ThemeCombo.SelectedIndexChanged

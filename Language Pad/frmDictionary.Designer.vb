@@ -43,20 +43,14 @@ Partial Class frmDictionary
         Me.CustomTabPage = New System.Windows.Forms.TabPage()
         Me.CustomLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.dgvDictionary = New System.Windows.Forms.DataGridView()
-        Me.Word = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Pronunciation = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Definition = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Notes = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
-        Me.dlgExport = New System.Windows.Forms.SaveFileDialog()
         Me.dlgFont = New System.Windows.Forms.FontDialog()
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.MainToolStrip = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ExportToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.CustomSymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -66,6 +60,10 @@ Partial Class frmDictionary
         Me.RemoveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.FontToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.Word = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Pronunciation = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Definition = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Notes = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -345,39 +343,15 @@ Partial Class frmDictionary
         Me.dgvDictionary.Size = New System.Drawing.Size(1554, 810)
         Me.dgvDictionary.TabIndex = 3
         '
-        'Word
-        '
-        Me.Word.HeaderText = "Word"
-        Me.Word.Name = "Word"
-        '
-        'Pronunciation
-        '
-        Me.Pronunciation.HeaderText = "Pronunciation"
-        Me.Pronunciation.Name = "Pronunciation"
-        '
-        'Definition
-        '
-        Me.Definition.HeaderText = "Definition"
-        Me.Definition.Name = "Definition"
-        Me.Definition.Width = 255
-        '
-        'Notes
-        '
-        Me.Notes.HeaderText = "Notes"
-        Me.Notes.Name = "Notes"
-        Me.Notes.Width = 255
-        '
         'dlgOpen
         '
-        Me.dlgOpen.Filter = "Dictionary file (*.dict)|*.dict|Text files (*.txt)|*.txt|All files (*.*)|*.*"
+        Me.dlgOpen.Filter = "Dictionary file (*.dict)|*.dict|CSV file (*.csv)|*.csv|Text files (*.txt)|*.txt|A" &
+    "ll files (*.*)|*.*"
         '
         'dlgSave
         '
-        Me.dlgSave.Filter = "Dictionary file (*.dict)|*.dict|Text files (*.txt)|*.txt|All files (*.*)|*.*"
-        '
-        'dlgExport
-        '
-        Me.dlgExport.Filter = "CSV file (*.csv)|*.csv"
+        Me.dlgSave.Filter = "Dictionary file (*.dict)|*.dict|CSV file (*.csv)|*.csv|Text files (*.txt)|*.txt|A" &
+    "ll files (*.*)|*.*"
         '
         'dlgFont
         '
@@ -386,13 +360,22 @@ Partial Class frmDictionary
         'ToolStripContainer1
         '
         '
+        'ToolStripContainer1.BottomToolStripPanel
+        '
+        '
         'ToolStripContainer1.ContentPanel
         '
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.SplitContainer1)
         Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1560, 944)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        '
+        'ToolStripContainer1.LeftToolStripPanel
+        '
         Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        '
+        'ToolStripContainer1.RightToolStripPanel
+        '
         Me.ToolStripContainer1.Size = New System.Drawing.Size(1560, 975)
         Me.ToolStripContainer1.TabIndex = 75
         Me.ToolStripContainer1.Text = "ToolStripContainer1"
@@ -405,7 +388,7 @@ Partial Class frmDictionary
         '
         Me.MainToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.MainToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ExportToolStripButton, Me.ToolStripSeparator1, Me.SymbolsToolStripButton, Me.CustomSymbolsToolStripButton, Me.AccentMarkToolStripButton, Me.ToolStripSeparator2, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.ToolStripSeparator3, Me.FontToolStripButton})
+        Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.SymbolsToolStripButton, Me.CustomSymbolsToolStripButton, Me.AccentMarkToolStripButton, Me.ToolStripSeparator2, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.ToolStripSeparator3, Me.FontToolStripButton})
         Me.MainToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.MainToolStrip.Name = "MainToolStrip"
         Me.MainToolStrip.Size = New System.Drawing.Size(1560, 31)
@@ -441,16 +424,6 @@ Partial Class frmDictionary
         Me.SaveToolStripButton.Name = "SaveToolStripButton"
         Me.SaveToolStripButton.Size = New System.Drawing.Size(28, 28)
         Me.SaveToolStripButton.Text = "Redo"
-        '
-        'ExportToolStripButton
-        '
-        Me.ExportToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ExportToolStripButton.Image = CType(resources.GetObject("ExportToolStripButton.Image"), System.Drawing.Image)
-        Me.ExportToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ExportToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ExportToolStripButton.Name = "ExportToolStripButton"
-        Me.ExportToolStripButton.Size = New System.Drawing.Size(28, 28)
-        Me.ExportToolStripButton.Text = "Export"
         '
         'ToolStripSeparator1
         '
@@ -527,6 +500,29 @@ Partial Class frmDictionary
         Me.FontToolStripButton.Size = New System.Drawing.Size(28, 28)
         Me.FontToolStripButton.Text = "Font"
         '
+        'Word
+        '
+        Me.Word.HeaderText = "Word"
+        Me.Word.Name = "Word"
+        '
+        'Pronunciation
+        '
+        Me.Pronunciation.HeaderText = "Pronunciation"
+        Me.Pronunciation.Name = "Pronunciation"
+        Me.Pronunciation.Width = 150
+        '
+        'Definition
+        '
+        Me.Definition.HeaderText = "Definition"
+        Me.Definition.Name = "Definition"
+        Me.Definition.Width = 255
+        '
+        'Notes
+        '
+        Me.Notes.HeaderText = "Notes"
+        Me.Notes.Name = "Notes"
+        Me.Notes.Width = 255
+        '
         'frmDictionary
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
@@ -564,10 +560,6 @@ Partial Class frmDictionary
     End Sub
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents dgvDictionary As DataGridView
-    Friend WithEvents Word As DataGridViewTextBoxColumn
-    Friend WithEvents Pronunciation As DataGridViewTextBoxColumn
-    Friend WithEvents Definition As DataGridViewTextBoxColumn
-    Friend WithEvents Notes As DataGridViewTextBoxColumn
     Friend WithEvents tcSymbols As TabControl
     Friend WithEvents ConsonantsTabPage As TabPage
     Friend WithEvents ConsonantsLayoutPanel As FlowLayoutPanel
@@ -587,14 +579,12 @@ Partial Class frmDictionary
     Friend WithEvents CustomLayoutPanel As FlowLayoutPanel
     Friend WithEvents dlgOpen As OpenFileDialog
     Friend WithEvents dlgSave As SaveFileDialog
-    Friend WithEvents dlgExport As SaveFileDialog
     Friend WithEvents dlgFont As FontDialog
     Friend WithEvents ToolStripContainer1 As ToolStripContainer
     Friend WithEvents MainToolStrip As ToolStrip
     Friend WithEvents NewToolStripButton As ToolStripButton
     Friend WithEvents OpenToolStripButton As ToolStripButton
     Friend WithEvents SaveToolStripButton As ToolStripButton
-    Friend WithEvents ExportToolStripButton As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents SymbolsToolStripButton As ToolStripButton
     Friend WithEvents CustomSymbolsToolStripButton As ToolStripButton
@@ -604,4 +594,8 @@ Partial Class frmDictionary
     Friend WithEvents AddToolStripButton As ToolStripButton
     Friend WithEvents RemoveToolStripButton As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents Word As DataGridViewTextBoxColumn
+    Friend WithEvents Pronunciation As DataGridViewTextBoxColumn
+    Friend WithEvents Definition As DataGridViewTextBoxColumn
+    Friend WithEvents Notes As DataGridViewTextBoxColumn
 End Class

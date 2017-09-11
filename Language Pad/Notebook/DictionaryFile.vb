@@ -33,6 +33,11 @@ Public Class DictionaryFile
         Me.Words = NewDictionary.Words
     End Sub
 
+    Public Sub OpenCSV(ByVal FilePath As String)
+        Dim NewDictionary As DictionaryFile = DictionaryFileAccess.OpenCSV(FilePath)
+        Me.Words = NewDictionary.Words
+    End Sub
+
     Public Sub New()
         Me.Words = New List(Of DictionaryWord)
     End Sub
@@ -74,4 +79,23 @@ Module DictionaryFileAccess
         Return NewDictionary
     End Function
 
+    Public Function OpenCSV(ByVal FilePath As String) As DictionaryFile
+        '  On Error Resume Next
+        Dim NewDictionary As New DictionaryFile
+        Dim Lines As String() = File.ReadAllText(FilePath).Split(New String() {Environment.NewLine, vbCrLf, vbCr, vbLf}, StringSplitOptions.RemoveEmptyEntries)
+
+        For Each CurrentLine As String In Lines
+            If CurrentLine.Trim().Equals("Word,Pronunciation,Definition,Notes") Then Continue For
+
+            Dim NewWord As New DictionaryWord
+            NewWord.Word = CurrentLine.Split(",").GetValue(0)
+            NewWord.Pronunciation = CurrentLine.Split(",").GetValue(1)
+            NewWord.Definition = CurrentLine.Split(",").GetValue(2)
+            NewWord.Notes = CurrentLine.Split(",").GetValue(3)
+
+            NewDictionary.Words.Add(NewWord)
+        Next
+
+        Return NewDictionary
+    End Function
 End Module
