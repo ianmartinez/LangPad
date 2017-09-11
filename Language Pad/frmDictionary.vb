@@ -16,6 +16,7 @@ Public Class frmDictionary
         Color2 = Theme.PanelBack
         VerticalMenuGradient = Theme.VerticalMenuGradient
         BackColor = Theme.PanelBack
+        dgvDictionary.BackgroundColor = Theme.PanelBack
 
         MainToolStrip.Renderer = Theme.GetToolStripRenderer()
 

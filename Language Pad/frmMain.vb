@@ -321,6 +321,7 @@ Public Class frmMain
         MainMenu.Renderer = Theme.GetMenuRenderer()
         FileToolStrip.Renderer = Theme.GetToolStripRenderer()
         FontToolStrip.Renderer = Theme.GetToolStripRenderer()
+        LinguisticsToolStrip.Renderer = Theme.GetToolStripRenderer()
         DataToolStrip.Renderer = Theme.GetToolStripRenderer()
         cmsMain.Renderer = Theme.GetMenuRenderer()
         frmRTF.SetTheme(Theme)
@@ -408,6 +409,7 @@ Public Class frmMain
 
         FileToolStrip.Location = New Point(0, 0)
         FontToolStrip.Location = New Point(FileToolStrip.Width, 0)
+        LinguisticsToolStrip.Location = New Point(FontToolStrip.Width + FileToolStrip.Width, 0)
 
         dlgColor.FullOpen = True
 
@@ -1152,5 +1154,17 @@ Public Class frmMain
         Else
             SetTheme(New IceTheme)
         End If
+    End Sub
+
+    Private Sub SymbolsToolStripButton_Click(sender As Object, e As EventArgs) Handles SymbolsToolStripButton.Click
+        SymbolsToolStripMenuItem_Click(Me, e)
+    End Sub
+
+    Private Sub CustomSymbolsToolStripButton_Click(sender As Object, e As EventArgs) Handles CustomSymbolsToolStripButton.Click
+        CustomSymbolsToolStripMenuItem_Click(Me, e)
+    End Sub
+
+    Private Sub AccentMarkToolStripButton_Click(sender As Object, e As EventArgs) Handles AccentMarkToolStripButton.Click
+        AccentMarkToolStripMenuItem_Click(Me, e)
     End Sub
 End Class

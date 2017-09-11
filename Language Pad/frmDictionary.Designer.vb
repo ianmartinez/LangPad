@@ -43,6 +43,10 @@ Partial Class frmDictionary
         Me.CustomTabPage = New System.Windows.Forms.TabPage()
         Me.CustomLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.dgvDictionary = New System.Windows.Forms.DataGridView()
+        Me.Word = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Pronunciation = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Definition = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Notes = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.dlgFont = New System.Windows.Forms.FontDialog()
@@ -60,10 +64,6 @@ Partial Class frmDictionary
         Me.RemoveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.FontToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.Word = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Pronunciation = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Definition = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Notes = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -102,7 +102,7 @@ Partial Class frmDictionary
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.dgvDictionary)
         Me.SplitContainer1.Panel2.Padding = New System.Windows.Forms.Padding(6, 6, 0, 0)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1560, 944)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1777, 1090)
         Me.SplitContainer1.SplitterDistance = 124
         Me.SplitContainer1.TabIndex = 74
         '
@@ -121,7 +121,7 @@ Partial Class frmDictionary
         Me.tcSymbols.Margin = New System.Windows.Forms.Padding(4)
         Me.tcSymbols.Name = "tcSymbols"
         Me.tcSymbols.SelectedIndex = 0
-        Me.tcSymbols.Size = New System.Drawing.Size(1560, 120)
+        Me.tcSymbols.Size = New System.Drawing.Size(1777, 120)
         Me.tcSymbols.TabIndex = 73
         '
         'ConsonantsTabPage
@@ -130,7 +130,7 @@ Partial Class frmDictionary
         Me.ConsonantsTabPage.Location = New System.Drawing.Point(8, 39)
         Me.ConsonantsTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.ConsonantsTabPage.Name = "ConsonantsTabPage"
-        Me.ConsonantsTabPage.Size = New System.Drawing.Size(1544, 73)
+        Me.ConsonantsTabPage.Size = New System.Drawing.Size(1761, 73)
         Me.ConsonantsTabPage.TabIndex = 0
         Me.ConsonantsTabPage.Text = "Consonants"
         Me.ConsonantsTabPage.UseVisualStyleBackColor = True
@@ -146,7 +146,7 @@ Partial Class frmDictionary
         Me.ConsonantsLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.ConsonantsLayoutPanel.Name = "ConsonantsLayoutPanel"
         Me.ConsonantsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
-        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(1544, 73)
+        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(1761, 73)
         Me.ConsonantsLayoutPanel.TabIndex = 7
         '
         'AffricatesTabPage
@@ -340,8 +340,31 @@ Partial Class frmDictionary
         Me.dgvDictionary.Name = "dgvDictionary"
         Me.dgvDictionary.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvDictionary.RowTemplate.Height = 24
-        Me.dgvDictionary.Size = New System.Drawing.Size(1554, 810)
+        Me.dgvDictionary.Size = New System.Drawing.Size(1771, 956)
         Me.dgvDictionary.TabIndex = 3
+        '
+        'Word
+        '
+        Me.Word.HeaderText = "Word"
+        Me.Word.Name = "Word"
+        '
+        'Pronunciation
+        '
+        Me.Pronunciation.HeaderText = "Pronunciation"
+        Me.Pronunciation.Name = "Pronunciation"
+        Me.Pronunciation.Width = 150
+        '
+        'Definition
+        '
+        Me.Definition.HeaderText = "Definition"
+        Me.Definition.Name = "Definition"
+        Me.Definition.Width = 255
+        '
+        'Notes
+        '
+        Me.Notes.HeaderText = "Notes"
+        Me.Notes.Name = "Notes"
+        Me.Notes.Width = 255
         '
         'dlgOpen
         '
@@ -366,7 +389,7 @@ Partial Class frmDictionary
         'ToolStripContainer1.ContentPanel
         '
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.SplitContainer1)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1560, 944)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1777, 1090)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'ToolStripContainer1.LeftToolStripPanel
@@ -376,7 +399,7 @@ Partial Class frmDictionary
         '
         'ToolStripContainer1.RightToolStripPanel
         '
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(1560, 975)
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(1777, 1121)
         Me.ToolStripContainer1.TabIndex = 75
         Me.ToolStripContainer1.Text = "ToolStripContainer1"
         '
@@ -391,7 +414,7 @@ Partial Class frmDictionary
         Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.SymbolsToolStripButton, Me.CustomSymbolsToolStripButton, Me.AccentMarkToolStripButton, Me.ToolStripSeparator2, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.ToolStripSeparator3, Me.FontToolStripButton})
         Me.MainToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.MainToolStrip.Name = "MainToolStrip"
-        Me.MainToolStrip.Size = New System.Drawing.Size(1560, 31)
+        Me.MainToolStrip.Size = New System.Drawing.Size(1777, 31)
         Me.MainToolStrip.Stretch = True
         Me.MainToolStrip.TabIndex = 1
         '
@@ -500,34 +523,11 @@ Partial Class frmDictionary
         Me.FontToolStripButton.Size = New System.Drawing.Size(28, 28)
         Me.FontToolStripButton.Text = "Font"
         '
-        'Word
-        '
-        Me.Word.HeaderText = "Word"
-        Me.Word.Name = "Word"
-        '
-        'Pronunciation
-        '
-        Me.Pronunciation.HeaderText = "Pronunciation"
-        Me.Pronunciation.Name = "Pronunciation"
-        Me.Pronunciation.Width = 150
-        '
-        'Definition
-        '
-        Me.Definition.HeaderText = "Definition"
-        Me.Definition.Name = "Definition"
-        Me.Definition.Width = 255
-        '
-        'Notes
-        '
-        Me.Notes.HeaderText = "Notes"
-        Me.Notes.Name = "Notes"
-        Me.Notes.Width = 255
-        '
         'frmDictionary
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1560, 975)
+        Me.ClientSize = New System.Drawing.Size(1777, 1121)
         Me.Controls.Add(Me.ToolStripContainer1)
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "frmDictionary"
