@@ -49,23 +49,23 @@ Partial Class dlgTable
         '
         'nudRows
         '
-        Me.nudRows.Location = New System.Drawing.Point(180, 21)
+        Me.nudRows.Location = New System.Drawing.Point(201, 21)
         Me.nudRows.Margin = New System.Windows.Forms.Padding(4)
         Me.nudRows.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.nudRows.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudRows.Name = "nudRows"
-        Me.nudRows.Size = New System.Drawing.Size(250, 31)
+        Me.nudRows.Size = New System.Drawing.Size(228, 31)
         Me.nudRows.TabIndex = 7
         Me.nudRows.Value = New Decimal(New Integer() {2, 0, 0, 0})
         '
         'nudWidth
         '
-        Me.nudWidth.Location = New System.Drawing.Point(182, 113)
+        Me.nudWidth.Location = New System.Drawing.Point(201, 113)
         Me.nudWidth.Margin = New System.Windows.Forms.Padding(4)
         Me.nudWidth.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.nudWidth.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudWidth.Name = "nudWidth"
-        Me.nudWidth.Size = New System.Drawing.Size(250, 31)
+        Me.nudWidth.Size = New System.Drawing.Size(228, 31)
         Me.nudWidth.TabIndex = 9
         Me.nudWidth.Value = New Decimal(New Integer() {100, 0, 0, 0})
         '
@@ -81,12 +81,12 @@ Partial Class dlgTable
         '
         'nudColumns
         '
-        Me.nudColumns.Location = New System.Drawing.Point(180, 67)
+        Me.nudColumns.Location = New System.Drawing.Point(201, 67)
         Me.nudColumns.Margin = New System.Windows.Forms.Padding(4)
         Me.nudColumns.Maximum = New Decimal(New Integer() {50, 0, 0, 0})
         Me.nudColumns.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudColumns.Name = "nudColumns"
-        Me.nudColumns.Size = New System.Drawing.Size(250, 31)
+        Me.nudColumns.Size = New System.Drawing.Size(228, 31)
         Me.nudColumns.TabIndex = 8
         Me.nudColumns.Value = New Decimal(New Integer() {2, 0, 0, 0})
         '

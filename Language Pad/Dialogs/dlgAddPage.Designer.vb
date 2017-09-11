@@ -42,10 +42,10 @@ Partial Class dlgAddPage
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(18, 38)
+        Me.txtName.Location = New System.Drawing.Point(18, 47)
         Me.txtName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(369, 31)
+        Me.txtName.Size = New System.Drawing.Size(366, 31)
         Me.txtName.TabIndex = 0
         '
         'TableLayoutPanel1

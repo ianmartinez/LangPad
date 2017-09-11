@@ -43,7 +43,7 @@ Partial Class dlgAccentMark
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(22, 31)
+        Me.Label1.Location = New System.Drawing.Point(22, 32)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(112, 25)
@@ -63,7 +63,7 @@ Partial Class dlgAccentMark
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(22, 87)
+        Me.Label2.Location = New System.Drawing.Point(22, 88)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 25)
@@ -139,7 +139,7 @@ Partial Class dlgAccentMark
         Me.lblResult.Location = New System.Drawing.Point(2, 2)
         Me.lblResult.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(120, 102)
+        Me.lblResult.Size = New System.Drawing.Size(119, 102)
         Me.lblResult.TabIndex = 69
         Me.lblResult.Text = "a"
         Me.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -148,11 +148,11 @@ Partial Class dlgAccentMark
         '
         Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
         Me.StylizedPanel1.Controls.Add(Me.lblResult)
-        Me.StylizedPanel1.Location = New System.Drawing.Point(568, 21)
+        Me.StylizedPanel1.Location = New System.Drawing.Point(566, 21)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(124, 106)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(123, 106)
         Me.StylizedPanel1.Style = "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Colors=~255|~255" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~190" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text C" &
     "olor=#252b2f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.StylizedPanel1.TabIndex = 70

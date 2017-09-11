@@ -39,7 +39,7 @@ Partial Class dlgCustomZoom
         Me.nudZoom.Maximum = New Decimal(New Integer() {64, 0, 0, 0})
         Me.nudZoom.Minimum = New Decimal(New Integer() {15626, 0, 0, 393216})
         Me.nudZoom.Name = "nudZoom"
-        Me.nudZoom.Size = New System.Drawing.Size(490, 31)
+        Me.nudZoom.Size = New System.Drawing.Size(494, 31)
         Me.nudZoom.TabIndex = 6
         Me.nudZoom.Value = New Decimal(New Integer() {64, 0, 0, 0})
         '

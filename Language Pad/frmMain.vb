@@ -409,6 +409,8 @@ Public Class frmMain
         FileToolStrip.Location = New Point(0, 0)
         FontToolStrip.Location = New Point(FileToolStrip.Width, 0)
 
+        dlgColor.FullOpen = True
+
         SetTheme(New IceTheme())
 
         ThemeCombo.SelectedItem = My.Settings.Theme

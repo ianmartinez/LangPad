@@ -61,7 +61,7 @@ Partial Class dlgTextArt
         Me.StylizedText1.Location = New System.Drawing.Point(2, 2)
         Me.StylizedText1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedText1.Name = "StylizedText1"
-        Me.StylizedText1.Size = New System.Drawing.Size(800, 279)
+        Me.StylizedText1.Size = New System.Drawing.Size(798, 279)
         Me.StylizedText1.Style = "Colors=#e6832a|#c74c4f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Shadow Color=$2" &
     "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Shadow Offset=(2,2)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Size=1 "
         Me.StylizedText1.TabIndex = 69
@@ -186,7 +186,7 @@ Partial Class dlgTextArt
         '
         'nudAngle
         '
-        Me.nudAngle.Location = New System.Drawing.Point(100, 375)
+        Me.nudAngle.Location = New System.Drawing.Point(101, 375)
         Me.nudAngle.Margin = New System.Windows.Forms.Padding(4)
         Me.nudAngle.Maximum = New Decimal(New Integer() {360, 0, 0, 0})
         Me.nudAngle.Minimum = New Decimal(New Integer() {360, 0, 0, -2147483648})
@@ -209,7 +209,7 @@ Partial Class dlgTextArt
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(186, 379)
+        Me.Label2.Location = New System.Drawing.Point(185, 379)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(115, 25)
@@ -230,7 +230,7 @@ Partial Class dlgTextArt
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(394, 379)
+        Me.Label3.Location = New System.Drawing.Point(392, 379)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 25)
@@ -243,7 +243,7 @@ Partial Class dlgTextArt
         Me.txtText.Margin = New System.Windows.Forms.Padding(4)
         Me.txtText.Multiline = True
         Me.txtText.Name = "txtText"
-        Me.txtText.Size = New System.Drawing.Size(800, 150)
+        Me.txtText.Size = New System.Drawing.Size(799, 150)
         Me.txtText.TabIndex = 11
         Me.txtText.Text = "Text Art"
         '
@@ -278,14 +278,14 @@ Partial Class dlgTextArt
         Me.nudSize.Margin = New System.Windows.Forms.Padding(4)
         Me.nudSize.Maximum = New Decimal(New Integer() {360, 0, 0, 0})
         Me.nudSize.Name = "nudSize"
-        Me.nudSize.Size = New System.Drawing.Size(88, 31)
+        Me.nudSize.Size = New System.Drawing.Size(83, 31)
         Me.nudSize.TabIndex = 10
         Me.nudSize.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(602, 379)
+        Me.Label4.Location = New System.Drawing.Point(600, 377)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(130, 25)
@@ -300,7 +300,7 @@ Partial Class dlgTextArt
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(804, 283)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(802, 283)
         Me.StylizedPanel1.Style = "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Colors=~255|~255" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text C" &
     "olor=#252b2f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
         Me.StylizedPanel1.TabIndex = 83

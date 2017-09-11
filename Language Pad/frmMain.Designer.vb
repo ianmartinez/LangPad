@@ -1073,7 +1073,7 @@ Partial Class frmMain
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.OpenToolStripMenuItem, Me.toolStripSeparator3, Me.SaveToolStripMenuItem, Me.SaveAsToolStripMenuItem, Me.toolStripSeparator4, Me.PrintToolStripMenuItem, Me.PrintPreviewToolStripMenuItem, Me.PageSetupToolStripMenuItem, Me.ToolStripMenuItem22, Me.RTFEditorToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(64, 36)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(64, 38)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'NewToolStripMenuItem
@@ -1163,7 +1163,7 @@ Partial Class frmMain
         '
         Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoToolStripMenuItem, Me.RedoToolStripMenuItem, Me.toolStripSeparator6, Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.PastePlainToolStripMenuItem, Me.ToolStripMenuItem25, Me.FindToolStripMenuItem, Me.toolStripSeparator7, Me.SelectAllToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(67, 36)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(67, 38)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'UndoToolStripMenuItem
@@ -1252,7 +1252,7 @@ Partial Class frmMain
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ZoomInToolStripMenuItem, Me.ZoomOutToolStripMenuItem, Me.ToolStripMenuItem27, Me.ZoomToolStripMenuItem, Me.EditZoomToolStripMenuItem, Me.ToolStripMenuItem26, Me.WordWrapToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(78, 36)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(78, 38)
         Me.ViewToolStripMenuItem.Text = "View"
         '
         'ZoomInToolStripMenuItem
@@ -1308,7 +1308,7 @@ Partial Class frmMain
         '
         Me.LinguisticsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SymbolsToolStripMenuItem, Me.CustomSymbolsToolStripMenuItem, Me.AccentMarkToolStripMenuItem, Me.ToolStripMenuItem30, Me.DictionaryToolStripMenuItem})
         Me.LinguisticsToolStripMenuItem.Name = "LinguisticsToolStripMenuItem"
-        Me.LinguisticsToolStripMenuItem.Size = New System.Drawing.Size(137, 36)
+        Me.LinguisticsToolStripMenuItem.Size = New System.Drawing.Size(137, 38)
         Me.LinguisticsToolStripMenuItem.Text = "Linguistics"
         '
         'SymbolsToolStripMenuItem
@@ -1352,7 +1352,7 @@ Partial Class frmMain
         '
         Me.InsertToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImageToolStripMenuItem, Me.TextArtToolStripMenuItem, Me.TableToolStripMenuItem})
         Me.InsertToolStripMenuItem.Name = "InsertToolStripMenuItem"
-        Me.InsertToolStripMenuItem.Size = New System.Drawing.Size(86, 36)
+        Me.InsertToolStripMenuItem.Size = New System.Drawing.Size(86, 38)
         Me.InsertToolStripMenuItem.Text = "Insert"
         '
         'ImageToolStripMenuItem
@@ -1383,7 +1383,7 @@ Partial Class frmMain
         '
         Me.StyleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsertBulletsToolStripMenuItem, Me.RemoveBulletsToolStripMenuItem, Me.ToolStripMenuItem24, Me.DefaultStyleToolStripMenuItem, Me.EditStyleToolStripMenuItem, Me.ApplyStyleToolStripMenuItem, Me.ToolStripMenuItem31, Me.SubscriptToolStripMenuItem, Me.SuperscriptToolStripMenuItem, Me.BaselineToolStripMenuItem, Me.ToolStripMenuItem32, Me.TextColorToolStripMenuItem, Me.HighlightToolStripMenuItem})
         Me.StyleToolStripMenuItem.Name = "StyleToolStripMenuItem"
-        Me.StyleToolStripMenuItem.Size = New System.Drawing.Size(78, 36)
+        Me.StyleToolStripMenuItem.Size = New System.Drawing.Size(78, 38)
         Me.StyleToolStripMenuItem.Text = "Style"
         '
         'InsertBulletsToolStripMenuItem
@@ -1475,7 +1475,7 @@ Partial Class frmMain
         '
         Me.PageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddPageToolStripMenuItem, Me.RemovePageToolStripMenuItem, Me.DuplicatePageToolStripMenuItem, Me.ToolStripMenuItem28, Me.ImportPageToolStripMenuItem, Me.ExportPageToolStripMenuItem, Me.ToolStripMenuItem29, Me.RenamePageToolStripMenuItem})
         Me.PageToolStripMenuItem.Name = "PageToolStripMenuItem"
-        Me.PageToolStripMenuItem.Size = New System.Drawing.Size(78, 36)
+        Me.PageToolStripMenuItem.Size = New System.Drawing.Size(78, 38)
         Me.PageToolStripMenuItem.Text = "Page"
         '
         'AddPageToolStripMenuItem
@@ -1538,7 +1538,7 @@ Partial Class frmMain
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateToolStripMenuItem, Me.ToolStripMenuItem23, Me.SettingsToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(82, 36)
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(82, 38)
         Me.ToolsToolStripMenuItem.Text = "Tools"
         '
         'UpdateToolStripMenuItem
@@ -1566,7 +1566,7 @@ Partial Class frmMain
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(77, 36)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(77, 38)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'AboutToolStripMenuItem
