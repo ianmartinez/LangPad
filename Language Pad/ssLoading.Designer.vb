@@ -97,7 +97,7 @@ Partial Class ssLoading
         Me.Name = "ssLoading"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.TransparencyKey = System.Drawing.Color.MistyRose
+        Me.TransparencyKey = System.Drawing.Color.PaleTurquoise
         Me.StylizedPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
