@@ -104,3 +104,25 @@ Public Class OliveTheme
         Return New clsOliveMenuRenderer
     End Function
 End Class
+
+Public Class DesertTheme
+    Inherits Theme
+
+    Public Sub New()
+        MyBase.New("Desert")
+
+        Color1 = clrDesertHorBG_Color1
+        Color2 = clrDesertHorBG_Color2
+        PanelBack = clrDesertHorBG_Color1
+
+        VerticalMenuGradient = False
+    End Sub
+
+    Public Overrides Function GetToolStripRenderer() As ToolStripRenderer
+        Return New clsDesertToolstripRenderer
+    End Function
+
+    Public Overrides Function GetMenuRenderer() As ToolStripRenderer
+        Return New clsDesertMenuRenderer
+    End Function
+End Class

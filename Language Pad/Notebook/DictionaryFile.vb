@@ -1,15 +1,5 @@
 ﻿Imports System.IO
-Imports System.Runtime.Serialization
-Imports System.Collections
-Imports System.Runtime.Serialization.Formatters.Binary
-Imports System.CodeDom.Compiler
-Imports System.Resources
-Imports System.Reflection
-Imports System.Drawing
-Imports System.Windows.Forms
 Imports Tundra
-Imports Ionic.Zip
-Imports System.Text.RegularExpressions
 
 <Serializable()>
 Public Class DictionaryWord
@@ -57,7 +47,7 @@ Module DictionaryFileAccess
             DictionaryString.Add(New ZiaLine(LineType.KeyValue, "Word " & i, Value))
         Next
 
-        System.IO.File.WriteAllText(FilePath, ZiaFile.Write(DictionaryString))
+        File.WriteAllText(FilePath, ZiaFile.Write(DictionaryString))
     End Sub
 
     Public Function Open(ByVal FilePath As String) As DictionaryFile

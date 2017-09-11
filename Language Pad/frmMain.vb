@@ -1018,7 +1018,7 @@ Public Class frmMain
                     SelectedDocument.SelectionStart = 0
                     SelectedDocument.SelectionLength = 0
                 Case Else
-                    Dim txtWriter As System.IO.StreamWriter
+                    Dim txtWriter As StreamWriter
                     txtWriter = New System.IO.StreamWriter(dlgSavePage.FileName)
                     txtWriter.Write(SelectedDocument.Text)
                     txtWriter.Close()
@@ -1151,6 +1151,8 @@ Public Class frmMain
             SetTheme(New LunaTheme)
         ElseIf ThemeCombo.SelectedItem.ToString().Equals("Olive") Then
             SetTheme(New OliveTheme)
+        ElseIf ThemeCombo.SelectedItem.ToString().Equals("Desert") Then
+            SetTheme(New DesertTheme)
         Else
             SetTheme(New IceTheme)
         End If
