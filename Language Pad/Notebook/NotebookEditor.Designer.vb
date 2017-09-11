@@ -26,7 +26,6 @@ Partial Class NotebookEditor
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NotebookEditor))
         Me.lbPages = New System.Windows.Forms.ListBox()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
-        Me.btnGoWebsite = New Tundra.StylizedButton()
         Me.DoubleBufferedPanel2 = New Tundra.DoubleBufferedPanel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtInfo = New System.Windows.Forms.TextBox()
@@ -53,6 +52,7 @@ Partial Class NotebookEditor
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DictionaryToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.DocumentToolStripContainer = New System.Windows.Forms.ToolStripContainer()
+        Me.btnGo = New System.Windows.Forms.Button()
         Me.DoubleBufferedPanel2.SuspendLayout()
         Me.StylizedPanel1.SuspendLayout()
         Me.DocumentToolStrip.SuspendLayout()
@@ -72,40 +72,15 @@ Partial Class NotebookEditor
         Me.lbPages.Location = New System.Drawing.Point(2, 0)
         Me.lbPages.Margin = New System.Windows.Forms.Padding(4)
         Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(522, 459)
+        Me.lbPages.Size = New System.Drawing.Size(522, 465)
         Me.lbPages.TabIndex = 15
-        '
-        'btnGoWebsite
-        '
-        Me.btnGoWebsite.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnGoWebsite.BackColor = System.Drawing.Color.Transparent
-        Me.btnGoWebsite.BackgroundImage = CType(resources.GetObject("btnGoWebsite.BackgroundImage"), System.Drawing.Image)
-        Me.btnGoWebsite.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnGoWebsite.FlatAppearance.BorderSize = 0
-        Me.btnGoWebsite.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.btnGoWebsite.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnGoWebsite.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnGoWebsite.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGoWebsite.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGoWebsite.ForeColor = System.Drawing.Color.Black
-        Me.btnGoWebsite.Location = New System.Drawing.Point(479, 137)
-        Me.btnGoWebsite.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnGoWebsite.Name = "btnGoWebsite"
-        Me.btnGoWebsite.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnGoWebsite.Size = New System.Drawing.Size(40, 38)
-        Me.btnGoWebsite.Style = resources.GetString("btnGoWebsite.Style")
-        Me.btnGoWebsite.TabIndex = 4
-        Me.btnGoWebsite.Text = ">"
-        Me.ttMain.SetToolTip(Me.btnGoWebsite, "Launch in web browser")
-        Me.btnGoWebsite.UseCompatibleTextRendering = True
-        Me.btnGoWebsite.UseVisualStyleBackColor = False
         '
         'DoubleBufferedPanel2
         '
         Me.DoubleBufferedPanel2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.DoubleBufferedPanel2.Controls.Add(Me.btnGo)
         Me.DoubleBufferedPanel2.Controls.Add(Me.Label4)
         Me.DoubleBufferedPanel2.Controls.Add(Me.txtInfo)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.btnGoWebsite)
         Me.DoubleBufferedPanel2.Controls.Add(Me.Label3)
         Me.DoubleBufferedPanel2.Controls.Add(Me.cbEmbed)
         Me.DoubleBufferedPanel2.Controls.Add(Me.txtAuthor)
@@ -119,15 +94,15 @@ Partial Class NotebookEditor
         Me.DoubleBufferedPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.DoubleBufferedPanel2.Name = "DoubleBufferedPanel2"
         Me.DoubleBufferedPanel2.Padding = New System.Windows.Forms.Padding(2)
-        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(524, 403)
+        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(524, 404)
         Me.DoubleBufferedPanel2.TabIndex = 78
         '
         'Label4
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 185)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(6, 183)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 25)
         Me.Label4.TabIndex = 78
@@ -136,12 +111,12 @@ Partial Class NotebookEditor
         'txtInfo
         '
         Me.txtInfo.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtInfo.Location = New System.Drawing.Point(110, 179)
+        Me.txtInfo.Location = New System.Drawing.Point(110, 180)
         Me.txtInfo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtInfo.Multiline = True
         Me.txtInfo.Name = "txtInfo"
         Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo.Size = New System.Drawing.Size(408, 217)
+        Me.txtInfo.Size = New System.Drawing.Size(408, 216)
         Me.txtInfo.TabIndex = 5
         '
         'Label3
@@ -149,7 +124,7 @@ Partial Class NotebookEditor
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(6, 140)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(96, 25)
         Me.Label3.TabIndex = 5
@@ -164,9 +139,9 @@ Partial Class NotebookEditor
         Me.cbEmbed.Location = New System.Drawing.Point(11, 6)
         Me.cbEmbed.Margin = New System.Windows.Forms.Padding(4)
         Me.cbEmbed.Name = "cbEmbed"
-        Me.cbEmbed.Size = New System.Drawing.Size(271, 29)
+        Me.cbEmbed.Size = New System.Drawing.Size(278, 29)
         Me.cbEmbed.TabIndex = 0
-        Me.cbEmbed.Text = "Embed custom symbols"
+        Me.cbEmbed.Text = "Embed Custom Symbols"
         Me.cbEmbed.UseVisualStyleBackColor = True
         '
         'txtAuthor
@@ -184,7 +159,7 @@ Partial Class NotebookEditor
         Me.txtWebsite.Location = New System.Drawing.Point(110, 137)
         Me.txtWebsite.Margin = New System.Windows.Forms.Padding(4)
         Me.txtWebsite.Name = "txtWebsite"
-        Me.txtWebsite.Size = New System.Drawing.Size(361, 31)
+        Me.txtWebsite.Size = New System.Drawing.Size(326, 31)
         Me.txtWebsite.TabIndex = 3
         '
         'txtTitle
@@ -200,8 +175,8 @@ Partial Class NotebookEditor
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 96)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(6, 95)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(81, 25)
         Me.Label2.TabIndex = 4
@@ -211,8 +186,8 @@ Partial Class NotebookEditor
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 54)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(6, 51)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(59, 25)
         Me.Label1.TabIndex = 3
@@ -227,7 +202,7 @@ Partial Class NotebookEditor
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 0)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(524, 459)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(524, 465)
         Me.StylizedPanel1.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Col" &
     "or$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
         Me.StylizedPanel1.TabIndex = 80
@@ -238,9 +213,9 @@ Partial Class NotebookEditor
         Me.DocumentToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.DocumentToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton, Me.ToolStripSeparator4, Me.DictionaryToolStripButton})
-        Me.DocumentToolStrip.Location = New System.Drawing.Point(3, 0)
+        Me.DocumentToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DocumentToolStrip.Name = "DocumentToolStrip"
-        Me.DocumentToolStrip.Size = New System.Drawing.Size(341, 38)
+        Me.DocumentToolStrip.Size = New System.Drawing.Size(524, 31)
         Me.DocumentToolStrip.Stretch = True
         Me.DocumentToolStrip.TabIndex = 0
         '
@@ -363,23 +338,34 @@ Partial Class NotebookEditor
         'DocumentToolStripContainer.ContentPanel
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel1)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(524, 459)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(524, 465)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'DocumentToolStripContainer.LeftToolStripPanel
         '
-        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 403)
+        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 404)
         Me.DocumentToolStripContainer.Name = "DocumentToolStripContainer"
         '
         'DocumentToolStripContainer.RightToolStripPanel
         '
-        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(524, 497)
+        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(524, 496)
         Me.DocumentToolStripContainer.TabIndex = 81
         Me.DocumentToolStripContainer.Text = "ToolStripContainer1"
         '
         'DocumentToolStripContainer.TopToolStripPanel
         '
         Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.DocumentToolStrip)
+        '
+        'btnGo
+        '
+        Me.btnGo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnGo.Location = New System.Drawing.Point(443, 131)
+        Me.btnGo.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnGo.Name = "btnGo"
+        Me.btnGo.Size = New System.Drawing.Size(75, 42)
+        Me.btnGo.TabIndex = 79
+        Me.btnGo.Text = "Go"
+        Me.btnGo.UseVisualStyleBackColor = True
         '
         'NotebookEditor
         '
@@ -418,7 +404,6 @@ Partial Class NotebookEditor
     Friend WithEvents cbEmbed As System.Windows.Forms.CheckBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtInfo As System.Windows.Forms.TextBox
-    Friend WithEvents btnGoWebsite As Tundra.StylizedButton
     Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
     Friend WithEvents PageUpToolStripButton As ToolStripButton
     Friend WithEvents PageDownToolStripButton As ToolStripButton
@@ -435,4 +420,5 @@ Partial Class NotebookEditor
     Friend WithEvents DocumentToolStripContainer As ToolStripContainer
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents DictionaryToolStripButton As ToolStripButton
+    Friend WithEvents btnGo As Button
 End Class

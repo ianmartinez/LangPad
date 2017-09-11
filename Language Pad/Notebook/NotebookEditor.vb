@@ -30,14 +30,6 @@ Public Class NotebookEditor
         If FirstTabUpdate = True Then CurrentDocument.Website = txtWebsite.Text
     End Sub
 
-    Private Sub btnGoWebsite_Click(sender As Object, e As EventArgs) Handles btnGoWebsite.Click
-        If Not txtWebsite.Text.StartsWith("http://") Then
-            Process.Start("http://" & txtWebsite.Text)
-        Else
-            Process.Start(txtWebsite.Text)
-        End If
-    End Sub
-
     Private Sub lbPages_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbPages.SelectedIndexChanged
         On Error Resume Next
         If frmMain.Moving = False Then frmMain.tcNotebook.SelectedIndex = lbPages.SelectedIndex
@@ -110,6 +102,9 @@ Public Class NotebookEditor
 
     Private Sub NotebookEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DocumentToolStrip.Renderer = New clsToolstripRenderer
+
+        btnGo.Location = New Point(btnGo.Location.X, txtWebsite.Location.Y)
+        btnGo.Height = txtWebsite.Height
     End Sub
 
     Private Sub ToolStripContainer1_TopToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles DocumentToolStripContainer.TopToolStripPanel.Paint,
@@ -129,5 +124,13 @@ Public Class NotebookEditor
 
     Private Sub DictionaryToolStripButton_Click(sender As Object, e As EventArgs) Handles DictionaryToolStripButton.Click
         frmMain.DictionaryToolStripMenuItem_Click(Me, e)
+    End Sub
+
+    Private Sub btnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
+        If Not txtWebsite.Text.StartsWith("http://") Then
+            Process.Start("http://" & txtWebsite.Text)
+        Else
+            Process.Start(txtWebsite.Text)
+        End If
     End Sub
 End Class

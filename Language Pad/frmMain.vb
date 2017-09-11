@@ -406,6 +406,9 @@ Public Class frmMain
 
         IndentToolStripComboBox.SelectedItem = 1
 
+        FileToolStrip.Location = New Point(0, 0)
+        FontToolStrip.Location = New Point(FileToolStrip.Width, 0)
+
         SetTheme(New IceTheme())
 
         ThemeCombo.SelectedItem = My.Settings.Theme
