@@ -86,7 +86,7 @@ Partial Class ssLoading
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.MistyRose
+        Me.BackColor = System.Drawing.Color.PaleTurquoise
         Me.ClientSize = New System.Drawing.Size(547, 165)
         Me.ControlBox = False
         Me.Controls.Add(Me.StylizedPanel1)
