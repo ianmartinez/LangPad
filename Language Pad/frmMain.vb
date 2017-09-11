@@ -1136,7 +1136,7 @@ Public Class frmMain
     End Sub
 
     Private Sub ThemeCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ThemeCombo.SelectedIndexChanged
-        If ThemeCombo.SelectedItem.ToString().Equals("Ice (Default)") Then
+        If ThemeCombo.SelectedItem.ToString().Equals("Ice") Then
             SetTheme(New IceTheme)
         ElseIf ThemeCombo.SelectedItem.ToString().Equals("Night") Then
             SetTheme(New NightTheme)

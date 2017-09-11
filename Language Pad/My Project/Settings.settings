@@ -33,7 +33,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="Theme" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Ice (Default)</Value>
+      <Value Profile="(Default)">Ice</Value>
     </Setting>
   </Settings>
 </SettingsFile>

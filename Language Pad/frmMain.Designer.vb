@@ -693,7 +693,7 @@ Partial Class frmMain
         'ThemeCombo
         '
         Me.ThemeCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ThemeCombo.Items.AddRange(New Object() {"Ice (Default)", "Night", "Luna", "Olive"})
+        Me.ThemeCombo.Items.AddRange(New Object() {"Ice", "Night", "Luna", "Olive"})
         Me.ThemeCombo.Name = "ThemeCombo"
         Me.ThemeCombo.Size = New System.Drawing.Size(145, 40)
         '
