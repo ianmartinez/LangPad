@@ -317,6 +317,7 @@ Public Class frmMain
         Color1 = Theme.Color1
         Color2 = Theme.Color2
         VerticalMenuGradient = Theme.VerticalMenuGradient
+        BackColor = Theme.PanelBack
 
         MainMenu.Renderer = Theme.GetMenuRenderer()
         FileToolStrip.Renderer = Theme.GetToolStripRenderer()
