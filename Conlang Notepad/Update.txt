@@ -1,4 +1,4 @@
-﻿Version=7.0
-DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Conlang%20Notepad/Release/Language%20Pad%207.0.zip?raw:eq:true
-Description=   •Custom font in dictionary:cr:   •Alignment now works on styles:cr:   •Symbol buttons now use Calibri:cr:   •Large tooltips on symbol buttons for easy viewing:cr:   •Export to CSV for dictionaries:cr:   •Pin to custom on symbol buttons (CTRL + Click):cr:   •Improved help system:cr:   •Default font in dictionary is now Calibri:cr:   •Changed close icon on notebook editor:cr:   •Fixed saving issues on dictionaries:cr:   •Fixed saving issues on RTF files
-RedditThread=https://www.reddit.com/r/conlangs/comments/3k1qse/language_pad_70_a_word_processor_for_conlanging/
+﻿Version=8.0
+DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Language%20Pad/Release/Language%20Pad%208.0.zip?raw:eq:true
+Description=   •Support for 4k screens:cr:   •Support for themes - Ice(Default), Night, Luna, Olive:cr:   •Import dictionaries from CSV:cr:   •Page count next to word and character count   :cr:   •About dialog revised:cr:   •Fixed bug where decimal separators  other than "." would throw errors:cr:   •Fixed bug where clipboard content would insert itself when changing font style:cr:   •Replaced tabbed interface with toolbar and menu interface :cr:   •Removed old bloat features like clip art, webcam insert, and the emotes panel:cr:   •Replaced stylized buttons with native buttons
+RedditThread=https://www.reddit.com/r/conlangs/comments/6zfwjc/language_pad_80_release/
