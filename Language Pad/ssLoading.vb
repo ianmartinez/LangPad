@@ -63,4 +63,8 @@ Public NotInheritable Class ssLoading
     Private Sub StylizedPanel1_Paint(sender As Object, e As PaintEventArgs) Handles StylizedPanel1.Paint
 
     End Sub
+
+    Private Sub lblLanguagePad_Click(sender As Object, e As EventArgs) Handles lblLanguagePad.Click
+
+    End Sub
 End Class

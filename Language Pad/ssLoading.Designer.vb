@@ -40,15 +40,15 @@ Partial Class ssLoading
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(547, 145)
-        Me.StylizedPanel1.Style = "Colors=~220|~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~200" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highli" &
-    "ght Color=0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1"
+        Me.StylizedPanel1.Size = New System.Drawing.Size(547, 165)
+        Me.StylizedPanel1.Style = "Colors=#cf6c36|#b21e54" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=98, 44" &
+    ", 44" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1"
         Me.StylizedPanel1.TabIndex = 9
         '
         'lblLanguagePad
         '
         Me.lblLanguagePad.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLanguagePad.ForeColor = System.Drawing.Color.Firebrick
+        Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
         Me.lblLanguagePad.Location = New System.Drawing.Point(13, 20)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
@@ -60,7 +60,7 @@ Partial Class ssLoading
         'lblLoading
         '
         Me.lblLoading.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLoading.ForeColor = System.Drawing.Color.Gray
+        Me.lblLoading.ForeColor = System.Drawing.Color.MistyRose
         Me.lblLoading.Location = New System.Drawing.Point(15, 74)
         Me.lblLoading.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLoading.Name = "lblLoading"
@@ -78,7 +78,7 @@ Partial Class ssLoading
         Me.pbLoading.Location = New System.Drawing.Point(0, 132)
         Me.pbLoading.Margin = New System.Windows.Forms.Padding(6)
         Me.pbLoading.Name = "pbLoading"
-        Me.pbLoading.Size = New System.Drawing.Size(547, 13)
+        Me.pbLoading.Size = New System.Drawing.Size(547, 33)
         Me.pbLoading.Style = resources.GetString("pbLoading.Style")
         Me.pbLoading.TabIndex = 6
         '
@@ -87,7 +87,7 @@ Partial Class ssLoading
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MistyRose
-        Me.ClientSize = New System.Drawing.Size(547, 145)
+        Me.ClientSize = New System.Drawing.Size(547, 165)
         Me.ControlBox = False
         Me.Controls.Add(Me.StylizedPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
