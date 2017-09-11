@@ -1,0 +1,282 @@
+Version 9.0 (Planned)
+   •New *.nt2 file format
+   •Multiple pages can have the same name
+   •Dictionaries with multiple pages
+   •Character editor sidebar replaces Accent Mark dialog
+   •Multiple accents can be selected for a single character
+   •Separate tabs for characters embedded in the file and characters stored locally
+Version 8.0 (September 11, 2017)
+   •Support for 4k screens
+   •Support for themes - Ice(Default), Night, Luna, Olive
+   •Import dictionaries from CSV
+   •Page count next to word and character count   
+   •About dialog revised
+   •Fixed bug where decimal separators  other than "." would throw errors
+   •Fixed bug where clipboard content would insert itself when changing font style
+   •Replaced tabbed interface with toolbar and menu interface 
+   •Removed old bloat features like clip art, webcam insert, and the emotes panel
+   •Replaced stylized buttons with native buttons
+Version 7.0 (September 7, 2015)
+   •Custom font in dictionary
+   •Alignment now works on styles
+   •Symbol buttons now use Calibri
+   •Large tooltips on symbol buttons for easy viewing
+   •Export to CSV for dictionaries
+   •Pin to custom on symbol buttons (CTRL + Click)
+   •Improved help system
+   •Default font in dictionary is now Calibri
+   •Changed close icon on notebook editor
+   •Fixed saving issues on dictionaries
+   •Fixed saving issues on RTF files
+Version 6.0 (August 29, 2015)
+   •Dictionaries
+   •Removed tab bar on RTF Editor
+Version 5.3 (August 13, 2015)
+   •Standardized buttons on dialogs
+   •Centralized version naming
+   •Changed symbols and accent mark icons
+   •Copy button in accent mark dialog
+   •Clip art loading turned off by default
+   •Quick access buttons
+   •Changed right click menu style
+   •Fixed a bug when renaming a page 
+Version 5.2 (August 10, 2015)
+   •Keyboard shortcuts
+   •Massive internal improvements
+   •Improved updating system
+   •Small UI improvements
+   •Added to github
+   •Microsoft Sans Serif fonts are no longer forced by default
+Version 5.1 (August 7, 2015)
+   •A link to the associated reddit thread now shows with update
+   •Font changes now happen much faster
+   •You can now individually choose what you want to load at startup
+   •Ability to save and quickly apply font styles
+   •Dialogs now only ask you to save if the file has been modified
+   •Help file updated
+   •Splash screen made even prettier
+   •Fixed bug during size changes with numerous different fonts
+   •Fixed tab order on notebook tab
+   •Fixed bug that required multiple undos to undo a single font change
+Version 5.0 (August 3, 2015)
+   •Update checker
+   •Smaller icon for file tab
+   •Updated style for Windows 10
+   •Quick startup option to skip loading clipart and checking updates
+   •Fixed some font issues in the UI
+   •Redesigned splash screen
+   •Fixed huge font styling issues when changing font sizes and families
+   •Fixed flickering when switching tabs
+Version 4.3 (July 9, 2015)
+   •Files are now saved in the same format they were opened as 
+   •Tables now insert in place instead of at the end of the file
+   •Row limit now 10,000 instead of 1,000
+   •Switched to Fat Cow icons
+   •Tab font now red
+   •Context menu in editor
+   •UI style redesigned
+   •Reverted to old button style in dialogs
+   •Editor no longer hides selection if it loses focus
+Version 4.2 (July 4, 2015)
+   •Fixed missing functionality on the new button
+   •Fixed RTF editor ribbon colors to match main ribbon
+   •Fixed the symbol tab's padding
+   •The current page is now saved when moving pages 
+   •Fixed tab order   
+   •Saving on close doesn't cancel the closing process anymore
+   •Changed button style on dialogs
+   •Lighter borders around ribbons
+   •Notebook editor fields now centered
+   •Save notebook button in notebook editor
+   •Duplicate page button notebook in notebook editor
+   •You can now select pages using arrow keys in the notebook editor
+   •Help file included now
+   •Released source code
+Version 4.1 (July 1, 2015)
+   •Fixed bug where the file wouldn't save with only 1 tab
+   •Fixed bug where zip files wouldn't open from File Explorer
+   •Allow embedding custom symbols in saved notebooks
+   •Rename page button now in notebook editor
+   •Inserting an image no longer makes the button white
+   •Splash screen touched up
+   •Webcam dialog resized
+   •Fixed sidebar notebook list borders
+   •Borders removed on tabs
+   •Numerous small UI changes
+Version 4.0 (June 27, 2015)
+   •New icon
+   •Edit RTF window redesigned with ribbon
+   •Improved looks on Windows 10 (Build 10147)
+   •Splash screen colors changed
+   •Insertion point now stays the same after inserting symbol
+   •Redesigned about dialog
+   •Redesigned internal color system
+   •Numerous small tune-ups to the UI
+   •Trimmed unnecessary code in Tundra library
+   •Tabbed pages
+   •"Œ" ligature now in common tab
+   •Default format now a notebook file (*.nt)
+   •Comma and reverse comma above in accent mark dialog
+Version 3.0 (May 16, 2015)
+   •Word wrap toggle
+   •Ribbon redesigned
+   •Emotes and clip art dialogs now sidebars
+   •Webcam dialog changed to match others
+   •Custom zoom dialog
+   •Dialog buttons made consistent
+   •Redesigned about dialog
+Version 2.1 (May 13, 2015)
+   •Ability to add tables
+   •File name now shows in title bar
+   •Icons changed in dialogs
+   •Minor UI changes
+   •Flash button in webcam dialog
+   •Fixed lost formatting when opening from File Explorer
+   •Splash screen redesigned
+Version 2.0 (May 10, 2015)    
+   •Icons changed
+   •Buttons made flatter
+   •Word count & character count now on top bar
+   •Removed status bar
+   •Ability to edit RTF directly
+   •You can now save/open custom symbols from files
+   •Quick color selector when you right click color buttons
+   •Right click menu on text editing area
+   •Insert webcam now closes after failing to start webcam
+   •Webcam dialog redesigned
+   •Changed confirmation dialog style
+   •Accent mark dialog redesigned
+   •Add to custom symbols button in accent mark dialog
+   •Macron Below in accent mark dialog
+   •Fixed distorted images when pasting
+   •Fixed errors when changing certain fonts
+Version 1.1 (May 3, 2015)
+   •You can now open files directly in File Explorer
+   •Splash screen redesigned
+   •Cleaner-looking ribbon
+   •Resizable symbols palette
+   •Resizable emoji palette
+   •Fixed name in about box
+   •Fixed some other UI glitches
+   •You can now control narration speed & sound
+   •Insert webcam now shows an error if there's no webcam
+Version 1.0 (April 24, 2015)
+   •Initial ReleaseVersion 5.2 (August 9, 2015)
+   •Keyboard shortcuts (finally)
+   •Added to github
+   •Microsoft Sans Serif fonts are no longer forced by default
+Version 5.1 (August 7, 2015)
+   •A link to the associated reddit thread now shows with update
+   •Font changes now happen much faster
+   •You can now individually choose what you want to load at startup
+   •Ability to save and quickly apply font styles
+   •Dialogs now only ask you to save if the file has been modified
+   •Help file updated
+   •Splash screen made even prettier
+   •Fixed bug during size changes with numerous different fonts
+   •Fixed tab order on notebook tab
+   •Fixed bug that required multiple undos to undo a single font change
+Version 5.0 (August 3, 2015)
+   •Update checker
+   •Smaller icon for file tab
+   •Updated style for Windows 10
+   •Quick startup option to skip loading clipart and checking updates
+   •Fixed some font issues in the UI
+   •Redesigned splash screen
+   •Fixed huge font styling issues when changing font sizes and families
+   •Fixed flickering when switching tabs
+Version 4.3 (July 9, 2015)
+   •Files are now saved in the same format they were opened as 
+   •Tables now insert in place instead of at the end of the file
+   •Row limit now 10,000 instead of 1,000
+   •Switched to Fat Cow icons
+   •Tab font now red
+   •Context menu in editor
+   •UI style redesigned
+   •Reverted to old button style in dialogs
+   •Editor no longer hides selection if it loses focus
+Version 4.2 (July 4, 2015)
+   •Fixed missing functionality on the new button
+   •Fixed RTF editor ribbon colors to match main ribbon
+   •Fixed the symbol tabs' padding
+   •The current page is now saved when moving pages 
+   •Fixed tab order   
+   •Saving on close doesn't cancel the closing process anymore
+   •Changed button style on dialogs
+   •Lighter borders around ribbons
+   •Notebook editor fields now centered
+   •Save notebook button in notebook editor
+   •Duplicate page button notebook in notebook editor
+   •You can now select pages using arrow keys in the notebook editor
+   •Help file included now
+   •Released source code
+Version 4.1 (July 1, 2015)
+   •Fixed bug where the file wouldn't save with only 1 tab
+   •Fixed bug where zip files wouldn't open from File Explorer
+   •Allow embedding custom symbols in saved notebooks
+   •Rename page button now in notebook editor
+   •Inserting an image no longer makes the button white
+   •Splash screen touched up
+   •Webcam dialog resized
+   •Fixed sidebar notebook list borders
+   •Borders removed on tabs
+   •Numerous small UI changes
+Version 4.0 (June 27, 2015)
+   •New icon
+   •Edit RTF window redesigned with ribbon
+   •Improved looks on Windows 10 (Build 10147)
+   •Splash screen colors changed
+   •Insertion point now stays the same after inserting symbol
+   •Redesigned about dialog
+   •Redesigned internal color system
+   •Numerous small tune-ups to the UI
+   •Trimmed unnecessary code in Tundra library
+   •Tabbed pages
+   •"Œ" ligature now in common tab
+   •Default format now a notebook file (*.nt)
+   •Comma and reverse comma above in accent mark dialog
+Version 3.0 (May 16, 2015)
+   •Word wrap toggle
+   •Ribbon redesigned
+   •Emotes and clip art dialogs now sidebars
+   •Webcam dialog changed to match others
+   •Custom zoom dialog
+   •Dialog buttons made consistent
+   •Redesigned about dialog
+Version 2.1 (May 13, 2015)
+   •Ability to add tables
+   •File name now shows in title bar
+   •Icons changed in dialogs
+   •Minor UI changes
+   •Flash button in webcam dialog
+   •Fixed lost formatting when opening from File Explorer
+   •Splash screen redesigned
+Version 2.0 (May 10, 2015)    
+   •Icons changed
+   •Buttons made flatter
+   •Word count & character count now on top bar
+   •Removed status bar
+   •Ability to edit RTF directly
+   •You can now save/open custom symbols from files
+   •Quick color selector when you right click color buttons
+   •Right click menu on text editing area
+   •Insert webcam now closes after failing to start webcam
+   •Webcam dialog redesigned
+   •Changed confirmation dialog style
+   •Accent mark dialog redesigned
+   •Add to custom symbols button in accent mark dialog
+   •Macron Below in accent mark dialog
+   •Fixed distorted images when pasting
+   •Fixed errors when changing certain fonts
+Version 1.1 (May 3, 2015)
+   •You can now open files directly in File Explorer
+   •Splash screen redesigned
+   •Cleaner-looking ribbon
+   •Resizable symbols palette
+   •Resizable emoji palette
+   •Fixed name in about box
+   •Fixed some other UI glitches
+   •You can now control narration speed & sound
+   •Insert webcam now shows an error if there's no webcam
+Version 1.0 (April 24, 2015)
+   •Initial Release
