@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Themes\DesertTheme.vb" />
+    <Compile Include="Themes\SnowTheme.vb" />
     <Compile Include="Themes\OliveTheme.vb" />
     <Compile Include="Themes\LunaTheme.vb" />
     <Compile Include="Themes\NightTheme.vb" />

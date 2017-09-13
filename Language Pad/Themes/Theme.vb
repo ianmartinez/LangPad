@@ -39,6 +39,28 @@ Public Class IceTheme
     End Function
 End Class
 
+Public Class SnowTheme
+    Inherits Theme
+
+    Public Sub New()
+        MyBase.New("Snow")
+
+        Color1 = clrSnowHorBG_Color1
+        Color2 = clrSnowHorBG_Color2
+        PanelBack = Color.FromArgb(255, 250, 250, 250)
+
+        VerticalMenuGradient = False
+    End Sub
+
+    Public Overrides Function GetToolStripRenderer() As ToolStripRenderer
+        Return New clsSnowToolstripRenderer
+    End Function
+
+    Public Overrides Function GetMenuRenderer() As ToolStripRenderer
+        Return New clsSnowMenuRenderer
+    End Function
+End Class
+
 Public Class NightTheme
     Inherits Theme
 

@@ -7,11 +7,29 @@ Public Class DictionaryWord
     Public Pronunciation As String
     Public Definition As String
     Public Notes As String
+
+    Public Sub New()
+        Word = ""
+        Pronunciation = ""
+        Definition = ""
+        Notes = ""
+    End Sub
+End Class
+
+<Serializable()>
+Public Class DictionarySection
+    Public Title As String
+    Public Words As List(Of DictionaryWord)
+
+    Public Sub New()
+        Words = New List(Of DictionaryWord)
+        Title = ""
+    End Sub
 End Class
 
 <Serializable()>
 Public Class DictionaryFile
-    Public Words As List(Of DictionaryWord)
+    Public Sections As List(Of DictionarySection)
 
     Public Sub Save(ByVal FilePath As String)
         If File.Exists(FilePath) Then File.Delete(FilePath)
@@ -20,16 +38,16 @@ Public Class DictionaryFile
 
     Public Sub Open(ByVal FilePath As String)
         Dim NewDictionary As DictionaryFile = DictionaryFileAccess.Open(FilePath)
-        Me.Words = NewDictionary.Words
+        Me.Sections = NewDictionary.Sections
     End Sub
 
     Public Sub OpenCSV(ByVal FilePath As String)
         Dim NewDictionary As DictionaryFile = DictionaryFileAccess.OpenCSV(FilePath)
-        Me.Words = NewDictionary.Words
+        Me.Sections = NewDictionary.Sections
     End Sub
 
     Public Sub New()
-        Me.Words = New List(Of DictionaryWord)
+        Sections = New List(Of DictionarySection)
     End Sub
 End Class
 
@@ -40,30 +58,50 @@ Module DictionaryFileAccess
         DictionaryString.Add(New ZiaLine(LineType.Comment, "Dictionary"))
         DictionaryString.Add(New ZiaLine(LineType.Comment, "Language Pad Version:" & LangPadVersion))
 
-        For i = 0 To Dictionary.Words.Count - 1
-            Dim CurrentWord As DictionaryWord = Dictionary.Words.Item(i)
-            Dim Value As String = String.Format("{0}|{1}|{2}|{3}", ToCompatibleString(CurrentWord.Word), ToCompatibleString(CurrentWord.Pronunciation),
+        For i = 0 To Dictionary.Sections.Count - 1
+            Dim CurrentSection As DictionarySection = Dictionary.Sections.Item(i)
+            DictionaryString.Add(New ZiaLine(LineType.KeyValue, "Section" + i + "Title", ToCompatibleString(CurrentSection.Title)))
+            Dim WordList As String = ""
+
+            For j = 0 To Dictionary.Sections(i).Words.Count - 1
+                Dim CurrentWord As DictionaryWord = CurrentSection.Words.Item(j)
+                WordList += String.Format("{0}|{1}|{2}|{3};", ToCompatibleString(CurrentWord.Word), ToCompatibleString(CurrentWord.Pronunciation),
                                                 ToCompatibleString(CurrentWord.Definition), ToCompatibleString(CurrentWord.Notes))
-            DictionaryString.Add(New ZiaLine(LineType.KeyValue, "Word " & i, Value))
+            Next
+            DictionaryString.Add(New ZiaLine(LineType.KeyValue, "Section" + i + "Words", WordList))
         Next
 
         File.WriteAllText(FilePath, ZiaFile.Write(DictionaryString))
     End Sub
 
     Public Function Open(ByVal FilePath As String) As DictionaryFile
-        On Error Resume Next
+        ' On Error Resume Next
         Dim NewDictionary As New DictionaryFile
+        NewDictionary.Sections = New List(Of DictionarySection)
         Dim LineList As Dictionary(Of String, String) = ZiaFile.Read(File.ReadAllText(FilePath))
 
         For Each CurrentLine As KeyValuePair(Of String, String) In LineList
-            If Not CurrentLine.Key.StartsWith("Word") Then Continue For
-            Dim NewWord As New DictionaryWord
-            NewWord.Word = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(0))
-            NewWord.Pronunciation = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(1))
-            NewWord.Definition = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(2))
-            NewWord.Notes = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(3))
+            If CurrentLine.Key.StartsWith("Section") And CurrentLine.Key.EndsWith("Title") Then
+                Dim CurrentSection As New DictionarySection
+                Dim SectionNumber As String = CurrentLine.Key.Replace("Section", "").Replace("Title", "")
+                CurrentSection.Title = FromCompatibleString(CurrentLine.Value)
+                CurrentSection.Words = New List(Of DictionaryWord)
 
-            NewDictionary.Words.Add(NewWord)
+                Dim Words As String = ZiaFile.Search(LineList, "Section" + SectionNumber + "Words")
+                For Each Word As String In Words.Split({";"}, StringSplitOptions.RemoveEmptyEntries)
+                    Dim values As String() = Word.Split("|")
+
+                    Dim w As New DictionaryWord
+                    w.Word = FromCompatibleString(values(0))
+                    w.Pronunciation = FromCompatibleString(values(1))
+                    w.Definition = FromCompatibleString(values(2))
+                    w.Notes = FromCompatibleString(values(3))
+
+                    CurrentSection.Words.Add(w)
+                Next
+
+                NewDictionary.Sections.Add(CurrentSection)
+            End If
         Next
 
         Return NewDictionary
@@ -83,7 +121,7 @@ Module DictionaryFileAccess
             NewWord.Definition = CurrentLine.Split(",").GetValue(2)
             NewWord.Notes = CurrentLine.Split(",").GetValue(3)
 
-            NewDictionary.Words.Add(NewWord)
+            ' NewDictionary.Words.Add(NewWord)
         Next
 
         Return NewDictionary

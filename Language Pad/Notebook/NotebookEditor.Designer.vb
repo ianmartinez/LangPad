@@ -27,6 +27,7 @@ Partial Class NotebookEditor
         Me.lbPages = New System.Windows.Forms.ListBox()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.DoubleBufferedPanel2 = New Tundra.DoubleBufferedPanel()
+        Me.btnGo = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtInfo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -45,20 +46,21 @@ Partial Class NotebookEditor
         Me.RemoveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.DuplicateToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.RenameToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ImportToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ExportToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DictionaryToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.DocumentToolStripContainer = New System.Windows.Forms.ToolStripContainer()
-        Me.btnGo = New System.Windows.Forms.Button()
+        Me.PageNameToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.txtPageName = New System.Windows.Forms.ToolStripTextBox()
         Me.DoubleBufferedPanel2.SuspendLayout()
         Me.StylizedPanel1.SuspendLayout()
         Me.DocumentToolStrip.SuspendLayout()
         Me.DocumentToolStripContainer.ContentPanel.SuspendLayout()
         Me.DocumentToolStripContainer.TopToolStripPanel.SuspendLayout()
         Me.DocumentToolStripContainer.SuspendLayout()
+        Me.PageNameToolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'lbPages
@@ -72,7 +74,7 @@ Partial Class NotebookEditor
         Me.lbPages.Location = New System.Drawing.Point(2, 0)
         Me.lbPages.Margin = New System.Windows.Forms.Padding(4)
         Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(522, 465)
+        Me.lbPages.Size = New System.Drawing.Size(522, 426)
         Me.lbPages.TabIndex = 15
         '
         'DoubleBufferedPanel2
@@ -96,6 +98,17 @@ Partial Class NotebookEditor
         Me.DoubleBufferedPanel2.Padding = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(524, 404)
         Me.DoubleBufferedPanel2.TabIndex = 78
+        '
+        'btnGo
+        '
+        Me.btnGo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnGo.Location = New System.Drawing.Point(443, 131)
+        Me.btnGo.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnGo.Name = "btnGo"
+        Me.btnGo.Size = New System.Drawing.Size(75, 42)
+        Me.btnGo.TabIndex = 79
+        Me.btnGo.Text = "Go"
+        Me.btnGo.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -202,7 +215,7 @@ Partial Class NotebookEditor
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 0)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(524, 465)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(524, 426)
         Me.StylizedPanel1.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Col" &
     "or$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
         Me.StylizedPanel1.TabIndex = 80
@@ -212,7 +225,7 @@ Partial Class NotebookEditor
         Me.DocumentToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.DocumentToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.DocumentToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton, Me.ToolStripSeparator4, Me.DictionaryToolStripButton})
+        Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.ImportToolStripButton, Me.ExportToolStripButton, Me.ToolStripSeparator4, Me.DictionaryToolStripButton})
         Me.DocumentToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DocumentToolStrip.Name = "DocumentToolStrip"
         Me.DocumentToolStrip.Size = New System.Drawing.Size(524, 31)
@@ -279,21 +292,6 @@ Partial Class NotebookEditor
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 31)
         '
-        'RenameToolStripButton
-        '
-        Me.RenameToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.RenameToolStripButton.Image = CType(resources.GetObject("RenameToolStripButton.Image"), System.Drawing.Image)
-        Me.RenameToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.RenameToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.RenameToolStripButton.Name = "RenameToolStripButton"
-        Me.RenameToolStripButton.Size = New System.Drawing.Size(28, 28)
-        Me.RenameToolStripButton.Text = "Rename Page"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 31)
-        '
         'ImportToolStripButton
         '
         Me.ImportToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -338,7 +336,7 @@ Partial Class NotebookEditor
         'DocumentToolStripContainer.ContentPanel
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel1)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(524, 465)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(524, 426)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'DocumentToolStripContainer.LeftToolStripPanel
@@ -354,18 +352,32 @@ Partial Class NotebookEditor
         '
         'DocumentToolStripContainer.TopToolStripPanel
         '
+        Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.PageNameToolStrip)
         Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.DocumentToolStrip)
         '
-        'btnGo
+        'PageNameToolStrip
         '
-        Me.btnGo.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnGo.Location = New System.Drawing.Point(443, 131)
-        Me.btnGo.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnGo.Name = "btnGo"
-        Me.btnGo.Size = New System.Drawing.Size(75, 42)
-        Me.btnGo.TabIndex = 79
-        Me.btnGo.Text = "Go"
-        Me.btnGo.UseVisualStyleBackColor = True
+        Me.PageNameToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.PageNameToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.PageNameToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.PageNameToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.txtPageName})
+        Me.PageNameToolStrip.Location = New System.Drawing.Point(0, 31)
+        Me.PageNameToolStrip.Name = "PageNameToolStrip"
+        Me.PageNameToolStrip.Size = New System.Drawing.Size(524, 39)
+        Me.PageNameToolStrip.Stretch = True
+        Me.PageNameToolStrip.TabIndex = 16
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(142, 36)
+        Me.ToolStripLabel1.Text = "Page Name:"
+        '
+        'txtPageName
+        '
+        Me.txtPageName.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.txtPageName.Name = "txtPageName"
+        Me.txtPageName.Size = New System.Drawing.Size(310, 39)
         '
         'NotebookEditor
         '
@@ -389,6 +401,8 @@ Partial Class NotebookEditor
         Me.DocumentToolStripContainer.TopToolStripPanel.PerformLayout()
         Me.DocumentToolStripContainer.ResumeLayout(False)
         Me.DocumentToolStripContainer.PerformLayout()
+        Me.PageNameToolStrip.ResumeLayout(False)
+        Me.PageNameToolStrip.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -412,8 +426,6 @@ Partial Class NotebookEditor
     Friend WithEvents RemoveToolStripButton As ToolStripButton
     Friend WithEvents DuplicateToolStripButton As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents RenameToolStripButton As ToolStripButton
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents ImportToolStripButton As ToolStripButton
     Friend WithEvents ExportToolStripButton As ToolStripButton
     Friend WithEvents DocumentToolStrip As ToolStrip
@@ -421,4 +433,7 @@ Partial Class NotebookEditor
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents DictionaryToolStripButton As ToolStripButton
     Friend WithEvents btnGo As Button
+    Friend WithEvents PageNameToolStrip As ToolStrip
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents txtPageName As ToolStripTextBox
 End Class

@@ -1,21 +1,13 @@
 ﻿Imports System.IO
-Imports System.Runtime.Serialization
-Imports System.Collections
-Imports System.Runtime.Serialization.Formatters.Binary
-Imports System.CodeDom.Compiler
-Imports System.Resources
-Imports System.Reflection
-Imports System.Drawing
-Imports System.Windows.Forms
 Imports Tundra
 Imports Ionic.Zip
-Imports System.Text.RegularExpressions
 
 <Serializable()>
 Public Class NotebookPage
     Public Title As String
     Public RTF As String
 End Class
+
 <Serializable()>
 Public Class NotebookFile
     Public Modified As Boolean = False
@@ -72,7 +64,7 @@ Module NotebookFileAccess
         Dim zip As New ZipFile
         zip.CompressionLevel = Ionic.Zlib.CompressionLevel.BestCompression
 
-        Dim guid As Guid = System.Guid.NewGuid
+        Dim guid As Guid = Guid.NewGuid
 
         Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString
         IO.Directory.Delete(tmp, True)
@@ -119,9 +111,9 @@ Module NotebookFileAccess
 
 
         'Write to disk
-        System.IO.File.WriteAllText(tmp & "\data.txt", SettingsFile)
-        System.IO.File.WriteAllText(tmp & "\info.txt", Notebook.Info)
-        System.IO.File.WriteAllText(tmp & "\custom_symbols.txt", Notebook.CustomSymbols)
+        File.WriteAllText(tmp & "\data.txt", SettingsFile)
+        File.WriteAllText(tmp & "\info.txt", Notebook.Info)
+        File.WriteAllText(tmp & "\custom_symbols.txt", Notebook.CustomSymbols)
         Notebook.WordDictionary.Save(tmp & "\dictionary.txt")
 
         Notebook.DocumentPath = FilePath

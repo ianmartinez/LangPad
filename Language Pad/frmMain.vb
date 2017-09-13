@@ -114,7 +114,7 @@ Public Class frmMain
         Return newImage
     End Function
 
-    Private Sub PrintDocument1_BeginPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles pdMain.BeginPrint
+    Private Sub PrintDocument1_BeginPrint(ByVal sender As Object, ByVal e As Printing.PrintEventArgs) Handles pdMain.BeginPrint
         checkPrint = 0
     End Sub
 
@@ -332,7 +332,7 @@ Public Class frmMain
         Refresh()
     End Sub
 
-    Private Sub RichTextEditor_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+    Private Sub RichTextEditor_Load(sender As System.Object, e As EventArgs) Handles MyBase.Load
         On Error Resume Next
         Text = LangPadVersion
 
@@ -353,8 +353,8 @@ Public Class frmMain
                 If FileEXT = "rtf" Then
                     Dim p As New NotebookPage
                     p.Title = "Untitled"
-                    Dim txtReader As System.IO.StreamReader
-                    txtReader = New System.IO.StreamReader(My.Application.CommandLineArgs(0))
+                    Dim txtReader As StreamReader
+                    txtReader = New StreamReader(My.Application.CommandLineArgs(0))
                     p.RTF = txtReader.ReadToEnd
                     txtReader.Close()
 
@@ -362,8 +362,8 @@ Public Class frmMain
                 ElseIf FileEXT = "txt" Then
                     Dim p As New NotebookPage
                     p.Title = "Untitled"
-                    Dim txtReader As System.IO.StreamReader
-                    txtReader = New System.IO.StreamReader(My.Application.CommandLineArgs(0))
+                    Dim txtReader As StreamReader
+                    txtReader = New StreamReader(My.Application.CommandLineArgs(0))
                     p.RTF = txtReader.ReadToEnd
                     txtReader.Close()
 
@@ -652,13 +652,13 @@ Public Class frmMain
         Else
             Me.Cursor = Cursors.WaitCursor
             Dim strExt As String
-            strExt = System.IO.Path.GetExtension(currentFile)
+            strExt = Path.GetExtension(currentFile)
             strExt = strExt.ToUpper()
             If strExt = "RTF" Then
                 SelectedDocument.SaveFile(currentFile)
             ElseIf strExt = "TXT" Then
-                Dim txtWriter As System.IO.StreamWriter
-                txtWriter = New System.IO.StreamWriter(currentFile)
+                Dim txtWriter As StreamWriter
+                txtWriter = New StreamWriter(currentFile)
                 txtWriter.Write(SelectedDocument.Text)
                 txtWriter.Close()
                 txtWriter = Nothing
@@ -1146,6 +1146,8 @@ Public Class frmMain
     Private Sub ThemeCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ThemeCombo.SelectedIndexChanged
         If ThemeCombo.SelectedItem.ToString().Equals("Ice") Then
             SetTheme(New IceTheme)
+        ElseIf ThemeCombo.SelectedItem.ToString().Equals("Snow") Then
+            SetTheme(New SnowTheme)
         ElseIf ThemeCombo.SelectedItem.ToString().Equals("Night") Then
             SetTheme(New NightTheme)
         ElseIf ThemeCombo.SelectedItem.ToString().Equals("Luna") Then

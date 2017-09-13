@@ -9,6 +9,7 @@ Public Class frmDictionary
     Public Loaded As Boolean = False
     Public Color1 As Color
     Public Color2 As Color
+    Dim selectedGrid As New DataGridView
     Public VerticalMenuGradient As Boolean = False
 
     Public Sub SetTheme(Theme As Theme)
@@ -16,9 +17,9 @@ Public Class frmDictionary
         Color2 = Theme.PanelBack
         VerticalMenuGradient = Theme.VerticalMenuGradient
         BackColor = Theme.PanelBack
-        dgvDictionary.BackgroundColor = Theme.PanelBack
-
+        selectedGrid.BackgroundColor = Theme.PanelBack
         MainToolStrip.Renderer = Theme.GetToolStripRenderer()
+        PageNameToolStrip.Renderer = Theme.GetToolStripRenderer()
 
         Refresh()
     End Sub
@@ -36,33 +37,81 @@ Public Class frmDictionary
         ToolStripContainer1.Invalidate()
     End Sub
 
+    Public Sub SelectSection(Pos As Integer)
+        lbSections.SelectedIndex = Pos
+        tcNotebook.SelectedIndex = Pos
+        selectedGrid = tcNotebook.SelectedTab.Controls.Item(0)
+    End Sub
+
     Public Sub LoadDictionary()
-        dgvDictionary.Rows.Clear()
+        ' selectedGrid.Rows.Clear()
+        tcNotebook.TabPages.Clear()
+        lbSections.Items.Clear()
 
-        For Each w As DictionaryWord In CurrentDocument.WordDictionary.Words
-            Dim r As New DataGridViewRow
-            r.CreateCells(dgvDictionary)
-            r.Cells.Item(0).Value = w.Word
-            r.Cells.Item(1).Value = w.Pronunciation
-            r.Cells.Item(2).Value = w.Definition
-            r.Cells.Item(3).Value = w.Notes
+        If CurrentDocument.WordDictionary.Sections.Count = 0 Then
+            CurrentDocument.WordDictionary.Sections.Add(New DictionarySection())
+        End If
 
-            dgvDictionary.Rows.Add(r)
+        For Each Section As DictionarySection In CurrentDocument.WordDictionary.Sections
+            Dim Tab As New TabPage
+            Tab.Text = Section.Title
+
+            Dim Word = New DataGridViewTextBoxColumn()
+            Dim Pronunciation = New DataGridViewTextBoxColumn()
+            Dim Definition = New DataGridViewTextBoxColumn()
+            Dim Notes = New DataGridViewTextBoxColumn()
+
+            Word.HeaderText = "Word"
+
+            Pronunciation.HeaderText = "Pronunciation"
+
+            Definition.HeaderText = "Definition"
+            Definition.Width = 255
+
+            Notes.HeaderText = "Notes"
+            Notes.Width = 255
+
+            Dim dgSection As New DataGridView
+            dgSection.Dock = DockStyle.Fill
+            dgSection.GridColor = Color.Gainsboro
+            dgSection.Location = New Point(3, 3)
+            dgSection.Margin = New Padding(2)
+            dgSection.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.[Single]
+            dgSection.RowTemplate.Height = 24
+            dgSection.Columns.AddRange(New DataGridViewColumn() {Word, Pronunciation, Definition, Notes})
+
+            Tab.Controls.Add(dgSection)
+            tcNotebook.TabPages.Add(Tab)
+
+            For Each w As DictionaryWord In Section.Words
+                Dim r As New DataGridViewRow
+                r.CreateCells(dgSection)
+                r.Cells.Item(0).Value = w.Word
+                r.Cells.Item(1).Value = w.Pronunciation
+                r.Cells.Item(2).Value = w.Definition
+                r.Cells.Item(3).Value = w.Notes
+
+                dgSection.Rows.Add(r)
+            Next
+
+            lbSections.Items.Add(Section.Title)
+
+            SelectSection(0)
+            dgSection.Refresh()
         Next
-
-        dgvDictionary.Refresh()
     End Sub
 
     Public Sub SaveDictionary()
-        CurrentDocument.WordDictionary.Words.Clear()
-        For i = 0 To dgvDictionary.RowCount - 1
-            Dim NewWord As New DictionaryWord
-            NewWord.Word = dgvDictionary.Rows.Item(i).Cells.Item(0).Value
-            NewWord.Pronunciation = dgvDictionary.Rows.Item(i).Cells.Item(1).Value
-            NewWord.Definition = dgvDictionary.Rows.Item(i).Cells.Item(2).Value
-            NewWord.Notes = dgvDictionary.Rows.Item(i).Cells.Item(3).Value
 
-            CurrentDocument.WordDictionary.Words.Add(NewWord)
+        'CurrentDocument.WordDictionary.Words.Clear()
+        For i = 0 To selectedGrid.RowCount - 1
+            Dim NewWord As New DictionaryWord
+            NewWord.Word = selectedGrid.Rows.Item(i).Cells.Item(0).Value
+            NewWord.Pronunciation = selectedGrid.Rows.Item(i).Cells.Item(1).Value
+            NewWord.Definition = selectedGrid.Rows.Item(i).Cells.Item(2).Value
+            NewWord.Notes = selectedGrid.Rows.Item(i).Cells.Item(3).Value
+
+            '  CurrentDocument.WordDictionary.Words.Add(NewWord)
         Next
     End Sub
 
@@ -82,18 +131,20 @@ Public Class frmDictionary
     Public Sub InsertIPA(sender As Object, e As EventArgs)
         On Error Resume Next
         Dim Button As Button = CType(sender, Button)
-        dgvDictionary.Focus()
-        dgvDictionary.BeginEdit(False)
+        selectedGrid.Focus()
+        selectedGrid.BeginEdit(False)
 
         InsertText(c, Button.Text)
     End Sub
 
     Private Sub frmDictionary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadDictionary()
+
+        SplitContainer2.SplitterDistance = Width - 300
         Loaded = True
     End Sub
 
-    Private Sub dgvDictionary_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles dgvDictionary.EditingControlShowing
+    Private Sub selectedGrid_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs)
         c = e.Control
     End Sub
 
@@ -103,7 +154,7 @@ Public Class frmDictionary
         Me.Hide()
     End Sub
 
-    Private Sub dgvDictionary_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles dgvDictionary.RowPostPaint
+    Private Sub selectedGrid_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs)
         Dim grid As DataGridView = CType(sender, DataGridView)
         Dim rowIdx As String = (e.RowIndex + 1).ToString()
         Dim rowFont As Font = Font
@@ -118,7 +169,7 @@ Public Class frmDictionary
 
     Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
         If MessageBox.Show("This cannot be undone. Are you sure you want to continue? ", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes Then
-            dgvDictionary.Rows.Clear()
+            selectedGrid.Rows.Clear()
         End If
     End Sub
 
@@ -141,17 +192,17 @@ Public Class frmDictionary
                 Dim wr As New StreamWriter(New FileStream(dlgSave.FileName, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
                 wr.Write("Word,Pronunciation,Definition,Notes")
 
-                cols = dgvDictionary.Columns.Count
+                cols = selectedGrid.Columns.Count
                 For i As Integer = 0 To cols - 1
-                    wr.Write(dgvDictionary.Columns(i).Name.ToString().ToUpper() + ",")
+                    wr.Write(selectedGrid.Columns(i).Name.ToString().ToUpper() + ",")
                 Next
                 wr.WriteLine()
 
                 ' Write rows to CSV
-                For i As Integer = 0 To dgvDictionary.Rows.Count - 1
+                For i As Integer = 0 To selectedGrid.Rows.Count - 1
                     For j As Integer = 0 To cols - 1
-                        If dgvDictionary.Rows(i).Cells(j).Value IsNot Nothing Then
-                            wr.Write(dgvDictionary.Rows(i).Cells(j).Value + ",")
+                        If selectedGrid.Rows(i).Cells(j).Value IsNot Nothing Then
+                            wr.Write(selectedGrid.Rows(i).Cells(j).Value + ",")
                         Else
                             wr.Write(",")
                         End If
@@ -176,8 +227,8 @@ Public Class frmDictionary
 
     Private Sub AccentMarkToolStripButton_Click(sender As Object, e As EventArgs) Handles AccentMarkToolStripButton.Click
         On Error Resume Next
-        dgvDictionary.Focus()
-        dgvDictionary.BeginEdit(False)
+        selectedGrid.Focus()
+        selectedGrid.BeginEdit(False)
 
         If c.SelectionLength > 0 Then
             dlgAccentMark.Character = c.SelectedText
@@ -192,17 +243,21 @@ Public Class frmDictionary
     End Sub
 
     Private Sub AddToolStripButton_Click(sender As Object, e As EventArgs) Handles AddToolStripButton.Click
-        dgvDictionary.Rows.Add(1)
+        selectedGrid.Rows.Add(1)
     End Sub
 
     Private Sub RemoveToolStripButton_Click(sender As Object, e As EventArgs) Handles RemoveToolStripButton.Click
-        dgvDictionary.Rows.RemoveAt(dgvDictionary.CurrentCell.RowIndex)
+        selectedGrid.Rows.RemoveAt(selectedGrid.CurrentCell.RowIndex)
     End Sub
 
     Private Sub FontToolStripButton_Click(sender As Object, e As EventArgs) Handles FontToolStripButton.Click
-        dlgFont.Font = dgvDictionary.DefaultCellStyle.Font
+        dlgFont.Font = selectedGrid.DefaultCellStyle.Font
         If dlgFont.ShowDialog = DialogResult.OK Then
-            dgvDictionary.DefaultCellStyle.Font = dlgFont.Font
+            selectedGrid.DefaultCellStyle.Font = dlgFont.Font
         End If
+    End Sub
+
+    Private Sub tcNotebook_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcNotebook.SelectedIndexChanged
+        SelectSection(tcNotebook.SelectedIndex)
     End Sub
 End Class

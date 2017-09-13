@@ -14,6 +14,7 @@ Public Class NotebookEditor
         DoubleBufferedPanel2.ForeColor = Theme.PanelText
 
         DocumentToolStrip.Renderer = Theme.GetToolStripRenderer()
+        PageNameToolStrip.Renderer = Theme.GetToolStripRenderer()
 
         Refresh()
     End Sub
@@ -88,7 +89,7 @@ Public Class NotebookEditor
         frmMain.DuplicatePageToolStripMenuItem_Click(Me, e)
     End Sub
 
-    Private Sub RenameToolStripButton_Click(sender As Object, e As EventArgs) Handles RenameToolStripButton.Click
+    Private Sub RenameToolStripButton_Click(sender As Object, e As EventArgs)
         frmMain.RenamePageToolStripMenuItem_Click(Me, e)
     End Sub
 
