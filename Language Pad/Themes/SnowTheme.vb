@@ -155,17 +155,13 @@ Public Class clsSnowMenuRenderer
     '// Render separator
     Protected Overrides Sub OnRenderSeparator(ByVal e As System.Windows.Forms.ToolStripSeparatorRenderEventArgs)
         MyBase.OnRenderSeparator(e)
-        If e.ToolStrip.Orientation = Orientation.Vertical Then
-            Dim rect As New Rectangle(2, 3, e.Item.Width - 4, 1)
-            Dim rect2 As New Rectangle(3, 4, e.Item.Width - 5, 1)
-            e.Graphics.FillRectangle(New SolidBrush(clrSnowSep), rect)
-            e.Graphics.FillRectangle(New SolidBrush(clrSnowSepWhite), rect2)
-        Else
-            Dim rect As New Rectangle(3, 5, 1, e.Item.Height - 10)
-            Dim rect2 As New Rectangle(4, 6, 1, e.Item.Height - 10)
-            e.Graphics.FillRectangle(New SolidBrush(clrSnowSep), rect)
-            e.Graphics.FillRectangle(New SolidBrush(clrSnowSepWhite), rect2)
-        End If
+
+        Dim DarkLine As New Drawing.SolidBrush(clrSnowImageMarginLine)
+        Dim WhiteLine As New Drawing.SolidBrush(Color.White)
+        Dim rect As New Rectangle(32, 3, e.Item.Width - 32, 1)
+        Dim rect2 As New Rectangle(32, 4, e.Item.Width - 32, 1)
+        e.Graphics.FillRectangle(DarkLine, rect)
+        e.Graphics.FillRectangle(WhiteLine, rect2)
     End Sub
 
     '// Render arrow
@@ -223,14 +219,20 @@ End Class
 Public Class clsSnowToolstripRenderer
     Inherits ToolStripProfessionalRenderer
 
-    Protected Overrides Sub OnRenderSeparator(ByVal e As ToolStripSeparatorRenderEventArgs)
-        ' MyBase.OnRenderSeparator(e)
-
-        'Draws the background of the separators. You can draw anything you want
-        Dim rect As New Rectangle(3, 5, 1, e.Item.Height - 10)
-        Dim rect2 As New Rectangle(4, 6, 1, e.Item.Height - 10)
-        e.Graphics.FillRectangle(New SolidBrush(clrSnowSep), rect)
-        e.Graphics.FillRectangle(New SolidBrush(clrSnowSepWhite), rect2)
+    '// Render separator
+    Protected Overrides Sub OnRenderSeparator(ByVal e As System.Windows.Forms.ToolStripSeparatorRenderEventArgs)
+        MyBase.OnRenderSeparator(e)
+        If e.ToolStrip.Orientation = Orientation.Vertical Then
+            Dim rect As New Rectangle(2, 3, e.Item.Width - 4, 1)
+            Dim rect2 As New Rectangle(3, 4, e.Item.Width - 5, 1)
+            e.Graphics.FillRectangle(New SolidBrush(clrSnowSep), rect)
+            e.Graphics.FillRectangle(New SolidBrush(clrSnowSepWhite), rect2)
+        Else
+            Dim rect As New Rectangle(3, 5, 1, e.Item.Height - 10)
+            Dim rect2 As New Rectangle(4, 6, 1, e.Item.Height - 10)
+            e.Graphics.FillRectangle(New SolidBrush(clrSnowSep), rect)
+            e.Graphics.FillRectangle(New SolidBrush(clrSnowSepWhite), rect2)
+        End If
     End Sub
 
     Protected Overrides Sub OnRenderToolStripBorder(e As ToolStripRenderEventArgs)

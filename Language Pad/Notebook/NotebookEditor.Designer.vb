@@ -52,7 +52,7 @@ Partial Class NotebookEditor
         Me.DictionaryToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.DocumentToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.PageNameToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.PageNameToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.txtPageName = New System.Windows.Forms.ToolStripTextBox()
         Me.DoubleBufferedPanel2.SuspendLayout()
         Me.StylizedPanel1.SuspendLayout()
@@ -352,32 +352,33 @@ Partial Class NotebookEditor
         '
         'DocumentToolStripContainer.TopToolStripPanel
         '
-        Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.PageNameToolStrip)
         Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.DocumentToolStrip)
+        Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.PageNameToolStrip)
         '
         'PageNameToolStrip
         '
         Me.PageNameToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.PageNameToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.PageNameToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.PageNameToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.txtPageName})
+        Me.PageNameToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageNameToolStripLabel, Me.txtPageName})
         Me.PageNameToolStrip.Location = New System.Drawing.Point(0, 31)
         Me.PageNameToolStrip.Name = "PageNameToolStrip"
         Me.PageNameToolStrip.Size = New System.Drawing.Size(524, 39)
         Me.PageNameToolStrip.Stretch = True
         Me.PageNameToolStrip.TabIndex = 16
         '
-        'ToolStripLabel1
+        'PageNameToolStripLabel
         '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(142, 36)
-        Me.ToolStripLabel1.Text = "Page Name:"
+        Me.PageNameToolStripLabel.Name = "PageNameToolStripLabel"
+        Me.PageNameToolStripLabel.Size = New System.Drawing.Size(71, 36)
+        Me.PageNameToolStripLabel.Text = "Page:"
         '
         'txtPageName
         '
         Me.txtPageName.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.txtPageName.AutoSize = False
         Me.txtPageName.Name = "txtPageName"
-        Me.txtPageName.Size = New System.Drawing.Size(310, 39)
+        Me.txtPageName.Size = New System.Drawing.Size(250, 39)
         '
         'NotebookEditor
         '
@@ -434,6 +435,6 @@ Partial Class NotebookEditor
     Friend WithEvents DictionaryToolStripButton As ToolStripButton
     Friend WithEvents btnGo As Button
     Friend WithEvents PageNameToolStrip As ToolStrip
-    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents PageNameToolStripLabel As ToolStripLabel
     Friend WithEvents txtPageName As ToolStripTextBox
 End Class

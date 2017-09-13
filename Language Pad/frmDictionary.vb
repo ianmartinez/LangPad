@@ -20,6 +20,7 @@ Public Class frmDictionary
         selectedGrid.BackgroundColor = Theme.PanelBack
         MainToolStrip.Renderer = Theme.GetToolStripRenderer()
         PageNameToolStrip.Renderer = Theme.GetToolStripRenderer()
+        PageNameToolStrip.Height = MainToolStrip.Height
 
         Refresh()
     End Sub
@@ -41,6 +42,9 @@ Public Class frmDictionary
         lbSections.SelectedIndex = Pos
         tcNotebook.SelectedIndex = Pos
         selectedGrid = tcNotebook.SelectedTab.Controls.Item(0)
+        AddHandler selectedGrid.EditingControlShowing, AddressOf selectedGrid_EditingControlShowing
+        AddHandler selectedGrid.RowPostPaint, AddressOf selectedGrid_RowPostPaint
+
     End Sub
 
     Public Sub LoadDictionary()
@@ -73,6 +77,8 @@ Public Class frmDictionary
 
             Dim dgSection As New DataGridView
             dgSection.Dock = DockStyle.Fill
+            dgSection.BackgroundColor = Color.White
+            dgSection.BorderStyle = BorderStyle.None
             dgSection.GridColor = Color.Gainsboro
             dgSection.Location = New Point(3, 3)
             dgSection.Margin = New Padding(2)

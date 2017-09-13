@@ -97,7 +97,7 @@ Partial Class frmDictionary
         Me.StylizedPanel2.SuspendLayout()
         Me.PageNameToolStrip.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
-        Me.ToolStripContainer1.LeftToolStripPanel.SuspendLayout()
+        Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
         Me.MainToolStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -120,7 +120,7 @@ Partial Class frmDictionary
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
         Me.SplitContainer1.Panel2.Padding = New System.Windows.Forms.Padding(6, 6, 0, 0)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1740, 1472)
+        Me.SplitContainer1.Size = New System.Drawing.Size(2015, 1409)
         Me.SplitContainer1.SplitterDistance = 124
         Me.SplitContainer1.TabIndex = 74
         '
@@ -139,7 +139,7 @@ Partial Class frmDictionary
         Me.tcSymbols.Margin = New System.Windows.Forms.Padding(4)
         Me.tcSymbols.Name = "tcSymbols"
         Me.tcSymbols.SelectedIndex = 0
-        Me.tcSymbols.Size = New System.Drawing.Size(1740, 120)
+        Me.tcSymbols.Size = New System.Drawing.Size(2015, 120)
         Me.tcSymbols.TabIndex = 73
         '
         'ConsonantsTabPage
@@ -148,7 +148,7 @@ Partial Class frmDictionary
         Me.ConsonantsTabPage.Location = New System.Drawing.Point(8, 39)
         Me.ConsonantsTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.ConsonantsTabPage.Name = "ConsonantsTabPage"
-        Me.ConsonantsTabPage.Size = New System.Drawing.Size(1724, 73)
+        Me.ConsonantsTabPage.Size = New System.Drawing.Size(1999, 73)
         Me.ConsonantsTabPage.TabIndex = 0
         Me.ConsonantsTabPage.Text = "Consonants"
         Me.ConsonantsTabPage.UseVisualStyleBackColor = True
@@ -164,7 +164,7 @@ Partial Class frmDictionary
         Me.ConsonantsLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.ConsonantsLayoutPanel.Name = "ConsonantsLayoutPanel"
         Me.ConsonantsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
-        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(1724, 73)
+        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(1999, 73)
         Me.ConsonantsLayoutPanel.TabIndex = 7
         '
         'AffricatesTabPage
@@ -173,7 +173,7 @@ Partial Class frmDictionary
         Me.AffricatesTabPage.Location = New System.Drawing.Point(8, 39)
         Me.AffricatesTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.AffricatesTabPage.Name = "AffricatesTabPage"
-        Me.AffricatesTabPage.Size = New System.Drawing.Size(1761, 73)
+        Me.AffricatesTabPage.Size = New System.Drawing.Size(1724, 73)
         Me.AffricatesTabPage.TabIndex = 5
         Me.AffricatesTabPage.Text = "Affricates"
         Me.AffricatesTabPage.UseVisualStyleBackColor = True
@@ -188,7 +188,7 @@ Partial Class frmDictionary
         Me.AffricatesLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.AffricatesLayoutPanel.Name = "AffricatesLayoutPanel"
         Me.AffricatesLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
-        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(1761, 73)
+        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(1724, 73)
         Me.AffricatesLayoutPanel.TabIndex = 8
         '
         'VowelsTabPage
@@ -197,7 +197,7 @@ Partial Class frmDictionary
         Me.VowelsTabPage.Location = New System.Drawing.Point(8, 39)
         Me.VowelsTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.VowelsTabPage.Name = "VowelsTabPage"
-        Me.VowelsTabPage.Size = New System.Drawing.Size(1761, 73)
+        Me.VowelsTabPage.Size = New System.Drawing.Size(1724, 73)
         Me.VowelsTabPage.TabIndex = 1
         Me.VowelsTabPage.Text = "Vowels"
         Me.VowelsTabPage.UseVisualStyleBackColor = True
@@ -212,7 +212,7 @@ Partial Class frmDictionary
         Me.VowelsLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.VowelsLayoutPanel.Name = "VowelsLayoutPanel"
         Me.VowelsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
-        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(1761, 73)
+        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(1724, 73)
         Me.VowelsLayoutPanel.TabIndex = 8
         '
         'AccentsTabPage
@@ -221,7 +221,7 @@ Partial Class frmDictionary
         Me.AccentsTabPage.Location = New System.Drawing.Point(8, 39)
         Me.AccentsTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.AccentsTabPage.Name = "AccentsTabPage"
-        Me.AccentsTabPage.Size = New System.Drawing.Size(1761, 73)
+        Me.AccentsTabPage.Size = New System.Drawing.Size(1724, 73)
         Me.AccentsTabPage.TabIndex = 3
         Me.AccentsTabPage.Text = "Accents"
         Me.AccentsTabPage.UseVisualStyleBackColor = True
@@ -236,7 +236,7 @@ Partial Class frmDictionary
         Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
-        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(1761, 73)
+        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(1724, 73)
         Me.AccentsLayoutPanel.TabIndex = 9
         '
         'ToneIntonationTabPage
@@ -245,7 +245,7 @@ Partial Class frmDictionary
         Me.ToneIntonationTabPage.Location = New System.Drawing.Point(8, 39)
         Me.ToneIntonationTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.ToneIntonationTabPage.Name = "ToneIntonationTabPage"
-        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(1761, 73)
+        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(1724, 73)
         Me.ToneIntonationTabPage.TabIndex = 4
         Me.ToneIntonationTabPage.Text = "Tone & Intonation"
         Me.ToneIntonationTabPage.UseVisualStyleBackColor = True
@@ -260,7 +260,7 @@ Partial Class frmDictionary
         Me.ToneIntonationLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.ToneIntonationLayoutPanel.Name = "ToneIntonationLayoutPanel"
         Me.ToneIntonationLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
-        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(1761, 73)
+        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(1724, 73)
         Me.ToneIntonationLayoutPanel.TabIndex = 10
         '
         'OtherTabPage
@@ -269,7 +269,7 @@ Partial Class frmDictionary
         Me.OtherTabPage.Location = New System.Drawing.Point(8, 39)
         Me.OtherTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.OtherTabPage.Name = "OtherTabPage"
-        Me.OtherTabPage.Size = New System.Drawing.Size(1761, 73)
+        Me.OtherTabPage.Size = New System.Drawing.Size(1724, 73)
         Me.OtherTabPage.TabIndex = 2
         Me.OtherTabPage.Text = "Other"
         Me.OtherTabPage.UseVisualStyleBackColor = True
@@ -284,7 +284,7 @@ Partial Class frmDictionary
         Me.OtherLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.OtherLayoutPanel.Name = "OtherLayoutPanel"
         Me.OtherLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
-        Me.OtherLayoutPanel.Size = New System.Drawing.Size(1761, 73)
+        Me.OtherLayoutPanel.Size = New System.Drawing.Size(1724, 73)
         Me.OtherLayoutPanel.TabIndex = 8
         '
         'CommonTabPage
@@ -293,7 +293,7 @@ Partial Class frmDictionary
         Me.CommonTabPage.Location = New System.Drawing.Point(8, 39)
         Me.CommonTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.CommonTabPage.Name = "CommonTabPage"
-        Me.CommonTabPage.Size = New System.Drawing.Size(1761, 73)
+        Me.CommonTabPage.Size = New System.Drawing.Size(1724, 73)
         Me.CommonTabPage.TabIndex = 7
         Me.CommonTabPage.Text = "Common"
         Me.CommonTabPage.UseVisualStyleBackColor = True
@@ -308,7 +308,7 @@ Partial Class frmDictionary
         Me.CommonLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.CommonLayoutPanel.Name = "CommonLayoutPanel"
         Me.CommonLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
-        Me.CommonLayoutPanel.Size = New System.Drawing.Size(1761, 73)
+        Me.CommonLayoutPanel.Size = New System.Drawing.Size(1724, 73)
         Me.CommonLayoutPanel.TabIndex = 9
         '
         'CustomTabPage
@@ -317,7 +317,7 @@ Partial Class frmDictionary
         Me.CustomTabPage.Location = New System.Drawing.Point(8, 39)
         Me.CustomTabPage.Margin = New System.Windows.Forms.Padding(4)
         Me.CustomTabPage.Name = "CustomTabPage"
-        Me.CustomTabPage.Size = New System.Drawing.Size(1761, 73)
+        Me.CustomTabPage.Size = New System.Drawing.Size(1724, 73)
         Me.CustomTabPage.TabIndex = 6
         Me.CustomTabPage.Text = "Custom"
         Me.CustomTabPage.UseVisualStyleBackColor = True
@@ -332,7 +332,7 @@ Partial Class frmDictionary
         Me.CustomLayoutPanel.Margin = New System.Windows.Forms.Padding(8)
         Me.CustomLayoutPanel.Name = "CustomLayoutPanel"
         Me.CustomLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
-        Me.CustomLayoutPanel.Size = New System.Drawing.Size(1761, 73)
+        Me.CustomLayoutPanel.Size = New System.Drawing.Size(1724, 73)
         Me.CustomLayoutPanel.TabIndex = 9
         '
         'SplitContainer2
@@ -352,8 +352,8 @@ Partial Class frmDictionary
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.StylizedPanel1)
         Me.SplitContainer2.Panel2MinSize = 235
-        Me.SplitContainer2.Size = New System.Drawing.Size(1734, 1338)
-        Me.SplitContainer2.SplitterDistance = 1386
+        Me.SplitContainer2.Size = New System.Drawing.Size(2009, 1275)
+        Me.SplitContainer2.SplitterDistance = 1661
         Me.SplitContainer2.TabIndex = 4
         '
         'tcNotebook
@@ -363,7 +363,7 @@ Partial Class frmDictionary
         Me.tcNotebook.Margin = New System.Windows.Forms.Padding(4)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(1386, 1334)
+        Me.tcNotebook.Size = New System.Drawing.Size(1661, 1271)
         Me.tcNotebook.TabIndex = 73
         '
         'StylizedPanel1
@@ -375,7 +375,7 @@ Partial Class frmDictionary
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(344, 1338)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(344, 1275)
         Me.StylizedPanel1.Style = "Colors=~245|~245" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight" &
     " Color=$0"
         Me.StylizedPanel1.TabIndex = 13
@@ -386,11 +386,11 @@ Partial Class frmDictionary
         'DocumentToolStripContainer.ContentPanel
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel2)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(344, 1299)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(344, 1236)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 0)
         Me.DocumentToolStripContainer.Name = "DocumentToolStripContainer"
-        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(344, 1338)
+        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(344, 1275)
         Me.DocumentToolStripContainer.TabIndex = 82
         Me.DocumentToolStripContainer.Text = "ToolStripContainer1"
         '
@@ -407,7 +407,7 @@ Partial Class frmDictionary
         Me.StylizedPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 0)
         Me.StylizedPanel2.Name = "StylizedPanel2"
         Me.StylizedPanel2.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.StylizedPanel2.Size = New System.Drawing.Size(344, 1299)
+        Me.StylizedPanel2.Size = New System.Drawing.Size(344, 1236)
         Me.StylizedPanel2.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Col" &
     "or$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
         Me.StylizedPanel2.TabIndex = 80
@@ -423,7 +423,7 @@ Partial Class frmDictionary
         Me.lbSections.Location = New System.Drawing.Point(2, 0)
         Me.lbSections.Margin = New System.Windows.Forms.Padding(4)
         Me.lbSections.Name = "lbSections"
-        Me.lbSections.Size = New System.Drawing.Size(342, 1299)
+        Me.lbSections.Size = New System.Drawing.Size(342, 1236)
         Me.lbSections.TabIndex = 15
         '
         'PageNameToolStrip
@@ -473,23 +473,23 @@ Partial Class frmDictionary
         'ToolStripContainer1.ContentPanel
         '
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.SplitContainer1)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1740, 1472)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(2015, 1409)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'ToolStripContainer1.LeftToolStripPanel
         '
-        Me.ToolStripContainer1.LeftToolStripPanel.Controls.Add(Me.MainToolStrip)
         Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
         '
         'ToolStripContainer1.RightToolStripPanel
         '
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(1938, 1472)
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(2015, 1472)
         Me.ToolStripContainer1.TabIndex = 75
         Me.ToolStripContainer1.Text = "ToolStripContainer1"
         '
         'ToolStripContainer1.TopToolStripPanel
         '
+        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.MainToolStrip)
         '
         'MainToolStrip
         '
@@ -498,7 +498,7 @@ Partial Class frmDictionary
         Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.SymbolsToolStripButton, Me.CustomSymbolsToolStripButton, Me.AccentMarkToolStripButton, Me.ToolStripSeparator2, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.ToolStripSeparator3, Me.FontToolStripButton, Me.ToolStripSeparator4, Me.MoveLeftToolStripButton, Me.MoveRightToolStripButton, Me.ToolStripSeparator5, Me.AddSectionToolStripButton, Me.RemoveSectionToolStripButton})
         Me.MainToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.MainToolStrip.Name = "MainToolStrip"
-        Me.MainToolStrip.Size = New System.Drawing.Size(198, 1472)
+        Me.MainToolStrip.Size = New System.Drawing.Size(2015, 63)
         Me.MainToolStrip.Stretch = True
         Me.MainToolStrip.TabIndex = 1
         '
@@ -508,7 +508,7 @@ Partial Class frmDictionary
         Me.NewToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.NewToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.NewToolStripButton.Name = "NewToolStripButton"
-        Me.NewToolStripButton.Size = New System.Drawing.Size(196, 60)
+        Me.NewToolStripButton.Size = New System.Drawing.Size(67, 60)
         Me.NewToolStripButton.Text = "New"
         Me.NewToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -518,7 +518,7 @@ Partial Class frmDictionary
         Me.OpenToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.OpenToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.OpenToolStripButton.Name = "OpenToolStripButton"
-        Me.OpenToolStripButton.Size = New System.Drawing.Size(78, 68)
+        Me.OpenToolStripButton.Size = New System.Drawing.Size(78, 60)
         Me.OpenToolStripButton.Text = "Open"
         Me.OpenToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -528,14 +528,14 @@ Partial Class frmDictionary
         Me.SaveToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.SaveToolStripButton.Name = "SaveToolStripButton"
-        Me.SaveToolStripButton.Size = New System.Drawing.Size(69, 68)
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(69, 60)
         Me.SaveToolStripButton.Text = "Save"
         Me.SaveToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 71)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 63)
         '
         'SymbolsToolStripButton
         '
@@ -543,7 +543,7 @@ Partial Class frmDictionary
         Me.SymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.SymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.SymbolsToolStripButton.Name = "SymbolsToolStripButton"
-        Me.SymbolsToolStripButton.Size = New System.Drawing.Size(108, 68)
+        Me.SymbolsToolStripButton.Size = New System.Drawing.Size(108, 60)
         Me.SymbolsToolStripButton.Text = "Symbols"
         Me.SymbolsToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -553,7 +553,7 @@ Partial Class frmDictionary
         Me.CustomSymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CustomSymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CustomSymbolsToolStripButton.Name = "CustomSymbolsToolStripButton"
-        Me.CustomSymbolsToolStripButton.Size = New System.Drawing.Size(197, 68)
+        Me.CustomSymbolsToolStripButton.Size = New System.Drawing.Size(197, 60)
         Me.CustomSymbolsToolStripButton.Text = "Custom Symbols"
         Me.CustomSymbolsToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -563,14 +563,14 @@ Partial Class frmDictionary
         Me.AccentMarkToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.AccentMarkToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AccentMarkToolStripButton.Name = "AccentMarkToolStripButton"
-        Me.AccentMarkToolStripButton.Size = New System.Drawing.Size(152, 68)
+        Me.AccentMarkToolStripButton.Size = New System.Drawing.Size(152, 60)
         Me.AccentMarkToolStripButton.Text = "Accent Mark"
         Me.AccentMarkToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 71)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 63)
         '
         'AddToolStripButton
         '
@@ -578,7 +578,7 @@ Partial Class frmDictionary
         Me.AddToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.AddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AddToolStripButton.Name = "AddToolStripButton"
-        Me.AddToolStripButton.Size = New System.Drawing.Size(126, 68)
+        Me.AddToolStripButton.Size = New System.Drawing.Size(126, 60)
         Me.AddToolStripButton.Text = "Add Word"
         Me.AddToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
@@ -588,14 +588,14 @@ Partial Class frmDictionary
         Me.RemoveToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RemoveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RemoveToolStripButton.Name = "RemoveToolStripButton"
-        Me.RemoveToolStripButton.Size = New System.Drawing.Size(169, 68)
+        Me.RemoveToolStripButton.Size = New System.Drawing.Size(169, 60)
         Me.RemoveToolStripButton.Text = "Remove Word"
         Me.RemoveToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 71)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 63)
         '
         'FontToolStripButton
         '
@@ -603,14 +603,14 @@ Partial Class frmDictionary
         Me.FontToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.FontToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.FontToolStripButton.Name = "FontToolStripButton"
-        Me.FontToolStripButton.Size = New System.Drawing.Size(67, 68)
+        Me.FontToolStripButton.Size = New System.Drawing.Size(67, 60)
         Me.FontToolStripButton.Text = "Font"
         Me.FontToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 71)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 63)
         '
         'MoveLeftToolStripButton
         '
@@ -635,7 +635,7 @@ Partial Class frmDictionary
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 71)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 63)
         '
         'AddSectionToolStripButton
         '
@@ -661,7 +661,7 @@ Partial Class frmDictionary
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1938, 1472)
+        Me.ClientSize = New System.Drawing.Size(2015, 1472)
         Me.Controls.Add(Me.ToolStripContainer1)
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "frmDictionary"
@@ -695,8 +695,8 @@ Partial Class frmDictionary
         Me.PageNameToolStrip.ResumeLayout(False)
         Me.PageNameToolStrip.PerformLayout()
         Me.ToolStripContainer1.ContentPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.LeftToolStripPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.LeftToolStripPanel.PerformLayout()
+        Me.ToolStripContainer1.TopToolStripPanel.ResumeLayout(False)
+        Me.ToolStripContainer1.TopToolStripPanel.PerformLayout()
         Me.ToolStripContainer1.ResumeLayout(False)
         Me.ToolStripContainer1.PerformLayout()
         Me.MainToolStrip.ResumeLayout(False)

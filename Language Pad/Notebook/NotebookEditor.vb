@@ -8,6 +8,7 @@ Public Class NotebookEditor
     Public Sub SetTheme(Theme As Theme)
         Color1 = Theme.PanelBack
         Color2 = Theme.PanelBack
+        PageNameToolStrip.Height = DocumentToolStrip.Height
         VerticalMenuGradient = Theme.VerticalMenuGradient
         DoubleBufferedPanel2.BackColor = Theme.PanelBack
         BackColor = Theme.PanelBack
@@ -106,6 +107,8 @@ Public Class NotebookEditor
 
         btnGo.Location = New Point(btnGo.Location.X, txtWebsite.Location.Y)
         btnGo.Height = txtWebsite.Height
+
+        txtPageName.Width = 230
     End Sub
 
     Private Sub ToolStripContainer1_TopToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles DocumentToolStripContainer.TopToolStripPanel.Paint,
@@ -133,5 +136,9 @@ Public Class NotebookEditor
         Else
             Process.Start(txtWebsite.Text)
         End If
+    End Sub
+
+    Private Sub txtPageName_Click(sender As Object, e As EventArgs) Handles txtPageName.Click
+
     End Sub
 End Class
