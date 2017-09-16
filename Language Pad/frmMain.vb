@@ -510,19 +510,19 @@ Public Class frmMain
     End Sub
 
     Private Sub CopyContextMenuItem_Click(sender As Object, e As EventArgs) Handles CopyContextMenuItem.Click
-        CopyContextMenuItem_Click(Me, e)
+        CopyToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub PasteContextMenuItem_Click(sender As Object, e As EventArgs) Handles PasteContextMenuItem.Click
-        PasteContextMenuItem_Click(Me, e)
+        PasteToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub CutContextMenuItem_Click(sender As Object, e As EventArgs) Handles CutContextMenuItem.Click
-        CutContextMenuItem_Click(Me, e)
+        CutToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub SelectAllContextMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllContextMenuItem.Click
-        SelectAllContextMenuItem_Click(Me, e)
+        SelectAllToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub DeselectAllContextMenuItem_Click(sender As Object, e As EventArgs) Handles DeselectAllContextMenuItem.Click
