@@ -70,7 +70,7 @@ Partial Class dlgTextArt
         '
         Me.btnColor2.BackColor = System.Drawing.Color.Transparent
         Me.btnColor2.BackgroundImage = CType(resources.GetObject("btnColor2.BackgroundImage"), System.Drawing.Image)
-        Me.btnColor2.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnColor2.Color = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnColor2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnColor2.FlatAppearance.BorderSize = 0
         Me.btnColor2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
@@ -97,7 +97,7 @@ Partial Class dlgTextArt
         '
         Me.btnColor1.BackColor = System.Drawing.Color.Transparent
         Me.btnColor1.BackgroundImage = CType(resources.GetObject("btnColor1.BackgroundImage"), System.Drawing.Image)
-        Me.btnColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.btnColor1.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnColor1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnColor1.FlatAppearance.BorderSize = 0
         Me.btnColor1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent

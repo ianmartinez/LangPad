@@ -5,11 +5,13 @@ Imports Tundra.ZiaFile
 Imports System.ComponentModel.Design
 Imports System.ComponentModel
 Imports System.Drawing.Design
+Imports System.Drawing.Imaging
+Imports System.Runtime.InteropServices
 
 Public Class StylizedText
     Inherits DoubleBufferedPanel
     Private mStyle As String
-    <Editor(GetType(MultilineStringEditor), GetType(UITypeEditor))> _
+    <Editor(GetType(MultilineStringEditor), GetType(UITypeEditor))>
     Public Property Style As String
         Get
             Return mStyle
@@ -22,7 +24,7 @@ Public Class StylizedText
     End Property
 
     Private mControlText As String
-    <Editor(GetType(MultilineStringEditor), GetType(UITypeEditor))> _
+    <Editor(GetType(MultilineStringEditor), GetType(UITypeEditor))>
     Public Property ControlText As String
         Get
             Return mControlText
@@ -53,6 +55,34 @@ Public Class StylizedText
         ShadowOffset = FromCompatiblePoint(GetValue(Style, "Shadow Offset"))
     End Sub
 
+    Private Shared Function ImageTrim(img As Bitmap) As Bitmap
+
+        ' Find the min/max non-white/transparent pixels
+        Dim min As New Point(Integer.MaxValue, Integer.MaxValue)
+        Dim max As New Point(Integer.MinValue, Integer.MinValue)
+
+        For x As Integer = 0 To img.Width - 1
+            For y As Integer = 0 To img.Height - 1
+                Dim pixelColor As Color = img.GetPixel(x, y)
+                If Not pixelColor.A = 0 Then
+                    If x < min.X Then min.X = x
+                    If y < min.Y Then min.Y = y
+                    If x > max.X Then max.X = x
+                    If y > max.Y Then max.Y = y
+                End If
+            Next
+        Next
+
+        ' Create a new bitmap from the crop rectangle
+        Dim cropRectangle As New Rectangle(min.X, min.Y, max.X - min.X, max.Y - min.Y + 2)
+        Dim newBitmap As New Bitmap(cropRectangle.Width, cropRectangle.Height)
+        Using g As Graphics = Graphics.FromImage(newBitmap)
+            g.DrawImage(img, 0, 0, cropRectangle, GraphicsUnit.Pixel)
+        End Using
+
+        Return newBitmap
+    End Function
+
     Public Function DrawBitmap() As Image
         On Error Resume Next
         Dim img As Bitmap = New Bitmap(TextRenderer.MeasureText(ControlText, Font).Width + BorderSize + CInt(IIf(ShadowOffset.X > 0, ShadowOffset.X, 0)) + 4, TextRenderer.MeasureText(ControlText, Font).Height + BorderSize + CInt(IIf(ShadowOffset.Y > 0, ShadowOffset.Y, 0)))
@@ -79,7 +109,8 @@ Public Class StylizedText
 
         g.FillPath(FillBlend, TextPath)
         g.DrawPath(New Pen(BorderColor, BorderSize), TextPath)
-        Return img
+
+        Return ImageTrim(img)
     End Function
 
     Private Sub StylizedText_Resize(sender As Object, e As EventArgs) Handles Me.Resize

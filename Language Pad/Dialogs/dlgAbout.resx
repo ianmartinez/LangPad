@@ -131,11 +131,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
   </data>
   <data name="TextBox2.Text" xml:space="preserve">
     <value>Version 8.1 (September 15, 2017)
-   •Find word in dictionary
    •Export dictionary to HTML
    •Redesigned accent window
    •Multiple accents can be selected for a single character
-   •Ice &amp; Desert theme
+   •Snow &amp; Desert theme
+   •Default theme is now "Snow"
    •Find/Replace now matches theme
    •Window background now matches theme
    •Fixed rendering of vertical toolbars
@@ -143,6 +143,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
    •Fixed bug where dictionary wouldn't show up on when re-opening
    •Fixed bug where some context menu items would crash the program
    •Fixed bug where CTRL+Click to add character to custom characters would insert it into document
+   •Removed excessive whitespace around text art
 Version 8.0 (September 11, 2017)
    •Support for 4k screens
    •Support for themes - Ice(Default), Night, Luna, Olive
