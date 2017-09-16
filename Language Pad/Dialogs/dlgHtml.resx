@@ -117,21 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBox1.Text" xml:space="preserve">
-    <value>&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Word&lt;/th&gt;
-    &lt;th&gt;Pronunciation&lt;/th&gt; 
-    &lt;th&gt;Definition&lt;/th&gt;
-    &lt;th&gt;Notes&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;$word&lt;/td&gt;
-    &lt;td&gt;$pronunciation&lt;/td&gt;
-    &lt;td&gt;$definition&lt;/td&gt;
-    &lt;td&gt;$notes&lt;/td&gt;
-  &lt;/tr&gt;
-  ....
-&lt;/table&gt;</value>
-  </data>
 </root>

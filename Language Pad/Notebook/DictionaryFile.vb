@@ -13,10 +13,19 @@ Imports System.Text.RegularExpressions
 
 <Serializable()>
 Public Class DictionaryWord
+    Implements IComparable, IComparer
     Public Word As String
     Public Pronunciation As String
     Public Definition As String
     Public Notes As String
+
+    Public Function CompareTo(obj As Object) As Integer Implements IComparable.CompareTo
+        Return Word.CompareTo(CType(obj, DictionaryWord).Word)
+    End Function
+
+    Public Function Compare(x As Object, y As Object) As Integer Implements IComparer.Compare
+        Return CType(x, DictionaryWord).CompareTo(y)
+    End Function
 End Class
 
 <Serializable()>

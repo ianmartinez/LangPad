@@ -222,11 +222,73 @@ Namespace My.Resources
         '''80=ᴙ
         '''81=ɬ
         '''82=ɮ
-        '''83=ꞎ [rest of string was truncated]&quot;;.
+        '''83=ꞎ
+        '''84=	ʎ̝̊
+        '''85=ʟ̝̊
+        '''86=ʟ̝
+        '''87=l̥
+        '''88=l
+        '''89=ɭ
+        '''90=ʎ
+        '''91=ʟ
+        '''92=ɺ
+        '''93=ɺ̢ 
+        '''94=ʎ̯
+        '''95=ʟ̆
+        '''96=ʘ
+        '''97=ǀ
+        ''' [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property Consonants() As String
             Get
                 Return ResourceManager.GetString("Consonants", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 		&lt;style type=&quot;text/css&quot;&gt;
+        '''			table.table-style-three {
+        '''				font-family: verdana, arial, sans-serif;
+        '''				font-size: 11px;
+        '''				color: #333333;
+        '''				border-width: 1px;
+        '''				border-color: #383838;
+        '''				border-collapse: collapse;
+        '''			}
+        '''			table.table-style-three th {
+        '''				border-width: 1px;
+        '''				padding: 8px;
+        '''				border-style: solid;
+        '''				border-color: #dbdbdb;
+        '''				background-color: #c2c2c2;
+        '''				color: #ffffff;
+        '''			}
+        '''			table.table-style-three tr:hover td {
+        '''				cursor: pointer;
+        '''			}
+        '''			table.table-st [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property HtmlStyle() As String
+            Get
+                Return ResourceManager.GetString("HtmlStyle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+        '''&lt;html lang=&quot;en&quot;&gt;
+        '''	&lt;head&gt;
+        '''		&lt;title&gt;{0}&lt;/title&gt;
+        '''	&lt;/head&gt;
+        '''	&lt;body&gt;
+        '''{1}
+        '''{2}
+        '''	&lt;/body&gt;
+        '''&lt;/html&gt;.
+        '''</summary>
+        Friend ReadOnly Property HtmlTemplate() As String
+            Get
+                Return ResourceManager.GetString("HtmlTemplate", resourceCulture)
             End Get
         End Property
         
@@ -308,6 +370,17 @@ Namespace My.Resources
         Friend ReadOnly Property Other() As String
             Get
                 Return ResourceManager.GetString("Other", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &lt;table&gt;
+        '''{0}
+        '''&lt;/table&gt;.
+        '''</summary>
+        Friend ReadOnly Property TableTemplate() As String
+            Get
+                Return ResourceManager.GetString("TableTemplate", resourceCulture)
             End Get
         End Property
         

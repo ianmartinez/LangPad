@@ -411,7 +411,7 @@ Public Class frmMain
 
         SplitContainer2.SplitterDistance = (SplitContainer2.Width - NotebookEditor1.MinimumSize.Width) - 30
 
-        For i As Integer = 1 To 50
+        For i As Integer = 0 To 50
             IndentToolStripComboBox.Items.Add(i)
         Next
 

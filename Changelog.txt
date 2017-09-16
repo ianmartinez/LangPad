@@ -1,9 +1,9 @@
 Version 8.1 (September 16, 2017)
    •Export dictionary to HTML
-   •Include updated help file
    •Redesigned accent window
    •Multiple accents can be selected for a single character
    •Snow & Desert theme
+   •Improved look of character tooltips
    •Default theme is now "Snow"
    •Find/Replace now matches theme
    •Window background now matches theme
@@ -12,6 +12,7 @@ Version 8.1 (September 16, 2017)
    •Fixed bug where dictionary wouldn't show up on when re-opening
    •Fixed bug where some context menu items would crash the program
    •Fixed bug where CTRL+Click to add character to custom characters would insert it into document
+   •Fixed missing '0' value for indentation dropdown
    •Removed excessive whitespace around text art
 Version 8.0 (September 11, 2017)
    •Support for 4k screens

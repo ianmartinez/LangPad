@@ -22,22 +22,20 @@ Partial Class dlgHtml
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgHtml))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.cbPronunciation = New System.Windows.Forms.CheckBox()
+        Me.cbDefinition = New System.Windows.Forms.CheckBox()
+        Me.cbNotes = New System.Windows.Forms.CheckBox()
+        Me.cbWord = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtTitle = New System.Windows.Forms.TextBox()
+        Me.txtDescription = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cbPElement = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,7 +47,7 @@ Partial Class dlgHtml
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(1174, 901)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(617, 546)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -78,126 +76,118 @@ Partial Class dlgHtml
         Me.Cancel_Button.TabIndex = 1
         Me.Cancel_Button.Text = "Cancel"
         '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Checked = True
-        Me.RadioButton1.Location = New System.Drawing.Point(21, 30)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(196, 29)
-        Me.RadioButton1.TabIndex = 2
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Export To Table"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(21, 577)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(176, 29)
-        Me.RadioButton2.TabIndex = 3
-        Me.RadioButton2.Text = "Export To List"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(732, 846)
-        Me.GroupBox1.TabIndex = 3
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Type"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        Me.TextBox2.ForeColor = System.Drawing.Color.Black
-        Me.TextBox2.Location = New System.Drawing.Point(21, 612)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(681, 204)
-        Me.TextBox2.TabIndex = 4
-        Me.TextBox2.Text = "<ul>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "  <li><strong>$word</strong> $pronunciation - $definition<br><i>$notes</i><" &
-    "/li>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "  ...." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "</ul>"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.TextBox1.Location = New System.Drawing.Point(21, 65)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(681, 506)
-        Me.TextBox1.TabIndex = 3
-        Me.TextBox1.Text = resources.GetString("TextBox1.Text")
-        '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.CheckBox4)
-        Me.GroupBox2.Controls.Add(Me.CheckBox3)
-        Me.GroupBox2.Controls.Add(Me.CheckBox2)
-        Me.GroupBox2.Controls.Add(Me.CheckBox1)
-        Me.GroupBox2.Location = New System.Drawing.Point(750, 12)
+        Me.GroupBox2.Controls.Add(Me.cbPronunciation)
+        Me.GroupBox2.Controls.Add(Me.cbDefinition)
+        Me.GroupBox2.Controls.Add(Me.cbNotes)
+        Me.GroupBox2.Controls.Add(Me.cbWord)
+        Me.GroupBox2.Location = New System.Drawing.Point(18, 333)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(728, 184)
+        Me.GroupBox2.Size = New System.Drawing.Size(902, 184)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Include"
+        Me.GroupBox2.Text = "Columns"
         '
-        'CheckBox4
+        'cbPronunciation
         '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Checked = True
-        Me.CheckBox4.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox4.Location = New System.Drawing.Point(11, 65)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(176, 29)
-        Me.CheckBox4.TabIndex = 5
-        Me.CheckBox4.Text = "Pronunciation"
-        Me.CheckBox4.UseVisualStyleBackColor = True
+        Me.cbPronunciation.AutoSize = True
+        Me.cbPronunciation.Checked = True
+        Me.cbPronunciation.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.cbPronunciation.Location = New System.Drawing.Point(11, 65)
+        Me.cbPronunciation.Name = "cbPronunciation"
+        Me.cbPronunciation.Size = New System.Drawing.Size(176, 29)
+        Me.cbPronunciation.TabIndex = 6
+        Me.cbPronunciation.Text = "Pronunciation"
+        Me.cbPronunciation.UseVisualStyleBackColor = True
         '
-        'CheckBox3
+        'cbDefinition
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Checked = True
-        Me.CheckBox3.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox3.Location = New System.Drawing.Point(11, 100)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(134, 29)
-        Me.CheckBox3.TabIndex = 6
-        Me.CheckBox3.Text = "Definition"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.cbDefinition.AutoSize = True
+        Me.cbDefinition.Checked = True
+        Me.cbDefinition.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.cbDefinition.Location = New System.Drawing.Point(11, 100)
+        Me.cbDefinition.Name = "cbDefinition"
+        Me.cbDefinition.Size = New System.Drawing.Size(134, 29)
+        Me.cbDefinition.TabIndex = 7
+        Me.cbDefinition.Text = "Definition"
+        Me.cbDefinition.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'cbNotes
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Checked = True
-        Me.CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox2.Location = New System.Drawing.Point(11, 135)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(100, 29)
-        Me.CheckBox2.TabIndex = 7
-        Me.CheckBox2.Text = "Notes"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.cbNotes.AutoSize = True
+        Me.cbNotes.Checked = True
+        Me.cbNotes.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.cbNotes.Location = New System.Drawing.Point(11, 135)
+        Me.cbNotes.Name = "cbNotes"
+        Me.cbNotes.Size = New System.Drawing.Size(100, 29)
+        Me.cbNotes.TabIndex = 8
+        Me.cbNotes.Text = "Notes"
+        Me.cbNotes.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'cbWord
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Checked = True
-        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(11, 30)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(95, 29)
-        Me.CheckBox1.TabIndex = 4
-        Me.CheckBox1.Text = "Word"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.cbWord.AutoSize = True
+        Me.cbWord.Checked = True
+        Me.cbWord.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.cbWord.Location = New System.Drawing.Point(11, 30)
+        Me.cbWord.Name = "cbWord"
+        Me.cbWord.Size = New System.Drawing.Size(95, 29)
+        Me.cbWord.TabIndex = 5
+        Me.cbWord.Text = "Word"
+        Me.cbWord.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(13, 13)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(59, 25)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Title:"
+        '
+        'txtTitle
+        '
+        Me.txtTitle.Location = New System.Drawing.Point(18, 46)
+        Me.txtTitle.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTitle.Name = "txtTitle"
+        Me.txtTitle.Size = New System.Drawing.Size(902, 31)
+        Me.txtTitle.TabIndex = 2
+        Me.txtTitle.Text = "Dictionary"
+        '
+        'txtDescription
+        '
+        Me.txtDescription.Location = New System.Drawing.Point(18, 118)
+        Me.txtDescription.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDescription.Multiline = True
+        Me.txtDescription.Name = "txtDescription"
+        Me.txtDescription.Size = New System.Drawing.Size(902, 170)
+        Me.txtDescription.TabIndex = 3
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(13, 85)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(126, 25)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "Description:"
+        '
+        'cbPElement
+        '
+        Me.cbPElement.AutoSize = True
+        Me.cbPElement.Checked = True
+        Me.cbPElement.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.cbPElement.Location = New System.Drawing.Point(18, 296)
+        Me.cbPElement.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbPElement.Name = "cbPElement"
+        Me.cbPElement.Size = New System.Drawing.Size(403, 29)
+        Me.cbPElement.TabIndex = 4
+        Me.cbPElement.Text = "Make <p> element with each new line"
+        Me.cbPElement.UseVisualStyleBackColor = True
         '
         'dlgHtml
         '
@@ -205,9 +195,13 @@ Partial Class dlgHtml
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(1490, 980)
+        Me.ClientSize = New System.Drawing.Size(933, 625)
+        Me.Controls.Add(Me.cbPElement)
+        Me.Controls.Add(Me.txtDescription)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtTitle)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(6)
@@ -218,24 +212,23 @@ Partial Class dlgHtml
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Export To HTML"
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents OK_Button As System.Windows.Forms.Button
     Friend WithEvents Cancel_Button As System.Windows.Forms.Button
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents CheckBox4 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents cbPronunciation As CheckBox
+    Friend WithEvents cbDefinition As CheckBox
+    Friend WithEvents cbNotes As CheckBox
+    Friend WithEvents cbWord As CheckBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtTitle As TextBox
+    Friend WithEvents txtDescription As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents cbPElement As CheckBox
 End Class

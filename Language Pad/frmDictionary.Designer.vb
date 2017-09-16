@@ -55,6 +55,7 @@ Partial Class frmDictionary
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ExportHtmlToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.CustomSymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -64,7 +65,6 @@ Partial Class frmDictionary
         Me.RemoveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.FontToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ExportHtmlToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.dlgSaveHtml = New System.Windows.Forms.SaveFileDialog()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -450,6 +450,16 @@ Partial Class frmDictionary
         Me.SaveToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.SaveToolStripButton.Text = "Save"
         '
+        'ExportHtmlToolStripButton
+        '
+        Me.ExportHtmlToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ExportHtmlToolStripButton.Image = CType(resources.GetObject("ExportHtmlToolStripButton.Image"), System.Drawing.Image)
+        Me.ExportHtmlToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ExportHtmlToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ExportHtmlToolStripButton.Name = "ExportHtmlToolStripButton"
+        Me.ExportHtmlToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.ExportHtmlToolStripButton.Text = "Export To HTML"
+        '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
@@ -524,16 +534,6 @@ Partial Class frmDictionary
         Me.FontToolStripButton.Name = "FontToolStripButton"
         Me.FontToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.FontToolStripButton.Text = "Font"
-        '
-        'ExportHtmlToolStripButton
-        '
-        Me.ExportHtmlToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ExportHtmlToolStripButton.Image = CType(resources.GetObject("ExportHtmlToolStripButton.Image"), System.Drawing.Image)
-        Me.ExportHtmlToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ExportHtmlToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ExportHtmlToolStripButton.Name = "ExportHtmlToolStripButton"
-        Me.ExportHtmlToolStripButton.Size = New System.Drawing.Size(28, 35)
-        Me.ExportHtmlToolStripButton.Text = "Export To HTML"
         '
         'dlgSaveHtml
         '

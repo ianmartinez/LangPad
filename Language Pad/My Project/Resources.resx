@@ -130,11 +130,20 @@
   <data name="Consonants" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Consonants.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="HtmlStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HtmlStyle.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="HtmlTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HtmlTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="KeyStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KeyStyle.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;iso-8859-1</value>
   </data>
   <data name="Other" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Other.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="TableTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TableTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="ToneIntonation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ToneIntonation.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
