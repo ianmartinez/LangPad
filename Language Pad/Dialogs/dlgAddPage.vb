@@ -59,12 +59,4 @@ Public Class dlgAddPage
         Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Close()
     End Sub
-
-    Private Sub dlgAddPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub pnlTabs_Paint(sender As Object, e As PaintEventArgs) 
-
-    End Sub
 End Class

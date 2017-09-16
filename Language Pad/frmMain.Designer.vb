@@ -536,7 +536,7 @@ Partial Class frmMain
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1910, 1175)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1910, 1173)
         Me.SplitContainer1.SplitterDistance = 161
         Me.SplitContainer1.TabIndex = 73
         '
@@ -557,7 +557,7 @@ Partial Class frmMain
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.StylizedPanel1)
         Me.SplitContainer2.Panel2MinSize = 235
-        Me.SplitContainer2.Size = New System.Drawing.Size(1910, 1010)
+        Me.SplitContainer2.Size = New System.Drawing.Size(1910, 1008)
         Me.SplitContainer2.SplitterDistance = 1366
         Me.SplitContainer2.TabIndex = 1
         '
@@ -568,7 +568,7 @@ Partial Class frmMain
         Me.tcNotebook.Margin = New System.Windows.Forms.Padding(4)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(1366, 1006)
+        Me.tcNotebook.Size = New System.Drawing.Size(1366, 1004)
         Me.tcNotebook.TabIndex = 73
         '
         'StylizedPanel1
@@ -580,7 +580,7 @@ Partial Class frmMain
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(540, 1010)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(540, 1008)
         Me.StylizedPanel1.Style = "Colors=~245|~245" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight" &
     " Color=$0"
         Me.StylizedPanel1.TabIndex = 13
@@ -612,17 +612,17 @@ Partial Class frmMain
         '
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.SplitContainer1)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.pnlFindReplace)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1910, 1243)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1910, 1241)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'ToolStripContainer1.LeftToolStripPanel
         '
-        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 40)
+        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 42)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
         '
         'ToolStripContainer1.RightToolStripPanel
         '
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(1910, 1323)
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(1910, 1321)
         Me.ToolStripContainer1.TabIndex = 74
         Me.ToolStripContainer1.Text = "ToolStripContainer1"
         '
@@ -1112,7 +1112,7 @@ Partial Class frmMain
         Me.MainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.LinguisticsToolStripMenuItem, Me.InsertToolStripMenuItem, Me.StyleToolStripMenuItem, Me.PageToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MainMenu.Location = New System.Drawing.Point(0, 0)
         Me.MainMenu.Name = "MainMenu"
-        Me.MainMenu.Size = New System.Drawing.Size(1910, 40)
+        Me.MainMenu.Size = New System.Drawing.Size(1910, 42)
         Me.MainMenu.TabIndex = 75
         Me.MainMenu.Text = "MenuStrip1"
         '
@@ -1633,7 +1633,7 @@ Partial Class frmMain
         Me.NotebookEditor1.MinimumSize = New System.Drawing.Size(524, 0)
         Me.NotebookEditor1.Name = "NotebookEditor1"
         Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
-        Me.NotebookEditor1.Size = New System.Drawing.Size(540, 1010)
+        Me.NotebookEditor1.Size = New System.Drawing.Size(540, 1008)
         Me.NotebookEditor1.TabIndex = 72
         '
         'frmMain

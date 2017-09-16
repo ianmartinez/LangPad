@@ -206,4 +206,16 @@ Public Class frmDictionary
             dgvDictionary.DefaultCellStyle.Font = dlgFont.Font
         End If
     End Sub
+
+    Private Sub frmDictionary_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+        LoadDictionary()
+    End Sub
+
+    Private Sub dgvDictionary_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellContentClick
+
+    End Sub
+
+    Private Sub dgvDictionary_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellEndEdit
+        SaveDictionary()
+    End Sub
 End Class
