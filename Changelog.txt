@@ -1,9 +1,11 @@
 Version 8.1 (September 15, 2017)
    •Find word in dictionary
    •Export dictionary to HTML
+   •Redesigned accent window
    •Multiple accents can be selected for a single character
    •Ice & Desert theme
    •Find/Replace now matches theme
+   •Window background now matches theme
    •Fixed rendering of vertical toolbars
    •Fixed mislabeled tooltips
    •Fixed bug where dictionary wouldn't show up on when re-opening
