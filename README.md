@@ -7,4 +7,4 @@ Language Pad is a word processor, like WordPad, that has conlanging-oriented fea
   • Pages are stored in a "notebook" that you can add and remove pages from     
   • A built in dictionary to store your words in along with the notebook         
   • Ability to import and export CSV files for dictionaries   
-  • Export dictionary to html tables/lists      
+  • Export dictionary to html tables
