@@ -218,4 +218,12 @@ Public Class frmDictionary
     Private Sub dgvDictionary_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellEndEdit
         SaveDictionary()
     End Sub
+
+    Private Sub ExportHtmlToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportHtmlToolStripButton.Click
+        SaveDictionary()
+        If dlgSaveHtml.ShowDialog = DialogResult.OK Then
+            dlgHtml.FilePath = dlgSaveHtml.FileName
+            dlgHtml.ShowDialog()
+        End If
+    End Sub
 End Class

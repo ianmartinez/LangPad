@@ -56,7 +56,7 @@ Partial Class dlgAccentMark
         Me.txtCharacter.MaxLength = 100
         Me.txtCharacter.Name = "txtCharacter"
         Me.txtCharacter.Size = New System.Drawing.Size(698, 43)
-        Me.txtCharacter.TabIndex = 0
+        Me.txtCharacter.TabIndex = 2
         '
         'Label2
         '
@@ -182,7 +182,7 @@ Partial Class dlgAccentMark
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
         Me.AccentsLayoutPanel.Size = New System.Drawing.Size(698, 289)
-        Me.AccentsLayoutPanel.TabIndex = 71
+        Me.AccentsLayoutPanel.TabIndex = 3
         '
         'dlgAccentMark
         '

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmHtml
+Partial Class dlgHtml
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class frmHtml
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmHtml))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgHtml))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
@@ -32,10 +32,10 @@ Partial Class frmHtml
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -81,10 +81,11 @@ Partial Class frmHtml
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
         Me.RadioButton1.Location = New System.Drawing.Point(21, 30)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(196, 29)
-        Me.RadioButton1.TabIndex = 1
+        Me.RadioButton1.TabIndex = 2
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Export To Table"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -95,8 +96,7 @@ Partial Class frmHtml
         Me.RadioButton2.Location = New System.Drawing.Point(21, 577)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(176, 29)
-        Me.RadioButton2.TabIndex = 2
-        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.TabIndex = 3
         Me.RadioButton2.Text = "Export To List"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
@@ -151,55 +151,55 @@ Partial Class frmHtml
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Include"
         '
-        'CheckBox1
+        'CheckBox4
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Checked = True
-        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(6, 30)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(95, 29)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "Word"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Checked = True
-        Me.CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox2.Location = New System.Drawing.Point(6, 135)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(100, 29)
-        Me.CheckBox2.TabIndex = 1
-        Me.CheckBox2.Text = "Notes"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Checked = True
+        Me.CheckBox4.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox4.Location = New System.Drawing.Point(11, 65)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(176, 29)
+        Me.CheckBox4.TabIndex = 5
+        Me.CheckBox4.Text = "Pronunciation"
+        Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.Checked = True
         Me.CheckBox3.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox3.Location = New System.Drawing.Point(6, 100)
+        Me.CheckBox3.Location = New System.Drawing.Point(11, 100)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(134, 29)
-        Me.CheckBox3.TabIndex = 2
+        Me.CheckBox3.TabIndex = 6
         Me.CheckBox3.Text = "Definition"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
-        'CheckBox4
+        'CheckBox2
         '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Checked = True
-        Me.CheckBox4.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox4.Location = New System.Drawing.Point(6, 65)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(176, 29)
-        Me.CheckBox4.TabIndex = 3
-        Me.CheckBox4.Text = "Pronunciation"
-        Me.CheckBox4.UseVisualStyleBackColor = True
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Checked = True
+        Me.CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox2.Location = New System.Drawing.Point(11, 135)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(100, 29)
+        Me.CheckBox2.TabIndex = 7
+        Me.CheckBox2.Text = "Notes"
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
-        'frmHtml
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Location = New System.Drawing.Point(11, 30)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(95, 29)
+        Me.CheckBox1.TabIndex = 4
+        Me.CheckBox1.Text = "Word"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'dlgHtml
         '
         Me.AcceptButton = Me.OK_Button
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
@@ -213,7 +213,7 @@ Partial Class frmHtml
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "frmHtml"
+        Me.Name = "dlgHtml"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Export To HTML"
