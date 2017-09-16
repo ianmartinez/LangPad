@@ -76,7 +76,7 @@ Partial Class dlgCustomSymbols
         Me.btnDeleteAll.Location = New System.Drawing.Point(182, 663)
         Me.btnDeleteAll.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDeleteAll.Name = "btnDeleteAll"
-        Me.btnDeleteAll.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnDeleteAll.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnDeleteAll.Size = New System.Drawing.Size(72, 68)
         Me.btnDeleteAll.Style = resources.GetString("btnDeleteAll.Style")
         Me.btnDeleteAll.TabIndex = 5
@@ -100,7 +100,7 @@ Partial Class dlgCustomSymbols
         Me.btnOpen.Location = New System.Drawing.Point(22, 663)
         Me.btnOpen.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOpen.Name = "btnOpen"
-        Me.btnOpen.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnOpen.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnOpen.Size = New System.Drawing.Size(72, 68)
         Me.btnOpen.Style = resources.GetString("btnOpen.Style")
         Me.btnOpen.TabIndex = 3
@@ -124,7 +124,7 @@ Partial Class dlgCustomSymbols
         Me.btnSave.Location = New System.Drawing.Point(102, 663)
         Me.btnSave.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnSave.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnSave.Size = New System.Drawing.Size(72, 68)
         Me.btnSave.Style = resources.GetString("btnSave.Style")
         Me.btnSave.TabIndex = 4

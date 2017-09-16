@@ -137,7 +137,7 @@ Partial Class dlgStyle
         Me.btnRight.Location = New System.Drawing.Point(356, 211)
         Me.btnRight.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRight.Name = "btnRight"
-        Me.btnRight.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnRight.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnRight.Size = New System.Drawing.Size(72, 68)
         Me.btnRight.Style = resources.GetString("btnRight.Style")
         Me.btnRight.TabIndex = 6
@@ -161,7 +161,7 @@ Partial Class dlgStyle
         Me.btnCenter.Location = New System.Drawing.Point(276, 211)
         Me.btnCenter.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCenter.Name = "btnCenter"
-        Me.btnCenter.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnCenter.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnCenter.Size = New System.Drawing.Size(72, 68)
         Me.btnCenter.Style = resources.GetString("btnCenter.Style")
         Me.btnCenter.TabIndex = 5
@@ -185,7 +185,7 @@ Partial Class dlgStyle
         Me.btnLeft.Location = New System.Drawing.Point(196, 211)
         Me.btnLeft.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLeft.Name = "btnLeft"
-        Me.btnLeft.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnLeft.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnLeft.Size = New System.Drawing.Size(72, 68)
         Me.btnLeft.Style = resources.GetString("btnLeft.Style")
         Me.btnLeft.TabIndex = 4
@@ -217,7 +217,7 @@ Partial Class dlgStyle
         Me.btnIndent.Location = New System.Drawing.Point(276, 395)
         Me.btnIndent.Margin = New System.Windows.Forms.Padding(4)
         Me.btnIndent.Name = "btnIndent"
-        Me.btnIndent.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnIndent.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnIndent.Size = New System.Drawing.Size(72, 68)
         Me.btnIndent.Style = resources.GetString("btnIndent.Style")
         Me.btnIndent.TabIndex = 7
@@ -243,7 +243,7 @@ Partial Class dlgStyle
         Me.btnSave.Location = New System.Drawing.Point(95, 484)
         Me.btnSave.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnSave.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnSave.Size = New System.Drawing.Size(72, 68)
         Me.btnSave.Style = resources.GetString("btnSave.Style")
         Me.btnSave.TabIndex = 94
@@ -268,7 +268,7 @@ Partial Class dlgStyle
         Me.btnOpen.Location = New System.Drawing.Point(15, 484)
         Me.btnOpen.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOpen.Name = "btnOpen"
-        Me.btnOpen.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnOpen.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnOpen.Size = New System.Drawing.Size(72, 68)
         Me.btnOpen.Style = resources.GetString("btnOpen.Style")
         Me.btnOpen.TabIndex = 93
@@ -307,7 +307,7 @@ Partial Class dlgStyle
         Me.btnOffset.Location = New System.Drawing.Point(15, 395)
         Me.btnOffset.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOffset.Name = "btnOffset"
-        Me.btnOffset.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnOffset.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnOffset.Size = New System.Drawing.Size(72, 68)
         Me.btnOffset.Style = resources.GetString("btnOffset.Style")
         Me.btnOffset.TabIndex = 9
@@ -361,7 +361,7 @@ Partial Class dlgStyle
         Me.btnDeleteAll.Location = New System.Drawing.Point(175, 484)
         Me.btnDeleteAll.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDeleteAll.Name = "btnDeleteAll"
-        Me.btnDeleteAll.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnDeleteAll.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnDeleteAll.Size = New System.Drawing.Size(72, 68)
         Me.btnDeleteAll.Style = resources.GetString("btnDeleteAll.Style")
         Me.btnDeleteAll.TabIndex = 95

@@ -101,7 +101,7 @@ Partial Class dlgUpdate
         Me.btnReddit.Location = New System.Drawing.Point(23, 633)
         Me.btnReddit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnReddit.Name = "btnReddit"
-        Me.btnReddit.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnReddit.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnReddit.Size = New System.Drawing.Size(72, 68)
         Me.btnReddit.Style = resources.GetString("btnReddit.Style")
         Me.btnReddit.TabIndex = 76
@@ -124,7 +124,7 @@ Partial Class dlgUpdate
         Me.btnSource.Location = New System.Drawing.Point(103, 633)
         Me.btnSource.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSource.Name = "btnSource"
-        Me.btnSource.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.btnSource.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnSource.Size = New System.Drawing.Size(72, 68)
         Me.btnSource.Style = resources.GetString("btnSource.Style")
         Me.btnSource.TabIndex = 77
