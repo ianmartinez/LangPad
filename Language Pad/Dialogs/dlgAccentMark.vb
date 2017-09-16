@@ -3,24 +3,43 @@ Imports Tundra
 
 Public Class dlgAccentMark
     Public Property Character As String
+    Private AccentsList As List(Of String) = New List(Of String)
+    Private AccentsString As String = ""
+
     Private Sub UpdateResult()
-        lblResult.Text = txtCharacter.Text & CType(cbAccents.SelectedItem, String)
+        lblResult.Text = txtCharacter.Text & AccentsString
         If txtCharacter.Text = "" Then lblResult.Text = ""
     End Sub
 
+    Private Sub ToggleAccent(sender As Object, e As EventArgs)
+        Dim button As AccentCheckButton = CType(sender, AccentCheckButton)
+
+        If (button.Checked) Then
+            AccentsList.Add(button.Text.Replace("◌", ""))
+        Else
+            AccentsList.Remove(button.Text.Replace("◌", ""))
+        End If
+
+        AccentsString = ""
+        For Each accent As String In AccentsList
+            AccentsString += accent
+        Next
+
+        UpdateResult()
+    End Sub
+
     Private Sub dlgAccentMark_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cbAccents.Items.Clear()
+        AccentsLayoutPanel.Controls.Clear()
+
         For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.Accents)
-            cbAccents.Items.Add(IPA.Value)
+            Dim SymbolButton As New AccentCheckButton
+            SymbolButton.Text = "◌" + IPA.Value
+            AddHandler SymbolButton.Click, AddressOf ToggleAccent
+            AccentsLayoutPanel.Controls.Add(SymbolButton)
         Next
 
         If Character = "" Then Character = "a"
         txtCharacter.Text = Character
-        cbAccents.SelectedIndex = 0
-    End Sub
-
-    Private Sub cbAccents_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbAccents.SelectedIndexChanged
-        UpdateResult()
     End Sub
 
     Private Sub txtCharacters_TextChanged(sender As Object, e As EventArgs) Handles txtCharacter.TextChanged

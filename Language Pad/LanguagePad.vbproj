@@ -116,6 +116,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmHtml.Designer.vb">
+      <DependentUpon>frmHtml.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHtml.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Themes\DesertTheme.vb" />
     <Compile Include="Themes\OliveTheme.vb" />
     <Compile Include="Themes\LunaTheme.vb" />
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDictionary.resx">
       <DependentUpon>frmDictionary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHtml.resx">
+      <DependentUpon>frmHtml.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>

@@ -45,11 +45,8 @@
 
         newArgs2.DrawText()
     End Sub
-
-    Private Sub InitializeComponent()
-
-    End Sub
 End Class
+
 Public Class SymbolButton
     Inherits Button
     Private ttIPa As New IPAToolTip
@@ -62,7 +59,6 @@ Public Class SymbolButton
         Dim IPAMargin = New Padding(1)
         Dim IPAMin = New Size(45, 32)
 
-        'Me.Style = My.Resources.KeyStyle
         Me.Padding = IPAPadding
         Me.Font = IPAFont
         Me.AutoSize = True
@@ -75,15 +71,10 @@ Public Class SymbolButton
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         Me.ResumeLayout(False)
-
     End Sub
 
     Private Sub SymbolButton_TextChanged(sender As Object, e As EventArgs) Handles Me.TextChanged
         ttIPa.SetToolTip(Me, Me.Text)
-    End Sub
-
-    Private Sub SymbolButton_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-
     End Sub
 
     Private Sub SymbolButton_Click(sender As Object, e As EventArgs) Handles Me.Click
@@ -109,6 +100,36 @@ Public Class SymbolButton
                 frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
             Next
         End If
+    End Sub
+End Class
 
+Public Class AccentCheckButton
+    Inherits CheckBox
+    Private ttIPa As New IPAToolTip
+    Private components As System.ComponentModel.IContainer
+
+    Public Sub New()
+        Dim IPAFont = New Font("Calibri", 14, FontStyle.Regular)
+        Dim IPAPadding = New Padding(0)
+        Dim IPAMargin = New Padding(1)
+        Dim IPAMin = New Size(45, 32)
+
+        Me.Padding = IPAPadding
+        Me.Font = IPAFont
+        Me.AutoSize = True
+        Me.MinimumSize = IPAMin
+        Me.Margin = IPAMargin
+        Me.Appearance = Appearance.Button
+        Me.TextAlign = ContentAlignment.MiddleCenter
+        Me.UseCompatibleTextRendering = True
+    End Sub
+
+    Private Sub InitializeComponent()
+        Me.SuspendLayout()
+        Me.ResumeLayout(False)
+    End Sub
+
+    Private Sub SymbolButton_TextChanged(sender As Object, e As EventArgs) Handles Me.TextChanged
+        ttIPa.SetToolTip(Me, Me.Text)
     End Sub
 End Class

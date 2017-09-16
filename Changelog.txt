@@ -1,12 +1,11 @@
 Version 8.1 (September 15, 2017)
    •Find word in dictionary
    •Export dictionary to HTML
-   •Remove duplicate characters
    •Multiple accents can be selected for a single character
-   •Context menu on character buttons
    •Ice & Desert theme
    •Fixed rendering of vertical toolbars
    •Fixed mislabeled tooltips
+   •Fixed bug where CTRL+Click to add character to custom characters would insert it into document
 Version 8.0 (September 11, 2017)
    •Support for 4k screens
    •Support for themes - Ice(Default), Night, Luna, Olive

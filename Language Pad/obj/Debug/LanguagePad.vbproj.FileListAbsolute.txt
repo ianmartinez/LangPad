@@ -68,3 +68,4 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.exe
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.xml
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.pdb
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.frmHtml.resources

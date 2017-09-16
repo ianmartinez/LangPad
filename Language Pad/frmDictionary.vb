@@ -81,6 +81,7 @@ Public Class frmDictionary
 
     Public Sub InsertIPA(sender As Object, e As EventArgs)
         On Error Resume Next
+        If My.Computer.Keyboard.CtrlKeyDown Then Exit Sub
         Dim Button As Button = CType(sender, Button)
         dgvDictionary.Focus()
         dgvDictionary.BeginEdit(False)

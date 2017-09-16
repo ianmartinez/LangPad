@@ -326,6 +326,7 @@ Public Class frmMain
         cmsMain.Renderer = Theme.GetMenuRenderer()
         frmRTF.SetTheme(Theme)
         frmDictionary.SetTheme(Theme)
+        BackColor = Theme.PanelBack
 
         NotebookEditor1.SetTheme(Theme)
         Refresh()

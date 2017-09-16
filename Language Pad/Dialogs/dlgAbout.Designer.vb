@@ -50,7 +50,7 @@ Partial Class dlgAbout
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(6)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(900, 722)
+        Me.TabControl1.Size = New System.Drawing.Size(1054, 722)
         Me.TabControl1.TabIndex = 9
         '
         'TabPage1
@@ -60,7 +60,7 @@ Partial Class dlgAbout
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(6)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(6)
-        Me.TabPage1.Size = New System.Drawing.Size(884, 675)
+        Me.TabPage1.Size = New System.Drawing.Size(1038, 675)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "License"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -77,7 +77,7 @@ Partial Class dlgAbout
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(872, 663)
+        Me.TextBox1.Size = New System.Drawing.Size(1026, 663)
         Me.TextBox1.TabIndex = 7
         Me.TextBox1.Text = resources.GetString("TextBox1.Text")
         '
@@ -88,7 +88,7 @@ Partial Class dlgAbout
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(6)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(6)
-        Me.TabPage2.Size = New System.Drawing.Size(884, 675)
+        Me.TabPage2.Size = New System.Drawing.Size(1038, 675)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Changelog"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -105,7 +105,7 @@ Partial Class dlgAbout
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox2.Size = New System.Drawing.Size(872, 663)
+        Me.TextBox2.Size = New System.Drawing.Size(1026, 663)
         Me.TextBox2.TabIndex = 8
         Me.TextBox2.Text = resources.GetString("TextBox2.Text")
         '
@@ -116,7 +116,7 @@ Partial Class dlgAbout
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage3.Size = New System.Drawing.Size(884, 675)
+        Me.TabPage3.Size = New System.Drawing.Size(1038, 675)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Credits"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -133,18 +133,19 @@ Partial Class dlgAbout
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(876, 667)
+        Me.TextBox3.Size = New System.Drawing.Size(1030, 667)
         Me.TextBox3.TabIndex = 9
         Me.TextBox3.Text = "Most of the icons" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "   •Adwaita Icons https://github.com/GNOME/adwaita-icon-theme"
         '
         'lblLanguagePad
         '
+        Me.lblLanguagePad.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblLanguagePad.Font = New System.Drawing.Font("Calibri", 16.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
-        Me.lblLanguagePad.Location = New System.Drawing.Point(15, 0)
+        Me.lblLanguagePad.Location = New System.Drawing.Point(0, 0)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(892, 168)
+        Me.lblLanguagePad.Size = New System.Drawing.Size(1084, 168)
         Me.lblLanguagePad.TabIndex = 12
         Me.lblLanguagePad.Text = "Language Pad X.x"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -157,7 +158,7 @@ Partial Class dlgAbout
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(930, 168)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(1084, 168)
         Me.StylizedPanel1.Style = "Colors=#cf6c36|#b21e54" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=98, 44" &
     ", 44" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1"
         Me.StylizedPanel1.TabIndex = 13
@@ -166,7 +167,7 @@ Partial Class dlgAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(930, 917)
+        Me.ClientSize = New System.Drawing.Size(1084, 917)
         Me.Controls.Add(Me.StylizedPanel1)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog

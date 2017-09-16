@@ -219,14 +219,21 @@ End Class
 Public Class clsDesertToolstripRenderer
     Inherits ToolStripProfessionalRenderer
 
+    '// Render separator
     Protected Overrides Sub OnRenderSeparator(ByVal e As ToolStripSeparatorRenderEventArgs)
-        ' MyBase.OnRenderSeparator(e)
+        MyBase.OnRenderSeparator(e)
 
-        'Draws the background of the separators. You can draw anything you want
-        Dim rect As New Rectangle(3, 5, 1, e.Item.Height - 10)
-        Dim rect2 As New Rectangle(4, 6, 1, e.Item.Height - 10)
-        e.Graphics.FillRectangle(New SolidBrush(clrDesertSep), rect)
-        e.Graphics.FillRectangle(New SolidBrush(clrDesertSepWhite), rect2)
+        If e.ToolStrip.Orientation = Orientation.Vertical Then
+            Dim rect As New Rectangle(2, 3, e.Item.Width - 4, 1)
+            Dim rect2 As New Rectangle(3, 4, e.Item.Width - 5, 1)
+            e.Graphics.FillRectangle(New SolidBrush(clrDesertSep), rect)
+            e.Graphics.FillRectangle(New SolidBrush(clrDesertSepWhite), rect2)
+        Else
+            Dim rect As New Rectangle(3, 5, 1, e.Item.Height - 10)
+            Dim rect2 As New Rectangle(4, 6, 1, e.Item.Height - 10)
+            e.Graphics.FillRectangle(New SolidBrush(clrDesertSep), rect)
+            e.Graphics.FillRectangle(New SolidBrush(clrDesertSepWhite), rect2)
+        End If
     End Sub
 
     Protected Overrides Sub OnRenderToolStripBorder(e As ToolStripRenderEventArgs)
