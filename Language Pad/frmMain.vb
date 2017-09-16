@@ -114,7 +114,7 @@ Public Class frmMain
         Return newImage
     End Function
 
-    Private Sub PrintDocument1_BeginPrint(ByVal sender As Object, ByVal e As Printing.PrintEventArgs) Handles pdMain.BeginPrint
+    Private Sub PrintDocument1_BeginPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles pdMain.BeginPrint
         checkPrint = 0
     End Sub
 
@@ -317,7 +317,6 @@ Public Class frmMain
         Color1 = Theme.Color1
         Color2 = Theme.Color2
         VerticalMenuGradient = Theme.VerticalMenuGradient
-        BackColor = Theme.PanelBack
 
         MainMenu.Renderer = Theme.GetMenuRenderer()
         FileToolStrip.Renderer = Theme.GetToolStripRenderer()
@@ -332,7 +331,7 @@ Public Class frmMain
         Refresh()
     End Sub
 
-    Private Sub RichTextEditor_Load(sender As System.Object, e As EventArgs) Handles MyBase.Load
+    Private Sub RichTextEditor_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         On Error Resume Next
         Text = LangPadVersion
 
@@ -353,8 +352,8 @@ Public Class frmMain
                 If FileEXT = "rtf" Then
                     Dim p As New NotebookPage
                     p.Title = "Untitled"
-                    Dim txtReader As StreamReader
-                    txtReader = New StreamReader(My.Application.CommandLineArgs(0))
+                    Dim txtReader As System.IO.StreamReader
+                    txtReader = New System.IO.StreamReader(My.Application.CommandLineArgs(0))
                     p.RTF = txtReader.ReadToEnd
                     txtReader.Close()
 
@@ -362,8 +361,8 @@ Public Class frmMain
                 ElseIf FileEXT = "txt" Then
                     Dim p As New NotebookPage
                     p.Title = "Untitled"
-                    Dim txtReader As StreamReader
-                    txtReader = New StreamReader(My.Application.CommandLineArgs(0))
+                    Dim txtReader As System.IO.StreamReader
+                    txtReader = New System.IO.StreamReader(My.Application.CommandLineArgs(0))
                     p.RTF = txtReader.ReadToEnd
                     txtReader.Close()
 
@@ -652,13 +651,13 @@ Public Class frmMain
         Else
             Me.Cursor = Cursors.WaitCursor
             Dim strExt As String
-            strExt = Path.GetExtension(currentFile)
+            strExt = System.IO.Path.GetExtension(currentFile)
             strExt = strExt.ToUpper()
             If strExt = "RTF" Then
                 SelectedDocument.SaveFile(currentFile)
             ElseIf strExt = "TXT" Then
-                Dim txtWriter As StreamWriter
-                txtWriter = New StreamWriter(currentFile)
+                Dim txtWriter As System.IO.StreamWriter
+                txtWriter = New System.IO.StreamWriter(currentFile)
                 txtWriter.Write(SelectedDocument.Text)
                 txtWriter.Close()
                 txtWriter = Nothing
@@ -1019,7 +1018,7 @@ Public Class frmMain
                     SelectedDocument.SelectionStart = 0
                     SelectedDocument.SelectionLength = 0
                 Case Else
-                    Dim txtWriter As StreamWriter
+                    Dim txtWriter As System.IO.StreamWriter
                     txtWriter = New System.IO.StreamWriter(dlgSavePage.FileName)
                     txtWriter.Write(SelectedDocument.Text)
                     txtWriter.Close()
@@ -1171,5 +1170,9 @@ Public Class frmMain
 
     Private Sub AccentMarkToolStripButton_Click(sender As Object, e As EventArgs) Handles AccentMarkToolStripButton.Click
         AccentMarkToolStripMenuItem_Click(Me, e)
+    End Sub
+
+    Private Sub ThemeCombo_Click(sender As Object, e As EventArgs) Handles ThemeCombo.Click
+
     End Sub
 End Class

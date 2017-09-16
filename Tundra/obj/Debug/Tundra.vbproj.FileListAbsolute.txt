@@ -49,6 +49,7 @@ C:\Users\ianma\Desktop\Code\Conlang Notepad\Tundra\obj\Debug\Tundra.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.dll
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.xml
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbprojResolveAssemblyReference.cache
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.Resources.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.StylizedColorButton.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.GenerateResource.Cache

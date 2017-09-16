@@ -10,7 +10,7 @@
     Public clrSnowSelectedBG_White As Color = Color.FromArgb(255, 241, 248, 251)
     Public clrSnowSelectedBG_Border As Color = Color.FromArgb(255, 150, 217, 249)
     Public clrSnowSelectedBG_Drop_Blue As Color = Color.FromArgb(255, 139, 195, 225)
-    Public clrSnowSelectedBG_Drop_Border As Color = Color.FromArgb(255, 48, 127, 177)
+    Public clrSnowSelectedBG_Drop_Border As Color = Color.FromArgb(255, 49, 65, 76)
     Public clrSnowMenuBorder As Color = Color.FromArgb(255, 160, 160, 160)
     Public clrSnowCheckBG As Color = Color.FromArgb(255, 206, 237, 250)
 
@@ -30,15 +30,15 @@
     Public clrSnowImageMarginBG_Color1 As Color = Color.FromArgb(255, 228, 228, 228)
     Public clrSnowImageMarginBG_Color2 As Color = Color.FromArgb(255, 228, 228, 228)
 
-    Public clSnow_Selected1 As Color = Color.FromArgb(255, 227, 227, 227)
-    Public clSnow_Selected2 As Color = Color.FromArgb(255, 227, 227, 227)
+    Public clSnow_Selected1 As Color = Color.FromArgb(255, 156, 175, 189)
+    Public clSnow_Selected2 As Color = Color.FromArgb(255, 156, 175, 189)
     Public clSnow_SelectedBorder As Color = Color.FromArgb(255, 225, 225, 225)
     Public clSnow_SelectedShadow As Color = Color.FromArgb(255, 240, 240, 240)
 
-    Public clSnow_Drop1 As Color = Color.FromArgb(255, 255, 243, 188)
-    Public clSnow_Drop2 As Color = Color.FromArgb(255, 255, 218, 134)
-    Public clSnow_DropBorder As Color = Color.FromArgb(255, 205, 149, 63)
-    Public clSnow_DropShadow As Color = Color.FromArgb(255, 238, 230, 215)
+    Public clSnow_Drop1 As Color = Color.FromArgb(255, 92, 120, 140)
+    Public clSnow_Drop2 As Color = Color.FromArgb(255, 92, 120, 140)
+    Public clSnow_DropBorder As Color = Color.FromArgb(255, 33, 62, 75)
+    Public clSnow_DropShadow As Color = Color.FromArgb(255, 215, 230, 238)
 
     Public clrSnowSep As Color = Color.FromArgb(255, 215, 215, 215)
     Public clrSnowSepWhite As Color = Color.FromArgb(255, 255, 255, 255)
@@ -174,6 +174,7 @@ Public Class clsSnowMenuRenderer
     Protected Overrides Sub OnRenderMenuItemBackground(ByVal e As System.Windows.Forms.ToolStripItemRenderEventArgs)
         MyBase.OnRenderMenuItemBackground(e)
 
+        e.Item.ForeColor = Color.Black
         If e.Item.Enabled Then
             If e.Item.IsOnDropDown = False AndAlso e.Item.Selected Then
                 '// If item is MenuHeader and selected: draw darkblue border
@@ -209,7 +210,7 @@ Public Class clsSnowMenuRenderer
                 e.Graphics.FillRectangle(b, rect)
                 clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrSnowSelectedBG_Drop_Border)
                 clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 4, clSnow_DropShadow)
-                e.Item.ForeColor = Color.Black
+                e.Item.ForeColor = Color.White
             End If
         End If
     End Sub
@@ -262,13 +263,13 @@ Public Class clsSnowToolstripRenderer
             Dim rectBorder As New Rectangle(0, 0, e.Item.Width - 0, e.Item.Height - 0)
             Dim rect As New Rectangle(1, 1, e.Item.Width - 2, e.Item.Height - 2)
             Dim b As New Drawing2D.LinearGradientBrush(rect, clSnow_Selected1, clSnow_Selected2, Drawing2D.LinearGradientMode.Vertical)
-            Dim b2 As New SolidBrush(Color.FromArgb(255, 205, 149, 63))
+            Dim b2 As New SolidBrush(Color.FromArgb(255, 86, 138, 162))
 
             e.Graphics.FillRectangle(b2, rectBorder)
             e.Graphics.FillRectangle(b, rect)
         End If
         If e.Item.Pressed Then
-            Dim rectBorder As New Rectangle(0, 0, e.Item.Width - 1, e.Item.Height - 1)
+            Dim rectBorder As New Rectangle(0, 0, e.Item.Width - 0, e.Item.Height - 0)
             Dim rect As New Rectangle(1, 1, e.Item.Width - 2, e.Item.Height - 2)
             Dim b As New Drawing2D.LinearGradientBrush(rect, clSnow_Drop1, clSnow_Drop2, Drawing2D.LinearGradientMode.Vertical)
             Dim b2 As New Drawing.SolidBrush(clSnow_DropBorder)

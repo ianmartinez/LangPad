@@ -1,18 +1,12 @@
-Version 9.0 (Planned)
-   •New *.nt2 file format
-	   •Conversion wizard from old *.nt format to *.nt2 format
-	   •Multiple pages can have the same name
-	   •Custom symbols split into file and local symbols
-	   •Dictionaries with multiple sections
+Version 8.1 (September 15, 2017)
    •Find word in dictionary
    •Export dictionary to HTML
-   •Character editor sidebar replaces Accent Mark dialog
    •Remove duplicate characters
    •Multiple accents can be selected for a single character
-   •Separate tabs for characters embedded in the file and characters stored locally
    •Context menu on character buttons
    •Ice & Desert theme
    •Fixed rendering of vertical toolbars
+   •Fixed mislabeled tooltips
 Version 8.0 (September 11, 2017)
    •Support for 4k screens
    •Support for themes - Ice(Default), Night, Luna, Olive

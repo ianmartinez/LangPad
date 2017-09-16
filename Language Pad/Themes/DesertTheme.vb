@@ -10,7 +10,7 @@
     Public clrDesertSelectedBG_White As Color = Color.FromArgb(255, 241, 248, 251)
     Public clrDesertSelectedBG_Border As Color = Color.FromArgb(255, 150, 217, 249)
     Public clrDesertSelectedBG_Drop_Blue As Color = Color.FromArgb(255, 139, 195, 225)
-    Public clrDesertSelectedBG_Drop_Border As Color = Color.FromArgb(255, 48, 127, 177)
+    Public clrDesertSelectedBG_Drop_Border As Color = Color.FromArgb(255, 127, 105, 85)
     Public clrDesertMenuBorder As Color = Color.FromArgb(255, 160, 160, 160)
     Public clrDesertCheckBG As Color = Color.FromArgb(255, 206, 237, 250)
 
@@ -20,7 +20,7 @@
 
     Public clrDesertToolstripBtnGrad_Blue As Color = Color.FromArgb(255, 129, 192, 224)
     Public clrDesertToolstripBtnGrad_White As Color = Color.FromArgb(255, 237, 248, 253)
-    Public clrDesertToolstripBtn_Border As Color = Color.FromArgb(255, 124, 133, 150)
+    Public clrDesertToolstripBtn_Border As Color = Color.FromArgb(255, 153, 120, 90)
     Public clrDesertToolstripBtnGrad_Blue_Pressed As Color = Color.FromArgb(255, 124, 177, 204)
     Public clrDesertToolstripBtnGrad_White_Pressed As Color = Color.FromArgb(255, 228, 245, 252)
 

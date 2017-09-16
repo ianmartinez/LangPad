@@ -10,7 +10,7 @@
     Public clrOliveSelectedBG_White As Color = Color.FromArgb(255, 241, 248, 251)
     Public clrOliveSelectedBG_Border As Color = Color.FromArgb(255, 150, 217, 249)
     Public clrOliveSelectedBG_Drop_Blue As Color = Color.FromArgb(255, 139, 195, 225)
-    Public clrOliveSelectedBG_Drop_Border As Color = Color.FromArgb(255, 48, 127, 177)
+    Public clrOliveSelectedBG_Drop_Border As Color = Color.FromArgb(255, 71, 89, 45)
     Public clrOliveMenuBorder As Color = Color.FromArgb(255, 160, 160, 160)
     Public clrOliveCheckBG As Color = Color.FromArgb(255, 206, 237, 250)
 
@@ -20,7 +20,7 @@
 
     Public clrOliveToolstripBtnGrad_Blue As Color = Color.FromArgb(255, 129, 192, 224)
     Public clrOliveToolstripBtnGrad_White As Color = Color.FromArgb(255, 237, 248, 253)
-    Public clrOliveToolstripBtn_Border As Color = Color.FromArgb(255, 124, 133, 150)
+    Public clrOliveToolstripBtn_Border As Color = Color.FromArgb(255, 103, 124, 73)
     Public clrOliveToolstripBtnGrad_Blue_Pressed As Color = Color.FromArgb(255, 124, 177, 204)
     Public clrOliveToolstripBtnGrad_White_Pressed As Color = Color.FromArgb(255, 228, 245, 252)
 

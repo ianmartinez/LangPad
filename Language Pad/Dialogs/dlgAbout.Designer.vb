@@ -116,7 +116,7 @@ Partial Class dlgAbout
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage3.Size = New System.Drawing.Size(884, 577)
+        Me.TabPage3.Size = New System.Drawing.Size(884, 675)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Credits"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -133,7 +133,7 @@ Partial Class dlgAbout
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(876, 569)
+        Me.TextBox3.Size = New System.Drawing.Size(876, 667)
         Me.TextBox3.TabIndex = 9
         Me.TextBox3.Text = "Most of the icons" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "   •Adwaita Icons https://github.com/GNOME/adwaita-icon-theme"
         '

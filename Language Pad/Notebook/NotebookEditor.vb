@@ -8,14 +8,12 @@ Public Class NotebookEditor
     Public Sub SetTheme(Theme As Theme)
         Color1 = Theme.PanelBack
         Color2 = Theme.PanelBack
-        PageNameToolStrip.Height = DocumentToolStrip.Height
         VerticalMenuGradient = Theme.VerticalMenuGradient
         DoubleBufferedPanel2.BackColor = Theme.PanelBack
         BackColor = Theme.PanelBack
         DoubleBufferedPanel2.ForeColor = Theme.PanelText
 
         DocumentToolStrip.Renderer = Theme.GetToolStripRenderer()
-        PageNameToolStrip.Renderer = Theme.GetToolStripRenderer()
 
         Refresh()
     End Sub
@@ -90,7 +88,7 @@ Public Class NotebookEditor
         frmMain.DuplicatePageToolStripMenuItem_Click(Me, e)
     End Sub
 
-    Private Sub RenameToolStripButton_Click(sender As Object, e As EventArgs)
+    Private Sub RenameToolStripButton_Click(sender As Object, e As EventArgs) Handles RenameToolStripButton.Click
         frmMain.RenamePageToolStripMenuItem_Click(Me, e)
     End Sub
 
@@ -107,8 +105,6 @@ Public Class NotebookEditor
 
         btnGo.Location = New Point(btnGo.Location.X, txtWebsite.Location.Y)
         btnGo.Height = txtWebsite.Height
-
-        txtPageName.Width = 230
     End Sub
 
     Private Sub ToolStripContainer1_TopToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles DocumentToolStripContainer.TopToolStripPanel.Paint,
@@ -136,9 +132,5 @@ Public Class NotebookEditor
         Else
             Process.Start(txtWebsite.Text)
         End If
-    End Sub
-
-    Private Sub txtPageName_Click(sender As Object, e As EventArgs) Handles txtPageName.Click
-
     End Sub
 End Class
