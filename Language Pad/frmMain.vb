@@ -327,6 +327,15 @@ Public Class frmMain
         frmRTF.SetTheme(Theme)
         frmDictionary.SetTheme(Theme)
         BackColor = Theme.PanelBack
+        pnlFindReplace.BackColor = Theme.PanelBack
+        pnlFindReplace.ForeColor = Theme.PanelText
+
+        ' Center buttons relative to text boxes
+        ' Because Windows' scaling throws them off
+        btnFind.Top = txtFind.Top - (btnFind.Height / 2 - txtFind.Height / 2)
+        btnFindNext.Top = txtFind.Top - (btnFindNext.Height / 2 - txtFind.Height / 2)
+        btnReplace.Top = txtFind.Top - (btnReplace.Height / 2 - txtFind.Height / 2)
+        btnReplaceAll.Top = txtFind.Top - (btnReplaceAll.Height / 2 - txtFind.Height / 2)
 
         NotebookEditor1.SetTheme(Theme)
         Refresh()
