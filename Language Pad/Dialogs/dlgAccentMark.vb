@@ -30,6 +30,8 @@ Public Class dlgAccentMark
 
     Private Sub dlgAccentMark_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         AccentsLayoutPanel.Controls.Clear()
+        AccentsList.Clear()
+        AccentsString = ""
 
         For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.Accents)
             Dim SymbolButton As New AccentCheckButton
