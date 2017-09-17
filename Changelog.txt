@@ -3,6 +3,7 @@ Version 8.2 (September 22, 2017)
    •Color panel for quick access to font/highlight colors
    •Check for updates at startup now on by default
    •Fixed typo on style dialog
+   •Fixed accents remaining after dlgAccents closes and re-opens
    •Revised look of color buttons
    •Automatically open generated HTML file on completion
 Version 8.1 (September 16, 2017)

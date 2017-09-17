@@ -429,6 +429,7 @@ Public Class frmMain
         ThemeCombo.SelectedItem = My.Settings.Theme
 
         For Each c As StylizedColorButton In ColorLayoutPanel.Controls
+            c.ImageAlign = ContentAlignment.MiddleCenter
             AddHandler c.Click, AddressOf ColorButton_Click
         Next
     End Sub

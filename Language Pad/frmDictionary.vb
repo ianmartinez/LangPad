@@ -20,6 +20,14 @@ Public Class frmDictionary
 
         MainToolStrip.Renderer = Theme.GetToolStripRenderer()
 
+
+        ' Center buttons relative to text boxes
+        ' Because Windows' scaling throws them off
+        btnFind.Top = txtFind.Top - (btnFind.Height / 2 - txtFind.Height / 2)
+        btnFindNext.Top = txtFind.Top - (btnFindNext.Height / 2 - txtFind.Height / 2)
+        btnReplace.Top = txtFind.Top - (btnReplace.Height / 2 - txtFind.Height / 2)
+        btnReplaceAll.Top = txtFind.Top - (btnReplaceAll.Height / 2 - txtFind.Height / 2)
+
         Refresh()
     End Sub
 
@@ -241,5 +249,10 @@ Public Class frmDictionary
 
     Private Sub btnFind_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub FindReplaceToolStripButton_Click(sender As Object, e As EventArgs) Handles FindReplaceToolStripButton.Click
+        pnlFindReplace.Visible = pnlFindReplace.Visible Xor True
+        If pnlFindReplace.Visible = True Then txtFind.Focus()
     End Sub
 End Class
