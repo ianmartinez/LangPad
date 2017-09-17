@@ -75,19 +75,19 @@ Partial Class dlgStyle
         '
         'btnFont
         '
-        Me.btnFont.BackColor = System.Drawing.Color.Transparent
         Me.btnFont.BackgroundImage = CType(resources.GetObject("btnFont.BackgroundImage"), System.Drawing.Image)
         Me.btnFont.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnFont.FlatAppearance.BorderSize = 0
         Me.btnFont.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnFont.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnFont.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFont.ForeColor = System.Drawing.Color.Black
         Me.btnFont.Location = New System.Drawing.Point(495, 287)
         Me.btnFont.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFont.Name = "btnFont"
         Me.btnFont.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnFont.Size = New System.Drawing.Size(126, 68)
-        Me.btnFont.Style = Nothing
+        Me.btnFont.Style = resources.GetString("btnFont.Style")
         Me.btnFont.TabIndex = 3
         Me.btnFont.Text = "Font"
         Me.ttMain.SetToolTip(Me.btnFont, "Text font")
