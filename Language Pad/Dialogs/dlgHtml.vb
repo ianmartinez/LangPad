@@ -1,6 +1,5 @@
 ﻿Imports System.IO
 Imports System.Text
-Imports System.Windows.Forms
 
 Public Class dlgHtml
     Public FilePath As String = ""
@@ -57,14 +56,15 @@ Public Class dlgHtml
         wr.Write(String.Format(My.Resources.HtmlTemplate, txtTitle.Text, description, My.Resources.HtmlStyle, htmlBody))
         wr.Close()
 
-        MessageBox.Show("Html page generated successfully.")
+        MessageBox.Show("HTML page generated successfully.")
+        Process.Start(FilePath)
 
-        Me.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.DialogResult = DialogResult.OK
         Me.Close()
     End Sub
 
     Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel_Button.Click
-        Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.DialogResult = DialogResult.Cancel
         Me.Close()
     End Sub
 
