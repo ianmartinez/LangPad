@@ -33,7 +33,7 @@
     Public clDesert_Selected1 As Color = Color.FromArgb(255, 245, 227, 194)
     Public clDesert_Selected2 As Color = Color.FromArgb(255, 237, 194, 118)
     Public clDesert_SelectedBorder As Color = Color.FromArgb(255, 205, 149, 63)
-    Public clDesert_SelectedShadow As Color = Color.FromArgb(255, 238, 230, 215)
+    Public clDesert_SelectedShadow As Color = Color.FromArgb(100, 255, 255, 255)
 
     Public clDesert_Drop1 As Color = Color.FromArgb(255, 255, 243, 188)
     Public clDesert_Drop2 As Color = Color.FromArgb(255, 255, 218, 134)

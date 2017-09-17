@@ -327,7 +327,6 @@ Public Class frmMain
         frmRTF.SetTheme(Theme)
         frmDictionary.SetTheme(Theme)
         BackColor = Theme.PanelBack
-        pnlColor.BackColor = Theme.PanelBack
         pnlColor.ForeColor = Theme.PanelText
         pnlFindReplace.BackColor = Theme.PanelBack
         pnlFindReplace.ForeColor = Theme.PanelText
