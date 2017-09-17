@@ -226,4 +226,20 @@ Public Class frmDictionary
             dlgHtml.ShowDialog()
         End If
     End Sub
+
+    Private Sub btnFindNext_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btnReplaceAll_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btnReplace_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btnFind_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

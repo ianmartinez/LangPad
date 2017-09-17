@@ -426,6 +426,10 @@ Public Class frmMain
         SetTheme(New IceTheme())
 
         ThemeCombo.SelectedItem = My.Settings.Theme
+
+        For Each c As StylizedColorButton In ColorLayoutPanel.Controls
+            AddHandler c.Click, AddressOf ColorButton_Click
+        Next
     End Sub
 
     Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
@@ -1184,5 +1188,19 @@ Public Class frmMain
 
     Private Sub ThemeCombo_Click(sender As Object, e As EventArgs) Handles ThemeCombo.Click
 
+    End Sub
+
+    Private Sub ColorPanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ColorPanelToolStripMenuItem.Click
+        pnlColor.Visible = pnlColor.Visible Xor True
+    End Sub
+
+    Private Sub ColorButton_Click(sender As Object, e As EventArgs)
+        Dim cButton As StylizedColorButton = CType(sender, StylizedColorButton)
+
+        If rbTextColor.Checked Then
+            SelectedDocument.SelectionColor = cButton.Color
+        Else
+            SelectedDocument.SelectionBackColor = cButton.Color
+        End If
     End Sub
 End Class

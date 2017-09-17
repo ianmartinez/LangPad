@@ -1,3 +1,9 @@
+Version 8.2 (September 22, 2017)
+   •Find words in dictionary
+   •Color panel for quick access to font/highlight colors
+   •Check for updates at startup now on by default
+   •Fixed typo on style dialog
+   •Revised look of color buttons
 Version 8.1 (September 16, 2017)
    •Export dictionary to HTML
    •Redesigned accent window

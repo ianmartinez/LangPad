@@ -1,11 +1,12 @@
 ﻿Imports System.Drawing
 Imports System.Drawing.Drawing2D
+Imports System.Windows.Forms
 
 Public Class StylizedColorButton
-    Inherits StylizedButton
-    Private mColor As Color
+    Inherits Button
     Public Event ColorChanged(ByVal sender As Object, ByVal e As EventArgs)
-    Friend WithEvents dlgColor As System.Windows.Forms.ColorDialog
+    Friend WithEvents dlgColor As ColorDialog
+    Private mColor As Color
     Public Property Color As Color
         Get
             Return mColor
@@ -18,53 +19,55 @@ Public Class StylizedColorButton
             RaiseEvent ColorChanged(Me, Nothing)
         End Set
     End Property
+    Private mRightClickMode As Boolean
+    Public Property RightClickMode As Boolean
+        Get
+            Return mRightClickMode
+        End Get
+        Set(ByVal value As Boolean)
+            mRightClickMode = value
+            On Error Resume Next
+        End Set
+    End Property
+
     Private ColorBitmap As Bitmap
     Private Sub GenerateColorBitmap()
         On Error Resume Next
-        GenerateBitmaps()
-        ColorBitmap = New Bitmap(14, 14)
+        ColorBitmap = New Bitmap(22, 22)
         Dim ColorGraphics As Graphics = Graphics.FromImage(ColorBitmap)
-        Dim ColorRectangle As New Rectangle(0, 0, ColorBitmap.Width - 2, ColorBitmap.Height - 2)
-        Dim ColorHighlightRectangle As New Rectangle(1, 1, ColorBitmap.Width - 4, ColorBitmap.Height - 4)
+        Dim ColorRectangle As New Rectangle(0, 0, ColorBitmap.Width - 1, ColorBitmap.Height - 1)
         Dim ColorRoundedRectangle As GraphicsPath = RoundedRectangle(ColorRectangle, 0)
-        ' Dim ColorHighlightRoundedRectangle As GraphicsPath = RoundedRectangle(ColorHighlightRectangle, 3)
-        ' Dim Shine As New LinearGradientBrush(ColorRectangle, Color.FromArgb(70, 255, 255, 255), Color.Transparent, 90)
         ColorGraphics.CompositingQuality = CompositingQuality.HighQuality
         ColorGraphics.SmoothingMode = SmoothingMode.AntiAlias
         ColorGraphics.FillPath(New SolidBrush(Color), ColorRoundedRectangle)
-        ' ColorGraphics.FillPath(Shine, ColorRoundedRectangle)
-        ' ColorGraphics.DrawPath(New Pen(New SolidBrush(Color.FromArgb(90, 255, 255, 255))), ColorHighlightRoundedRectangle)
         ColorGraphics.DrawPath(New Pen(New SolidBrush(Color.FromArgb(100, 0, 0, 0))), ColorRoundedRectangle)
     End Sub
 
     Public Sub New()
         InitializeComponent()
-        Me.TextAlign = ContentAlignment.BottomCenter
-        Me.ImageAlign = ContentAlignment.TopCenter
-        Me.MinimumSize = New Size(3, 30)
+        TextAlign = ContentAlignment.BottomCenter
+        ImageAlign = ContentAlignment.TopCenter
+        MinimumSize = New Size(3, 30)
     End Sub
 
-    Private Sub StylizedColorButton_Click(sender As Object, e As System.EventArgs) Handles Me.Click
-        dlgColor.Color = Me.Color
-        If dlgColor.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Me.Color = dlgColor.Color
-        End If
-    End Sub
-
-    Private Sub StylizedColorButton_Resize(sender As Object, e As System.EventArgs) Handles Me.Resize
+    Private Sub StylizedColorButton_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         On Error Resume Next
         GenerateColorBitmap()
-        Me.Image = ColorBitmap
+        Image = ColorBitmap
     End Sub
 
     Private Sub InitializeComponent()
-        Me.dlgColor = New System.Windows.Forms.ColorDialog()
-        Me.SuspendLayout()
-        Me.dlgColor.FullOpen = True
+        dlgColor = New ColorDialog()
+        SuspendLayout()
+        dlgColor.FullOpen = True
     End Sub
 
-    Private Sub StylizedColorButton_UIStyleChanged(ByVal sender As Object, ByVal e As EventArgs) Handles Me.UIStyleChanged
-        GenerateColorBitmap()
-        Me.Image = ColorBitmap
+    Private Sub StylizedColorButton_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown
+        If RightClickMode AndAlso Not e.Button = Windows.Forms.MouseButtons.Right Then
+            Exit Sub
+        Else
+            dlgColor.Color = Color
+            If dlgColor.ShowDialog = Windows.Forms.DialogResult.OK Then Color = dlgColor.Color
+        End If
     End Sub
 End Class
