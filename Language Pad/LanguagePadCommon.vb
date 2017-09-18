@@ -7,9 +7,9 @@ Module LanguagePadCommon
     Public NTVersion As Decimal = 1.2
     Public FirstTabUpdate As Boolean = False
     Public Initialized As Boolean = False
-    Public DecimalSep As String = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator
-    Public CurrentVersion As Decimal = (Application.ProductVersion.Split(DecimalSep).GetValue(0) & "." & Application.ProductVersion.Split(DecimalSep).GetValue(1))
-    Public LangPadVersion As String = "Language Pad " & (Application.ProductVersion.Split(DecimalSep).GetValue(0) & If(Application.ProductVersion.Split(DecimalSep).GetValue(1) = "0", "", "." & Application.ProductVersion.Split(DecimalSep).GetValue(1)))
+    Public DecimalSep As String() = {" ", "'", ",", ".", "·", " ", " ", "˙", "٫", "٬", "⎖"}
+    Public CurrentVersion As Decimal = (Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(0) & "." & Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1))
+    Public LangPadVersion As String = "Language Pad " & (Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(0) & If(Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1) = "0", "", "." & Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1)))
     Public Function GetTextFromRTF(ByVal RTF As String)
         Dim rtb As New RichTextBox
         rtb.Rtf = RTF
