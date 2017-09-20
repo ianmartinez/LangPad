@@ -57,6 +57,7 @@ Partial Class dlgAccentMark
         Me.txtCharacter.Name = "txtCharacter"
         Me.txtCharacter.Size = New System.Drawing.Size(698, 43)
         Me.txtCharacter.TabIndex = 2
+        Me.txtCharacter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
         '
@@ -135,7 +136,7 @@ Partial Class dlgAccentMark
         '
         Me.lblResult.BackColor = System.Drawing.Color.White
         Me.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblResult.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblResult.Font = New System.Drawing.Font("Calibri", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblResult.ForeColor = System.Drawing.Color.Black
         Me.lblResult.Location = New System.Drawing.Point(13, 13)
         Me.lblResult.Margin = New System.Windows.Forms.Padding(4)

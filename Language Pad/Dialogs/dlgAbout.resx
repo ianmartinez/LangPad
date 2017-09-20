@@ -130,7 +130,16 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
   </data>
   <data name="TextBox2.Text" xml:space="preserve">
-    <value>Version 8.1 (September 16, 2017)
+    <value>Version 8.2 (September 22, 2017)
+   •Find words in dictionary
+   •Color panel for quick access to font/highlight colors
+   •Check for updates at startup now on by default
+   •Fixed typo on style dialog
+   •Fixed accents remaining after dlgAccents closes and re-opens
+   •Revised look of color buttons
+   •Automatically open generated HTML file on completion
+   •Replace most StylizedButtons with native buttons
+Version 8.1 (September 16, 2017)
    •Export dictionary to HTML
    •Redesigned accent window
    •Multiple accents can be selected for a single character
