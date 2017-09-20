@@ -38,7 +38,7 @@ Partial Class dlgTextArt
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
         Me.StylizedText1 = New Tundra.StylizedText()
-        Me.btnFont = New Tundra.StylizedButton()
+        Me.btnFont = New System.Windows.Forms.Button()
         Me.btnColor1 = New Tundra.StylizedColorButton()
         Me.btnShadowColor = New Tundra.StylizedColorButton()
         Me.btnColor2 = New Tundra.StylizedColorButton()
@@ -215,24 +215,13 @@ Partial Class dlgTextArt
         '
         'btnFont
         '
-        Me.btnFont.BackColor = System.Drawing.Color.Transparent
-        Me.btnFont.BackgroundImage = CType(resources.GetObject("btnFont.BackgroundImage"), System.Drawing.Image)
-        Me.btnFont.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnFont.FlatAppearance.BorderSize = 0
-        Me.btnFont.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnFont.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnFont.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFont.ForeColor = System.Drawing.Color.Black
         Me.btnFont.Location = New System.Drawing.Point(696, 313)
         Me.btnFont.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFont.Name = "btnFont"
         Me.btnFont.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnFont.Size = New System.Drawing.Size(128, 68)
-        Me.btnFont.Style = resources.GetString("btnFont.Style")
         Me.btnFont.TabIndex = 6
         Me.btnFont.Text = "Font"
-        Me.btnFont.UseCompatibleTextRendering = True
-        Me.btnFont.UseVisualStyleBackColor = False
         '
         'btnColor1
         '

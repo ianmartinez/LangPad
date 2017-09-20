@@ -26,19 +26,19 @@ Partial Class dlgStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgStyle))
         Me.rtbPreview = New System.Windows.Forms.RichTextBox()
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
-        Me.btnFont = New Tundra.StylizedButton()
+        Me.btnFont = New System.Windows.Forms.Button()
         Me.btnColor = New Tundra.StylizedColorButton()
-        Me.btnRight = New Tundra.StylizedButton()
-        Me.btnCenter = New Tundra.StylizedButton()
-        Me.btnLeft = New Tundra.StylizedButton()
+        Me.btnRight = New System.Windows.Forms.Button()
+        Me.btnCenter = New System.Windows.Forms.Button()
+        Me.btnLeft = New System.Windows.Forms.Button()
         Me.nudIndent = New System.Windows.Forms.NumericUpDown()
-        Me.btnIndent = New Tundra.StylizedButton()
+        Me.btnIndent = New System.Windows.Forms.Button()
         Me.btnSave = New Tundra.StylizedButton()
         Me.btnOpen = New Tundra.StylizedButton()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.nudOffset = New System.Windows.Forms.NumericUpDown()
-        Me.btnOffset = New Tundra.StylizedButton()
+        Me.btnOffset = New System.Windows.Forms.Button()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnHighlight = New Tundra.StylizedColorButton()
         Me.btnDeleteAll = New Tundra.StylizedButton()
@@ -75,24 +75,14 @@ Partial Class dlgStyle
         '
         'btnFont
         '
-        Me.btnFont.BackgroundImage = CType(resources.GetObject("btnFont.BackgroundImage"), System.Drawing.Image)
-        Me.btnFont.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnFont.FlatAppearance.BorderSize = 0
-        Me.btnFont.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnFont.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnFont.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFont.ForeColor = System.Drawing.Color.Black
         Me.btnFont.Location = New System.Drawing.Point(495, 287)
         Me.btnFont.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFont.Name = "btnFont"
         Me.btnFont.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnFont.Size = New System.Drawing.Size(126, 68)
-        Me.btnFont.Style = resources.GetString("btnFont.Style")
         Me.btnFont.TabIndex = 3
         Me.btnFont.Text = "Font"
         Me.ttMain.SetToolTip(Me.btnFont, "Text font")
-        Me.btnFont.UseCompatibleTextRendering = True
-        Me.btnFont.UseVisualStyleBackColor = False
         '
         'btnColor
         '
@@ -114,75 +104,42 @@ Partial Class dlgStyle
         '
         'btnRight
         '
-        Me.btnRight.BackColor = System.Drawing.Color.Transparent
-        Me.btnRight.BackgroundImage = CType(resources.GetObject("btnRight.BackgroundImage"), System.Drawing.Image)
-        Me.btnRight.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnRight.FlatAppearance.BorderSize = 0
-        Me.btnRight.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnRight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRight.ForeColor = System.Drawing.Color.Black
         Me.btnRight.Image = CType(resources.GetObject("btnRight.Image"), System.Drawing.Image)
         Me.btnRight.Location = New System.Drawing.Point(173, 211)
         Me.btnRight.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRight.Name = "btnRight"
         Me.btnRight.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnRight.Size = New System.Drawing.Size(72, 68)
-        Me.btnRight.Style = resources.GetString("btnRight.Style")
         Me.btnRight.TabIndex = 6
         Me.btnRight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnRight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnRight, "Right align text")
-        Me.btnRight.UseCompatibleTextRendering = True
-        Me.btnRight.UseVisualStyleBackColor = False
         '
         'btnCenter
         '
-        Me.btnCenter.BackColor = System.Drawing.Color.Transparent
-        Me.btnCenter.BackgroundImage = CType(resources.GetObject("btnCenter.BackgroundImage"), System.Drawing.Image)
-        Me.btnCenter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCenter.FlatAppearance.BorderSize = 0
-        Me.btnCenter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnCenter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnCenter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCenter.ForeColor = System.Drawing.Color.Black
         Me.btnCenter.Image = CType(resources.GetObject("btnCenter.Image"), System.Drawing.Image)
         Me.btnCenter.Location = New System.Drawing.Point(93, 211)
         Me.btnCenter.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCenter.Name = "btnCenter"
         Me.btnCenter.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnCenter.Size = New System.Drawing.Size(72, 68)
-        Me.btnCenter.Style = resources.GetString("btnCenter.Style")
         Me.btnCenter.TabIndex = 5
         Me.btnCenter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCenter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnCenter, "Center align text")
-        Me.btnCenter.UseCompatibleTextRendering = True
-        Me.btnCenter.UseVisualStyleBackColor = False
         '
         'btnLeft
         '
-        Me.btnLeft.BackColor = System.Drawing.Color.Transparent
-        Me.btnLeft.BackgroundImage = CType(resources.GetObject("btnLeft.BackgroundImage"), System.Drawing.Image)
-        Me.btnLeft.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnLeft.FlatAppearance.BorderSize = 0
-        Me.btnLeft.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnLeft.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLeft.ForeColor = System.Drawing.Color.Black
         Me.btnLeft.Image = CType(resources.GetObject("btnLeft.Image"), System.Drawing.Image)
         Me.btnLeft.Location = New System.Drawing.Point(13, 211)
         Me.btnLeft.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLeft.Name = "btnLeft"
         Me.btnLeft.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnLeft.Size = New System.Drawing.Size(72, 68)
-        Me.btnLeft.Style = resources.GetString("btnLeft.Style")
         Me.btnLeft.TabIndex = 4
         Me.btnLeft.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnLeft.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnLeft, "Left align text")
-        Me.btnLeft.UseCompatibleTextRendering = True
-        Me.btnLeft.UseVisualStyleBackColor = False
         '
         'nudIndent
         '
@@ -194,26 +151,15 @@ Partial Class dlgStyle
         '
         'btnIndent
         '
-        Me.btnIndent.BackColor = System.Drawing.Color.Transparent
-        Me.btnIndent.BackgroundImage = CType(resources.GetObject("btnIndent.BackgroundImage"), System.Drawing.Image)
-        Me.btnIndent.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnIndent.FlatAppearance.BorderSize = 0
-        Me.btnIndent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnIndent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnIndent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnIndent.ForeColor = System.Drawing.Color.Black
         Me.btnIndent.Image = CType(resources.GetObject("btnIndent.Image"), System.Drawing.Image)
         Me.btnIndent.Location = New System.Drawing.Point(255, 287)
         Me.btnIndent.Margin = New System.Windows.Forms.Padding(4)
         Me.btnIndent.Name = "btnIndent"
         Me.btnIndent.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnIndent.Size = New System.Drawing.Size(72, 68)
-        Me.btnIndent.Style = resources.GetString("btnIndent.Style")
         Me.btnIndent.TabIndex = 7
         Me.btnIndent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnIndent, "Indent text")
-        Me.btnIndent.UseCompatibleTextRendering = True
-        Me.btnIndent.UseVisualStyleBackColor = False
         '
         'btnSave
         '
@@ -284,26 +230,15 @@ Partial Class dlgStyle
         '
         'btnOffset
         '
-        Me.btnOffset.BackColor = System.Drawing.Color.Transparent
-        Me.btnOffset.BackgroundImage = CType(resources.GetObject("btnOffset.BackgroundImage"), System.Drawing.Image)
-        Me.btnOffset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnOffset.FlatAppearance.BorderSize = 0
-        Me.btnOffset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnOffset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnOffset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOffset.ForeColor = System.Drawing.Color.Black
         Me.btnOffset.Image = CType(resources.GetObject("btnOffset.Image"), System.Drawing.Image)
         Me.btnOffset.Location = New System.Drawing.Point(13, 287)
         Me.btnOffset.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOffset.Name = "btnOffset"
         Me.btnOffset.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnOffset.Size = New System.Drawing.Size(72, 68)
-        Me.btnOffset.Style = resources.GetString("btnOffset.Style")
         Me.btnOffset.TabIndex = 9
         Me.btnOffset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnOffset, "Character Offset")
-        Me.btnOffset.UseCompatibleTextRendering = True
-        Me.btnOffset.UseVisualStyleBackColor = False
         '
         'btnHighlight
         '
@@ -395,13 +330,8 @@ Partial Class dlgStyle
     End Sub
     Friend WithEvents rtbPreview As RichTextBox
     Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
-    Friend WithEvents btnFont As Tundra.StylizedButton
     Friend WithEvents btnColor As Tundra.StylizedColorButton
-    Friend WithEvents btnRight As Tundra.StylizedButton
-    Friend WithEvents btnCenter As Tundra.StylizedButton
-    Friend WithEvents btnLeft As Tundra.StylizedButton
     Friend WithEvents nudIndent As NumericUpDown
-    Friend WithEvents btnIndent As Tundra.StylizedButton
     Friend WithEvents btnSave As Tundra.StylizedButton
     Friend WithEvents btnOpen As Tundra.StylizedButton
     Friend WithEvents dlgOpen As OpenFileDialog
@@ -410,7 +340,12 @@ Partial Class dlgStyle
     Friend WithEvents ttMain As ToolTip
     Friend WithEvents btnHighlight As Tundra.StylizedColorButton
     Friend WithEvents btnDeleteAll As Tundra.StylizedButton
-    Friend WithEvents btnOffset As Tundra.StylizedButton
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents btnClose As Button
+    Friend WithEvents btnFont As Button
+    Friend WithEvents btnRight As Button
+    Friend WithEvents btnCenter As Button
+    Friend WithEvents btnLeft As Button
+    Friend WithEvents btnIndent As Button
+    Friend WithEvents btnOffset As Button
 End Class

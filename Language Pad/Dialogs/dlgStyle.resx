@@ -117,60 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnFont.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAH4AAABECAYAAABHwoFDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAADJSURBVHhe7dExDcAgAABB/HshQU83LGCgDUNV/A2X/P5j
-        rfXMOV867vNxY+9NyH1ufJDxUcZHGR9lfJTxUcZHGR9lfJTxUcZHGR9lfJTxUcZHGR9lfJTxUcZHGR9l
-        fJTxUcZHGR9lfJTxUcZHGR9lfJTxUcZHGR9lfJTxUcZHGR9lfJTxUcZHGR9lfJTxUcZHGR9lfJTxUcZH
-        GR9lfJTxUcZHGR9lfJTxUcZHGR9lfJTxUcZHGR9lfJTxUcZHGR9lfNQ//tygZJ4PMD+yp7WSk6kAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
-  <data name="btnFont.Style" xml:space="preserve">
-    <value>Radius=0
-
-Active Colors=~225|~225
-Active Positions=0|1
-Active Angle=90
-Active Border Color=~173
-Active Text Color=$2
-Active Highlight Color=$0
-
-Hover Colors=#e5f1fb|#e5f1fb
-Hover Positions=0|1
-Hover Angle=90
-Hover Border Color=#0078d7
-Hover Text Color=$2
-Hover Highlight Color=$0
-
-Pressed Colors=#cce4f7|#cce4f7
-Pressed Positions=0|1
-Pressed Angle=90
-Pressed Border Color=#005499
-Pressed Text Color=$2
-Pressed Highlight Color=$0
-
-</value>
-  </data>
   <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>485, 32</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnColor.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAA5SURBVEhLYwCCaiDeQGUMMhPM+E9lDDJz1GAwHjUYjkcN
         huNRg+F41GA4HjUYjmlrcCuUQUXM0AoAKrHHgNUmL88AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnRight.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEgAAABECAYAAAAiL3M8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAC1SURBVHhe7dCxCcMwAABB77+LQPO40wpeIEZFqoj8Alcc
-        fP3XnPMeY3z4td9cO9ZaHOw3Bv1hUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYF
-        g4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYF
-        g4JBwaBgUDAoGBQMCgYFg4JBwaDwHfTs4GQ8L3ud1bvV7y0DAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnRight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -184,40 +139,6 @@ Pressed Highlight Color=$0
         UthLiRDEKDg+DDYUxIbfS+7Aat4k5tOBEavzrzN1D7QMb0cDdf57uB5c4kI++8r/pFXHcb2Mw3IB2UIa
         ybQEUd0BXuAQjrAIbDLw+jzT98Dl+l0f8++ARFyMmu7F9F9kRMu1VC2q859HNv8jf24LQdYPH+PFumfN
         /F9kxOlcMt3L/+zAKkSRJkSRHrB9AgFx+e/FuAx9AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnRight.Style" xml:space="preserve">
-    <value>Radius=0
-
-Active Colors=~225|~225
-Active Positions=0|1
-Active Angle=90
-Active Border Color=~173
-Active Text Color=$2
-Active Highlight Color=$0
-
-Hover Colors=#e5f1fb|#e5f1fb
-Hover Positions=0|1
-Hover Angle=90
-Hover Border Color=#0078d7
-Hover Text Color=$2
-Hover Highlight Color=$0
-
-Pressed Colors=#cce4f7|#cce4f7
-Pressed Positions=0|1
-Pressed Angle=90
-Pressed Border Color=#005499
-Pressed Text Color=$2
-Pressed Highlight Color=$0
-</value>
-  </data>
-  <data name="btnCenter.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEgAAABECAYAAAAiL3M8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAC1SURBVHhe7dCxCcMwAABB77+LQPO40wpeIEZFqoj8Alcc
-        fP3XnPMeY3z4td9cO9ZaHOw3Bv1hUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYF
-        g4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYF
-        g4JBwaBgUDAoGBQMCgYFg4JBwaDwHfTs4GQ8L3ud1bvV7y0DAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnCenter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -234,40 +155,6 @@ Pressed Highlight Color=$0
         gg==
 </value>
   </data>
-  <data name="btnCenter.Style" xml:space="preserve">
-    <value>Radius=0
-
-Active Colors=~225|~225
-Active Positions=0|1
-Active Angle=90
-Active Border Color=~173
-Active Text Color=$2
-Active Highlight Color=$0
-
-Hover Colors=#e5f1fb|#e5f1fb
-Hover Positions=0|1
-Hover Angle=90
-Hover Border Color=#0078d7
-Hover Text Color=$2
-Hover Highlight Color=$0
-
-Pressed Colors=#cce4f7|#cce4f7
-Pressed Positions=0|1
-Pressed Angle=90
-Pressed Border Color=#005499
-Pressed Text Color=$2
-Pressed Highlight Color=$0
-</value>
-  </data>
-  <data name="btnLeft.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEgAAABECAYAAAAiL3M8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAC1SURBVHhe7dCxCcMwAABB77+LQPO40wpeIEZFqoj8Alcc
-        fP3XnPMeY3z4td9cO9ZaHOw3Bv1hUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYF
-        g4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYF
-        g4JBwaBgUDAoGBQMCgYFg4JBwaDwHfTs4GQ8L3ud1bvV7y0DAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnLeft.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
@@ -280,40 +167,6 @@ Pressed Highlight Color=$0
         S7isnKMg5tT+pzIJxBNRhKIB+AJeHHh5cLwTdnbnz/9AxKwZMAzzfwXzgghuggxG7R8tRCg9vKqV1L1T
         rorq7lFmP1fIqPvnJBVHTAjjKOQbuX+0EGGxmMfOwDxi/2ihmnpCNfWEauoJ1dQPGD4B7LwFOAFmH8oA
         AAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnLeft.Style" xml:space="preserve">
-    <value>Radius=0
-
-Active Colors=~225|~225
-Active Positions=0|1
-Active Angle=90
-Active Border Color=~173
-Active Text Color=$2
-Active Highlight Color=$0
-
-Hover Colors=#e5f1fb|#e5f1fb
-Hover Positions=0|1
-Hover Angle=90
-Hover Border Color=#0078d7
-Hover Text Color=$2
-Hover Highlight Color=$0
-
-Pressed Colors=#cce4f7|#cce4f7
-Pressed Positions=0|1
-Pressed Angle=90
-Pressed Border Color=#005499
-Pressed Text Color=$2
-Pressed Highlight Color=$0
-</value>
-  </data>
-  <data name="btnIndent.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEgAAABECAYAAAAiL3M8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAC1SURBVHhe7dCxCcMwAABB77+LQPO40wpeIEZFqoj8Alcc
-        fP3XnPMeY3z4td9cO9ZaHOw3Bv1hUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYF
-        g4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYF
-        g4JBwaBgUDAoGBQMCgYFg4JBwaDwHfTs4GQ8L3ud1bvV7y0DAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnIndent.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -331,31 +184,6 @@ Pressed Highlight Color=$0
         +egoLU4dI7NcnMH6y3p/I9FnzX8vor3r/Q+pMjrkC2gLnkVLq/SXFxuEKiGK7v8De/5tNghVAx50lz22
         tgTHSdkMHljf2F5z5+5Ycc8ZGRvmc59IDvDex/qins4BGx7c7jVezgEbx6SfOCb9xDHpH6DfkuHVo4FK
         uhYAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnIndent.Style" xml:space="preserve">
-    <value>Radius=0
-
-Active Colors=~225|~225
-Active Positions=0|1
-Active Angle=90
-Active Border Color=~173
-Active Text Color=$2
-Active Highlight Color=$0
-
-Hover Colors=#e5f1fb|#e5f1fb
-Hover Positions=0|1
-Hover Angle=90
-Hover Border Color=#0078d7
-Hover Text Color=$2
-Hover Highlight Color=$0
-
-Pressed Colors=#cce4f7|#cce4f7
-Pressed Positions=0|1
-Pressed Angle=90
-Pressed Border Color=#005499
-Pressed Text Color=$2
-Pressed Highlight Color=$0
 </value>
   </data>
   <data name="btnSave.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -484,15 +312,6 @@ Pressed Highlight Color=$0</value>
   <metadata name="dlgSave.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>280, 33</value>
   </metadata>
-  <data name="btnOffset.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEgAAABECAYAAAAiL3M8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAC1SURBVHhe7dCxCcMwAABB77+LQPO40wpeIEZFqoj8Alcc
-        fP3XnPMeY3z4td9cO9ZaHOw3Bv1hUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYF
-        g4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYFg4JBwaBgUDAoGBQMCgYF
-        g4JBwaBgUDAoGBQMCgYFg4JBwaDwHfTs4GQ8L3ud1bvV7y0DAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnOffset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
@@ -511,31 +330,6 @@ Pressed Highlight Color=$0</value>
         ipXgjHX6Hkbbrcl19XQyanVbbW+A2pGZi8/yXTQzO1Ps6HxV2zfQvO4Qu4jjUqB42SJ20WUQRQE0riFu
         tSpbxr9OfC7iXh8K+IvP5E/HsY73Sf+VQhQF0LiBkDY1NTU/fvJw8kWr/OjBo/uTUqm0Get4n/RfKUSx
         FDTqEdcRNxG3z2b8XU86XwlRrB1Q9w+j44MgDEtVmwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnOffset.Style" xml:space="preserve">
-    <value>Radius=0
-
-Active Colors=~225|~225
-Active Positions=0|1
-Active Angle=90
-Active Border Color=~173
-Active Text Color=$2
-Active Highlight Color=$0
-
-Hover Colors=#e5f1fb|#e5f1fb
-Hover Positions=0|1
-Hover Angle=90
-Hover Border Color=#0078d7
-Hover Text Color=$2
-Hover Highlight Color=$0
-
-Pressed Colors=#cce4f7|#cce4f7
-Pressed Positions=0|1
-Pressed Angle=90
-Pressed Border Color=#005499
-Pressed Text Color=$2
-Pressed Highlight Color=$0
 </value>
   </data>
   <data name="btnHighlight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
