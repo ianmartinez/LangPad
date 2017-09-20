@@ -32,6 +32,7 @@ Public Class dlgAccentMark
         AccentsLayoutPanel.Controls.Clear()
         AccentsList.Clear()
         AccentsString = ""
+        UpdateResult()
 
         For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.Accents)
             Dim SymbolButton As New AccentCheckButton

@@ -6,6 +6,7 @@ Version 8.2 (September 22, 2017)
    •Fixed accents remaining after dlgAccents closes and re-opens
    •Revised look of color buttons
    •Automatically open generated HTML file on completion
+   •Replace most StylizedButtons with native buttons
 Version 8.1 (September 16, 2017)
    •Export dictionary to HTML
    •Redesigned accent window
