@@ -348,7 +348,7 @@ Partial Class dlgTextArt
     Friend WithEvents nudShadowY As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtText As System.Windows.Forms.TextBox
-    Friend WithEvents btnFont As Tundra.StylizedButton
+    Friend WithEvents btnFont As System.Windows.Forms.Button
     Friend WithEvents dlgFont As System.Windows.Forms.FontDialog
     Friend WithEvents nudSize As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label4 As System.Windows.Forms.Label

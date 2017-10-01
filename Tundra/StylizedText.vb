@@ -85,7 +85,8 @@ Public Class StylizedText
 
     Public Function DrawBitmap() As Image
         On Error Resume Next
-        Dim img As Bitmap = New Bitmap(TextRenderer.MeasureText(ControlText, Font).Width + BorderSize + CInt(IIf(ShadowOffset.X > 0, ShadowOffset.X, 0)) + 4, TextRenderer.MeasureText(ControlText, Font).Height + BorderSize + CInt(IIf(ShadowOffset.Y > 0, ShadowOffset.Y, 0)))
+        Dim img As Bitmap = New Bitmap(TextRenderer.MeasureText(ControlText, Font).Width + BorderSize + CInt(IIf(ShadowOffset.X > 0, ShadowOffset.X, 0)) + 6,
+                                       TextRenderer.MeasureText(ControlText, Font).Height + BorderSize + CInt(IIf(ShadowOffset.Y > 0, ShadowOffset.Y, 0)) + 4)
         If Style = "" Then Return Nothing
         Dim g As Graphics = Graphics.FromImage(img)
         g.CompositingQuality = CompositingQuality.HighQuality
@@ -99,11 +100,11 @@ Public Class StylizedText
         Blend.Positions = Positions
         FillBlend.InterpolationColors = Blend
 
-        Dim TextPath As GraphicsPath = New System.Drawing.Drawing2D.GraphicsPath(Drawing.Drawing2D.FillMode.Alternate)
-        TextPath.AddString(ControlText, Me.Font.FontFamily, Me.Font.Style, g.DpiY * Font.Size / 72, FillRectangle, StringFormat.GenericTypographic)
+        Dim TextPath As GraphicsPath = New GraphicsPath(FillMode.Alternate)
+        TextPath.AddString(ControlText, Font.FontFamily, Me.Font.Style, g.DpiY * Font.Size / 72, FillRectangle, StringFormat.GenericTypographic)
 
-        Dim ShadowPath As GraphicsPath = New System.Drawing.Drawing2D.GraphicsPath(Drawing.Drawing2D.FillMode.Alternate)
-        ShadowPath.AddString(ControlText, Me.Font.FontFamily, Me.Font.Style, g.DpiY * Font.Size / 72, ShadowRectangle, StringFormat.GenericTypographic)
+        Dim ShadowPath As GraphicsPath = New GraphicsPath(FillMode.Alternate)
+        ShadowPath.AddString(ControlText, Font.FontFamily, Me.Font.Style, g.DpiY * Font.Size / 72, ShadowRectangle, StringFormat.GenericTypographic)
 
         g.FillPath(New SolidBrush(ShadowColor), ShadowPath)
 
