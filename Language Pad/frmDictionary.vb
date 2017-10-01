@@ -24,9 +24,6 @@ Public Class frmDictionary
         ' Center buttons relative to text boxes
         ' Because Windows' scaling throws them off
         btnFind.Top = txtFind.Top - (btnFind.Height / 2 - txtFind.Height / 2)
-        btnFindNext.Top = txtFind.Top - (btnFindNext.Height / 2 - txtFind.Height / 2)
-        btnReplace.Top = txtFind.Top - (btnReplace.Height / 2 - txtFind.Height / 2)
-        btnReplaceAll.Top = txtFind.Top - (btnReplaceAll.Height / 2 - txtFind.Height / 2)
 
         Refresh()
     End Sub
@@ -219,10 +216,6 @@ Public Class frmDictionary
         LoadDictionary()
     End Sub
 
-    Private Sub dgvDictionary_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellContentClick
-
-    End Sub
-
     Private Sub dgvDictionary_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellEndEdit
         SaveDictionary()
     End Sub
@@ -235,24 +228,40 @@ Public Class frmDictionary
         End If
     End Sub
 
-    Private Sub btnFindNext_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub btnReplaceAll_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub btnReplace_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub btnFind_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub FindReplaceToolStripButton_Click(sender As Object, e As EventArgs) Handles FindReplaceToolStripButton.Click
         pnlFindReplace.Visible = pnlFindReplace.Visible Xor True
         If pnlFindReplace.Visible = True Then txtFind.Focus()
+    End Sub
+
+    Private Sub btnFind_Click(sender As Object, e As EventArgs) Handles btnFind.Click
+        SaveDictionary()
+        dgvDictionary.ClearSelection()
+
+        Dim matches As Boolean
+        Dim selectedPosition As Integer = 0
+
+        If rbWord.Checked Then
+            For Each w As DictionaryWord In CurrentDocument.WordDictionary.Words
+                matches = If(cbStartsWith.Checked, w.Word.ToLower().StartsWith(txtFind.Text.ToLower()), w.Word.ToLower().Equals(txtFind.Text.ToLower()))
+                If matches Then Exit For
+                selectedPosition += 1
+            Next
+        Else
+            For Each w As DictionaryWord In CurrentDocument.WordDictionary.Words
+                matches = If(cbStartsWith.Checked, w.Definition.ToLower().StartsWith(txtFind.Text.ToLower()), w.Definition.ToLower().Equals(txtFind.Text.ToLower()))
+                If matches Then Exit For
+                selectedPosition += 1
+            Next
+        End If
+        If matches Then
+            dgvDictionary.Rows(selectedPosition).Selected = True
+            dgvDictionary.FirstDisplayedScrollingRowIndex = dgvDictionary.SelectedRows(0).Index
+        Else
+            MessageBox.Show("""" + txtFind.Text + """ was not found " + "")
+        End If
+    End Sub
+
+    Private Sub dgvDictionary_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellContentClick
+
     End Sub
 End Class

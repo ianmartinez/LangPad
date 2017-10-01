@@ -1,4 +1,4 @@
-Version 8.2 (September 22, 2017)
+Version 8.2 (September 30, 2017)
    •Find words in dictionary
    •Color panel for quick access to font/highlight colors
    •Check for updates at startup now on by default

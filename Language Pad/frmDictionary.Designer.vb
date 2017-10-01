@@ -22,7 +22,7 @@ Partial Class frmDictionary
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDictionary))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.tcSymbols = New System.Windows.Forms.TabControl()
@@ -52,13 +52,11 @@ Partial Class frmDictionary
         Me.dlgFont = New System.Windows.Forms.FontDialog()
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.pnlFindReplace = New Tundra.StylizedPanel()
-        Me.btnFindNext = New Tundra.StylizedButton()
-        Me.btnReplaceAll = New Tundra.StylizedButton()
-        Me.txtReplace = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
+        Me.cbStartsWith = New System.Windows.Forms.CheckBox()
+        Me.rbDefinition = New System.Windows.Forms.RadioButton()
+        Me.rbWord = New System.Windows.Forms.RadioButton()
         Me.txtFind = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.btnReplace = New Tundra.StylizedButton()
         Me.btnFind = New Tundra.StylizedButton()
         Me.MainToolStrip = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -339,14 +337,14 @@ Partial Class frmDictionary
         Me.dgvDictionary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvDictionary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDictionary.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Word, Me.Pronunciation, Me.Definition, Me.Notes})
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvDictionary.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvDictionary.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvDictionary.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvDictionary.GridColor = System.Drawing.Color.Gainsboro
         Me.dgvDictionary.Location = New System.Drawing.Point(6, 6)
@@ -425,13 +423,11 @@ Partial Class frmDictionary
         'pnlFindReplace
         '
         Me.pnlFindReplace.BackColor = System.Drawing.Color.Transparent
-        Me.pnlFindReplace.Controls.Add(Me.btnFindNext)
-        Me.pnlFindReplace.Controls.Add(Me.btnReplaceAll)
-        Me.pnlFindReplace.Controls.Add(Me.txtReplace)
-        Me.pnlFindReplace.Controls.Add(Me.Label18)
+        Me.pnlFindReplace.Controls.Add(Me.cbStartsWith)
+        Me.pnlFindReplace.Controls.Add(Me.rbDefinition)
+        Me.pnlFindReplace.Controls.Add(Me.rbWord)
         Me.pnlFindReplace.Controls.Add(Me.txtFind)
         Me.pnlFindReplace.Controls.Add(Me.Label17)
-        Me.pnlFindReplace.Controls.Add(Me.btnReplace)
         Me.pnlFindReplace.Controls.Add(Me.btnFind)
         Me.pnlFindReplace.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlFindReplace.Location = New System.Drawing.Point(0, 0)
@@ -443,104 +439,58 @@ Partial Class frmDictionary
         Me.pnlFindReplace.TabIndex = 75
         Me.pnlFindReplace.Visible = False
         '
-        'btnFindNext
+        'cbStartsWith
         '
-        Me.btnFindNext.BackColor = System.Drawing.Color.Transparent
-        Me.btnFindNext.BackgroundImage = CType(resources.GetObject("btnFindNext.BackgroundImage"), System.Drawing.Image)
-        Me.btnFindNext.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnFindNext.FlatAppearance.BorderSize = 0
-        Me.btnFindNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnFindNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnFindNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFindNext.ForeColor = System.Drawing.Color.Black
-        Me.btnFindNext.Location = New System.Drawing.Point(797, 10)
-        Me.btnFindNext.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnFindNext.Name = "btnFindNext"
-        Me.btnFindNext.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnFindNext.Size = New System.Drawing.Size(155, 46)
-        Me.btnFindNext.Style = resources.GetString("btnFindNext.Style")
-        Me.btnFindNext.TabIndex = 69
-        Me.btnFindNext.Text = " Find Next"
-        Me.btnFindNext.UseCompatibleTextRendering = True
-        Me.btnFindNext.UseVisualStyleBackColor = False
+        Me.cbStartsWith.AutoSize = True
+        Me.cbStartsWith.Location = New System.Drawing.Point(622, 20)
+        Me.cbStartsWith.Margin = New System.Windows.Forms.Padding(4)
+        Me.cbStartsWith.Name = "cbStartsWith"
+        Me.cbStartsWith.Size = New System.Drawing.Size(149, 29)
+        Me.cbStartsWith.TabIndex = 69
+        Me.cbStartsWith.Text = "Starts With"
+        Me.cbStartsWith.UseVisualStyleBackColor = True
         '
-        'btnReplaceAll
+        'rbDefinition
         '
-        Me.btnReplaceAll.BackColor = System.Drawing.Color.Transparent
-        Me.btnReplaceAll.BackgroundImage = CType(resources.GetObject("btnReplaceAll.BackgroundImage"), System.Drawing.Image)
-        Me.btnReplaceAll.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnReplaceAll.FlatAppearance.BorderSize = 0
-        Me.btnReplaceAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnReplaceAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnReplaceAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReplaceAll.ForeColor = System.Drawing.Color.Black
-        Me.btnReplaceAll.Location = New System.Drawing.Point(1123, 10)
-        Me.btnReplaceAll.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnReplaceAll.Name = "btnReplaceAll"
-        Me.btnReplaceAll.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnReplaceAll.Size = New System.Drawing.Size(155, 46)
-        Me.btnReplaceAll.Style = resources.GetString("btnReplaceAll.Style")
-        Me.btnReplaceAll.TabIndex = 71
-        Me.btnReplaceAll.Text = "Replace All"
-        Me.btnReplaceAll.UseCompatibleTextRendering = True
-        Me.btnReplaceAll.UseVisualStyleBackColor = False
+        Me.rbDefinition.AutoSize = True
+        Me.rbDefinition.Checked = True
+        Me.rbDefinition.Location = New System.Drawing.Point(881, 20)
+        Me.rbDefinition.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbDefinition.Name = "rbDefinition"
+        Me.rbDefinition.Size = New System.Drawing.Size(133, 29)
+        Me.rbDefinition.TabIndex = 71
+        Me.rbDefinition.TabStop = True
+        Me.rbDefinition.Text = "Definition"
+        Me.rbDefinition.UseVisualStyleBackColor = True
         '
-        'txtReplace
+        'rbWord
         '
-        Me.txtReplace.Location = New System.Drawing.Point(406, 18)
-        Me.txtReplace.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtReplace.Name = "txtReplace"
-        Me.txtReplace.Size = New System.Drawing.Size(220, 31)
-        Me.txtReplace.TabIndex = 67
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(301, 21)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(97, 25)
-        Me.Label18.TabIndex = 85
-        Me.Label18.Text = "Replace:"
+        Me.rbWord.AutoSize = True
+        Me.rbWord.Location = New System.Drawing.Point(779, 19)
+        Me.rbWord.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbWord.Name = "rbWord"
+        Me.rbWord.Size = New System.Drawing.Size(94, 29)
+        Me.rbWord.TabIndex = 70
+        Me.rbWord.Text = "Word"
+        Me.rbWord.UseVisualStyleBackColor = True
         '
         'txtFind
         '
         Me.txtFind.Location = New System.Drawing.Point(81, 18)
         Me.txtFind.Margin = New System.Windows.Forms.Padding(4)
         Me.txtFind.Name = "txtFind"
-        Me.txtFind.Size = New System.Drawing.Size(212, 31)
+        Me.txtFind.Size = New System.Drawing.Size(533, 31)
         Me.txtFind.TabIndex = 66
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(13, 21)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(60, 25)
         Me.Label17.TabIndex = 83
         Me.Label17.Text = "Find:"
-        '
-        'btnReplace
-        '
-        Me.btnReplace.BackColor = System.Drawing.Color.Transparent
-        Me.btnReplace.BackgroundImage = CType(resources.GetObject("btnReplace.BackgroundImage"), System.Drawing.Image)
-        Me.btnReplace.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnReplace.FlatAppearance.BorderSize = 0
-        Me.btnReplace.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnReplace.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnReplace.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReplace.ForeColor = System.Drawing.Color.Black
-        Me.btnReplace.Location = New System.Drawing.Point(960, 10)
-        Me.btnReplace.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnReplace.Name = "btnReplace"
-        Me.btnReplace.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnReplace.Size = New System.Drawing.Size(155, 46)
-        Me.btnReplace.Style = resources.GetString("btnReplace.Style")
-        Me.btnReplace.TabIndex = 70
-        Me.btnReplace.Text = "Replace"
-        Me.btnReplace.UseCompatibleTextRendering = True
-        Me.btnReplace.UseVisualStyleBackColor = False
         '
         'btnFind
         '
@@ -552,13 +502,13 @@ Partial Class frmDictionary
         Me.btnFind.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFind.ForeColor = System.Drawing.Color.Black
-        Me.btnFind.Location = New System.Drawing.Point(634, 10)
+        Me.btnFind.Location = New System.Drawing.Point(1022, 10)
         Me.btnFind.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFind.Name = "btnFind"
         Me.btnFind.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnFind.Size = New System.Drawing.Size(155, 46)
         Me.btnFind.Style = resources.GetString("btnFind.Style")
-        Me.btnFind.TabIndex = 68
+        Me.btnFind.TabIndex = 67
         Me.btnFind.Text = "Find"
         Me.btnFind.UseCompatibleTextRendering = True
         Me.btnFind.UseVisualStyleBackColor = False
@@ -788,14 +738,12 @@ Partial Class frmDictionary
     Friend WithEvents ExportHtmlToolStripButton As ToolStripButton
     Friend WithEvents dlgSaveHtml As SaveFileDialog
     Friend WithEvents pnlFindReplace As Tundra.StylizedPanel
-    Friend WithEvents btnFindNext As Tundra.StylizedButton
-    Friend WithEvents btnReplaceAll As Tundra.StylizedButton
-    Friend WithEvents txtReplace As TextBox
-    Friend WithEvents Label18 As Label
     Friend WithEvents txtFind As TextBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents btnReplace As Tundra.StylizedButton
     Friend WithEvents btnFind As Tundra.StylizedButton
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents FindReplaceToolStripButton As ToolStripButton
+    Friend WithEvents cbStartsWith As CheckBox
+    Friend WithEvents rbDefinition As RadioButton
+    Friend WithEvents rbWord As RadioButton
 End Class
