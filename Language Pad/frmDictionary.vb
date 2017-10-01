@@ -228,7 +228,7 @@ Public Class frmDictionary
         End If
     End Sub
 
-    Private Sub FindReplaceToolStripButton_Click(sender As Object, e As EventArgs) Handles FindReplaceToolStripButton.Click
+    Private Sub FindToolStripButton_Click(sender As Object, e As EventArgs) Handles FindToolStripButton.Click
         pnlFindReplace.Visible = pnlFindReplace.Visible Xor True
         If pnlFindReplace.Visible = True Then txtFind.Focus()
     End Sub
