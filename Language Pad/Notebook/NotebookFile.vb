@@ -1,15 +1,6 @@
 ﻿Imports System.IO
-Imports System.Runtime.Serialization
-Imports System.Collections
-Imports System.Runtime.Serialization.Formatters.Binary
-Imports System.CodeDom.Compiler
-Imports System.Resources
-Imports System.Reflection
-Imports System.Drawing
-Imports System.Windows.Forms
 Imports Tundra
 Imports Ionic.Zip
-Imports System.Text.RegularExpressions
 
 <Serializable()>
 Public Class NotebookPage
@@ -21,9 +12,11 @@ Public Class NotebookFile
     Public Modified As Boolean = False
     Public EmbedSymbols As Boolean = False
     Public DocumentPath As String
+    Public LangpadVersion As Decimal = LangpadVersion
     Public NTSpecificationVersion As Decimal = NTVersion
 
     Public Title As String
+    Public Language As String
     Public Author As String
     Public Website As String
     Public CustomSymbols As String
@@ -35,22 +28,23 @@ Public Class NotebookFile
     Public Sub Save(ByVal FilePath As String)
         If File.Exists(FilePath) Then File.Delete(FilePath)
         NotebookFileAccess.Save(FilePath, Me)
-
-        Me.Modified = False
+        Modified = False
     End Sub
 
     Public Sub Open(ByVal FilePath As String, Optional ByVal Opening As Boolean = False)
         Dim NewNotebook As NotebookFile = NotebookFileAccess.Open(FilePath)
-        Me.Author = NewNotebook.Author
-        Me.NTSpecificationVersion = NewNotebook.NTSpecificationVersion
-        Me.Title = NewNotebook.Title
-        Me.Website = NewNotebook.Website
-        Me.Pages = NewNotebook.Pages
-        Me.DocumentPath = FilePath
-        Me.Info = NewNotebook.Info
-        Me.CustomSymbols = NewNotebook.CustomSymbols
-        Me.EmbedSymbols = NewNotebook.EmbedSymbols
-        Me.WordDictionary = NewNotebook.WordDictionary
+        Author = NewNotebook.Author
+        LangpadVersion = NewNotebook.LangpadVersion
+        NTSpecificationVersion = NewNotebook.NTSpecificationVersion
+        Title = NewNotebook.Title
+        Language = NewNotebook.Language
+        Website = NewNotebook.Website
+        Pages = NewNotebook.Pages
+        DocumentPath = FilePath
+        Info = NewNotebook.Info
+        CustomSymbols = NewNotebook.CustomSymbols
+        EmbedSymbols = NewNotebook.EmbedSymbols
+        WordDictionary = NewNotebook.WordDictionary
     End Sub
 
     Public Sub New()
@@ -75,20 +69,22 @@ Module NotebookFileAccess
         Dim guid As Guid = System.Guid.NewGuid
 
         Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString
-        IO.Directory.Delete(tmp, True)
-        IO.Directory.CreateDirectory(tmp)
+        Directory.Delete(tmp, True)
+        Directory.CreateDirectory(tmp)
 
         PagesFolder = tmp & "\pages\"
-        IO.Directory.CreateDirectory(PagesFolder)
+        Directory.CreateDirectory(PagesFolder)
 
         'Settings
         Dim SettingsString As New List(Of ZiaLine)
         SettingsString.Add(New ZiaLine(LineType.Comment, "Settings"))
 
         SettingsString.Add(New ZiaLine(LineType.KeyValue, "Title", Notebook.Title))
+        SettingsString.Add(New ZiaLine(LineType.KeyValue, "Language", Notebook.Language))
         SettingsString.Add(New ZiaLine(LineType.KeyValue, "Author", Notebook.Author))
         SettingsString.Add(New ZiaLine(LineType.KeyValue, "Website", Notebook.Website))
         SettingsString.Add(New ZiaLine(LineType.KeyValue, "NTVersion", NTVersion))
+        SettingsString.Add(New ZiaLine(LineType.KeyValue, "LangPadVersion", LangPadVersion))
 
         'Pages
         SettingsString.Add(New ZiaLine(LineType.Comment, "Pages"))
@@ -119,9 +115,9 @@ Module NotebookFileAccess
 
 
         'Write to disk
-        System.IO.File.WriteAllText(tmp & "\data.txt", SettingsFile)
-        System.IO.File.WriteAllText(tmp & "\info.txt", Notebook.Info)
-        System.IO.File.WriteAllText(tmp & "\custom_symbols.txt", Notebook.CustomSymbols)
+        File.WriteAllText(tmp & "\data.txt", SettingsFile)
+        File.WriteAllText(tmp & "\info.txt", Notebook.Info)
+        File.WriteAllText(tmp & "\custom_symbols.txt", Notebook.CustomSymbols)
         Notebook.WordDictionary.Save(tmp & "\dictionary.txt")
 
         Notebook.DocumentPath = FilePath
@@ -139,8 +135,8 @@ Module NotebookFileAccess
 
         Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString
 
-        IO.Directory.Delete(tmp, True)
-        IO.Directory.CreateDirectory(tmp)
+        Directory.Delete(tmp, True)
+        Directory.CreateDirectory(tmp)
 
         zip.ExtractAll(tmp)
         PagesFolder = tmp & "\pages\"
@@ -155,9 +151,11 @@ Module NotebookFileAccess
         Next
 
         NewNotebook.Title = Search(LineList, "Title")
+        NewNotebook.Language = Search(LineList, "Language")
         NewNotebook.Author = Search(LineList, "Author")
         NewNotebook.Website = Search(LineList, "Website")
         NewNotebook.NTSpecificationVersion = Search(LineList, "NTVersion")
+        NewNotebook.LangpadVersion = Search(LineList, "LangPadVersion")
         NewNotebook.CustomSymbols = File.ReadAllText(tmp & "\custom_symbols.txt")
         NewNotebook.Info = File.ReadAllText(tmp & "\info.txt")
         NewNotebook.WordDictionary.Open(tmp & "\dictionary.txt")

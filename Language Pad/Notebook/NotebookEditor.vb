@@ -133,4 +133,8 @@ Public Class NotebookEditor
             Process.Start(txtWebsite.Text)
         End If
     End Sub
+
+    Private Sub txtLanguage_TextChanged(sender As Object, e As EventArgs) Handles txtLanguage.TextChanged
+        If FirstTabUpdate = True Then CurrentDocument.Language = txtLanguage.Text
+    End Sub
 End Class

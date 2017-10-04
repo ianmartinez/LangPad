@@ -31,9 +31,9 @@ Partial Class dlgAbout
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.lblLanguagePad = New System.Windows.Forms.Label()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
+        Me.lblLanguagePad = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -137,19 +137,6 @@ Partial Class dlgAbout
         Me.TextBox3.TabIndex = 9
         Me.TextBox3.Text = "Most of the icons" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "   •Adwaita Icons https://github.com/GNOME/adwaita-icon-theme"
         '
-        'lblLanguagePad
-        '
-        Me.lblLanguagePad.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblLanguagePad.Font = New System.Drawing.Font("Calibri", 16.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
-        Me.lblLanguagePad.Location = New System.Drawing.Point(0, 0)
-        Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(1084, 168)
-        Me.lblLanguagePad.TabIndex = 12
-        Me.lblLanguagePad.Text = "Language Pad X.x"
-        Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'StylizedPanel1
         '
         Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
@@ -162,6 +149,19 @@ Partial Class dlgAbout
         Me.StylizedPanel1.Style = "Colors=#cf6c36|#b21e54" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=98, 44" &
     ", 44" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1"
         Me.StylizedPanel1.TabIndex = 13
+        '
+        'lblLanguagePad
+        '
+        Me.lblLanguagePad.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblLanguagePad.Font = New System.Drawing.Font("Calibri Light", 28.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
+        Me.lblLanguagePad.Location = New System.Drawing.Point(0, 0)
+        Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblLanguagePad.Name = "lblLanguagePad"
+        Me.lblLanguagePad.Size = New System.Drawing.Size(1084, 168)
+        Me.lblLanguagePad.TabIndex = 12
+        Me.lblLanguagePad.Text = "Language Pad X.x"
+        Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dlgAbout
         '

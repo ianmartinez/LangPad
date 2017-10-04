@@ -1,5 +1,8 @@
-Version 8.3 (October 14, 2017)	
+Version 8.5 (October 14, 2017)	
    •Minor changes to splash screen
+   •Automatically fill in title and description on dictionary Html generator
+   •Notebook panel re-design   
+   •Language field in notebook panel
    •'Snow' theme now has a white background to match Windows 10
    •Fixed bug where decimal separators  other than "." would throw errors
 Version 8.2 (September 30, 2017)

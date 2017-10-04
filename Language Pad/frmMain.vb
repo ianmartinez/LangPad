@@ -58,6 +58,7 @@ Public Class frmMain
         NotebookEditor1.ResumeLayout()
 
         NotebookEditor1.txtTitle.Text = CurrentDocument.Title
+        NotebookEditor1.txtLanguage.Text = CurrentDocument.Language
         NotebookEditor1.txtAuthor.Text = CurrentDocument.Author
         NotebookEditor1.txtWebsite.Text = CurrentDocument.Website
         NotebookEditor1.txtInfo.Text = CurrentDocument.Info
@@ -363,26 +364,39 @@ Public Class frmMain
                 If FileEXT = "rtf" Then
                     Dim p As New NotebookPage
                     p.Title = "Untitled"
-                    Dim txtReader As System.IO.StreamReader
-                    txtReader = New System.IO.StreamReader(My.Application.CommandLineArgs(0))
+                    Dim txtReader As StreamReader
+                    txtReader = New StreamReader(My.Application.CommandLineArgs(0))
                     p.RTF = txtReader.ReadToEnd
                     txtReader.Close()
 
                     CurrentDocument.Pages.Add(p)
+                    currentFile = My.Application.CommandLineArgs(0)
                 ElseIf FileEXT = "txt" Then
                     Dim p As New NotebookPage
                     p.Title = "Untitled"
-                    Dim txtReader As System.IO.StreamReader
-                    txtReader = New System.IO.StreamReader(My.Application.CommandLineArgs(0))
+                    Dim txtReader As StreamReader
+                    txtReader = New StreamReader(My.Application.CommandLineArgs(0))
                     p.RTF = txtReader.ReadToEnd
                     txtReader.Close()
 
                     CurrentDocument.Pages.Add(p)
+                    currentFile = My.Application.CommandLineArgs(0)
                 Else
-                    CurrentDocument.Open(My.Application.CommandLineArgs(0))
-                End If
+                    Dim AllowOpen As Boolean = True
+                    Dim OpenFile As New NotebookFile()
+                    OpenFile.Open(My.Application.CommandLineArgs(0))
+                    If OpenFile.NTSpecificationVersion > NTVersion Then
+                        If Not MessageBox.Show("The notebook file you are trying to open is from Language Pad " + OpenFile.LangpadVersion.ToString() + ", which is newer than the version you are currently using. " +
+                            " This can lead to unexpected results. Are you sure you want to continue?", "File from Language Pad " + OpenFile.LangpadVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
+                            AllowOpen = False
+                        End If
+                    End If
 
-                currentFile = My.Application.CommandLineArgs(0)
+                    If AllowOpen Then
+                        CurrentDocument = OpenFile
+                        currentFile = My.Application.CommandLineArgs(0)
+                    End If
+                End If
             End If
         End If
 
@@ -644,14 +658,22 @@ Public Class frmMain
                 SaveToolStripMenuItem_Click(Me, e)
             ElseIf Mode = Windows.Forms.DialogResult.Cancel Then
                 Exit Sub
-            Else
-
             End If
         End If
 
         If dlgOpen.ShowDialog = Windows.Forms.DialogResult.OK Then
             If dlgOpen.FileName = "" Then Exit Sub
-            CurrentDocument.Open(dlgOpen.FileName)
+            Dim OpenFile As New NotebookFile()
+            OpenFile.Open(dlgOpen.FileName)
+
+            If OpenFile.NTSpecificationVersion > NTVersion Then
+                If Not MessageBox.Show("The notebook file you are trying to open is from Language Pad " + OpenFile.LangpadVersion.ToString() + ", which is newer than the version you are currently using. " +
+                " This can lead to unexpected results. Are you sure you want to continue?", "File from Language Pad " + OpenFile.LangpadVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
+                    Exit Sub
+                End If
+            End If
+
+            CurrentDocument = OpenFile
             UpdateTabs()
             currentFile = dlgOpen.FileName
             SelectedDocument.Modified = False

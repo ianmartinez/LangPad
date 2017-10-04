@@ -45,8 +45,8 @@ Public Class StylizedColorButton
 
     Public Sub New()
         InitializeComponent()
-        TextAlign = ContentAlignment.BottomCenter
-        ImageAlign = ContentAlignment.TopCenter
+        TextAlign = ContentAlignment.MiddleRight
+        ImageAlign = ContentAlignment.MiddleCenter
         MinimumSize = New Size(3, 30)
     End Sub
 

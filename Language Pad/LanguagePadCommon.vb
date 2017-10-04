@@ -3,7 +3,7 @@ Imports System.Reflection
 
 Module LanguagePadCommon
     Public CurrentDocument As New NotebookFile
-    Public NTVersion As Decimal = 1.2
+    Public NTVersion As Decimal = 1.3
     Public FirstTabUpdate As Boolean = False
     Public Initialized As Boolean = False
     Public DecimalSep As String() = {" ", "'", ",", ".", "·", " ", " ", "˙", "٫", "٬", "⎖"}

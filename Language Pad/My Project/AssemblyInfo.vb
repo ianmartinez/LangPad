@@ -11,8 +11,8 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("Language Pad")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("Ian Martinez")> 
-<Assembly: AssemblyProduct("Language Pad")> 
-<Assembly: AssemblyCopyright("Copyright © 2015 Ian Martinez")> 
+<Assembly: AssemblyProduct("Language Pad")>
+<Assembly: AssemblyCopyright("Copyright © 2017 Ian Martinez")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("8.3.0.0")>
-<Assembly: AssemblyFileVersion("8.3.0.0")>
+<Assembly: AssemblyVersion("8.5.0.0")>
+<Assembly: AssemblyFileVersion("8.5.0.0")>

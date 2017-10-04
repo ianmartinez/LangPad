@@ -56,7 +56,6 @@ Public Class dlgHtml
         wr.Write(String.Format(My.Resources.HtmlTemplate, txtTitle.Text, description, My.Resources.HtmlStyle, htmlBody))
         wr.Close()
 
-        MessageBox.Show("HTML page generated successfully.")
         Process.Start(FilePath)
 
         Me.DialogResult = DialogResult.OK
@@ -69,6 +68,7 @@ Public Class dlgHtml
     End Sub
 
     Private Sub dlgHtml_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        txtTitle.Text = CurrentDocument.Language
+        txtDescription.Text = CurrentDocument.Info
     End Sub
 End Class

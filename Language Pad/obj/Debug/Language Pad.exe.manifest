@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Language Pad.exe" version="8.3.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Language Pad.exe" version="8.5.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="LangPad4.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Language Pad" version="8.3.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Language Pad" version="8.5.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="Language Pad.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="712192">
-      <assemblyIdentity name="Language Pad" version="8.3.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="714240">
+      <assemblyIdentity name="Language Pad" version="8.5.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Lgl7HbW2Mo52h9RrPLIpBOt3fJjFvbYogYCmeQ4FoFY=</dsig:DigestValue>
+        <dsig:DigestValue>Eia/Td3hcf7/J581Z1QfH1aVJ15HbG7vabMPBeEWBHU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZCQ/CcOmItbZEn0jjsxoHy7Xn3WbhxFH12K92uTmunA=</dsig:DigestValue>
+        <dsig:DigestValue>NGerwPM1+Z035B9AdWgdkimuz5JplIzwpX9PgR6LnLY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
