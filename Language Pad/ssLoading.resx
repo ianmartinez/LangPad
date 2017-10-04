@@ -121,31 +121,31 @@
   <data name="pbLoading.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAiMAAAAhCAYAAAALfauTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAGeSURBVHhe7dbXahZQEIXRPITYe++998QSk6iIoqKIoiKK
-        or7/nXuG31eY3KwD68DsJ/iW8pYBADbJhVhaiS0AAJugY+RhbI1tAACDqj86Rh7H9tgBADCo+qNjZDV2
-        xi4AgEHVHx0ja7E79gAADKr+6BhZXwx7AQAGVX90jGzEvtgPADCo+qNj5FkciIMAAIOqPzpGnsehOAwA
-        MKj6o2PkRRyJowAAg6o/OkZexrE4DgAwqPqjY+RVnIiTAACDqj86Rl7HqTgNADCo+qNj5M1iOAMAMKj6
-        o2PkbZyNcwAAg6o/OkbexfnFAQAw5X9/LL2Pi3EJAGBQ9UfHyIe4HFcAAAZVf3SMfIyrcQ0AYFD1R8fI
-        p7geNwAABlV/dIx8jptxCwBgUPVHx8iXxXAbAGBQ9UfHyNe4E3cBAAZVf3SMfIt7cR8AYFD1R8fI91iO
-        FQCAQdUfHSM/4kE8BAAYVP3RMfIzHsVjAIBB1R8dI79iNZ4AAAyq/ugY+R1rsQ4AMKj6o2Pkz2LYAAAY
-        VP3RMfI3ngIAbIKOkfoAADbB0oV/Mr+vGthe8jsAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAGFSURBVHhe7dZHyhVAEIXRtxyz/uaccxiYMyoqKiq6/5F1
+        i/Ytod7kNJyGuiv4NvUeAwDsyF7ZPCn7AAB2oGPkadlfDgAADEp/dIw8W8NBAIBB6Y+OkedrOAQAMCj9
+        0THyohwuRwAABqU/OkZeruEoAMCg9EfHyKs1HAMAGJT+6Bh5vYYcAABT/vfH5k05Xk4AAAxKf3SMvF3D
+        SQCAQemPjpF3azgFADAo/dEx8n4NpwEABqU/OkY+lDPlLADAoPTHNkYynAMAGJT+6Bj5uIbzAACD0h8d
+        I5/WcAEAYFD6o2Pkc7lYLgEADEp/bGMkw2UAgEHpj46RL2u4AgAwKP3RMfJ1DVcBAAalPzpGvpVr5ToA
+        wKD0xzZGMtwAABiU/ugY+b6GmwAAg9IfHSM/1nALAGBQ+qNj5Ge5Xe4AAAxKf2xjJMNdAIBB6Y+OkV9r
+        uAcAMCj90THyew33AQAGpT86Rv6UB+UhAMCg9Mc2RjI8AgAYlP7oGPm7BgCAaR0j+QAAdmCz9w8zd3Mf
+        61pGOQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="pbLoading.Style" xml:space="preserve">
     <value>Radius=0
 Padding=0
 
-Background Colors=20,0,0,0|80,0,0,0
+Background Colors=40,0,0,0|80,0,0,0
 Background Positions=0|1
 Background Angle=90
 Background Border Color=50,0,0,0
 Background Highlight Color=0,255,255,255
 
-Progress Colors=180,255,255,255|240,255,255,255
+Progress Colors=220,255,255,255|240,255,255,255
 Progress Positions=0|1
 Progress Angle=-90
 Progress Border Color=0,0,0,0
-Progress Highlight Color=200,255,255,255
+Progress Highlight Color=250,255,255,255
 
 No AA=1</value>
   </data>

@@ -45,9 +45,9 @@ Public Class SnowTheme
     Public Sub New()
         MyBase.New("Snow")
 
-        Color1 = clrSnowHorBG_Color1
-        Color2 = clrSnowHorBG_Color2
-        PanelBack = Color.FromArgb(255, 250, 250, 250)
+        Color1 = Color.FromArgb(255, 255, 255, 255)
+        Color2 = Color.FromArgb(255, 255, 255, 255)
+        PanelBack = Color.FromArgb(255, 255, 255, 255)
 
         VerticalMenuGradient = False
     End Sub

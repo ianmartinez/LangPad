@@ -1,3 +1,7 @@
+Version 8.3 (October 14, 2017)	
+   •Minor changes to splash screen
+   •'Snow' theme now has a white background to match Windows 10
+   •Fixed bug where decimal separators  other than "." would throw errors
 Version 8.2 (September 30, 2017)
    •Find words in dictionary   
    •Color panel for quick access to font/highlight colors   
@@ -29,7 +33,6 @@ Version 8.0 (September 11, 2017)
    •Import dictionaries from CSV
    •Page count next to word and character count   
    •About dialog revised
-   •Fixed bug where decimal separators  other than "." would throw errors
    •Fixed bug where clipboard content would insert itself when changing font style
    •Replaced tabbed interface with toolbar and menu interface 
    •Removed old bloat features like clip art, webcam insert, and the emotes panel

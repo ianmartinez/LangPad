@@ -1,6 +1,6 @@
 ﻿Module clsSnowColors
-    Public clrSnowHorBG_GrayBlue As Color = Color.FromArgb(255, 233, 236, 250)
-    Public clrSnowHorBG_White As Color = Color.FromArgb(255, 244, 247, 252)
+    Public clrSnowHorBG_GrayBlue As Color = Color.FromArgb(255, 255, 255, 255)
+    Public clrSnowHorBG_White As Color = Color.FromArgb(255, 255, 255, 255)
     Public clrSnowSubmenuBG As Color = Color.FromArgb(255, 246, 246, 246)
     Public clrSnowImageMarginBlue As Color = Color.FromArgb(255, 212, 216, 230)
     Public clrSnowImageMarginWhite As Color = Color.FromArgb(255, 232, 251, 255)
@@ -24,8 +24,8 @@
     Public clrSnowToolstripBtnGrad_Blue_Pressed As Color = Color.FromArgb(255, 124, 177, 204)
     Public clrSnowToolstripBtnGrad_White_Pressed As Color = Color.FromArgb(255, 228, 245, 252)
 
-    Public clrSnowHorBG_Color1 As Color = Color.FromArgb(255, 250, 250, 250)
-    Public clrSnowHorBG_Color2 As Color = Color.FromArgb(255, 250, 250, 250)
+    Public clrSnowHorBG_Color1 As Color = Color.FromArgb(255, 255, 255, 255)
+    Public clrSnowHorBG_Color2 As Color = Color.FromArgb(255, 255, 255, 255)
 
     Public clrSnowImageMarginBG_Color1 As Color = Color.FromArgb(255, 228, 228, 228)
     Public clrSnowImageMarginBG_Color2 As Color = Color.FromArgb(255, 228, 228, 228)
@@ -221,7 +221,7 @@ Public Class clsSnowToolstripRenderer
     Inherits ToolStripProfessionalRenderer
 
     '// Render separator
-    Protected Overrides Sub OnRenderSeparator(ByVal e As System.Windows.Forms.ToolStripSeparatorRenderEventArgs)
+    Protected Overrides Sub OnRenderSeparator(ByVal e As ToolStripSeparatorRenderEventArgs)
         MyBase.OnRenderSeparator(e)
         If e.ToolStrip.Orientation = Orientation.Vertical Then
             Dim rect As New Rectangle(2, 3, e.Item.Width - 4, 1)
@@ -248,8 +248,7 @@ Public Class clsSnowToolstripRenderer
     Protected Overrides Sub OnRenderToolStripBackground(ByVal e As ToolStripRenderEventArgs)
         MyBase.OnRenderToolStripBackground(e)
 
-        Dim b As New Drawing2D.LinearGradientBrush(e.AffectedBounds, Color.FromArgb(255, 250, 250, 250), Color.FromArgb(255, 250, 250, 250),
-            Drawing2D.LinearGradientMode.Vertical)
+        Dim b As New Drawing2D.LinearGradientBrush(e.AffectedBounds, Color.FromArgb(255, 253, 253, 253), Color.FromArgb(255, 245, 245, 245), Drawing2D.LinearGradientMode.Vertical)
         Dim shadow As New SolidBrush(clrSnowVerBG_Shadow)
         Dim rect As New Rectangle(0, e.ToolStrip.Height - 2, e.ToolStrip.Width, 1)
         e.Graphics.FillRectangle(b, e.AffectedBounds)

@@ -130,7 +130,11 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
   </data>
   <data name="TextBox2.Text" xml:space="preserve">
-    <value>Version 8.2 (September 30, 2017)
+    <value>Version 8.3 (October 14, 2017)	
+   •Minor changes to splash screen
+   •'Snow' theme now has a white background to match Windows 10
+   •Fixed bug where decimal separators  other than "." would throw errors
+Version 8.2 (September 30, 2017)
    •Find words in dictionary   
    •Color panel for quick access to font/highlight colors   
    •Check for updates at startup now on by default    
@@ -161,7 +165,6 @@ Version 8.0 (September 11, 2017)
    •Import dictionaries from CSV
    •Page count next to word and character count   
    •About dialog revised
-   •Fixed bug where decimal separators  other than "." would throw errors
    •Fixed bug where clipboard content would insert itself when changing font style
    •Replaced tabbed interface with toolbar and menu interface 
    •Removed old bloat features like clip art, webcam insert, and the emotes panel
