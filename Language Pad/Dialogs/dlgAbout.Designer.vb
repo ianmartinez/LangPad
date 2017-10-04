@@ -160,14 +160,13 @@ Partial Class dlgAbout
         Me.lblLanguagePad.Name = "lblLanguagePad"
         Me.lblLanguagePad.Size = New System.Drawing.Size(1084, 240)
         Me.lblLanguagePad.TabIndex = 12
-        Me.lblLanguagePad.Text = "Language Pad X.x"
+        Me.lblLanguagePad.Text = "Language Pad"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dlgAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1084, 907)
         Me.Controls.Add(Me.StylizedPanel1)
         Me.Controls.Add(Me.TabControl1)
