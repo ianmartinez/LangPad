@@ -41,7 +41,7 @@ Partial Class dlgAccentMark
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 188)
+        Me.Label1.Location = New System.Drawing.Point(13, 260)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(112, 25)
@@ -51,7 +51,7 @@ Partial Class dlgAccentMark
         'txtCharacter
         '
         Me.txtCharacter.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCharacter.Location = New System.Drawing.Point(13, 221)
+        Me.txtCharacter.Location = New System.Drawing.Point(13, 293)
         Me.txtCharacter.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCharacter.MaxLength = 100
         Me.txtCharacter.Name = "txtCharacter"
@@ -62,7 +62,7 @@ Partial Class dlgAccentMark
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 283)
+        Me.Label2.Location = New System.Drawing.Point(13, 355)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 25)
@@ -77,7 +77,7 @@ Partial Class dlgAccentMark
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(410, 605)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(410, 681)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -119,7 +119,7 @@ Partial Class dlgAccentMark
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdd.ForeColor = System.Drawing.Color.Black
         Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
-        Me.btnAdd.Location = New System.Drawing.Point(24, 599)
+        Me.btnAdd.Location = New System.Drawing.Point(24, 675)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
@@ -140,7 +140,7 @@ Partial Class dlgAccentMark
         Me.lblResult.Location = New System.Drawing.Point(13, 13)
         Me.lblResult.Margin = New System.Windows.Forms.Padding(4)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(698, 167)
+        Me.lblResult.Size = New System.Drawing.Size(698, 239)
         Me.lblResult.TabIndex = 69
         Me.lblResult.Text = "a"
         Me.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -159,7 +159,7 @@ Partial Class dlgAccentMark
         Me.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCopy.ForeColor = System.Drawing.Color.Black
         Me.btnCopy.Image = CType(resources.GetObject("btnCopy.Image"), System.Drawing.Image)
-        Me.btnCopy.Location = New System.Drawing.Point(104, 599)
+        Me.btnCopy.Location = New System.Drawing.Point(104, 675)
         Me.btnCopy.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCopy.Name = "btnCopy"
         Me.btnCopy.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
@@ -177,7 +177,7 @@ Partial Class dlgAccentMark
         Me.AccentsLayoutPanel.AutoScroll = True
         Me.AccentsLayoutPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
         Me.AccentsLayoutPanel.BackColor = System.Drawing.Color.Transparent
-        Me.AccentsLayoutPanel.Location = New System.Drawing.Point(13, 316)
+        Me.AccentsLayoutPanel.Location = New System.Drawing.Point(13, 388)
         Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
@@ -190,7 +190,7 @@ Partial Class dlgAccentMark
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(724, 684)
+        Me.ClientSize = New System.Drawing.Size(724, 760)
         Me.Controls.Add(Me.lblResult)
         Me.Controls.Add(Me.AccentsLayoutPanel)
         Me.Controls.Add(Me.btnCopy)
