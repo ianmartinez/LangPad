@@ -37,6 +37,7 @@ Public Class dlgAccentMark
         For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.Accents)
             Dim SymbolButton As New AccentCheckButton
             SymbolButton.Text = "◌" + IPA.Value
+            SymbolButton.BackColor = Color.Transparent
             AddHandler SymbolButton.Click, AddressOf ToggleAccent
             AccentsLayoutPanel.Controls.Add(SymbolButton)
         Next

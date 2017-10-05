@@ -340,6 +340,20 @@ Public Class frmMain
         btnReplaceAll.Top = txtFind.Top - (btnReplaceAll.Height / 2 - txtFind.Height / 2)
 
         NotebookEditor1.SetTheme(Theme)
+        dlgAbout.BackColor = Theme.DialogBack
+        dlgAccentMark.BackColor = Theme.DialogBack
+        dlgAddPage.BackColor = Theme.DialogBack
+        dlgAppendReplace.BackColor = Theme.DialogBack
+        dlgCustomSymbols.BackColor = Theme.DialogBack
+        dlgCustomSymbols.dgvSymbols.BackgroundColor = Theme.DialogBack
+        dlgCustomZoom.BackColor = Theme.DialogBack
+        dlgHtml.BackColor = Theme.DialogBack
+        dlgSettings.BackColor = Theme.DialogBack
+        dlgStyle.BackColor = Theme.DialogBack
+        dlgTable.BackColor = Theme.DialogBack
+        dlgTextArt.BackColor = Theme.DialogBack
+        dlgUpdate.BackColor = Theme.DialogBack
+
         Refresh()
     End Sub
 

@@ -31,12 +31,12 @@
            ForeColor,
            New Font("Calibri", 42, FontStyle.Bold))
         'newArgs.DrawBackground()
-        ' newArgs.DrawBorder()
+        'newArgs.DrawBorder()
 
         Dim rectBorder As New Rectangle(0, 0, e.Bounds.Width - 1, e.Bounds.Height - 1)
         Dim rect As New Rectangle(1, 1, e.Bounds.Width - 2, e.Bounds.Height - 2)
-        Dim b As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(64, 64, 64), Color.FromArgb(0, 0, 0), Drawing2D.LinearGradientMode.Vertical)
-        Dim b2 As New Pen(Color.FromArgb(0, 0, 0))
+        Dim b As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(244, 244, 244), Color.FromArgb(225, 225, 225), Drawing2D.LinearGradientMode.Vertical)
+        Dim b2 As New Pen(Color.FromArgb(186, 186, 186))
 
         e.Graphics.FillRectangle(b, rect)
         e.Graphics.DrawRectangle(b2, rectBorder)
@@ -48,7 +48,7 @@
            New Rectangle(e.Bounds.Left + 3, e.Bounds.Top + 3, e.Bounds.Right - 6, e.Bounds.Bottom - 6),
            e.ToolTipText,
            BackColor,
-           Color.FromArgb(255, 255, 255),
+           Color.FromArgb(64, 64, 64),
            New Font("Calibri", 42, FontStyle.Bold))
 
         newArgs2.DrawText()
@@ -72,7 +72,7 @@ Public Class SymbolButton
         Me.AutoSize = True
         Me.MinimumSize = IPAMin
         Me.Margin = IPAMargin
-        Me.AutoSizeMode = Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.AutoSizeMode = AutoSizeMode.GrowAndShrink
         Me.UseCompatibleTextRendering = True
 
     End Sub

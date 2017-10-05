@@ -1757,8 +1757,8 @@ Partial Class frmMain
         '
         Me.EditZoomToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.EditZoomToolStripMenuItem.Name = "EditZoomToolStripMenuItem"
-        Me.EditZoomToolStripMenuItem.Size = New System.Drawing.Size(243, 38)
-        Me.EditZoomToolStripMenuItem.Text = "Edit Zoom"
+        Me.EditZoomToolStripMenuItem.Size = New System.Drawing.Size(281, 38)
+        Me.EditZoomToolStripMenuItem.Text = "Custom Zoom..."
         '
         'ToolStripMenuItem26
         '

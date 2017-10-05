@@ -4,6 +4,7 @@
     Public Color2 As Color = Color.Gray
     Public PanelBack As Color = Color.WhiteSmoke
     Public PanelText As Color = Color.Black
+    Public DialogBack As Color = Color.White
 
     Public VerticalMenuGradient As Boolean = False
 
@@ -28,6 +29,7 @@ Public Class IceTheme
 
         Color1 = clrHorBG_Color1
         Color2 = clrHorBG_Color2
+        DialogBack = SystemColors.Control
     End Sub
 
     Public Overrides Function GetToolStripRenderer() As ToolStripRenderer
@@ -70,6 +72,7 @@ Public Class NightTheme
         Color1 = clrNightHorBG_Color1
         Color2 = clrNightHorBG_Color2
         PanelBack = clrNightHorBG_Color2
+        DialogBack = SystemColors.Control
 
         VerticalMenuGradient = False
     End Sub
@@ -92,6 +95,7 @@ Public Class LunaTheme
         Color1 = clrLunaHorBG_Color1
         Color2 = clrLunaHorBG_Color2
         PanelBack = Color.FromArgb(255, 221, 236, 255)
+        DialogBack = SystemColors.Control
 
         VerticalMenuGradient = False
     End Sub
@@ -114,6 +118,7 @@ Public Class OliveTheme
         Color1 = clrOliveHorBG_Color1
         Color2 = clrOliveHorBG_Color2
         PanelBack = Color.FromArgb(255, 241, 240, 228)
+        DialogBack = SystemColors.Control
 
         VerticalMenuGradient = False
     End Sub
@@ -136,6 +141,7 @@ Public Class DesertTheme
         Color1 = clrDesertHorBG_Color1
         Color2 = clrDesertHorBG_Color2
         PanelBack = clrDesertHorBG_Color1
+        DialogBack = SystemColors.Control
 
         VerticalMenuGradient = False
     End Sub

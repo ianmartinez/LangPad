@@ -8,15 +8,10 @@ Public Class dlgAddPage
         For p = 0 To CurrentDocument.Pages.Count - 1
             Dim CurrentPage As NotebookPage = CurrentDocument.Pages.Item(p)
             If AddPage = True Then
-                If PageName = CurrentPage.Title Then
-                    Return True
-                End If
+                If PageName = CurrentPage.Title Then Return True
             Else
                 If p = CurrentPos Then Continue For
-
-                If PageName = CurrentPage.Title Then
-                    Return True
-                End If
+                If PageName = CurrentPage.Title Then Return True
             End If
         Next
 
@@ -51,12 +46,16 @@ Public Class dlgAddPage
 
         frmMain.tcNotebook.SelectedIndex = CurrentPage
         frmMain.Modified = True
-        Me.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.DialogResult = DialogResult.OK
         Me.Close()
     End Sub
 
     Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
-        Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.DialogResult = DialogResult.Cancel
         Me.Close()
+    End Sub
+
+    Private Sub dlgAddPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtName.Width = Width - (txtName.Left + txtName.Margin.Left + txtName.Margin.Right)
     End Sub
 End Class

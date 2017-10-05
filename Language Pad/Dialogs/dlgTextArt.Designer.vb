@@ -215,6 +215,7 @@ Partial Class dlgTextArt
         '
         'btnFont
         '
+        Me.btnFont.BackColor = System.Drawing.Color.Transparent
         Me.btnFont.Location = New System.Drawing.Point(696, 313)
         Me.btnFont.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFont.Name = "btnFont"
@@ -222,9 +223,11 @@ Partial Class dlgTextArt
         Me.btnFont.Size = New System.Drawing.Size(128, 68)
         Me.btnFont.TabIndex = 6
         Me.btnFont.Text = "Font"
+        Me.btnFont.UseVisualStyleBackColor = False
         '
         'btnColor1
         '
+        Me.btnColor1.BackColor = System.Drawing.Color.Transparent
         Me.btnColor1.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnColor1.Image = CType(resources.GetObject("btnColor1.Image"), System.Drawing.Image)
         Me.btnColor1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -240,9 +243,11 @@ Partial Class dlgTextArt
         Me.btnColor1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnColor1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnColor1.UseCompatibleTextRendering = True
+        Me.btnColor1.UseVisualStyleBackColor = False
         '
         'btnShadowColor
         '
+        Me.btnShadowColor.BackColor = System.Drawing.Color.Transparent
         Me.btnShadowColor.Color = System.Drawing.Color.Black
         Me.btnShadowColor.Image = CType(resources.GetObject("btnShadowColor.Image"), System.Drawing.Image)
         Me.btnShadowColor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -258,9 +263,11 @@ Partial Class dlgTextArt
         Me.btnShadowColor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnShadowColor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnShadowColor.UseCompatibleTextRendering = True
+        Me.btnShadowColor.UseVisualStyleBackColor = False
         '
         'btnColor2
         '
+        Me.btnColor2.BackColor = System.Drawing.Color.Transparent
         Me.btnColor2.Color = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnColor2.Image = CType(resources.GetObject("btnColor2.Image"), System.Drawing.Image)
         Me.btnColor2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -276,9 +283,11 @@ Partial Class dlgTextArt
         Me.btnColor2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnColor2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnColor2.UseCompatibleTextRendering = True
+        Me.btnColor2.UseVisualStyleBackColor = False
         '
         'btnBorderColor
         '
+        Me.btnBorderColor.BackColor = System.Drawing.Color.Transparent
         Me.btnBorderColor.Color = System.Drawing.Color.Black
         Me.btnBorderColor.Image = CType(resources.GetObject("btnBorderColor.Image"), System.Drawing.Image)
         Me.btnBorderColor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -294,6 +303,7 @@ Partial Class dlgTextArt
         Me.btnBorderColor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBorderColor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnBorderColor.UseCompatibleTextRendering = True
+        Me.btnBorderColor.UseVisualStyleBackColor = False
         '
         'dlgTextArt
         '

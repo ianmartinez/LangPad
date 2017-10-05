@@ -75,6 +75,7 @@ Partial Class dlgStyle
         '
         'btnFont
         '
+        Me.btnFont.BackColor = System.Drawing.Color.Transparent
         Me.btnFont.Location = New System.Drawing.Point(495, 287)
         Me.btnFont.Margin = New System.Windows.Forms.Padding(4)
         Me.btnFont.Name = "btnFont"
@@ -83,9 +84,11 @@ Partial Class dlgStyle
         Me.btnFont.TabIndex = 3
         Me.btnFont.Text = "Font"
         Me.ttMain.SetToolTip(Me.btnFont, "Text font")
+        Me.btnFont.UseVisualStyleBackColor = False
         '
         'btnColor
         '
+        Me.btnColor.BackColor = System.Drawing.Color.Transparent
         Me.btnColor.Color = System.Drawing.Color.Black
         Me.btnColor.Image = CType(resources.GetObject("btnColor.Image"), System.Drawing.Image)
         Me.btnColor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -101,9 +104,11 @@ Partial Class dlgStyle
         Me.btnColor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnColor, "Text color")
         Me.btnColor.UseCompatibleTextRendering = True
+        Me.btnColor.UseVisualStyleBackColor = False
         '
         'btnRight
         '
+        Me.btnRight.BackColor = System.Drawing.Color.Transparent
         Me.btnRight.Image = CType(resources.GetObject("btnRight.Image"), System.Drawing.Image)
         Me.btnRight.Location = New System.Drawing.Point(173, 211)
         Me.btnRight.Margin = New System.Windows.Forms.Padding(4)
@@ -114,9 +119,11 @@ Partial Class dlgStyle
         Me.btnRight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnRight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnRight, "Right align text")
+        Me.btnRight.UseVisualStyleBackColor = False
         '
         'btnCenter
         '
+        Me.btnCenter.BackColor = System.Drawing.Color.Transparent
         Me.btnCenter.Image = CType(resources.GetObject("btnCenter.Image"), System.Drawing.Image)
         Me.btnCenter.Location = New System.Drawing.Point(93, 211)
         Me.btnCenter.Margin = New System.Windows.Forms.Padding(4)
@@ -127,9 +134,11 @@ Partial Class dlgStyle
         Me.btnCenter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCenter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnCenter, "Center align text")
+        Me.btnCenter.UseVisualStyleBackColor = False
         '
         'btnLeft
         '
+        Me.btnLeft.BackColor = System.Drawing.Color.Transparent
         Me.btnLeft.Image = CType(resources.GetObject("btnLeft.Image"), System.Drawing.Image)
         Me.btnLeft.Location = New System.Drawing.Point(13, 211)
         Me.btnLeft.Margin = New System.Windows.Forms.Padding(4)
@@ -140,6 +149,7 @@ Partial Class dlgStyle
         Me.btnLeft.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnLeft.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnLeft, "Left align text")
+        Me.btnLeft.UseVisualStyleBackColor = False
         '
         'nudIndent
         '
@@ -151,6 +161,7 @@ Partial Class dlgStyle
         '
         'btnIndent
         '
+        Me.btnIndent.BackColor = System.Drawing.Color.Transparent
         Me.btnIndent.Image = CType(resources.GetObject("btnIndent.Image"), System.Drawing.Image)
         Me.btnIndent.Location = New System.Drawing.Point(255, 287)
         Me.btnIndent.Margin = New System.Windows.Forms.Padding(4)
@@ -160,6 +171,7 @@ Partial Class dlgStyle
         Me.btnIndent.TabIndex = 7
         Me.btnIndent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnIndent, "Indent text")
+        Me.btnIndent.UseVisualStyleBackColor = False
         '
         'btnSave
         '
@@ -230,6 +242,7 @@ Partial Class dlgStyle
         '
         'btnOffset
         '
+        Me.btnOffset.BackColor = System.Drawing.Color.Transparent
         Me.btnOffset.Image = CType(resources.GetObject("btnOffset.Image"), System.Drawing.Image)
         Me.btnOffset.Location = New System.Drawing.Point(13, 287)
         Me.btnOffset.Margin = New System.Windows.Forms.Padding(4)
@@ -239,9 +252,11 @@ Partial Class dlgStyle
         Me.btnOffset.TabIndex = 9
         Me.btnOffset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnOffset, "Character Offset")
+        Me.btnOffset.UseVisualStyleBackColor = False
         '
         'btnHighlight
         '
+        Me.btnHighlight.BackColor = System.Drawing.Color.Transparent
         Me.btnHighlight.Color = System.Drawing.Color.White
         Me.btnHighlight.Image = CType(resources.GetObject("btnHighlight.Image"), System.Drawing.Image)
         Me.btnHighlight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -257,6 +272,7 @@ Partial Class dlgStyle
         Me.btnHighlight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ttMain.SetToolTip(Me.btnHighlight, "Text color")
         Me.btnHighlight.UseCompatibleTextRendering = True
+        Me.btnHighlight.UseVisualStyleBackColor = False
         '
         'btnDeleteAll
         '

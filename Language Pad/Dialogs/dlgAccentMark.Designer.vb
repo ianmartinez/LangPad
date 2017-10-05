@@ -41,8 +41,8 @@ Partial Class dlgAccentMark
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 184)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(13, 188)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(112, 25)
         Me.Label1.TabIndex = 6
@@ -51,7 +51,7 @@ Partial Class dlgAccentMark
         'txtCharacter
         '
         Me.txtCharacter.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCharacter.Location = New System.Drawing.Point(13, 213)
+        Me.txtCharacter.Location = New System.Drawing.Point(13, 221)
         Me.txtCharacter.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCharacter.MaxLength = 100
         Me.txtCharacter.Name = "txtCharacter"
@@ -62,8 +62,8 @@ Partial Class dlgAccentMark
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(8, 273)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(13, 283)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 25)
         Me.Label2.TabIndex = 9
@@ -134,8 +134,7 @@ Partial Class dlgAccentMark
         '
         'lblResult
         '
-        Me.lblResult.BackColor = System.Drawing.Color.White
-        Me.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblResult.BackColor = System.Drawing.Color.Transparent
         Me.lblResult.Font = New System.Drawing.Font("Calibri", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblResult.ForeColor = System.Drawing.Color.Black
         Me.lblResult.Location = New System.Drawing.Point(13, 13)
@@ -177,12 +176,12 @@ Partial Class dlgAccentMark
         '
         Me.AccentsLayoutPanel.AutoScroll = True
         Me.AccentsLayoutPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.AccentsLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.AccentsLayoutPanel.Location = New System.Drawing.Point(13, 302)
+        Me.AccentsLayoutPanel.BackColor = System.Drawing.Color.Transparent
+        Me.AccentsLayoutPanel.Location = New System.Drawing.Point(13, 316)
         Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
-        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(698, 289)
+        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(698, 279)
         Me.AccentsLayoutPanel.TabIndex = 3
         '
         'dlgAccentMark
