@@ -38,6 +38,17 @@ Public Class dlgAccentMark
             Dim SymbolButton As New AccentCheckButton
             SymbolButton.Text = "◌" + IPA.Value
             SymbolButton.BackColor = Color.Transparent
+
+            Dim IPAFont = New Font("Calibri", 22, FontStyle.Regular)
+            Dim IPAPadding = New Padding(0)
+            Dim IPAMargin = New Padding(1)
+            Dim IPAMin = New Size(55, 42)
+
+            SymbolButton.Padding = IPAPadding
+            SymbolButton.Font = IPAFont
+            SymbolButton.MinimumSize = IPAMin
+            SymbolButton.Margin = IPAMargin
+
             AddHandler SymbolButton.Click, AddressOf ToggleAccent
             AccentsLayoutPanel.Controls.Add(SymbolButton)
         Next
