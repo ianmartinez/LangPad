@@ -158,16 +158,18 @@ Partial Class dlgCustomSymbols
         '
         'btnOK
         '
+        Me.btnOK.BackColor = System.Drawing.Color.Transparent
         Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnOK.Location = New System.Drawing.Point(3, 3)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(140, 50)
         Me.btnOK.TabIndex = 1
         Me.btnOK.Text = "OK"
-        Me.btnOK.UseVisualStyleBackColor = True
+        Me.btnOK.UseVisualStyleBackColor = False
         '
         'btnCancel
         '
+        Me.btnCancel.BackColor = System.Drawing.Color.Transparent
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCancel.Location = New System.Drawing.Point(149, 3)
@@ -175,7 +177,7 @@ Partial Class dlgCustomSymbols
         Me.btnCancel.Size = New System.Drawing.Size(140, 50)
         Me.btnCancel.TabIndex = 0
         Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'dlgCustomSymbols
         '

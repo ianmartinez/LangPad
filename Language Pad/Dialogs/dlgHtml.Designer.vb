@@ -58,16 +58,19 @@ Partial Class dlgHtml
         'OK_Button
         '
         Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.OK_Button.BackColor = System.Drawing.Color.Transparent
         Me.OK_Button.Location = New System.Drawing.Point(6, 6)
         Me.OK_Button.Margin = New System.Windows.Forms.Padding(6)
         Me.OK_Button.Name = "OK_Button"
         Me.OK_Button.Size = New System.Drawing.Size(134, 44)
         Me.OK_Button.TabIndex = 0
         Me.OK_Button.Text = "OK"
+        Me.OK_Button.UseVisualStyleBackColor = False
         '
         'Cancel_Button
         '
         Me.Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Cancel_Button.BackColor = System.Drawing.Color.Transparent
         Me.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Cancel_Button.Location = New System.Drawing.Point(152, 6)
         Me.Cancel_Button.Margin = New System.Windows.Forms.Padding(6)
@@ -75,6 +78,7 @@ Partial Class dlgHtml
         Me.Cancel_Button.Size = New System.Drawing.Size(134, 44)
         Me.Cancel_Button.TabIndex = 1
         Me.Cancel_Button.Text = "Cancel"
+        Me.Cancel_Button.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '

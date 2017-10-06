@@ -24,9 +24,9 @@ Partial Class dlgAppendReplace
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnAppend = New System.Windows.Forms.Button()
-        Me.btnReplace = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnReplace = New System.Windows.Forms.Button()
+        Me.btnAppend = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,29 +58,9 @@ Partial Class dlgAppendReplace
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(439, 56)
         Me.TableLayoutPanel1.TabIndex = 75
         '
-        'btnAppend
-        '
-        Me.btnAppend.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnAppend.Location = New System.Drawing.Point(3, 3)
-        Me.btnAppend.Name = "btnAppend"
-        Me.btnAppend.Size = New System.Drawing.Size(140, 50)
-        Me.btnAppend.TabIndex = 1
-        Me.btnAppend.Text = "Append"
-        Me.btnAppend.UseVisualStyleBackColor = True
-        '
-        'btnReplace
-        '
-        Me.btnReplace.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnReplace.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnReplace.Location = New System.Drawing.Point(149, 3)
-        Me.btnReplace.Name = "btnReplace"
-        Me.btnReplace.Size = New System.Drawing.Size(130, 50)
-        Me.btnReplace.TabIndex = 2
-        Me.btnReplace.Text = "Replace"
-        Me.btnReplace.UseVisualStyleBackColor = True
-        '
         'btnCancel
         '
+        Me.btnCancel.BackColor = System.Drawing.Color.Transparent
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCancel.Location = New System.Drawing.Point(285, 3)
@@ -88,7 +68,30 @@ Partial Class dlgAppendReplace
         Me.btnCancel.Size = New System.Drawing.Size(151, 50)
         Me.btnCancel.TabIndex = 3
         Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.btnCancel.UseVisualStyleBackColor = False
+        '
+        'btnReplace
+        '
+        Me.btnReplace.BackColor = System.Drawing.Color.Transparent
+        Me.btnReplace.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnReplace.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnReplace.Location = New System.Drawing.Point(149, 3)
+        Me.btnReplace.Name = "btnReplace"
+        Me.btnReplace.Size = New System.Drawing.Size(130, 50)
+        Me.btnReplace.TabIndex = 2
+        Me.btnReplace.Text = "Replace"
+        Me.btnReplace.UseVisualStyleBackColor = False
+        '
+        'btnAppend
+        '
+        Me.btnAppend.BackColor = System.Drawing.Color.Transparent
+        Me.btnAppend.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnAppend.Location = New System.Drawing.Point(3, 3)
+        Me.btnAppend.Name = "btnAppend"
+        Me.btnAppend.Size = New System.Drawing.Size(140, 50)
+        Me.btnAppend.TabIndex = 1
+        Me.btnAppend.Text = "Append"
+        Me.btnAppend.UseVisualStyleBackColor = False
         '
         'dlgAppendReplace
         '

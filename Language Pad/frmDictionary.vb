@@ -145,8 +145,6 @@ Public Class frmDictionary
             If Path.GetExtension(dlgSave.FileName).ToLower() = ".csv" Then
                 Dim cols As Integer
                 Dim wr As New StreamWriter(New FileStream(dlgSave.FileName, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
-                wr.Write("Word,Pronunciation,Definition,Notes")
-
                 cols = dgvDictionary.Columns.Count
                 For i As Integer = 0 To cols - 1
                     wr.Write(dgvDictionary.Columns(i).Name.ToString().ToUpper() + ",")
