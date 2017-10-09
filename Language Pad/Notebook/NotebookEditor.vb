@@ -20,6 +20,7 @@ Public Class NotebookEditor
 
     Private Sub txtTitle_TextChanged(sender As Object, e As EventArgs) Handles txtTitle.TextChanged
         If FirstTabUpdate = True Then CurrentDocument.Title = txtTitle.Text
+        frmDictionary.Text = If(txtTitle.Text = "", "Dictionary", "Dictionary - " + txtTitle.Text)
     End Sub
 
     Private Sub txtAuthor_TextChanged(sender As Object, e As EventArgs) Handles txtAuthor.TextChanged

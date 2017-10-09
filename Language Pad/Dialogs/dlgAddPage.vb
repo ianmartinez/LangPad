@@ -5,9 +5,9 @@ Public Class dlgAddPage
     Public DuplicatePage As Boolean = False
     Public CurrentPos As Integer = 0
     Public Function CheckDuplicates(PageName As String) As Boolean
-        For p = 0 To CurrentDocument.Pages.Count - 1
+        For p As Integer = 0 To CurrentDocument.Pages.Count - 1
             Dim CurrentPage As NotebookPage = CurrentDocument.Pages.Item(p)
-            If AddPage = True Then
+            If AddPage = True Or DuplicatePage = True Then
                 If PageName = CurrentPage.Title Then Return True
             Else
                 If p = CurrentPos Then Continue For

@@ -184,8 +184,8 @@ Public Class clsSnowMenuRenderer
                 Dim b2 As New Drawing.SolidBrush(clrSnowToolstripBtn_Border)
 
                 e.Graphics.FillRectangle(b, rect)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrSnowToolstripBtn_Border)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 4, clSnow_SelectedShadow)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 1, clrSnowToolstripBtn_Border)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 1, clSnow_SelectedShadow)
                 e.Item.ForeColor = Color.Black
 
             ElseIf e.Item.IsOnDropDown AndAlso e.Item.Selected Then
@@ -196,7 +196,7 @@ Public Class clsSnowMenuRenderer
                 Dim b2 As New Drawing.SolidBrush(clrSnowToolstripBtn_Border)
 
                 e.Graphics.FillRectangle(b, rect)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 6, clrSnowToolstripBtn_Border)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 1, clrSnowToolstripBtn_Border)
                 e.Item.ForeColor = Color.Black
 
             End If
@@ -208,8 +208,8 @@ Public Class clsSnowMenuRenderer
                 Dim b2 As New Drawing.SolidBrush(clrSnowSelectedBG_Drop_Border)
 
                 e.Graphics.FillRectangle(b, rect)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrSnowSelectedBG_Drop_Border)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 4, clSnow_DropShadow)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 1, clrSnowSelectedBG_Drop_Border)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 1, clSnow_DropShadow)
                 e.Item.ForeColor = Color.White
             End If
         End If
