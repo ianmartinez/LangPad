@@ -45,7 +45,7 @@ Public Class dlgAddPage
         End If
 
         frmMain.tcNotebook.SelectedIndex = CurrentPage
-        frmMain.Modified = True
+        CurrentDocument.Modified = True
         Me.DialogResult = DialogResult.OK
         Me.Close()
     End Sub

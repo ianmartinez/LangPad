@@ -19,30 +19,54 @@ Public Class NotebookEditor
     End Sub
 
     Private Sub txtTitle_TextChanged(sender As Object, e As EventArgs) Handles txtTitle.TextChanged
-        If FirstTabUpdate = True Then CurrentDocument.Title = txtTitle.Text
+        If FirstTabUpdate = True Then
+            CurrentDocument.Title = txtTitle.Text
+        Else
+            CurrentDocument.Modified = True
+        End If
         frmDictionary.Text = If(txtTitle.Text = "", "Dictionary", "Dictionary - " + txtTitle.Text)
     End Sub
 
     Private Sub txtAuthor_TextChanged(sender As Object, e As EventArgs) Handles txtAuthor.TextChanged
-        If FirstTabUpdate = True Then CurrentDocument.Author = txtAuthor.Text
+        If FirstTabUpdate = True Then
+            CurrentDocument.Author = txtAuthor.Text
+        Else
+            CurrentDocument.Modified = True
+        End If
     End Sub
 
     Private Sub txtWebsite_TextChanged(sender As Object, e As EventArgs) Handles txtWebsite.TextChanged
-        If FirstTabUpdate = True Then CurrentDocument.Website = txtWebsite.Text
+        If FirstTabUpdate = True Then
+            CurrentDocument.Website = txtWebsite.Text
+        Else
+            CurrentDocument.Modified = True
+        End If
     End Sub
 
     Private Sub lbPages_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbPages.SelectedIndexChanged
         On Error Resume Next
-        If frmMain.Moving = False Then frmMain.tcNotebook.SelectedIndex = lbPages.SelectedIndex
+        If frmMain.Moving = False Then
+            frmMain.tcNotebook.SelectedIndex = lbPages.SelectedIndex
+        Else
+            CurrentDocument.Modified = True
+        End If
         lbPages.Focus()
     End Sub
 
     Private Sub cbEmbed_CheckedChanged(sender As Object, e As EventArgs) Handles cbEmbed.CheckedChanged
-        If FirstTabUpdate = True Then CurrentDocument.EmbedSymbols = cbEmbed.Checked
+        If FirstTabUpdate = True Then
+            CurrentDocument.EmbedSymbols = cbEmbed.Checked
+        Else
+            CurrentDocument.Modified = True
+        End If
     End Sub
 
     Private Sub txtInfo_TextChanged(sender As Object, e As EventArgs) Handles txtInfo.TextChanged
-        If FirstTabUpdate = True Then CurrentDocument.Info = txtInfo.Text
+        If FirstTabUpdate = True Then
+            CurrentDocument.Info = txtInfo.Text
+        Else
+            CurrentDocument.Modified = True
+        End If
     End Sub
 
     Private Sub PageUpToolStripButton_Click(sender As Object, e As EventArgs) Handles PageUpToolStripButton.Click
@@ -136,6 +160,14 @@ Public Class NotebookEditor
     End Sub
 
     Private Sub txtLanguage_TextChanged(sender As Object, e As EventArgs) Handles txtLanguage.TextChanged
-        If FirstTabUpdate = True Then CurrentDocument.Language = txtLanguage.Text
+        If FirstTabUpdate = True Then
+            CurrentDocument.Language = txtLanguage.Text
+        Else
+            CurrentDocument.Modified = True
+        End If
+    End Sub
+
+    Private Sub DoubleBufferedPanel2_Paint(sender As Object, e As PaintEventArgs) Handles DoubleBufferedPanel2.Paint
+
     End Sub
 End Class

@@ -5,7 +5,6 @@ Imports System.IO
 Public Class frmMain
     Private dlgColor As New ColorDialog
     Public Event EditText()
-    Public Modified As Boolean = False
     Private currentFile As String
     Private checkPrint As Integer
     Public ReadOnly AssociatedRichTextBox As RichTextBox = SelectedDocument
@@ -71,7 +70,7 @@ Public Class frmMain
     End Sub
 
     Public Sub ModifiedHandler(sender As Object, e As EventArgs)
-        Modified = True
+        CurrentDocument.Modified = True
     End Sub
 
     Public Sub InsertImageHandler(sender As Object, e As EventArgs)
@@ -171,7 +170,7 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If Modified = True Then
+        If CurrentDocument.Modified = True Then
             Dim Mode = ModifiedWarning()
             If Mode = DialogResult.Yes Then
                 SaveToolStripMenuItem_Click(Me, e)
@@ -435,7 +434,7 @@ Public Class frmMain
             dlgUpdate.BringToFront()
         End If
 
-        Modified = False
+        CurrentDocument.Modified = False
         KeyPreview = True
 
         SplitContainer2.SplitterDistance = (SplitContainer2.Width - NotebookEditor1.MinimumSize.Width) - 30
@@ -992,7 +991,7 @@ Public Class frmMain
         SaveTabs()
         If MessageBox.Show("Are you sure you want to delete this page? This cannot be undone.", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = Windows.Forms.DialogResult.Yes Then
             CurrentDocument.Pages.RemoveAt(tcNotebook.SelectedIndex)
-            Modified = True
+            CurrentDocument.Modified = True
             UpdateTabs()
         End If
     End Sub
