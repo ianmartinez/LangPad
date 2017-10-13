@@ -10,12 +10,12 @@ Public Class dlgUpdate
     Public RedditThread As String = ""
     Public SkipFetch As Boolean = False
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
-        Me.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.DialogResult = DialogResult.OK
         Me.Close()
     End Sub
 
     Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
-        Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.DialogResult = DialogResult.Cancel
         Me.Close()
     End Sub
 
@@ -23,8 +23,8 @@ Public Class dlgUpdate
         If Not SkipFetch = True Then FetchUpdateData()
 
         If Not NewestVersion > CurrentVersion Then
-            MessageBox.Show("You have the latest version")
-            Me.Close()
+            MessageBox.Show("You have the latest version.")
+            Close()
         End If
 
     End Sub
@@ -33,7 +33,7 @@ Public Class dlgUpdate
         'On Error Resume Next
         Dim updatefile As String = "https://raw.githubusercontent.com/ianmartinez/Language-Pad/master/Conlang%20Notepad/Update.txt"
         Dim fileName As String = Application.LocalUserAppDataPath & "\update.txt"
-        If System.IO.File.Exists(fileName) Then System.IO.File.Delete(fileName)
+        If IO.File.Exists(fileName) Then IO.File.Delete(fileName)
 
         Dim downloadclient As New WebClient()
         downloadclient.DownloadFile(updatefile, fileName)
@@ -45,25 +45,44 @@ Public Class dlgUpdate
         DownloadLink = FromCompatibleString(GetValue(UpdateFileText, "DownloadLink"))
         RedditThread = FromCompatibleString(GetValue(UpdateFileText, "RedditThread"))
 
-        lblLanguagePad.Text = "Language Pad " & NewestVersion.ToString & " Update"
-        txtDecription.Text = "What's new:" & Environment.NewLine & Description
-
+        lblLanguagePad.Text = "Language Pad " & NewestVersion.ToString
+        Label3.Text = String.Format("The update ""Language Pad {0}"" is available.", NewestVersion.ToString())
+        txtDecription.Text = Environment.NewLine & Description
+        txtDecription.DeselectAll()
     End Sub
 
-    Private Sub btnOK_Click(sender As Object, e As EventArgs)
+    Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+        If Not DownloadLink.StartsWith("https") Then
+            DownloadLink = "https://" + DownloadLink
+        End If
         Process.Start(DownloadLink)
         Me.Close()
     End Sub
 
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs)
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 
     Private Sub btnReddit_Click(sender As Object, e As EventArgs) Handles btnReddit.Click
+        If Not RedditThread.StartsWith("https") Then
+            RedditThread = "https://" + RedditThread
+        End If
         Process.Start(RedditThread)
     End Sub
 
     Private Sub btnSource_Click(sender As Object, e As EventArgs) Handles btnSource.Click
         Process.Start("https://github.com/ianmartinez/Language-Pad")
+    End Sub
+
+    Private Sub dlgUpdate_GotFocus(sender As Object, e As EventArgs) Handles Me.GotFocus
+        txtDecription.DeselectAll()
+    End Sub
+
+    Private Sub txtDecription_TextChanged(sender As Object, e As EventArgs) Handles txtDecription.TextChanged
+
+    End Sub
+
+    Private Sub txtDecription_Click(sender As Object, e As EventArgs) Handles txtDecription.Click
+        txtDecription.DeselectAll()
     End Sub
 End Class

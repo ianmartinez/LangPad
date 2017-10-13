@@ -1,4 +1,5 @@
-Version 8.5 (October 14, 2017)	
+Version 8.5 (October 13, 2017)	
+   •Help file included   
    •Minor changes to splash screen
    •Automatically fill in title and description on dictionary HTML generator
    •Notebook panel re-design   
@@ -7,6 +8,7 @@ Version 8.5 (October 14, 2017)
    •Mutiple dialogs layouts have been tweaked
    •Dialogs now match theme
    •Fixed bug where decimal separators other than "." would throw errors
+   •Re-design update dialog and fix buttons not working
 Version 8.2 (September 30, 2017)
    •Find words in dictionary   
    •Color panel for quick access to font/highlight colors   
