@@ -1,4 +1,4 @@
-﻿Version=8.2
-DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Language%20Pad/Release/Language%20Pad%208.2.zip?raw:eq:true
-Description=   •Find words in dictionary   :cr:   •Color panel for quick access to font/highlight colors   :cr:   •Check for updates at startup now on by default    :cr:   •Fixed typo on style dialog   :cr:   •Fixed accents remaining after Accents dialog closes and re-opens   :cr:   •Revised look of color buttons   :cr:   •Automatically open generated HTML file on completion   :cr:   •Replace most StylizedButtons with native buttons   
-RedditThread=https://www.reddit.com/r/conlangs/comments/73jpsv/language_pad_82_release/
+﻿Version=8.5
+DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Language%20Pad/Release/Language%20Pad%208.5.zip?raw:eq:true
+Description=   •Help file included   :cr:   •Minor changes to splash screen:cr:   •Automatically fill in title and description on dictionary HTML generator:cr:   •Notebook panel re-design   :cr:   •Language field in notebook panel:cr:   •'Snow' theme now has a white background to match Windows 10:cr:   •Multiple dialogs layouts have been tweaked:cr:   •Dialogs now match theme:cr:   •Fixed bug where decimal separators other than "." would throw errors:cr:   •Re-design update dialog and fix buttons not working   
+RedditThread=https://www.reddit.com/r/conlangs/comments/76ewcs/language_pad_85/

@@ -5,7 +5,7 @@ Version 8.5 (October 13, 2017)
    •Notebook panel re-design   
    •Language field in notebook panel
    •'Snow' theme now has a white background to match Windows 10
-   •Mutiple dialogs layouts have been tweaked
+   •Multiple dialogs layouts have been tweaked
    •Dialogs now match theme
    •Fixed bug where decimal separators other than "." would throw errors
    •Re-design update dialog and fix buttons not working
