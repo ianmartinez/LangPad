@@ -30,7 +30,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="Theme" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Snow</Value>
+      <Value Profile="(Default)">Breeze</Value>
     </Setting>
   </Settings>
 </SettingsFile>

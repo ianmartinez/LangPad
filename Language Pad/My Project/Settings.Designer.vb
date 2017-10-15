@@ -164,7 +164,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Snow")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Breeze")>  _
         Public Property Theme() As String
             Get
                 Return CType(Me("Theme"),String)

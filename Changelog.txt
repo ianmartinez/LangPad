@@ -1,6 +1,7 @@
 Version 9.0 (October 31, 2017)	
    •Redesigned splash screen  
    •Add Space & Breeze theme
+   •Default theme now 'Breeze'
    •Theme saved on shutdown
    •Tweaked multiple themes      
    •Changed icon theme to Breeze

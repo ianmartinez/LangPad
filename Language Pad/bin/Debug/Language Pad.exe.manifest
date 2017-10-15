@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>b/J4FZUCoOTALw3vnkjeGnCJiLSoGvWvkqCIhxpoqlE=</dsig:DigestValue>
+        <dsig:DigestValue>awDPmZqksBCB6FHeXVcOQBU2ESKO625y9bNgcZMPXkU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -108,13 +108,13 @@
       <dsig:DigestValue>inGcapPo3p5qBzJbz9vnN2Nb8jHl+46r/C4oh9KpAxI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Language Pad.exe.config" size="3153">
+  <file name="Language Pad.exe.config" size="3155">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>HAL7xSbXPyssaFGFHH8wzyo9e9LSjNyrujQV5AhJE+Y=</dsig:DigestValue>
+      <dsig:DigestValue>buhI2Gdpb9ZjhaArB3Y9e+twrzprDGZ/QsUv1uN1E6E=</dsig:DigestValue>
     </hash>
   </file>
   <asmv3:application xmlns="urn:schemas-microsoft-com:asm.v1">
