@@ -109,6 +109,29 @@ Public Class LunaTheme
     End Function
 End Class
 
+Public Class SpaceTheme
+    Inherits Theme
+
+    Public Sub New()
+        MyBase.New("Space")
+
+        Color1 = Color.FromArgb(255, 200, 200, 200)
+        Color2 = Color.FromArgb(255, 240, 240, 240)
+        PanelBack = Color.FromArgb(255, 240, 240, 240)
+        DialogBack = SystemColors.Control
+
+        VerticalMenuGradient = True
+    End Sub
+
+    Public Overrides Function GetToolStripRenderer() As ToolStripRenderer
+        Return New clsSpaceToolstripRenderer
+    End Function
+
+    Public Overrides Function GetMenuRenderer() As ToolStripRenderer
+        Return New clsSpaceMenuRenderer
+    End Function
+End Class
+
 Public Class OliveTheme
     Inherits Theme
 

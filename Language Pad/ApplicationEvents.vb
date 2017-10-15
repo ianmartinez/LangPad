@@ -15,11 +15,8 @@ Namespace My
 
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
             On Error Resume Next
-            'Dim stpw As New Stopwatch
-            'stpw.Reset()
-            'stpw.Start()
 
-            ssLoading.pbLoading.SetProgress(0)
+            ssLoading.pbLoading.Value = 0
             ssLoading.lblLoading.Text = "Loading..."
 
             If My.Settings.AccentMarks = True Then
@@ -35,7 +32,7 @@ Namespace My
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.AccentsLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
-                ssLoading.pbLoading.SetProgress(10)
+                ssLoading.pbLoading.Value = 10
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.AccentsTabPage)
@@ -55,7 +52,7 @@ Namespace My
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.AffricatesLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
-                ssLoading.pbLoading.SetProgress(20)
+                ssLoading.pbLoading.Value = 20
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.AffricatesTabPage)
@@ -75,7 +72,7 @@ Namespace My
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.ConsonantsLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
-                ssLoading.pbLoading.SetProgress(30)
+                ssLoading.pbLoading.Value = 30
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.ConsonantsTabPage)
@@ -95,7 +92,7 @@ Namespace My
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.ToneIntonationLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
-                ssLoading.pbLoading.SetProgress(40)
+                ssLoading.pbLoading.Value = 40
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.ToneIntonationTabPage)
@@ -115,7 +112,7 @@ Namespace My
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.VowelsLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
-                ssLoading.pbLoading.SetProgress(50)
+                ssLoading.pbLoading.Value = 50
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.VowelsTabPage)
@@ -135,7 +132,7 @@ Namespace My
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.OtherLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
-                ssLoading.pbLoading.SetProgress(60)
+                ssLoading.pbLoading.Value = 60
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.OtherTabPage)
@@ -155,7 +152,7 @@ Namespace My
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.CommonLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
-                ssLoading.pbLoading.SetProgress(70)
+                ssLoading.pbLoading.Value = 70
                 ssLoading.Refresh()
             Else
                 frmMain.tcSymbols.TabPages.Remove(frmMain.CommonTabPage)
@@ -175,10 +172,10 @@ Namespace My
                 AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                 frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
             Next
-            ssLoading.pbLoading.SetProgress(80)
+            ssLoading.pbLoading.Value = 80
             ssLoading.Refresh()
 
-            ssLoading.pbLoading.SetProgress(90)
+            ssLoading.pbLoading.Value = 90
             ssLoading.Refresh()
 
             If My.Settings.Updates = True Then
@@ -186,7 +183,7 @@ Namespace My
                 dlgUpdate.FetchUpdateData()
             End If
 
-            ssLoading.pbLoading.SetProgress(100)
+            ssLoading.pbLoading.Value = 100
             ssLoading.Refresh()
             'stpw.Stop()
             'MessageBox.Show(stpw.Elapsed.TotalSeconds)

@@ -9,6 +9,7 @@ Module LanguagePadCommon
     Public DecimalSep As String() = {" ", "'", ",", ".", "·", " ", " ", "˙", "٫", "٬", "⎖"}
     Public CurrentVersion As Decimal = Decimal.Parse((Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(0) & "." & Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1)), CultureInfo.InvariantCulture)
     Public LangPadVersion As String = "Language Pad " & (Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(0) & If(Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1) = "0", "", "." & Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1)))
+    Public SplashVersion As String = (Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(0) & If(Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1) = "0", "", "." & Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1)))
     Public Function GetTextFromRTF(ByVal RTF As String)
         Dim rtb As New RichTextBox
         rtb.Rtf = RTF

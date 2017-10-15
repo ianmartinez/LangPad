@@ -73,8 +73,8 @@ Public Class StylizedProgressBar
         BackgroundBitmap = New Bitmap(Me.Width, Me.Height)
         ProgressBitmap = New Bitmap(ProgressPanel.Width, ProgressPanel.Height)
 
-        Dim FillRectangle As New Rectangle(0, 0, Me.Width - 1, Me.Height - 1)
-        Dim HighlightRectangle As New Rectangle(1, 1, Me.Width - 3, Me.Height - 3)
+        Dim FillRectangle As New Rectangle(0, 0, Me.Width, Me.Height)
+        Dim HighlightRectangle As New Rectangle(1, 1, Me.Width - 2, Me.Height - 2)
         Dim FillRoundedRectangle As GraphicsPath = RoundedRectangle(FillRectangle, Radius)
         Dim HighlightRoundedRectangle As GraphicsPath = RoundedRectangle(HighlightRectangle, Radius)
 

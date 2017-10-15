@@ -117,32 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pbLoading.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAh8AAAAhCAYAAAB5ssklAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAC3SURBVHhe7daxDYAwEARBVwixi6JnwBki9kbz0ryuhB3P
-        XQAAkflY4wAACHzi4wQA2Eh8AAAp8QEApMQHAJASHwBASnwAACnxAQCkxAcAkBIfAEBKfAAAKfEBAKTE
-        BwCQEh8AQEp8AAAp8QEApMQHAJASHwBASnwAACnxAQCkxAcAkBIfAEBKfAAAKfEBAKTEBwCQEh8AQEp8
-        AAAp8QEApMQHAJASHwBA6hcfAAC7rfh4HwBAYMwbaik3xOwdPxcAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="pbLoading.Style" xml:space="preserve">
-    <value>Radius=0
-Padding=0
-
-Background Colors=80,0,0,0|80,0,0,0
-Background Positions=0|1
-Background Angle=90
-Background Border Color=90,0,0,0
-Background Highlight Color=0,255,255,255
-
-Progress Colors=240,255,255,255|240,255,255,255
-Progress Positions=0|1
-Progress Angle=-90
-Progress Border Color=240,255,255,255
-Progress Highlight Color=0,255,255,255
-
-No AA=1</value>
-  </data>
 </root>

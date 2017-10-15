@@ -1,3 +1,7 @@
+Version 8.6 (October 31, 2017)	
+   •Redesigned splash screen  
+   •Add Space theme
+   •Tweaked multiple themes      
 Version 8.5 (October 13, 2017)	
    •Help file included   
    •Minor changes to splash screen

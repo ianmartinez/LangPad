@@ -192,7 +192,7 @@ Public Class clsNightMenuRenderer
                 Dim b2 As New Drawing.SolidBrush(clrNightToolstripBtn_Border)
 
                 e.Graphics.FillRectangle(b, rect)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 6, clrNightToolstripBtn_Border)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrNightToolstripBtn_Border)
                 e.Item.ForeColor = Color.Black
 
             End If

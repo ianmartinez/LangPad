@@ -8,7 +8,7 @@
     Public clrSnowSelectedBG_Blue As Color = Color.FromArgb(255, 186, 228, 246)
     Public clrSnowSelectedBG_Header_Blue As Color = Color.FromArgb(255, 146, 202, 230)
     Public clrSnowSelectedBG_White As Color = Color.FromArgb(255, 241, 248, 251)
-    Public clrSnowSelectedBG_Border As Color = Color.FromArgb(255, 150, 217, 249)
+    Public clrSnowSelectedBG_Border As Color = Color.FromArgb(255, 139, 195, 225)
     Public clrSnowSelectedBG_Drop_Blue As Color = Color.FromArgb(255, 139, 195, 225)
     Public clrSnowSelectedBG_Drop_Border As Color = Color.FromArgb(255, 49, 65, 76)
     Public clrSnowMenuBorder As Color = Color.FromArgb(255, 160, 160, 160)
@@ -100,7 +100,7 @@ Public Class clsSnowMenuRenderer
     End Sub
 
     '// Render Image Margin and gray itembackground
-    Protected Overrides Sub OnRenderImageMargin(ByVal e As System.Windows.Forms.ToolStripRenderEventArgs)
+    Protected Overrides Sub OnRenderImageMargin(ByVal e As ToolStripRenderEventArgs)
         MyBase.OnRenderImageMargin(e)
 
         '// Draw ImageMargin background gradient
@@ -205,7 +205,7 @@ Public Class clsSnowMenuRenderer
             If CType(e.Item, ToolStripMenuItem).DropDown.Visible AndAlso e.Item.IsOnDropDown = False Then 'CType(e.Item, ToolStripMenuItem).OwnerItem Is Nothing Then
                 Dim rect As New Rectangle(3, 2, e.Item.Width - 6, e.Item.Height - 4)
                 Dim b As New Drawing2D.LinearGradientBrush(rect, clSnow_Drop1, clSnow_Drop2, Drawing2D.LinearGradientMode.Vertical)
-                Dim b2 As New Drawing.SolidBrush(clrSnowSelectedBG_Drop_Border)
+                Dim b2 As New SolidBrush(clrSnowSelectedBG_Drop_Border)
 
                 e.Graphics.FillRectangle(b, rect)
                 clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 1, clrSnowSelectedBG_Drop_Border)
@@ -256,7 +256,7 @@ Public Class clsSnowToolstripRenderer
     End Sub
 
     '// Render button selected and pressed state
-    Protected Overrides Sub OnRenderButtonBackground(ByVal e As System.Windows.Forms.ToolStripItemRenderEventArgs)
+    Protected Overrides Sub OnRenderButtonBackground(ByVal e As ToolStripItemRenderEventArgs)
         MyBase.OnRenderButtonBackground(e)
         If e.Item.Selected Or CType(e.Item, ToolStripButton).Checked Then
             Dim rectBorder As New Rectangle(0, 0, e.Item.Width - 0, e.Item.Height - 0)
@@ -271,7 +271,7 @@ Public Class clsSnowToolstripRenderer
             Dim rectBorder As New Rectangle(0, 0, e.Item.Width - 0, e.Item.Height - 0)
             Dim rect As New Rectangle(1, 1, e.Item.Width - 2, e.Item.Height - 2)
             Dim b As New Drawing2D.LinearGradientBrush(rect, clSnow_Drop1, clSnow_Drop2, Drawing2D.LinearGradientMode.Vertical)
-            Dim b2 As New Drawing.SolidBrush(clSnow_DropBorder)
+            Dim b2 As New SolidBrush(clSnow_DropBorder)
 
             e.Graphics.FillRectangle(b2, rectBorder)
             e.Graphics.FillRectangle(b, rect)

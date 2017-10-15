@@ -195,7 +195,7 @@ Public Class clsLunaMenuRenderer
                 Dim b2 As New Drawing.SolidBrush(clrLunaToolstripBtn_Border)
 
                 e.Graphics.FillRectangle(b, rect)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 6, clrLunaToolstripBtn_Border)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrLunaToolstripBtn_Border)
                 e.Item.ForeColor = Color.Black
 
             End If

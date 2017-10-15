@@ -196,7 +196,7 @@ Public Class clsOliveMenuRenderer
                 Dim b2 As New Drawing.SolidBrush(clrOliveToolstripBtn_Border)
 
                 e.Graphics.FillRectangle(b, rect)
-                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 6, clrOliveToolstripBtn_Border)
+                clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrOliveToolstripBtn_Border)
                 e.Item.ForeColor = Color.Black
 
             End If
