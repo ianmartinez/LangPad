@@ -4,6 +4,7 @@ Version 9.0 (October 31, 2017)
    •Theme saved on shutdown
    •Tweaked multiple themes      
    •Changed icon theme to Breeze
+   •Show/Hide sidebar
 Version 8.5 (October 13, 2017)	
    •Help file included   
    •Minor changes to splash screen

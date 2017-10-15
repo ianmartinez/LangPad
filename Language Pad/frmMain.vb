@@ -1245,4 +1245,8 @@ Public Class frmMain
             SelectedDocument.SelectionBackColor = cButton.Color
         End If
     End Sub
+
+    Private Sub ToggleSidebarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleSidebarToolStripMenuItem.Click
+        SplitContainer2.Panel2Collapsed = SplitContainer2.Panel2Collapsed Xor True
+    End Sub
 End Class

@@ -214,6 +214,8 @@ Partial Class frmMain
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToggleSidebarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tcSymbols.SuspendLayout()
         Me.ConsonantsTabPage.SuspendLayout()
         Me.AffricatesTabPage.SuspendLayout()
@@ -1680,7 +1682,7 @@ Partial Class frmMain
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ZoomInToolStripMenuItem, Me.ZoomOutToolStripMenuItem, Me.ToolStripMenuItem27, Me.ZoomToolStripMenuItem, Me.EditZoomToolStripMenuItem, Me.ToolStripMenuItem26, Me.WordWrapToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ZoomInToolStripMenuItem, Me.ZoomOutToolStripMenuItem, Me.ToolStripMenuItem27, Me.ZoomToolStripMenuItem, Me.EditZoomToolStripMenuItem, Me.ToolStripMenuItem26, Me.WordWrapToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToggleSidebarToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(78, 38)
         Me.ViewToolStripMenuItem.Text = "View"
@@ -2044,6 +2046,19 @@ Partial Class frmMain
         Me.NotebookEditor1.Size = New System.Drawing.Size(574, 822)
         Me.NotebookEditor1.TabIndex = 72
         '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(278, 6)
+        '
+        'ToggleSidebarToolStripMenuItem
+        '
+        Me.ToggleSidebarToolStripMenuItem.Image = CType(resources.GetObject("ToggleSidebarToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ToggleSidebarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToggleSidebarToolStripMenuItem.Name = "ToggleSidebarToolStripMenuItem"
+        Me.ToggleSidebarToolStripMenuItem.Size = New System.Drawing.Size(281, 38)
+        Me.ToggleSidebarToolStripMenuItem.Text = "Toggle Sidebar"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
@@ -2293,4 +2308,6 @@ Partial Class frmMain
     Friend WithEvents StylizedColorButton19 As Tundra.StylizedColorButton
     Friend WithEvents StylizedColorButton20 As Tundra.StylizedColorButton
     Friend WithEvents StylizedColorButton21 As Tundra.StylizedColorButton
+    Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
+    Friend WithEvents ToggleSidebarToolStripMenuItem As ToolStripMenuItem
 End Class
