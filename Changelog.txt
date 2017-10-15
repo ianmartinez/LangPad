@@ -1,4 +1,4 @@
-Version 8.6 (October 31, 2017)	
+Version 9.0 (October 31, 2017)	
    •Redesigned splash screen  
    •Add Space & Breeze theme
    •Theme saved on shutdown
