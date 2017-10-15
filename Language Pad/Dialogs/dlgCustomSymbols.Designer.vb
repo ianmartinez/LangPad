@@ -25,16 +25,16 @@ Partial Class dlgCustomSymbols
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgCustomSymbols))
         Me.dgvSymbols = New System.Windows.Forms.DataGridView()
-        Me.Symbol = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnDeleteAll = New Tundra.StylizedButton()
-        Me.btnOpen = New Tundra.StylizedButton()
-        Me.btnSave = New Tundra.StylizedButton()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnOpen = New System.Windows.Forms.Button()
+        Me.btnDeleteAll = New System.Windows.Forms.Button()
+        Me.Symbol = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvSymbols, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -46,91 +46,13 @@ Partial Class dlgCustomSymbols
         Me.dgvSymbols.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvSymbols.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSymbols.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Symbol})
-        Me.dgvSymbols.Location = New System.Drawing.Point(22, 21)
+        Me.dgvSymbols.Location = New System.Drawing.Point(22, 113)
         Me.dgvSymbols.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvSymbols.Name = "dgvSymbols"
         Me.dgvSymbols.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvSymbols.RowTemplate.Height = 24
-        Me.dgvSymbols.Size = New System.Drawing.Size(589, 634)
+        Me.dgvSymbols.Size = New System.Drawing.Size(658, 611)
         Me.dgvSymbols.TabIndex = 2
-        '
-        'Symbol
-        '
-        Me.Symbol.HeaderText = "Symbol"
-        Me.Symbol.Name = "Symbol"
-        Me.Symbol.Width = 225
-        '
-        'btnDeleteAll
-        '
-        Me.btnDeleteAll.BackColor = System.Drawing.Color.Transparent
-        Me.btnDeleteAll.BackgroundImage = CType(resources.GetObject("btnDeleteAll.BackgroundImage"), System.Drawing.Image)
-        Me.btnDeleteAll.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnDeleteAll.FlatAppearance.BorderSize = 0
-        Me.btnDeleteAll.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.btnDeleteAll.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnDeleteAll.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnDeleteAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDeleteAll.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDeleteAll.ForeColor = System.Drawing.Color.Black
-        Me.btnDeleteAll.Image = CType(resources.GetObject("btnDeleteAll.Image"), System.Drawing.Image)
-        Me.btnDeleteAll.Location = New System.Drawing.Point(182, 663)
-        Me.btnDeleteAll.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnDeleteAll.Name = "btnDeleteAll"
-        Me.btnDeleteAll.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
-        Me.btnDeleteAll.Size = New System.Drawing.Size(72, 68)
-        Me.btnDeleteAll.Style = resources.GetString("btnDeleteAll.Style")
-        Me.btnDeleteAll.TabIndex = 5
-        Me.ttMain.SetToolTip(Me.btnDeleteAll, "Clear")
-        Me.btnDeleteAll.UseCompatibleTextRendering = True
-        Me.btnDeleteAll.UseVisualStyleBackColor = False
-        '
-        'btnOpen
-        '
-        Me.btnOpen.BackColor = System.Drawing.Color.Transparent
-        Me.btnOpen.BackgroundImage = CType(resources.GetObject("btnOpen.BackgroundImage"), System.Drawing.Image)
-        Me.btnOpen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnOpen.FlatAppearance.BorderSize = 0
-        Me.btnOpen.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.btnOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOpen.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOpen.ForeColor = System.Drawing.Color.Black
-        Me.btnOpen.Image = CType(resources.GetObject("btnOpen.Image"), System.Drawing.Image)
-        Me.btnOpen.Location = New System.Drawing.Point(22, 663)
-        Me.btnOpen.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnOpen.Name = "btnOpen"
-        Me.btnOpen.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
-        Me.btnOpen.Size = New System.Drawing.Size(72, 68)
-        Me.btnOpen.Style = resources.GetString("btnOpen.Style")
-        Me.btnOpen.TabIndex = 3
-        Me.ttMain.SetToolTip(Me.btnOpen, "Open")
-        Me.btnOpen.UseCompatibleTextRendering = True
-        Me.btnOpen.UseVisualStyleBackColor = False
-        '
-        'btnSave
-        '
-        Me.btnSave.BackColor = System.Drawing.Color.Transparent
-        Me.btnSave.BackgroundImage = CType(resources.GetObject("btnSave.BackgroundImage"), System.Drawing.Image)
-        Me.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnSave.FlatAppearance.BorderSize = 0
-        Me.btnSave.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.ForeColor = System.Drawing.Color.Black
-        Me.btnSave.Image = CType(resources.GetObject("btnSave.Image"), System.Drawing.Image)
-        Me.btnSave.Location = New System.Drawing.Point(102, 663)
-        Me.btnSave.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
-        Me.btnSave.Size = New System.Drawing.Size(72, 68)
-        Me.btnSave.Style = resources.GetString("btnSave.Style")
-        Me.btnSave.TabIndex = 4
-        Me.ttMain.SetToolTip(Me.btnSave, "Save")
-        Me.btnSave.UseCompatibleTextRendering = True
-        Me.btnSave.UseVisualStyleBackColor = False
         '
         'dlgOpen
         '
@@ -148,7 +70,7 @@ Partial Class dlgCustomSymbols
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(328, 669)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(395, 734)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -179,18 +101,63 @@ Partial Class dlgCustomSymbols
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
+        'btnSave
+        '
+        Me.btnSave.Image = CType(resources.GetObject("btnSave.Image"), System.Drawing.Image)
+        Me.btnSave.Location = New System.Drawing.Point(244, 13)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(214, 89)
+        Me.btnSave.TabIndex = 77
+        Me.btnSave.Text = "Save"
+        Me.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'btnOpen
+        '
+        Me.btnOpen.Image = CType(resources.GetObject("btnOpen.Image"), System.Drawing.Image)
+        Me.btnOpen.Location = New System.Drawing.Point(22, 13)
+        Me.btnOpen.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnOpen.Name = "btnOpen"
+        Me.btnOpen.Size = New System.Drawing.Size(214, 89)
+        Me.btnOpen.TabIndex = 76
+        Me.btnOpen.Text = "Open"
+        Me.btnOpen.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnOpen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btnOpen.UseVisualStyleBackColor = True
+        '
+        'btnDeleteAll
+        '
+        Me.btnDeleteAll.Image = CType(resources.GetObject("btnDeleteAll.Image"), System.Drawing.Image)
+        Me.btnDeleteAll.Location = New System.Drawing.Point(466, 13)
+        Me.btnDeleteAll.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnDeleteAll.Name = "btnDeleteAll"
+        Me.btnDeleteAll.Size = New System.Drawing.Size(214, 89)
+        Me.btnDeleteAll.TabIndex = 78
+        Me.btnDeleteAll.Text = "Delete All"
+        Me.btnDeleteAll.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnDeleteAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btnDeleteAll.UseVisualStyleBackColor = True
+        '
+        'Symbol
+        '
+        Me.Symbol.HeaderText = "Symbol"
+        Me.Symbol.Name = "Symbol"
+        Me.Symbol.Width = 250
+        '
         'dlgCustomSymbols
         '
         Me.AcceptButton = Me.btnOK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(635, 751)
-        Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.btnSave)
-        Me.Controls.Add(Me.dgvSymbols)
-        Me.Controls.Add(Me.btnOpen)
+        Me.ClientSize = New System.Drawing.Size(702, 816)
         Me.Controls.Add(Me.btnDeleteAll)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.btnOpen)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.dgvSymbols)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
@@ -205,14 +172,14 @@ Partial Class dlgCustomSymbols
 
     End Sub
     Friend WithEvents dgvSymbols As System.Windows.Forms.DataGridView
-    Friend WithEvents btnDeleteAll As Tundra.StylizedButton
-    Friend WithEvents btnOpen As Tundra.StylizedButton
-    Friend WithEvents btnSave As Tundra.StylizedButton
     Friend WithEvents dlgOpen As System.Windows.Forms.OpenFileDialog
     Friend WithEvents dlgSave As System.Windows.Forms.SaveFileDialog
-    Friend WithEvents Symbol As DataGridViewTextBoxColumn
     Friend WithEvents ttMain As ToolTip
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents btnOK As Button
     Friend WithEvents btnCancel As Button
+    Friend WithEvents btnSave As Button
+    Friend WithEvents btnOpen As Button
+    Friend WithEvents btnDeleteAll As Button
+    Friend WithEvents Symbol As DataGridViewTextBoxColumn
 End Class

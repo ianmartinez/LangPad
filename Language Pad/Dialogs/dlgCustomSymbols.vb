@@ -75,16 +75,4 @@ Public Class dlgCustomSymbols
             File.WriteAllText(dlgSave.FileName, CustomTXT)
         End If
     End Sub
-
-    Private Sub dlgSave_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles dlgSave.FileOk
-
-    End Sub
-
-    Private Sub dlgOpen_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles dlgOpen.FileOk
-
-    End Sub
-
-    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
 End Class

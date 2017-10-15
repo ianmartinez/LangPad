@@ -26,6 +26,18 @@ Partial Class NotebookEditor
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NotebookEditor))
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.DoubleBufferedPanel2 = New Tundra.DoubleBufferedPanel()
+        Me.txtLanguage = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnGo = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtInfo = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cbEmbed = New System.Windows.Forms.CheckBox()
+        Me.txtAuthor = New System.Windows.Forms.TextBox()
+        Me.txtWebsite = New System.Windows.Forms.TextBox()
+        Me.txtTitle = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.DocumentToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
         Me.lbPages = New System.Windows.Forms.ListBox()
@@ -43,18 +55,6 @@ Partial Class NotebookEditor
         Me.ExportToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DictionaryToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.txtLanguage = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnGo = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtInfo = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.cbEmbed = New System.Windows.Forms.CheckBox()
-        Me.txtAuthor = New System.Windows.Forms.TextBox()
-        Me.txtWebsite = New System.Windows.Forms.TextBox()
-        Me.txtTitle = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.DoubleBufferedPanel2.SuspendLayout()
         Me.DocumentToolStripContainer.ContentPanel.SuspendLayout()
         Me.DocumentToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -86,183 +86,6 @@ Partial Class NotebookEditor
         Me.DoubleBufferedPanel2.Padding = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(524, 597)
         Me.DoubleBufferedPanel2.TabIndex = 78
-        '
-        'DocumentToolStripContainer
-        '
-        '
-        'DocumentToolStripContainer.BottomToolStripPanel
-        '
-        '
-        'DocumentToolStripContainer.ContentPanel
-        '
-        Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel1)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(524, 313)
-        Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        '
-        'DocumentToolStripContainer.LeftToolStripPanel
-        '
-        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 597)
-        Me.DocumentToolStripContainer.Name = "DocumentToolStripContainer"
-        '
-        'DocumentToolStripContainer.RightToolStripPanel
-        '
-        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(524, 344)
-        Me.DocumentToolStripContainer.TabIndex = 81
-        Me.DocumentToolStripContainer.Text = "ToolStripContainer1"
-        '
-        'DocumentToolStripContainer.TopToolStripPanel
-        '
-        Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.DocumentToolStrip)
-        '
-        'StylizedPanel1
-        '
-        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedPanel1.Controls.Add(Me.lbPages)
-        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 0)
-        Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(524, 313)
-        Me.StylizedPanel1.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Col" &
-    "or$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
-        Me.StylizedPanel1.TabIndex = 80
-        '
-        'lbPages
-        '
-        Me.lbPages.BackColor = System.Drawing.Color.White
-        Me.lbPages.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.lbPages.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbPages.ForeColor = System.Drawing.Color.Black
-        Me.lbPages.IntegralHeight = False
-        Me.lbPages.ItemHeight = 25
-        Me.lbPages.Location = New System.Drawing.Point(2, 0)
-        Me.lbPages.Margin = New System.Windows.Forms.Padding(4)
-        Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(522, 313)
-        Me.lbPages.TabIndex = 15
-        '
-        'DocumentToolStrip
-        '
-        Me.DocumentToolStrip.Dock = System.Windows.Forms.DockStyle.None
-        Me.DocumentToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.DocumentToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton, Me.ToolStripSeparator4, Me.DictionaryToolStripButton})
-        Me.DocumentToolStrip.Location = New System.Drawing.Point(0, 0)
-        Me.DocumentToolStrip.Name = "DocumentToolStrip"
-        Me.DocumentToolStrip.Size = New System.Drawing.Size(524, 31)
-        Me.DocumentToolStrip.Stretch = True
-        Me.DocumentToolStrip.TabIndex = 0
-        '
-        'PageUpToolStripButton
-        '
-        Me.PageUpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PageUpToolStripButton.Image = CType(resources.GetObject("PageUpToolStripButton.Image"), System.Drawing.Image)
-        Me.PageUpToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.PageUpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PageUpToolStripButton.Name = "PageUpToolStripButton"
-        Me.PageUpToolStripButton.Size = New System.Drawing.Size(28, 28)
-        Me.PageUpToolStripButton.Text = "Move Page Up"
-        '
-        'PageDownToolStripButton
-        '
-        Me.PageDownToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PageDownToolStripButton.Image = CType(resources.GetObject("PageDownToolStripButton.Image"), System.Drawing.Image)
-        Me.PageDownToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.PageDownToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PageDownToolStripButton.Name = "PageDownToolStripButton"
-        Me.PageDownToolStripButton.Size = New System.Drawing.Size(28, 28)
-        Me.PageDownToolStripButton.Text = "Move Page Down"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
-        '
-        'AddToolStripButton
-        '
-        Me.AddToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.AddToolStripButton.Image = CType(resources.GetObject("AddToolStripButton.Image"), System.Drawing.Image)
-        Me.AddToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.AddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.AddToolStripButton.Name = "AddToolStripButton"
-        Me.AddToolStripButton.Size = New System.Drawing.Size(28, 28)
-        Me.AddToolStripButton.Text = "Add Page"
-        '
-        'RemoveToolStripButton
-        '
-        Me.RemoveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.RemoveToolStripButton.Image = CType(resources.GetObject("RemoveToolStripButton.Image"), System.Drawing.Image)
-        Me.RemoveToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.RemoveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.RemoveToolStripButton.Name = "RemoveToolStripButton"
-        Me.RemoveToolStripButton.Size = New System.Drawing.Size(28, 28)
-        Me.RemoveToolStripButton.Text = "Remove Page"
-        '
-        'DuplicateToolStripButton
-        '
-        Me.DuplicateToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.DuplicateToolStripButton.Image = CType(resources.GetObject("DuplicateToolStripButton.Image"), System.Drawing.Image)
-        Me.DuplicateToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.DuplicateToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.DuplicateToolStripButton.Name = "DuplicateToolStripButton"
-        Me.DuplicateToolStripButton.Size = New System.Drawing.Size(28, 28)
-        Me.DuplicateToolStripButton.Text = "Duplicate Page"
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 31)
-        '
-        'RenameToolStripButton
-        '
-        Me.RenameToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.RenameToolStripButton.Image = CType(resources.GetObject("RenameToolStripButton.Image"), System.Drawing.Image)
-        Me.RenameToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.RenameToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.RenameToolStripButton.Name = "RenameToolStripButton"
-        Me.RenameToolStripButton.Size = New System.Drawing.Size(28, 28)
-        Me.RenameToolStripButton.Text = "Rename Page"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 31)
-        '
-        'ImportToolStripButton
-        '
-        Me.ImportToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ImportToolStripButton.Image = CType(resources.GetObject("ImportToolStripButton.Image"), System.Drawing.Image)
-        Me.ImportToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ImportToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ImportToolStripButton.Name = "ImportToolStripButton"
-        Me.ImportToolStripButton.Size = New System.Drawing.Size(28, 28)
-        Me.ImportToolStripButton.Text = "Import Page"
-        '
-        'ExportToolStripButton
-        '
-        Me.ExportToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ExportToolStripButton.Image = CType(resources.GetObject("ExportToolStripButton.Image"), System.Drawing.Image)
-        Me.ExportToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ExportToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ExportToolStripButton.Name = "ExportToolStripButton"
-        Me.ExportToolStripButton.Size = New System.Drawing.Size(28, 28)
-        Me.ExportToolStripButton.Text = "Export Page"
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 31)
-        '
-        'DictionaryToolStripButton
-        '
-        Me.DictionaryToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.DictionaryToolStripButton.Image = CType(resources.GetObject("DictionaryToolStripButton.Image"), System.Drawing.Image)
-        Me.DictionaryToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.DictionaryToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.DictionaryToolStripButton.Name = "DictionaryToolStripButton"
-        Me.DictionaryToolStripButton.Size = New System.Drawing.Size(28, 28)
-        Me.DictionaryToolStripButton.Text = "Dictionary"
         '
         'txtLanguage
         '
@@ -390,6 +213,183 @@ Partial Class NotebookEditor
         Me.Label1.Size = New System.Drawing.Size(59, 25)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Title:"
+        '
+        'DocumentToolStripContainer
+        '
+        '
+        'DocumentToolStripContainer.BottomToolStripPanel
+        '
+        '
+        'DocumentToolStripContainer.ContentPanel
+        '
+        Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel1)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(524, 306)
+        Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
+        '
+        'DocumentToolStripContainer.LeftToolStripPanel
+        '
+        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 597)
+        Me.DocumentToolStripContainer.Name = "DocumentToolStripContainer"
+        '
+        'DocumentToolStripContainer.RightToolStripPanel
+        '
+        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(524, 344)
+        Me.DocumentToolStripContainer.TabIndex = 81
+        Me.DocumentToolStripContainer.Text = "ToolStripContainer1"
+        '
+        'DocumentToolStripContainer.TopToolStripPanel
+        '
+        Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.DocumentToolStrip)
+        '
+        'StylizedPanel1
+        '
+        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedPanel1.Controls.Add(Me.lbPages)
+        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 0)
+        Me.StylizedPanel1.Name = "StylizedPanel1"
+        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(524, 306)
+        Me.StylizedPanel1.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Col" &
+    "or$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
+        Me.StylizedPanel1.TabIndex = 80
+        '
+        'lbPages
+        '
+        Me.lbPages.BackColor = System.Drawing.Color.White
+        Me.lbPages.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lbPages.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbPages.ForeColor = System.Drawing.Color.Black
+        Me.lbPages.IntegralHeight = False
+        Me.lbPages.ItemHeight = 25
+        Me.lbPages.Location = New System.Drawing.Point(2, 0)
+        Me.lbPages.Margin = New System.Windows.Forms.Padding(4)
+        Me.lbPages.Name = "lbPages"
+        Me.lbPages.Size = New System.Drawing.Size(522, 306)
+        Me.lbPages.TabIndex = 15
+        '
+        'DocumentToolStrip
+        '
+        Me.DocumentToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.DocumentToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.DocumentToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton, Me.ToolStripSeparator4, Me.DictionaryToolStripButton})
+        Me.DocumentToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.DocumentToolStrip.Name = "DocumentToolStrip"
+        Me.DocumentToolStrip.Size = New System.Drawing.Size(524, 38)
+        Me.DocumentToolStrip.Stretch = True
+        Me.DocumentToolStrip.TabIndex = 0
+        '
+        'PageUpToolStripButton
+        '
+        Me.PageUpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.PageUpToolStripButton.Image = CType(resources.GetObject("PageUpToolStripButton.Image"), System.Drawing.Image)
+        Me.PageUpToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.PageUpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.PageUpToolStripButton.Name = "PageUpToolStripButton"
+        Me.PageUpToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.PageUpToolStripButton.Text = "Move Page Up"
+        '
+        'PageDownToolStripButton
+        '
+        Me.PageDownToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.PageDownToolStripButton.Image = CType(resources.GetObject("PageDownToolStripButton.Image"), System.Drawing.Image)
+        Me.PageDownToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.PageDownToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.PageDownToolStripButton.Name = "PageDownToolStripButton"
+        Me.PageDownToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.PageDownToolStripButton.Text = "Move Page Down"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 38)
+        '
+        'AddToolStripButton
+        '
+        Me.AddToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.AddToolStripButton.Image = CType(resources.GetObject("AddToolStripButton.Image"), System.Drawing.Image)
+        Me.AddToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.AddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.AddToolStripButton.Name = "AddToolStripButton"
+        Me.AddToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.AddToolStripButton.Text = "Add Page"
+        '
+        'RemoveToolStripButton
+        '
+        Me.RemoveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.RemoveToolStripButton.Image = CType(resources.GetObject("RemoveToolStripButton.Image"), System.Drawing.Image)
+        Me.RemoveToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.RemoveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.RemoveToolStripButton.Name = "RemoveToolStripButton"
+        Me.RemoveToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.RemoveToolStripButton.Text = "Remove Page"
+        '
+        'DuplicateToolStripButton
+        '
+        Me.DuplicateToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.DuplicateToolStripButton.Image = CType(resources.GetObject("DuplicateToolStripButton.Image"), System.Drawing.Image)
+        Me.DuplicateToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.DuplicateToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.DuplicateToolStripButton.Name = "DuplicateToolStripButton"
+        Me.DuplicateToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.DuplicateToolStripButton.Text = "Duplicate Page"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
+        '
+        'RenameToolStripButton
+        '
+        Me.RenameToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.RenameToolStripButton.Image = CType(resources.GetObject("RenameToolStripButton.Image"), System.Drawing.Image)
+        Me.RenameToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.RenameToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.RenameToolStripButton.Name = "RenameToolStripButton"
+        Me.RenameToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.RenameToolStripButton.Text = "Rename Page"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
+        '
+        'ImportToolStripButton
+        '
+        Me.ImportToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ImportToolStripButton.Image = CType(resources.GetObject("ImportToolStripButton.Image"), System.Drawing.Image)
+        Me.ImportToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ImportToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ImportToolStripButton.Name = "ImportToolStripButton"
+        Me.ImportToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.ImportToolStripButton.Text = "Import Page"
+        '
+        'ExportToolStripButton
+        '
+        Me.ExportToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ExportToolStripButton.Image = CType(resources.GetObject("ExportToolStripButton.Image"), System.Drawing.Image)
+        Me.ExportToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ExportToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ExportToolStripButton.Name = "ExportToolStripButton"
+        Me.ExportToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.ExportToolStripButton.Text = "Export Page"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 38)
+        '
+        'DictionaryToolStripButton
+        '
+        Me.DictionaryToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.DictionaryToolStripButton.Image = CType(resources.GetObject("DictionaryToolStripButton.Image"), System.Drawing.Image)
+        Me.DictionaryToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.DictionaryToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.DictionaryToolStripButton.Name = "DictionaryToolStripButton"
+        Me.DictionaryToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.DictionaryToolStripButton.Text = "Dictionary"
         '
         'NotebookEditor
         '

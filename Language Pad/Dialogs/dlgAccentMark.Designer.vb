@@ -30,18 +30,18 @@ Partial Class dlgAccentMark
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnAdd = New Tundra.StylizedButton()
         Me.lblResult = New System.Windows.Forms.Label()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
-        Me.btnCopy = New Tundra.StylizedButton()
         Me.AccentsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnCopy = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 260)
+        Me.Label1.Location = New System.Drawing.Point(13, 371)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(112, 25)
@@ -51,7 +51,7 @@ Partial Class dlgAccentMark
         'txtCharacter
         '
         Me.txtCharacter.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCharacter.Location = New System.Drawing.Point(13, 293)
+        Me.txtCharacter.Location = New System.Drawing.Point(13, 404)
         Me.txtCharacter.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCharacter.MaxLength = 100
         Me.txtCharacter.Name = "txtCharacter"
@@ -62,7 +62,7 @@ Partial Class dlgAccentMark
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 355)
+        Me.Label2.Location = New System.Drawing.Point(13, 466)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 25)
@@ -77,7 +77,7 @@ Partial Class dlgAccentMark
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(549, 780)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(549, 891)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -108,83 +108,56 @@ Partial Class dlgAccentMark
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
-        'btnAdd
-        '
-        Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAdd.BackColor = System.Drawing.Color.Transparent
-        Me.btnAdd.BackgroundImage = CType(resources.GetObject("btnAdd.BackgroundImage"), System.Drawing.Image)
-        Me.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnAdd.FlatAppearance.BorderSize = 0
-        Me.btnAdd.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAdd.ForeColor = System.Drawing.Color.Black
-        Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
-        Me.btnAdd.Location = New System.Drawing.Point(24, 774)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
-        Me.btnAdd.Size = New System.Drawing.Size(72, 68)
-        Me.btnAdd.Style = resources.GetString("btnAdd.Style")
-        Me.btnAdd.TabIndex = 4
-        Me.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ttMain.SetToolTip(Me.btnAdd, "Add To Custom Characters")
-        Me.btnAdd.UseCompatibleTextRendering = True
-        Me.btnAdd.UseVisualStyleBackColor = False
-        '
         'lblResult
         '
         Me.lblResult.BackColor = System.Drawing.Color.Transparent
         Me.lblResult.Font = New System.Drawing.Font("Calibri", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblResult.ForeColor = System.Drawing.Color.Black
-        Me.lblResult.Location = New System.Drawing.Point(13, 13)
+        Me.lblResult.Location = New System.Drawing.Point(13, 110)
         Me.lblResult.Margin = New System.Windows.Forms.Padding(4)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(837, 239)
+        Me.lblResult.Size = New System.Drawing.Size(837, 253)
         Me.lblResult.TabIndex = 69
         Me.lblResult.Text = "a"
         Me.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnCopy
-        '
-        Me.btnCopy.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCopy.BackColor = System.Drawing.Color.Transparent
-        Me.btnCopy.BackgroundImage = CType(resources.GetObject("btnCopy.BackgroundImage"), System.Drawing.Image)
-        Me.btnCopy.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCopy.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnCopy.FlatAppearance.BorderSize = 0
-        Me.btnCopy.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.btnCopy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnCopy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCopy.ForeColor = System.Drawing.Color.Black
-        Me.btnCopy.Image = CType(resources.GetObject("btnCopy.Image"), System.Drawing.Image)
-        Me.btnCopy.Location = New System.Drawing.Point(104, 774)
-        Me.btnCopy.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnCopy.Name = "btnCopy"
-        Me.btnCopy.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
-        Me.btnCopy.Size = New System.Drawing.Size(72, 68)
-        Me.btnCopy.Style = resources.GetString("btnCopy.Style")
-        Me.btnCopy.TabIndex = 5
-        Me.btnCopy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCopy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ttMain.SetToolTip(Me.btnCopy, "Copy To Clipboard")
-        Me.btnCopy.UseCompatibleTextRendering = True
-        Me.btnCopy.UseVisualStyleBackColor = False
         '
         'AccentsLayoutPanel
         '
         Me.AccentsLayoutPanel.AutoScroll = True
         Me.AccentsLayoutPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
         Me.AccentsLayoutPanel.BackColor = System.Drawing.Color.Transparent
-        Me.AccentsLayoutPanel.Location = New System.Drawing.Point(13, 388)
+        Me.AccentsLayoutPanel.Location = New System.Drawing.Point(13, 499)
         Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
         Me.AccentsLayoutPanel.Size = New System.Drawing.Size(837, 382)
         Me.AccentsLayoutPanel.TabIndex = 3
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
+        Me.btnAdd.Location = New System.Drawing.Point(13, 13)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(214, 89)
+        Me.btnAdd.TabIndex = 70
+        Me.btnAdd.Text = "Add Character"
+        Me.btnAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'btnCopy
+        '
+        Me.btnCopy.Image = CType(resources.GetObject("btnCopy.Image"), System.Drawing.Image)
+        Me.btnCopy.Location = New System.Drawing.Point(235, 13)
+        Me.btnCopy.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCopy.Name = "btnCopy"
+        Me.btnCopy.Size = New System.Drawing.Size(214, 89)
+        Me.btnCopy.TabIndex = 71
+        Me.btnCopy.Text = "Copy Character"
+        Me.btnCopy.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnCopy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btnCopy.UseVisualStyleBackColor = True
         '
         'dlgAccentMark
         '
@@ -192,11 +165,11 @@ Partial Class dlgAccentMark
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(863, 859)
-        Me.Controls.Add(Me.lblResult)
-        Me.Controls.Add(Me.AccentsLayoutPanel)
+        Me.ClientSize = New System.Drawing.Size(863, 970)
         Me.Controls.Add(Me.btnCopy)
         Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.lblResult)
+        Me.Controls.Add(Me.AccentsLayoutPanel)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Label2)
@@ -218,11 +191,11 @@ Partial Class dlgAccentMark
     Friend WithEvents txtCharacter As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents btnAdd As Tundra.StylizedButton
     Friend WithEvents lblResult As System.Windows.Forms.Label
     Friend WithEvents ttMain As ToolTip
-    Friend WithEvents btnCopy As Tundra.StylizedButton
     Friend WithEvents btnOK As Button
     Friend WithEvents btnCancel As Button
     Friend WithEvents AccentsLayoutPanel As FlowLayoutPanel
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents btnCopy As Button
 End Class

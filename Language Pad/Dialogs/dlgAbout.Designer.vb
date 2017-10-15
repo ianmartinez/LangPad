@@ -135,7 +135,7 @@ Partial Class dlgAbout
         Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox3.Size = New System.Drawing.Size(1030, 585)
         Me.TextBox3.TabIndex = 9
-        Me.TextBox3.Text = "Most of the icons" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "   •Adwaita Icons https://github.com/GNOME/adwaita-icon-theme"
+        Me.TextBox3.Text = resources.GetString("TextBox3.Text")
         '
         'StylizedPanel1
         '

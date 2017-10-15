@@ -3,6 +3,7 @@ Version 8.6 (October 31, 2017)
    •Add Space theme
    •Theme saved on shutdown
    •Tweaked multiple themes      
+   •Changed icon theme to Galaxy
 Version 8.5 (October 13, 2017)	
    •Help file included   
    •Minor changes to splash screen

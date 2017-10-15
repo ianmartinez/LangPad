@@ -112,10 +112,6 @@ Public Class dlgStyle
         ApplyStyle()
     End Sub
 
-    Private Sub btnOK_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub btnDeleteAll_Click(sender As Object, e As EventArgs) Handles btnDeleteAll.Click
         StyleFont = New Font("Calibri", 11)
         StyleAlignment = HorizontalAlignment.Left
@@ -126,9 +122,5 @@ Public Class dlgStyle
 
         nudIndent.Value = StyleIndent
         nudOffset.Value = StyleCharOffset
-    End Sub
-
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Close()
     End Sub
 End Class
