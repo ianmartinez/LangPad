@@ -180,6 +180,7 @@ Public Class frmMain
         End If
 
         My.Settings.Theme = ThemeCombo.SelectedItem
+        My.Settings.Save()
     End Sub
 
     Private Sub InsertImage(sender As Object, e As EventArgs)
