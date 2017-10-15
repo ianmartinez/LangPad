@@ -204,9 +204,11 @@ Public Class frmDictionary
     End Sub
 
     Private Sub FontToolStripButton_Click(sender As Object, e As EventArgs) Handles FontToolStripButton.Click
+        dlgFont.Color = dgvDictionary.DefaultCellStyle.ForeColor
         dlgFont.Font = dgvDictionary.DefaultCellStyle.Font
         If dlgFont.ShowDialog = DialogResult.OK Then
             dgvDictionary.DefaultCellStyle.Font = dlgFont.Font
+            dgvDictionary.DefaultCellStyle.ForeColor = dlgFont.Color
         End If
     End Sub
 
