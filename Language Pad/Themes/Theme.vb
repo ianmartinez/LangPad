@@ -63,6 +63,29 @@ Public Class SnowTheme
     End Function
 End Class
 
+Public Class BreezeTheme
+    Inherits Theme
+
+    Public Sub New()
+        MyBase.New("Breeze")
+
+        Color1 = Color.FromArgb(255, 243, 244, 245)
+        Color2 = Color.FromArgb(255, 243, 244, 245)
+        DialogBack = SystemColors.Control
+        PanelBack = Color.FromArgb(255, 243, 244, 245)
+
+        VerticalMenuGradient = False
+    End Sub
+
+    Public Overrides Function GetToolStripRenderer() As ToolStripRenderer
+        Return New clsBreezeToolstripRenderer
+    End Function
+
+    Public Overrides Function GetMenuRenderer() As ToolStripRenderer
+        Return New clsBreezeMenuRenderer
+    End Function
+End Class
+
 Public Class NightTheme
     Inherits Theme
 

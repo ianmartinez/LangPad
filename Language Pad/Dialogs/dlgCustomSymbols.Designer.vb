@@ -25,6 +25,7 @@ Partial Class dlgCustomSymbols
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgCustomSymbols))
         Me.dgvSymbols = New System.Windows.Forms.DataGridView()
+        Me.Symbol = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
@@ -34,7 +35,6 @@ Partial Class dlgCustomSymbols
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnOpen = New System.Windows.Forms.Button()
         Me.btnDeleteAll = New System.Windows.Forms.Button()
-        Me.Symbol = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvSymbols, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -53,6 +53,12 @@ Partial Class dlgCustomSymbols
         Me.dgvSymbols.RowTemplate.Height = 24
         Me.dgvSymbols.Size = New System.Drawing.Size(658, 611)
         Me.dgvSymbols.TabIndex = 2
+        '
+        'Symbol
+        '
+        Me.Symbol.HeaderText = "Symbol"
+        Me.Symbol.Name = "Symbol"
+        Me.Symbol.Width = 250
         '
         'dlgOpen
         '
@@ -139,12 +145,6 @@ Partial Class dlgCustomSymbols
         Me.btnDeleteAll.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btnDeleteAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnDeleteAll.UseVisualStyleBackColor = True
-        '
-        'Symbol
-        '
-        Me.Symbol.HeaderText = "Symbol"
-        Me.Symbol.Name = "Symbol"
-        Me.Symbol.Width = 250
         '
         'dlgCustomSymbols
         '

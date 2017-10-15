@@ -1199,6 +1199,8 @@ Public Class frmMain
             SetTheme(New IceTheme)
         ElseIf ThemeCombo.SelectedItem.ToString().Equals("Snow") Then
             SetTheme(New SnowTheme)
+        ElseIf ThemeCombo.SelectedItem.ToString().Equals("Breeze") Then
+            SetTheme(New BreezeTheme)
         ElseIf ThemeCombo.SelectedItem.ToString().Equals("Space") Then
             SetTheme(New SpaceTheme)
         ElseIf ThemeCombo.SelectedItem.ToString().Equals("Night") Then

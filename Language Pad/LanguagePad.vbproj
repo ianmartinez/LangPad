@@ -123,6 +123,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Themes\DesertTheme.vb" />
+    <Compile Include="Themes\BreezeTheme.vb" />
     <Compile Include="Themes\SpaceTheme.vb" />
     <Compile Include="Themes\OliveTheme.vb" />
     <Compile Include="Themes\LunaTheme.vb" />

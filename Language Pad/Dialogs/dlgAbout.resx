@@ -132,9 +132,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
   <data name="TextBox2.Text" xml:space="preserve">
     <value>Version 8.6 (October 31, 2017)	
    •Redesigned splash screen  
-   •Add Space theme
+   •Add Space &amp; Breeze theme
    •Theme saved on shutdown
    •Tweaked multiple themes      
+   •Changed icon theme to Breeze
 Version 8.5 (October 13, 2017)	
    •Help file included   
    •Minor changes to splash screen
@@ -329,7 +330,7 @@ Version 1.0 (April 24, 2015)
    •Initial Release</value>
   </data>
   <data name="TextBox3.Text" xml:space="preserve">
-    <value>[Elementary Icons]
+    <value>[Breeze Icons]
 Website: https://github.com/LibreOffice/core/tree/master/icon-themes
 
 GNU GENERAL PUBLIC LICENSE

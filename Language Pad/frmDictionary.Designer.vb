@@ -586,7 +586,7 @@ Partial Class frmDictionary
         Me.CustomSymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CustomSymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CustomSymbolsToolStripButton.Name = "CustomSymbolsToolStripButton"
-        Me.CustomSymbolsToolStripButton.Size = New System.Drawing.Size(30, 35)
+        Me.CustomSymbolsToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.CustomSymbolsToolStripButton.Text = "Custom Symbols"
         '
         'AccentMarkToolStripButton
