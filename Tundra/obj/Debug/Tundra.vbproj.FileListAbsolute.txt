@@ -56,3 +56,4 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.Core
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.dll
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.xml
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.pdb
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbprojResolveAssemblyReference.cache
