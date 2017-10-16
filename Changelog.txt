@@ -6,6 +6,9 @@ Version 9.0 (October 31, 2017)
    •Tweaked multiple themes      
    •Changed icon theme to Breeze
    •Show/Hide sidebar
+   •Show/Hide toolstrips
+   •Show/Hide statusbar
+   •Full/Minimal mode toggles
    •Dictionary form now respects font dialog color
 Version 8.5 (October 13, 2017)	
    •Help file included   

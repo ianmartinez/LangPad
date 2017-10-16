@@ -94,7 +94,7 @@ Partial Class ssLoading
         Me.Controls.Add(Me.lblLoading)
         Me.Controls.Add(Me.pbLoading)
         Me.Controls.Add(Me.StylizedPanel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False

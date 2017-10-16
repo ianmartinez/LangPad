@@ -1249,4 +1249,36 @@ Public Class frmMain
     Private Sub ToggleSidebarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleSidebarToolStripMenuItem.Click
         SplitContainer2.Panel2Collapsed = SplitContainer2.Panel2Collapsed Xor True
     End Sub
+
+    Private Sub ToggleCommonToolbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleCommonToolbarToolStripMenuItem.Click
+        FileToolStrip.Visible = FileToolStrip.Visible Xor True
+    End Sub
+
+    Private Sub ToogleFormattingToolbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToogleFormattingToolbarToolStripMenuItem.Click
+        FontToolStrip.Visible = FontToolStrip.Visible Xor True
+    End Sub
+
+    Private Sub ToggleLinguisticsToolbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleLinguisticsToolbarToolStripMenuItem.Click
+        LinguisticsToolStrip.Visible = LinguisticsToolStrip.Visible Xor True
+    End Sub
+
+    Private Sub ToggleStatusbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleStatusbarToolStripMenuItem.Click
+        DataToolStrip.Visible = DataToolStrip.Visible Xor True
+    End Sub
+
+    Private Sub FullModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FullModeToolStripMenuItem.Click
+        SplitContainer2.Panel2Collapsed = False
+        FileToolStrip.Visible = True
+        FontToolStrip.Visible = True
+        LinguisticsToolStrip.Visible = True
+        DataToolStrip.Visible = True
+    End Sub
+
+    Private Sub MinimalModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimalModeToolStripMenuItem.Click
+        SplitContainer2.Panel2Collapsed = True
+        FileToolStrip.Visible = False
+        FontToolStrip.Visible = False
+        LinguisticsToolStrip.Visible = False
+        DataToolStrip.Visible = False
+    End Sub
 End Class

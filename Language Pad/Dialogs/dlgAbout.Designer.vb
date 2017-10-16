@@ -89,7 +89,7 @@ Partial Class dlgAbout
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(6)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(6)
-        Me.TabPage2.Size = New System.Drawing.Size(1038, 593)
+        Me.TabPage2.Size = New System.Drawing.Size(1038, 617)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Changelog"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -106,7 +106,7 @@ Partial Class dlgAbout
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox2.Size = New System.Drawing.Size(1026, 581)
+        Me.TextBox2.Size = New System.Drawing.Size(1026, 605)
         Me.TextBox2.TabIndex = 8
         Me.TextBox2.Text = resources.GetString("TextBox2.Text")
         '
