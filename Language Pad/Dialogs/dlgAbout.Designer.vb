@@ -34,6 +34,7 @@ Partial Class dlgAbout
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
         Me.lblLanguagePad = New System.Windows.Forms.Label()
+        Me.lblVersion = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -46,11 +47,11 @@ Partial Class dlgAbout
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Location = New System.Drawing.Point(15, 252)
+        Me.TabControl1.Location = New System.Drawing.Point(15, 228)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(6)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1054, 640)
+        Me.TabControl1.Size = New System.Drawing.Size(1054, 664)
         Me.TabControl1.TabIndex = 9
         '
         'TabPage1
@@ -60,7 +61,7 @@ Partial Class dlgAbout
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(6)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(6)
-        Me.TabPage1.Size = New System.Drawing.Size(1038, 593)
+        Me.TabPage1.Size = New System.Drawing.Size(1038, 617)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "License"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -77,7 +78,7 @@ Partial Class dlgAbout
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(1026, 581)
+        Me.TextBox1.Size = New System.Drawing.Size(1026, 605)
         Me.TextBox1.TabIndex = 7
         Me.TextBox1.Text = resources.GetString("TextBox1.Text")
         '
@@ -141,27 +142,41 @@ Partial Class dlgAbout
         '
         Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
         Me.StylizedPanel1.Controls.Add(Me.lblLanguagePad)
+        Me.StylizedPanel1.Controls.Add(Me.lblVersion)
         Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(6)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(1084, 240)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(1084, 218)
         Me.StylizedPanel1.Style = "Colors=#cf6c36|#b21e54" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-45" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=98, 44" &
     ", 44" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1"
-        Me.StylizedPanel1.TabIndex = 13
+        Me.StylizedPanel1.TabIndex = 81
         '
         'lblLanguagePad
         '
         Me.lblLanguagePad.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblLanguagePad.Font = New System.Drawing.Font("Tahoma", 28.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLanguagePad.Font = New System.Drawing.Font("Tahoma", 22.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
         Me.lblLanguagePad.Location = New System.Drawing.Point(0, 0)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(1084, 240)
+        Me.lblLanguagePad.Size = New System.Drawing.Size(1084, 164)
         Me.lblLanguagePad.TabIndex = 12
         Me.lblLanguagePad.Text = "Language Pad"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblVersion
+        '
+        Me.lblVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblVersion.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.lblVersion.ForeColor = System.Drawing.Color.White
+        Me.lblVersion.Location = New System.Drawing.Point(0, 164)
+        Me.lblVersion.Margin = New System.Windows.Forms.Padding(4)
+        Me.lblVersion.Name = "lblVersion"
+        Me.lblVersion.Size = New System.Drawing.Size(1084, 54)
+        Me.lblVersion.TabIndex = 74
+        Me.lblVersion.Text = "Version 1.0"
+        Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dlgAbout
         '
@@ -196,7 +211,8 @@ Partial Class dlgAbout
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents lblLanguagePad As Label
     Friend WithEvents ttMain As ToolTip
     Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
+    Friend WithEvents lblLanguagePad As Label
+    Friend WithEvents lblVersion As Label
 End Class

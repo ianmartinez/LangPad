@@ -30,15 +30,15 @@
     Public clrBreezeImageMarginBG_Color1 As Color = Color.FromArgb(255, 228, 228, 228)
     Public clrBreezeImageMarginBG_Color2 As Color = Color.FromArgb(255, 238, 238, 238)
 
-    Public clBreeze_Selected1 As Color = Color.FromArgb(255, 223, 242, 252)
-    Public clBreeze_Selected2 As Color = Color.FromArgb(255, 223, 242, 252)
-    Public clBreeze_SelectedBorder As Color = Color.FromArgb(255, 148, 188, 209)
-    Public clBreeze_SelectedShadow As Color = Color.FromArgb(255, 240, 240, 240)
+    Public clBreeze_Selected1 As Color = Color.FromArgb(100, 223, 242, 252)
+    Public clBreeze_Selected2 As Color = Color.FromArgb(205, 223, 242, 252)
+    Public clBreeze_SelectedBorder As Color = Color.FromArgb(225, 148, 188, 209)
+    Public clBreeze_SelectedShadow As Color = Color.FromArgb(225, 240, 240, 240)
 
-    Public clBreeze_Drop1 As Color = Color.FromArgb(255, 180, 198, 207)
-    Public clBreeze_Drop2 As Color = Color.FromArgb(255, 180, 198, 207)
-    Public clBreeze_DropBorder As Color = Color.FromArgb(255, 145, 160, 167)
-    Public clBreeze_DropShadow As Color = Color.FromArgb(255, 215, 230, 238)
+    Public clBreeze_Drop1 As Color = Color.FromArgb(100, 180, 198, 207)
+    Public clBreeze_Drop2 As Color = Color.FromArgb(205, 180, 198, 207)
+    Public clBreeze_DropBorder As Color = Color.FromArgb(225, 145, 160, 167)
+    Public clBreeze_DropShadow As Color = Color.FromArgb(225, 215, 230, 238)
 
     Public clrBreezeSep As Color = Color.FromArgb(255, 215, 215, 215)
     Public clrBreezeSepWhite As Color = Color.FromArgb(255, 255, 255, 255)
@@ -246,7 +246,7 @@ Public Class clsBreezeToolstripRenderer
 
     '// Render container background gradient
     Protected Overrides Sub OnRenderToolStripBackground(ByVal e As ToolStripRenderEventArgs)
-        MyBase.OnRenderToolStripBackground(e)
+        ' MyBase.OnRenderToolStripBackground(e)
 
         Dim b As New Drawing2D.LinearGradientBrush(e.AffectedBounds, clrBreezeHorBG_Color1, clrBreezeHorBG_Color2, Drawing2D.LinearGradientMode.Vertical)
         Dim shadow As New SolidBrush(clrBreezeVerBG_Shadow)
@@ -257,24 +257,24 @@ Public Class clsBreezeToolstripRenderer
 
     '// Render button selected and pressed state
     Protected Overrides Sub OnRenderButtonBackground(ByVal e As ToolStripItemRenderEventArgs)
-        MyBase.OnRenderButtonBackground(e)
+        'MyBase.OnRenderButtonBackground(e)
         If e.Item.Selected Or CType(e.Item, ToolStripButton).Checked Then
-            Dim rectBorder As New Rectangle(0, 0, e.Item.Width - 0, e.Item.Height - 0)
+            Dim rectBorder As New Rectangle(1, 1, e.Item.Width - 2, e.Item.Height - 2)
             Dim rect As New Rectangle(1, 1, e.Item.Width - 2, e.Item.Height - 2)
             Dim b As New Drawing2D.LinearGradientBrush(rect, clBreeze_Selected1, clBreeze_Selected2, Drawing2D.LinearGradientMode.Vertical)
-            Dim b2 As New SolidBrush(Color.FromArgb(255, 148, 188, 209))
+            Dim b2 As New Pen(clBreeze_SelectedBorder)
 
-            e.Graphics.FillRectangle(b2, rectBorder)
             e.Graphics.FillRectangle(b, rect)
+            e.Graphics.DrawRectangle(b2, rectBorder)
         End If
         If e.Item.Pressed Then
-            Dim rectBorder As New Rectangle(0, 0, e.Item.Width - 0, e.Item.Height - 0)
+            Dim rectBorder As New Rectangle(1, 1, e.Item.Width - 2, e.Item.Height - 2)
             Dim rect As New Rectangle(1, 1, e.Item.Width - 2, e.Item.Height - 2)
             Dim b As New Drawing2D.LinearGradientBrush(rect, clBreeze_Drop1, clBreeze_Drop2, Drawing2D.LinearGradientMode.Vertical)
-            Dim b2 As New SolidBrush(clBreeze_DropBorder)
+            Dim b2 As New Pen(clBreeze_DropBorder)
 
-            e.Graphics.FillRectangle(b2, rectBorder)
             e.Graphics.FillRectangle(b, rect)
+            e.Graphics.DrawRectangle(b2, rectBorder)
         End If
     End Sub
 End Class
