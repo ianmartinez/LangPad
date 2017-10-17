@@ -134,7 +134,7 @@ Partial Class dlgAccentMark
         Me.cbSmartReplace.Size = New System.Drawing.Size(185, 29)
         Me.cbSmartReplace.TabIndex = 72
         Me.cbSmartReplace.Text = "Smart Replace"
-        Me.ttMain.SetToolTip(Me.cbSmartReplace, "Combine certain combined characters into single characters." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A + ◌́ -> Á")
+        Me.ttMain.SetToolTip(Me.cbSmartReplace, "Combine certain Unicode combined characters into single characters." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A + ◌́ -> Á")
         Me.cbSmartReplace.UseVisualStyleBackColor = True
         '
         'AccentsLayoutPanel
