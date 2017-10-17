@@ -68,19 +68,20 @@ Namespace My.Resources
         '''5=̄
         '''6=̅
         '''7=̆
-        '''8=̇
-        '''9=̈
-        '''10=̉
-        '''11=̊
-        '''12=̋
-        '''13=̌
-        '''14=̏
-        '''15=̨
-        '''16=̧
-        '''17=̰
-        '''18=̱
-        '''19=̒
-        '''20=̓.
+        '''8=̑
+        '''9=̇
+        '''10=̈
+        '''11=̉
+        '''12=̊
+        '''13=̋
+        '''14=̌
+        '''15=̏
+        '''16=̨
+        '''17=̧
+        '''18=̰
+        '''19=̱
+        '''20=̒
+        '''21=̓.
         '''</summary>
         Friend ReadOnly Property Accents() As String
             Get
@@ -247,7 +248,12 @@ Namespace My.Resources
         
         '''<summary>
         '''  Looks up a localized string similar to 		&lt;style type=&quot;text/css&quot;&gt;
-        '''			table.table-style-three {
+        '''			body {
+        '''				padding: 1em;
+        '''			}
+        '''
+        '''			table {
+        '''				width: 100%;
         '''				font-family: verdana, arial, sans-serif;
         '''				font-size: 11px;
         '''				color: #333333;
@@ -255,18 +261,21 @@ Namespace My.Resources
         '''				border-color: #383838;
         '''				border-collapse: collapse;
         '''			}
-        '''			table.table-style-three th {
+        '''
+        '''			table th {
         '''				border-width: 1px;
         '''				padding: 8px;
         '''				border-style: solid;
-        '''				border-color: #dbdbdb;
-        '''				background-color: #c2c2c2;
+        '''				border-color: #000000;
+        '''				background-color: #525252;
         '''				color: #ffffff;
         '''			}
-        '''			table.table-style-three tr:hover td {
+        '''
+        '''			table tr:hover td {
         '''				cursor: pointer;
         '''			}
-        '''			table.table-st [rest of string was truncated]&quot;;.
+        '''
+        '''			table  [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property HtmlStyle() As String
             Get
@@ -281,8 +290,12 @@ Namespace My.Resources
         '''		&lt;title&gt;{0}&lt;/title&gt;
         '''	&lt;/head&gt;
         '''	&lt;body&gt;
+        '''		&lt;h1&gt;{0}&lt;/h1&gt;
+        '''		&lt;div&gt;
         '''{1}
+        '''		&lt;/div&gt;
         '''{2}
+        '''{3}
         '''	&lt;/body&gt;
         '''&lt;/html&gt;.
         '''</summary>
@@ -374,9 +387,111 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to &lt;table&gt;
+        '''  Looks up a localized string similar to Á=Á
+        '''á=á
+        '''Ǽ=Ǽ
+        '''ǽ=ǽ
+        '''Ć=Ć
+        '''c=ć
+        '''É=É
+        '''é=é
+        '''Ǵ=Ǵ
+        '''ǵ=ǵ
+        '''Í=Í
+        '''í=í
+        '''Ḱ=Ḱ
+        '''ḱ=ḱ
+        '''Ĺ=Ĺ
+        '''ĺ=ĺ
+        '''Ḿ=Ḿ
+        '''ḿ=ḿ
+        '''Ń=Ń
+        '''ń=ń
+        '''Ó=Ó
+        '''ó=ó
+        '''Ṕ=Ṕ
+        '''ṕ=ṕ
+        '''Ŕ=Ŕ
+        '''ŕ=ŕ
+        '''Ś=Ś
+        '''ś=ś
+        '''Ú=Ú
+        '''ú=ú
+        '''Ẃ=Ẃ
+        '''ẃ=ẃ
+        '''Ý=Ý
+        '''ý=ý
+        '''Ź=Ź
+        '''ź=ź
+        '''Ő=Ő
+        '''ő=ő
+        '''Ű=Ű
+        '''ű=ű
+        '''À=À
+        '''à=à
+        '''È=È
+        '''è=è
+        '''Ì=Ì
+        '''ì=ì
+        '''Ǹ=Ǹ
+        '''ǹ=ǹ
+        '''Ò=Ò
+        '''ò=ò
+        '''Ù=Ù
+        '''ù=ù
+        '''Ỳ=Ỳ
+        '''ỳ=ỳ
+        '''Ȁ=Ȁ
+        '''ȁ=ȁ
+        '''Ȅ=Ȅ
+        '''ȅ=ȅ
+        '''Ȉ=Ȉ
+        '''ȉ=ȉ
+        '''Ȍ=Ȍ
+        '''ȍ=ȍ
+        '''Ȑ=Ȑ
+        '''ȑ=ȑ
+        '''Ȕ=Ȕ
+        '''ȕ=ȕ
+        '''Ă=Ă
+        '''ă=ă
+        '''Ĕ=Ĕ
+        '''ĕ=ĕ
+        '''Ğ=Ğ
+        '''ğ=ğ
+        '''Ĭ=Ĭ
+        '''ĭ=ĭ
+        '''Ŏ=Ŏ
+        '''ŏ=ŏ
+        '''Ŭ=Ŭ
+        '''ŭ=ŭ
+        '''Ȃ
+        '''ȃ
+        '''Ȇ
+        '''ȇ
+        '''Ȋ
+        '''ȋ
+        '''Ȏ
+        '''ȏ
+        '''Ȓ
+        '''ȓ
+        '''Ȗ
+        '''ȗ
+        '''Ǎ
+        '''ǎ
+        '''Č
+        ''' [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property SmartReplace() As String
+            Get
+                Return ResourceManager.GetString("SmartReplace", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 		&lt;table&gt;
         '''{0}
-        '''&lt;/table&gt;.
+        '''		&lt;/table&gt;.
         '''</summary>
         Friend ReadOnly Property TableTemplate() As String
             Get

@@ -117,7 +117,7 @@ Partial Class dlgAbout
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage3.Size = New System.Drawing.Size(1038, 593)
+        Me.TabPage3.Size = New System.Drawing.Size(1038, 617)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Credits"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -134,7 +134,7 @@ Partial Class dlgAbout
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(1030, 585)
+        Me.TextBox3.Size = New System.Drawing.Size(1030, 609)
         Me.TextBox3.TabIndex = 9
         Me.TextBox3.Text = resources.GetString("TextBox3.Text")
         '

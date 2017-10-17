@@ -656,13 +656,23 @@ Public Class frmMain
         End If
 
         CurrentDocument = New NotebookFile
-        Dim p As New NotebookPage
-        p.Title = "Untitled"
-        CurrentDocument.Pages.Add(p)
+        CurrentDocument.Pages = New List(Of NotebookPage)
+
+        tcNotebook.TabPages.Clear()
+        NotebookEditor1.lbPages.Items.Clear()
+
+        Dim new_page As NotebookPage = New NotebookPage()
+
+        new_page.Title = "Untitled"
+        new_page.RTF = ""
+        CurrentDocument.Pages.Add(new_page)
+        CurrentDocument.WordDictionary = New DictionaryFile
 
         UpdateTabs()
         currentFile = ""
         SetTitle()
+
+        CurrentDocument.Modified = False
     End Sub
 
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click

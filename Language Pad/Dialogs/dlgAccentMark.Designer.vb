@@ -32,6 +32,7 @@ Partial Class dlgAccentMark
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.lblResult = New System.Windows.Forms.Label()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.AccentsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnCopy = New System.Windows.Forms.Button()
@@ -55,7 +56,7 @@ Partial Class dlgAccentMark
         Me.txtCharacter.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCharacter.MaxLength = 100
         Me.txtCharacter.Name = "txtCharacter"
-        Me.txtCharacter.Size = New System.Drawing.Size(837, 43)
+        Me.txtCharacter.Size = New System.Drawing.Size(992, 43)
         Me.txtCharacter.TabIndex = 2
         Me.txtCharacter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -77,7 +78,7 @@ Partial Class dlgAccentMark
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(549, 891)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(704, 891)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -116,10 +117,21 @@ Partial Class dlgAccentMark
         Me.lblResult.Location = New System.Drawing.Point(13, 110)
         Me.lblResult.Margin = New System.Windows.Forms.Padding(4)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(837, 253)
+        Me.lblResult.Size = New System.Drawing.Size(992, 253)
         Me.lblResult.TabIndex = 69
         Me.lblResult.Text = "a"
         Me.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(820, 334)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(185, 29)
+        Me.CheckBox1.TabIndex = 72
+        Me.CheckBox1.Text = "Smart Replace"
+        Me.ttMain.SetToolTip(Me.CheckBox1, "Combine certain combined characters into single characters." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A + ◌́ -> Á")
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'AccentsLayoutPanel
         '
@@ -130,7 +142,7 @@ Partial Class dlgAccentMark
         Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
-        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(837, 382)
+        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(992, 382)
         Me.AccentsLayoutPanel.TabIndex = 3
         '
         'btnAdd
@@ -165,7 +177,8 @@ Partial Class dlgAccentMark
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(863, 970)
+        Me.ClientSize = New System.Drawing.Size(1018, 970)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.btnCopy)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.lblResult)
@@ -198,4 +211,5 @@ Partial Class dlgAccentMark
     Friend WithEvents AccentsLayoutPanel As FlowLayoutPanel
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnCopy As Button
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

@@ -362,6 +362,7 @@
   <ItemGroup>
     <Content Include="Conlang Notepad.ico" />
     <Content Include="LangPad4.ico" />
+    <None Include="Resources\SmartReplace.txt" />
     <None Include="Resources\HtmlStyle.txt" />
     <None Include="Resources\TableTemplate.txt" />
     <None Include="Resources\HtmlTemplate.txt" />
