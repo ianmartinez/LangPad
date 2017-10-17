@@ -142,4 +142,20 @@
         uBdui1Uicpjlg2GVWQ+tlyrv8TUwXK7cZagp5cViiC7j35m9KuiZgQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnPreviewFont.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABcUlEQVRIS7WUu0rEQBiFt9FCwU4UKx9C
+        n0AJJEwuTSy3DIg2q0V8BFttrQQttdPGbmUbK0HwIURtdhcLL+s5SyKz42GLOBYfM/n+P2eyM5u0zHbn
+        X5HSJ1L6REqfSNmEfpn1hmV26/qJi2mkaboZx/GIGGM23DrDBwdZ1/UTF9NA8Em9AOeqRyGlS1EUMwh9
+        AffgDrzmeT6rel2k/IUxyBw/eZkkyX41N3bPn84AYefgK8uyVSywgvknxjO7p/EZIGwO9PErerVDeBdu
+        EATBvN2rkNIGQVtghNDdH2/MTuVyu1chpQ1CLhH2gXGpdmEYLsK9g4vaNToDBC0g5A0M8dQ3NnSssYe9
+        zc7AmDZCuBWnGA9tKseXri3vrZCyBgHX4Fn956t34wlcuTUbKQn3HDdzn49UnaB2zJ4oipZVnUhJsMD4
+        hcK4puoE9XX2YJv2VJ1ISXAjPwuPqmaDngf2qhqR0idS+kRKn0jpEyn90Wl9AyUMxhVMzLQeAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <metadata name="dlgFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>160, 17</value>
+  </metadata>
 </root>

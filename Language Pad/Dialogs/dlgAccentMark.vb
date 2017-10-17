@@ -96,4 +96,11 @@ Public Class dlgAccentMark
         DialogResult = DialogResult.Cancel
         Close()
     End Sub
+
+    Private Sub btnPreviewFont_Click(sender As Object, e As EventArgs) Handles btnPreviewFont.Click
+        dlgFont.Font = lblResult.Font
+        If dlgFont.ShowDialog() = DialogResult.OK Then
+            lblResult.Font = dlgFont.Font
+        End If
+    End Sub
 End Class

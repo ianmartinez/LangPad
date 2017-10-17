@@ -36,6 +36,8 @@ Partial Class dlgAccentMark
         Me.AccentsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnCopy = New System.Windows.Forms.Button()
+        Me.btnPreviewFont = New System.Windows.Forms.Button()
+        Me.dlgFont = New System.Windows.Forms.FontDialog()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -171,6 +173,19 @@ Partial Class dlgAccentMark
         Me.btnCopy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnCopy.UseVisualStyleBackColor = True
         '
+        'btnPreviewFont
+        '
+        Me.btnPreviewFont.Image = CType(resources.GetObject("btnPreviewFont.Image"), System.Drawing.Image)
+        Me.btnPreviewFont.Location = New System.Drawing.Point(457, 13)
+        Me.btnPreviewFont.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPreviewFont.Name = "btnPreviewFont"
+        Me.btnPreviewFont.Size = New System.Drawing.Size(289, 89)
+        Me.btnPreviewFont.TabIndex = 73
+        Me.btnPreviewFont.Text = "Change Preview Font"
+        Me.btnPreviewFont.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnPreviewFont.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btnPreviewFont.UseVisualStyleBackColor = True
+        '
         'dlgAccentMark
         '
         Me.AcceptButton = Me.btnOK
@@ -178,6 +193,7 @@ Partial Class dlgAccentMark
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(1018, 970)
+        Me.Controls.Add(Me.btnPreviewFont)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.btnCopy)
         Me.Controls.Add(Me.btnAdd)
@@ -212,4 +228,6 @@ Partial Class dlgAccentMark
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnCopy As Button
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents btnPreviewFont As Button
+    Friend WithEvents dlgFont As FontDialog
 End Class

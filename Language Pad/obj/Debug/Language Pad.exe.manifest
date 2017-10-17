@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="698368">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="699904">
       <assemblyIdentity name="Language Pad" version="9.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Pxf95IewAK3OEhJSFRJC9yIw3x2XGbi1g2mW6tbbpYE=</dsig:DigestValue>
+        <dsig:DigestValue>Y/VkSBkY+bNqL/vyGjqkZnjFZ/lnqJEdWz7i8/NKa4A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

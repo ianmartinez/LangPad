@@ -91,10 +91,11 @@ Partial Class ssLoading
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(716, 321)
+        Me.ControlBox = False
         Me.Controls.Add(Me.lblLoading)
         Me.Controls.Add(Me.pbLoading)
         Me.Controls.Add(Me.StylizedPanel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False

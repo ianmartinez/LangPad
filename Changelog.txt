@@ -1,6 +1,7 @@
 Version 9.0 (October 31, 2017)
-   •Inverted breve and dot below accent marks added to accent palette
+   •Inverted breve, dot below, and horn accent marks added to accent palette
    •Smart replace
+   •Button to change font for accent mark preview
    •Redesigned splash screen  
    •Add Space & Breeze theme
    •Default theme now 'Breeze'
