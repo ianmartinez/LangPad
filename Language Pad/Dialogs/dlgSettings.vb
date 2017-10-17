@@ -12,6 +12,7 @@ Public Class dlgSettings
         cbTones.Checked = My.Settings.IPATones
         cbUpdates.Checked = My.Settings.Updates
         cbVowels.Checked = My.Settings.IPAVowels
+        cbSmartReplace.Checked = My.Settings.SmartReplace
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
@@ -23,6 +24,9 @@ Public Class dlgSettings
         My.Settings.IPATones = cbTones.Checked
         My.Settings.Updates = cbUpdates.Checked
         My.Settings.IPAVowels = cbVowels.Checked
+        My.Settings.SmartReplace = cbSmartReplace.Checked
+
+        My.Settings.Save()
 
         Me.Close()
     End Sub

@@ -7,8 +7,22 @@ Public Class dlgAccentMark
     Private AccentsString As String = ""
 
     Private Sub UpdateResult()
-        lblResult.Text = txtCharacter.Text & AccentsString
-        If txtCharacter.Text = "" Then lblResult.Text = ""
+        If cbSmartReplace.Checked Then
+            If txtCharacter.Text = "" Then
+                lblResult.Text = ""
+                Exit Sub
+            End If
+
+            Dim result As String = txtCharacter.Text & AccentsString
+            For Each pair As KeyValuePair(Of String, String) In SmartReplaceList
+                result = result.Replace(pair.Key, pair.Value)
+            Next
+
+            lblResult.Text = result
+        Else
+            lblResult.Text = txtCharacter.Text & AccentsString
+            If txtCharacter.Text = "" Then lblResult.Text = ""
+        End If
     End Sub
 
     Private Sub ToggleAccent(sender As Object, e As EventArgs)
@@ -29,6 +43,8 @@ Public Class dlgAccentMark
     End Sub
 
     Private Sub dlgAccentMark_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cbSmartReplace.Visible = My.Settings.SmartReplace
+
         AccentsLayoutPanel.Controls.Clear()
         AccentsList.Clear()
         AccentsString = ""

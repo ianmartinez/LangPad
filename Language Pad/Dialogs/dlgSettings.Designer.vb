@@ -34,6 +34,7 @@ Partial Class dlgSettings
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.cbSmartReplace = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -143,11 +144,11 @@ Partial Class dlgSettings
         Me.cbUpdates.AutoSize = True
         Me.cbUpdates.Checked = True
         Me.cbUpdates.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbUpdates.Location = New System.Drawing.Point(30, 354)
+        Me.cbUpdates.Location = New System.Drawing.Point(30, 395)
         Me.cbUpdates.Margin = New System.Windows.Forms.Padding(6)
         Me.cbUpdates.Name = "cbUpdates"
         Me.cbUpdates.Size = New System.Drawing.Size(124, 29)
-        Me.cbUpdates.TabIndex = 9
+        Me.cbUpdates.TabIndex = 8
         Me.cbUpdates.Text = "Updates"
         Me.cbUpdates.UseVisualStyleBackColor = True
         '
@@ -159,7 +160,7 @@ Partial Class dlgSettings
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(263, 411)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(263, 449)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -190,13 +191,27 @@ Partial Class dlgSettings
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
+        'cbSmartReplace
+        '
+        Me.cbSmartReplace.AutoSize = True
+        Me.cbSmartReplace.Checked = True
+        Me.cbSmartReplace.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.cbSmartReplace.Location = New System.Drawing.Point(30, 354)
+        Me.cbSmartReplace.Margin = New System.Windows.Forms.Padding(6)
+        Me.cbSmartReplace.Name = "cbSmartReplace"
+        Me.cbSmartReplace.Size = New System.Drawing.Size(185, 29)
+        Me.cbSmartReplace.TabIndex = 7
+        Me.cbSmartReplace.Text = "Smart Replace"
+        Me.cbSmartReplace.UseVisualStyleBackColor = True
+        '
         'dlgSettings
         '
         Me.AcceptButton = Me.btnOK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(570, 482)
+        Me.ClientSize = New System.Drawing.Size(570, 520)
+        Me.Controls.Add(Me.cbSmartReplace)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.cbUpdates)
         Me.Controls.Add(Me.cbCommon)
@@ -232,4 +247,5 @@ Partial Class dlgSettings
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents btnOK As Button
     Friend WithEvents btnCancel As Button
+    Friend WithEvents cbSmartReplace As CheckBox
 End Class

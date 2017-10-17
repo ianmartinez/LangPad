@@ -32,7 +32,7 @@ Partial Class dlgAccentMark
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.lblResult = New System.Windows.Forms.Label()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.cbSmartReplace = New System.Windows.Forms.CheckBox()
         Me.AccentsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnCopy = New System.Windows.Forms.Button()
@@ -124,16 +124,18 @@ Partial Class dlgAccentMark
         Me.lblResult.Text = "a"
         Me.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'CheckBox1
+        'cbSmartReplace
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(820, 334)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(185, 29)
-        Me.CheckBox1.TabIndex = 72
-        Me.CheckBox1.Text = "Smart Replace"
-        Me.ttMain.SetToolTip(Me.CheckBox1, "Combine certain combined characters into single characters." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A + ◌́ -> Á")
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.cbSmartReplace.AutoSize = True
+        Me.cbSmartReplace.Checked = True
+        Me.cbSmartReplace.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.cbSmartReplace.Location = New System.Drawing.Point(820, 334)
+        Me.cbSmartReplace.Name = "cbSmartReplace"
+        Me.cbSmartReplace.Size = New System.Drawing.Size(185, 29)
+        Me.cbSmartReplace.TabIndex = 72
+        Me.cbSmartReplace.Text = "Smart Replace"
+        Me.ttMain.SetToolTip(Me.cbSmartReplace, "Combine certain combined characters into single characters." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A + ◌́ -> Á")
+        Me.cbSmartReplace.UseVisualStyleBackColor = True
         '
         'AccentsLayoutPanel
         '
@@ -194,7 +196,7 @@ Partial Class dlgAccentMark
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(1018, 970)
         Me.Controls.Add(Me.btnPreviewFont)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.cbSmartReplace)
         Me.Controls.Add(Me.btnCopy)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.lblResult)
@@ -227,7 +229,7 @@ Partial Class dlgAccentMark
     Friend WithEvents AccentsLayoutPanel As FlowLayoutPanel
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnCopy As Button
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents cbSmartReplace As CheckBox
     Friend WithEvents btnPreviewFont As Button
     Friend WithEvents dlgFont As FontDialog
 End Class

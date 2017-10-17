@@ -175,6 +175,12 @@ Namespace My
             ssLoading.pbLoading.Value = 80
             ssLoading.Refresh()
 
+            If My.Settings.SmartReplace = True Then
+                ssLoading.lblLoading.Text = "Loading Smart Replace..."
+                For Each pair As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.SmartReplace)
+                    SmartReplaceList.Add(pair.Key, pair.Value)
+                Next
+            End If
             ssLoading.pbLoading.Value = 90
             ssLoading.Refresh()
 
