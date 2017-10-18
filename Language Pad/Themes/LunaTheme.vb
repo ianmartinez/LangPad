@@ -130,25 +130,23 @@ Public Class clsLunaMenuRenderer
 
     '// Render Checkmark 
     Protected Overrides Sub OnRenderItemCheck(ByVal e As ToolStripItemImageRenderEventArgs)
-        MyBase.OnRenderItemCheck(e)
+        ' MyBase.OnRenderItemCheck(e)
+        Dim rect As New Rectangle(3, 1, e.Item.Image.Width + 4, e.Item.Image.Height + 4)
+        Dim rect2 As New Rectangle(4, 2, e.Item.Image.Width + 2, e.Item.Image.Height + 2)
         If e.Item.Selected Then
-            Dim rect As New Rectangle(3, 1, 20, 20)
-            Dim rect2 As New Rectangle(4, 2, 18, 18)
-            Dim b As New Drawing.SolidBrush(clrLunaToolstripBtn_Border)
-            Dim b2 As New Drawing.SolidBrush(clrLunaCheckBG)
+            Dim b As New SolidBrush(clrLunaToolstripBtn_Border)
+            Dim b2 As New SolidBrush(clrLunaCheckBG)
 
             e.Graphics.FillRectangle(b, rect)
             e.Graphics.FillRectangle(b2, rect2)
-            e.Graphics.DrawImage(e.Image, New Point(5, 3))
+            '  e.Graphics.DrawImage(e.Image, New Point(5, 3))
         Else
-            Dim rect As New Rectangle(3, 1, 20, 20)
-            Dim rect2 As New Rectangle(4, 2, 18, 18)
-            Dim b As New Drawing.SolidBrush(clrLunaSelectedBG_Drop_Border)
-            Dim b2 As New Drawing.SolidBrush(clrLunaCheckBG)
+            Dim b As New SolidBrush(clrLunaSelectedBG_Drop_Border)
+            Dim b2 As New SolidBrush(clrLunaCheckBG)
 
             e.Graphics.FillRectangle(b, rect)
             e.Graphics.FillRectangle(b2, rect2)
-            e.Graphics.DrawImage(e.Image, New Point(5, 3))
+            ' e.Graphics.DrawImage(e.Image, New Point(5, 3))
         End If
     End Sub
 

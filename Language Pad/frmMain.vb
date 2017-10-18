@@ -67,6 +67,7 @@ Public Class frmMain
         FirstTabUpdate = True
 
         lblPageCount.Text = "Page Count: " & CurrentDocument.Pages.Count
+        WordWrapToolStripMenuItem.Checked = SelectedDocument.WordWrap
     End Sub
 
     Public Sub ModifiedHandler(sender As Object, e As EventArgs)
@@ -137,6 +138,7 @@ Public Class frmMain
         RichTextBox.Paste()
         Clipboard.SetDataObject(obj)
     End Sub
+
     Public Sub InsertText(ByVal RichTextBox As RichTextBox, ByVal Text As String)
         On Error Resume Next
         Dim CurrentPos As Integer = RichTextBox.SelectionStart
@@ -155,7 +157,6 @@ Public Class frmMain
         If Not Link.StartsWith("http://") Then Link = "http://" & Link
         Process.Start(Link)
     End Sub
-
 
     Private Sub SelectedDocument_TextChanged(sender As System.Object, e As System.EventArgs) Handles SelectedDocument.TextChanged
         RaiseEvent EditText()
@@ -579,7 +580,7 @@ Public Class frmMain
             SelectedDocument = rtbList.Item(tcNotebook.SelectedIndex)
             NotebookEditor1.lbPages.SelectedIndex = tcNotebook.SelectedIndex
             frmRTF.txtRTF.Text = SelectedDocument.Rtf
-
+            WordWrapToolStripMenuItem.Checked = SelectedDocument.WordWrap
             SelectedDocument_TextChanged(Me, e)
         End If
     End Sub

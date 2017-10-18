@@ -147,6 +147,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
    •Full/Minimal mode toggles
    •Dictionary form now respects font dialog color
    •Fixed bug where clicking "New" would sometimes not clear every page
+   •Fixed rendering of checked items on menus
+   •Word wrap checkbox now updates when you change tabs
 Version 8.5 (October 13, 2017)
    •Help file included   
    •Minor changes to splash screen
