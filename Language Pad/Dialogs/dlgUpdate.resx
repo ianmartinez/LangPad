@@ -127,10 +127,10 @@
   </data>
   <data name="btnReddit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAAASElEQVRIS+2OwQkAMAgD3X9cF2gp5Bsi5FMwB4GA4llhId19nOAMZ7REsAXqy/8FClvwZmqOyokA
-        lRMBKme0RBgLnOBM2EPVBWfiG6Lwx/ulAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
+        1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABISURBVEhL7Y7B
+        CQAwCAPdf1wXaCnkGyLkUzAHgYDiWWEh3X2c4AxntESwBerL/wUKW/Bmao7KiQCVEwEqZ7REGAuc4EzY
+        Q9UFZ+IbovDH+6UAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnReddit.Style" xml:space="preserve">
@@ -169,15 +169,15 @@ Pressed Highlight Color=$0</value>
   </data>
   <data name="btnSource.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABXklEQVRIS+2TS04CQRRFcaIDPxsRf5tyEYBbAAzRMDNxJLAHcQ9A3AESCCH9idP23OSmY8RqaB3o
-        gJPcpN+r96l61VXZ8f9J0/Q8SZLbOI4nKLXG+NqsnTmsPFmWHVCoi6aoRrGL2Wx2KPF9SYO61qIoules
-        07bDxV9IfprP50d2r7FYLI6J6RE7LNWEhK6Kk7RnVxDFEN8n/s6uYjRzHb1o51/RSZTD2Kp2hfGF1mzm
-        4HvU/G2uQV4DtWyGodBEp7CZgz9Dr6E/RxfP+thmGIKS78bjBtI7O722O0c5rMU2wxDzowbL5fKEtchm
-        GIJ+M6KRzTDsro3qNnNIfthwyTfENG2G0Q4JnOrXs2sjHs8bTU7tKkbPXy+0xEMbULxj12b07Ekaon7R
-        SbzzAXomZ9/u7VATPX+SdfTGarW60t8l6dsz11qndPHPUKCKWhQbo8QaoSb+7Wa+4w+pVD4AujSVRBnm
-        WMUAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
+        1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFeSURBVEhL7ZNL
+        TgJBFEVxogM/GxF/m3IRgFsADNEwM3EksAdxD0DcARIIIf2J0/bc5KZjxGpoHeiAk9yk36v3qXrVVdnx
+        /0nT9DxJkts4jicotcb42qydOaw8WZYdUKiLpqhGsYvZbHYo8X1Jg7rWoii6V6zTtsPFX0h+ms/nR3av
+        sVgsjonpETss1YSEroqTtGdXEMUQ3yf+zq5iNHMdvWjnX9FJlMPYqnaF8YXWbObge9T8ba5BXgO1bIah
+        0ESnsJmDP0OvoT9HF8/62GYYgpLvxuMG0js7vbY7RzmsxTbDEPOjBsvl8oS1yGYYgn4zopHNMOyujeo2
+        c0h+2HDJN8Q0bYbRDgmc6tezayMezxtNTu0qRs9fL7TEQxtQvGPXZvTsSRqiftFJvPMBeiZn3+7tUBM9
+        f5J19MZqtbrS3yXp2zPXWqd08c9QoIpaFBujxBqhJv7tZr7jD6lUPgC6NJVEGeZYxQAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <data name="btnSource.Style" xml:space="preserve">
