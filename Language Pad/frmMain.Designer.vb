@@ -2127,6 +2127,7 @@ Partial Class frmMain
         Me.MainMenuStrip = Me.MainMenu
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmMain"
+        Me.ShowIcon = False
         Me.Text = "Language Pad X.x"
         Me.tcSymbols.ResumeLayout(False)
         Me.ConsonantsTabPage.ResumeLayout(False)

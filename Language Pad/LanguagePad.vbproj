@@ -65,7 +65,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>LangPad4.ico</ApplicationIcon>
+    <ApplicationIcon>Version9Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>38E3BF1F3A17B82E7D86BB07415687A38DCBFF85</ManifestCertificateThumbprint>
@@ -360,8 +360,6 @@
     <None Include="Resources\KeyStyle.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Conlang Notepad.ico" />
-    <Content Include="LangPad4.ico" />
     <None Include="Resources\SmartReplace.txt" />
     <None Include="Resources\HtmlStyle.txt" />
     <None Include="Resources\TableTemplate.txt" />
@@ -398,7 +396,9 @@
       <Name>Tundra</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Version9Icon.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

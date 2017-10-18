@@ -1,4 +1,5 @@
 Version 9.0 (October 31, 2017)
+   •New icon
    •Inverted breve, tilde through, dot below, and horn accent marks added to accent palette
    •Smart replace
    •Button to change font for accent mark preview
