@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class dlgCustomSymbols
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,10 @@ Partial Class dlgCustomSymbols
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgCustomSymbols))
         Me.dgvSymbols = New System.Windows.Forms.DataGridView()
         Me.Symbol = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,24 +42,35 @@ Partial Class dlgCustomSymbols
         '
         'dgvSymbols
         '
+        Me.dgvSymbols.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgvSymbols.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvSymbols.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dgvSymbols.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvSymbols.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvSymbols.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSymbols.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Symbol})
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvSymbols.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvSymbols.Location = New System.Drawing.Point(22, 113)
         Me.dgvSymbols.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvSymbols.Name = "dgvSymbols"
         Me.dgvSymbols.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvSymbols.RowTemplate.Height = 24
-        Me.dgvSymbols.Size = New System.Drawing.Size(658, 611)
+        Me.dgvSymbols.Size = New System.Drawing.Size(661, 611)
         Me.dgvSymbols.TabIndex = 2
         '
         'Symbol
         '
         Me.Symbol.HeaderText = "Symbol"
         Me.Symbol.Name = "Symbol"
-        Me.Symbol.Width = 250
+        Me.Symbol.Width = 138
         '
         'dlgOpen
         '
@@ -76,7 +88,7 @@ Partial Class dlgCustomSymbols
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(395, 734)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(389, 734)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -139,7 +151,7 @@ Partial Class dlgCustomSymbols
         Me.btnDeleteAll.Location = New System.Drawing.Point(466, 13)
         Me.btnDeleteAll.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDeleteAll.Name = "btnDeleteAll"
-        Me.btnDeleteAll.Size = New System.Drawing.Size(214, 89)
+        Me.btnDeleteAll.Size = New System.Drawing.Size(217, 89)
         Me.btnDeleteAll.TabIndex = 78
         Me.btnDeleteAll.Text = "Delete All"
         Me.btnDeleteAll.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -152,7 +164,7 @@ Partial Class dlgCustomSymbols
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(702, 816)
+        Me.ClientSize = New System.Drawing.Size(696, 816)
         Me.Controls.Add(Me.btnDeleteAll)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnOpen)

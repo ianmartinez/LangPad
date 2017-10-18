@@ -28,6 +28,7 @@ Version 8.5 (October 13, 2017)
    •Dialogs now match theme
    •Fixed bug where decimal separators other than "." would throw errors
    •Re-design update dialog and fix buttons not working
+   •Auto-size dictionary cells
 Version 8.2 (September 30, 2017)
    •Find words in dictionary   
    •Color panel for quick access to font/highlight colors   
