@@ -447,9 +447,9 @@ Public Class frmMain
 
         IndentToolStripComboBox.SelectedItem = 1
 
-        FileToolStrip.Location = New Point(3, 0)
-        FontToolStrip.Location = New Point(FileToolStrip.Left + FileToolStrip.Width + 3, 0)
-        LinguisticsToolStrip.Location = New Point(FontToolStrip.Left + FontToolStrip.Width + 3, 0)
+        FileToolStrip.Location = New Point(0, 0)
+        FontToolStrip.Location = New Point(FileToolStrip.Left + FileToolStrip.Width, 0)
+        LinguisticsToolStrip.Location = New Point(FontToolStrip.Left + FontToolStrip.Width, 0)
 
         dlgColor.FullOpen = True
         SetTheme(New IceTheme())

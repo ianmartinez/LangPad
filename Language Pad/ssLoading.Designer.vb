@@ -39,7 +39,7 @@ Partial Class ssLoading
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(716, 218)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(716, 297)
         Me.StylizedPanel1.Style = "Colors=#cf6c36|#b21e54" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-45" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=98, 44" &
     ", 44" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1"
         Me.StylizedPanel1.TabIndex = 80
@@ -52,7 +52,7 @@ Partial Class ssLoading
         Me.lblLanguagePad.Location = New System.Drawing.Point(0, 0)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(716, 164)
+        Me.lblLanguagePad.Size = New System.Drawing.Size(716, 243)
         Me.lblLanguagePad.TabIndex = 12
         Me.lblLanguagePad.Text = "Language Pad"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -62,7 +62,7 @@ Partial Class ssLoading
         Me.lblVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblVersion.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.lblVersion.ForeColor = System.Drawing.Color.White
-        Me.lblVersion.Location = New System.Drawing.Point(0, 164)
+        Me.lblVersion.Location = New System.Drawing.Point(0, 243)
         Me.lblVersion.Margin = New System.Windows.Forms.Padding(4)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(716, 54)
@@ -72,15 +72,18 @@ Partial Class ssLoading
         '
         'pbLoading
         '
-        Me.pbLoading.Location = New System.Drawing.Point(12, 268)
+        Me.pbLoading.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.pbLoading.Location = New System.Drawing.Point(12, 353)
         Me.pbLoading.Name = "pbLoading"
         Me.pbLoading.Size = New System.Drawing.Size(692, 41)
         Me.pbLoading.TabIndex = 81
         '
         'lblLoading
         '
+        Me.lblLoading.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.lblLoading.AutoSize = True
-        Me.lblLoading.Location = New System.Drawing.Point(12, 233)
+        Me.lblLoading.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblLoading.Location = New System.Drawing.Point(12, 320)
         Me.lblLoading.Name = "lblLoading"
         Me.lblLoading.Size = New System.Drawing.Size(107, 25)
         Me.lblLoading.TabIndex = 82
@@ -90,7 +93,8 @@ Partial Class ssLoading
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(716, 321)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(716, 409)
         Me.Controls.Add(Me.lblLoading)
         Me.Controls.Add(Me.pbLoading)
         Me.Controls.Add(Me.StylizedPanel1)
