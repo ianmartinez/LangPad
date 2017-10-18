@@ -153,8 +153,8 @@ Public Class frmMain
     End Sub
 
     Private Sub SelectedDocument_LinkClicked(sender As Object, e As LinkClickedEventArgs) Handles SelectedDocument.LinkClicked
-        Dim Link As String = e.LinkText.Split("#").GetValue(e.LinkText.Split("#").Count - 1)
-        If Not Link.StartsWith("http://") Then Link = "http://" & Link
+        Dim Link As String = e.LinkText
+        If Not (Link.StartsWith("http://") Or Link.StartsWith("https://")) Then Link = "https://" & Link
         Process.Start(Link)
     End Sub
 
