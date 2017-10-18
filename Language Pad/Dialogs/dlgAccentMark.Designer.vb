@@ -181,7 +181,7 @@ Partial Class dlgAccentMark
         Me.btnPreviewFont.Location = New System.Drawing.Point(457, 13)
         Me.btnPreviewFont.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPreviewFont.Name = "btnPreviewFont"
-        Me.btnPreviewFont.Size = New System.Drawing.Size(289, 89)
+        Me.btnPreviewFont.Size = New System.Drawing.Size(262, 89)
         Me.btnPreviewFont.TabIndex = 73
         Me.btnPreviewFont.Text = "Change Preview Font"
         Me.btnPreviewFont.TextAlign = System.Drawing.ContentAlignment.BottomCenter

@@ -1277,11 +1277,13 @@ Public Class frmMain
     End Sub
 
     Private Sub FullModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FullModeToolStripMenuItem.Click
+        SuspendLayout()
         SplitContainer2.Panel2Collapsed = False
         FileToolStrip.Visible = True
         FontToolStrip.Visible = True
         LinguisticsToolStrip.Visible = True
         DataToolStrip.Visible = True
+        ResumeLayout()
     End Sub
 
     Private Sub MinimalModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimalModeToolStripMenuItem.Click
