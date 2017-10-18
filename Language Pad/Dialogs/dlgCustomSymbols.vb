@@ -3,7 +3,6 @@ Imports Tundra
 Imports System.IO
 
 Public Class dlgCustomSymbols
-
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
         Dim CustomTXT As String = ""
         For i = 0 To dgvSymbols.RowCount - 1
@@ -28,12 +27,12 @@ Public Class dlgCustomSymbols
             frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
         Next
 
-        Me.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.DialogResult = DialogResult.OK
         Me.Close()
     End Sub
 
     Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
-        Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.DialogResult = DialogResult.Cancel
         Me.Close()
     End Sub
 
