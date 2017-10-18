@@ -60,6 +60,7 @@ Partial Class frmMain
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.tcNotebook = New System.Windows.Forms.TabControl()
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
+        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.dlgSaveNotebook = New System.Windows.Forms.SaveFileDialog()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
@@ -109,10 +110,6 @@ Partial Class frmMain
         Me.StylizedColorButton19 = New Tundra.StylizedColorButton()
         Me.rbHighlight = New System.Windows.Forms.RadioButton()
         Me.rbTextColor = New System.Windows.Forms.RadioButton()
-        Me.LinguisticsToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.SymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.CustomSymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.AccentMarkToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.FileToolStrip = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -125,6 +122,10 @@ Partial Class frmMain
         Me.toolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.UndoToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.RedoToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.LinguisticsToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.SymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.CustomSymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.AccentMarkToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.FontToolStrip = New System.Windows.Forms.ToolStrip()
         Me.FontToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
@@ -222,7 +223,6 @@ Partial Class frmMain
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.tcSymbols.SuspendLayout()
         Me.ConsonantsTabPage.SuspendLayout()
         Me.AffricatesTabPage.SuspendLayout()
@@ -250,8 +250,8 @@ Partial Class frmMain
         Me.pnlFindReplace.SuspendLayout()
         Me.pnlColor.SuspendLayout()
         Me.ColorLayoutPanel.SuspendLayout()
-        Me.LinguisticsToolStrip.SuspendLayout()
         Me.FileToolStrip.SuspendLayout()
+        Me.LinguisticsToolStrip.SuspendLayout()
         Me.FontToolStrip.SuspendLayout()
         Me.MainMenu.SuspendLayout()
         Me.SuspendLayout()
@@ -622,6 +622,18 @@ Partial Class frmMain
         Me.StylizedPanel1.Style = "Colors=~245|~245" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight" &
     " Color=$0"
         Me.StylizedPanel1.TabIndex = 13
+        '
+        'NotebookEditor1
+        '
+        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
+        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 0)
+        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(4)
+        Me.NotebookEditor1.MinimumSize = New System.Drawing.Size(524, 0)
+        Me.NotebookEditor1.Name = "NotebookEditor1"
+        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
+        Me.NotebookEditor1.Size = New System.Drawing.Size(574, 824)
+        Me.NotebookEditor1.TabIndex = 72
         '
         'dlgSaveNotebook
         '
@@ -1223,47 +1235,6 @@ Partial Class frmMain
         Me.rbTextColor.Text = "Text"
         Me.rbTextColor.UseVisualStyleBackColor = False
         '
-        'LinguisticsToolStrip
-        '
-        Me.LinguisticsToolStrip.Dock = System.Windows.Forms.DockStyle.None
-        Me.LinguisticsToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.LinguisticsToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SymbolsToolStripButton, Me.CustomSymbolsToolStripButton, Me.AccentMarkToolStripButton})
-        Me.LinguisticsToolStrip.Location = New System.Drawing.Point(279, 0)
-        Me.LinguisticsToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
-        Me.LinguisticsToolStrip.Name = "LinguisticsToolStrip"
-        Me.LinguisticsToolStrip.Size = New System.Drawing.Size(96, 38)
-        Me.LinguisticsToolStrip.TabIndex = 2
-        '
-        'SymbolsToolStripButton
-        '
-        Me.SymbolsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.SymbolsToolStripButton.Image = CType(resources.GetObject("SymbolsToolStripButton.Image"), System.Drawing.Image)
-        Me.SymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.SymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SymbolsToolStripButton.Name = "SymbolsToolStripButton"
-        Me.SymbolsToolStripButton.Size = New System.Drawing.Size(28, 35)
-        Me.SymbolsToolStripButton.Text = "Symbols"
-        '
-        'CustomSymbolsToolStripButton
-        '
-        Me.CustomSymbolsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.CustomSymbolsToolStripButton.Image = CType(resources.GetObject("CustomSymbolsToolStripButton.Image"), System.Drawing.Image)
-        Me.CustomSymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.CustomSymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.CustomSymbolsToolStripButton.Name = "CustomSymbolsToolStripButton"
-        Me.CustomSymbolsToolStripButton.Size = New System.Drawing.Size(28, 35)
-        Me.CustomSymbolsToolStripButton.Text = "Custom Symbols"
-        '
-        'AccentMarkToolStripButton
-        '
-        Me.AccentMarkToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.AccentMarkToolStripButton.Image = CType(resources.GetObject("AccentMarkToolStripButton.Image"), System.Drawing.Image)
-        Me.AccentMarkToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.AccentMarkToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.AccentMarkToolStripButton.Name = "AccentMarkToolStripButton"
-        Me.AccentMarkToolStripButton.Size = New System.Drawing.Size(28, 35)
-        Me.AccentMarkToolStripButton.Text = "Accent Mark"
-        '
         'FileToolStrip
         '
         Me.FileToolStrip.Dock = System.Windows.Forms.DockStyle.None
@@ -1375,6 +1346,47 @@ Partial Class frmMain
         Me.RedoToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.RedoToolStripButton.Text = "Redo"
         '
+        'LinguisticsToolStrip
+        '
+        Me.LinguisticsToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.LinguisticsToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.LinguisticsToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SymbolsToolStripButton, Me.CustomSymbolsToolStripButton, Me.AccentMarkToolStripButton})
+        Me.LinguisticsToolStrip.Location = New System.Drawing.Point(279, 0)
+        Me.LinguisticsToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
+        Me.LinguisticsToolStrip.Name = "LinguisticsToolStrip"
+        Me.LinguisticsToolStrip.Size = New System.Drawing.Size(96, 38)
+        Me.LinguisticsToolStrip.TabIndex = 2
+        '
+        'SymbolsToolStripButton
+        '
+        Me.SymbolsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SymbolsToolStripButton.Image = CType(resources.GetObject("SymbolsToolStripButton.Image"), System.Drawing.Image)
+        Me.SymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.SymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SymbolsToolStripButton.Name = "SymbolsToolStripButton"
+        Me.SymbolsToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.SymbolsToolStripButton.Text = "Symbols"
+        '
+        'CustomSymbolsToolStripButton
+        '
+        Me.CustomSymbolsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CustomSymbolsToolStripButton.Image = CType(resources.GetObject("CustomSymbolsToolStripButton.Image"), System.Drawing.Image)
+        Me.CustomSymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.CustomSymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.CustomSymbolsToolStripButton.Name = "CustomSymbolsToolStripButton"
+        Me.CustomSymbolsToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.CustomSymbolsToolStripButton.Text = "Custom Symbols"
+        '
+        'AccentMarkToolStripButton
+        '
+        Me.AccentMarkToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.AccentMarkToolStripButton.Image = CType(resources.GetObject("AccentMarkToolStripButton.Image"), System.Drawing.Image)
+        Me.AccentMarkToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.AccentMarkToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.AccentMarkToolStripButton.Name = "AccentMarkToolStripButton"
+        Me.AccentMarkToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.AccentMarkToolStripButton.Text = "Accent Mark"
+        '
         'FontToolStrip
         '
         Me.FontToolStrip.Dock = System.Windows.Forms.DockStyle.None
@@ -1383,7 +1395,7 @@ Partial Class frmMain
         Me.FontToolStrip.Location = New System.Drawing.Point(375, 0)
         Me.FontToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.FontToolStrip.Name = "FontToolStrip"
-        Me.FontToolStrip.Size = New System.Drawing.Size(384, 40)
+        Me.FontToolStrip.Size = New System.Drawing.Size(448, 40)
         Me.FontToolStrip.TabIndex = 1
         '
         'FontToolStripButton
@@ -2103,18 +2115,6 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(194, 38)
         Me.AboutToolStripMenuItem.Text = "About..."
         '
-        'NotebookEditor1
-        '
-        Me.NotebookEditor1.BackColor = System.Drawing.Color.Transparent
-        Me.NotebookEditor1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NotebookEditor1.Location = New System.Drawing.Point(0, 0)
-        Me.NotebookEditor1.Margin = New System.Windows.Forms.Padding(4)
-        Me.NotebookEditor1.MinimumSize = New System.Drawing.Size(524, 0)
-        Me.NotebookEditor1.Name = "NotebookEditor1"
-        Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 4, 0)
-        Me.NotebookEditor1.Size = New System.Drawing.Size(574, 824)
-        Me.NotebookEditor1.TabIndex = 72
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
@@ -2162,10 +2162,10 @@ Partial Class frmMain
         Me.pnlColor.ResumeLayout(False)
         Me.pnlColor.PerformLayout()
         Me.ColorLayoutPanel.ResumeLayout(False)
-        Me.LinguisticsToolStrip.ResumeLayout(False)
-        Me.LinguisticsToolStrip.PerformLayout()
         Me.FileToolStrip.ResumeLayout(False)
         Me.FileToolStrip.PerformLayout()
+        Me.LinguisticsToolStrip.ResumeLayout(False)
+        Me.LinguisticsToolStrip.PerformLayout()
         Me.FontToolStrip.ResumeLayout(False)
         Me.FontToolStrip.PerformLayout()
         Me.MainMenu.ResumeLayout(False)

@@ -446,12 +446,11 @@ Public Class frmMain
 
         IndentToolStripComboBox.SelectedItem = 1
 
-        FileToolStrip.Location = New Point(0, 0)
-        FontToolStrip.Location = New Point(FileToolStrip.Width, 0)
-        LinguisticsToolStrip.Location = New Point(FontToolStrip.Width + FileToolStrip.Width, 0)
+        FileToolStrip.Location = New Point(3, 0)
+        FontToolStrip.Location = New Point(FileToolStrip.Left + FileToolStrip.Width + 3, 0)
+        LinguisticsToolStrip.Location = New Point(FontToolStrip.Left + FontToolStrip.Width + 3, 0)
 
         dlgColor.FullOpen = True
-
         SetTheme(New IceTheme())
 
         ThemeCombo.SelectedItem = My.Settings.Theme
@@ -1277,20 +1276,18 @@ Public Class frmMain
     End Sub
 
     Private Sub FullModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FullModeToolStripMenuItem.Click
-        SuspendLayout()
         SplitContainer2.Panel2Collapsed = False
-        FileToolStrip.Visible = True
-        FontToolStrip.Visible = True
-        LinguisticsToolStrip.Visible = True
-        DataToolStrip.Visible = True
-        ResumeLayout()
+        ToolStripContainer1.TopToolStripPanelVisible = True
+        ToolStripContainer1.BottomToolStripPanelVisible = True
+        ToolStripContainer1.LeftToolStripPanelVisible = True
+        ToolStripContainer1.RightToolStripPanelVisible = True
     End Sub
 
     Private Sub MinimalModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimalModeToolStripMenuItem.Click
         SplitContainer2.Panel2Collapsed = True
-        FileToolStrip.Visible = False
-        FontToolStrip.Visible = False
-        LinguisticsToolStrip.Visible = False
-        DataToolStrip.Visible = False
+        ToolStripContainer1.TopToolStripPanelVisible = False
+        ToolStripContainer1.BottomToolStripPanelVisible = False
+        ToolStripContainer1.LeftToolStripPanelVisible = False
+        ToolStripContainer1.RightToolStripPanelVisible = False
     End Sub
 End Class
