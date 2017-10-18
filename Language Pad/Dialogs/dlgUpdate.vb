@@ -47,7 +47,7 @@ Public Class dlgUpdate
 
         lblLanguagePad.Text = "Language Pad " & NewestVersion.ToString
         Label3.Text = String.Format("The update ""Language Pad {0}"" is available.", NewestVersion.ToString())
-        txtDecription.Text = Environment.NewLine & Description
+        txtDecription.Text = Description
         txtDecription.DeselectAll()
     End Sub
 

@@ -138,24 +138,25 @@
 
 Active Colors=$0|$0
 Active Positions=0|1
-Active Angle=90
+Active Angle=45
 Active Border Color=$0
 Active Text Color=$2
 Active Highlight Color=$0
 
-Hover Colors=#e5f1fb|#e5f1fb
+Hover Colors=95,0,0,0|195,0,0,0
 Hover Positions=0|1
-Hover Angle=90
-Hover Border Color=#0078d7
+Hover Angle=45
+Hover Border Color=195,0,0,0
 Hover Text Color=$2
 Hover Highlight Color=$0
 
-Pressed Colors=#cce4f7|#cce4f7
+Pressed Colors=175,0,0,0|255,0,0,0
 Pressed Positions=0|1
-Pressed Angle=90
-Pressed Border Color=#005499
+Pressed Angle=45
+Pressed Border Color=255,0,0,0
 Pressed Text Color=$2
-Pressed Highlight Color=$0</value>
+Pressed Highlight Color=$0
+</value>
   </data>
   <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -185,22 +186,22 @@ Pressed Highlight Color=$0</value>
 
 Active Colors=$0|$0
 Active Positions=0|1
-Active Angle=90
+Active Angle=45
 Active Border Color=$0
 Active Text Color=$2
 Active Highlight Color=$0
 
-Hover Colors=#e5f1fb|#e5f1fb
+Hover Colors=95,0,0,0|195,0,0,0
 Hover Positions=0|1
-Hover Angle=90
-Hover Border Color=#0078d7
+Hover Angle=45
+Hover Border Color=195,0,0,0
 Hover Text Color=$2
 Hover Highlight Color=$0
 
-Pressed Colors=#cce4f7|#cce4f7
+Pressed Colors=175,0,0,0|255,0,0,0
 Pressed Positions=0|1
-Pressed Angle=90
-Pressed Border Color=#005499
+Pressed Angle=45
+Pressed Border Color=255,0,0,0
 Pressed Text Color=$2
 Pressed Highlight Color=$0</value>
   </data>

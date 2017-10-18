@@ -116,10 +116,10 @@ Partial Class dlgAccentMark
         Me.lblResult.BackColor = System.Drawing.Color.Transparent
         Me.lblResult.Font = New System.Drawing.Font("Calibri", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblResult.ForeColor = System.Drawing.Color.Black
-        Me.lblResult.Location = New System.Drawing.Point(13, 110)
+        Me.lblResult.Location = New System.Drawing.Point(13, 122)
         Me.lblResult.Margin = New System.Windows.Forms.Padding(4)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(992, 253)
+        Me.lblResult.Size = New System.Drawing.Size(992, 229)
         Me.lblResult.TabIndex = 69
         Me.lblResult.Text = "a"
         Me.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -129,7 +129,7 @@ Partial Class dlgAccentMark
         Me.cbSmartReplace.AutoSize = True
         Me.cbSmartReplace.Checked = True
         Me.cbSmartReplace.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbSmartReplace.Location = New System.Drawing.Point(820, 334)
+        Me.cbSmartReplace.Location = New System.Drawing.Point(820, 72)
         Me.cbSmartReplace.Name = "cbSmartReplace"
         Me.cbSmartReplace.Size = New System.Drawing.Size(185, 29)
         Me.cbSmartReplace.TabIndex = 72

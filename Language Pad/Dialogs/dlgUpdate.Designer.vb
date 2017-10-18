@@ -54,8 +54,7 @@ Partial Class dlgUpdate
         '
         'txtDecription
         '
-        Me.txtDecription.BackColor = System.Drawing.Color.White
-        Me.txtDecription.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtDecription.BackColor = System.Drawing.SystemColors.Window
         Me.txtDecription.Location = New System.Drawing.Point(13, 275)
         Me.txtDecription.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDecription.Multiline = True
