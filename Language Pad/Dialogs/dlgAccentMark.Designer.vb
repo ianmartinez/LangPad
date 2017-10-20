@@ -38,7 +38,9 @@ Partial Class dlgAccentMark
         Me.btnCopy = New System.Windows.Forms.Button()
         Me.btnPreviewFont = New System.Windows.Forms.Button()
         Me.dlgFont = New System.Windows.Forms.FontDialog()
+        Me.StylizedPanel1 = New Tundra.StylizedPanel()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.StylizedPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -114,12 +116,13 @@ Partial Class dlgAccentMark
         'lblResult
         '
         Me.lblResult.BackColor = System.Drawing.Color.Transparent
+        Me.lblResult.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblResult.Font = New System.Drawing.Font("Calibri", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblResult.ForeColor = System.Drawing.Color.Black
-        Me.lblResult.Location = New System.Drawing.Point(13, 122)
+        Me.lblResult.Location = New System.Drawing.Point(2, 2)
         Me.lblResult.Margin = New System.Windows.Forms.Padding(4)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(992, 229)
+        Me.lblResult.Size = New System.Drawing.Size(988, 249)
         Me.lblResult.TabIndex = 69
         Me.lblResult.Text = "a"
         Me.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -188,6 +191,19 @@ Partial Class dlgAccentMark
         Me.btnPreviewFont.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnPreviewFont.UseVisualStyleBackColor = True
         '
+        'StylizedPanel1
+        '
+        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedPanel1.Controls.Add(Me.lblResult)
+        Me.StylizedPanel1.Location = New System.Drawing.Point(13, 110)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.StylizedPanel1.Name = "StylizedPanel1"
+        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(992, 253)
+        Me.StylizedPanel1.Style = "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Colors=~255|~255" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text C" &
+    "olor=#252b2f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
+        Me.StylizedPanel1.TabIndex = 84
+        '
         'dlgAccentMark
         '
         Me.AcceptButton = Me.btnOK
@@ -195,11 +211,11 @@ Partial Class dlgAccentMark
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(1018, 970)
+        Me.Controls.Add(Me.StylizedPanel1)
         Me.Controls.Add(Me.btnPreviewFont)
         Me.Controls.Add(Me.cbSmartReplace)
         Me.Controls.Add(Me.btnCopy)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.lblResult)
         Me.Controls.Add(Me.AccentsLayoutPanel)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -214,6 +230,7 @@ Partial Class dlgAccentMark
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Accent Mark"
         Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.StylizedPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -232,4 +249,5 @@ Partial Class dlgAccentMark
     Friend WithEvents cbSmartReplace As CheckBox
     Friend WithEvents btnPreviewFont As Button
     Friend WithEvents dlgFont As FontDialog
+    Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
 End Class

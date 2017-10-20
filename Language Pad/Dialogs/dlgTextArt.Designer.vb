@@ -70,7 +70,7 @@ Partial Class dlgTextArt
         Me.nudAngle.Name = "nudAngle"
         Me.nudAngle.Size = New System.Drawing.Size(76, 31)
         Me.nudAngle.TabIndex = 7
-        Me.nudAngle.Value = New Decimal(New Integer() {90, 0, 0, 0})
+        Me.nudAngle.Value = New Decimal(New Integer() {45, 0, 0, 0})
         '
         'nudShadowX
         '
@@ -211,8 +211,7 @@ Partial Class dlgTextArt
         Me.StylizedText1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedText1.Name = "StylizedText1"
         Me.StylizedText1.Size = New System.Drawing.Size(798, 279)
-        Me.StylizedText1.Style = "Colors=#e6832a|#c74c4f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Shadow Color=$2" &
-    "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Shadow Offset=(2,2)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Size=1 "
+        Me.StylizedText1.Style = "Colors=0, 192, 192|#103, 136, 158" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=45" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=0,72,72" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Shadow Color=$2" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Shadow Offset=(2,2)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Size=1"
         Me.StylizedText1.TabIndex = 69
         '
         'btnFont
@@ -230,7 +229,7 @@ Partial Class dlgTextArt
         'btnColor1
         '
         Me.btnColor1.BackColor = System.Drawing.Color.Transparent
-        Me.btnColor1.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnColor1.Image = CType(resources.GetObject("btnColor1.Image"), System.Drawing.Image)
         Me.btnColor1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnColor1.Location = New System.Drawing.Point(22, 313)
@@ -270,7 +269,7 @@ Partial Class dlgTextArt
         'btnColor2
         '
         Me.btnColor2.BackColor = System.Drawing.Color.Transparent
-        Me.btnColor2.Color = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnColor2.Color = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(158, Byte), Integer))
         Me.btnColor2.Image = CType(resources.GetObject("btnColor2.Image"), System.Drawing.Image)
         Me.btnColor2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnColor2.Location = New System.Drawing.Point(172, 313)
@@ -290,7 +289,7 @@ Partial Class dlgTextArt
         'btnBorderColor
         '
         Me.btnBorderColor.BackColor = System.Drawing.Color.Transparent
-        Me.btnBorderColor.Color = System.Drawing.Color.Black
+        Me.btnBorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.btnBorderColor.Image = CType(resources.GetObject("btnBorderColor.Image"), System.Drawing.Image)
         Me.btnBorderColor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBorderColor.Location = New System.Drawing.Point(322, 313)
