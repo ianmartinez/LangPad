@@ -21,37 +21,36 @@
     End Sub
 
     Private Sub OnDraw(ByVal sender As Object, ByVal e As DrawToolTipEventArgs)
-        Dim newArgs As DrawToolTipEventArgs = New DrawToolTipEventArgs(
-           e.Graphics,
-           e.AssociatedWindow,
-           e.AssociatedControl,
-           e.Bounds,
-           e.ToolTipText,
-           BackColor,
-           ForeColor,
-           New Font("Calibri", 42, FontStyle.Bold))
-        'newArgs.DrawBackground()
-        'newArgs.DrawBorder()
-
         Dim rectBorder As New Rectangle(0, 0, e.Bounds.Width - 1, e.Bounds.Height - 1)
         Dim rect As New Rectangle(1, 1, e.Bounds.Width - 2, e.Bounds.Height - 2)
-        Dim b As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(255, 255, 255), Color.FromArgb(220, 220, 220), 45)
-        Dim b2 As New Pen(Color.FromArgb(140, 140, 140))
+        Dim b As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(120, 120, 120), Color.FromArgb(20, 20, 20), 45)
+        Dim b2 As New Pen(Color.FromArgb(0, 0, 0))
 
         e.Graphics.FillRectangle(b, rect)
         e.Graphics.DrawRectangle(b2, rectBorder)
 
-        Dim newArgs2 As DrawToolTipEventArgs = New DrawToolTipEventArgs(
+        Dim text As DrawToolTipEventArgs = New DrawToolTipEventArgs(
            e.Graphics,
            e.AssociatedWindow,
            e.AssociatedControl,
            New Rectangle(e.Bounds.Left + 3, e.Bounds.Top + 3, e.Bounds.Right - 6, e.Bounds.Bottom - 6),
            e.ToolTipText,
            BackColor,
-           Color.FromArgb(64, 64, 64),
+           Color.FromArgb(255, 255, 255),
            New Font("Calibri", 42, FontStyle.Bold))
 
-        newArgs2.DrawText()
+        Dim shadow As DrawToolTipEventArgs = New DrawToolTipEventArgs(
+           e.Graphics,
+           e.AssociatedWindow,
+           e.AssociatedControl,
+           New Rectangle(e.Bounds.Left + 5, e.Bounds.Top + 5, e.Bounds.Right - 8, e.Bounds.Bottom - 8),
+           e.ToolTipText,
+           BackColor,
+           Color.FromArgb(0, 0, 0),
+           New Font("Calibri", 42, FontStyle.Bold))
+
+        shadow.DrawText()
+        text.DrawText()
     End Sub
 End Class
 
