@@ -17,7 +17,7 @@
     Private Sub IPAToolTip_Popup(sender As Object, e As PopupEventArgs) Handles Me.Popup
         Dim TextSize As Size = TextRenderer.MeasureText(Me.GetToolTip(e.AssociatedControl), New Font("Calibri", 42, FontStyle.Bold))
 
-        e.ToolTipSize = New Size(TextSize.Width + 6, TextSize.Height + 6)
+        e.ToolTipSize = New Size(TextSize.Width + 12, TextSize.Height + 12)
     End Sub
 
     Private Sub OnDraw(ByVal sender As Object, ByVal e As DrawToolTipEventArgs)
@@ -35,8 +35,8 @@
 
         Dim rectBorder As New Rectangle(0, 0, e.Bounds.Width - 1, e.Bounds.Height - 1)
         Dim rect As New Rectangle(1, 1, e.Bounds.Width - 2, e.Bounds.Height - 2)
-        Dim b As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(244, 244, 244), Color.FromArgb(225, 225, 225), Drawing2D.LinearGradientMode.Vertical)
-        Dim b2 As New Pen(Color.FromArgb(186, 186, 186))
+        Dim b As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(255, 255, 255), Color.FromArgb(220, 220, 220), 45)
+        Dim b2 As New Pen(Color.FromArgb(140, 140, 140))
 
         e.Graphics.FillRectangle(b, rect)
         e.Graphics.DrawRectangle(b2, rectBorder)

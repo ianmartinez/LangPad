@@ -16,7 +16,7 @@
 
     Public clrSpaceVerBG_GrayBlue As Color = Color.FromArgb(255, 196, 203, 219)
     Public clrSpaceVerBG_White As Color = Color.FromArgb(255, 250, 250, 253)
-    Public clrSpaceVerBG_Shadow As Color = Color.FromArgb(255, 131, 131, 131)
+    Public clrSpaceVerBG_Shadow As Color = Color.FromArgb(255, 200, 200, 200)
 
     Public clrSpaceToolstripBtnGrad_Blue As Color = Color.FromArgb(255, 129, 192, 224)
     Public clrSpaceToolstripBtnGrad_White As Color = Color.FromArgb(255, 237, 248, 253)
@@ -24,8 +24,8 @@
     Public clrSpaceToolstripBtnGrad_Blue_Pressed As Color = Color.FromArgb(255, 124, 177, 204)
     Public clrSpaceToolstripBtnGrad_White_Pressed As Color = Color.FromArgb(255, 228, 245, 252)
 
-    Public clrSpaceHorBG_Color1 As Color = Color.FromArgb(255, 215, 215, 215)
-    Public clrSpaceHorBG_Color2 As Color = Color.FromArgb(255, 174, 174, 174)
+    Public clrSpaceHorBG_Color1 As Color = Color.FromArgb(255, 220, 220, 220)
+    Public clrSpaceHorBG_Color2 As Color = Color.FromArgb(255, 200, 200, 200)
 
     Public clSpace_Selected1 As Color = Color.FromArgb(255, 245, 227, 194)
     Public clSpace_Selected2 As Color = Color.FromArgb(255, 237, 194, 118)
@@ -242,12 +242,11 @@ Public Class clsSpaceToolstripRenderer
     Protected Overrides Sub OnRenderToolStripBackground(ByVal e As ToolStripRenderEventArgs)
         MyBase.OnRenderToolStripBackground(e)
 
-        Dim b As New Drawing2D.LinearGradientBrush(e.AffectedBounds, Color.FromArgb(255, 215, 215, 215), Color.FromArgb(255, 175, 175, 175),
+        Dim b As New Drawing2D.LinearGradientBrush(e.AffectedBounds, Color.FromArgb(255, 200, 200, 200), Color.FromArgb(255, 180, 180, 180),
             Drawing2D.LinearGradientMode.Vertical)
         Dim shadow As New SolidBrush(clrSpaceVerBG_Shadow)
         Dim rect As New Rectangle(0, e.ToolStrip.Height - 2, e.ToolStrip.Width, 1)
         e.Graphics.FillRectangle(b, e.AffectedBounds)
-        e.Graphics.FillRectangle(shadow, rect)
     End Sub
 
     '// Render button selected and pressed state

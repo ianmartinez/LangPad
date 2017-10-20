@@ -189,6 +189,7 @@ Namespace My
                 dlgUpdate.FetchUpdateData()
             End If
 
+            dlgUpdate.StartupCheck = False
             ssLoading.pbLoading.Value = 100
             ssLoading.Refresh()
             'stpw.Stop()
