@@ -659,7 +659,7 @@ Partial Class frmDictionary
         '
         'dlgSaveHtml
         '
-        Me.dlgSaveHtml.Filter = "Html files (*.html)|*.html|Text files (*.txt)|*.txt|All files (*.*)|*.*"
+        Me.dlgSaveHtml.Filter = "HTML Page (*.html)|*.html|Text files (*.txt)|*.txt|All files (*.*)|*.*"
         '
         'frmDictionary
         '
