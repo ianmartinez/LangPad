@@ -117,20 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBox1.Text" xml:space="preserve">
-    <value>Copyright (c) 2012-2017, Ian Martinez
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-
-1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
-  </data>
   <data name="TextBox2.Text" xml:space="preserve">
-    <value>Version 9.0 (October 21, 2017)
+    <value>Version 9.1 (July 15, 2018)
+   •Indicator showing whether smart replace found a match
+   •Context menu icons are now the same icon theme as the rest of the icons (Breeze)
+   
+Version 9.0 (October 21, 2017)
    •New icon
    •Inverted breve, tilde through, dot below, and horn accent marks added to accent palette
    •Smart replace
@@ -151,6 +143,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
    •Fixed bug where clicking "New" would sometimes not clear every page
    •Fixed rendering of checked items on menus
    •Word wrap checkbox now updates when you change tabs
+   
 Version 8.5 (October 13, 2017)
    •Help file included   
    •Minor changes to splash screen
@@ -163,6 +156,7 @@ Version 8.5 (October 13, 2017)
    •Fixed bug where decimal separators other than "." would throw errors
    •Re-design update dialog and fix buttons not working
    •Auto-size dictionary cells
+   
 Version 8.2 (September 30, 2017)
    •Find words in dictionary   
    •Color panel for quick access to font/highlight colors   
@@ -172,6 +166,7 @@ Version 8.2 (September 30, 2017)
    •Revised look of color buttons   
    •Automatically open generated HTML file on completion   
    •Replace most StylizedButtons with native buttons   
+   
 Version 8.1 (September 16, 2017)
    •Export dictionary to HTML
    •Redesigned accent window
@@ -188,6 +183,7 @@ Version 8.1 (September 16, 2017)
    •Fixed bug where CTRL+Click to add character to custom characters would insert it into document
    •Fixed missing '0' value for indentation dropdown
    •Removed excessive whitespace around text art
+   
 Version 8.0 (September 11, 2017)
    •Support for 4k screens
    •Support for themes - Ice(Default), Night, Luna, Olive
@@ -198,6 +194,7 @@ Version 8.0 (September 11, 2017)
    •Replaced tabbed interface with toolbar and menu interface 
    •Removed old bloat features like clip art, webcam insert, and the emotes panel
    •Replaced stylized buttons with native buttons
+   
 Version 7.0 (September 7, 2015)
    •Custom font in dictionary
    •Alignment now works on styles
@@ -210,9 +207,11 @@ Version 7.0 (September 7, 2015)
    •Changed close icon on notebook editor
    •Fixed saving issues on dictionaries
    •Fixed saving issues on RTF files
+   
 Version 6.0 (August 29, 2015)
    •Dictionaries
    •Removed tab bar on RTF Editor
+   
 Version 5.3 (August 13, 2015)
    •Standardized buttons on dialogs
    •Centralized version naming
@@ -222,6 +221,7 @@ Version 5.3 (August 13, 2015)
    •Quick access buttons
    •Changed right click menu style
    •Fixed a bug when renaming a page 
+   
 Version 5.2 (August 10, 2015)
    •Keyboard shortcuts
    •Massive internal improvements
@@ -229,6 +229,7 @@ Version 5.2 (August 10, 2015)
    •Small UI improvements
    •Added to github
    •Microsoft Sans Serif fonts are no longer forced by default
+   
 Version 5.1 (August 7, 2015)
    •A link to the associated reddit thread now shows with update
    •Font changes now happen much faster
@@ -240,6 +241,7 @@ Version 5.1 (August 7, 2015)
    •Fixed bug during size changes with numerous different fonts
    •Fixed tab order on notebook tab
    •Fixed bug that required multiple undos to undo a single font change
+   
 Version 5.0 (August 3, 2015)
    •Update checker
    •Smaller icon for file tab
@@ -249,6 +251,7 @@ Version 5.0 (August 3, 2015)
    •Redesigned splash screen
    •Fixed huge font styling issues when changing font sizes and families
    •Fixed flickering when switching tabs
+   
 Version 4.3 (July 9, 2015)
    •Files are now saved in the same format they were opened as 
    •Tables now insert in place instead of at the end of the file
@@ -259,6 +262,7 @@ Version 4.3 (July 9, 2015)
    •UI style redesigned
    •Reverted to old button style in dialogs
    •Editor no longer hides selection if it loses focus
+   
 Version 4.2 (July 4, 2015)
    •Fixed missing functionality on the new button
    •Fixed RTF editor ribbon colors to match main ribbon
@@ -274,6 +278,7 @@ Version 4.2 (July 4, 2015)
    •You can now select pages using arrow keys in the notebook editor
    •Help file included now
    •Released source code
+   
 Version 4.1 (July 1, 2015)
    •Fixed bug where the file wouldn't save with only 1 tab
    •Fixed bug where zip files wouldn't open from File Explorer
@@ -285,6 +290,7 @@ Version 4.1 (July 1, 2015)
    •Fixed sidebar notebook list borders
    •Borders removed on tabs
    •Numerous small UI changes
+   
 Version 4.0 (June 27, 2015)
    •New icon
    •Edit RTF window redesigned with ribbon
@@ -299,6 +305,7 @@ Version 4.0 (June 27, 2015)
    •"Œ" ligature now in common tab
    •Default format now a notebook file (*.nt)
    •Comma and reverse comma above in accent mark dialog
+   
 Version 3.0 (May 16, 2015)
    •Word wrap toggle
    •Ribbon redesigned
@@ -307,6 +314,7 @@ Version 3.0 (May 16, 2015)
    •Custom zoom dialog
    •Dialog buttons made consistent
    •Redesigned about dialog
+   
 Version 2.1 (May 13, 2015)
    •Ability to add tables
    •File name now shows in title bar
@@ -315,6 +323,7 @@ Version 2.1 (May 13, 2015)
    •Flash button in webcam dialog
    •Fixed lost formatting when opening from File Explorer
    •Splash screen redesigned
+   
 Version 2.0 (May 10, 2015)    
    •Icons changed
    •Buttons made flatter
@@ -332,6 +341,7 @@ Version 2.0 (May 10, 2015)
    •Macron Below in accent mark dialog
    •Fixed distorted images when pasting
    •Fixed errors when changing certain fonts
+   
 Version 1.1 (May 3, 2015)
    •You can now open files directly in File Explorer
    •Splash screen redesigned
@@ -342,8 +352,21 @@ Version 1.1 (May 3, 2015)
    •Fixed some other UI glitches
    •You can now control narration speed &amp; sound
    •Insert webcam now shows an error if there's no webcam
+   
 Version 1.0 (April 24, 2015)
    •Initial Release</value>
+  </data>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>Copyright (c) 2012-2018, Ian Martinez
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
   </data>
   <data name="TextBox3.Text" xml:space="preserve">
     <value>[Breeze Icons]

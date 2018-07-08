@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Version9Icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Language Pad" version="9.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Language Pad" version="9.1.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="Language Pad.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="887808">
-      <assemblyIdentity name="Language Pad" version="9.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="888320">
+      <assemblyIdentity name="Language Pad" version="9.1.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>njFNg23pnyBpVotV040pWiS8i/+2rpCW27r0Lmil37A=</dsig:DigestValue>
+        <dsig:DigestValue>RSW23aOwByvY73UVfkxvfoSMmqsT7YGqthQNsEg7nGI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,17 +86,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>slDM5xPR8BrUNQp8E0eTvGa1Ha9+faIC+PYILLiDSB0=</dsig:DigestValue>
+        <dsig:DigestValue>ixkelElR7XrBewvLGufIjOHU8CsB8NQ5TbVLAQoP674=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Language Pad.exe.config" size="3280">
+  <file name="Language Pad.exe.config" size="3311">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>NVBZqssFU3PejCn0YpwTpLJlxEsh54ayS84qMffVvQc=</dsig:DigestValue>
+      <dsig:DigestValue>owOgTRI968pklUx89OBqP0F4DM3FsftVcXr1+HS198I=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Version9Icon.ico" size="165516">

@@ -69,3 +69,39 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.xml
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgHtml.resources
+W:\github2\Language-Pad\Language Pad\bin\Debug\Language Pad.exe.config
+W:\github2\Language-Pad\Language Pad\bin\Debug\Language Pad.exe.manifest
+W:\github2\Language-Pad\Language Pad\bin\Debug\Language Pad.application
+W:\github2\Language-Pad\Language Pad\bin\Debug\Language Pad.exe
+W:\github2\Language-Pad\Language Pad\bin\Debug\Language Pad.pdb
+W:\github2\Language-Pad\Language Pad\bin\Debug\Language Pad.xml
+W:\github2\Language-Pad\Language Pad\bin\Debug\Tundra.dll
+W:\github2\Language-Pad\Language Pad\bin\Debug\Tundra.pdb
+W:\github2\Language-Pad\Language Pad\bin\Debug\Tundra.xml
+W:\github2\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbprojResolveAssemblyReference.cache
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAbout.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAccentMark.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAddPage.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAppendReplace.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgCustomSymbols.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgCustomZoom.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgSettings.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgStyle.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgTable.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgTextArt.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgUpdate.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.frmDictionary.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgHtml.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.frmMain.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.frmRTF.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.Resources.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.NotebookEditor.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.ssLoading.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language_Pad.IPAToolTip.resources
+W:\github2\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbproj.GenerateResource.Cache
+W:\github2\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbproj.CoreCompileInputs.cache
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language Pad.exe.manifest
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language Pad.application
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language Pad.exe
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language Pad.xml
+W:\github2\Language-Pad\Language Pad\obj\Debug\Language Pad.pdb
