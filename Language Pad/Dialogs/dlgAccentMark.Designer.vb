@@ -39,6 +39,7 @@ Partial Class dlgAccentMark
         Me.btnPreviewFont = New System.Windows.Forms.Button()
         Me.dlgFont = New System.Windows.Forms.FontDialog()
         Me.StylizedPanel1 = New Tundra.StylizedPanel()
+        Me.pnlSmartReplace = New Tundra.StylizedPanel()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.StylizedPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -204,6 +205,19 @@ Partial Class dlgAccentMark
     "olor=#252b2f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
         Me.StylizedPanel1.TabIndex = 84
         '
+        'pnlSmartReplace
+        '
+        Me.pnlSmartReplace.BackColor = System.Drawing.Color.Transparent
+        Me.pnlSmartReplace.Location = New System.Drawing.Point(784, 72)
+        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlSmartReplace.Name = "pnlSmartReplace"
+        Me.pnlSmartReplace.Size = New System.Drawing.Size(29, 29)
+        Me.pnlSmartReplace.Style = "Colors=20,200,20|120,250,120" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-135" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color" &
+    "=10,190,10" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1"
+        Me.pnlSmartReplace.TabIndex = 85
+        Me.ttMain.SetToolTip(Me.pnlSmartReplace, "Replacement Found")
+        Me.pnlSmartReplace.Visible = False
+        '
         'dlgAccentMark
         '
         Me.AcceptButton = Me.btnOK
@@ -211,6 +225,7 @@ Partial Class dlgAccentMark
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(1018, 970)
+        Me.Controls.Add(Me.pnlSmartReplace)
         Me.Controls.Add(Me.StylizedPanel1)
         Me.Controls.Add(Me.btnPreviewFont)
         Me.Controls.Add(Me.cbSmartReplace)
@@ -250,4 +265,5 @@ Partial Class dlgAccentMark
     Friend WithEvents btnPreviewFont As Button
     Friend WithEvents dlgFont As FontDialog
     Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
+    Friend WithEvents pnlSmartReplace As Tundra.StylizedPanel
 End Class

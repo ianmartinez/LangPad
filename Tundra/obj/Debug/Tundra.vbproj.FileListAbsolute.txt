@@ -61,7 +61,6 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.dll.lastcod
 W:\github2\Language-Pad\Tundra\bin\Debug\Tundra.dll
 W:\github2\Language-Pad\Tundra\bin\Debug\Tundra.pdb
 W:\github2\Language-Pad\Tundra\bin\Debug\Tundra.xml
-W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.vbprojResolveAssemblyReference.cache
 W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.Resources.resources
 W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.StylizedColorButton.resources
 W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.GenerateResource.Cache

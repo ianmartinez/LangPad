@@ -13,9 +13,15 @@ Public Class dlgAccentMark
                 Exit Sub
             End If
 
-            Dim result As String = txtCharacter.Text & AccentsString
+            Dim result As String = txtCharacter.Text & AccentsString '
+            pnlSmartReplace.Visible = False
+
             For Each pair As KeyValuePair(Of String, String) In SmartReplaceList
                 result = result.Replace(pair.Key, pair.Value)
+
+                If result.Contains(pair.Value) Then
+                    pnlSmartReplace.Visible = True
+                End If
             Next
 
             lblResult.Text = result
@@ -118,5 +124,9 @@ Public Class dlgAccentMark
         If dlgFont.ShowDialog() = DialogResult.OK Then
             lblResult.Font = dlgFont.Font
         End If
+    End Sub
+
+    Private Sub cbSmartReplace_CheckedChanged(sender As Object, e As EventArgs) Handles cbSmartReplace.CheckedChanged
+        UpdateResult()
     End Sub
 End Class
