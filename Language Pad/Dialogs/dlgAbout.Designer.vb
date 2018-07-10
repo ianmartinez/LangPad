@@ -181,7 +181,7 @@ Partial Class dlgAbout
         '
         'lblVersion
         '
-        Me.lblVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblVersion.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.lblVersion.ForeColor = System.Drawing.Color.White
         Me.lblVersion.Location = New System.Drawing.Point(0, 300)
