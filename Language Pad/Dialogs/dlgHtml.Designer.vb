@@ -89,7 +89,7 @@ Partial Class dlgHtml
         Me.GroupBox2.Location = New System.Drawing.Point(18, 333)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(902, 184)
+        Me.GroupBox2.Size = New System.Drawing.Size(891, 184)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Columns"
@@ -157,7 +157,7 @@ Partial Class dlgHtml
         Me.txtTitle.Location = New System.Drawing.Point(18, 46)
         Me.txtTitle.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(902, 31)
+        Me.txtTitle.Size = New System.Drawing.Size(891, 31)
         Me.txtTitle.TabIndex = 2
         Me.txtTitle.Text = "Dictionary"
         '
@@ -167,7 +167,7 @@ Partial Class dlgHtml
         Me.txtDescription.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDescription.Multiline = True
         Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(902, 170)
+        Me.txtDescription.Size = New System.Drawing.Size(891, 170)
         Me.txtDescription.TabIndex = 3
         '
         'Label2

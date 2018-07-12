@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>Copyright (c) 2012-2018, Ian Martinez
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
+  </data>
   <data name="TextBox2.Text" xml:space="preserve">
     <value>Version 9.1 (July 15, 2018)
    •Indicator showing when smart replace has found a match
@@ -1038,107 +1050,7 @@ the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 &lt;http://www.gnu.org/philosophy/why-not-lgpl.html&gt;.</value>
   </data>
-  <data name="TextBox1.Text" xml:space="preserve">
-    <value>Copyright (c) 2012-2018, Ian Martinez
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-
-1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
-  </data>
   <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
 </root>
