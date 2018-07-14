@@ -1,4 +1,4 @@
-﻿Version 9.1 (July 15, 2018)
+﻿Version 9.1 (July 14, 2018)
    •Indicator showing when smart replace has found a match
    •Context menu icons are now the same icon theme as the rest of the icons (Breeze)
    •Fixed a few smart replace errors
