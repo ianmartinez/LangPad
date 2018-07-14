@@ -1,4 +1,4 @@
-﻿Version=9.0
-DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Language%20Pad/Release/Language%20Pad%209.0.zip?raw:eq:true
-Description=   •New icon:cr:   •Inverted breve, tilde through, dot below, and horn accent marks added to accent palette:cr:   •Smart replace:cr:   •Button to change font for accent mark preview:cr:   •Re-arranged accent marks to make more sense:cr:   •Redesigned splash screen  :cr:   •Add Space & Breeze theme:cr:   •Default theme now 'Breeze':cr:   •Theme saved on shutdown:cr:   •Tweaked multiple themes      :cr:   •Changed icon theme to Breeze:cr:   •Show/Hide sidebar:cr:   •Show/Hide toolstrips:cr:   •Show/Hide statusbar:cr:   •Full/Minimal mode toggles:cr:   •Dictionary form now respects font dialog color:cr:   •Fixed broken URLs when clicking on links inside a document:cr:   •Fixed bug where clicking "New" would sometimes not clear every page:cr:   •Fixed rendering of checked items on menus:cr:   •Word wrap checkbox now updates when you change tabs
-RedditThread=https://www.reddit.com/r/conlangs/comments/77vw9v/language_pad_90_a_word_processordictionary_for/
+﻿Version=9.1
+DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Language%20Pad/Release/Language%20Pad%209.1.zip?raw:eq:true
+Description=   •Indicator showing when smart replace has found a match:cr:   •Context menu icons are now the same icon theme as the rest of the icons (Breeze):cr:   •Fixed a few smart replace errors:cr:   •Checking and unchecking smart replace now updates the preview:cr:   •Cleaner about dialog
+RedditThread=https://www.reddit.com/r/conlangs/comments/8ywri9/language_pad_91_a_word_processordictionary_for/
