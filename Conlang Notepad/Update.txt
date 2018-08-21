@@ -1,4 +1,4 @@
-﻿Version=9.1
-DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Language%20Pad/Release/Language%20Pad%209.1.zip?raw:eq:true
-Description=   •Indicator showing when smart replace has found a match:cr:   •Context menu icons are now the same icon theme as the rest of the icons (Breeze):cr:   •Fixed a few smart replace errors:cr:   •Checking and unchecking smart replace now updates the preview:cr:   •Cleaner about dialog
+﻿Version=9.2
+DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Language%20Pad/Release/Language%20Pad%209.2.zip?raw:eq:true
+Description=   •Minor startup improvements:cr:   •New icon:cr:
 RedditThread=https://www.reddit.com/r/conlangs/comments/8ywri9/language_pad_91_a_word_processordictionary_for/

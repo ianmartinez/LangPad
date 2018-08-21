@@ -68,4 +68,3 @@ W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.CoreCompileInputs.cache
 W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.dll
 W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.xml
 W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.pdb
-W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.vbprojAssemblyReference.cache
