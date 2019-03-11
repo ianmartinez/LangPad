@@ -17,11 +17,11 @@ Public Class StylizedRadioButton
             mStyle = value
             On Error Resume Next
             GenerateBitmaps()
-            If Me.Checked = True Then
+            If Checked = True Then
                 ApplyChecked()
             Else
-                Me.BackgroundImage = ActiveBitmap
-                Me.ForeColor = ActiveTextColor
+                BackgroundImage = ActiveBitmap
+                ForeColor = ActiveTextColor
             End If
         End Set
     End Property
@@ -97,13 +97,13 @@ Public Class StylizedRadioButton
     Private Sub GenerateBitmaps()
         On Error Resume Next
         ReadStyle()
-        ActiveBitmap = New Bitmap(Me.Width, Me.Height)
-        HoverBitmap = New Bitmap(Me.Width, Me.Height)
-        PressedBitmap = New Bitmap(Me.Width, Me.Height)
-        CheckedBitmap = New Bitmap(Me.Width, Me.Height)
+        ActiveBitmap = New Bitmap(Width, Height)
+        HoverBitmap = New Bitmap(Width, Height)
+        PressedBitmap = New Bitmap(Width, Height)
+        CheckedBitmap = New Bitmap(Width, Height)
 
-        Dim FillRectangle As New Rectangle(0, 0, Me.Width - 1, Me.Height - 1)
-        Dim HighlightRectangle As New Rectangle(1, 1, Me.Width - 3, Me.Height - 3)
+        Dim FillRectangle As New Rectangle(0, 0, Width - 1, Height - 1)
+        Dim HighlightRectangle As New Rectangle(1, 1, Width - 3, Height - 3)
         Dim FillRoundedRectangle As GraphicsPath = RoundedRectangle(FillRectangle, Radius)
         Dim HighlightRoundedRectangle As GraphicsPath = RoundedRectangle(HighlightRectangle, Radius)
 
@@ -157,97 +157,97 @@ Public Class StylizedRadioButton
     End Sub
 
     Public Sub New()
-        Me.DoubleBuffered = True
+        DoubleBuffered = True
         SetStyle(ControlStyles.SupportsTransparentBackColor, True)
         SetStyle(ControlStyles.OptimizedDoubleBuffer, True)
         SetStyle(ControlStyles.ResizeRedraw, True)
-        Me.Appearance = Windows.Forms.Appearance.Button
-        Me.BackColor = Color.Transparent
-        Me.FlatStyle = Windows.Forms.FlatStyle.Flat
-        Me.FlatAppearance.BorderSize = 0
-        Me.FlatAppearance.MouseDownBackColor = Color.Transparent
-        Me.FlatAppearance.MouseOverBackColor = Color.Transparent
-        Me.FlatAppearance.CheckedBackColor = Color.Transparent
-        Me.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0)
-        Me.AutoSize = False
-        Me.Padding = New Padding(0, 1, 0, 0)
-        Me.TextAlign = ContentAlignment.MiddleCenter
+        Appearance = Windows.Forms.Appearance.Button
+        BackColor = Color.Transparent
+        FlatStyle = FlatStyle.Flat
+        FlatAppearance.BorderSize = 0
+        FlatAppearance.MouseDownBackColor = Color.Transparent
+        FlatAppearance.MouseOverBackColor = Color.Transparent
+        FlatAppearance.CheckedBackColor = Color.Transparent
+        FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0)
+        AutoSize = False
+        Padding = New Padding(0, 1, 0, 0)
+        TextAlign = ContentAlignment.MiddleCenter
     End Sub
 
     Private Sub ApplyChecked()
         On Error Resume Next
-        If Me.Checked = True Then
-            Me.BackgroundImage = CheckedBitmap
-            Me.ForeColor = CheckedTextColor
+        If Checked = True Then
+            BackgroundImage = CheckedBitmap
+            ForeColor = CheckedTextColor
         End If
     End Sub
 
-    Private Sub StylizedRadioButton_CheckedChanged(sender As Object, e As System.EventArgs) Handles Me.CheckedChanged
+    Private Sub StylizedRadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles Me.CheckedChanged
         On Error Resume Next
-        If Me.Checked = True Then
+        If Checked = True Then
             ApplyChecked()
         Else
-            Me.BackgroundImage = ActiveBitmap
-            Me.ForeColor = ActiveTextColor
+            BackgroundImage = ActiveBitmap
+            ForeColor = ActiveTextColor
         End If
     End Sub
 
-    Private Sub StylizedRadioButton_LostFocus(sender As Object, e As System.EventArgs) Handles Me.LostFocus
-        Me.Refresh()
+    Private Sub StylizedRadioButton_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus
+        Refresh()
     End Sub
 
-    Private Sub StylizedRadioButton_MouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
+    Private Sub StylizedRadioButton_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown
         On Error Resume Next
-        If Me.Checked = True Then
+        If Checked = True Then
             ApplyChecked()
         Else
-            Me.BackgroundImage = PressedBitmap
-            Me.ForeColor = PressedTextColor
+            BackgroundImage = PressedBitmap
+            ForeColor = PressedTextColor
         End If
     End Sub
 
-    Private Sub StylizedRadioButton_MouseHover(sender As Object, e As System.EventArgs) Handles Me.MouseHover
+    Private Sub StylizedRadioButton_MouseHover(sender As Object, e As EventArgs) Handles Me.MouseHover
         On Error Resume Next
         If Not MouseButtons = Windows.Forms.MouseButtons.Left Then
-            If Me.Checked = True Then
+            If Checked = True Then
                 ApplyChecked()
             Else
-                Me.BackgroundImage = HoverBitmap
-                Me.ForeColor = HoverTextColor
+                BackgroundImage = HoverBitmap
+                ForeColor = HoverTextColor
             End If
         End If
     End Sub
 
-    Private Sub StylizedRadioButton_MouseLeave(sender As Object, e As System.EventArgs) Handles Me.MouseLeave
+    Private Sub StylizedRadioButton_MouseLeave(sender As Object, e As EventArgs) Handles Me.MouseLeave
         On Error Resume Next
-        If Me.Checked = True Then
+        If Checked = True Then
             ApplyChecked()
         Else
-            Me.BackgroundImage = ActiveBitmap
-            Me.ForeColor = ActiveTextColor
+            BackgroundImage = ActiveBitmap
+            ForeColor = ActiveTextColor
         End If
     End Sub
 
-    Private Sub StylizedRadioButton_MouseMove(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+    Private Sub StylizedRadioButton_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
         On Error Resume Next
         If Not MouseButtons = Windows.Forms.MouseButtons.Left Then
-            If Me.Checked = True Then
+            If Checked = True Then
                 ApplyChecked()
             Else
-                Me.BackgroundImage = HoverBitmap
-                Me.ForeColor = HoverTextColor
+                BackgroundImage = HoverBitmap
+                ForeColor = HoverTextColor
             End If
         End If
     End Sub
 
-    Private Sub StylizedRadioButton_Resize(sender As Object, e As System.EventArgs) Handles Me.Resize
+    Private Sub StylizedRadioButton_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         On Error Resume Next
         GenerateBitmaps()
-        If Me.Checked = True Then
+        If Checked = True Then
             ApplyChecked()
         Else
-            Me.BackgroundImage = ActiveBitmap
-            Me.ForeColor = ActiveTextColor
+            BackgroundImage = ActiveBitmap
+            ForeColor = ActiveTextColor
         End If
     End Sub
 End Class

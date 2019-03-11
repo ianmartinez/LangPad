@@ -1,6 +1,4 @@
-﻿Imports System
-Imports System.Drawing
-Imports System.Windows.Forms
+﻿Imports System.Drawing
 
 Public Module ZiaFile
     Public Enum LineType
@@ -75,7 +73,7 @@ Public Module ZiaFile
 
     Public Function GetValue(ByVal Data As String, ByVal Lookup As String) As String
         On Error Resume Next
-        Return ZiaFile.Search(ZiaFile.Read(Data), Lookup)
+        Return Search(Read(Data), Lookup)
     End Function
 
     Public Function ToCompatibleString(ByVal Source As String) As String
@@ -214,14 +212,14 @@ Public Module ZiaFile
     End Function
     Public Function FromCompatibleFont(ByVal Source As String) As Font
         Dim _Name As String = Source.Split("|").GetValue(0)
-        Dim _Single As Single = CType((Source.Split("|").GetValue(1)), Single)
+        Dim _Single As Single = (Source.Split("|").GetValue(1))
         Dim _FontStyle As FontStyle = Source.Split("|").GetValue(2)
         Return New Font(_Name, _Single, _FontStyle)
     End Function
     Public Function FromCompatibleFont2(ByVal Source As String) As Font
         Dim _Name As String = Source.Split("|").GetValue(0)
-        Dim _Single As Single = CType((Source.Split("|").GetValue(1)), Single)
-        Dim _FontStyle As FontStyle = CType([Enum].Parse(GetType(FontStyle), Source.Split("|").GetValue(2)), FontStyle)
+        Dim _Single As Single = (Source.Split("|").GetValue(1))
+        Dim _FontStyle As FontStyle = [Enum].Parse(GetType(FontStyle), Source.Split("|").GetValue(2))
         Return New Font(_Name, _Single, _FontStyle)
     End Function
     Public Function FromCompatiblePoint(ByVal Source As String) As Point
@@ -229,5 +227,4 @@ Public Module ZiaFile
         Source = Source.Remove(Source.Length - 1, 1)
         Return New Point(Source.Split(",").GetValue(0), Source.Split(",").GetValue(1))
     End Function
-
 End Module

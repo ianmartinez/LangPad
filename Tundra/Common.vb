@@ -1,21 +1,19 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports System.Drawing
-Imports System.Security.Cryptography
 Imports System.Runtime.InteropServices
 Imports System.Drawing.Imaging
-Imports System.Windows.Forms
 Imports System.IO
 Imports System.Runtime.Serialization.Formatters.Binary
 Imports System.Runtime.Serialization
 
 'Random crap used throughout the software. May or may not be obsolete.
 Public Module Common
-    Public Function GetAveragePixel(ByVal Source As System.Drawing.Bitmap) As System.Drawing.Color
+    Public Function GetAveragePixel(ByVal Source As Bitmap) As Color
         On Error Resume Next
-        Dim GraphicsBitmap = New System.Drawing.Bitmap(1, 1)
-        Using g = System.Drawing.Graphics.FromImage(GraphicsBitmap)
-            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic
-            g.DrawImage(Source, New System.Drawing.Rectangle(0, 0, 1, 1))
+        Dim GraphicsBitmap = New Bitmap(1, 1)
+        Using g = Graphics.FromImage(GraphicsBitmap)
+            g.InterpolationMode = InterpolationMode.HighQualityBicubic
+            g.DrawImage(Source, New Rectangle(0, 0, 1, 1))
         End Using
         Dim AverageColorPixel = GraphicsBitmap.GetPixel(0, 0)
         GraphicsBitmap.Dispose()
@@ -31,7 +29,7 @@ Public Module Common
         End Using
     End Function
 
-    Public Function GetAverageColor(ByVal Source As System.Drawing.Bitmap, Optional ByVal Optimize As Boolean = False) As System.Drawing.Color
+    Public Function GetAverageColor(ByVal Source As Bitmap, Optional ByVal Optimize As Boolean = False) As Color
         On Error Resume Next
         Dim r As Integer = 0
         Dim g As Integer = 0
@@ -151,7 +149,7 @@ Public Module Common
     Public Function ResizeImage(ByVal SourceImage As Image, ByVal Width As Integer, ByVal Height As Integer) As Bitmap
         Dim ImageThumb As New Bitmap(Width, Height)
         Dim ImageGraphics As Graphics = Graphics.FromImage(ImageThumb)
-        ImageGraphics.InterpolationMode = Drawing2D.InterpolationMode.HighQualityBicubic
+        ImageGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic
         ImageGraphics.DrawImage(SourceImage, New Rectangle(0, 0, ImageThumb.Width, ImageThumb.Height), New Rectangle(0, 0, SourceImage.Width, SourceImage.Height), GraphicsUnit.Pixel)
         ResizeImage = ImageThumb
     End Function

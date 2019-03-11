@@ -2,31 +2,31 @@
 Imports System.IO
 Imports System.Drawing
 Imports System.Windows.Forms
-Imports Tundra.ZiaFile
+
 Public Module Aero
     Private UnsignedInteger As UInteger = 0
 #Region "Interop"
-    <DllImport("dwmapi.dll", EntryPoint:="#127", PreserveSig:=False)> _
+    <DllImport("dwmapi.dll", EntryPoint:="#127", PreserveSig:=False)>
     Public Sub DwmGetColorizationParameters(ByRef parameters As AeroParameters)
     End Sub
 
-    <DllImport("dwmapi.dll", PreserveSig:=False)> _
+    <DllImport("dwmapi.dll", PreserveSig:=False)>
     Public Function DwmIsCompositionEnabled() As Boolean
     End Function
 
-    <DllImport("dwmapi.dll", EntryPoint:="#131", PreserveSig:=True)> _
+    <DllImport("dwmapi.dll", EntryPoint:="#131", PreserveSig:=True)>
     Public Sub DwmSetColorizationParameters(ByRef parameters As AeroParameters, ByVal uUnknown As UInteger)
     End Sub
 
-    <DllImport("dwmapi.dll")> _
+    <DllImport("dwmapi.dll")>
     Public Function DwmSetWindowAttribute(ByVal hwnd As IntPtr, ByVal attr As Integer, ByRef attrValue As Integer, ByVal attrSize As Integer) As Integer
     End Function
 
-    <DllImport("DwmApi.dll")> _
+    <DllImport("DwmApi.dll")>
     Public Function DwmExtendFrameIntoClientArea(ByVal hwnd As IntPtr, ByRef pMarInset As Margins) As Integer
     End Function
 
-    <DllImport("dwmapi.dll")> _
+    <DllImport("dwmapi.dll")>
     Public Function DwmEnableBlurBehindWindow(ByVal hWnd As IntPtr, ByRef blurBehind As BlurBehindStructure) As Integer
     End Function
 
@@ -37,14 +37,14 @@ Public Module Aero
         Public TransitionOnMaximized As Boolean
     End Structure
 
-    <Flags()> _
+    <Flags()>
     Public Enum BlurBehindFlags As Byte
         DwmBbEnable = 1
         DwmBbBlurregion = 2
         DwmBbTransitiononmaximized = 4
     End Enum
 
-    <StructLayout(LayoutKind.Sequential)> _
+    <StructLayout(LayoutKind.Sequential)>
     Public Structure Margins
         Public cxLeftWidth As Integer
         Public cxRightWidth As Integer
@@ -62,7 +62,7 @@ Public Module Aero
         Public ColorizationOpaqueBlend As Integer
     End Structure
 
-    <DllImport("dwmapi.dll", EntryPoint:="DwmEnableComposition")> _
+    <DllImport("dwmapi.dll", EntryPoint:="DwmEnableComposition")>
     Public Function Win32DwmEnableComposition(uCompositionAction As UInteger) As UInteger
     End Function
 
@@ -71,7 +71,8 @@ Public Module Aero
 #End Region
 
     Public Function DWMEnabled() As Boolean
-        Return (System.Environment.OSVersion.Version.Major >= 6 AndAlso System.Environment.OSVersion.Version.Build >= 5600) AndAlso File.Exists(System.Environment.SystemDirectory & "\dwmapi.dll")
+        Return (Environment.OSVersion.Version.Major >= 6 AndAlso Environment.OSVersion.Version.Build >= 5600) AndAlso
+            File.Exists(Environment.SystemDirectory & "\dwmapi.dll")
     End Function
 
     Public Sub DisableComposition()
@@ -83,14 +84,14 @@ Public Module Aero
     End Sub
 
     Public Sub RemoveFromAeroPeek(ByVal Window As Form)
-        If DWMEnabled() AndAlso System.Environment.OSVersion.Version.Minor = 1 Then
+        If DWMEnabled() AndAlso Environment.OSVersion.Version.Minor = 1 Then
             Dim attrValue = 1
             DwmSetWindowAttribute(Window.Handle, 12, attrValue, 4)
         End If
     End Sub
 
     Public Sub AddToAeroPeek(ByVal Window As Form)
-        If DWMEnabled() AndAlso System.Environment.OSVersion.Version.Minor = 1 Then
+        If DWMEnabled() AndAlso Environment.OSVersion.Version.Minor = 1 Then
             Dim attrValue = 0
             DwmSetWindowAttribute(Window.Handle, 12, attrValue, 4)
         End If
@@ -126,35 +127,38 @@ Public Module Aero
 
     Public Sub Fill(ByVal Window As Form)
         If DWMEnabled() Then
-            Aero.Extend(Window, -1, -1, -1, -1)
+            Extend(Window, -1, -1, -1, -1)
         End If
     End Sub
 
     Public Sub Surround(ByVal Window As Form, ByVal Control As Control, Optional ByVal AutomaticColor As Boolean = True, Optional ByVal Padding As Integer = 0)
         If DWMEnabled() Then
-            If AutomaticColor = True Then Aero.Extend(Window, Control.Left + Padding, Window.ClientSize.Width - Control.Right + Padding, Control.Top + Padding, Window.ClientSize.Height - Control.Bottom + Padding)
+            If AutomaticColor = True Then Extend(Window, Control.Left + Padding,
+                                                 Window.ClientSize.Width - Control.Right + Padding,
+                                                 Control.Top + Padding,
+                                                 Window.ClientSize.Height - Control.Bottom + Padding)
         End If
     End Sub
 
-    Public Sub SetColor(ByVal AeroColor As System.Drawing.Color)
+    Public Sub SetColor(ByVal AeroColor As Color)
         If DWMEnabled() = False Then Exit Sub
         Dim AeroParameters As AeroParameters = GetParameters()
-        AeroParameters.ColorizationColor = System.Drawing.Color.FromArgb(255, AeroColor.R, AeroColor.G, AeroColor.B).ToArgb()
+        AeroParameters.ColorizationColor = Color.FromArgb(255, AeroColor.R, AeroColor.G, AeroColor.B).ToArgb()
         SetParameters(AeroParameters)
     End Sub
 
-    Public Sub SetAllColors(ByVal AeroColor As System.Drawing.Color)
+    Public Sub SetAllColors(ByVal AeroColor As Color)
         If DWMEnabled() = False Then Exit Sub
         Dim AeroParameters As AeroParameters = GetParameters()
-        AeroParameters.ColorizationColor = System.Drawing.Color.FromArgb(255, AeroColor.R, AeroColor.G, AeroColor.B).ToArgb()
-        AeroParameters.ColorizationAfterglow = System.Drawing.Color.FromArgb(255, AeroColor.R, AeroColor.G, AeroColor.B).ToArgb()
+        AeroParameters.ColorizationColor = Color.FromArgb(255, AeroColor.R, AeroColor.G, AeroColor.B).ToArgb()
+        AeroParameters.ColorizationAfterglow = Color.FromArgb(255, AeroColor.R, AeroColor.G, AeroColor.B).ToArgb()
         SetParameters(AeroParameters)
     End Sub
 
-    Public Sub SetAfterglowColor(ByVal AfterglowColor As System.Drawing.Color)
+    Public Sub SetAfterglowColor(ByVal AfterglowColor As Color)
         If DWMEnabled() = False Then Exit Sub
         Dim AeroParameters As AeroParameters = GetParameters()
-        AeroParameters.ColorizationAfterglow = System.Drawing.Color.FromArgb(255, AfterglowColor.R, AfterglowColor.G, AfterglowColor.B).ToArgb()
+        AeroParameters.ColorizationAfterglow = Color.FromArgb(255, AfterglowColor.R, AfterglowColor.G, AfterglowColor.B).ToArgb()
         SetParameters(AeroParameters)
     End Sub
 
@@ -247,7 +251,7 @@ Public Module Aero
         If DWMEnabled() = True Then DwmSetColorizationParameters(AeroParameters, UnsignedInteger)
     End Sub
     Public Sub SetAeroParametersFromFile(ByVal FilePath As String)
-        Dim Source As String = System.IO.File.ReadAllText(FilePath, System.Text.Encoding.Unicode)
+        Dim Source As String = File.ReadAllText(FilePath, System.Text.Encoding.Unicode)
         Dim FromFileParameters As New AeroParameters
         FromFileParameters.ColorizationAfterglow = CInt(GetValue(Source, "Afterglow Color"))
         FromFileParameters.ColorizationAfterglowBalance = CInt(GetValue(Source, "Afterglow Color Balance"))
@@ -258,5 +262,4 @@ Public Module Aero
         FromFileParameters.ColorizationOpaqueBlend = CInt(GetValue(Source, "IsTransparent"))
         SetParameters(FromFileParameters)
     End Sub
-
 End Module

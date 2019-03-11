@@ -4,8 +4,6 @@ Imports System.IO
 Imports System.Text
 Imports System.Drawing
 Imports System.Windows.Forms
-Imports System.Reflection
-Imports System.Drawing.Imaging
 
 Public Class Appearance
     Public Const SPI_SETDESKWALLPAPER As Integer = 20
@@ -42,7 +40,7 @@ Public Class Appearance
 
     Public Shared Sub SetWallpaper(ByVal Source As Image, ByVal WallpaperStyle As Style)
         Dim TempPath As String = Path.Combine(Path.GetTempPath(), "Desktop Wallpaper.bmp")
-        Source.Save(TempPath, System.Drawing.Imaging.ImageFormat.Bmp)
+        Source.Save(TempPath, Imaging.ImageFormat.Bmp)
         Dim WallpaperStyleKey As RegistryKey = Registry.CurrentUser.OpenSubKey("Control Panel\Desktop", True)
         If WallpaperStyle = Style.Tile Then
             WallpaperStyleKey.SetValue("WallpaperStyle", "0")
@@ -69,9 +67,9 @@ Public Class Appearance
         Public Color As String
         Public Size As String
         Public Sub New(ByVal SFileName As String, ByVal SColor As String, ByVal SSize As String)
-            Me.FileName = SFileName
-            Me.Color = SColor
-            Me.Size = SSize
+            FileName = SFileName
+            Color = SColor
+            Size = SSize
         End Sub
     End Class
 
@@ -83,7 +81,6 @@ Public Class Appearance
         GetCurrentThemeName(ThemeNameStringBuilder, ThemeNameStringBuilder.Capacity, ThemeColorStringBuilder, ThemeColorStringBuilder.Capacity, ThemeSizeStringBuilder, ThemeSizeStringBuilder.Capacity)
         GetTheme = New Theme(ThemeNameStringBuilder.ToString, ThemeColorStringBuilder.ToString, ThemeSizeStringBuilder.ToString)
     End Function
-
 
     Public Const WM_GETICON As Integer = &H7F
     Public Shared Function GetAppIcon(ByVal hwnd As IntPtr) As System.Drawing.Icon
@@ -105,9 +102,8 @@ Public Class Appearance
             Return Nothing
         End If
 
-        Return System.Drawing.Icon.FromHandle(iconHandle)
+        Return Icon.FromHandle(iconHandle)
     End Function
-
 
     Public Shared Function GetWallpaper() As Image
         On Error Resume Next
@@ -129,5 +125,4 @@ Public Class Appearance
         g.CopyFromScreen(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size, CopyPixelOperation.SourceCopy)
         Return Screenshot
     End Function
-
 End Class

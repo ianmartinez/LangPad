@@ -20,7 +20,7 @@ Public Class TransparentRichTextBox
     End Property
 
     Public Sub New()
-        Me.DoubleBuffered = True
+        DoubleBuffered = True
         SetStyle(ControlStyles.SupportsTransparentBackColor, True)
         SetStyle(ControlStyles.OptimizedDoubleBuffer, True)
         SetStyle(ControlStyles.ResizeRedraw, True)

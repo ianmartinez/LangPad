@@ -68,3 +68,13 @@ W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.CoreCompileInputs.cache
 W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.dll
 W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.xml
 W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.pdb
+\\Mac\Home\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.Resources.resources
+\\Mac\Home\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.StylizedColorButton.resources
+\\Mac\Home\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.GenerateResource.cache
+\\Mac\Home\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.dll
+\\Mac\Home\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.pdb
+\\Mac\Home\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.xml
+\\Mac\Home\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.dll
+\\Mac\Home\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.xml
+\\Mac\Home\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.pdb

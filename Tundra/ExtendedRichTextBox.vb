@@ -3,12 +3,12 @@
 Imports System
 Imports System.Windows.Forms
 Imports System.Drawing
-Imports System.Runtime.InteropServices
 Imports System.Drawing.Printing
 Imports System.Text
 Imports System.IO
 Imports System.Drawing.Imaging
 Imports System.Collections.Specialized
+Imports System.Runtime.InteropServices
 'This entire file is made from various projects on CodeProject smashed together along with some of my own code
 
 ''' <summary>
@@ -24,8 +24,8 @@ Imports System.Collections.Specialized
 
 Public Class ExtendedRichTextBox
     Inherits RichTextBox
-    <DllImport("USER32.dll")> _
-          Private Shared Function SendMessage(hWnd As IntPtr, msg As Integer, wParam As Integer, lParam As IntPtr) As Int32
+    <DllImport("USER32.dll")>
+    Private Shared Function SendMessage(hWnd As IntPtr, msg As Integer, wParam As Integer, lParam As IntPtr) As Int32
     End Function
 
     Private contentRectangle As Rectangle
@@ -35,7 +35,7 @@ Public Class ExtendedRichTextBox
 
     Private Const WM_USER As Integer = &H400
 
-    <StructLayout(LayoutKind.Sequential)> _
+    <StructLayout(LayoutKind.Sequential)>
     Private Structure RECT
         Public Left As Integer
         Public Top As Integer
@@ -43,13 +43,13 @@ Public Class ExtendedRichTextBox
         Public Bottom As Integer
     End Structure
 
-    <StructLayout(LayoutKind.Sequential)> _
+    <StructLayout(LayoutKind.Sequential)>
     Private Structure CHARRANGE
         Public cpMin As Integer          ' First character of range (0 for start of doc)
         Public cpMax As Integer          ' Last character of range (-1 for end of doc)
     End Structure
 
-    <StructLayout(LayoutKind.Sequential)> _
+    <StructLayout(LayoutKind.Sequential)>
     Private Structure FORMATRANGE
         Public hdc As IntPtr             ' Actual DC to draw on
         Public hdcTarget As IntPtr       ' Target DC for determining text formatting
@@ -63,7 +63,6 @@ Public Class ExtendedRichTextBox
         Return contentRectangle
     End Function
     Private Declare Function SendMessage Lib "USER32" Alias "SendMessageA" (ByVal hWnd As IntPtr, ByVal msg As Integer, ByVal wp As IntPtr, ByVal lp As IntPtr) As IntPtr
-
 
     ' Render the contents of the RichTextBox for printing
     '	Return the last character printed + 1 (printing start from this point for next page)
@@ -120,8 +119,6 @@ Public Class ExtendedRichTextBox
         Return res.ToInt32()
     End Function
 
-
-
     ' Enum for possible RTF colors
     Public Enum RtfColor
         Black
@@ -141,8 +138,6 @@ Public Class ExtendedRichTextBox
         Aqua
         White
     End Enum
-
-
 
     ' Specifies the flags/options for the unmanaged call to the GDI+ method
     ' Metafile.EmfToWmfBits().
@@ -313,7 +308,7 @@ Public Class ExtendedRichTextBox
         rtfFontFamily.Add(FontFamily.GenericSerif, RtfFontFamilyDef.Roman)
         rtfFontFamily.Add(FF_UNKNOWN, RtfFontFamilyDef.Unknown)
 
-        Using _graphics As Graphics = Me.CreateGraphics()
+        Using _graphics As Graphics = CreateGraphics()
             xDpi = _graphics.DpiX
             yDpi = _graphics.DpiY
         End Using
@@ -333,20 +328,20 @@ Public Class ExtendedRichTextBox
     Public Sub AppendRtf(_rtf As String)
 
         ' Move caret to the end of the text
-        Me.[Select](Me.TextLength, 0)
+        [Select](TextLength, 0)
 
         ' Since SelectedRtf is null, this will append the string to the
         ' end of the existing RTF
-        Me.SelectedRtf = _rtf
+        SelectedRtf = _rtf
     End Sub
 
     Public Sub InsertRtf(_rtf As String)
-        Me.SelectedRtf = _rtf
+        SelectedRtf = _rtf
     End Sub
 
 
     Public Sub AppendTextAsRtf(_text As String)
-        AppendTextAsRtf(_text, Me.Font)
+        AppendTextAsRtf(_text, Font)
     End Sub
 
     ''' <param name="_font"></param>
@@ -360,13 +355,13 @@ Public Class ExtendedRichTextBox
 
     Public Sub AppendTextAsRtf(_text As String, _font As Font, _textColor As RtfColor, _backColor As RtfColor)
         ' Move carret to the end of the text
-        Me.[Select](Me.TextLength, 0)
+        [Select](TextLength, 0)
 
         InsertTextAsRtf(_text, _font, _textColor, _backColor)
     End Sub
 
     Public Sub InsertTextAsRtf(_text As String)
-        InsertTextAsRtf(_text, Me.Font)
+        InsertTextAsRtf(_text, Font)
     End Sub
 
 
@@ -397,9 +392,9 @@ Public Class ExtendedRichTextBox
         ' it to the RTF string.
         _rtf.Append(GetDocumentArea(_text, _font))
 
-        Me.SelectedRtf = _rtf.ToString()
+        SelectedRtf = _rtf.ToString()
     End Sub
-   
+
 
     Public Sub InsertTable(ByVal Rows As Integer, ByVal Columns As Integer, Optional ByVal Width As Integer = 100)
         Dim Twips As Integer = Width * 15
@@ -418,16 +413,16 @@ Public Class ExtendedRichTextBox
         NewRTB.Rtf = RTFBoilerPlate & TableStringBuilder.ToString & "}"
 
         On Error Resume Next
-        Dim CurrentPos As Integer = Me.SelectionStart
+        Dim CurrentPos As Integer = SelectionStart
         Dim obj As Object = Clipboard.GetDataObject
         NewRTB.SelectAll()
         NewRTB.Copy()
-        Me.Paste()
+        Paste()
         Clipboard.SetDataObject(obj)
 
-        Me.Focus()
-        Me.SelectionStart = CurrentPos + Text.Length
-        Me.SelectionLength = 0
+        Focus()
+        SelectionStart = CurrentPos + Text.Length
+        SelectionLength = 0
     End Sub
     Private Function GetDocumentArea(_text As String, _font As Font) As String
 
@@ -516,7 +511,7 @@ Public Class ExtendedRichTextBox
     Public Sub InsertImage(_image As Image)
         Dim img As Image = _image.Clone
         Dim g As Graphics = Graphics.FromImage(_image)
-        g.Clear(Me.BackColor)
+        g.Clear(BackColor)
         g.DrawImage(img, New Point(0, 0))
         Dim _rtf As New StringBuilder()
 
@@ -525,7 +520,7 @@ Public Class ExtendedRichTextBox
 
         ' Create the font table using the RichTextBox's current font and append
         ' it to the RTF string
-        _rtf.Append(GetFontTable(Me.Font))
+        _rtf.Append(GetFontTable(Font))
 
         ' Create the image control string and append it to the RTF string
         _rtf.Append(GetImagePrefix(_image))
@@ -536,7 +531,7 @@ Public Class ExtendedRichTextBox
         ' Close the RTF image control string
         _rtf.Append(RTF_IMAGE_POST)
 
-        Me.SelectedRtf = _rtf.ToString()
+        SelectedRtf = _rtf.ToString()
     End Sub
 
     Private Function GetImagePrefix(_image As Image) As String
@@ -570,7 +565,7 @@ Public Class ExtendedRichTextBox
         Return _rtf.ToString()
     End Function
 
-    <DllImportAttribute("gdiplus.dll")> _
+    <DllImportAttribute("gdiplus.dll")>
     Private Shared Function GdipEmfToWmfBits(_hEmf As IntPtr, _bufferSize As UInteger, _buffer As Byte(), _mappingMode As Integer, _flags As EmfToWmfBitsFlags) As UInteger
     End Function
 
@@ -593,7 +588,7 @@ Public Class ExtendedRichTextBox
             _stream = New MemoryStream()
 
             ' Get a graphics context from the RichTextBox
-            Using _graphics = Me.CreateGraphics()
+            Using _graphics = CreateGraphics()
 
                 ' Get the device context from the graphics context
                 _hdc = _graphics.GetHdc()

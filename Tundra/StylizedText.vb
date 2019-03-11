@@ -1,12 +1,8 @@
 ﻿Imports System.Drawing
 Imports System.Drawing.Drawing2D
 Imports System.Windows.Forms
-Imports Tundra.ZiaFile
-Imports System.ComponentModel.Design
 Imports System.ComponentModel
 Imports System.Drawing.Design
-Imports System.Drawing.Imaging
-Imports System.Runtime.InteropServices
 
 Public Class StylizedText
     Inherits DoubleBufferedPanel
@@ -19,7 +15,7 @@ Public Class StylizedText
         Set(ByVal value As String)
             mStyle = value
             ReadStyle()
-            Me.BackgroundImage = DrawBitmap()
+            BackgroundImage = DrawBitmap()
         End Set
     End Property
 
@@ -32,7 +28,7 @@ Public Class StylizedText
         Set(ByVal value As String)
             mControlText = value
             ReadStyle()
-            Me.BackgroundImage = DrawBitmap()
+            BackgroundImage = DrawBitmap()
         End Set
     End Property
 
@@ -115,7 +111,6 @@ Public Class StylizedText
     End Function
 
     Private Sub StylizedText_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-
-        Me.BackgroundImage = DrawBitmap()
+        BackgroundImage = DrawBitmap()
     End Sub
 End Class

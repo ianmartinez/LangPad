@@ -1,8 +1,5 @@
 ﻿Imports System.Drawing
 Imports System.Drawing.Drawing2D
-Imports System.Windows.Forms
-Imports Tundra.ZiaFile
-Imports System.ComponentModel.Design
 Imports System.ComponentModel
 Imports System.Drawing.Design
 
@@ -55,14 +52,14 @@ Public Class StylizedPanel
         End If
 
         Dim Blend As New ColorBlend()
-        Dim FillRectangle As New Rectangle(-1, -1, Me.Width + 2, Me.Height + 2)
+        Dim FillRectangle As New Rectangle(-1, -1, Width + 2, Height + 2)
         Dim FillRoundedRectangle As GraphicsPath = RoundedRectangle(FillRectangle, Radius)
         Dim FillBlend As New LinearGradientBrush(FillRectangle, Color.Transparent, Color.Transparent, Angle)
 
-        Dim BorderRectangle As New Rectangle(0, 0, Me.Width - 1, Me.Height - 1)
+        Dim BorderRectangle As New Rectangle(0, 0, Width - 1, Height - 1)
         Dim BorderRoundedRectangle As GraphicsPath = RoundedRectangle(BorderRectangle, Radius)
 
-        Dim HighlightRectangle As New Rectangle(1, 1, Me.Width - 3, Me.Height - 3)
+        Dim HighlightRectangle As New Rectangle(1, 1, Width - 3, Height - 3)
         Dim HighlightRoundedRectangle As GraphicsPath = RoundedRectangle(HighlightRectangle, Radius)
 
         Blend.Colors = Colors
@@ -70,7 +67,7 @@ Public Class StylizedPanel
         FillBlend.InterpolationColors = Blend
 
         If NoBorder = True Then
-            FillRectangle = New Rectangle(-1, -1, Me.Width + 3, Me.Height + 3)
+            FillRectangle = New Rectangle(-1, -1, Width + 3, Height + 3)
             FillRoundedRectangle = RoundedRectangle(FillRectangle, Radius)
         End If
 
@@ -83,8 +80,8 @@ Public Class StylizedPanel
 
         If NoBorder = False Then
             If BottomOnly = True Then
-                BorderRectangle = New Rectangle(-1, -1, Me.Width + 2, Me.Height - 0)
-                HighlightRectangle = New Rectangle(-1, -1, Me.Width + 2, Me.Height - 1)
+                BorderRectangle = New Rectangle(-1, -1, Width + 2, Height - 0)
+                HighlightRectangle = New Rectangle(-1, -1, Width + 2, Height - 1)
                 BorderRoundedRectangle = RoundedRectangle(BorderRectangle, Radius)
                 HighlightRoundedRectangle = RoundedRectangle(HighlightRectangle, Radius)
             End If

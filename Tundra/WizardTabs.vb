@@ -1,7 +1,5 @@
 ﻿Imports System.Windows.Forms
 Imports System.Drawing
-Imports System.Drawing.Drawing2D
-Imports System.Runtime.InteropServices
 
 Public Class WizardTabs
     Inherits TabControl
@@ -16,8 +14,8 @@ Public Class WizardTabs
             ApplyTabs()
         End Set
     End Property
-    Public Overrides Property Backcolor As Color
 
+    Public Overrides Property Backcolor As Color
 
     Private Sub ApplyTabs()
         If WizardMode = True Then

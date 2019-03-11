@@ -15,7 +15,7 @@ Public Class StylizedColorButton
             mColor = value
             On Error Resume Next
             GenerateColorBitmap()
-            Me.Image = ColorBitmap
+            Image = ColorBitmap
             RaiseEvent ColorChanged(Me, Nothing)
         End Set
     End Property

@@ -2,7 +2,6 @@
 Imports System.ComponentModel
 Imports System.Drawing.Design
 Imports System.Drawing
-Imports Tundra.ZiaFile
 Imports System.Drawing.Drawing2D
 
 Public Class StylizedButton
@@ -10,7 +9,7 @@ Public Class StylizedButton
     Private mStyle As String
     Protected Event UIStyleChanged(ByVal sender As Object, ByVal e As EventArgs)
 
-    <Editor(GetType(MultilineStringEditor), GetType(UITypeEditor))> _
+    <Editor(GetType(MultilineStringEditor), GetType(UITypeEditor))>
     Public Property Style As String
         Get
             Return mStyle
@@ -19,8 +18,8 @@ Public Class StylizedButton
             mStyle = value
             On Error Resume Next
             GenerateBitmaps()
-            Me.BackgroundImage = ActiveBitmap
-            Me.ForeColor = ActiveTextColor
+            BackgroundImage = ActiveBitmap
+            ForeColor = ActiveTextColor
             RaiseEvent UIStyleChanged(Me, Nothing)
         End Set
     End Property
@@ -84,16 +83,16 @@ Public Class StylizedButton
     Protected Sub GenerateBitmaps()
         On Error Resume Next
         ReadStyle()
-        ActiveBitmap = New Bitmap(Me.Width, Me.Height)
-        HoverBitmap = New Bitmap(Me.Width, Me.Height)
-        PressedBitmap = New Bitmap(Me.Width, Me.Height)
+        ActiveBitmap = New Bitmap(Width, Height)
+        HoverBitmap = New Bitmap(Width, Height)
+        PressedBitmap = New Bitmap(Width, Height)
 
-        Dim FillRectangle As New Rectangle(0, 0, Me.Width - 1, Me.Height - 1)
-        Dim HighlightRectangle As New Rectangle(1, 1, Me.Width - 3, Me.Height - 3)
+        Dim FillRectangle As New Rectangle(0, 0, Width - 1, Height - 1)
+        Dim HighlightRectangle As New Rectangle(1, 1, Width - 3, Height - 3)
 
         If NoBottom = True Then
-            FillRectangle = New Rectangle(0, 0, Me.Width - 1, Me.Height + 2)
-            HighlightRectangle = New Rectangle(1, 1, Me.Width - 3, Me.Height + 2)
+            FillRectangle = New Rectangle(0, 0, Width - 1, Height + 2)
+            HighlightRectangle = New Rectangle(1, 1, Width - 3, Height + 2)
         End If
 
         Dim FillRoundedRectangle As GraphicsPath = RoundedRectangle(FillRectangle, Radius)
@@ -137,58 +136,58 @@ Public Class StylizedButton
     End Sub
 
     Public Sub New()
-        Me.DoubleBuffered = True
+        DoubleBuffered = True
         SetStyle(ControlStyles.SupportsTransparentBackColor, True)
         SetStyle(ControlStyles.OptimizedDoubleBuffer, True)
         SetStyle(ControlStyles.ResizeRedraw, True)
-        Me.BackColor = Color.Transparent
-        Me.FlatStyle = Windows.Forms.FlatStyle.Flat
-        Me.FlatAppearance.BorderSize = 0
-        Me.FlatAppearance.MouseDownBackColor = Color.Transparent
-        Me.FlatAppearance.MouseOverBackColor = Color.Transparent
-        Me.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0)
-        Me.Padding = New Padding(0, 1, 0, 0)
-        Me.UseCompatibleTextRendering = True
+        BackColor = Color.Transparent
+        FlatStyle = FlatStyle.Flat
+        FlatAppearance.BorderSize = 0
+        FlatAppearance.MouseDownBackColor = Color.Transparent
+        FlatAppearance.MouseOverBackColor = Color.Transparent
+        FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0)
+        Padding = New Padding(0, 1, 0, 0)
+        UseCompatibleTextRendering = True
     End Sub
 
-    Private Sub StylizedButton_LostFocus(sender As Object, e As System.EventArgs) Handles Me.LostFocus
-        Me.Refresh()
+    Private Sub StylizedButton_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus
+        Refresh()
     End Sub
 
-    Private Sub StylizedButton_MouseDown(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
+    Private Sub StylizedButton_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown
         On Error Resume Next
         If MouseButtons = Windows.Forms.MouseButtons.Left Then
-            Me.BackgroundImage = PressedBitmap
-            Me.ForeColor = PressedTextColor
+            BackgroundImage = PressedBitmap
+            ForeColor = PressedTextColor
         End If
     End Sub
 
-    Private Sub StylizedButton_MouseHover(sender As Object, e As System.EventArgs) Handles Me.MouseHover
+    Private Sub StylizedButton_MouseHover(sender As Object, e As EventArgs) Handles Me.MouseHover
         On Error Resume Next
         If Not MouseButtons = Windows.Forms.MouseButtons.Left Then
-            Me.BackgroundImage = HoverBitmap
-            Me.ForeColor = HoverTextColor
+            BackgroundImage = HoverBitmap
+            ForeColor = HoverTextColor
         End If
     End Sub
 
-    Private Sub StylizedButton_MouseLeave(sender As Object, e As System.EventArgs) Handles Me.MouseLeave
+    Private Sub StylizedButton_MouseLeave(sender As Object, e As EventArgs) Handles Me.MouseLeave
         On Error Resume Next
-        Me.BackgroundImage = ActiveBitmap
-        Me.ForeColor = ActiveTextColor
+        BackgroundImage = ActiveBitmap
+        ForeColor = ActiveTextColor
     End Sub
 
-    Private Sub StylizedButton_MouseMove(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+    Private Sub StylizedButton_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
         On Error Resume Next
         If Not MouseButtons = Windows.Forms.MouseButtons.Left Then
-            Me.BackgroundImage = HoverBitmap
-            Me.ForeColor = HoverTextColor
+            BackgroundImage = HoverBitmap
+            ForeColor = HoverTextColor
         End If
     End Sub
 
-    Private Sub StylizedButton_Resize(sender As Object, e As System.EventArgs) Handles Me.Resize
+    Private Sub StylizedButton_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         On Error Resume Next
         GenerateBitmaps()
-        Me.BackgroundImage = ActiveBitmap
-        Me.ForeColor = ActiveTextColor
+        BackgroundImage = ActiveBitmap
+        ForeColor = ActiveTextColor
     End Sub
 End Class

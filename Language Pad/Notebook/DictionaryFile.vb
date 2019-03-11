@@ -1,15 +1,5 @@
 ﻿Imports System.IO
-Imports System.Runtime.Serialization
-Imports System.Collections
-Imports System.Runtime.Serialization.Formatters.Binary
-Imports System.CodeDom.Compiler
-Imports System.Resources
-Imports System.Reflection
-Imports System.Drawing
-Imports System.Windows.Forms
 Imports Tundra
-Imports Ionic.Zip
-Imports System.Text.RegularExpressions
 
 <Serializable()>
 Public Class DictionaryWord

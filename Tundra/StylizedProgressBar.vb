@@ -2,7 +2,6 @@
 Imports System.ComponentModel
 Imports System.Drawing.Design
 Imports System.Drawing
-Imports Tundra.ZiaFile
 Imports System.Drawing.Drawing2D
 
 Public Class StylizedProgressBar
@@ -22,7 +21,7 @@ Public Class StylizedProgressBar
             mStyle = value
             On Error Resume Next
             GenerateBitmaps()
-            Me.BackgroundImage = BackgroundBitmap
+            BackgroundImage = BackgroundBitmap
             ProgressPanel.BackgroundImage = ProgressBitmap
             RaiseEvent UIStyleChanged(Me, Nothing)
         End Set
@@ -49,7 +48,7 @@ Public Class StylizedProgressBar
     Private Sub ReadStyle()
         On Error Resume Next
         Radius = CInt(GetValue(Style, "Radius"))
-        Me.Padding = New Padding(CInt(GetValue(Style, "Padding")))
+        Padding = New Padding(CInt(GetValue(Style, "Padding")))
 
         BackgroundColors = FromCompatibleColorList(GetValue(Style, "Background Colors"))
         BackgroundPositions = FromCompatibleSingleList(GetValue(Style, "Background Positions"))
@@ -70,11 +69,11 @@ Public Class StylizedProgressBar
     Protected Sub GenerateBitmaps()
         On Error Resume Next
         ReadStyle()
-        BackgroundBitmap = New Bitmap(Me.Width, Me.Height)
+        BackgroundBitmap = New Bitmap(Width, Height)
         ProgressBitmap = New Bitmap(ProgressPanel.Width, ProgressPanel.Height)
 
-        Dim FillRectangle As New Rectangle(0, 0, Me.Width, Me.Height)
-        Dim HighlightRectangle As New Rectangle(1, 1, Me.Width - 2, Me.Height - 2)
+        Dim FillRectangle As New Rectangle(0, 0, Width, Height)
+        Dim HighlightRectangle As New Rectangle(1, 1, Width - 2, Height - 2)
         Dim FillRoundedRectangle As GraphicsPath = RoundedRectangle(FillRectangle, Radius)
         Dim HighlightRoundedRectangle As GraphicsPath = RoundedRectangle(HighlightRectangle, Radius)
 
@@ -110,37 +109,37 @@ Public Class StylizedProgressBar
     End Sub
 
     Public Sub New()
-        Me.DoubleBuffered = True
+        DoubleBuffered = True
         SetStyle(ControlStyles.SupportsTransparentBackColor, True)
         SetStyle(ControlStyles.OptimizedDoubleBuffer, True)
         SetStyle(ControlStyles.ResizeRedraw, True)
-        Me.BackColor = Color.Transparent
-        Me.Padding = New Padding(2)
-        Me.BackgroundImageLayout = ImageLayout.None
-        Me.Controls.Add(ProgressPanel)
+        BackColor = Color.Transparent
+        Padding = New Padding(2)
+        BackgroundImageLayout = ImageLayout.None
+        Controls.Add(ProgressPanel)
         ProgressPanel.Dock = DockStyle.Left
         SetProgress(40)
     End Sub
 
     Public Sub SetProgress(ByVal Value As Integer, Optional ByVal Maximum As Integer = 100)
-        ProgressPanel.Width = (Value * Me.Width - (Padding.Left + Padding.Right)) / Maximum
+        ProgressPanel.Width = (Value * Width - (Padding.Left + Padding.Right)) / Maximum
         Progress = Value / Maximum * 100
         RaiseEvent ProgressChanged(Me, New EventArgs)
     End Sub
 
-    Private Sub StylizedButton_LostFocus(sender As Object, e As System.EventArgs) Handles Me.LostFocus
-        Me.Refresh()
+    Private Sub StylizedButton_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus
+        Refresh()
     End Sub
 
     Private Sub StylizedProgressBar_ProgressChanged(sender As Object, e As EventArgs) Handles Me.ProgressChanged
         GenerateBitmaps()
-        Me.BackgroundImage = BackgroundBitmap
+        BackgroundImage = BackgroundBitmap
         ProgressPanel.BackgroundImage = ProgressBitmap
     End Sub
 
     Private Sub StylizedProgressBar_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         GenerateBitmaps()
-        Me.BackgroundImage = BackgroundBitmap
+        BackgroundImage = BackgroundBitmap
         ProgressPanel.BackgroundImage = ProgressBitmap
     End Sub
 End Class

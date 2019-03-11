@@ -3,7 +3,6 @@
 Public Class FixedSR
     Inherits ToolStripSystemRenderer
 
-    Protected Overrides Sub OnRenderToolStripBorder(ByVal e As System.Windows.Forms.ToolStripRenderEventArgs)
-
+    Protected Overrides Sub OnRenderToolStripBorder(ByVal e As ToolStripRenderEventArgs)
     End Sub
 End Class
