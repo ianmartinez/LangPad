@@ -26,25 +26,28 @@ Language Pad
 <summary>
   Looks up a localized string similar to 1=̀
 2=́
-3=̂
-4=̃
-5=̄
-6=̅
-7=̆
-8=̑
-9=̇
-10=̈
-11=̉
-12=̊
-13=̋
-14=̌
-15=̏
-16=̨
-17=̧
-18=̰
-19=̱
-20=̒
-21=̓.
+3=̌
+4=̂
+5=̃
+6=̴
+7=̰
+8=̄
+9=̱
+10=̅
+11=̆
+12=̑
+13=̇
+14=̣
+15=̈
+16=̉
+17=̊
+18=̋
+19=̏
+20=̨
+21=̧
+22=̒
+23=̓
+24=̛.
 </summary>
 </member>
 <member name="P:Language_Pad.My.Resources.Resources.Affricates">
@@ -174,22 +177,7 @@ Language Pad
 80=ᴙ
 81=ɬ
 82=ɮ
-83=ꞎ
-84=	ʎ̝̊
-85=ʟ̝̊
-86=ʟ̝
-87=l̥
-88=l
-89=ɭ
-90=ʎ
-91=ʟ
-92=ɺ
-93=ɺ̢ 
-94=ʎ̯
-95=ʟ̆
-96=ʘ
-97=ǀ
- [rest of string was truncated]&quot;;.
+83=ꞎ [rest of string was truncated]&quot;;.
 </summary>
 </member>
 <member name="P:Language_Pad.My.Resources.Resources.HtmlStyle">
@@ -323,7 +311,7 @@ á=á
 Ǽ=Ǽ
 ǽ=ǽ
 Ć=Ć
-c=ć
+ć=ć
 É=É
 é=é
 Ǵ=Ǵ
@@ -396,22 +384,14 @@ Ŏ=Ŏ
 ŏ=ŏ
 Ŭ=Ŭ
 ŭ=ŭ
-Ȃ
-ȃ
-Ȇ
-ȇ
-Ȋ
-ȋ
-Ȏ
-ȏ
-Ȓ
-ȓ
-Ȗ
-ȗ
-Ǎ
-ǎ
-Č
- [rest of string was truncated]&quot;;.
+Ȃ=Ȃ
+ȃ=ȃ
+Ȇ=Ȇ
+ȇ=ȇ
+Ȋ=Ȋ
+ȋ=ȋ
+Ȏ=Ȏ
+ȏ [rest of string was truncated]&quot;;.
 </summary>
 </member>
 <member name="P:Language_Pad.My.Resources.Resources.TableTemplate">

@@ -1,244 +1,250 @@
-﻿Version 9.2 (August 20, 2018)
-   •Minor startup improvements
-   •Minor icon tweak
+﻿Version 10.0 (July 3, 2019)
+   • Code cleanup
+   • Update to .NET Framework 4.7.2
+   • Update to Visual Studio 2019
+   • Export to KeyStudio for iOS
+
+Version 9.2 (August 20, 2018)
+   • Minor startup improvements
+   • Minor icon tweak
 
 Version 9.1 (July 14, 2018)
-   •Indicator showing when smart replace has found a match
-   •Context menu icons are now the same icon theme as the rest of the icons (Breeze)
-   •Fixed a few smart replace errors
-   •Checking and unchecking smart replace now updates the preview
-   •Cleaner about dialog
+   • Indicator showing when smart replace has found a match
+   • Context menu icons are now the same icon theme as the rest of the icons (Breeze)
+   • Fixed a few smart replace errors
+   • Checking and unchecking smart replace now updates the preview
+   • Cleaner about dialog
    
 Version 9.0 (October 21, 2017)
-   •New icon
-   •Inverted breve, tilde through, dot below, and horn accent marks added to accent palette
-   •Smart replace
-   •Button to change font for accent mark preview
-   •Re-arranged accent marks to make more sense
-   •Redesigned splash screen  
-   •Add Space & Breeze theme
-   •Default theme now 'Breeze'
-   •Theme saved on shutdown
-   •Tweaked multiple themes      
-   •Changed icon theme to Breeze
-   •Show/Hide sidebar
-   •Show/Hide toolstrips
-   •Show/Hide statusbar
-   •Full/Minimal mode toggles
-   •Dictionary form now respects font dialog color
-   •Fixed broken URLs when clicking on links inside a document
-   •Fixed bug where clicking "New" would sometimes not clear every page
-   •Fixed rendering of checked items on menus
-   •Word wrap checkbox now updates when you change tabs
+   • New icon
+   • Inverted breve, tilde through, dot below, and horn accent marks added to accent palette
+   • Smart replace
+   • Button to change font for accent mark preview
+   • Re-arranged accent marks to make more sense
+   • Redesigned splash screen  
+   • Add Space & Breeze theme
+   • Default theme now 'Breeze'
+   • Theme saved on shutdown
+   • Tweaked multiple themes      
+   • Changed icon theme to Breeze
+   • Show/Hide sidebar
+   • Show/Hide toolstrips
+   • Show/Hide statusbar
+   • Full/Minimal mode toggles
+   • Dictionary form now respects font dialog color
+   • Fixed broken URLs when clicking on links inside a document
+   • Fixed bug where clicking "New" would sometimes not clear every page
+   • Fixed rendering of checked items on menus
+   • Word wrap checkbox now updates when you change tabs
    
 Version 8.5 (October 13, 2017)
-   •Help file included   
-   •Minor changes to splash screen
-   •Automatically fill in title and description on dictionary HTML generator
-   •Notebook panel re-design   
-   •Language field in notebook panel
-   •'Snow' theme now has a white background to match Windows 10
-   •Multiple dialogs layouts have been tweaked
-   •Dialogs now match theme
-   •Fixed bug where decimal separators other than "." would throw errors
-   •Re-design update dialog and fix buttons not working
-   •Auto-size dictionary cells
+   • Help file included   
+   • Minor changes to splash screen
+   • Automatically fill in title and description on dictionary HTML generator
+   • Notebook panel re-design   
+   • Language field in notebook panel
+   • 'Snow' theme now has a white background to match Windows 10
+   • Multiple dialogs layouts have been tweaked
+   • Dialogs now match theme
+   • Fixed bug where decimal separators other than "." would throw errors
+   • Re-design update dialog and fix buttons not working
+   • Auto-size dictionary cells
    
 Version 8.2 (September 30, 2017)
-   •Find words in dictionary   
-   •Color panel for quick access to font/highlight colors   
-   •Check for updates at startup now on by default    
-   •Fixed typo on style dialog   
-   •Fixed accents remaining after Accents dialog closes and re-opens   
-   •Revised look of color buttons   
-   •Automatically open generated HTML file on completion   
-   •Replace most StylizedButtons with native buttons   
+   • Find words in dictionary   
+   • Color panel for quick access to font/highlight colors   
+   • Check for updates at startup now on by default    
+   • Fixed typo on style dialog   
+   • Fixed accents remaining after Accents dialog closes and re-opens   
+   • Revised look of color buttons   
+   • Automatically open generated HTML file on completion   
+   • Replace most StylizedButtons with native buttons   
    
 Version 8.1 (September 16, 2017)
-   •Export dictionary to HTML
-   •Redesigned accent window
-   •Multiple accents can be selected for a single character
-   •Snow & Desert theme
-   •Improved look of character tooltips
-   •Default theme is now "Snow"
-   •Find/Replace now matches theme
-   •Window background now matches theme
-   •Fixed rendering of vertical toolbars
-   •Fixed mislabeled tooltips
-   •Fixed bug where dictionary wouldn't show up on when re-opening
-   •Fixed bug where some context menu items would crash the program
-   •Fixed bug where CTRL+Click to add character to custom characters would insert it into document
-   •Fixed missing '0' value for indentation dropdown
-   •Removed excessive whitespace around text art
+   • Export dictionary to HTML
+   • Redesigned accent window
+   • Multiple accents can be selected for a single character
+   • Snow & Desert theme
+   • Improved look of character tooltips
+   • Default theme is now "Snow"
+   • Find/Replace now matches theme
+   • Window background now matches theme
+   • Fixed rendering of vertical toolbars
+   • Fixed mislabeled tooltips
+   • Fixed bug where dictionary wouldn't show up on when re-opening
+   • Fixed bug where some context menu items would crash the program
+   • Fixed bug where CTRL+Click to add character to custom characters would insert it into document
+   • Fixed missing '0' value for indentation dropdown
+   • Removed excessive whitespace around text art
    
 Version 8.0 (September 11, 2017)
-   •Support for 4k screens
-   •Support for themes - Ice(Default), Night, Luna, Olive
-   •Import dictionaries from CSV
-   •Page count next to word and character count   
-   •About dialog revised
-   •Fixed bug where clipboard content would insert itself when changing font style
-   •Replaced tabbed interface with toolbar and menu interface 
-   •Removed old bloat features like clip art, webcam insert, and the emotes panel
-   •Replaced stylized buttons with native buttons
+   • Support for 4k screens
+   • Support for themes - Ice(Default), Night, Luna, Olive
+   • Import dictionaries from CSV
+   • Page count next to word and character count   
+   • About dialog revised
+   • Fixed bug where clipboard content would insert itself when changing font style
+   • Replaced tabbed interface with toolbar and menu interface 
+   • Removed old bloat features like clip art, webcam insert, and the emotes panel
+   • Replaced stylized buttons with native buttons
    
 Version 7.0 (September 7, 2015)
-   •Custom font in dictionary
-   •Alignment now works on styles
-   •Symbol buttons now use Calibri
-   •Large tooltips on symbol buttons for easy viewing
-   •Export to CSV for dictionaries
-   •Pin to custom on symbol buttons (CTRL + Click)
-   •Improved help system
-   •Default font in dictionary is now Calibri
-   •Changed close icon on notebook editor
-   •Fixed saving issues on dictionaries
-   •Fixed saving issues on RTF files
+   • Custom font in dictionary
+   • Alignment now works on styles
+   • Symbol buttons now use Calibri
+   • Large tooltips on symbol buttons for easy viewing
+   • Export to CSV for dictionaries
+   • Pin to custom on symbol buttons (CTRL + Click)
+   • Improved help system
+   • Default font in dictionary is now Calibri
+   • Changed close icon on notebook editor
+   • Fixed saving issues on dictionaries
+   • Fixed saving issues on RTF files
    
 Version 6.0 (August 29, 2015)
-   •Dictionaries
-   •Removed tab bar on RTF Editor
+   • Dictionaries
+   • Removed tab bar on RTF Editor
    
 Version 5.3 (August 13, 2015)
-   •Standardized buttons on dialogs
-   •Centralized version naming
-   •Changed symbols and accent mark icons
-   •Copy button in accent mark dialog
-   •Clip art loading turned off by default
-   •Quick access buttons
-   •Changed right click menu style
-   •Fixed a bug when renaming a page 
+   • Standardized buttons on dialogs
+   • Centralized version naming
+   • Changed symbols and accent mark icons
+   • Copy button in accent mark dialog
+   • Clip art loading turned off by default
+   • Quick access buttons
+   • Changed right click menu style
+   • Fixed a bug when renaming a page 
    
 Version 5.2 (August 10, 2015)
-   •Keyboard shortcuts
-   •Massive internal improvements
-   •Improved updating system
-   •Small UI improvements
-   •Added to github
-   •Microsoft Sans Serif fonts are no longer forced by default
+   • Keyboard shortcuts
+   • Massive internal improvements
+   • Improved updating system
+   • Small UI improvements
+   • Added to github
+   • Microsoft Sans Serif fonts are no longer forced by default
    
 Version 5.1 (August 7, 2015)
-   •A link to the associated reddit thread now shows with update
-   •Font changes now happen much faster
-   •You can now individually choose what you want to load at startup
-   •Ability to save and quickly apply font styles
-   •Dialogs now only ask you to save if the file has been modified
-   •Help file updated
-   •Splash screen made even prettier
-   •Fixed bug during size changes with numerous different fonts
-   •Fixed tab order on notebook tab
-   •Fixed bug that required multiple undos to undo a single font change
+   • A link to the associated reddit thread now shows with update
+   • Font changes now happen much faster
+   • You can now individually choose what you want to load at startup
+   • Ability to save and quickly apply font styles
+   • Dialogs now only ask you to save if the file has been modified
+   • Help file updated
+   • Splash screen made even prettier
+   • Fixed bug during size changes with numerous different fonts
+   • Fixed tab order on notebook tab
+   • Fixed bug that required multiple undos to undo a single font change
    
 Version 5.0 (August 3, 2015)
-   •Update checker
-   •Smaller icon for file tab
-   •Updated style for Windows 10
-   •Quick startup option to skip loading clipart and checking updates
-   •Fixed some font issues in the UI
-   •Redesigned splash screen
-   •Fixed huge font styling issues when changing font sizes and families
-   •Fixed flickering when switching tabs
+   • Update checker
+   • Smaller icon for file tab
+   • Updated style for Windows 10
+   • Quick startup option to skip loading clipart and checking updates
+   • Fixed some font issues in the UI
+   • Redesigned splash screen
+   • Fixed huge font styling issues when changing font sizes and families
+   • Fixed flickering when switching tabs
    
 Version 4.3 (July 9, 2015)
-   •Files are now saved in the same format they were opened as 
-   •Tables now insert in place instead of at the end of the file
-   •Row limit now 10,000 instead of 1,000
-   •Switched to Fat Cow icons
-   •Tab font now red
-   •Context menu in editor
-   •UI style redesigned
-   •Reverted to old button style in dialogs
-   •Editor no longer hides selection if it loses focus
+   • Files are now saved in the same format they were opened as 
+   • Tables now insert in place instead of at the end of the file
+   • Row limit now 10,000 instead of 1,000
+   • Switched to Fat Cow icons
+   • Tab font now red
+   • Context menu in editor
+   • UI style redesigned
+   • Reverted to old button style in dialogs
+   • Editor no longer hides selection if it loses focus
    
 Version 4.2 (July 4, 2015)
-   •Fixed missing functionality on the new button
-   •Fixed RTF editor ribbon colors to match main ribbon
-   •Fixed the symbol tab's padding
-   •The current page is now saved when moving pages 
-   •Fixed tab order   
-   •Saving on close doesn't cancel the closing process anymore
-   •Changed button style on dialogs
-   •Lighter borders around ribbons
-   •Notebook editor fields now centered
-   •Save notebook button in notebook editor
-   •Duplicate page button notebook in notebook editor
-   •You can now select pages using arrow keys in the notebook editor
-   •Help file included now
-   •Released source code
+   • Fixed missing functionality on the new button
+   • Fixed RTF editor ribbon colors to match main ribbon
+   • Fixed the symbol tab's padding
+   • The current page is now saved when moving pages 
+   • Fixed tab order   
+   • Saving on close doesn't cancel the closing process anymore
+   • Changed button style on dialogs
+   • Lighter borders around ribbons
+   • Notebook editor fields now centered
+   • Save notebook button in notebook editor
+   • Duplicate page button notebook in notebook editor
+   • You can now select pages using arrow keys in the notebook editor
+   • Help file included now
+   • Released source code
    
 Version 4.1 (July 1, 2015)
-   •Fixed bug where the file wouldn't save with only 1 tab
-   •Fixed bug where zip files wouldn't open from File Explorer
-   •Allow embedding custom symbols in saved notebooks
-   •Rename page button now in notebook editor
-   •Inserting an image no longer makes the button white
-   •Splash screen touched up
-   •Webcam dialog resized
-   •Fixed sidebar notebook list borders
-   •Borders removed on tabs
-   •Numerous small UI changes
+   • Fixed bug where the file wouldn't save with only 1 tab
+   • Fixed bug where zip files wouldn't open from File Explorer
+   • Allow embedding custom symbols in saved notebooks
+   • Rename page button now in notebook editor
+   • Inserting an image no longer makes the button white
+   • Splash screen touched up
+   • Webcam dialog resized
+   • Fixed sidebar notebook list borders
+   • Borders removed on tabs
+   • Numerous small UI changes
    
 Version 4.0 (June 27, 2015)
-   •New icon
-   •Edit RTF window redesigned with ribbon
-   •Improved looks on Windows 10 (Build 10147)
-   •Splash screen colors changed
-   •Insertion point now stays the same after inserting symbol
-   •Redesigned about dialog
-   •Redesigned internal color system
-   •Numerous small tune-ups to the UI
-   •Trimmed unnecessary code in Tundra library
-   •Tabbed pages
-   •"Œ" ligature now in common tab
-   •Default format now a notebook file (*.nt)
-   •Comma and reverse comma above in accent mark dialog
+   • New icon
+   • Edit RTF window redesigned with ribbon
+   • Improved looks on Windows 10 (Build 10147)
+   • Splash screen colors changed
+   • Insertion point now stays the same after inserting symbol
+   • Redesigned about dialog
+   • Redesigned internal color system
+   • Numerous small tune-ups to the UI
+   • Trimmed unnecessary code in Tundra library
+   • Tabbed pages
+   • "Œ" ligature now in common tab
+   • Default format now a notebook file (*.nt)
+   • Comma and reverse comma above in accent mark dialog
    
 Version 3.0 (May 16, 2015)
-   •Word wrap toggle
-   •Ribbon redesigned
-   •Emotes and clip art dialogs now sidebars
-   •Webcam dialog changed to match others
-   •Custom zoom dialog
-   •Dialog buttons made consistent
-   •Redesigned about dialog
+   • Word wrap toggle
+   • Ribbon redesigned
+   • Emotes and clip art dialogs now sidebars
+   • Webcam dialog changed to match others
+   • Custom zoom dialog
+   • Dialog buttons made consistent
+   • Redesigned about dialog
    
 Version 2.1 (May 13, 2015)
-   •Ability to add tables
-   •File name now shows in title bar
-   •Icons changed in dialogs
-   •Minor UI changes
-   •Flash button in webcam dialog
-   •Fixed lost formatting when opening from File Explorer
-   •Splash screen redesigned
+   • Ability to add tables
+   • File name now shows in title bar
+   • Icons changed in dialogs
+   • Minor UI changes
+   • Flash button in webcam dialog
+   • Fixed lost formatting when opening from File Explorer
+   • Splash screen redesigned
    
 Version 2.0 (May 10, 2015)    
-   •Icons changed
-   •Buttons made flatter
-   •Word count & character count now on top bar
-   •Removed status bar
-   •Ability to edit RTF directly
-   •You can now save/open custom symbols from files
-   •Quick color selector when you right click color buttons
-   •Right click menu on text editing area
-   •Insert webcam now closes after failing to start webcam
-   •Webcam dialog redesigned
-   •Changed confirmation dialog style
-   •Accent mark dialog redesigned
-   •Add to custom symbols button in accent mark dialog
-   •Macron Below in accent mark dialog
-   •Fixed distorted images when pasting
-   •Fixed errors when changing certain fonts
+   • Icons changed
+   • Buttons made flatter
+   • Word count & character count now on top bar
+   • Removed status bar
+   • Ability to edit RTF directly
+   • You can now save/open custom symbols from files
+   • Quick color selector when you right click color buttons
+   • Right click menu on text editing area
+   • Insert webcam now closes after failing to start webcam
+   • Webcam dialog redesigned
+   • Changed confirmation dialog style
+   • Accent mark dialog redesigned
+   • Add to custom symbols button in accent mark dialog
+   • Macron Below in accent mark dialog
+   • Fixed distorted images when pasting
+   • Fixed errors when changing certain fonts
    
 Version 1.1 (May 3, 2015)
-   •You can now open files directly in File Explorer
-   •Splash screen redesigned
-   •Cleaner-looking ribbon
-   •Resizable symbols palette
-   •Resizable emoji palette
-   •Fixed name in about box
-   •Fixed some other UI glitches
-   •You can now control narration speed & sound
-   •Insert webcam now shows an error if there's no webcam
+   • You can now open files directly in File Explorer
+   • Splash screen redesigned
+   • Cleaner-looking ribbon
+   • Resizable symbols palette
+   • Resizable emoji palette
+   • Fixed name in about box
+   • Fixed some other UI glitches
+   • You can now control narration speed & sound
+   • Insert webcam now shows an error if there's no webcam
    
 Version 1.0 (April 24, 2015)
-   •Initial Release
+   • Initial Release

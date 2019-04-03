@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  A strongly-typed resource class, for looking up localized strings, etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -63,25 +63,28 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized string similar to 1=̀
         '''2=́
-        '''3=̂
-        '''4=̃
-        '''5=̄
-        '''6=̅
-        '''7=̆
-        '''8=̑
-        '''9=̇
-        '''10=̈
-        '''11=̉
-        '''12=̊
-        '''13=̋
-        '''14=̌
-        '''15=̏
-        '''16=̨
-        '''17=̧
-        '''18=̰
-        '''19=̱
-        '''20=̒
-        '''21=̓.
+        '''3=̌
+        '''4=̂
+        '''5=̃
+        '''6=̴
+        '''7=̰
+        '''8=̄
+        '''9=̱
+        '''10=̅
+        '''11=̆
+        '''12=̑
+        '''13=̇
+        '''14=̣
+        '''15=̈
+        '''16=̉
+        '''17=̊
+        '''18=̋
+        '''19=̏
+        '''20=̨
+        '''21=̧
+        '''22=̒
+        '''23=̓
+        '''24=̛.
         '''</summary>
         Friend ReadOnly Property Accents() As String
             Get
@@ -223,22 +226,7 @@ Namespace My.Resources
         '''80=ᴙ
         '''81=ɬ
         '''82=ɮ
-        '''83=ꞎ
-        '''84=	ʎ̝̊
-        '''85=ʟ̝̊
-        '''86=ʟ̝
-        '''87=l̥
-        '''88=l
-        '''89=ɭ
-        '''90=ʎ
-        '''91=ʟ
-        '''92=ɺ
-        '''93=ɺ̢ 
-        '''94=ʎ̯
-        '''95=ʟ̆
-        '''96=ʘ
-        '''97=ǀ
-        ''' [rest of string was truncated]&quot;;.
+        '''83=ꞎ [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property Consonants() As String
             Get
@@ -392,7 +380,7 @@ Namespace My.Resources
         '''Ǽ=Ǽ
         '''ǽ=ǽ
         '''Ć=Ć
-        '''c=ć
+        '''ć=ć
         '''É=É
         '''é=é
         '''Ǵ=Ǵ
@@ -465,22 +453,14 @@ Namespace My.Resources
         '''ŏ=ŏ
         '''Ŭ=Ŭ
         '''ŭ=ŭ
-        '''Ȃ
-        '''ȃ
-        '''Ȇ
-        '''ȇ
-        '''Ȋ
-        '''ȋ
-        '''Ȏ
-        '''ȏ
-        '''Ȓ
-        '''ȓ
-        '''Ȗ
-        '''ȗ
-        '''Ǎ
-        '''ǎ
-        '''Č
-        ''' [rest of string was truncated]&quot;;.
+        '''Ȃ=Ȃ
+        '''ȃ=ȃ
+        '''Ȇ=Ȇ
+        '''ȇ=ȇ
+        '''Ȋ=Ȋ
+        '''ȋ=ȋ
+        '''Ȏ=Ȏ
+        '''ȏ [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property SmartReplace() As String
             Get

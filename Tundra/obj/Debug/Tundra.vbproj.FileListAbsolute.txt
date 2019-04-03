@@ -46,18 +46,6 @@ C:\Users\ianma\Desktop\Code\Conlang Notepad\Tundra\obj\Debug\Tundra.vbproj.Gener
 C:\Users\ianma\Desktop\Code\Conlang Notepad\Tundra\obj\Debug\Tundra.dll
 C:\Users\ianma\Desktop\Code\Conlang Notepad\Tundra\obj\Debug\Tundra.xml
 C:\Users\ianma\Desktop\Code\Conlang Notepad\Tundra\obj\Debug\Tundra.pdb
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.dll
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.pdb
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.xml
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.Resources.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.StylizedColorButton.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.GenerateResource.Cache
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.CoreCompileInputs.cache
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.dll
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.xml
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.pdb
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.dll.CodeAnalysisLog.xml
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.dll.lastcodeanalysissucceeded
 W:\github2\Language-Pad\Tundra\bin\Debug\Tundra.dll
 W:\github2\Language-Pad\Tundra\bin\Debug\Tundra.pdb
 W:\github2\Language-Pad\Tundra\bin\Debug\Tundra.xml
@@ -78,3 +66,13 @@ W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.pdb
 \\Mac\Home\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.dll
 \\Mac\Home\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.xml
 \\Mac\Home\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.pdb
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.dll
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.pdb
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.xml
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.Resources.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.StylizedColorButton.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.GenerateResource.cache
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.CoreCompileInputs.cache
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.dll
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.xml
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.pdb
