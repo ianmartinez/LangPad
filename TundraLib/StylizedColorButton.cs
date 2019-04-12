@@ -27,18 +27,7 @@ namespace TundraLib
             }
         }
 
-        private bool mRightClickMode;
-        public bool RightClickMode
-        {
-            get
-            {
-                return mRightClickMode;
-            }
-            set
-            {
-                mRightClickMode = value;
-            }
-        }
+        public bool RightClickMode { get; set; }
 
         private Bitmap ColorBitmap;
         private void GenerateColorBitmap()
@@ -71,6 +60,7 @@ namespace TundraLib
             dlgColor = new ColorDialog();
             SuspendLayout();
             dlgColor.FullOpen = true;
+            MouseDown += StylizedColorButton_MouseDown;
         }
 
         private void StylizedColorButton_MouseDown(object sender, MouseEventArgs e)

@@ -22,7 +22,7 @@ Partial Class frmDictionary
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDictionary))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.tcSymbols = New System.Windows.Forms.TabControl()
@@ -101,7 +101,7 @@ Partial Class frmDictionary
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 35)
-        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(2)
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -131,7 +131,7 @@ Partial Class frmDictionary
         Me.tcSymbols.Controls.Add(Me.CustomTabPage)
         Me.tcSymbols.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tcSymbols.Location = New System.Drawing.Point(0, 2)
-        Me.tcSymbols.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tcSymbols.Margin = New System.Windows.Forms.Padding(2)
         Me.tcSymbols.Name = "tcSymbols"
         Me.tcSymbols.SelectedIndex = 0
         Me.tcSymbols.Size = New System.Drawing.Size(888, 122)
@@ -141,7 +141,7 @@ Partial Class frmDictionary
         '
         Me.ConsonantsTabPage.Controls.Add(Me.ConsonantsLayoutPanel)
         Me.ConsonantsTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.ConsonantsTabPage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ConsonantsTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.ConsonantsTabPage.Name = "ConsonantsTabPage"
         Me.ConsonantsTabPage.Size = New System.Drawing.Size(880, 96)
         Me.ConsonantsTabPage.TabIndex = 0
@@ -156,7 +156,7 @@ Partial Class frmDictionary
         Me.ConsonantsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ConsonantsLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.ConsonantsLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.ConsonantsLayoutPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ConsonantsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ConsonantsLayoutPanel.Name = "ConsonantsLayoutPanel"
         Me.ConsonantsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
         Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(880, 96)
@@ -166,9 +166,9 @@ Partial Class frmDictionary
         '
         Me.AffricatesTabPage.Controls.Add(Me.AffricatesLayoutPanel)
         Me.AffricatesTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.AffricatesTabPage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.AffricatesTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.AffricatesTabPage.Name = "AffricatesTabPage"
-        Me.AffricatesTabPage.Size = New System.Drawing.Size(880, 36)
+        Me.AffricatesTabPage.Size = New System.Drawing.Size(880, 96)
         Me.AffricatesTabPage.TabIndex = 5
         Me.AffricatesTabPage.Text = "Affricates"
         Me.AffricatesTabPage.UseVisualStyleBackColor = True
@@ -180,19 +180,19 @@ Partial Class frmDictionary
         Me.AffricatesLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AffricatesLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.AffricatesLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.AffricatesLayoutPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.AffricatesLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AffricatesLayoutPanel.Name = "AffricatesLayoutPanel"
         Me.AffricatesLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(880, 36)
+        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(880, 96)
         Me.AffricatesLayoutPanel.TabIndex = 8
         '
         'VowelsTabPage
         '
         Me.VowelsTabPage.Controls.Add(Me.VowelsLayoutPanel)
         Me.VowelsTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.VowelsTabPage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.VowelsTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.VowelsTabPage.Name = "VowelsTabPage"
-        Me.VowelsTabPage.Size = New System.Drawing.Size(880, 36)
+        Me.VowelsTabPage.Size = New System.Drawing.Size(880, 96)
         Me.VowelsTabPage.TabIndex = 1
         Me.VowelsTabPage.Text = "Vowels"
         Me.VowelsTabPage.UseVisualStyleBackColor = True
@@ -204,19 +204,19 @@ Partial Class frmDictionary
         Me.VowelsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.VowelsLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.VowelsLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.VowelsLayoutPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.VowelsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.VowelsLayoutPanel.Name = "VowelsLayoutPanel"
         Me.VowelsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(880, 36)
+        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(880, 96)
         Me.VowelsLayoutPanel.TabIndex = 8
         '
         'AccentsTabPage
         '
         Me.AccentsTabPage.Controls.Add(Me.AccentsLayoutPanel)
         Me.AccentsTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.AccentsTabPage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.AccentsTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.AccentsTabPage.Name = "AccentsTabPage"
-        Me.AccentsTabPage.Size = New System.Drawing.Size(880, 36)
+        Me.AccentsTabPage.Size = New System.Drawing.Size(880, 96)
         Me.AccentsTabPage.TabIndex = 3
         Me.AccentsTabPage.Text = "Accents"
         Me.AccentsTabPage.UseVisualStyleBackColor = True
@@ -228,19 +228,19 @@ Partial Class frmDictionary
         Me.AccentsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AccentsLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.AccentsLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(880, 36)
+        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(880, 96)
         Me.AccentsLayoutPanel.TabIndex = 9
         '
         'ToneIntonationTabPage
         '
         Me.ToneIntonationTabPage.Controls.Add(Me.ToneIntonationLayoutPanel)
         Me.ToneIntonationTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.ToneIntonationTabPage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ToneIntonationTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.ToneIntonationTabPage.Name = "ToneIntonationTabPage"
-        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(880, 36)
+        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(880, 96)
         Me.ToneIntonationTabPage.TabIndex = 4
         Me.ToneIntonationTabPage.Text = "Tone & Intonation"
         Me.ToneIntonationTabPage.UseVisualStyleBackColor = True
@@ -252,19 +252,19 @@ Partial Class frmDictionary
         Me.ToneIntonationLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ToneIntonationLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.ToneIntonationLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.ToneIntonationLayoutPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ToneIntonationLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ToneIntonationLayoutPanel.Name = "ToneIntonationLayoutPanel"
         Me.ToneIntonationLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(880, 36)
+        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(880, 96)
         Me.ToneIntonationLayoutPanel.TabIndex = 10
         '
         'OtherTabPage
         '
         Me.OtherTabPage.Controls.Add(Me.OtherLayoutPanel)
         Me.OtherTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.OtherTabPage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.OtherTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.OtherTabPage.Name = "OtherTabPage"
-        Me.OtherTabPage.Size = New System.Drawing.Size(880, 36)
+        Me.OtherTabPage.Size = New System.Drawing.Size(880, 96)
         Me.OtherTabPage.TabIndex = 2
         Me.OtherTabPage.Text = "Other"
         Me.OtherTabPage.UseVisualStyleBackColor = True
@@ -276,19 +276,19 @@ Partial Class frmDictionary
         Me.OtherLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.OtherLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.OtherLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.OtherLayoutPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.OtherLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.OtherLayoutPanel.Name = "OtherLayoutPanel"
         Me.OtherLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.OtherLayoutPanel.Size = New System.Drawing.Size(880, 36)
+        Me.OtherLayoutPanel.Size = New System.Drawing.Size(880, 96)
         Me.OtherLayoutPanel.TabIndex = 8
         '
         'CommonTabPage
         '
         Me.CommonTabPage.Controls.Add(Me.CommonLayoutPanel)
         Me.CommonTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.CommonTabPage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CommonTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.CommonTabPage.Name = "CommonTabPage"
-        Me.CommonTabPage.Size = New System.Drawing.Size(880, 36)
+        Me.CommonTabPage.Size = New System.Drawing.Size(880, 96)
         Me.CommonTabPage.TabIndex = 7
         Me.CommonTabPage.Text = "Common"
         Me.CommonTabPage.UseVisualStyleBackColor = True
@@ -300,19 +300,19 @@ Partial Class frmDictionary
         Me.CommonLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CommonLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.CommonLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.CommonLayoutPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CommonLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.CommonLayoutPanel.Name = "CommonLayoutPanel"
         Me.CommonLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.CommonLayoutPanel.Size = New System.Drawing.Size(880, 36)
+        Me.CommonLayoutPanel.Size = New System.Drawing.Size(880, 96)
         Me.CommonLayoutPanel.TabIndex = 9
         '
         'CustomTabPage
         '
         Me.CustomTabPage.Controls.Add(Me.CustomLayoutPanel)
         Me.CustomTabPage.Location = New System.Drawing.Point(4, 22)
-        Me.CustomTabPage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CustomTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.CustomTabPage.Name = "CustomTabPage"
-        Me.CustomTabPage.Size = New System.Drawing.Size(880, 36)
+        Me.CustomTabPage.Size = New System.Drawing.Size(880, 96)
         Me.CustomTabPage.TabIndex = 6
         Me.CustomTabPage.Text = "Custom"
         Me.CustomTabPage.UseVisualStyleBackColor = True
@@ -324,10 +324,10 @@ Partial Class frmDictionary
         Me.CustomLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CustomLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.CustomLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.CustomLayoutPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CustomLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.CustomLayoutPanel.Name = "CustomLayoutPanel"
         Me.CustomLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.CustomLayoutPanel.Size = New System.Drawing.Size(880, 36)
+        Me.CustomLayoutPanel.Size = New System.Drawing.Size(880, 96)
         Me.CustomLayoutPanel.TabIndex = 9
         '
         'dgvDictionary
@@ -340,18 +340,18 @@ Partial Class frmDictionary
         Me.dgvDictionary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvDictionary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDictionary.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Word, Me.Pronunciation, Me.Definition, Me.Notes})
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvDictionary.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvDictionary.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvDictionary.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvDictionary.GridColor = System.Drawing.Color.Gainsboro
         Me.dgvDictionary.Location = New System.Drawing.Point(3, 3)
-        Me.dgvDictionary.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvDictionary.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvDictionary.Name = "dgvDictionary"
         Me.dgvDictionary.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgvDictionary.RowTemplate.Height = 24
@@ -406,14 +406,14 @@ Partial Class frmDictionary
         '
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.SplitContainer1)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.pnlFindReplace)
-        Me.ToolStripContainer1.ContentPanel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ToolStripContainer1.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(888, 521)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'ToolStripContainer1.LeftToolStripPanel
         '
         Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStripContainer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ToolStripContainer1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
         '
         'ToolStripContainer1.RightToolStripPanel
@@ -437,7 +437,7 @@ Partial Class frmDictionary
         Me.pnlFindReplace.Controls.Add(Me.btnFind)
         Me.pnlFindReplace.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlFindReplace.Location = New System.Drawing.Point(0, 0)
-        Me.pnlFindReplace.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pnlFindReplace.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlFindReplace.Name = "pnlFindReplace"
         Me.pnlFindReplace.Size = New System.Drawing.Size(888, 35)
         Me.pnlFindReplace.TabIndex = 75
@@ -446,8 +446,8 @@ Partial Class frmDictionary
         'cbStartsWith
         '
         Me.cbStartsWith.AutoSize = True
-        Me.cbStartsWith.Location = New System.Drawing.Point(311, 10)
-        Me.cbStartsWith.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbStartsWith.Location = New System.Drawing.Point(312, 10)
+        Me.cbStartsWith.Margin = New System.Windows.Forms.Padding(2)
         Me.cbStartsWith.Name = "cbStartsWith"
         Me.cbStartsWith.Size = New System.Drawing.Size(78, 17)
         Me.cbStartsWith.TabIndex = 69
@@ -458,8 +458,8 @@ Partial Class frmDictionary
         '
         Me.rbDefinition.AutoSize = True
         Me.rbDefinition.Checked = True
-        Me.rbDefinition.Location = New System.Drawing.Point(440, 10)
-        Me.rbDefinition.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.rbDefinition.Location = New System.Drawing.Point(449, 9)
+        Me.rbDefinition.Margin = New System.Windows.Forms.Padding(2)
         Me.rbDefinition.Name = "rbDefinition"
         Me.rbDefinition.Size = New System.Drawing.Size(69, 17)
         Me.rbDefinition.TabIndex = 71
@@ -470,8 +470,8 @@ Partial Class frmDictionary
         'rbWord
         '
         Me.rbWord.AutoSize = True
-        Me.rbWord.Location = New System.Drawing.Point(390, 10)
-        Me.rbWord.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.rbWord.Location = New System.Drawing.Point(394, 9)
+        Me.rbWord.Margin = New System.Windows.Forms.Padding(2)
         Me.rbWord.Name = "rbWord"
         Me.rbWord.Size = New System.Drawing.Size(51, 17)
         Me.rbWord.TabIndex = 70
@@ -481,7 +481,7 @@ Partial Class frmDictionary
         'txtFind
         '
         Me.txtFind.Location = New System.Drawing.Point(40, 9)
-        Me.txtFind.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtFind.Margin = New System.Windows.Forms.Padding(2)
         Me.txtFind.Name = "txtFind"
         Me.txtFind.Size = New System.Drawing.Size(268, 20)
         Me.txtFind.TabIndex = 66
@@ -490,7 +490,7 @@ Partial Class frmDictionary
         '
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(6, 11)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(2)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(30, 13)
         Me.Label17.TabIndex = 83
@@ -502,8 +502,8 @@ Partial Class frmDictionary
         Me.btnFind.FlatAppearance.BorderSize = 0
         Me.btnFind.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnFind.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnFind.Location = New System.Drawing.Point(511, 5)
-        Me.btnFind.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnFind.Location = New System.Drawing.Point(522, 5)
+        Me.btnFind.Margin = New System.Windows.Forms.Padding(2)
         Me.btnFind.Name = "btnFind"
         Me.btnFind.Size = New System.Drawing.Size(78, 24)
         Me.btnFind.TabIndex = 67

@@ -57,10 +57,8 @@ End Class
 Public Class SymbolButton
     Inherits Button
     Private ttIPa As New IPAToolTip
-    Private components As System.ComponentModel.IContainer
 
     Public Sub New()
-
         Dim IPAFont = New Font("Calibri", 11, FontStyle.Bold)
         Dim IPAPadding = New Padding(0)
         Dim IPAMargin = New Padding(1)
@@ -113,7 +111,6 @@ End Class
 Public Class AccentCheckButton
     Inherits CheckBox
     Private ttIPa As New IPAToolTip
-    Private components As System.ComponentModel.IContainer
 
     Public Sub New()
         Dim IPAFont = New Font("Calibri", 14, FontStyle.Regular)

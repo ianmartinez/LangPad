@@ -1,13 +1,12 @@
-﻿Version 10.0 (July 31, 2019)
+﻿Version 9.3 (May 13, 2019)
    • Update to .NET Framework 4.7.2
    • Update to Visual Studio 2019
-   • Convert old ZiaFile code to INI code
    • Multiple pages can now exist with the same name
    • Remove Tundra library
    • Convert mode code to C#, except for UI
    • Use native ZipFile class instead of Ionic.Zip
    • Code cleanup
-   • Remove TextArt feature
+   • Remove TextArt
 
 Version 9.2 (August 20, 2018)
    • Minor startup improvements
