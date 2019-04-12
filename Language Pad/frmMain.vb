@@ -1276,4 +1276,12 @@ Public Class frmMain
         ToolStripContainer1.LeftToolStripPanelVisible = False
         ToolStripContainer1.RightToolStripPanelVisible = False
     End Sub
+
+    Private Sub BtnTransparentColor_Click(sender As Object, e As EventArgs) Handles btnTransparentColor.Click
+        If rbTextColor.Checked Then
+            SelectedDocument.SelectionColor = Color.Transparent
+        Else
+            SelectedDocument.SelectionBackColor = Color.Transparent
+        End If
+    End Sub
 End Class

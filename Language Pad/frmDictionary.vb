@@ -21,7 +21,6 @@ Public Class frmDictionary
 
         MainToolStrip.Renderer = Theme.GetToolStripRenderer()
 
-
         ' Center buttons relative to text boxes
         ' Because Windows' scaling throws them off
         btnFind.Top = txtFind.Top - (btnFind.Height / 2 - txtFind.Height / 2)

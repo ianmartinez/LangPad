@@ -35,12 +35,12 @@ Partial Class dlgAbout
         Me.DoubleBufferedPanel1 = New TundraLib.DoubleBufferedPanel()
         Me.lblVersion = New System.Windows.Forms.Label()
         Me.lblLanguagePad = New System.Windows.Forms.Label()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.DoubleBufferedPanel1.SuspendLayout()
-        Me.SuspendLayout()
+        Me.TabControl1.SuspendLayout
+        Me.TabPage1.SuspendLayout
+        Me.TabPage2.SuspendLayout
+        Me.TabPage3.SuspendLayout
+        Me.DoubleBufferedPanel1.SuspendLayout
+        Me.SuspendLayout
         '
         'TabControl1
         '
@@ -192,13 +192,13 @@ Partial Class dlgAbout
         Me.Text = "About"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
+        Me.TabPage1.PerformLayout
         Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
+        Me.TabPage2.PerformLayout
         Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
+        Me.TabPage3.PerformLayout
         Me.DoubleBufferedPanel1.ResumeLayout(False)
-        Me.DoubleBufferedPanel1.PerformLayout()
+        Me.DoubleBufferedPanel1.PerformLayout
         Me.ResumeLayout(False)
 
     End Sub

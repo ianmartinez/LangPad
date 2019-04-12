@@ -130,16 +130,16 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
   </data>
   <data name="TextBox2.Text" xml:space="preserve">
-    <value>Version 10.0 (July 31, 2019)
-   • Code cleanup
+    <value>Version 9.3 (May 13, 2019)
    • Update to .NET Framework 4.7.2
    • Update to Visual Studio 2019
-   • Convert old ZiaFile code to INI code
    • Multiple pages can now exist with the same name
    • Remove Tundra library
-   • Convert all except UI to C#
-   • Remove unused code
-   • Remove TextArt feature
+   • Convert mode code to C#, except for UI
+   • Use native ZipFile class instead of Ionic.Zip
+   • Code cleanup
+   • Remove TextArt
+   • Add transparent color to color panel
 
 Version 9.2 (August 20, 2018)
    • Minor startup improvements

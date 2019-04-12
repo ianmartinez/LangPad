@@ -40,7 +40,6 @@ namespace TundraLib
         // Convert the unit that is used by the .NET framework (1/100 inch) 
         // and the unit that is used by Win32 API calls (twips 1/1440 inch)
         private const double AnInch = 14.4;
-
         private const int WM_USER = 0x400;
 
         [StructLayout(LayoutKind.Sequential)]
@@ -471,6 +470,7 @@ namespace TundraLib
 
             }
         }
+
         private string GetDocumentArea(string _text, Font _font)
         {
             StringBuilder _doc = new StringBuilder();
@@ -533,7 +533,7 @@ namespace TundraLib
             if (_font.Strikeout)
                 _doc.Append(@"\strike0");
 
-            // If font is underlined, cloes tag
+            // If font is underlined, close tag
             if (_font.Underline)
                 _doc.Append(@"\ulnone");
 

@@ -7,6 +7,7 @@
    • Use native ZipFile class instead of Ionic.Zip
    • Code cleanup
    • Remove TextArt
+   • Add transparent color to color panel
 
 Version 9.2 (August 20, 2018)
    • Minor startup improvements
