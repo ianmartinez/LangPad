@@ -25,7 +25,7 @@ Partial Class NotebookEditor
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NotebookEditor))
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
-        Me.DoubleBufferedPanel2 = New Tundra.DoubleBufferedPanel()
+        Me.DoubleBufferedPanel2 = New TundraLib.DoubleBufferedPanel()
         Me.txtLanguage = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnGo = New System.Windows.Forms.Button()
@@ -39,7 +39,7 @@ Partial Class NotebookEditor
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DocumentToolStripContainer = New System.Windows.Forms.ToolStripContainer()
-        Me.StylizedPanel1 = New Tundra.StylizedPanel()
+        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
         Me.lbPages = New System.Windows.Forms.ListBox()
         Me.DocumentToolStrip = New System.Windows.Forms.ToolStrip()
         Me.PageUpToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -251,8 +251,6 @@ Partial Class NotebookEditor
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
         Me.StylizedPanel1.Size = New System.Drawing.Size(570, 306)
-        Me.StylizedPanel1.Style = "Colors=$1|$1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Col" &
-    "or$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
         Me.StylizedPanel1.TabIndex = 80
         '
         'lbPages
@@ -423,12 +421,12 @@ Partial Class NotebookEditor
     Friend WithEvents txtAuthor As System.Windows.Forms.TextBox
     Friend WithEvents txtWebsite As System.Windows.Forms.TextBox
     Friend WithEvents lbPages As System.Windows.Forms.ListBox
-    Friend WithEvents DoubleBufferedPanel2 As Tundra.DoubleBufferedPanel
+    Friend WithEvents DoubleBufferedPanel2 As TundraLib.DoubleBufferedPanel
     Friend WithEvents ttMain As System.Windows.Forms.ToolTip
     Friend WithEvents cbEmbed As System.Windows.Forms.CheckBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtInfo As System.Windows.Forms.TextBox
-    Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
+    Friend WithEvents StylizedPanel1 As TundraLib.DoubleBufferedPanel
     Friend WithEvents PageUpToolStripButton As ToolStripButton
     Friend WithEvents PageDownToolStripButton As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator

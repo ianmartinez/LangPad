@@ -59,7 +59,7 @@ Partial Class frmMain
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.tcNotebook = New System.Windows.Forms.TabControl()
-        Me.StylizedPanel1 = New Tundra.StylizedPanel()
+        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
         Me.NotebookEditor1 = New Language_Pad.NotebookEditor()
         Me.dlgSaveNotebook = New System.Windows.Forms.SaveFileDialog()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
@@ -76,7 +76,7 @@ Partial Class frmMain
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ThemeCombo = New System.Windows.Forms.ToolStripComboBox()
-        Me.pnlFindReplace = New Tundra.StylizedPanel()
+        Me.pnlFindReplace = New TundraLib.DoubleBufferedPanel()
         Me.btnFindNext = New System.Windows.Forms.Button()
         Me.btnReplaceAll = New System.Windows.Forms.Button()
         Me.txtReplace = New System.Windows.Forms.TextBox()
@@ -85,29 +85,29 @@ Partial Class frmMain
         Me.Label17 = New System.Windows.Forms.Label()
         Me.btnReplace = New System.Windows.Forms.Button()
         Me.btnFind = New System.Windows.Forms.Button()
-        Me.pnlColor = New Tundra.StylizedPanel()
+        Me.pnlColor = New TundraLib.DoubleBufferedPanel()
         Me.ColorLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.StylizedColorButton1 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton2 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton3 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton4 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton5 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton6 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton7 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton8 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton9 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton10 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton11 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton12 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton20 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton21 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton13 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton14 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton15 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton16 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton17 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton18 = New Tundra.StylizedColorButton()
-        Me.StylizedColorButton19 = New Tundra.StylizedColorButton()
+        Me.StylizedColorButton1 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton2 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton3 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton4 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton5 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton6 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton7 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton8 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton9 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton10 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton11 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton12 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton20 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton21 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton13 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton14 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton15 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton16 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton17 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton18 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton19 = New TundraLib.StylizedColorButton()
         Me.rbHighlight = New System.Windows.Forms.RadioButton()
         Me.rbTextColor = New System.Windows.Forms.RadioButton()
         Me.FileToolStrip = New System.Windows.Forms.ToolStrip()
@@ -122,6 +122,10 @@ Partial Class frmMain
         Me.toolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.UndoToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.RedoToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.LinguisticsToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.SymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.CustomSymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.AccentMarkToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.FontToolStrip = New System.Windows.Forms.ToolStrip()
         Me.FontToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
@@ -136,10 +140,6 @@ Partial Class frmMain
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.IndentToolStripComboBox = New System.Windows.Forms.ToolStripComboBox()
         Me.IndentToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.LinguisticsToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.SymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.CustomSymbolsToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.AccentMarkToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.MainMenu = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -190,7 +190,6 @@ Partial Class frmMain
         Me.DictionaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TextArtToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TableToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StyleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColorPanelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -251,8 +250,8 @@ Partial Class frmMain
         Me.pnlColor.SuspendLayout()
         Me.ColorLayoutPanel.SuspendLayout()
         Me.FileToolStrip.SuspendLayout()
-        Me.FontToolStrip.SuspendLayout()
         Me.LinguisticsToolStrip.SuspendLayout()
+        Me.FontToolStrip.SuspendLayout()
         Me.MainMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -574,7 +573,7 @@ Partial Class frmMain
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(955, 257)
+        Me.SplitContainer1.Size = New System.Drawing.Size(955, 333)
         Me.SplitContainer1.SplitterDistance = 161
         Me.SplitContainer1.SplitterWidth = 2
         Me.SplitContainer1.TabIndex = 73
@@ -596,8 +595,8 @@ Partial Class frmMain
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.StylizedPanel1)
         Me.SplitContainer2.Panel2MinSize = 275
-        Me.SplitContainer2.Size = New System.Drawing.Size(955, 94)
-        Me.SplitContainer2.SplitterDistance = 620
+        Me.SplitContainer2.Size = New System.Drawing.Size(955, 170)
+        Me.SplitContainer2.SplitterDistance = 622
         Me.SplitContainer2.SplitterWidth = 2
         Me.SplitContainer2.TabIndex = 1
         '
@@ -608,7 +607,7 @@ Partial Class frmMain
         Me.tcNotebook.Margin = New System.Windows.Forms.Padding(2)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(620, 92)
+        Me.tcNotebook.Size = New System.Drawing.Size(622, 168)
         Me.tcNotebook.TabIndex = 73
         '
         'StylizedPanel1
@@ -620,9 +619,7 @@ Partial Class frmMain
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(333, 94)
-        Me.StylizedPanel1.Style = "Colors=~245|~245" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight" &
-    " Color=$0"
+        Me.StylizedPanel1.Size = New System.Drawing.Size(331, 170)
         Me.StylizedPanel1.TabIndex = 13
         '
         'NotebookEditor1
@@ -634,7 +631,7 @@ Partial Class frmMain
         Me.NotebookEditor1.MinimumSize = New System.Drawing.Size(262, 0)
         Me.NotebookEditor1.Name = "NotebookEditor1"
         Me.NotebookEditor1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.NotebookEditor1.Size = New System.Drawing.Size(333, 94)
+        Me.NotebookEditor1.Size = New System.Drawing.Size(331, 170)
         Me.NotebookEditor1.TabIndex = 72
         '
         'dlgSaveNotebook
@@ -666,7 +663,7 @@ Partial Class frmMain
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.pnlFindReplace)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.pnlColor)
         Me.ToolStripContainer1.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(955, 389)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(955, 465)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'ToolStripContainer1.LeftToolStripPanel
@@ -683,9 +680,9 @@ Partial Class frmMain
         '
         'ToolStripContainer1.TopToolStripPanel
         '
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.FileToolStrip)
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.LinguisticsToolStrip)
         Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.FontToolStrip)
+        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.LinguisticsToolStrip)
+        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.FileToolStrip)
         '
         'DataToolStrip
         '
@@ -762,7 +759,6 @@ Partial Class frmMain
         Me.pnlFindReplace.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlFindReplace.Name = "pnlFindReplace"
         Me.pnlFindReplace.Size = New System.Drawing.Size(955, 35)
-        Me.pnlFindReplace.Style = Nothing
         Me.pnlFindReplace.TabIndex = 72
         Me.pnlFindReplace.Visible = False
         '
@@ -858,8 +854,6 @@ Partial Class frmMain
         Me.pnlColor.Name = "pnlColor"
         Me.pnlColor.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.pnlColor.Size = New System.Drawing.Size(955, 97)
-        Me.pnlColor.Style = "Colors=00,0,0,0|00,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=0,0,0," &
-    "0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.pnlColor.TabIndex = 74
         Me.pnlColor.Visible = False
         '
@@ -1265,7 +1259,7 @@ Partial Class frmMain
         Me.FileToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.FileToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.FileToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.toolStripSeparator, Me.CutToolStripButton, Me.CopyToolStripButton, Me.PasteToolStripButton, Me.PastePlainToolStripButton, Me.toolStripSeparator2, Me.UndoToolStripButton, Me.RedoToolStripButton})
-        Me.FileToolStrip.Location = New System.Drawing.Point(3, 76)
+        Me.FileToolStrip.Location = New System.Drawing.Point(3, 0)
         Me.FileToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.FileToolStrip.Name = "FileToolStrip"
         Me.FileToolStrip.Size = New System.Drawing.Size(276, 38)
@@ -1371,12 +1365,53 @@ Partial Class frmMain
         Me.RedoToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.RedoToolStripButton.Text = "Redo"
         '
+        'LinguisticsToolStrip
+        '
+        Me.LinguisticsToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.LinguisticsToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.LinguisticsToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SymbolsToolStripButton, Me.CustomSymbolsToolStripButton, Me.AccentMarkToolStripButton})
+        Me.LinguisticsToolStrip.Location = New System.Drawing.Point(666, 0)
+        Me.LinguisticsToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
+        Me.LinguisticsToolStrip.Name = "LinguisticsToolStrip"
+        Me.LinguisticsToolStrip.Size = New System.Drawing.Size(127, 38)
+        Me.LinguisticsToolStrip.TabIndex = 3
+        '
+        'SymbolsToolStripButton
+        '
+        Me.SymbolsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SymbolsToolStripButton.Image = CType(resources.GetObject("SymbolsToolStripButton.Image"), System.Drawing.Image)
+        Me.SymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.SymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SymbolsToolStripButton.Name = "SymbolsToolStripButton"
+        Me.SymbolsToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.SymbolsToolStripButton.Text = "Symbols"
+        '
+        'CustomSymbolsToolStripButton
+        '
+        Me.CustomSymbolsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CustomSymbolsToolStripButton.Image = CType(resources.GetObject("CustomSymbolsToolStripButton.Image"), System.Drawing.Image)
+        Me.CustomSymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.CustomSymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.CustomSymbolsToolStripButton.Name = "CustomSymbolsToolStripButton"
+        Me.CustomSymbolsToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.CustomSymbolsToolStripButton.Text = "Custom Symbols"
+        '
+        'AccentMarkToolStripButton
+        '
+        Me.AccentMarkToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.AccentMarkToolStripButton.Image = CType(resources.GetObject("AccentMarkToolStripButton.Image"), System.Drawing.Image)
+        Me.AccentMarkToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.AccentMarkToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.AccentMarkToolStripButton.Name = "AccentMarkToolStripButton"
+        Me.AccentMarkToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.AccentMarkToolStripButton.Text = "Accent Mark"
+        '
         'FontToolStrip
         '
         Me.FontToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.FontToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.FontToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripButton, Me.ToolStripSeparator9, Me.BoldToolStripButton, Me.ItalicToolStripButton, Me.UnderlineToolStripButton, Me.StrikeToolStripButton, Me.ToolStripSeparator5, Me.AlignLeftToolStripButton, Me.AlignCenterToolStripButton, Me.AlignRightToolStripButton, Me.ToolStripSeparator8, Me.IndentToolStripComboBox, Me.IndentToolStripButton})
-        Me.FontToolStrip.Location = New System.Drawing.Point(3, 0)
+        Me.FontToolStrip.Location = New System.Drawing.Point(282, 0)
         Me.FontToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.FontToolStrip.Name = "FontToolStrip"
         Me.FontToolStrip.Size = New System.Drawing.Size(384, 38)
@@ -1492,47 +1527,6 @@ Partial Class frmMain
         Me.IndentToolStripButton.Name = "IndentToolStripButton"
         Me.IndentToolStripButton.Size = New System.Drawing.Size(28, 35)
         Me.IndentToolStripButton.Text = "Indent"
-        '
-        'LinguisticsToolStrip
-        '
-        Me.LinguisticsToolStrip.Dock = System.Windows.Forms.DockStyle.None
-        Me.LinguisticsToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.LinguisticsToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SymbolsToolStripButton, Me.CustomSymbolsToolStripButton, Me.AccentMarkToolStripButton})
-        Me.LinguisticsToolStrip.Location = New System.Drawing.Point(54, 38)
-        Me.LinguisticsToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
-        Me.LinguisticsToolStrip.Name = "LinguisticsToolStrip"
-        Me.LinguisticsToolStrip.Size = New System.Drawing.Size(96, 38)
-        Me.LinguisticsToolStrip.TabIndex = 3
-        '
-        'SymbolsToolStripButton
-        '
-        Me.SymbolsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.SymbolsToolStripButton.Image = CType(resources.GetObject("SymbolsToolStripButton.Image"), System.Drawing.Image)
-        Me.SymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.SymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SymbolsToolStripButton.Name = "SymbolsToolStripButton"
-        Me.SymbolsToolStripButton.Size = New System.Drawing.Size(28, 35)
-        Me.SymbolsToolStripButton.Text = "Symbols"
-        '
-        'CustomSymbolsToolStripButton
-        '
-        Me.CustomSymbolsToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.CustomSymbolsToolStripButton.Image = CType(resources.GetObject("CustomSymbolsToolStripButton.Image"), System.Drawing.Image)
-        Me.CustomSymbolsToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.CustomSymbolsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.CustomSymbolsToolStripButton.Name = "CustomSymbolsToolStripButton"
-        Me.CustomSymbolsToolStripButton.Size = New System.Drawing.Size(28, 35)
-        Me.CustomSymbolsToolStripButton.Text = "Custom Symbols"
-        '
-        'AccentMarkToolStripButton
-        '
-        Me.AccentMarkToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.AccentMarkToolStripButton.Image = CType(resources.GetObject("AccentMarkToolStripButton.Image"), System.Drawing.Image)
-        Me.AccentMarkToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.AccentMarkToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.AccentMarkToolStripButton.Name = "AccentMarkToolStripButton"
-        Me.AccentMarkToolStripButton.Size = New System.Drawing.Size(28, 35)
-        Me.AccentMarkToolStripButton.Text = "Accent Mark"
         '
         'MainMenu
         '
@@ -1891,7 +1885,7 @@ Partial Class frmMain
         '
         'InsertToolStripMenuItem
         '
-        Me.InsertToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImageToolStripMenuItem, Me.TextArtToolStripMenuItem, Me.TableToolStripMenuItem})
+        Me.InsertToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImageToolStripMenuItem, Me.TableToolStripMenuItem})
         Me.InsertToolStripMenuItem.Name = "InsertToolStripMenuItem"
         Me.InsertToolStripMenuItem.Size = New System.Drawing.Size(48, 22)
         Me.InsertToolStripMenuItem.Text = "Insert"
@@ -1901,23 +1895,15 @@ Partial Class frmMain
         Me.ImageToolStripMenuItem.Image = CType(resources.GetObject("ImageToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ImageToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ImageToolStripMenuItem.Name = "ImageToolStripMenuItem"
-        Me.ImageToolStripMenuItem.Size = New System.Drawing.Size(131, 30)
+        Me.ImageToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
         Me.ImageToolStripMenuItem.Text = "Image..."
-        '
-        'TextArtToolStripMenuItem
-        '
-        Me.TextArtToolStripMenuItem.Image = CType(resources.GetObject("TextArtToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.TextArtToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.TextArtToolStripMenuItem.Name = "TextArtToolStripMenuItem"
-        Me.TextArtToolStripMenuItem.Size = New System.Drawing.Size(131, 30)
-        Me.TextArtToolStripMenuItem.Text = "Text Art..."
         '
         'TableToolStripMenuItem
         '
         Me.TableToolStripMenuItem.Image = CType(resources.GetObject("TableToolStripMenuItem.Image"), System.Drawing.Image)
         Me.TableToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.TableToolStripMenuItem.Name = "TableToolStripMenuItem"
-        Me.TableToolStripMenuItem.Size = New System.Drawing.Size(131, 30)
+        Me.TableToolStripMenuItem.Size = New System.Drawing.Size(188, 30)
         Me.TableToolStripMenuItem.Text = "Table..."
         '
         'StyleToolStripMenuItem
@@ -2191,10 +2177,10 @@ Partial Class frmMain
         Me.ColorLayoutPanel.ResumeLayout(False)
         Me.FileToolStrip.ResumeLayout(False)
         Me.FileToolStrip.PerformLayout()
-        Me.FontToolStrip.ResumeLayout(False)
-        Me.FontToolStrip.PerformLayout()
         Me.LinguisticsToolStrip.ResumeLayout(False)
         Me.LinguisticsToolStrip.PerformLayout()
+        Me.FontToolStrip.ResumeLayout(False)
+        Me.FontToolStrip.PerformLayout()
         Me.MainMenu.ResumeLayout(False)
         Me.MainMenu.PerformLayout()
         Me.ResumeLayout(False)
@@ -2226,7 +2212,7 @@ Partial Class frmMain
     Friend WithEvents dlgOpenPage As System.Windows.Forms.OpenFileDialog
     Friend WithEvents dlgSetup As System.Windows.Forms.PageSetupDialog
     Friend WithEvents pdMain As System.Drawing.Printing.PrintDocument
-    Friend WithEvents pnlFindReplace As Tundra.StylizedPanel
+    Friend WithEvents pnlFindReplace As TundraLib.DoubleBufferedPanel
     Friend WithEvents btnReplace As System.Windows.Forms.Button
     Friend WithEvents btnFind As System.Windows.Forms.Button
     Friend WithEvents txtReplace As System.Windows.Forms.TextBox
@@ -2248,7 +2234,7 @@ Partial Class frmMain
     Friend WithEvents dlgSaveNotebook As System.Windows.Forms.SaveFileDialog
     Friend WithEvents dlgOpen As System.Windows.Forms.OpenFileDialog
     Friend WithEvents dlgSave As System.Windows.Forms.SaveFileDialog
-    Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
+    Friend WithEvents StylizedPanel1 As TundraLib.DoubleBufferedPanel
     Friend WithEvents NotebookEditor1 As Language_Pad.NotebookEditor
     Friend WithEvents ttMain As System.Windows.Forms.ToolTip
     Friend WithEvents dlgSaveImage As System.Windows.Forms.SaveFileDialog
@@ -2316,7 +2302,6 @@ Partial Class frmMain
     Friend WithEvents DictionaryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InsertToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ImageToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TextArtToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TableToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PageToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddPageToolStripMenuItem As ToolStripMenuItem
@@ -2364,33 +2349,33 @@ Partial Class frmMain
     Friend WithEvents SymbolsToolStripButton As ToolStripButton
     Friend WithEvents CustomSymbolsToolStripButton As ToolStripButton
     Friend WithEvents AccentMarkToolStripButton As ToolStripButton
-    Friend WithEvents pnlColor As Tundra.StylizedPanel
+    Friend WithEvents pnlColor As TundraLib.DoubleBufferedPanel
     Friend WithEvents ColorLayoutPanel As FlowLayoutPanel
-    Friend WithEvents StylizedColorButton1 As Tundra.StylizedColorButton
+    Friend WithEvents StylizedColorButton1 As TundraLib.StylizedColorButton
     Friend WithEvents rbHighlight As RadioButton
     Friend WithEvents rbTextColor As RadioButton
     Friend WithEvents ColorPanelToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator13 As ToolStripSeparator
-    Friend WithEvents StylizedColorButton2 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton3 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton4 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton5 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton6 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton7 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton8 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton9 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton10 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton11 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton12 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton13 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton14 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton15 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton16 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton17 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton18 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton19 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton20 As Tundra.StylizedColorButton
-    Friend WithEvents StylizedColorButton21 As Tundra.StylizedColorButton
+    Friend WithEvents StylizedColorButton2 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton3 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton4 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton5 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton6 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton7 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton8 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton9 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton10 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton11 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton12 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton13 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton14 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton15 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton16 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton17 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton18 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton19 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton20 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton21 As TundraLib.StylizedColorButton
     Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
     Friend WithEvents ToggleSidebarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToggleCommonToolbarToolStripMenuItem As ToolStripMenuItem

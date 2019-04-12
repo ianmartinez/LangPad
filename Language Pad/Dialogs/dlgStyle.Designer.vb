@@ -25,9 +25,9 @@ Partial Class dlgStyle
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgStyle))
         Me.rtbPreview = New System.Windows.Forms.RichTextBox()
-        Me.StylizedPanel1 = New Tundra.StylizedPanel()
+        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
         Me.btnFont = New System.Windows.Forms.Button()
-        Me.btnColor = New Tundra.StylizedColorButton()
+        Me.btnColor = New TundraLib.StylizedColorButton()
         Me.btnRight = New System.Windows.Forms.Button()
         Me.btnCenter = New System.Windows.Forms.Button()
         Me.btnLeft = New System.Windows.Forms.Button()
@@ -38,7 +38,7 @@ Partial Class dlgStyle
         Me.nudOffset = New System.Windows.Forms.NumericUpDown()
         Me.btnOffset = New System.Windows.Forms.Button()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
-        Me.btnHighlight = New Tundra.StylizedColorButton()
+        Me.btnHighlight = New TundraLib.StylizedColorButton()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnDeleteAll = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
@@ -68,8 +68,6 @@ Partial Class dlgStyle
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Size = New System.Drawing.Size(658, 190)
-        Me.StylizedPanel1.Style = "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Colors=~255|~255" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text C" &
-    "olor=#252b2f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
         Me.StylizedPanel1.TabIndex = 84
         '
         'btnFont
@@ -300,14 +298,14 @@ Partial Class dlgStyle
 
     End Sub
     Friend WithEvents rtbPreview As RichTextBox
-    Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
-    Friend WithEvents btnColor As Tundra.StylizedColorButton
+    Friend WithEvents StylizedPanel1 As TundraLib.DoubleBufferedPanel
+    Friend WithEvents btnColor As TundraLib.StylizedColorButton
     Friend WithEvents nudIndent As NumericUpDown
     Friend WithEvents dlgOpen As OpenFileDialog
     Friend WithEvents dlgSave As SaveFileDialog
     Friend WithEvents nudOffset As NumericUpDown
     Friend WithEvents ttMain As ToolTip
-    Friend WithEvents btnHighlight As Tundra.StylizedColorButton
+    Friend WithEvents btnHighlight As TundraLib.StylizedColorButton
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents btnFont As Button
     Friend WithEvents btnRight As Button

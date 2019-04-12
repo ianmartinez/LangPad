@@ -32,16 +32,14 @@ Partial Class dlgAbout
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
-        Me.DoubleBufferedPanel1 = New Tundra.DoubleBufferedPanel()
-        Me.pnlTop = New Tundra.StylizedPanel()
-        Me.lblLanguagePad = New System.Windows.Forms.Label()
+        Me.DoubleBufferedPanel1 = New TundraLib.DoubleBufferedPanel()
         Me.lblVersion = New System.Windows.Forms.Label()
+        Me.lblLanguagePad = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.DoubleBufferedPanel1.SuspendLayout()
-        Me.pnlTop.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -137,8 +135,11 @@ Partial Class dlgAbout
         '
         'DoubleBufferedPanel1
         '
-        Me.DoubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.DoubleBufferedPanel1.Controls.Add(Me.pnlTop)
+        Me.DoubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DoubleBufferedPanel1.BackgroundImage = CType(resources.GetObject("DoubleBufferedPanel1.BackgroundImage"), System.Drawing.Image)
+        Me.DoubleBufferedPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.DoubleBufferedPanel1.Controls.Add(Me.lblVersion)
+        Me.DoubleBufferedPanel1.Controls.Add(Me.lblLanguagePad)
         Me.DoubleBufferedPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(6, 6)
         Me.DoubleBufferedPanel1.Margin = New System.Windows.Forms.Padding(2)
@@ -146,19 +147,18 @@ Partial Class dlgAbout
         Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(530, 88)
         Me.DoubleBufferedPanel1.TabIndex = 76
         '
-        'pnlTop
+        'lblVersion
         '
-        Me.pnlTop.BackColor = System.Drawing.Color.Transparent
-        Me.pnlTop.Controls.Add(Me.lblLanguagePad)
-        Me.pnlTop.Controls.Add(Me.lblVersion)
-        Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlTop.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTop.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlTop.Name = "pnlTop"
-        Me.pnlTop.Size = New System.Drawing.Size(530, 88)
-        Me.pnlTop.Style = "Colors=#cf6c36|#b21e54" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=45" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=98, 44," &
-    " 44" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1"
-        Me.pnlTop.TabIndex = 81
+        Me.lblVersion.AutoSize = True
+        Me.lblVersion.BackColor = System.Drawing.Color.Transparent
+        Me.lblVersion.ForeColor = System.Drawing.Color.White
+        Me.lblVersion.Location = New System.Drawing.Point(7, 51)
+        Me.lblVersion.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
+        Me.lblVersion.Name = "lblVersion"
+        Me.lblVersion.Size = New System.Drawing.Size(60, 13)
+        Me.lblVersion.TabIndex = 74
+        Me.lblVersion.Text = "Version 1.0"
+        Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblLanguagePad
         '
@@ -166,26 +166,13 @@ Partial Class dlgAbout
         Me.lblLanguagePad.BackColor = System.Drawing.Color.Transparent
         Me.lblLanguagePad.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
-        Me.lblLanguagePad.Location = New System.Drawing.Point(20, 23)
+        Me.lblLanguagePad.Location = New System.Drawing.Point(6, 21)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
         Me.lblLanguagePad.Name = "lblLanguagePad"
         Me.lblLanguagePad.Size = New System.Drawing.Size(133, 24)
         Me.lblLanguagePad.TabIndex = 12
         Me.lblLanguagePad.Text = "Language Pad"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblVersion
-        '
-        Me.lblVersion.AutoSize = True
-        Me.lblVersion.BackColor = System.Drawing.Color.Transparent
-        Me.lblVersion.ForeColor = System.Drawing.Color.White
-        Me.lblVersion.Location = New System.Drawing.Point(20, 51)
-        Me.lblVersion.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
-        Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(60, 13)
-        Me.lblVersion.TabIndex = 74
-        Me.lblVersion.Text = "Version 1.0"
-        Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dlgAbout
         '
@@ -210,8 +197,7 @@ Partial Class dlgAbout
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.DoubleBufferedPanel1.ResumeLayout(False)
-        Me.pnlTop.ResumeLayout(False)
-        Me.pnlTop.PerformLayout()
+        Me.DoubleBufferedPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -225,6 +211,5 @@ Partial Class dlgAbout
     Friend WithEvents ttMain As ToolTip
     Friend WithEvents lblLanguagePad As Label
     Friend WithEvents lblVersion As Label
-    Friend WithEvents DoubleBufferedPanel1 As Tundra.DoubleBufferedPanel
-    Friend WithEvents pnlTop As Tundra.StylizedPanel
+    Friend WithEvents DoubleBufferedPanel1 As TundraLib.DoubleBufferedPanel
 End Class

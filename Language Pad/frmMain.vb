@@ -1,6 +1,7 @@
 ﻿Imports Tundra
 Imports System.Drawing.Drawing2D
 Imports System.IO
+Imports TundraLib
 
 Public Class frmMain
     Private dlgColor As New ColorDialog
@@ -75,7 +76,7 @@ Public Class frmMain
     End Sub
 
     Public Sub InsertImageHandler(sender As Object, e As EventArgs)
-        SelectedDocument.InsertImage(CType(sender, StylizedButton).Image.Clone)
+        SelectedDocument.InsertImage(CType(sender, Button).Image.Clone)
     End Sub
 
     Public Function ModifiedWarning() As DialogResult
@@ -185,7 +186,7 @@ Public Class frmMain
     End Sub
 
     Private Sub InsertImage(sender As Object, e As EventArgs)
-        SelectedDocument.InsertImage(CType(sender, StylizedButton).Image)
+        SelectedDocument.InsertImage(CType(sender, Button).Image)
     End Sub
 
     Private Sub ApplyStyle(ByVal rtb As ExtendedRichTextBox, ByVal FontStyle As FontStyle)
@@ -352,7 +353,6 @@ Public Class frmMain
         dlgSettings.BackColor = Theme.DialogBack
         dlgStyle.BackColor = Theme.DialogBack
         dlgTable.BackColor = Theme.DialogBack
-        dlgTextArt.BackColor = Theme.DialogBack
         dlgUpdate.BackColor = Theme.DialogBack
 
         Refresh()
@@ -871,9 +871,8 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub TextArtToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TextArtToolStripMenuItem.Click
-        dlgTextArt.txtText.Text = SelectedDocument.SelectedText
-        dlgTextArt.ShowDialog()
+    Private Sub TextArtToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub TableToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TableToolStripMenuItem.Click

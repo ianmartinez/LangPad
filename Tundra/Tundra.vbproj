@@ -65,35 +65,6 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aero.vb" />
-    <Compile Include="Appearance.vb" />
-    <Compile Include="DoubleBufferedFlowLayoutPanel.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExtendedRichTextBox.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="FastPixel.vb" />
-    <Compile Include="FixedSR.vb" />
-    <Compile Include="StylizedCheckBox.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="StylizedProgressBar.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="StylizedColorButton.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="StylizedRadioButton.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="StylizedPanel.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Common.vb" />
-    <Compile Include="DoubleBufferedPanel.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -109,18 +80,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="StylizedButton.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="StylizedText.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="WizardTabs.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TransparentRichTextBox.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="ZiaFile.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -129,9 +88,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StylizedColorButton.resx">
-      <DependentUpon>StylizedColorButton.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

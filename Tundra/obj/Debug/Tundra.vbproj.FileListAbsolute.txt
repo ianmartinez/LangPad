@@ -69,11 +69,10 @@ W:\github2\Language-Pad\Tundra\obj\Debug\Tundra.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.dll
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\bin\Debug\Tundra.xml
+C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbprojAssemblyReference.cache
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.Resources.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.StylizedColorButton.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.GenerateResource.cache
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbproj.CoreCompileInputs.cache
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.dll
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.xml
 C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.pdb
-C:\Users\ianma\Documents\GitHub\Language-Pad\Tundra\obj\Debug\Tundra.vbprojAssemblyReference.cache

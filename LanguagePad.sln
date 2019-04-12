@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LanguagePad", "Language Pad\LanguagePad.vbproj", "{96451D96-1492-4D4A-BCA2-C65DE80255D2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8BD8A7F1-C880-41CC-8485-B132DDAD924A} = {8BD8A7F1-C880-41CC-8485-B132DDAD924A}
+	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Tundra", "Tundra\Tundra.vbproj", "{801224DE-BF6A-4196-B80F-8F881DD17FB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TundraLib", "TundraLib\TundraLib.csproj", "{8BD8A7F1-C880-41CC-8485-B132DDAD924A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,10 @@ Global
 		{801224DE-BF6A-4196-B80F-8F881DD17FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{801224DE-BF6A-4196-B80F-8F881DD17FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{801224DE-BF6A-4196-B80F-8F881DD17FB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BD8A7F1-C880-41CC-8485-B132DDAD924A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD8A7F1-C880-41CC-8485-B132DDAD924A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD8A7F1-C880-41CC-8485-B132DDAD924A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD8A7F1-C880-41CC-8485-B132DDAD924A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

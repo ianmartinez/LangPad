@@ -25,7 +25,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>9.4.0.%2a</ApplicationVersion>
+    <ApplicationVersion>10.4.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -187,12 +187,6 @@
     <Compile Include="Dialogs\dlgTable.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\dlgTextArt.Designer.vb">
-      <DependentUpon>dlgTextArt.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Dialogs\dlgTextArt.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Dialogs\dlgUpdate.Designer.vb">
       <DependentUpon>dlgUpdate.vb</DependentUpon>
     </Compile>
@@ -281,9 +275,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgTable.resx">
       <DependentUpon>dlgTable.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgTextArt.resx">
-      <DependentUpon>dlgTextArt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgUpdate.resx">
       <DependentUpon>dlgUpdate.vb</DependentUpon>
@@ -391,6 +382,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TundraLib\TundraLib.csproj">
+      <Project>{8bd8a7f1-c880-41cc-8485-b132ddad924a}</Project>
+      <Name>TundraLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tundra\Tundra.vbproj">
       <Project>{801224de-bf6a-4196-b80f-8f881dd17fb8}</Project>
       <Name>Tundra</Name>

@@ -107,13 +107,15 @@ W:\github2\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbproj.CopyComplete
 \\Mac\Home\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.exe
 \\Mac\Home\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.xml
 \\Mac\Home\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.pdb
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Language Pad.exe
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Tundra.dll
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Language Pad.exe.config
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Language Pad.exe.manifest
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Language Pad.application
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Language Pad.exe
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Language Pad.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Language Pad.xml
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Tundra.dll
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\TundraLib.dll
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\TundraLib.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Tundra.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Tundra.xml
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbprojAssemblyReference.cache
@@ -126,7 +128,6 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgSettings.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgStyle.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgTable.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgTextArt.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgUpdate.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.frmDictionary.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgHtml.resources

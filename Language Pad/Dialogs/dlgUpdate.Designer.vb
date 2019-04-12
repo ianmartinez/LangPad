@@ -26,13 +26,13 @@ Partial Class dlgUpdate
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgUpdate))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtDecription = New System.Windows.Forms.TextBox()
-        Me.btnReddit = New Tundra.StylizedButton()
-        Me.btnSource = New Tundra.StylizedButton()
+        Me.btnReddit = New Button()
+        Me.btnSource = New Button()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.StylizedPanel1 = New Tundra.StylizedPanel()
+        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
         Me.lblLanguagePad = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -81,7 +81,6 @@ Partial Class dlgUpdate
         Me.btnReddit.Name = "btnReddit"
         Me.btnReddit.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnReddit.Size = New System.Drawing.Size(68, 68)
-        Me.btnReddit.Style = resources.GetString("btnReddit.Style")
         Me.btnReddit.TabIndex = 76
         Me.ttMain.SetToolTip(Me.btnReddit, "Reddit")
         Me.btnReddit.UseCompatibleTextRendering = True
@@ -104,7 +103,6 @@ Partial Class dlgUpdate
         Me.btnSource.Name = "btnSource"
         Me.btnSource.Padding = New System.Windows.Forms.Padding(0, 0, 1, 1)
         Me.btnSource.Size = New System.Drawing.Size(68, 68)
-        Me.btnSource.Style = resources.GetString("btnSource.Style")
         Me.btnSource.TabIndex = 77
         Me.ttMain.SetToolTip(Me.btnSource, "Source")
         Me.btnSource.UseCompatibleTextRendering = True
@@ -161,8 +159,6 @@ Partial Class dlgUpdate
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Size = New System.Drawing.Size(911, 218)
-        Me.StylizedPanel1.Style = "Colors=#cf6c36|#b21e54" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=45" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=98, 44," &
-    " 44" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.StylizedPanel1.TabIndex = 79
         '
         'lblLanguagePad
@@ -216,13 +212,13 @@ Partial Class dlgUpdate
     End Sub
     Friend WithEvents Label3 As Label
     Friend WithEvents txtDecription As TextBox
-    Friend WithEvents btnReddit As Tundra.StylizedButton
-    Friend WithEvents btnSource As Tundra.StylizedButton
+    Friend WithEvents btnReddit As Button
+    Friend WithEvents btnSource As Button
     Friend WithEvents ttMain As ToolTip
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents btnOK As Button
     Friend WithEvents btnCancel As Button
-    Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
+    Friend WithEvents StylizedPanel1 As TundraLib.DoubleBufferedPanel
     Friend WithEvents lblLanguagePad As Label
     Friend WithEvents Label1 As Label
 End Class

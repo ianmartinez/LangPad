@@ -33,13 +33,13 @@ Partial Class dlgAccentMark
         Me.lblResult = New System.Windows.Forms.Label()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.cbSmartReplace = New System.Windows.Forms.CheckBox()
+        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.AccentsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnCopy = New System.Windows.Forms.Button()
         Me.btnPreviewFont = New System.Windows.Forms.Button()
         Me.dlgFont = New System.Windows.Forms.FontDialog()
-        Me.StylizedPanel1 = New Tundra.StylizedPanel()
-        Me.pnlSmartReplace = New Tundra.StylizedPanel()
+        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.StylizedPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -47,31 +47,31 @@ Partial Class dlgAccentMark
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 371)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Label1.Location = New System.Drawing.Point(6, 193)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 25)
+        Me.Label1.Size = New System.Drawing.Size(56, 13)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Character:"
         '
         'txtCharacter
         '
         Me.txtCharacter.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCharacter.Location = New System.Drawing.Point(13, 404)
-        Me.txtCharacter.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCharacter.Location = New System.Drawing.Point(6, 210)
+        Me.txtCharacter.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCharacter.MaxLength = 100
         Me.txtCharacter.Name = "txtCharacter"
-        Me.txtCharacter.Size = New System.Drawing.Size(992, 43)
+        Me.txtCharacter.Size = New System.Drawing.Size(498, 25)
         Me.txtCharacter.TabIndex = 2
         Me.txtCharacter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 466)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Label2.Location = New System.Drawing.Point(6, 242)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 25)
+        Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Accent:"
         '
@@ -83,21 +83,21 @@ Partial Class dlgAccentMark
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(704, 891)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(352, 463)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(292, 56)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 29)
         Me.TableLayoutPanel1.TabIndex = 68
         '
         'btnOK
         '
         Me.btnOK.BackColor = System.Drawing.Color.Transparent
         Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOK.Location = New System.Drawing.Point(3, 3)
+        Me.btnOK.Location = New System.Drawing.Point(2, 2)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(140, 50)
+        Me.btnOK.Size = New System.Drawing.Size(69, 25)
         Me.btnOK.TabIndex = 1
         Me.btnOK.Text = "OK"
         Me.btnOK.UseVisualStyleBackColor = False
@@ -107,9 +107,10 @@ Partial Class dlgAccentMark
         Me.btnCancel.BackColor = System.Drawing.Color.Transparent
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCancel.Location = New System.Drawing.Point(149, 3)
+        Me.btnCancel.Location = New System.Drawing.Point(75, 2)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(140, 50)
+        Me.btnCancel.Size = New System.Drawing.Size(69, 25)
         Me.btnCancel.TabIndex = 0
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
@@ -120,10 +121,10 @@ Partial Class dlgAccentMark
         Me.lblResult.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblResult.Font = New System.Drawing.Font("Calibri", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblResult.ForeColor = System.Drawing.Color.Black
-        Me.lblResult.Location = New System.Drawing.Point(2, 2)
-        Me.lblResult.Margin = New System.Windows.Forms.Padding(4)
+        Me.lblResult.Location = New System.Drawing.Point(1, 1)
+        Me.lblResult.Margin = New System.Windows.Forms.Padding(2)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(988, 249)
+        Me.lblResult.Size = New System.Drawing.Size(494, 130)
         Me.lblResult.TabIndex = 69
         Me.lblResult.Text = "a"
         Me.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -133,33 +134,45 @@ Partial Class dlgAccentMark
         Me.cbSmartReplace.AutoSize = True
         Me.cbSmartReplace.Checked = True
         Me.cbSmartReplace.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbSmartReplace.Location = New System.Drawing.Point(820, 72)
+        Me.cbSmartReplace.Location = New System.Drawing.Point(410, 37)
+        Me.cbSmartReplace.Margin = New System.Windows.Forms.Padding(2)
         Me.cbSmartReplace.Name = "cbSmartReplace"
-        Me.cbSmartReplace.Size = New System.Drawing.Size(185, 29)
+        Me.cbSmartReplace.Size = New System.Drawing.Size(96, 17)
         Me.cbSmartReplace.TabIndex = 72
         Me.cbSmartReplace.Text = "Smart Replace"
         Me.ttMain.SetToolTip(Me.cbSmartReplace, "Combine certain Unicode combined characters into single characters." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "A + ◌́ -> Á")
         Me.cbSmartReplace.UseVisualStyleBackColor = True
+        '
+        'pnlSmartReplace
+        '
+        Me.pnlSmartReplace.BackColor = System.Drawing.Color.LimeGreen
+        Me.pnlSmartReplace.Location = New System.Drawing.Point(392, 37)
+        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlSmartReplace.Name = "pnlSmartReplace"
+        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
+        Me.pnlSmartReplace.TabIndex = 85
+        Me.ttMain.SetToolTip(Me.pnlSmartReplace, "Replacement Found")
+        Me.pnlSmartReplace.Visible = False
         '
         'AccentsLayoutPanel
         '
         Me.AccentsLayoutPanel.AutoScroll = True
         Me.AccentsLayoutPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
         Me.AccentsLayoutPanel.BackColor = System.Drawing.Color.Transparent
-        Me.AccentsLayoutPanel.Location = New System.Drawing.Point(13, 499)
-        Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.AccentsLayoutPanel.Location = New System.Drawing.Point(6, 259)
+        Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(2)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
-        Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(8, 8, 0, 8)
-        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(992, 382)
+        Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
+        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(496, 199)
         Me.AccentsLayoutPanel.TabIndex = 3
         '
         'btnAdd
         '
         Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
-        Me.btnAdd.Location = New System.Drawing.Point(13, 13)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAdd.Location = New System.Drawing.Point(6, 7)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(214, 89)
+        Me.btnAdd.Size = New System.Drawing.Size(107, 46)
         Me.btnAdd.TabIndex = 70
         Me.btnAdd.Text = "Add Character"
         Me.btnAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -169,10 +182,10 @@ Partial Class dlgAccentMark
         'btnCopy
         '
         Me.btnCopy.Image = CType(resources.GetObject("btnCopy.Image"), System.Drawing.Image)
-        Me.btnCopy.Location = New System.Drawing.Point(235, 13)
-        Me.btnCopy.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCopy.Location = New System.Drawing.Point(118, 7)
+        Me.btnCopy.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCopy.Name = "btnCopy"
-        Me.btnCopy.Size = New System.Drawing.Size(214, 89)
+        Me.btnCopy.Size = New System.Drawing.Size(107, 46)
         Me.btnCopy.TabIndex = 71
         Me.btnCopy.Text = "Copy Character"
         Me.btnCopy.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -182,10 +195,10 @@ Partial Class dlgAccentMark
         'btnPreviewFont
         '
         Me.btnPreviewFont.Image = CType(resources.GetObject("btnPreviewFont.Image"), System.Drawing.Image)
-        Me.btnPreviewFont.Location = New System.Drawing.Point(457, 13)
-        Me.btnPreviewFont.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPreviewFont.Location = New System.Drawing.Point(228, 7)
+        Me.btnPreviewFont.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPreviewFont.Name = "btnPreviewFont"
-        Me.btnPreviewFont.Size = New System.Drawing.Size(262, 89)
+        Me.btnPreviewFont.Size = New System.Drawing.Size(131, 46)
         Me.btnPreviewFont.TabIndex = 73
         Me.btnPreviewFont.Text = "Change Preview Font"
         Me.btnPreviewFont.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -196,35 +209,20 @@ Partial Class dlgAccentMark
         '
         Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
         Me.StylizedPanel1.Controls.Add(Me.lblResult)
-        Me.StylizedPanel1.Location = New System.Drawing.Point(13, 110)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.StylizedPanel1.Location = New System.Drawing.Point(6, 57)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(992, 253)
-        Me.StylizedPanel1.Style = "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Colors=~255|~255" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=~220" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Text C" &
-    "olor=#252b2f" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0"
+        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(1)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(496, 132)
         Me.StylizedPanel1.TabIndex = 84
-        '
-        'pnlSmartReplace
-        '
-        Me.pnlSmartReplace.BackColor = System.Drawing.Color.Transparent
-        Me.pnlSmartReplace.Location = New System.Drawing.Point(784, 72)
-        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(4)
-        Me.pnlSmartReplace.Name = "pnlSmartReplace"
-        Me.pnlSmartReplace.Size = New System.Drawing.Size(29, 29)
-        Me.pnlSmartReplace.Style = "Colors=20,200,20|120,250,120" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-135" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color" &
-    "=10,190,10" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1"
-        Me.pnlSmartReplace.TabIndex = 85
-        Me.ttMain.SetToolTip(Me.pnlSmartReplace, "Replacement Found")
-        Me.pnlSmartReplace.Visible = False
         '
         'dlgAccentMark
         '
         Me.AcceptButton = Me.btnOK
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(1018, 970)
+        Me.ClientSize = New System.Drawing.Size(509, 504)
         Me.Controls.Add(Me.pnlSmartReplace)
         Me.Controls.Add(Me.StylizedPanel1)
         Me.Controls.Add(Me.btnPreviewFont)
@@ -237,7 +235,6 @@ Partial Class dlgAccentMark
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtCharacter)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgAccentMark"
@@ -264,6 +261,6 @@ Partial Class dlgAccentMark
     Friend WithEvents cbSmartReplace As CheckBox
     Friend WithEvents btnPreviewFont As Button
     Friend WithEvents dlgFont As FontDialog
-    Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
-    Friend WithEvents pnlSmartReplace As Tundra.StylizedPanel
+    Friend WithEvents StylizedPanel1 As TundraLib.DoubleBufferedPanel
+    Friend WithEvents pnlSmartReplace As TundraLib.DoubleBufferedPanel
 End Class

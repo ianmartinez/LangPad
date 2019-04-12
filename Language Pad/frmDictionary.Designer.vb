@@ -51,13 +51,13 @@ Partial Class frmDictionary
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.dlgFont = New System.Windows.Forms.FontDialog()
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
-        Me.pnlFindReplace = New Tundra.StylizedPanel()
+        Me.pnlFindReplace = New TundraLib.DoubleBufferedPanel()
         Me.cbStartsWith = New System.Windows.Forms.CheckBox()
         Me.rbDefinition = New System.Windows.Forms.RadioButton()
         Me.rbWord = New System.Windows.Forms.RadioButton()
         Me.txtFind = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.btnFind = New Tundra.StylizedButton()
+        Me.btnFind = New Button()
         Me.MainToolStrip = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -437,8 +437,6 @@ Partial Class frmDictionary
         Me.pnlFindReplace.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlFindReplace.Name = "pnlFindReplace"
         Me.pnlFindReplace.Size = New System.Drawing.Size(1777, 68)
-        Me.pnlFindReplace.Style = "Colors=20,0,0,0|0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=-90" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=35,0,0," &
-    "0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=$0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.pnlFindReplace.TabIndex = 75
         Me.pnlFindReplace.Visible = False
         '
@@ -510,7 +508,6 @@ Partial Class frmDictionary
         Me.btnFind.Name = "btnFind"
         Me.btnFind.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
         Me.btnFind.Size = New System.Drawing.Size(155, 46)
-        Me.btnFind.Style = resources.GetString("btnFind.Style")
         Me.btnFind.TabIndex = 67
         Me.btnFind.Text = "Find"
         Me.btnFind.UseCompatibleTextRendering = True
@@ -740,10 +737,10 @@ Partial Class frmDictionary
     Friend WithEvents Notes As DataGridViewTextBoxColumn
     Friend WithEvents ExportHtmlToolStripButton As ToolStripButton
     Friend WithEvents dlgSaveHtml As SaveFileDialog
-    Friend WithEvents pnlFindReplace As Tundra.StylizedPanel
+    Friend WithEvents pnlFindReplace As TundraLib.DoubleBufferedPanel
     Friend WithEvents txtFind As TextBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents btnFind As Tundra.StylizedButton
+    Friend WithEvents btnFind As Button
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents FindToolStripButton As ToolStripButton
     Friend WithEvents cbStartsWith As CheckBox

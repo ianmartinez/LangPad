@@ -22,20 +22,21 @@ Partial Class ssLoading
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ssLoading))
         Me.pbLoading = New System.Windows.Forms.ProgressBar()
         Me.lblVersion = New System.Windows.Forms.Label()
         Me.lblLanguagePad = New System.Windows.Forms.Label()
-        Me.StylizedPanel1 = New Tundra.StylizedPanel()
         Me.lblLoading = New System.Windows.Forms.Label()
-        Me.StylizedPanel1.SuspendLayout()
+        Me.pnlTop = New TundraLib.DoubleBufferedPanel()
+        Me.pnlTop.SuspendLayout()
         Me.SuspendLayout()
         '
         'pbLoading
         '
-        Me.pbLoading.Location = New System.Drawing.Point(12, 369)
-        Me.pbLoading.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pbLoading.Location = New System.Drawing.Point(6, 192)
+        Me.pbLoading.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.pbLoading.Name = "pbLoading"
-        Me.pbLoading.Size = New System.Drawing.Size(692, 40)
+        Me.pbLoading.Size = New System.Drawing.Size(459, 21)
         Me.pbLoading.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.pbLoading.TabIndex = 81
         '
@@ -44,67 +45,69 @@ Partial Class ssLoading
         Me.lblVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblVersion.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.lblVersion.ForeColor = System.Drawing.Color.White
-        Me.lblVersion.Location = New System.Drawing.Point(0, 242)
-        Me.lblVersion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lblVersion.Location = New System.Drawing.Point(0, 132)
+        Me.lblVersion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(716, 54)
+        Me.lblVersion.Size = New System.Drawing.Size(476, 28)
         Me.lblVersion.TabIndex = 74
         Me.lblVersion.Text = "Version 1.0"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblLanguagePad
         '
+        Me.lblLanguagePad.BackColor = System.Drawing.Color.Transparent
         Me.lblLanguagePad.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblLanguagePad.Font = New System.Drawing.Font("Tahoma", 22.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
         Me.lblLanguagePad.Location = New System.Drawing.Point(0, 0)
-        Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(716, 242)
+        Me.lblLanguagePad.Size = New System.Drawing.Size(476, 132)
         Me.lblLanguagePad.TabIndex = 12
         Me.lblLanguagePad.Text = "Language Pad"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'StylizedPanel1
-        '
-        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedPanel1.Controls.Add(Me.lblLanguagePad)
-        Me.StylizedPanel1.Controls.Add(Me.lblVersion)
-        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(716, 296)
-        Me.StylizedPanel1.Style = "Colors=#cf6c36|#b21e54" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=45" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=98, 44," &
-    " 44" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Highlight Color=0,0,0,0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bottom Only=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No Border=1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "No AA=1"
-        Me.StylizedPanel1.TabIndex = 80
-        '
         'lblLoading
         '
         Me.lblLoading.AutoSize = True
-        Me.lblLoading.Location = New System.Drawing.Point(7, 320)
+        Me.lblLoading.Location = New System.Drawing.Point(4, 166)
+        Me.lblLoading.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblLoading.Name = "lblLoading"
-        Me.lblLoading.Size = New System.Drawing.Size(107, 25)
+        Me.lblLoading.Size = New System.Drawing.Size(54, 13)
         Me.lblLoading.TabIndex = 82
         Me.lblLoading.Text = "Loading..."
         '
+        'pnlTop
+        '
+        Me.pnlTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pnlTop.BackgroundImage = CType(resources.GetObject("pnlTop.BackgroundImage"), System.Drawing.Image)
+        Me.pnlTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pnlTop.Controls.Add(Me.lblLanguagePad)
+        Me.pnlTop.Controls.Add(Me.lblVersion)
+        Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlTop.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTop.Margin = New System.Windows.Forms.Padding(6)
+        Me.pnlTop.Name = "pnlTop"
+        Me.pnlTop.Size = New System.Drawing.Size(476, 160)
+        Me.pnlTop.TabIndex = 83
+        '
         'ssLoading
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(716, 425)
+        Me.ClientSize = New System.Drawing.Size(476, 221)
+        Me.Controls.Add(Me.pnlTop)
         Me.Controls.Add(Me.lblLoading)
         Me.Controls.Add(Me.pbLoading)
-        Me.Controls.Add(Me.StylizedPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "ssLoading"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.StylizedPanel1.ResumeLayout(False)
+        Me.pnlTop.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -112,6 +115,6 @@ Partial Class ssLoading
     Friend WithEvents pbLoading As ProgressBar
     Friend WithEvents lblVersion As Label
     Friend WithEvents lblLanguagePad As Label
-    Friend WithEvents StylizedPanel1 As Tundra.StylizedPanel
     Friend WithEvents lblLoading As Label
+    Friend WithEvents pnlTop As TundraLib.DoubleBufferedPanel
 End Class
