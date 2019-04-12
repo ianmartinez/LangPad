@@ -169,12 +169,12 @@
   <data name="ExportHtmlToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVEhL7VIpDgIxFB2DAG4wAY3CYcA3M5kVMWcYwR1A
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVEhL7VIpDgIxFB2DAG4wAY3CYcB3MpkVMWcYwR1A
         cwUkYUlYFAgCBscJUKC4AYvBwftN7XQ6iyHMS17av772t1qBP4Trup8kdBxnKErVQEViG4tUImkEEomk
         FVAWySKgVKuUFIHfEfB9v468NWa+s217Ac49z2uIsBxxAqL5zbKsMwTa5MPag32lGE+SIU4A8SkajoIg
         KJMdhmEJvj1usYV/yZNkUBA4YRwtUCcbp+5QjeCDJ8mgIECzH2B9g33GWBUiTdzgAP9dpEVDQWAGMsMw
-        npj7C00rwj+mB+dJMpBAFClOvwX7DXhB867w6bCPpmnWyM4M+i30NelR0XiFdZJb8wI5Q9O+8Jqs684T
-        OiUAAAAASUVORK5CYII=
+        npj7C00rwj+mB+dJMpBAFClOvwX7DXhB867w6bCPpmnWyM4M+i30NelR0XiFdZJb8wI5Q9O+6VOs6DmX
+        yGIAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="SymbolsToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -201,19 +201,19 @@
   <data name="AccentMarkToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADlSURBVEhL7ZRNDoIwEIV7D/U8EErFQ5mYeB5xp3glf/b6
-        JnmSWUyTKURXfMks+hi+IQUaLFJK7ynF2xd+QNu2O+zxDfViDVvAy/OA7IgyXyrqwLZp8MlHIdanGOOq
-        rus11j2zxPZyIJBtGQeImJdC13UbDrgyKqdpmqcewHhEsqqqHlyWo+W5AVbuRsstUS53o+WWKJe70XJL
-        lMvdaLklyuVutNwS5XI3ns8UdeeyHNw8fOVS1o+GP/vCqBw50PQAVC9DKD9LhpbI9mlAcqDcqj3b5iEH
-        mpw58k6kZFtmP/nCnwjhA3Hn3KvTg3hgAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADlSURBVEhL7ZRNDoIwEIV7D/U6hFAqHsrExPOIO8Ur+bPX
+        N8mTzGKaTCG64ktm0cfwDSnQYJFSek8p3r7wA9q23WGPb6gXa9gCXp4HZEeU+VJRB7ZNg08+CrE+xRhX
+        dV2vse6ZJbaXA4FsyzhAxLwUuq7bcMCVUTlN0zz1AMYjklVV9eCyHC3PDbByN1puiXK5Gy23RLncjZZb
+        olzuRsstUS53o+WWKJe78XymqDuX5eDm4SuXsn40/NkXRuXIgaYHoHoZQvlZMrREtk8DkgPlVu3ZNg85
+        0OTMkXciJdsy+8kX/kQIH2B93KhJdqIJAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="AddToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACESURBVEhL7ZFRCoAwDEN3kXkY/3c7f/SKfu4ASqCCrB3t
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACESURBVEhL7ZFRCoAwDEN3kXkY/3c6v/SKfu4ASqCCrB3t
         Vhj72IMwGkKCGBbzkVJ6PKKaOlLI4zGGDHhENXWkkMdjIBTP3CXzwHblPR75xgtPuz/MA3i10vIGTQNA
-        Ky3v5gGglf5v84D0Ay3q+gLg8RgIeUQ1daSQx2MMGfCIahbTEMIL11xVNO96S3YAAAAASUVORK5CYII=
+        Ky3v5gGglf5v84D0Ay3q+gLg8RgIeUQ1daSQx2MMGfCIahbTEMILoMZVKNwNi7wAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="RemoveToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -227,13 +227,13 @@
   <data name="FontToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFPSURBVEhL7ZQ/S8NQFMWz6KDgJhUnP4R+Ag1J87dLHB27
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFPSURBVEhL7ZQ/S8NQFMWz6KDgJhUnP4R+Ak1I87dLHB27
         2EmFfAVXXZ0EHXXTxa3SxUkQ/BCiLq041H+/G45SqEKTOmkPHF7uefedm7z7XpwJ/g66eaPT20kuFZZH
         kiRrcRy/G6MoWpX8BTPv5Y22wvLA+OCzgD1L/h00m80pTB/gNbyCj1mWTWt6fLAleBZvnsNtPUeaLjBW
         DzA7hm9pmi7Ri0XP816JjzRdoHIPePuZIAi6jB1JVrANe67rzkqqDozWoW1JS5IV3TSNr8kkVQdGp2zJ
         C2NNkuP7/jxxn0Inkqr1AKM5jJ7hE2YXgzTN5izHciv1IAzDDUxsew4x3R2kaTZnOUovDwzO6/X6/Xdn
         XnfjDp5JKgcW1mAf7kkaAl+ybzmcsgVJo4OFxYXipCxLGgIFViyHcUvS6GCh/RZuFf4Icm4sV+EE/w+O
-        8wEBw6BVXwDclwAAAABJRU5ErkJggg==
+        8wHkF6BP8f3UJAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="FindToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
