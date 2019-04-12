@@ -123,9 +123,6 @@
     <Compile Include="Themes\NightTheme.vb" />
     <Compile Include="Themes\IceTheme.vb" />
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="CenteredComboBox.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Dialogs\dlgAbout.Designer.vb">
       <DependentUpon>dlgAbout.vb</DependentUpon>
     </Compile>
