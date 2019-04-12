@@ -1,7 +1,7 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports TundraLib
-Imports TundraLib.ZiaFile
+Imports TundraLib.Themes
 
 Public Class frmMain
     Private dlgColor As New ColorDialog
@@ -452,7 +452,7 @@ Public Class frmMain
         LinguisticsToolStrip.Location = New Point(FontToolStrip.Left + FontToolStrip.Width, 0)
 
         dlgColor.FullOpen = True
-        SetTheme(New IceTheme())
+        SetTheme(New BreezeTheme())
 
         ThemeCombo.SelectedItem = My.Settings.Theme
 
@@ -1204,24 +1204,10 @@ Public Class frmMain
     End Sub
 
     Private Sub ThemeCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ThemeCombo.SelectedIndexChanged
-        If ThemeCombo.SelectedItem.ToString().Equals("Ice") Then
-            SetTheme(New IceTheme)
-        ElseIf ThemeCombo.SelectedItem.ToString().Equals("Snow") Then
-            SetTheme(New SnowTheme)
-        ElseIf ThemeCombo.SelectedItem.ToString().Equals("Breeze") Then
+        If ThemeCombo.SelectedItem.ToString().Equals("Breeze") Then
             SetTheme(New BreezeTheme)
-        ElseIf ThemeCombo.SelectedItem.ToString().Equals("Space") Then
-            SetTheme(New SpaceTheme)
-        ElseIf ThemeCombo.SelectedItem.ToString().Equals("Night") Then
-            SetTheme(New NightTheme)
-        ElseIf ThemeCombo.SelectedItem.ToString().Equals("Luna") Then
-            SetTheme(New LunaTheme)
-        ElseIf ThemeCombo.SelectedItem.ToString().Equals("Olive") Then
-            SetTheme(New OliveTheme)
-        ElseIf ThemeCombo.SelectedItem.ToString().Equals("Desert") Then
-            SetTheme(New DesertTheme)
         Else
-            SetTheme(New IceTheme)
+            SetTheme(New BreezeTheme)
         End If
     End Sub
 

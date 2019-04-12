@@ -115,13 +115,6 @@
     <Compile Include="Dialogs\dlgHtml.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Themes\DesertTheme.vb" />
-    <Compile Include="Themes\BreezeTheme.vb" />
-    <Compile Include="Themes\SpaceTheme.vb" />
-    <Compile Include="Themes\OliveTheme.vb" />
-    <Compile Include="Themes\LunaTheme.vb" />
-    <Compile Include="Themes\NightTheme.vb" />
-    <Compile Include="Themes\IceTheme.vb" />
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Dialogs\dlgAbout.Designer.vb">
       <DependentUpon>dlgAbout.vb</DependentUpon>
@@ -235,8 +228,6 @@
     <Compile Include="SymbolButton.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Themes\SnowTheme.vb" />
-    <Compile Include="Themes\Theme.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dialogs\dlgAbout.resx">

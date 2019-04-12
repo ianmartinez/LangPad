@@ -34,7 +34,7 @@ namespace TundraLib
         {
             ColorBitmap = new Bitmap(22, 22);
             Graphics ColorGraphics = Graphics.FromImage(ColorBitmap);
-            Rectangle ColorRectangle = new Rectangle(0, 0, ColorBitmap.Width - 1, ColorBitmap.Height - 1);
+            Rectangle ColorRectangle = new Rectangle(0, 0, ColorBitmap.Width, ColorBitmap.Height);
             ColorGraphics.CompositingQuality = CompositingQuality.HighQuality;
             ColorGraphics.SmoothingMode = SmoothingMode.AntiAlias;
             ColorGraphics.FillRectangle(new SolidBrush(Color), ColorRectangle);

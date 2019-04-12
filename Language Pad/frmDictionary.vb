@@ -2,6 +2,7 @@
 Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports System.Text
+Imports TundraLib.Themes
 
 Public Class frmDictionary
     Dim c As TextBox

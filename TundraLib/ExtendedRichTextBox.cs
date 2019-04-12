@@ -506,7 +506,7 @@ namespace TundraLib
             // half-points, so the font size is twice the value obtained from
             // Font.SizeInPoints
             _doc.Append(@"\fs");
-            _doc.Append(System.Convert.ToInt32(Math.Round((2 * _font.SizeInPoints))));
+            _doc.Append(Convert.ToInt32(Math.Round((2 * _font.SizeInPoints))));
 
             // Apppend a space before starting actual text (for clarity)
             _doc.Append(" ");
@@ -579,16 +579,16 @@ namespace TundraLib
             StringBuilder _rtf = new StringBuilder();
 
             // Calculate the current width of the image in (0.01)mm
-            int picw = System.Convert.ToInt32(Math.Round((_image.Width / (double)xDpi) * HMM_PER_INCH));
+            int picw = Convert.ToInt32(Math.Round((_image.Width / (double)xDpi) * HMM_PER_INCH));
 
             // Calculate the current height of the image in (0.01)mm
-            int pich = System.Convert.ToInt32(Math.Round((_image.Height / (double)yDpi) * HMM_PER_INCH));
+            int pich = Convert.ToInt32(Math.Round((_image.Height / (double)yDpi) * HMM_PER_INCH));
 
             // Calculate the target width of the image in twips
-            int picwgoal = System.Convert.ToInt32(Math.Round((_image.Width / (double)xDpi) * TWIPS_PER_INCH));
+            int picwgoal = Convert.ToInt32(Math.Round((_image.Width / (double)xDpi) * TWIPS_PER_INCH));
 
             // Calculate the target height of the image in twips
-            int pichgoal = System.Convert.ToInt32(Math.Round((_image.Height / (double)yDpi) * TWIPS_PER_INCH));
+            int pichgoal = Convert.ToInt32(Math.Round((_image.Height / (double)yDpi) * TWIPS_PER_INCH));
 
             // Append values to RTF string
             _rtf.Append(@"{\pict\wmetafile8");
