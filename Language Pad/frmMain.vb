@@ -75,7 +75,7 @@ Public Class frmMain
     End Sub
 
     Public Sub InsertImageHandler(sender As Object, e As EventArgs)
-        SelectedDocument.InsertImage(CType(sender, Tundra.StylizedButton).Image.Clone)
+        SelectedDocument.InsertImage(CType(sender, StylizedButton).Image.Clone)
     End Sub
 
     Public Function ModifiedWarning() As DialogResult
@@ -84,10 +84,10 @@ Public Class frmMain
 
     Public Sub SetTitle()
         If currentFile = "" Then
-            Me.Text = Title
+            Text = Title
         Else
             Dim FileName As String = currentFile.Split("\").GetValue(currentFile.Split("\").Count - 1)
-            Me.Text = Title & " - " & FileName
+            Text = Title & " - " & FileName
         End If
     End Sub
 
@@ -115,11 +115,11 @@ Public Class frmMain
         Return newImage
     End Function
 
-    Private Sub PrintDocument1_BeginPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles pdMain.BeginPrint
+    Private Sub PrintDocument1_BeginPrint(ByVal sender As Object, ByVal e As Printing.PrintEventArgs) Handles pdMain.BeginPrint
         checkPrint = 0
     End Sub
 
-    Private Sub pdMain_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles pdMain.PrintPage
+    Private Sub pdMain_PrintPage(ByVal sender As Object, ByVal e As Printing.PrintPageEventArgs) Handles pdMain.PrintPage
         checkPrint = SelectedDocument.Print(checkPrint, SelectedDocument.TextLength, e)
         If checkPrint < SelectedDocument.TextLength Then
             e.HasMorePages = True
@@ -158,14 +158,14 @@ Public Class frmMain
         Process.Start(Link)
     End Sub
 
-    Private Sub SelectedDocument_TextChanged(sender As System.Object, e As System.EventArgs) Handles SelectedDocument.TextChanged
+    Private Sub SelectedDocument_TextChanged(sender As Object, e As EventArgs) Handles SelectedDocument.TextChanged
         RaiseEvent EditText()
         CharCountToolStripLabel.Text = "Character Count: " & SelectedDocument.TextLength
         WordCountToolStripLabel.Text = "Word Count: " & WordCount(SelectedDocument.Text)
         frmRTF.txtRTF.Text = SelectedDocument.Rtf
     End Sub
 
-    Private Sub BulletToolStripButton_ButtonClick(sender As System.Object, e As System.EventArgs)
+    Private Sub BulletToolStripButton_ButtonClick(sender As Object, e As EventArgs)
         SelectedDocument.BulletIndent = 10
         SelectedDocument.SelectionBullet = True
     End Sub
@@ -185,7 +185,7 @@ Public Class frmMain
     End Sub
 
     Private Sub InsertImage(sender As Object, e As EventArgs)
-        SelectedDocument.InsertImage(CType(sender, Tundra.StylizedButton).Image)
+        SelectedDocument.InsertImage(CType(sender, StylizedButton).Image)
     End Sub
 
     Private Sub ApplyStyle(ByVal rtb As ExtendedRichTextBox, ByVal FontStyle As FontStyle)
@@ -358,11 +358,11 @@ Public Class frmMain
         Refresh()
     End Sub
 
-    Private Sub RichTextEditor_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+    Private Sub RichTextEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         On Error Resume Next
         Text = LangPadVersion
 
-        Title = Me.Text
+        Title = Text
         cmsMain.ImageScalingSize = New Size(16, 16)
 
         Dim rectF As New RectangleF(10, 10, 500, 500)
@@ -462,15 +462,15 @@ Public Class frmMain
         Next
     End Sub
 
-    Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
+    Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
         ToolStripContainer1.BottomToolStripPanel.Paint, ToolStripContainer1.LeftToolStripPanel.Paint, ToolStripContainer1.RightToolStripPanel.Paint
         Dim g As Graphics = e.Graphics
-        Dim rect As New Rectangle(0, 0, ToolStripContainer1.Width, Me.Height)
+        Dim rect As New Rectangle(0, 0, ToolStripContainer1.Width, Height)
         Dim b As New LinearGradientBrush(rect, Color1, Color2, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
         g.FillRectangle(b, rect)
     End Sub
 
-    Private Sub ToolStripContainer1_ToolStripPanel_SizeChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripContainer1.TopToolStripPanel.SizeChanged,
+    Private Sub ToolStripContainer1_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ToolStripContainer1.TopToolStripPanel.SizeChanged,
         ToolStripContainer1.BottomToolStripPanel.SizeChanged, ToolStripContainer1.LeftToolStripPanel.SizeChanged, ToolStripContainer1.RightToolStripPanel.SizeChanged
         ToolStripContainer1.Invalidate()
     End Sub
@@ -711,15 +711,15 @@ Public Class frmMain
             SaveAsToolStripMenuItem_Click(Me, e)
             Exit Sub
         Else
-            Me.Cursor = Cursors.WaitCursor
+            Cursor = Cursors.WaitCursor
             Dim strExt As String
-            strExt = System.IO.Path.GetExtension(currentFile)
+            strExt = Path.GetExtension(currentFile)
             strExt = strExt.ToUpper()
             If strExt = "RTF" Then
                 SelectedDocument.SaveFile(currentFile)
             ElseIf strExt = "TXT" Then
-                Dim txtWriter As System.IO.StreamWriter
-                txtWriter = New System.IO.StreamWriter(currentFile)
+                Dim txtWriter As StreamWriter
+                txtWriter = New StreamWriter(currentFile)
                 txtWriter.Write(SelectedDocument.Text)
                 txtWriter.Close()
                 txtWriter = Nothing
@@ -731,12 +731,12 @@ Public Class frmMain
                 SetTitle()
             End If
         End If
-        Me.Cursor = Cursors.Default
+        Cursor = Cursors.Default
     End Sub
 
     Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsToolStripMenuItem.Click
         If dlgSave.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Me.Cursor = Cursors.WaitCursor
+            Cursor = Cursors.WaitCursor
             If dlgSave.FileName = "" Then Exit Sub
 
             CurrentDocument.Save(dlgSave.FileName)
@@ -744,7 +744,7 @@ Public Class frmMain
 
             SelectedDocument.Modified = False
             SetTitle()
-            Me.Cursor = Cursors.Default
+            Cursor = Cursors.Default
         End If
     End Sub
 
@@ -1022,19 +1022,19 @@ Public Class frmMain
 
             If dlgOpenPage.FileName = "" Then Exit Sub
             Dim strExt As String
-            strExt = System.IO.Path.GetExtension(dlgOpenPage.FileName)
+            strExt = Path.GetExtension(dlgOpenPage.FileName)
             strExt = strExt.ToUpper()
 
             Select Case strExt
                 Case ".RTF"
-                    Dim txtReader As System.IO.StreamReader
-                    txtReader = New System.IO.StreamReader(dlgOpenPage.FileName)
+                    Dim txtReader As StreamReader
+                    txtReader = New StreamReader(dlgOpenPage.FileName)
                     p.RTF = txtReader.ReadToEnd
                     txtReader.Close()
                     txtReader = Nothing
                 Case Else
-                    Dim txtReader As System.IO.StreamReader
-                    txtReader = New System.IO.StreamReader(dlgOpenPage.FileName)
+                    Dim txtReader As StreamReader
+                    txtReader = New StreamReader(dlgOpenPage.FileName)
                     Dim R As New RichTextBox
                     R.Text = txtReader.ReadToEnd
                     p.RTF = R.Rtf
@@ -1067,21 +1067,21 @@ Public Class frmMain
             If dlgSavePage.FileName = "" Then Exit Sub
 
             Dim strExt As String
-            strExt = System.IO.Path.GetExtension(dlgSavePage.FileName)
+            strExt = Path.GetExtension(dlgSavePage.FileName)
             strExt = strExt.ToUpper()
 
             Select Case strExt
                 Case ".RTF"
-                    Dim txtWriter As System.IO.StreamWriter
-                    txtWriter = New System.IO.StreamWriter(dlgSavePage.FileName)
+                    Dim txtWriter As StreamWriter
+                    txtWriter = New StreamWriter(dlgSavePage.FileName)
                     txtWriter.Write(SelectedDocument.Rtf)
                     txtWriter.Close()
                     txtWriter = Nothing
                     SelectedDocument.SelectionStart = 0
                     SelectedDocument.SelectionLength = 0
                 Case Else
-                    Dim txtWriter As System.IO.StreamWriter
-                    txtWriter = New System.IO.StreamWriter(dlgSavePage.FileName)
+                    Dim txtWriter As StreamWriter
+                    txtWriter = New StreamWriter(dlgSavePage.FileName)
                     txtWriter.Write(SelectedDocument.Text)
                     txtWriter.Close()
                     txtWriter = Nothing

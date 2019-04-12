@@ -16,15 +16,15 @@ Public Class frmRTF
         Refresh()
     End Sub
 
-    Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
+    Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
         ToolStripContainer1.BottomToolStripPanel.Paint, ToolStripContainer1.LeftToolStripPanel.Paint, ToolStripContainer1.RightToolStripPanel.Paint
         Dim g As Graphics = e.Graphics
-        Dim rect As New Rectangle(0, 0, ToolStripContainer1.Width, Me.Height)
+        Dim rect As New Rectangle(0, 0, ToolStripContainer1.Width, Height)
         Dim b As New LinearGradientBrush(rect, Color1, Color2, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
         g.FillRectangle(b, rect)
     End Sub
 
-    Private Sub ToolStripContainer1_ToolStripPanel_SizeChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripContainer1.TopToolStripPanel.SizeChanged,
+    Private Sub ToolStripContainer1_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ToolStripContainer1.TopToolStripPanel.SizeChanged,
         ToolStripContainer1.BottomToolStripPanel.SizeChanged, ToolStripContainer1.LeftToolStripPanel.SizeChanged, ToolStripContainer1.RightToolStripPanel.SizeChanged
         ToolStripContainer1.Invalidate()
     End Sub
@@ -59,7 +59,7 @@ Public Class frmRTF
     Private Sub RefreshToolStripButton_Click(sender As Object, e As EventArgs) Handles RefreshToolStripButton.Click
         On Error Resume Next
 
-        frmMain.SelectedDocument.Rtf = Me.txtRTF.Text
-        Me.txtRTF.Text = frmMain.SelectedDocument.Rtf
+        frmMain.SelectedDocument.Rtf = txtRTF.Text
+        txtRTF.Text = frmMain.SelectedDocument.Rtf
     End Sub
 End Class

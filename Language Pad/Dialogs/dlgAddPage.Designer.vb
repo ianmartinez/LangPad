@@ -34,20 +34,20 @@ Partial Class dlgAddPage
         '
         Me.Label1.AutoSize = True
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label1.Location = New System.Drawing.Point(12, 6)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(6, 3)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 25)
+        Me.Label1.Size = New System.Drawing.Size(38, 13)
         Me.Label1.TabIndex = 73
         Me.Label1.Text = "Name:"
         '
         'txtName
         '
         Me.txtName.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.txtName.Location = New System.Drawing.Point(12, 50)
-        Me.txtName.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtName.Location = New System.Drawing.Point(6, 23)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(376, 31)
+        Me.txtName.Size = New System.Drawing.Size(188, 20)
         Me.txtName.TabIndex = 0
         '
         'TableLayoutPanel1
@@ -58,21 +58,21 @@ Partial Class dlgAddPage
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 81)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(6)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(6, 43)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(0, 12, 0, 6)
+        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(0, 6, 0, 3)
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(376, 91)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(188, 47)
         Me.TableLayoutPanel1.TabIndex = 74
         '
         'btnOK
         '
         Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOK.Location = New System.Drawing.Point(3, 15)
+        Me.btnOK.Location = New System.Drawing.Point(2, 8)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(182, 67)
+        Me.btnOK.Size = New System.Drawing.Size(90, 34)
         Me.btnOK.TabIndex = 1
         Me.btnOK.Text = "OK"
         Me.btnOK.UseVisualStyleBackColor = True
@@ -81,9 +81,10 @@ Partial Class dlgAddPage
         '
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCancel.Location = New System.Drawing.Point(191, 15)
+        Me.btnCancel.Location = New System.Drawing.Point(96, 8)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(182, 67)
+        Me.btnCancel.Size = New System.Drawing.Size(90, 34)
         Me.btnCancel.TabIndex = 0
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
@@ -91,19 +92,18 @@ Partial Class dlgAddPage
         'dlgAddPage
         '
         Me.AcceptButton = Me.btnOK
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(400, 178)
+        Me.ClientSize = New System.Drawing.Size(200, 93)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgAddPage"
-        Me.Padding = New System.Windows.Forms.Padding(12, 6, 12, 6)
+        Me.Padding = New System.Windows.Forms.Padding(6, 3, 6, 3)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.TableLayoutPanel1.ResumeLayout(False)

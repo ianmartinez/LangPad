@@ -1,7 +1,4 @@
-﻿Imports System.Windows.Forms
-
-Public Class dlgSettings
-
+﻿Public Class dlgSettings
 
     Private Sub dlgSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cbAccent.Checked = My.Settings.AccentMarks
@@ -28,10 +25,10 @@ Public Class dlgSettings
 
         My.Settings.Save()
 
-        Me.Close()
+        Close()
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Me.Close()
+        Close()
     End Sub
 End Class

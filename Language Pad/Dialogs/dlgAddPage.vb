@@ -1,6 +1,4 @@
-﻿Imports System.Windows.Forms
-
-Public Class dlgAddPage
+﻿Public Class dlgAddPage
     Public AddPage As Boolean = False
     Public DuplicatePage As Boolean = False
     Public CurrentPos As Integer = 0
@@ -18,7 +16,7 @@ Public Class dlgAddPage
         Return False
     End Function
 
-    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
+    Private Sub OK_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnOK.Click
         On Error Resume Next
         frmMain.SaveTabs()
         Dim CurrentPage As Integer = frmMain.tcNotebook.SelectedIndex
@@ -31,28 +29,28 @@ Public Class dlgAddPage
         If AddPage = True Then
             Dim p As New NotebookPage
             p.Title = txtName.Text
-            LanguagePadCommon.CurrentDocument.Pages.Add(p)
+            CurrentDocument.Pages.Add(p)
             frmMain.UpdateTabs()
         ElseIf DuplicatePage = True Then
             Dim p As New NotebookPage
             p.Title = txtName.Text
             p.RTF = CurrentDocument.Pages(CurrentPage).RTF
-            LanguagePadCommon.CurrentDocument.Pages.Add(p)
+            CurrentDocument.Pages.Add(p)
             frmMain.UpdateTabs()
         Else
-            LanguagePadCommon.CurrentDocument.Pages.Item(frmMain.tcNotebook.SelectedIndex).Title = txtName.Text
+            CurrentDocument.Pages.Item(frmMain.tcNotebook.SelectedIndex).Title = txtName.Text
             frmMain.UpdateTabs()
         End If
 
         frmMain.tcNotebook.SelectedIndex = CurrentPage
         CurrentDocument.Modified = True
-        Me.DialogResult = DialogResult.OK
-        Me.Close()
+        DialogResult = DialogResult.OK
+        Close()
     End Sub
 
-    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
-        Me.DialogResult = DialogResult.Cancel
-        Me.Close()
+    Private Sub Cancel_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnCancel.Click
+        DialogResult = DialogResult.Cancel
+        Close()
     End Sub
 
     Private Sub dlgAddPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load

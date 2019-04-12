@@ -1,5 +1,4 @@
 ﻿Imports System.IO
-Imports System.Windows.Forms
 
 Public Class dlgStyle
     Public StyleFont As Font = New Font("Calibri", 11)
@@ -33,12 +32,12 @@ Public Class dlgStyle
     Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
         If dlgOpen.ShowDialog = Windows.Forms.DialogResult.OK Then
             Dim FileData As String = File.ReadAllText(dlgOpen.FileName)
-            StyleFont = Tundra.ZiaFile.FromCompatibleFont2(Tundra.ZiaFile.GetValue(FileData, "Font"))
-            StyleColor = Tundra.ZiaFile.FromCompatibleColor(Tundra.ZiaFile.GetValue(FileData, "Color"))
-            StyleHighlight = Tundra.ZiaFile.FromCompatibleColor(Tundra.ZiaFile.GetValue(FileData, "Highlight"))
-            StyleCharOffset = Tundra.ZiaFile.GetValue(FileData, "CharOffset")
-            StyleAlignment = CType([Enum].Parse(GetType(HorizontalAlignment), Tundra.ZiaFile.GetValue(FileData, "Align")), HorizontalAlignment)
-            StyleIndent = Tundra.ZiaFile.GetValue(FileData, "Indent")
+            StyleFont = Tundra.FromCompatibleFont2(Tundra.GetValue(FileData, "Font"))
+            StyleColor = Tundra.FromCompatibleColor(Tundra.GetValue(FileData, "Color"))
+            StyleHighlight = Tundra.FromCompatibleColor(Tundra.GetValue(FileData, "Highlight"))
+            StyleCharOffset = Tundra.GetValue(FileData, "CharOffset")
+            StyleAlignment = CType([Enum].Parse(GetType(HorizontalAlignment), Tundra.GetValue(FileData, "Align")), HorizontalAlignment)
+            StyleIndent = Tundra.GetValue(FileData, "Indent")
 
             btnColor.Color = StyleColor
             btnHighlight.Color = StyleHighlight

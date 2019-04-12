@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Reflection
+﻿Imports System.Reflection
 Imports System.Runtime.InteropServices
 
 ' General Information about an assembly is controlled through the following 
@@ -8,12 +7,12 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Language Pad")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Ian Martinez")> 
+<Assembly: AssemblyTitle("Language Pad")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("Ian Martinez")>
 <Assembly: AssemblyProduct("Language Pad")>
 <Assembly: AssemblyCopyright("Copyright © 2019 Ian Martinez")>
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
@@ -31,5 +30,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("10.0.0.0")>
-<Assembly: AssemblyFileVersion("10.0.0.0")>
+<Assembly: AssemblyVersion("9.4.0.0")>
+<Assembly: AssemblyFileVersion("9.4.0.0")>

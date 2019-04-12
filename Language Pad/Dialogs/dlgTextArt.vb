@@ -1,5 +1,4 @@
-﻿Imports System.Windows.Forms
-Imports Tundra.ZiaFile
+﻿Imports Tundra.ZiaFile
 
 Public Class dlgTextArt
     Dim Loading As Boolean = True
@@ -17,15 +16,15 @@ Public Class dlgTextArt
 
         StylizedText1.Style = Write(Zia)
     End Sub
-    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
+    Private Sub OK_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnOK.Click
         frmMain.SelectedDocument.InsertImage(StylizedText1.DrawBitmap)
-        Me.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.Close()
+        DialogResult = DialogResult.OK
+        Close()
     End Sub
 
-    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
-        Me.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Close()
+    Private Sub Cancel_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnCancel.Click
+        DialogResult = DialogResult.Cancel
+        Close()
     End Sub
 
     Private Sub txtText_TextChanged(sender As Object, e As EventArgs) Handles txtText.TextChanged
@@ -74,14 +73,17 @@ Public Class dlgTextArt
         If dlgFont.ShowDialog() = Windows.Forms.DialogResult.OK Then
             StylizedText1.Font = dlgFont.Font
         End If
+
         ApplyText()
     End Sub
 
     Private Sub dlgTextArt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Loading = False
+
         If txtText.Text = "" Then
             txtText.Text = "Text Art"
         End If
+
         ApplyText()
     End Sub
 

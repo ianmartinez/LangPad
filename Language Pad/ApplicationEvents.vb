@@ -1,6 +1,4 @@
 ﻿Imports Tundra
-Imports System.IO
-Imports System.Linq
 Namespace My
 
     ' The following events are available for MyApplication:
@@ -141,7 +139,7 @@ Namespace My
 
             If Settings.CommonChar = True Then
                 ssLoading.lblLoading.Text = "Loading Common Characters..."
-                For Each IPA As String In My.Resources.Common.Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
+                For Each IPA As String In Resources.Common.Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
                     Dim SymbolButton As New SymbolButton
                     SymbolButton.Text = IPA
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA

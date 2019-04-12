@@ -66,7 +66,7 @@ Module NotebookFileAccess
         Dim zip As New ZipFile
         zip.CompressionLevel = Ionic.Zlib.CompressionLevel.BestCompression
 
-        Dim guid As Guid = System.Guid.NewGuid
+        Dim guid As Guid = Guid.NewGuid
 
         Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString
         Directory.Delete(tmp, True)
@@ -97,7 +97,7 @@ Module NotebookFileAccess
         SettingsString.Add(New ZiaLine(LineType.KeyValue, "Page Order", PageOrder))
         SettingsString.Add(New ZiaLine(LineType.Blank))
 
-        Dim SettingsFile As String = ZiaFile.Write(SettingsString)
+        Dim SettingsFile As String = Write(SettingsString)
 
         If Notebook.EmbedSymbols = True Then
             Notebook.CustomSymbols = My.Settings.CustomSymbols
@@ -106,8 +106,8 @@ Module NotebookFileAccess
         End If
 
         For Each Page As NotebookPage In Notebook.Pages
-            Dim txtWriter As System.IO.StreamWriter
-            txtWriter = New System.IO.StreamWriter(PagesFolder & Page.Title & ".rtf")
+            Dim txtWriter As StreamWriter
+            txtWriter = New StreamWriter(PagesFolder & Page.Title & ".rtf")
             txtWriter.Write(Page.RTF)
             txtWriter.Close()
             txtWriter = Nothing
@@ -131,7 +131,7 @@ Module NotebookFileAccess
         Dim NewNotebook As New NotebookFile
         Dim zip As New ZipFile(FilePath)
 
-        Dim guid As Guid = System.Guid.NewGuid
+        Dim guid As Guid = Guid.NewGuid
 
         Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString
 
@@ -141,8 +141,8 @@ Module NotebookFileAccess
         zip.ExtractAll(tmp)
         PagesFolder = tmp & "\pages\"
 
-        Dim LineList = ZiaFile.Read(File.ReadAllText(tmp & "\data.txt"))
-        Dim PageOrder = ZiaFile.Search(LineList, "Page Order").Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
+        Dim LineList = Read(File.ReadAllText(tmp & "\data.txt"))
+        Dim PageOrder = Search(LineList, "Page Order").Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
         For Each PageTitle As String In PageOrder
             Dim Page As New NotebookPage
             Page.Title = PageTitle

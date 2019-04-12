@@ -2,7 +2,6 @@
 Imports System.ComponentModel
 Imports System.Drawing.Design
 Imports System.Drawing
-Imports Tundra.ZiaFile
 Imports System.Drawing.Drawing2D
 
 Public Class StylizedRadioButton

@@ -1,5 +1,4 @@
-﻿Imports System.Windows.Forms
-Imports Tundra
+﻿Imports Tundra
 
 Public Class dlgAccentMark
     Public Property Character As String
@@ -56,7 +55,7 @@ Public Class dlgAccentMark
         AccentsString = ""
         UpdateResult()
 
-        For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.Accents)
+        For Each IPA As KeyValuePair(Of String, String) In Read(My.Resources.Accents)
             Dim SymbolButton As New AccentCheckButton
             SymbolButton.Text = "◌" + IPA.Value
             SymbolButton.BackColor = Color.Transparent

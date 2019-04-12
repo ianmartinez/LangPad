@@ -118,10 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="TextBox2.Text" xml:space="preserve">
-    <value>Version 10.0 (July 3, 2019)
+    <value>Version 10.0 (July 31, 2019)
    • Code cleanup
    • Update to .NET Framework 4.7.2
    • Update to Visual Studio 2019
+   • Converted to C#
    • Export to KeyStudio for iOS
 
 Version 9.2 (August 20, 2018)

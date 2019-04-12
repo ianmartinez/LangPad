@@ -61,7 +61,7 @@ Partial Class dlgAbout
         Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(6)
         Me.TabPage1.Size = New System.Drawing.Size(522, 414)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "License"
@@ -87,7 +87,7 @@ Partial Class dlgAbout
         Me.TabPage2.Controls.Add(Me.TextBox2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(6)
         Me.TabPage2.Size = New System.Drawing.Size(522, 414)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Changelog"
@@ -112,9 +112,9 @@ Partial Class dlgAbout
         '
         Me.TabPage3.Controls.Add(Me.TextBox3)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(6)
         Me.TabPage3.Size = New System.Drawing.Size(522, 414)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Credits"
@@ -141,7 +141,7 @@ Partial Class dlgAbout
         Me.DoubleBufferedPanel1.Controls.Add(Me.pnlTop)
         Me.DoubleBufferedPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(6, 6)
-        Me.DoubleBufferedPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DoubleBufferedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel1.Name = "DoubleBufferedPanel1"
         Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(530, 88)
         Me.DoubleBufferedPanel1.TabIndex = 76
@@ -153,7 +153,7 @@ Partial Class dlgAbout
         Me.pnlTop.Controls.Add(Me.lblVersion)
         Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlTop.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTop.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pnlTop.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlTop.Name = "pnlTop"
         Me.pnlTop.Size = New System.Drawing.Size(530, 88)
         Me.pnlTop.Style = "Colors=#cf6c36|#b21e54" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Positions=0|1" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Angle=45" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Radius=0" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Border Color=98, 44," &
@@ -198,7 +198,7 @@ Partial Class dlgAbout
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgAbout"
-        Me.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Padding = New System.Windows.Forms.Padding(6)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "About"

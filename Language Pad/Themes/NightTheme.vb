@@ -75,14 +75,14 @@
 End Module
 
 Public Class clsNightMenuRenderer
-    Inherits System.Windows.Forms.ToolStripRenderer
+    Inherits ToolStripRenderer
     '// Make sure the textcolor is black
-    Protected Overrides Sub InitializeItem(ByVal item As System.Windows.Forms.ToolStripItem)
+    Protected Overrides Sub InitializeItem(ByVal item As ToolStripItem)
         MyBase.InitializeItem(item)
         item.ForeColor = Color.Black
     End Sub
 
-    Protected Overrides Sub Initialize(ByVal toolStrip As System.Windows.Forms.ToolStrip)
+    Protected Overrides Sub Initialize(ByVal toolStrip As ToolStrip)
         MyBase.Initialize(toolStrip)
         toolStrip.ForeColor = Color.Black
     End Sub
@@ -97,7 +97,7 @@ Public Class clsNightMenuRenderer
     End Sub
 
     '// Render Image Margin and gray itembackground
-    Protected Overrides Sub OnRenderImageMargin(ByVal e As System.Windows.Forms.ToolStripRenderEventArgs)
+    Protected Overrides Sub OnRenderImageMargin(ByVal e As ToolStripRenderEventArgs)
         MyBase.OnRenderImageMargin(e)
 
         '// Draw ImageMargin background gradient
@@ -105,13 +105,13 @@ Public Class clsNightMenuRenderer
             Drawing2D.LinearGradientMode.Horizontal)
 
         '// Shadow at the right of image margin
-        Dim DarkLine As New Drawing.SolidBrush(clrNightImageMarginLine)
-        Dim WhiteLine As New Drawing.SolidBrush(Color.White)
+        Dim DarkLine As New SolidBrush(clrNightImageMarginLine)
+        Dim WhiteLine As New SolidBrush(Color.White)
         Dim rect As New Rectangle(e.AffectedBounds.Width, 2, 1, e.AffectedBounds.Height)
         Dim rect2 As New Rectangle(e.AffectedBounds.Width + 1, 2, 1, e.AffectedBounds.Height)
 
         '// Gray background
-        Dim SubmenuBGbrush As New Drawing.SolidBrush(clrNightSubmenuBG)
+        Dim SubmenuBGbrush As New SolidBrush(clrNightSubmenuBG)
         Dim rect3 As New Rectangle(0, 0, e.ToolStrip.Width, e.ToolStrip.Height)
 
         '// Border
@@ -126,7 +126,7 @@ Public Class clsNightMenuRenderer
     End Sub
 
     '// Render Checkmark 
-    Protected Overrides Sub OnRenderItemCheck(ByVal e As System.Windows.Forms.ToolStripItemImageRenderEventArgs)
+    Protected Overrides Sub OnRenderItemCheck(ByVal e As ToolStripItemImageRenderEventArgs)
         ' MyBase.OnRenderItemCheck(e)
         Dim rect As New Rectangle(3, 1, e.Item.Image.Width + 4, e.Item.Image.Height + 4)
         Dim rect2 As New Rectangle(4, 2, e.Item.Image.Width + 2, e.Item.Image.Height + 2)
@@ -148,11 +148,11 @@ Public Class clsNightMenuRenderer
     End Sub
 
     '// Render separator
-    Protected Overrides Sub OnRenderSeparator(ByVal e As System.Windows.Forms.ToolStripSeparatorRenderEventArgs)
+    Protected Overrides Sub OnRenderSeparator(ByVal e As ToolStripSeparatorRenderEventArgs)
         MyBase.OnRenderSeparator(e)
 
-        Dim DarkLine As New Drawing.SolidBrush(clrNightImageMarginLine)
-        Dim WhiteLine As New Drawing.SolidBrush(Color.White)
+        Dim DarkLine As New SolidBrush(clrNightImageMarginLine)
+        Dim WhiteLine As New SolidBrush(Color.White)
         Dim rect As New Rectangle(32, 3, e.Item.Width - 32, 1)
         Dim rect2 As New Rectangle(32, 4, e.Item.Width - 32, 1)
         e.Graphics.FillRectangle(DarkLine, rect)
@@ -160,13 +160,13 @@ Public Class clsNightMenuRenderer
     End Sub
 
     '// Render arrow
-    Protected Overrides Sub OnRenderArrow(ByVal e As System.Windows.Forms.ToolStripArrowRenderEventArgs)
+    Protected Overrides Sub OnRenderArrow(ByVal e As ToolStripArrowRenderEventArgs)
         e.ArrowColor = Color.Black
         MyBase.OnRenderArrow(e)
     End Sub
 
     '// Render Menuitem background: lightblue if selected, darkblue if dropped down
-    Protected Overrides Sub OnRenderMenuItemBackground(ByVal e As System.Windows.Forms.ToolStripItemRenderEventArgs)
+    Protected Overrides Sub OnRenderMenuItemBackground(ByVal e As ToolStripItemRenderEventArgs)
         MyBase.OnRenderMenuItemBackground(e)
 
         If e.Item.Enabled Then
@@ -175,7 +175,7 @@ Public Class clsNightMenuRenderer
 
                 Dim rect As New Rectangle(3, 2, e.Item.Width - 6, e.Item.Height - 4)
                 Dim b As New Drawing2D.LinearGradientBrush(rect, clNight_Selected1, clNight_Selected2, Drawing2D.LinearGradientMode.Vertical)
-                Dim b2 As New Drawing.SolidBrush(clrNightToolstripBtn_Border)
+                Dim b2 As New SolidBrush(clrNightToolstripBtn_Border)
 
                 e.Graphics.FillRectangle(b, rect)
                 clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrNightToolstripBtn_Border)
@@ -187,7 +187,7 @@ Public Class clsNightMenuRenderer
 
                 Dim rect As New Rectangle(4, 2, e.Item.Width - 6, e.Item.Height - 4)
                 Dim b As New Drawing2D.LinearGradientBrush(rect, clNight_Selected1, clNight_Selected2, Drawing2D.LinearGradientMode.Vertical)
-                Dim b2 As New Drawing.SolidBrush(clrNightToolstripBtn_Border)
+                Dim b2 As New SolidBrush(clrNightToolstripBtn_Border)
 
                 e.Graphics.FillRectangle(b, rect)
                 clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrNightToolstripBtn_Border)
@@ -199,7 +199,7 @@ Public Class clsNightMenuRenderer
             If CType(e.Item, ToolStripMenuItem).DropDown.Visible AndAlso e.Item.IsOnDropDown = False Then 'CType(e.Item, ToolStripMenuItem).OwnerItem Is Nothing Then
                 Dim rect As New Rectangle(3, 2, e.Item.Width - 6, e.Item.Height - 4)
                 Dim b As New Drawing2D.LinearGradientBrush(rect, clNight_Drop1, clNight_Drop2, Drawing2D.LinearGradientMode.Vertical)
-                Dim b2 As New Drawing.SolidBrush(clrNightSelectedBG_Drop_Border)
+                Dim b2 As New SolidBrush(clrNightSelectedBG_Drop_Border)
 
                 e.Graphics.FillRectangle(b, rect)
                 clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 4, clrNightSelectedBG_Drop_Border)
@@ -252,7 +252,7 @@ Public Class clsNightToolstripRenderer
     End Sub
 
     '// Render button selected and pressed state
-    Protected Overrides Sub OnRenderButtonBackground(ByVal e As System.Windows.Forms.ToolStripItemRenderEventArgs)
+    Protected Overrides Sub OnRenderButtonBackground(ByVal e As ToolStripItemRenderEventArgs)
         MyBase.OnRenderButtonBackground(e)
         If e.Item.Selected Or CType(e.Item, ToolStripButton).Checked Then
             Dim rectBorder As New Rectangle(0, 0, e.Item.Width - 0, e.Item.Height - 0)
@@ -267,7 +267,7 @@ Public Class clsNightToolstripRenderer
             Dim rectBorder As New Rectangle(0, 0, e.Item.Width - 1, e.Item.Height - 1)
             Dim rect As New Rectangle(1, 1, e.Item.Width - 2, e.Item.Height - 2)
             Dim b As New Drawing2D.LinearGradientBrush(rect, clNight_Drop1, clNight_Drop2, Drawing2D.LinearGradientMode.Vertical)
-            Dim b2 As New Drawing.SolidBrush(clNight_DropBorder)
+            Dim b2 As New SolidBrush(clNight_DropBorder)
 
             e.Graphics.FillRectangle(b2, rectBorder)
             e.Graphics.FillRectangle(b, rect)

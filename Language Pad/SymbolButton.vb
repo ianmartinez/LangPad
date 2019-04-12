@@ -2,20 +2,20 @@
     Inherits ToolTip
     Sub New()
         MyBase.New()
-        Me.OwnerDraw = True
-        AddHandler Me.Draw, AddressOf OnDraw
+        OwnerDraw = True
+        AddHandler Draw, AddressOf OnDraw
     End Sub
     Public Sub New(ByVal Cont As System.ComponentModel.IContainer)
         MyBase.New(Cont)
-        Me.OwnerDraw = True
-        Me.ReshowDelay = 10
-        Me.InitialDelay = 10
-        Me.AutomaticDelay = 2
-        AddHandler Me.Draw, AddressOf OnDraw
+        OwnerDraw = True
+        ReshowDelay = 10
+        InitialDelay = 10
+        AutomaticDelay = 2
+        AddHandler Draw, AddressOf OnDraw
     End Sub
 
     Private Sub IPAToolTip_Popup(sender As Object, e As PopupEventArgs) Handles Me.Popup
-        Dim TextSize As Size = TextRenderer.MeasureText(Me.GetToolTip(e.AssociatedControl), New Font("Calibri", 42, FontStyle.Bold))
+        Dim TextSize As Size = TextRenderer.MeasureText(GetToolTip(e.AssociatedControl), New Font("Calibri", 42, FontStyle.Bold))
 
         e.ToolTipSize = New Size(TextSize.Width + 12, TextSize.Height + 12)
     End Sub
@@ -66,30 +66,30 @@ Public Class SymbolButton
         Dim IPAMargin = New Padding(1)
         Dim IPAMin = New Size(45, 32)
 
-        Me.Padding = IPAPadding
-        Me.Font = IPAFont
-        Me.AutoSize = True
-        Me.MinimumSize = IPAMin
-        Me.Margin = IPAMargin
-        Me.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        Me.UseCompatibleTextRendering = True
+        Padding = IPAPadding
+        Font = IPAFont
+        AutoSize = True
+        MinimumSize = IPAMin
+        Margin = IPAMargin
+        AutoSizeMode = AutoSizeMode.GrowAndShrink
+        UseCompatibleTextRendering = True
 
     End Sub
     Private Sub InitializeComponent()
-        Me.SuspendLayout()
-        Me.ResumeLayout(False)
+        SuspendLayout()
+        ResumeLayout(False)
     End Sub
 
     Private Sub SymbolButton_TextChanged(sender As Object, e As EventArgs) Handles Me.TextChanged
-        ttIPa.SetToolTip(Me, Me.Text)
+        ttIPa.SetToolTip(Me, Text)
     End Sub
 
     Private Sub SymbolButton_Click(sender As Object, e As EventArgs) Handles Me.Click
         If My.Computer.Keyboard.CtrlKeyDown Then
             Dim LineList1 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-            If LineList1.Contains(Me.Text) Then Exit Sub
+            If LineList1.Contains(Text) Then Exit Sub
 
-            My.Settings.CustomSymbols = My.Settings.CustomSymbols & Environment.NewLine & Me.Text
+            My.Settings.CustomSymbols = My.Settings.CustomSymbols & Environment.NewLine & Text
 
             frmMain.CustomLayoutPanel.Controls.Clear()
             frmDictionary.CustomLayoutPanel.Controls.Clear()
@@ -121,22 +121,22 @@ Public Class AccentCheckButton
         Dim IPAMargin = New Padding(1)
         Dim IPAMin = New Size(45, 32)
 
-        Me.Padding = IPAPadding
-        Me.Font = IPAFont
-        Me.AutoSize = True
-        Me.MinimumSize = IPAMin
-        Me.Margin = IPAMargin
-        Me.Appearance = Appearance.Button
-        Me.TextAlign = ContentAlignment.MiddleCenter
-        Me.UseCompatibleTextRendering = True
+        Padding = IPAPadding
+        Font = IPAFont
+        AutoSize = True
+        MinimumSize = IPAMin
+        Margin = IPAMargin
+        Appearance = Appearance.Button
+        TextAlign = ContentAlignment.MiddleCenter
+        UseCompatibleTextRendering = True
     End Sub
 
     Private Sub InitializeComponent()
-        Me.SuspendLayout()
-        Me.ResumeLayout(False)
+        SuspendLayout()
+        ResumeLayout(False)
     End Sub
 
     Private Sub SymbolButton_TextChanged(sender As Object, e As EventArgs) Handles Me.TextChanged
-        ttIPa.SetToolTip(Me, Me.Text)
+        ttIPa.SetToolTip(Me, Text)
     End Sub
 End Class

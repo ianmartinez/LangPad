@@ -39,6 +39,7 @@ Public Module ZiaFile
         Next
         Return TemporaryDictionary
     End Function
+
     Public Function Write(ByVal Source As List(Of ZiaLine), Optional ByVal MakeCompatible As Boolean = False) As String
         Dim RString As String = ""
         For Each Line As ZiaLine In Source

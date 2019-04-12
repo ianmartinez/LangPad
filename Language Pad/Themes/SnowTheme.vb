@@ -78,14 +78,14 @@
 End Module
 
 Public Class clsSnowMenuRenderer
-    Inherits System.Windows.Forms.ToolStripRenderer
+    Inherits ToolStripRenderer
     '// Make sure the textcolor is black
-    Protected Overrides Sub InitializeItem(ByVal item As System.Windows.Forms.ToolStripItem)
+    Protected Overrides Sub InitializeItem(ByVal item As ToolStripItem)
         MyBase.InitializeItem(item)
         item.ForeColor = Color.Black
     End Sub
 
-    Protected Overrides Sub Initialize(ByVal toolStrip As System.Windows.Forms.ToolStrip)
+    Protected Overrides Sub Initialize(ByVal toolStrip As ToolStrip)
         MyBase.Initialize(toolStrip)
         toolStrip.ForeColor = Color.Black
     End Sub
@@ -108,13 +108,13 @@ Public Class clsSnowMenuRenderer
             Drawing2D.LinearGradientMode.Horizontal)
 
         '// Shadow at the right of image margin
-        Dim DarkLine As New Drawing.SolidBrush(clrSnowImageMarginLine)
-        Dim WhiteLine As New Drawing.SolidBrush(Color.White)
+        Dim DarkLine As New SolidBrush(clrSnowImageMarginLine)
+        Dim WhiteLine As New SolidBrush(Color.White)
         Dim rect As New Rectangle(e.AffectedBounds.Width, 2, 1, e.AffectedBounds.Height)
         Dim rect2 As New Rectangle(e.AffectedBounds.Width + 1, 2, 1, e.AffectedBounds.Height)
 
         '// Gray background
-        Dim SubmenuBGbrush As New Drawing.SolidBrush(clrSnowSubmenuBG)
+        Dim SubmenuBGbrush As New SolidBrush(clrSnowSubmenuBG)
         Dim rect3 As New Rectangle(0, 0, e.ToolStrip.Width, e.ToolStrip.Height)
 
         '// Border
@@ -151,11 +151,11 @@ Public Class clsSnowMenuRenderer
     End Sub
 
     '// Render separator
-    Protected Overrides Sub OnRenderSeparator(ByVal e As System.Windows.Forms.ToolStripSeparatorRenderEventArgs)
+    Protected Overrides Sub OnRenderSeparator(ByVal e As ToolStripSeparatorRenderEventArgs)
         MyBase.OnRenderSeparator(e)
 
-        Dim DarkLine As New Drawing.SolidBrush(clrSnowImageMarginLine)
-        Dim WhiteLine As New Drawing.SolidBrush(Color.White)
+        Dim DarkLine As New SolidBrush(clrSnowImageMarginLine)
+        Dim WhiteLine As New SolidBrush(Color.White)
         Dim rect As New Rectangle(32, 3, e.Item.Width - 32, 1)
         Dim rect2 As New Rectangle(32, 4, e.Item.Width - 32, 1)
         e.Graphics.FillRectangle(DarkLine, rect)
@@ -163,13 +163,13 @@ Public Class clsSnowMenuRenderer
     End Sub
 
     '// Render arrow
-    Protected Overrides Sub OnRenderArrow(ByVal e As System.Windows.Forms.ToolStripArrowRenderEventArgs)
+    Protected Overrides Sub OnRenderArrow(ByVal e As ToolStripArrowRenderEventArgs)
         e.ArrowColor = Color.Black
         MyBase.OnRenderArrow(e)
     End Sub
 
     '// Render Menuitem background: lightblue if selected, darkblue if dropped down
-    Protected Overrides Sub OnRenderMenuItemBackground(ByVal e As System.Windows.Forms.ToolStripItemRenderEventArgs)
+    Protected Overrides Sub OnRenderMenuItemBackground(ByVal e As ToolStripItemRenderEventArgs)
         MyBase.OnRenderMenuItemBackground(e)
 
         e.Item.ForeColor = Color.Black
@@ -179,7 +179,7 @@ Public Class clsSnowMenuRenderer
 
                 Dim rect As New Rectangle(3, 2, e.Item.Width - 6, e.Item.Height - 4)
                 Dim b As New Drawing2D.LinearGradientBrush(rect, clSnow_Selected1, clSnow_Selected2, Drawing2D.LinearGradientMode.Vertical)
-                Dim b2 As New Drawing.SolidBrush(clrSnowToolstripBtn_Border)
+                Dim b2 As New SolidBrush(clrSnowToolstripBtn_Border)
 
                 e.Graphics.FillRectangle(b, rect)
                 clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 1, clrSnowToolstripBtn_Border)
@@ -191,7 +191,7 @@ Public Class clsSnowMenuRenderer
 
                 Dim rect As New Rectangle(4, 2, e.Item.Width - 6, e.Item.Height - 4)
                 Dim b As New Drawing2D.LinearGradientBrush(rect, clSnow_Selected1, clSnow_Selected2, Drawing2D.LinearGradientMode.Vertical)
-                Dim b2 As New Drawing.SolidBrush(clrSnowToolstripBtn_Border)
+                Dim b2 As New SolidBrush(clrSnowToolstripBtn_Border)
 
                 e.Graphics.FillRectangle(b, rect)
                 clsColors.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 1, clrSnowToolstripBtn_Border)

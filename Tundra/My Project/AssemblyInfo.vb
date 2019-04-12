@@ -1,5 +1,4 @@
-﻿Imports System
-Imports System.Reflection
+﻿Imports System.Reflection
 Imports System.Runtime.InteropServices
 
 ' General Information about an assembly is controlled through the following 
@@ -8,17 +7,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Tundra")> 
-<Assembly: AssemblyDescription("A library used by all of my apps for numerous GUI functions")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("Tundra")> 
-<Assembly: AssemblyCopyright("Copyright ©  2015 Ian Martinez")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTitle("Tundra")>
+<Assembly: AssemblyDescription("A library used by all of my apps for numerous GUI functions")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("Tundra")>
+<Assembly: AssemblyCopyright("Copyright ©  2015 Ian Martinez")>
+<Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("c6d7bf6a-8636-4056-8259-f289b8d20739")> 
+<Assembly: Guid("c6d7bf6a-8636-4056-8259-f289b8d20739")>
 
 ' Version information for an assembly consists of the following four values:
 '
@@ -31,5 +30,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("2.1.0.0")> 
-<Assembly: AssemblyFileVersion("2.1.0.0")> 
+<Assembly: AssemblyVersion("2.1.0.0")>
+<Assembly: AssemblyFileVersion("2.1.0.0")>

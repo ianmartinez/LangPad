@@ -1,6 +1,5 @@
 ﻿Imports System.Net
 Imports Tundra.ZiaFile
-Imports System.Windows.Forms
 Public Class dlgUpdate
     Public UpdateFileText As String
     Public StartupCheck As Boolean = True
@@ -10,14 +9,14 @@ Public Class dlgUpdate
     Public RedditThread As String = ""
     Public SkipFetch As Boolean = False
     Public FetchError As Boolean = False
-    Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
-        Me.DialogResult = DialogResult.OK
-        Me.Close()
+    Private Sub OK_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnOK.Click
+        DialogResult = DialogResult.OK
+        Close()
     End Sub
 
-    Private Sub Cancel_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
-        Me.DialogResult = DialogResult.Cancel
-        Me.Close()
+    Private Sub Cancel_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnCancel.Click
+        DialogResult = DialogResult.Cancel
+        Close()
     End Sub
 
     Private Sub dlgUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -27,7 +26,6 @@ Public Class dlgUpdate
             MessageBox.Show("You have the latest version.")
             Close()
         End If
-
     End Sub
 
     Public Sub FetchUpdateData()
@@ -54,7 +52,7 @@ Public Class dlgUpdate
         Catch ex As Exception
             If Not StartupCheck Then MessageBox.Show("Could not fetch update information.", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
             FetchError = True
-            Me.Close()
+            Close()
         End Try
     End Sub
 
@@ -63,17 +61,18 @@ Public Class dlgUpdate
             DownloadLink = "https://" + DownloadLink
         End If
         Process.Start(DownloadLink)
-        Me.Close()
+        Close()
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Me.Close()
+        Close()
     End Sub
 
     Private Sub btnReddit_Click(sender As Object, e As EventArgs) Handles btnReddit.Click
         If Not RedditThread.StartsWith("https") Then
             RedditThread = "https://" + RedditThread
         End If
+
         Process.Start(RedditThread)
     End Sub
 

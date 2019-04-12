@@ -29,16 +29,16 @@ Public Class DictionaryFile
 
     Public Sub Open(ByVal FilePath As String)
         Dim NewDictionary As DictionaryFile = DictionaryFileAccess.Open(FilePath)
-        Me.Words = NewDictionary.Words
+        Words = NewDictionary.Words
     End Sub
 
     Public Sub OpenCSV(ByVal FilePath As String)
         Dim NewDictionary As DictionaryFile = DictionaryFileAccess.OpenCSV(FilePath)
-        Me.Words = NewDictionary.Words
+        Words = NewDictionary.Words
     End Sub
 
     Public Sub New()
-        Me.Words = New List(Of DictionaryWord)
+        Words = New List(Of DictionaryWord)
     End Sub
 End Class
 
@@ -56,13 +56,13 @@ Module DictionaryFileAccess
             DictionaryString.Add(New ZiaLine(LineType.KeyValue, "Word " & i, Value))
         Next
 
-        System.IO.File.WriteAllText(FilePath, ZiaFile.Write(DictionaryString))
+        File.WriteAllText(FilePath, Write(DictionaryString))
     End Sub
 
     Public Function Open(ByVal FilePath As String) As DictionaryFile
         On Error Resume Next
         Dim NewDictionary As New DictionaryFile
-        Dim LineList As Dictionary(Of String, String) = ZiaFile.Read(File.ReadAllText(FilePath))
+        Dim LineList As Dictionary(Of String, String) = Read(File.ReadAllText(FilePath))
 
         For Each CurrentLine As KeyValuePair(Of String, String) In LineList
             If Not CurrentLine.Key.StartsWith("Word") Then Continue For
