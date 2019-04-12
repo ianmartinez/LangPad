@@ -1,5 +1,5 @@
 ﻿Imports System.IO
-Imports Tundra
+Imports TundraLib.ZiaFile
 
 <Serializable()>
 Public Class DictionaryWord
@@ -79,7 +79,6 @@ Module DictionaryFileAccess
     End Function
 
     Public Function OpenCSV(ByVal FilePath As String) As DictionaryFile
-        '  On Error Resume Next
         Dim NewDictionary As New DictionaryFile
         Dim Lines As String() = File.ReadAllText(FilePath).Split(New String() {Environment.NewLine, vbCrLf, vbCr, vbLf}, StringSplitOptions.RemoveEmptyEntries)
 

@@ -138,6 +138,7 @@ Partial Class dlgAbout
         Me.DoubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DoubleBufferedPanel1.BackgroundImage = CType(resources.GetObject("DoubleBufferedPanel1.BackgroundImage"), System.Drawing.Image)
         Me.DoubleBufferedPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.DoubleBufferedPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.DoubleBufferedPanel1.Controls.Add(Me.lblVersion)
         Me.DoubleBufferedPanel1.Controls.Add(Me.lblLanguagePad)
         Me.DoubleBufferedPanel1.Dock = System.Windows.Forms.DockStyle.Top

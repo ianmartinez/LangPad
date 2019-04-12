@@ -113,11 +113,8 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Language Pad
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Language Pad.exe
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Language Pad.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Language Pad.xml
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Tundra.dll
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\TundraLib.dll
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\TundraLib.pdb
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Tundra.pdb
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Tundra.xml
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbprojAssemblyReference.cache
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAbout.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAccentMark.resources

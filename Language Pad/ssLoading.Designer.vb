@@ -28,13 +28,13 @@ Partial Class ssLoading
         Me.lblLanguagePad = New System.Windows.Forms.Label()
         Me.lblLoading = New System.Windows.Forms.Label()
         Me.pnlTop = New TundraLib.DoubleBufferedPanel()
-        Me.pnlTop.SuspendLayout()
-        Me.SuspendLayout()
+        Me.pnlTop.SuspendLayout
+        Me.SuspendLayout
         '
         'pbLoading
         '
         Me.pbLoading.Location = New System.Drawing.Point(6, 192)
-        Me.pbLoading.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pbLoading.Margin = New System.Windows.Forms.Padding(2)
         Me.pbLoading.Name = "pbLoading"
         Me.pbLoading.Size = New System.Drawing.Size(459, 21)
         Me.pbLoading.Style = System.Windows.Forms.ProgressBarStyle.Continuous
@@ -45,10 +45,10 @@ Partial Class ssLoading
         Me.lblVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblVersion.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.lblVersion.ForeColor = System.Drawing.Color.White
-        Me.lblVersion.Location = New System.Drawing.Point(0, 132)
-        Me.lblVersion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.lblVersion.Location = New System.Drawing.Point(0, 126)
+        Me.lblVersion.Margin = New System.Windows.Forms.Padding(2)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(476, 28)
+        Me.lblVersion.Size = New System.Drawing.Size(476, 34)
         Me.lblVersion.TabIndex = 74
         Me.lblVersion.Text = "Version 1.0"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -62,7 +62,7 @@ Partial Class ssLoading
         Me.lblLanguagePad.Location = New System.Drawing.Point(0, 0)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(476, 132)
+        Me.lblLanguagePad.Size = New System.Drawing.Size(476, 126)
         Me.lblLanguagePad.TabIndex = 12
         Me.lblLanguagePad.Text = "Language Pad"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -95,13 +95,12 @@ Partial Class ssLoading
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(476, 221)
         Me.Controls.Add(Me.pnlTop)
         Me.Controls.Add(Me.lblLoading)
         Me.Controls.Add(Me.pbLoading)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "ssLoading"
@@ -109,7 +108,7 @@ Partial Class ssLoading
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.pnlTop.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Me.PerformLayout
 
     End Sub
     Friend WithEvents pbLoading As ProgressBar

@@ -1,12 +1,13 @@
 ﻿Imports System.IO
-Imports Tundra
-Imports Ionic.Zip
+Imports TundraLib.ZiaFile
+Imports System.IO.Compression
 
 <Serializable()>
 Public Class NotebookPage
     Public Title As String
     Public RTF As String
 End Class
+
 <Serializable()>
 Public Class NotebookFile
     Public Modified As Boolean = False
@@ -63,9 +64,6 @@ Module NotebookFileAccess
 
         frmDictionary.SaveDictionary()
 
-        Dim zip As New ZipFile
-        zip.CompressionLevel = Ionic.Zlib.CompressionLevel.BestCompression
-
         Dim guid As Guid = Guid.NewGuid
 
         Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString
@@ -121,24 +119,19 @@ Module NotebookFileAccess
         Notebook.WordDictionary.Save(tmp & "\dictionary.txt")
 
         Notebook.DocumentPath = FilePath
-        zip.AddDirectory(tmp)
-        zip.CompressionLevel = Ionic.Zlib.CompressionLevel.BestCompression
-        zip.Save(FilePath)
+        ZipFile.CreateFromDirectory(tmp, FilePath, CompressionLevel.Optimal, False)
     End Sub
 
     Public Function Open(ByVal FilePath As String) As NotebookFile
         On Error Resume Next
         Dim NewNotebook As New NotebookFile
-        Dim zip As New ZipFile(FilePath)
-
         Dim guid As Guid = Guid.NewGuid
-
         Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString
 
         Directory.Delete(tmp, True)
         Directory.CreateDirectory(tmp)
 
-        zip.ExtractAll(tmp)
+        ZipFile.ExtractToDirectory(FilePath, tmp)
         PagesFolder = tmp & "\pages\"
 
         Dim LineList = Read(File.ReadAllText(tmp & "\data.txt"))
@@ -191,8 +184,6 @@ Module NotebookFileAccess
             Next
         End If
 
-        zip.Dispose()
         Return NewNotebook
     End Function
-
 End Module

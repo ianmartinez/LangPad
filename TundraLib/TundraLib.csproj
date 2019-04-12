@@ -57,6 +57,7 @@
     <Compile Include="StylizedColorButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ZiaFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="StylizedColorButton.resx">

@@ -138,48 +138,14 @@
   <metadata name="dlgFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>660, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnFind.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJsAAAAuCAYAAAA/ZmtKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAACmSURBVHhe7dIxDYAwAABB/HtpUj1stYABSAck9KcbLnkB
-        f8057zHGCyftz64day04an9mNhJmI2M2MmYjYzYyZiNjNjJmI2M2MmYjYzYyZiNjNjJmI2M2MmYjYzYy
-        ZiNjNjJmI2M2MmYjYzYyZiNjNjJmI2M2MmYjYzYyZiNjNjJmI2M2MmYjYzYyZiNjNjJmI2M2MmYjYzYy
-        ZiNjNjL/bM8OOGs8H9z9QPfzuqD+AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnFind.Style" xml:space="preserve">
-    <value>Radius=0
-
-Active Colors=~225|~225
-Active Positions=0|1
-Active Angle=90
-Active Border Color=~173
-Active Text Color=$2
-Active Highlight Color=$0
-
-Hover Colors=#e5f1fb|#e5f1fb
-Hover Positions=0|1
-Hover Angle=90
-Hover Border Color=#0078d7
-Hover Text Color=$2
-Hover Highlight Color=$0
-
-Pressed Colors=#cce4f7|#cce4f7
-Pressed Positions=0|1
-Pressed Angle=90
-Pressed Border Color=#005499
-Pressed Text Color=$2
-Pressed Highlight Color=$0
-</value>
-  </data>
   <metadata name="MainToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>816, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="NewToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAABiSURBVEhLYxgFgxP4+vr+Jwb7+Ph0QLWQBkCaoUycgCJL
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABiSURBVEhLYxgFgxP4+vr+Jwb7+Ph0QLWQBkCaoUycgCJL
         SLGALEtItYBkS8ixgBg9cECSYigYtYAgGPoWkARIsUB25mfSHTMoLAAZjI6hUoQBXXyAD0OVgQFZFowC
         OgIGBgBu6n5rCD8nkwAAAABJRU5ErkJggg==
 </value>
@@ -187,7 +153,7 @@ Pressed Highlight Color=$0
   <data name="OpenToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAABgSURBVEhL7ZAxCsAwDAP9Qf+pP29r0BSkxm4WDz4QZJBP
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABgSURBVEhL7ZAxCsAwDAP9Qf+pP29r0BSkxm4WDz4QZJBP
         EBv64e73Ry7U/kOka85GiLAUaDTsqBJoNOyoEmg07OhN6t+ji6dmEaflQfTx1KRKghnYMgNb+gycBJqh
         DWYP4iLO2ZJKwAYAAAAASUVORK5CYII=
 </value>
@@ -195,7 +161,7 @@ Pressed Highlight Color=$0
   <data name="SaveToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAACDSURBVEhL7Y0xDsAgDAN5Rt/DiMT/H9GZuY2Rkao0obRd
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVEhL7Y0xDsAgDAN5Rt/DiMT/H9GZuY2Rkao0obRd
         GDjJIkZxHBbzkXM+XqqIIuPPIMSxon1KaePhpija8XKlD0IcK9rrAvzJO17SQg3trQIgM0oKrc81BLT3
         CoD2JlaoJ65VtDcZWnKYrwDziLj+rYCjyypYBXew9Ec8s5iGEE67B84d9K/KWQAAAABJRU5ErkJggg==
 </value>
@@ -203,18 +169,18 @@ Pressed Highlight Color=$0
   <data name="ExportHtmlToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAELSURBVEhL7VIpDgIxFB2DAG4wAY3CYcA3mX0Qc4YR3AE0
-        V0ASloRFgSBgcJwABYobsBgcvN/UTqezGMK85KX962t/qxX4Q7iu+0lCx3GGolQNVCS2sUglkkYgkUha
-        AWWRLAJKtUpJEfgdAd/368hbY+Y727YX4NzzvIYIyxEnIJrfLMs6Q6BNPqw92FeK8SQZ4gQQn6LhKAiC
-        MtlhGJbg2+MWW/iXPEkGBYETxtECdbJx6g7VCD54kgwKAjT7AdY32GeMVSHSxA0O8N9FWjQUBGYgM03z
-        ibm/0LQi/GN6cJ4kAwlEkeL0W7DfgBc07wqfDvtoGEaN7Myg30Jfkx4VjVdYJ7k1L5AzNO0L/yis8fJe
-        2dsAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVEhLYxgFIxD4+vr+JwX7+Ph0QLUSB0CaoEyCgCxL
+        yLGAJEvItYBoSyixgCi9RCnCAYaOBf7+/rJAdWuAYb7d29t7JRAv8/PzU4dK4weELIAa/tDLy+sK0AJL
+        kBiQzgLyb4PkwIrwAUIWAOWXAA2cGRISwgnip6WlsQLFdgJ9sRkovgqsCB8gwoJjwOAwAWIpEB/oaiuQ
+        Hij+CFaEDxBhASjs64D0DyCudXV15QZaogv0wS6g+AeoMtyACAuWArGrh4fHJ2C4fwYaygUVXwiKcLAi
+        fABkAS4MkgelFiB7ExDfAhoeABWTAvL3Ay2VAfEpBqDUAkqaoEgFGrwaSC+mmuGjgMqAgQEA9+Gs7hFh
+        oJcAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="SymbolsToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAGWSURBVEhL7ZO7SsNwFMYzeRkUB13UgnURcewDBEQltyaD
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGWSURBVEhL7ZO7SsNwFMYzeRkUB13UgnURcewDBEQltyaD
         yROI0FF8FhFE6lP4Al5AKujgoFiKo4IuihXH+J3w/Uu8nJCCgog/OLT5zncuyT+x/vnd1Ov1ZcQeoo14
         QXQR10EQNMMwXKKtf9Ck6vv+MX5TNlyNomhMAnoMTQZK7hDaDMvKgaIFxAMbtLDpCFM9HMcZRe6UnnvP
         8+aZKiaO42Fs22Fht2g75KsIeWzibdu2PcSUDppvskBii7IK/Ns5/wZlHZhauYJFyipy0MaPszmhrAPj
@@ -227,7 +193,7 @@ Pressed Highlight Color=$0
   <data name="CustomSymbolsToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAB9SURBVEhL7Y9BDoAgDAT7Cf/EAf7kG/0QOqTEhnjSNcaE
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB9SURBVEhL7Y9BDoAgDAT7Cf/EAf7kG/0QOqTEhnjSNcaE
         STZQDrPFJv+mlLISH7W4vHq0JYNcW4Io57yRoeB5CQLEKaWFXJTcL4hyf7KhRCuHUDDlJzL5kfrq5hT4
         U0Mih745Z49MDgj92mCWyQFhl4WfaOTgwhidfPIBZju4No8ApKQ1egAAAABJRU5ErkJggg==
 </value>
@@ -235,25 +201,25 @@ Pressed Highlight Color=$0
   <data name="AccentMarkToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAADlSURBVEhL7ZRNDoIwEIV7D/U+QKl4KBMTzyPuFK/kz17f
-        JE8yi2kyheiKL5lFH8M3pECDRUrpPaV4+8IPaNt2hz2+oV6sYQt4eR6QHVHmS0Ud2DYNPvkoxPoUY1xV
-        VbXGumeW2F4OBLIt4wAR81Loum7DAVdG5TRN89QDGI9IVtf1g8tytDw3wMrdaLklyuVutNwS5XI3Wm6J
-        crkbLbdEudyNlluiXO7G85mi7lyWg5uHr1zK+tHwZ18YlSMHmh6A6mUI5WfJ0BLZPg1IDpRbtWfbPORA
-        kzNH3omUbMvsJ1/4EyF8AJS73LHgZgz8AAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADiSURBVEhL7ZRNDoIwEIV7D/U+hFLxUCYknkfcKV7Jn72+
+        SR5kFtNkCtEVXzKLPoZvSIEGi5TSZ07x9pUf0DTNAXt8R71Zwx7w8jIgO6HMl4rq2DYPPvkkxPocY9xU
+        VbXFumeW2F4OBLIt0wAR81Jo23bHATdG5dR1/dIDGE9w6JPLcrQ8N8DK3Wi5JcrlbrTcEuVyN1puiXK5
+        Gy23RLncjZZbolzuxvOZoh5cloObh1EuZf1o+LOvjMqRA00PQPUyhPKLZGiJbJ8HJB3lVh3Ztgw50OTM
+        kXciJduy+MlX/kQIX4NR3K7sU0fGAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="AddToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAACDSURBVEhL7ZFRCoAwDEN3kXkY/3c9Qa/o5w6gBCrI2tFu
-        hbGPPQijISSIYTEfKaXHI6qpI4U8HmPIgEdUU0cKeTwGQvHMXTIPbFfe45FvvPC0+8M8gFcrLW/QNAC0
-        0vJuHgBa6f82D0g/0KKuLwAej4GQR1RTRwp5PMaQAY+oZjENIbxEl1VMJpYiKAAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACESURBVEhL7ZFRCoAwDEN3kXkY/3c8P/SKfu4ASqCCrB3t
+        Vhj72IMwGkKCGBbzkVJ6PKKaOlLI4zGGDHhENXWkkMdjIBTP3CXzwHblPR75xgtPuz/MA3i10vIGTQNA
+        Ky3v5gGglf5v84D0Ay3q+gLg8RgIeUQ1daSQx2MMGfCIahbTEMILDgFVQJxiT+EAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="RemoveToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAACDSURBVEhL7ZFRCoAwDEN3Npmf+1AvL7uCh1ACFWTtaF1h
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACDSURBVEhL7ZFRCoAwDEN3Npmf+1AvL7uCh1ACFWTtaF1h
         7GMPwmgICWKYjEdK6faIaupIIY/H6DLgEdXUkUIej4FQjkeTzAPnui057hdeeNr9Yh7Aq5WWN/g1ALTS
         8v49ALTS720ekH6gRU1fADweAyGPqKaOFPJ4jC4DHlHNZBhCeAA0TEbsq5Vb/gAAAABJRU5ErkJggg==
 </value>
@@ -261,19 +227,19 @@ Pressed Highlight Color=$0
   <data name="FontToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAFOSURBVEhL7ZS9SsRAFIXTaKFgJytWPoQ+gQaSzd82sbRM
-        o9Uq5BVstbUStNROG7uVbawEwYcQtdmIxfr33XCUhVXYZK10Dxwm99w7Z5I7M3Em+Dvo5a1usRNfKqyO
-        OI7Xoih6N4ZhuCr5C2Ze5K2OwurA+OBzAXuW/DvIsmwK0wd4Da/gY5qm00qPD1qCZ/nmOdzWc6h0ibH2
-        ALNj+JYkyRJ7sej7/ivxkdIlau8Bbz/TbDZ7jF1JtmAHFq7rzkqqD4zWobVkS5ItumkaX5NKqg+MTmnJ
-        C2NDkuN53jxxn4VOJNXbA4zmMHqGT5hdDNI0y1mN1dbagyAINjCx9hxiujtI0yxnNSqvDgzOac/9d2de
-        d+MOnkmqBiY2YB/uSRoCX7JvNZyyBUmjg4nlheKkLEsaAgusWA1jW9LoYKL9Fm4V/ghqbqxW4QT/D47z
-        ATz9oGE+3J8SAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFNSURBVEhL7ZS9SsRAFIXTaKFgJytWPoQ+gQaSzd82sbRM
+        o9Uq5BVstbUStNROG7uVbawEwYcQtdmIxfr33XCUhVXYZK10Dxwm98ydc5O5M3Em+Dvo5a1usRNfKqyO
+        OI7Xoih6N4ZhuCr5C2Ze5K2OwurA+OCzgD1L/h1kWTaF6QO8hlfwMU3TaU2PD7YEz/LNc7it51DTJcbq
+        AWbH8C1JkiV6seh53ivxkaZL1O4Bbz/TbDZ7jF1JVrADC9d1ZyXVB0br0LZkS5IV3TSNr0kl1QdGp2zJ
+        C2NDkkM8T9yn0Imkej3AaA6jZ/iE2cUgTbM5y7HcWj0IgmADE9ueQ0x3B2mazVmO0qsDg3Pf9++/O/O6
+        G3fwTFI1sLAB+3BP0hD4kn3L4ZQtSBodLCwvFCdlWdIQKLBiOYxtSaODhfZbuFX4I8i5sVyFE/w/OM4H
+        H2CgW4P//oAAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="FindToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAADeSURBVEhL7ZQxDoJAEEXBY3gcW3bJXsIzWFJ6ExNrGzsr
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADeSURBVEhL7ZQxDoJAEEXBY3gcW3bJXsIzWFJ6ExNrGzsr
         e06xjbHxBP4XBwujwGI2oeAlP+HvzM7ALFAszJqyqqqtdHLORcQ1a8ReKROp63rtvb+o6FUKeMQ1a8Tw
         lp5MSQFp3zTNytbesEaMHNn0J2EE3OW34h3EyLFxpWEzD2Z/Qg65ZsejjXHMfO1MotnxZG+QfUQcnDbn
         O2Qx+Jqq8EHxVnbaB8d8acJdMgq8zbz70FrpLm1syyR6fxUUl27/Nullnk0eu3BGZgc9JDUZKvjpOyiu

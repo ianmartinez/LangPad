@@ -1,4 +1,4 @@
-﻿Imports Tundra
+﻿Imports TundraLib.ZiaFile
 
 Public Class dlgAccentMark
     Public Property Character As String

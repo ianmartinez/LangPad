@@ -1,5 +1,5 @@
 ﻿Imports System.Net
-Imports Tundra.ZiaFile
+Imports TundraLib.ZiaFile
 Public Class dlgUpdate
     Public UpdateFileText As String
     Public StartupCheck As Boolean = True

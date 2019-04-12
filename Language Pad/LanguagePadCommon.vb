@@ -8,25 +8,16 @@ Module LanguagePadCommon
     Public Initialized As Boolean = False
     Public SmartReplaceList As Dictionary(Of String, String) = New Dictionary(Of String, String)
     Public DecimalSep As String() = {" ", "'", ",", ".", "·", " ", " ", "˙", "٫", "٬", "⎖"}
-    Public CurrentVersion As Decimal = Decimal.Parse((Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(0) & "." & Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1)), CultureInfo.InvariantCulture)
-    Public LangPadVersion As String = "Language Pad " & (Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(0) & If(Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1) = "0", "", "." & Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1)))
-    Public SplashVersion As String = (Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(0) & If(Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1) = "0", "", "." & Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1)))
+    Public CurrentVersion As Decimal = Decimal.Parse((Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(0) &
+                                                     "." &
+                                                     Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1)), CultureInfo.InvariantCulture)
 
-    Public Function GetTextFromRTF(ByVal RTF As String)
-        Dim rtb As New RichTextBox
-        rtb.Rtf = RTF
-        Return rtb.Text
-    End Function
+    Public LangPadVersion As String = "Language Pad " &
+        (Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(0) &
+        If(Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1) = "0", "", "." &
+        Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1)))
 
-    Public Function CloneControl(ByVal control As Object) As Object
-        Dim type As Type = control.GetType()
-        Dim properties As PropertyInfo() = type.GetProperties()
-        Dim retObject As Object = type.InvokeMember("", BindingFlags.CreateInstance, Nothing, control, Nothing)
-        For Each p As PropertyInfo In properties
-            If p.CanWrite Then
-                p.SetValue(retObject, p.GetValue(control, Nothing), Nothing)
-            End If
-        Next
-        Return retObject
-    End Function
+    Public SplashVersion As String = (Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(0) &
+        If(Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1) = "0", "", "." &
+        Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1)))
 End Module

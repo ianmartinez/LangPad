@@ -83,19 +83,12 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ionic.BZip2, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Ionic.BZip2.dll</HintPath>
-    </Reference>
-    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Ionic.Zip.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -385,10 +378,6 @@
     <ProjectReference Include="..\TundraLib\TundraLib.csproj">
       <Project>{8bd8a7f1-c880-41cc-8485-b132ddad924a}</Project>
       <Name>TundraLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tundra\Tundra.vbproj">
-      <Project>{801224de-bf6a-4196-b80f-8f881dd17fb8}</Project>
-      <Name>Tundra</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

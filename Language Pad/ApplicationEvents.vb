@@ -1,4 +1,5 @@
-﻿Imports Tundra
+﻿Imports TundraLib
+
 Namespace My
 
     ' The following events are available for MyApplication:
@@ -19,7 +20,7 @@ Namespace My
 
             If Settings.AccentMarks = True Then
                 ssLoading.lblLoading.Text = "Loading Accent Marks..."
-                For Each IPA As KeyValuePair(Of String, String) In Read(Resources.Accents)
+                For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Accents)
                     Dim SymbolButton As New SymbolButton
                     SymbolButton.Text = IPA.Value
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
@@ -39,7 +40,7 @@ Namespace My
 
             If Settings.IPAAffricates = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Affricates..."
-                For Each IPA As KeyValuePair(Of String, String) In Read(Resources.Affricates)
+                For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Affricates)
                     Dim SymbolButton As New SymbolButton
                     SymbolButton.Text = IPA.Value
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
@@ -59,7 +60,7 @@ Namespace My
 
             If Settings.IPAConsonants = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Consonants..."
-                For Each IPA As KeyValuePair(Of String, String) In Read(Resources.Consonants)
+                For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Consonants)
                     Dim SymbolButton As New SymbolButton
                     SymbolButton.Text = IPA.Value
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
@@ -79,7 +80,7 @@ Namespace My
 
             If Settings.IPATones = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Tones..."
-                For Each IPA As KeyValuePair(Of String, String) In Read(Resources.ToneIntonation)
+                For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.ToneIntonation)
                     Dim SymbolButton As New SymbolButton
                     SymbolButton.Text = IPA.Value
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
@@ -99,7 +100,7 @@ Namespace My
 
             If Settings.IPAVowels = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Vowels..."
-                For Each IPA As KeyValuePair(Of String, String) In Read(Resources.Vowels)
+                For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Vowels)
                     Dim SymbolButton As New SymbolButton
                     SymbolButton.Text = IPA.Value
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
@@ -119,7 +120,7 @@ Namespace My
 
             If Settings.OtherIPA = True Then
                 ssLoading.lblLoading.Text = "Loading Other IPA Characters..."
-                For Each IPA As KeyValuePair(Of String, String) In Read(Resources.Other)
+                For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Other)
                     Dim SymbolButton As New SymbolButton
                     SymbolButton.Text = IPA.Value
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
@@ -175,7 +176,7 @@ Namespace My
 
             If Settings.SmartReplace = True Then
                 ssLoading.lblLoading.Text = "Loading Smart Replace..."
-                For Each pair As KeyValuePair(Of String, String) In Read(Resources.SmartReplace)
+                For Each pair As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.SmartReplace)
                     SmartReplaceList.Add(pair.Key, pair.Value)
                 Next
             End If

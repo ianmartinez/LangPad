@@ -1,7 +1,7 @@
-﻿Imports Tundra
-Imports System.Drawing.Drawing2D
+﻿Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports TundraLib
+Imports TundraLib.ZiaFile
 
 Public Class frmMain
     Private dlgColor As New ColorDialog
