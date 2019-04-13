@@ -2,29 +2,11 @@
     Public AddPage As Boolean = False
     Public DuplicatePage As Boolean = False
     Public CurrentPos As Integer = 0
-    Public Function CheckDuplicates(PageName As String) As Boolean
-        For p As Integer = 0 To CurrentDocument.Pages.Count - 1
-            Dim CurrentPage As NotebookPage = CurrentDocument.Pages.Item(p)
-            If AddPage = True Or DuplicatePage = True Then
-                If PageName = CurrentPage.Title Then Return True
-            Else
-                If p = CurrentPos Then Continue For
-                If PageName = CurrentPage.Title Then Return True
-            End If
-        Next
-
-        Return False
-    End Function
 
     Private Sub OK_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnOK.Click
         On Error Resume Next
         frmMain.SaveTabs()
         Dim CurrentPage As Integer = frmMain.tcNotebook.SelectedIndex
-
-        If CheckDuplicates(txtName.Text) = True Then
-            MessageBox.Show("A page already exists with that name.", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Exit Sub
-        End If
 
         If AddPage = True Then
             Dim p As New NotebookPage
