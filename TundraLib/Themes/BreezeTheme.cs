@@ -112,9 +112,14 @@ namespace TundraLib.Themes
         // // Render Checkmark 
         protected override void OnRenderItemCheck(ToolStripItemImageRenderEventArgs e)
         {
+            var imgSize = new Size(22,22);
+            
+            if (e.Item.Image != null)
+                imgSize = e.Item.Image.Size;
+                       
             // MyBase.OnRenderItemCheck(e)
-            Rectangle rect = new Rectangle(3, 1, e.Item.Image.Width + 4, e.Item.Image.Height + 4);
-            Rectangle rect2 = new Rectangle(4, 2, e.Item.Image.Width + 2, e.Item.Image.Height + 2);
+                Rectangle rect = new Rectangle(3, 1, imgSize.Width + 4, imgSize.Height + 4);
+            Rectangle rect2 = new Rectangle(4, 2, imgSize.Width + 2, imgSize.Height + 2);
             if (e.Item.Selected)
             {
                 SolidBrush b = new SolidBrush(clsBreezeColors.clrBreezeToolstripBtn_Border);
