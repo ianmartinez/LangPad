@@ -138,9 +138,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
    • Remove Tundra library
    • Convert most code to C#, except for UI
    • Use native ZipFile class instead of Ionic.Zip
-   • Code cleanup
+   • Major code cleanup and refactoring
    • Remove TextArt
-   • Add transparent color to color panel
+   • Add transparent color option to color panel
+   • About dialog and splash screen redesigned
+   • Switch icons from Breeze to Tlell
+   • Remove the perpetually buggy tables feature
+   • Add a new default theme - "Glacier"
+   • Revised "Olive" and "Luna" themes
 
 Version 9.2 (August 20, 2018)
    • Minor startup improvements
