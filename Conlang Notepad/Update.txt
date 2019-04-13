@@ -1,4 +1,4 @@
 ﻿Version=9.2
-DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Language%20Pad/Release/Language%20Pad%209.2.zip?raw:eq:true
-Description=   •Minor startup improvements:cr:   •New icon:cr:
-RedditThread=https://www.reddit.com/r/conlangs/comments/8ywri9/language_pad_91_a_word_processordictionary_for/
+DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Language%20Pad/Release/Language%20Pad%209.3.zip?raw:eq:true
+Description=Version 9.3 (May 13, 2019):cr:• Update to .NET Framework 4.7.2:cr:• Update to Visual Studio 2019:cr:• Multiple pages can now exist with the same name:cr:• Pages can now be named with any characters:cr:• Remove Tundra library:cr:• Convert most code to C#, except for UI:cr:• Use native ZipFile class instead of Ionic.Zip:cr:• Major code cleanup and refactoring:cr:• Remove TextArt:cr:• Add transparent color option to color panel:cr:• About dialog and splash screen redesigned:cr:• Switch icons from Breeze to Tlell:cr:• Remove the perpetually buggy tables feature:cr:• Change theme to "Glacier":cr:
+RedditThread=https://www.reddit.com/r/conlangs/comments/bcv0zy/language_pad_92_a_word_processordictionary_for/
