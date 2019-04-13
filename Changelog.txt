@@ -2,6 +2,7 @@
    • Update to .NET Framework 4.7.2
    • Update to Visual Studio 2019
    • Multiple pages can now exist with the same name
+   • Pages can now be named with any characters
    • Remove Tundra library
    • Convert most code to C#, except for UI
    • Use native ZipFile class instead of Ionic.Zip

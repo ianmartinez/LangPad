@@ -65,7 +65,6 @@ Module NotebookFileAccess
         frmDictionary.SaveDictionary()
 
         Dim guid As Guid = Guid.NewGuid
-
         Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString
         Directory.Delete(tmp, True)
         Directory.CreateDirectory(tmp)
@@ -74,28 +73,28 @@ Module NotebookFileAccess
         Directory.CreateDirectory(PagesFolder)
 
         'Settings
-        Dim SettingsString As New List(Of ZiaLine)
-        SettingsString.Add(New ZiaLine(LineType.Comment, "Settings"))
+        Dim DataFile As New List(Of ZiaLine)
+        DataFile.Add(New ZiaLine(LineType.Comment, "Settings"))
 
-        SettingsString.Add(New ZiaLine(LineType.KeyValue, "Title", Notebook.Title))
-        SettingsString.Add(New ZiaLine(LineType.KeyValue, "Language", Notebook.Language))
-        SettingsString.Add(New ZiaLine(LineType.KeyValue, "Author", Notebook.Author))
-        SettingsString.Add(New ZiaLine(LineType.KeyValue, "Website", Notebook.Website))
-        SettingsString.Add(New ZiaLine(LineType.KeyValue, "NTVersion", NTVersion))
-        SettingsString.Add(New ZiaLine(LineType.KeyValue, "LangPadVersion", LangPadVersion))
+        DataFile.Add(New ZiaLine(LineType.KeyValue, "Title", Notebook.Title))
+        DataFile.Add(New ZiaLine(LineType.KeyValue, "Language", Notebook.Language))
+        DataFile.Add(New ZiaLine(LineType.KeyValue, "Author", Notebook.Author))
+        DataFile.Add(New ZiaLine(LineType.KeyValue, "Website", Notebook.Website))
+        DataFile.Add(New ZiaLine(LineType.KeyValue, "NTVersion", NTVersion))
+        DataFile.Add(New ZiaLine(LineType.KeyValue, "LangPadVersion", LangPadVersion))
 
         'Pages
-        SettingsString.Add(New ZiaLine(LineType.Comment, "Pages"))
+        DataFile.Add(New ZiaLine(LineType.Comment, "Pages"))
 
-        Dim PageOrder As String = ""
         For i = 0 To Notebook.Pages.Count - 1
-            PageOrder = PageOrder & Notebook.Pages.Item(i).Title & "|"
+            Dim Page = Notebook.Pages.Item(i)
+            DataFile.Add(New ZiaLine(LineType.KeyValue, "Page" & i, ToCompatibleString(Page.Title)))
+
+            Dim txtWriter As StreamWriter
+            txtWriter = New StreamWriter(PagesFolder & i & ".rtf")
+            txtWriter.Write(Page.RTF)
+            txtWriter.Close()
         Next
-
-        SettingsString.Add(New ZiaLine(LineType.KeyValue, "Page Order", PageOrder))
-        SettingsString.Add(New ZiaLine(LineType.Blank))
-
-        Dim SettingsFile As String = Write(SettingsString)
 
         If Notebook.EmbedSymbols = True Then
             Notebook.CustomSymbols = My.Settings.CustomSymbols
@@ -103,22 +102,13 @@ Module NotebookFileAccess
             Notebook.CustomSymbols = ""
         End If
 
-        For Each Page As NotebookPage In Notebook.Pages
-            Dim txtWriter As StreamWriter
-            txtWriter = New StreamWriter(PagesFolder & Page.Title & ".rtf")
-            txtWriter.Write(Page.RTF)
-            txtWriter.Close()
-            txtWriter = Nothing
-        Next
-
-
         'Write to disk
-        File.WriteAllText(tmp & "\data.txt", SettingsFile)
+        File.WriteAllText(tmp & "\data.txt", Write(DataFile))
         File.WriteAllText(tmp & "\info.txt", Notebook.Info)
         File.WriteAllText(tmp & "\custom_symbols.txt", Notebook.CustomSymbols)
         Notebook.WordDictionary.Save(tmp & "\dictionary.txt")
-
         Notebook.DocumentPath = FilePath
+
         ZipFile.CreateFromDirectory(tmp, FilePath, CompressionLevel.Optimal, False)
     End Sub
 
