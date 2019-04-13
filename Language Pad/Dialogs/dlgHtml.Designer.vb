@@ -47,7 +47,7 @@ Partial Class dlgHtml
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(308, 284)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(308, 315)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -83,7 +83,7 @@ Partial Class dlgHtml
         Me.GroupBox2.Controls.Add(Me.cbDefinition)
         Me.GroupBox2.Controls.Add(Me.cbNotes)
         Me.GroupBox2.Controls.Add(Me.cbWord)
-        Me.GroupBox2.Location = New System.Drawing.Point(9, 176)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 214)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
@@ -169,7 +169,7 @@ Partial Class dlgHtml
         Me.txtDescription.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDescription.Multiline = True
         Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(448, 86)
+        Me.txtDescription.Size = New System.Drawing.Size(448, 124)
         Me.txtDescription.TabIndex = 3
         '
         'Label2
@@ -187,7 +187,7 @@ Partial Class dlgHtml
         Me.cbPElement.AutoSize = True
         Me.cbPElement.Checked = True
         Me.cbPElement.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbPElement.Location = New System.Drawing.Point(9, 155)
+        Me.cbPElement.Location = New System.Drawing.Point(9, 193)
         Me.cbPElement.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cbPElement.Name = "cbPElement"
         Me.cbPElement.Size = New System.Drawing.Size(205, 17)
@@ -201,7 +201,7 @@ Partial Class dlgHtml
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(466, 325)
+        Me.ClientSize = New System.Drawing.Size(466, 356)
         Me.Controls.Add(Me.cbPElement)
         Me.Controls.Add(Me.txtDescription)
         Me.Controls.Add(Me.Label2)
