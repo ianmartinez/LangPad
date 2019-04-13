@@ -121,6 +121,9 @@ Input:
 
         public static string ToCompatibleString(string Source)
         {
+            if (Source == null)
+                return "";
+
             Source = Source.Replace("=", ":eq:");
             Source = Source.Replace("|", ":pi:");
             Source = Source.Replace(",", ":co:");

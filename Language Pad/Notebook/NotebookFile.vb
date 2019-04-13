@@ -55,7 +55,6 @@ End Class
 Module NotebookFileAccess
     Dim PagesFolder As String
     Sub Save(ByVal FilePath As String, ByVal Notebook As NotebookFile)
-        On Error Resume Next
         frmMain.SaveTabs()
 
         If frmDictionary.Loaded = False Then
@@ -111,7 +110,6 @@ Module NotebookFileAccess
     End Sub
 
     Public Function Open(ByVal FilePath As String) As NotebookFile
-        On Error Resume Next
         Dim NewNotebook As New NotebookFile
         Dim guid As Guid = Guid.NewGuid
         Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString

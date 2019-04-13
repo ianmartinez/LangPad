@@ -44,7 +44,7 @@ End Class
 
 Module DictionaryFileAccess
     Sub Save(ByVal FilePath As String, ByVal Dictionary As DictionaryFile)
-        On Error Resume Next
+        '' On Error Resume Next
         Dim DictionaryString As New List(Of ZiaLine) From {
             New ZiaLine(LineType.Comment, "Dictionary"),
             New ZiaLine(LineType.Comment, "Language Pad Version:" & LangPadVersion)
