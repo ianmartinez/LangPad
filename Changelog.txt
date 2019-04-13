@@ -3,7 +3,7 @@
    • Update to Visual Studio 2019
    • Multiple pages can now exist with the same name
    • Remove Tundra library
-   • Convert mode code to C#, except for UI
+   • Convert most code to C#, except for UI
    • Use native ZipFile class instead of Ionic.Zip
    • Code cleanup
    • Remove TextArt
