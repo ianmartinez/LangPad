@@ -11,6 +11,7 @@
    • Add transparent color to color panel
    • About dialog and splash screen redesigned
    • Switch icons from Breeze to Tlell
+   • Add a new default theme - "Glacier"
 
 Version 9.2 (August 20, 2018)
    • Minor startup improvements

@@ -55,13 +55,13 @@ Partial Class NotebookEditor
         Me.ExportToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DictionaryToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.DoubleBufferedPanel2.SuspendLayout()
-        Me.DocumentToolStripContainer.ContentPanel.SuspendLayout()
-        Me.DocumentToolStripContainer.TopToolStripPanel.SuspendLayout()
-        Me.DocumentToolStripContainer.SuspendLayout()
-        Me.StylizedPanel1.SuspendLayout()
-        Me.DocumentToolStrip.SuspendLayout()
-        Me.SuspendLayout()
+        Me.DoubleBufferedPanel2.SuspendLayout
+        Me.DocumentToolStripContainer.ContentPanel.SuspendLayout
+        Me.DocumentToolStripContainer.TopToolStripPanel.SuspendLayout
+        Me.DocumentToolStripContainer.SuspendLayout
+        Me.StylizedPanel1.SuspendLayout
+        Me.DocumentToolStrip.SuspendLayout
+        Me.SuspendLayout
         '
         'DoubleBufferedPanel2
         '
@@ -81,39 +81,39 @@ Partial Class NotebookEditor
         Me.DoubleBufferedPanel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.DoubleBufferedPanel2.ForeColor = System.Drawing.Color.Black
         Me.DoubleBufferedPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.DoubleBufferedPanel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.DoubleBufferedPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DoubleBufferedPanel2.Name = "DoubleBufferedPanel2"
-        Me.DoubleBufferedPanel2.Padding = New System.Windows.Forms.Padding(2)
-        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(570, 597)
+        Me.DoubleBufferedPanel2.Padding = New System.Windows.Forms.Padding(1, 1, 1, 1)
+        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(285, 310)
         Me.DoubleBufferedPanel2.TabIndex = 78
         '
         'txtLanguage
         '
         Me.txtLanguage.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtLanguage.Location = New System.Drawing.Point(41, 164)
-        Me.txtLanguage.Margin = New System.Windows.Forms.Padding(4, 8, 4, 4)
+        Me.txtLanguage.Location = New System.Drawing.Point(20, 85)
+        Me.txtLanguage.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.txtLanguage.Name = "txtLanguage"
-        Me.txtLanguage.Size = New System.Drawing.Size(488, 31)
+        Me.txtLanguage.Size = New System.Drawing.Size(246, 20)
         Me.txtLanguage.TabIndex = 80
         '
         'Label5
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(36, 127)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 8, 4, 4)
+        Me.Label5.Location = New System.Drawing.Point(18, 66)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(114, 25)
+        Me.Label5.Size = New System.Drawing.Size(58, 13)
         Me.Label5.TabIndex = 81
         Me.Label5.Text = "Language:"
         '
         'btnGo
         '
         Me.btnGo.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnGo.Location = New System.Drawing.Point(454, 318)
-        Me.btnGo.Margin = New System.Windows.Forms.Padding(4, 8, 4, 4)
+        Me.btnGo.Location = New System.Drawing.Point(227, 165)
+        Me.btnGo.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.btnGo.Name = "btnGo"
-        Me.btnGo.Size = New System.Drawing.Size(75, 42)
+        Me.btnGo.Size = New System.Drawing.Size(38, 22)
         Me.btnGo.TabIndex = 79
         Me.btnGo.Text = "Go"
         Me.btnGo.UseVisualStyleBackColor = True
@@ -122,32 +122,32 @@ Partial Class NotebookEditor
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(36, 367)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 8, 4, 4)
+        Me.Label4.Location = New System.Drawing.Point(18, 191)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(53, 25)
+        Me.Label4.Size = New System.Drawing.Size(28, 13)
         Me.Label4.TabIndex = 78
         Me.Label4.Text = "Info:"
         '
         'txtInfo
         '
         Me.txtInfo.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtInfo.Location = New System.Drawing.Point(41, 404)
-        Me.txtInfo.Margin = New System.Windows.Forms.Padding(4, 8, 4, 8)
+        Me.txtInfo.Location = New System.Drawing.Point(20, 210)
+        Me.txtInfo.Margin = New System.Windows.Forms.Padding(2, 4, 2, 4)
         Me.txtInfo.Multiline = True
         Me.txtInfo.Name = "txtInfo"
         Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo.Size = New System.Drawing.Size(488, 160)
+        Me.txtInfo.Size = New System.Drawing.Size(246, 85)
         Me.txtInfo.TabIndex = 5
         '
         'Label3
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(36, 287)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 8, 4, 4)
+        Me.Label3.Location = New System.Drawing.Point(18, 149)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 25)
+        Me.Label3.Size = New System.Drawing.Size(49, 13)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Website:"
         '
@@ -157,10 +157,10 @@ Partial Class NotebookEditor
         Me.cbEmbed.AutoSize = True
         Me.cbEmbed.Checked = True
         Me.cbEmbed.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbEmbed.Location = New System.Drawing.Point(41, 6)
-        Me.cbEmbed.Margin = New System.Windows.Forms.Padding(4, 8, 4, 4)
+        Me.cbEmbed.Location = New System.Drawing.Point(20, 3)
+        Me.cbEmbed.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.cbEmbed.Name = "cbEmbed"
-        Me.cbEmbed.Size = New System.Drawing.Size(278, 29)
+        Me.cbEmbed.Size = New System.Drawing.Size(139, 17)
         Me.cbEmbed.TabIndex = 0
         Me.cbEmbed.Text = "Embed Custom Symbols"
         Me.cbEmbed.UseVisualStyleBackColor = True
@@ -168,38 +168,38 @@ Partial Class NotebookEditor
         'txtAuthor
         '
         Me.txtAuthor.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtAuthor.Location = New System.Drawing.Point(41, 244)
-        Me.txtAuthor.Margin = New System.Windows.Forms.Padding(4, 8, 4, 4)
+        Me.txtAuthor.Location = New System.Drawing.Point(20, 127)
+        Me.txtAuthor.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.txtAuthor.Name = "txtAuthor"
-        Me.txtAuthor.Size = New System.Drawing.Size(488, 31)
+        Me.txtAuthor.Size = New System.Drawing.Size(246, 20)
         Me.txtAuthor.TabIndex = 2
         '
         'txtWebsite
         '
         Me.txtWebsite.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtWebsite.Location = New System.Drawing.Point(41, 324)
-        Me.txtWebsite.Margin = New System.Windows.Forms.Padding(4, 8, 4, 4)
+        Me.txtWebsite.Location = New System.Drawing.Point(20, 168)
+        Me.txtWebsite.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.txtWebsite.Name = "txtWebsite"
-        Me.txtWebsite.Size = New System.Drawing.Size(405, 31)
+        Me.txtWebsite.Size = New System.Drawing.Size(204, 20)
         Me.txtWebsite.TabIndex = 3
         '
         'txtTitle
         '
         Me.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtTitle.Location = New System.Drawing.Point(41, 84)
-        Me.txtTitle.Margin = New System.Windows.Forms.Padding(4, 8, 4, 4)
+        Me.txtTitle.Location = New System.Drawing.Point(20, 44)
+        Me.txtTitle.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(488, 31)
+        Me.txtTitle.Size = New System.Drawing.Size(246, 20)
         Me.txtTitle.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(36, 207)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 8, 4, 4)
+        Me.Label2.Location = New System.Drawing.Point(18, 108)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 25)
+        Me.Label2.Size = New System.Drawing.Size(41, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Author:"
         '
@@ -207,10 +207,10 @@ Partial Class NotebookEditor
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(36, 47)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 8, 4, 4)
+        Me.Label1.Location = New System.Drawing.Point(18, 24)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 25)
+        Me.Label1.Size = New System.Drawing.Size(30, 13)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Title:"
         '
@@ -223,17 +223,19 @@ Partial Class NotebookEditor
         'DocumentToolStripContainer.ContentPanel
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel1)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(570, 306)
+        Me.DocumentToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(285, 150)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'DocumentToolStripContainer.LeftToolStripPanel
         '
-        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 597)
+        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 310)
+        Me.DocumentToolStripContainer.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DocumentToolStripContainer.Name = "DocumentToolStripContainer"
         '
         'DocumentToolStripContainer.RightToolStripPanel
         '
-        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(570, 344)
+        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(285, 179)
         Me.DocumentToolStripContainer.TabIndex = 81
         Me.DocumentToolStripContainer.Text = "ToolStripContainer1"
         '
@@ -247,10 +249,10 @@ Partial Class NotebookEditor
         Me.StylizedPanel1.Controls.Add(Me.lbPages)
         Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 0)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(570, 306)
+        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(285, 150)
         Me.StylizedPanel1.TabIndex = 80
         '
         'lbPages
@@ -260,11 +262,10 @@ Partial Class NotebookEditor
         Me.lbPages.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbPages.ForeColor = System.Drawing.Color.Black
         Me.lbPages.IntegralHeight = False
-        Me.lbPages.ItemHeight = 25
-        Me.lbPages.Location = New System.Drawing.Point(2, 0)
-        Me.lbPages.Margin = New System.Windows.Forms.Padding(4)
+        Me.lbPages.Location = New System.Drawing.Point(1, 0)
+        Me.lbPages.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(568, 306)
+        Me.lbPages.Size = New System.Drawing.Size(284, 150)
         Me.lbPages.TabIndex = 15
         '
         'DocumentToolStrip
@@ -275,7 +276,7 @@ Partial Class NotebookEditor
         Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton, Me.ToolStripSeparator4, Me.DictionaryToolStripButton})
         Me.DocumentToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DocumentToolStrip.Name = "DocumentToolStrip"
-        Me.DocumentToolStrip.Size = New System.Drawing.Size(570, 38)
+        Me.DocumentToolStrip.Size = New System.Drawing.Size(285, 29)
         Me.DocumentToolStrip.Stretch = True
         Me.DocumentToolStrip.TabIndex = 0
         '
@@ -286,7 +287,7 @@ Partial Class NotebookEditor
         Me.PageUpToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PageUpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PageUpToolStripButton.Name = "PageUpToolStripButton"
-        Me.PageUpToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.PageUpToolStripButton.Size = New System.Drawing.Size(26, 26)
         Me.PageUpToolStripButton.Text = "Move Page Up"
         '
         'PageDownToolStripButton
@@ -296,13 +297,13 @@ Partial Class NotebookEditor
         Me.PageDownToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PageDownToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PageDownToolStripButton.Name = "PageDownToolStripButton"
-        Me.PageDownToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.PageDownToolStripButton.Size = New System.Drawing.Size(26, 26)
         Me.PageDownToolStripButton.Text = "Move Page Down"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 38)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 29)
         '
         'AddToolStripButton
         '
@@ -311,7 +312,7 @@ Partial Class NotebookEditor
         Me.AddToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.AddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AddToolStripButton.Name = "AddToolStripButton"
-        Me.AddToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.AddToolStripButton.Size = New System.Drawing.Size(26, 26)
         Me.AddToolStripButton.Text = "Add Page"
         '
         'RemoveToolStripButton
@@ -321,7 +322,7 @@ Partial Class NotebookEditor
         Me.RemoveToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RemoveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RemoveToolStripButton.Name = "RemoveToolStripButton"
-        Me.RemoveToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.RemoveToolStripButton.Size = New System.Drawing.Size(26, 26)
         Me.RemoveToolStripButton.Text = "Remove Page"
         '
         'DuplicateToolStripButton
@@ -331,13 +332,13 @@ Partial Class NotebookEditor
         Me.DuplicateToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.DuplicateToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DuplicateToolStripButton.Name = "DuplicateToolStripButton"
-        Me.DuplicateToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.DuplicateToolStripButton.Size = New System.Drawing.Size(26, 26)
         Me.DuplicateToolStripButton.Text = "Duplicate Page"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 29)
         '
         'RenameToolStripButton
         '
@@ -346,13 +347,13 @@ Partial Class NotebookEditor
         Me.RenameToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RenameToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RenameToolStripButton.Name = "RenameToolStripButton"
-        Me.RenameToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.RenameToolStripButton.Size = New System.Drawing.Size(26, 26)
         Me.RenameToolStripButton.Text = "Rename Page"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 29)
         '
         'ImportToolStripButton
         '
@@ -361,7 +362,7 @@ Partial Class NotebookEditor
         Me.ImportToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ImportToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ImportToolStripButton.Name = "ImportToolStripButton"
-        Me.ImportToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.ImportToolStripButton.Size = New System.Drawing.Size(26, 26)
         Me.ImportToolStripButton.Text = "Import Page"
         '
         'ExportToolStripButton
@@ -371,13 +372,13 @@ Partial Class NotebookEditor
         Me.ExportToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ExportToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ExportToolStripButton.Name = "ExportToolStripButton"
-        Me.ExportToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.ExportToolStripButton.Size = New System.Drawing.Size(26, 26)
         Me.ExportToolStripButton.Text = "Export Page"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 38)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 29)
         '
         'DictionaryToolStripButton
         '
@@ -386,31 +387,31 @@ Partial Class NotebookEditor
         Me.DictionaryToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.DictionaryToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DictionaryToolStripButton.Name = "DictionaryToolStripButton"
-        Me.DictionaryToolStripButton.Size = New System.Drawing.Size(28, 35)
+        Me.DictionaryToolStripButton.Size = New System.Drawing.Size(26, 26)
         Me.DictionaryToolStripButton.Text = "Dictionary"
         '
         'NotebookEditor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Transparent
         Me.Controls.Add(Me.DocumentToolStripContainer)
         Me.Controls.Add(Me.DoubleBufferedPanel2)
         Me.DoubleBuffered = True
-        Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.MinimumSize = New System.Drawing.Size(544, 0)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MinimumSize = New System.Drawing.Size(272, 0)
         Me.Name = "NotebookEditor"
-        Me.Size = New System.Drawing.Size(570, 941)
+        Me.Size = New System.Drawing.Size(285, 489)
         Me.DoubleBufferedPanel2.ResumeLayout(False)
-        Me.DoubleBufferedPanel2.PerformLayout()
+        Me.DoubleBufferedPanel2.PerformLayout
         Me.DocumentToolStripContainer.ContentPanel.ResumeLayout(False)
         Me.DocumentToolStripContainer.TopToolStripPanel.ResumeLayout(False)
-        Me.DocumentToolStripContainer.TopToolStripPanel.PerformLayout()
+        Me.DocumentToolStripContainer.TopToolStripPanel.PerformLayout
         Me.DocumentToolStripContainer.ResumeLayout(False)
-        Me.DocumentToolStripContainer.PerformLayout()
+        Me.DocumentToolStripContainer.PerformLayout
         Me.StylizedPanel1.ResumeLayout(False)
         Me.DocumentToolStrip.ResumeLayout(False)
-        Me.DocumentToolStrip.PerformLayout()
+        Me.DocumentToolStrip.PerformLayout
         Me.ResumeLayout(False)
 
     End Sub
