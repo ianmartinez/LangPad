@@ -125,19 +125,37 @@ Module NotebookFileAccess
         PagesFolder = tmp & "\pages\"
 
         Dim LineList = Read(File.ReadAllText(tmp & "\data.txt"))
-        Dim PageOrder = Search(LineList, "Page Order").Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
-        For Each PageTitle As String In PageOrder
-            Dim Page As New NotebookPage
-            Page.Title = PageTitle
-            Page.RTF = File.ReadAllText(PagesFolder & PageTitle & ".rtf")
-            NewNotebook.Pages.Add(Page)
-        Next
+        NewNotebook.NTSpecificationVersion = Search(LineList, "NTVersion")
+        Dim CompatMode As Boolean = (NewNotebook.NTSpecificationVersion < 2)
+
+        If CompatMode Then ' Use the legacy method of storing pages
+            Dim PageOrder = Search(LineList, "Page Order").Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
+            For Each PageTitle As String In PageOrder
+                Dim Page As New NotebookPage
+                Page.Title = PageTitle
+                Page.RTF = File.ReadAllText(PagesFolder & PageTitle & ".rtf")
+                NewNotebook.Pages.Add(Page)
+            Next
+        Else ' Use the new method of storing pages that allows for arbitrary names
+            Dim PageCount As Integer = Directory.EnumerateFiles(PagesFolder).Count
+            For i = 0 To PageCount - 1
+                Dim Page As New NotebookPage
+                Dim PageName As String = Search(LineList, "Page" & i)
+
+                If PageName Is Nothing Then
+                    PageName = i + 1
+                End If
+
+                Page.Title = PageName
+                Page.RTF = File.ReadAllText(PagesFolder & i & ".rtf")
+                NewNotebook.Pages.Add(Page)
+            Next
+        End If
 
         NewNotebook.Title = Search(LineList, "Title")
         NewNotebook.Language = Search(LineList, "Language")
         NewNotebook.Author = Search(LineList, "Author")
         NewNotebook.Website = Search(LineList, "Website")
-        NewNotebook.NTSpecificationVersion = Search(LineList, "NTVersion")
         NewNotebook.LangpadVersion = Search(LineList, "LangPadVersion")
         NewNotebook.CustomSymbols = File.ReadAllText(tmp & "\custom_symbols.txt")
         NewNotebook.Info = File.ReadAllText(tmp & "\info.txt")
