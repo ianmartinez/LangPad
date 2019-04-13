@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="1115648">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="1119232">
       <assemblyIdentity name="Language Pad" version="9.3.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>myC1J+p5/oRmN/msumYZ4/h2XpFEz6V773L9jRTNHEY=</dsig:DigestValue>
+        <dsig:DigestValue>j/Nze77ewFxGrDVPOvT0IFsOxSZ9NeaiY5Pm4WrGBFs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TundraLib.dll" size="31232">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TundraLib.dll" size="31744">
       <assemblyIdentity name="TundraLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KftVceulR5hwShR/X36v2QrdadbFWJ2LtLRq9nUzBzQ=</dsig:DigestValue>
+        <dsig:DigestValue>Q7tY6PKVfrwWPniVwgWB3+kCGwwtLqV2caT+RvbZJrE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

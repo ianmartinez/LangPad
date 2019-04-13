@@ -379,7 +379,7 @@ Public Class frmMain
         LinguisticsToolStrip.Location = New Point(FontToolStrip.Left + FontToolStrip.Width, 0)
 
         dlgColor.FullOpen = True
-        SetTheme(New BreezeTheme())
+        SetTheme(New GlacierTheme())
 
         ThemeCombo.SelectedItem = My.Settings.Theme
 
@@ -1125,10 +1125,10 @@ Public Class frmMain
     End Sub
 
     Private Sub ThemeCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ThemeCombo.SelectedIndexChanged
-        If ThemeCombo.SelectedItem.ToString().Equals("Breeze") Then
-            SetTheme(New BreezeTheme)
+        If ThemeCombo.SelectedItem.ToString().Equals("Glacier") Then
+            SetTheme(New GlacierTheme)
         Else
-            SetTheme(New BreezeTheme)
+            SetTheme(New GlacierTheme)
         End If
     End Sub
 

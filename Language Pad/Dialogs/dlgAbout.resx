@@ -144,8 +144,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
    • About dialog and splash screen redesigned
    • Switch icons from Breeze to Tlell
    • Remove the perpetually buggy tables feature
-   • Add a new default theme - "Glacier"
-   • Revised "Olive" and "Luna" themes
+   • Change theme to "Glacier"
 
 Version 9.2 (August 20, 2018)
    • Minor startup improvements

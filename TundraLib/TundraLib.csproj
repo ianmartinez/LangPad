@@ -57,7 +57,7 @@
     <Compile Include="StylizedColorButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Themes\BreezeTheme.cs" />
+    <Compile Include="Themes\GlacierTheme.cs" />
     <Compile Include="Themes\Theme.cs" />
     <Compile Include="ZiaFile.cs" />
   </ItemGroup>

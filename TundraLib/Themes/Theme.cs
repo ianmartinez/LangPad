@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace TundraLib.Themes
@@ -29,55 +30,83 @@ namespace TundraLib.Themes
         {
             this.Name = Name;
         }
-        
-        public static void DrawRoundedRectangle(Graphics objGraphics, int m_intxAxis, int m_intyAxis, int m_intWidth, int m_intHeight, int m_diameter, Color color)
+
+        public static GraphicsPath GetRoundedRectanglePath(Rectangle Area, int Roundness)
         {
-            Pen pen = new Pen(color);
+            GraphicsPath RoundedRectanglePath = new GraphicsPath();
 
-            // Dim g As Graphics
-            RectangleF BaseRect = new RectangleF(m_intxAxis, m_intyAxis, m_intWidth, m_intHeight);
-            RectangleF ArcRect = new RectangleF(BaseRect.Location, new SizeF(m_diameter, m_diameter));
-            // top left Arc
-            objGraphics.DrawArc(pen, ArcRect, 180, 90);
-            objGraphics.DrawLine(pen, m_intxAxis + Convert.ToInt32(m_diameter / (double)2), m_intyAxis, m_intxAxis + m_intWidth - Convert.ToInt32(m_diameter / (double)2), m_intyAxis);
+            if (Area.Width < Roundness * 2 || Area.Height < Roundness * 2)
+            {
+                RoundedRectanglePath.AddEllipse(Area);
+                return RoundedRectanglePath;
+            }
 
-            // top right arc
-            ArcRect.X = BaseRect.Right - m_diameter;
-            objGraphics.DrawArc(pen, ArcRect, 270, 90);
-            objGraphics.DrawLine(pen, m_intxAxis + m_intWidth, m_intyAxis + Convert.ToInt32(m_diameter / (double)2), m_intxAxis + m_intWidth, m_intyAxis + m_intHeight - Convert.ToInt32(m_diameter / (double)2));
+            PointF[] CurvePoints = new[] { new PointF(Area.X, Area.Y + Roundness), new PointF(Area.X + Roundness / (float)3, Area.Y + Roundness / (float)3), new PointF(Area.X + Roundness, Area.Y) };
 
-            // bottom right arc
-            ArcRect.Y = BaseRect.Bottom - m_diameter;
-            objGraphics.DrawArc(pen, ArcRect, 0, 90);
-            objGraphics.DrawLine(pen, m_intxAxis + Convert.ToInt32(m_diameter / (double)2), m_intyAxis + m_intHeight, m_intxAxis + m_intWidth - Convert.ToInt32(m_diameter / (double)2), m_intyAxis + m_intHeight);
+            RoundedRectanglePath.AddCurve(CurvePoints, 1);
+            RoundedRectanglePath.AddLine(CurvePoints[2], new PointF(Area.Right - Roundness, Area.Y));
 
-            // bottom left arc
-            ArcRect.X = BaseRect.Left;
-            objGraphics.DrawArc(pen, ArcRect, 90, 90);
-            objGraphics.DrawLine(pen, m_intxAxis, m_intyAxis + Convert.ToInt32(m_diameter / (double)2), m_intxAxis, m_intyAxis + m_intHeight - Convert.ToInt32(m_diameter / (double)2));
+            CurvePoints[0] = new PointF(Area.Right - Roundness, Area.Y);
+            CurvePoints[1] = new PointF(Area.Right - Roundness / (float)3, Area.Y + Roundness / (float)3);
+            CurvePoints[2] = new PointF(Area.Right, Area.Y + Roundness);
+
+            RoundedRectanglePath.AddCurve(CurvePoints, 1);
+            RoundedRectanglePath.AddLine(CurvePoints[2], new PointF(Area.Right, Area.Bottom - Roundness));
+
+            CurvePoints[0] = new PointF(Area.Right, Area.Bottom - Roundness);
+            CurvePoints[1] = new PointF(Area.Right - Roundness / (float)3, Area.Bottom - Roundness / (float)3);
+            CurvePoints[2] = new PointF(Area.Right - Roundness, Area.Bottom);
+
+            RoundedRectanglePath.AddCurve(CurvePoints, 1);
+            RoundedRectanglePath.AddLine(CurvePoints[2], new PointF(Area.X + Roundness, Area.Bottom));
+
+            CurvePoints[0] = new PointF(Area.X + Roundness, Area.Bottom);
+            CurvePoints[1] = new PointF(Area.X + Roundness / (float)3, Area.Bottom - Roundness / (float)3);
+            CurvePoints[2] = new PointF(Area.X, Area.Bottom - Roundness);
+
+            RoundedRectanglePath.AddCurve(CurvePoints, 1);
+            RoundedRectanglePath.AddLine(CurvePoints[2], new PointF(Area.X, Area.Y + Roundness));
+
+            return RoundedRectanglePath;
+        }
+
+
+        public static void DrawRoundedRectangle(Graphics g, int x, int y, int width, int height, int Radius, Color Color)
+        {
+            var pen = new Pen(Color);
+            g.DrawPath(pen, GetRoundedRectanglePath(new Rectangle(x, y, width, height), Radius));
+        }
+        public static void FillRoundedRectangle(Graphics g, int x, int y, int width, int height, int Radius, Brush brush)
+        {
+            g.FillPath(brush, GetRoundedRectanglePath(new Rectangle(x, y, width, height), Radius));
+        }
+
+        public static void FillRoundedRectangle(Graphics g, Rectangle Rect, int Radius, Brush brush)
+        {
+            g.FillPath(brush, GetRoundedRectanglePath(Rect, Radius));
         }
     }
 
-    public class BreezeTheme : Theme
+    public class GlacierTheme : Theme
     {
-        public BreezeTheme() : base("Breeze")
+        public GlacierTheme() : base("Glacier")
         {
-            Color1 = Color.FromArgb(255, 243, 244, 245);
-            Color2 = Color.FromArgb(255, 243, 244, 245);
+            Color1 = Color.FromArgb(255, 233, 233, 233);
+            Color2 = Color.FromArgb(255, 233, 233, 233);
             DialogBack = SystemColors.Control;
             PanelBack = Color.FromArgb(255, 243, 244, 245);
 
-            VerticalMenuGradient = false;
+            VerticalMenuGradient = true;
         }
 
         public override ToolStripRenderer GetToolStripRenderer()
         {
-            return new clsBreezeToolstripRenderer();
+            return new GlacierToolstripRenderer();
         }
 
         public override ToolStripRenderer GetMenuRenderer()
         {
-            return new clsBreezeMenuRenderer();
+            return new GlacierMenuRenderer();
         }
     }
 
