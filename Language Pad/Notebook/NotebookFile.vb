@@ -65,7 +65,10 @@ Module NotebookFileAccess
 
         Dim guid As Guid = Guid.NewGuid
         Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString
-        Directory.Delete(tmp, True)
+        If Directory.Exists(tmp) Then
+            Directory.Delete(tmp, True)
+        End If
+
         Directory.CreateDirectory(tmp)
 
         PagesFolder = tmp & "\pages\"

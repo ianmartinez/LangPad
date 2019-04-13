@@ -83,7 +83,7 @@ Partial Class dlgAccentMark
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(352, 480)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(352, 460)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -163,7 +163,7 @@ Partial Class dlgAccentMark
         Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(2)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(496, 199)
+        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(496, 180)
         Me.AccentsLayoutPanel.TabIndex = 3
         '
         'btnAdd
@@ -223,7 +223,7 @@ Partial Class dlgAccentMark
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(509, 521)
+        Me.ClientSize = New System.Drawing.Size(509, 501)
         Me.Controls.Add(Me.pnlSmartReplace)
         Me.Controls.Add(Me.StylizedPanel1)
         Me.Controls.Add(Me.btnPreviewFont)

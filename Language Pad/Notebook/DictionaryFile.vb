@@ -64,7 +64,7 @@ Module DictionaryFileAccess
         Dim LineList As Dictionary(Of String, String) = Read(File.ReadAllText(FilePath))
 
         For Each CurrentLine As KeyValuePair(Of String, String) In LineList
-            If Not CurrentLine.Key.StartsWith("Word") Then Continue For
+            If Not CurrentLine.Key.StartsWith("Word") Or CurrentLine.Value.Split("|").Count <> 4 Then Continue For
             Dim NewWord As New DictionaryWord With {
                 .Word = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(0)),
                 .Pronunciation = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(1)),
