@@ -117,14 +117,14 @@ Partial Class dlgAccentMark
         '
         'lblResult
         '
-        Me.lblResult.BackColor = System.Drawing.Color.Transparent
+        Me.lblResult.BackColor = System.Drawing.Color.White
         Me.lblResult.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lblResult.Font = New System.Drawing.Font("Calibri", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblResult.ForeColor = System.Drawing.Color.Black
         Me.lblResult.Location = New System.Drawing.Point(1, 1)
         Me.lblResult.Margin = New System.Windows.Forms.Padding(2)
         Me.lblResult.Name = "lblResult"
-        Me.lblResult.Size = New System.Drawing.Size(494, 130)
+        Me.lblResult.Size = New System.Drawing.Size(492, 128)
         Me.lblResult.TabIndex = 69
         Me.lblResult.Text = "a"
         Me.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -208,6 +208,7 @@ Partial Class dlgAccentMark
         'StylizedPanel1
         '
         Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.StylizedPanel1.Controls.Add(Me.lblResult)
         Me.StylizedPanel1.Location = New System.Drawing.Point(6, 69)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
