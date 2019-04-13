@@ -13,7 +13,7 @@ Public Class NotebookFile
     Public Modified As Boolean = False
     Public EmbedSymbols As Boolean = False
     Public DocumentPath As String
-    Public LangpadVersion As Decimal = LangpadVersion
+    Public ProgramVersion As String = ProgramVersion
     Public NTSpecificationVersion As Decimal = NTVersion
 
     Public Title As String
@@ -35,7 +35,7 @@ Public Class NotebookFile
     Public Sub Open(ByVal FilePath As String, Optional ByVal Opening As Boolean = False)
         Dim NewNotebook As NotebookFile = NotebookFileAccess.Open(FilePath)
         Author = NewNotebook.Author
-        LangpadVersion = NewNotebook.LangpadVersion
+        ProgramVersion = NewNotebook.ProgramVersion
         NTSpecificationVersion = NewNotebook.NTSpecificationVersion
         Title = NewNotebook.Title
         Language = NewNotebook.Language
@@ -114,7 +114,10 @@ Module NotebookFileAccess
         Dim guid As Guid = Guid.NewGuid
         Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString
 
-        Directory.Delete(tmp, True)
+        If (Directory.Exists(tmp)) Then
+            Directory.Delete(tmp, True)
+        End If
+
         Directory.CreateDirectory(tmp)
 
         ZipFile.ExtractToDirectory(FilePath, tmp)
@@ -149,11 +152,13 @@ Module NotebookFileAccess
             Next
         End If
 
+
+
         NewNotebook.Title = Search(LineList, "Title")
         NewNotebook.Language = Search(LineList, "Language")
         NewNotebook.Author = Search(LineList, "Author")
         NewNotebook.Website = Search(LineList, "Website")
-        NewNotebook.LangpadVersion = Search(LineList, "LangPadVersion")
+        NewNotebook.ProgramVersion = Search(LineList, "LangPadVersion")
         NewNotebook.CustomSymbols = File.ReadAllText(tmp & "\custom_symbols.txt")
         NewNotebook.Info = File.ReadAllText(tmp & "\info.txt")
         NewNotebook.WordDictionary.Open(tmp & "\dictionary.txt")

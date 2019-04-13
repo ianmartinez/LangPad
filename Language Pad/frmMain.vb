@@ -327,8 +327,8 @@ Public Class frmMain
                     Dim OpenFile As New NotebookFile()
                     OpenFile.Open(My.Application.CommandLineArgs(0))
                     If OpenFile.NTSpecificationVersion > NTVersion Then
-                        If Not MessageBox.Show("The notebook file you are trying to open is from Language Pad " + OpenFile.LangpadVersion.ToString() + ", which is newer than the version you are currently using. " +
-                            " This can lead to unexpected results. Are you sure you want to continue?", "File from Language Pad " + OpenFile.LangpadVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
+                        If Not MessageBox.Show("The notebook file you are trying to open is from Language Pad " + OpenFile.ProgramVersion.ToString() + ", which is newer than the version you are currently using. " +
+                            " This can lead to unexpected results. Are you sure you want to continue?", "File from Language Pad " + OpenFile.ProgramVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
                             AllowOpen = False
                         End If
                     End If
@@ -619,8 +619,8 @@ Public Class frmMain
             OpenFile.Open(dlgOpen.FileName)
 
             If OpenFile.NTSpecificationVersion > NTVersion Then
-                If Not MessageBox.Show("The notebook file you are trying to open is from Language Pad " + OpenFile.LangpadVersion.ToString() + ", which is newer than the version you are currently using. " +
-                " This can lead to unexpected results. Are you sure you want to continue?", "File from Language Pad " + OpenFile.LangpadVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
+                If Not MessageBox.Show("The notebook file you are trying to open is from Language Pad " + OpenFile.ProgramVersion.ToString() + ", which is newer than the version you are currently using. " +
+                " This can lead to unexpected results. Are you sure you want to continue?", "File from Language Pad " + OpenFile.ProgramVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
                     Exit Sub
                 End If
             End If
