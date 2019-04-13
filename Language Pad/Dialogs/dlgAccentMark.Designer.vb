@@ -40,9 +40,9 @@ Partial Class dlgAccentMark
         Me.btnPreviewFont = New System.Windows.Forms.Button()
         Me.dlgFont = New System.Windows.Forms.FontDialog()
         Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
-        Me.TableLayoutPanel1.SuspendLayout()
-        Me.StylizedPanel1.SuspendLayout()
-        Me.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout
+        Me.StylizedPanel1.SuspendLayout
+        Me.SuspendLayout
         '
         'Label1
         '
@@ -244,7 +244,7 @@ Partial Class dlgAccentMark
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.StylizedPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Me.PerformLayout
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label

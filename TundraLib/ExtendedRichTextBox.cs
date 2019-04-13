@@ -432,45 +432,6 @@ namespace TundraLib
             SelectedRtf = _rtf.ToString();
         }
 
-
-        public void InsertTable(int Rows, int Columns, int Width = 100)
-        {
-            try
-            {
-                int Twips = Width * 15;
-                StringBuilder TableStringBuilder = new StringBuilder();
-                for (var Row = 1; Row <= Rows; Row++)
-                {
-                    TableStringBuilder.AppendLine(@"\trowd");
-                    for (var Column = 1; Column <= Columns; Column++)
-                    {
-                        TableStringBuilder.AppendLine(@"\cellx" + (Twips * Column));
-                        TableStringBuilder.AppendLine(@" \intbl\cell");
-                    }
-                    TableStringBuilder.AppendLine(@"\row");
-                }
-
-                ExtendedRichTextBox NewRTB = new ExtendedRichTextBox();
-                string RTFBoilerPlate = @"{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Microsoft Sans Serif;}}\viewkind4\uc1\pard\f0\fs16";
-                NewRTB.Rtf = RTFBoilerPlate + TableStringBuilder.ToString() + "}";
-
-                int CurrentPos = SelectionStart;
-                object obj = Clipboard.GetDataObject();
-                NewRTB.SelectAll();
-                NewRTB.Copy();
-                Paste();
-                Clipboard.SetDataObject(obj);
-
-                Focus();
-                SelectionStart = CurrentPos + Text.Length;
-                SelectionLength = 0;
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
         private string GetDocumentArea(string _text, Font _font)
         {
             StringBuilder _doc = new StringBuilder();

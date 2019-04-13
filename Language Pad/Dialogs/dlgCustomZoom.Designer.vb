@@ -36,7 +36,7 @@ Partial Class dlgCustomZoom
         Me.nudZoom.DecimalPlaces = 3
         Me.nudZoom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.nudZoom.Location = New System.Drawing.Point(6, 24)
-        Me.nudZoom.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.nudZoom.Margin = New System.Windows.Forms.Padding(2)
         Me.nudZoom.Maximum = New Decimal(New Integer() {64, 0, 0, 0})
         Me.nudZoom.Minimum = New Decimal(New Integer() {15626, 0, 0, 393216})
         Me.nudZoom.Name = "nudZoom"
@@ -75,7 +75,7 @@ Partial Class dlgCustomZoom
         '
         Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnOK.Location = New System.Drawing.Point(2, 8)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(122, 34)
         Me.btnOK.TabIndex = 1
@@ -87,7 +87,7 @@ Partial Class dlgCustomZoom
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCancel.Location = New System.Drawing.Point(128, 8)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(123, 34)
         Me.btnCancel.TabIndex = 0

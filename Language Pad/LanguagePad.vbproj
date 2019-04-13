@@ -164,12 +164,6 @@
     <Compile Include="Dialogs\dlgStyle.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\dlgTable.Designer.vb">
-      <DependentUpon>dlgTable.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Dialogs\dlgTable.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Dialogs\dlgUpdate.Designer.vb">
       <DependentUpon>dlgUpdate.vb</DependentUpon>
     </Compile>
@@ -253,9 +247,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgStyle.resx">
       <DependentUpon>dlgStyle.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgTable.resx">
-      <DependentUpon>dlgTable.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgUpdate.resx">
       <DependentUpon>dlgUpdate.vb</DependentUpon>

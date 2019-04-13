@@ -277,7 +277,6 @@ Public Class frmMain
         dlgHtml.BackColor = Theme.DialogBack
         dlgSettings.BackColor = Theme.DialogBack
         dlgStyle.BackColor = Theme.DialogBack
-        dlgTable.BackColor = Theme.DialogBack
         dlgUpdate.BackColor = Theme.DialogBack
 
         Refresh()
@@ -801,10 +800,6 @@ Public Class frmMain
 
     Private Sub TextArtToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Private Sub TableToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TableToolStripMenuItem.Click
-        dlgTable.ShowDialog()
     End Sub
 
     Private Sub InsertBulletsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InsertBulletsToolStripMenuItem.Click
