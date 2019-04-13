@@ -45,9 +45,10 @@ End Class
 Module DictionaryFileAccess
     Sub Save(ByVal FilePath As String, ByVal Dictionary As DictionaryFile)
         On Error Resume Next
-        Dim DictionaryString As New List(Of ZiaLine)
-        DictionaryString.Add(New ZiaLine(LineType.Comment, "Dictionary"))
-        DictionaryString.Add(New ZiaLine(LineType.Comment, "Language Pad Version:" & LangPadVersion))
+        Dim DictionaryString As New List(Of ZiaLine) From {
+            New ZiaLine(LineType.Comment, "Dictionary"),
+            New ZiaLine(LineType.Comment, "Language Pad Version:" & LangPadVersion)
+        }
 
         For i = 0 To Dictionary.Words.Count - 1
             Dim CurrentWord As DictionaryWord = Dictionary.Words.Item(i)

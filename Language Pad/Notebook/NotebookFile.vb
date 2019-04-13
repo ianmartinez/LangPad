@@ -72,19 +72,17 @@ Module NotebookFileAccess
         PagesFolder = tmp & "\pages\"
         Directory.CreateDirectory(PagesFolder)
 
-        'Settings
-        Dim DataFile As New List(Of ZiaLine)
-        DataFile.Add(New ZiaLine(LineType.Comment, "Settings"))
-
-        DataFile.Add(New ZiaLine(LineType.KeyValue, "Title", Notebook.Title))
-        DataFile.Add(New ZiaLine(LineType.KeyValue, "Language", Notebook.Language))
-        DataFile.Add(New ZiaLine(LineType.KeyValue, "Author", Notebook.Author))
-        DataFile.Add(New ZiaLine(LineType.KeyValue, "Website", Notebook.Website))
-        DataFile.Add(New ZiaLine(LineType.KeyValue, "NTVersion", NTVersion))
-        DataFile.Add(New ZiaLine(LineType.KeyValue, "LangPadVersion", LangPadVersion))
-
-        'Pages
-        DataFile.Add(New ZiaLine(LineType.Comment, "Pages"))
+        Dim DataFile As New List(Of ZiaLine) From {
+            New ZiaLine(LineType.Comment, "Settings"),
+            New ZiaLine(LineType.KeyValue, "Title", Notebook.Title),
+            New ZiaLine(LineType.KeyValue, "Language", Notebook.Language),
+            New ZiaLine(LineType.KeyValue, "Author", Notebook.Author),
+            New ZiaLine(LineType.KeyValue, "Website", Notebook.Website),
+            New ZiaLine(LineType.KeyValue, "NTVersion", NTVersion),
+            New ZiaLine(LineType.KeyValue, "LangPadVersion", LangPadVersion),
+            New ZiaLine(LineType.Blank),
+            New ZiaLine(LineType.Comment, "Pages")
+        }
 
         For i = 0 To Notebook.Pages.Count - 1
             Dim Page = Notebook.Pages.Item(i)

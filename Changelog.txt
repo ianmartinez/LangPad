@@ -6,9 +6,10 @@
    • Remove Tundra library
    • Convert most code to C#, except for UI
    • Use native ZipFile class instead of Ionic.Zip
-   • Code cleanup
+   • Major code cleanup and refactoring
    • Remove TextArt
    • Add transparent color to color panel
+   • About dialog and splash screen redesigned
    • Switch icons from Breeze to Tlell
 
 Version 9.2 (August 20, 2018)

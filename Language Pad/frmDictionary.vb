@@ -6,7 +6,6 @@ Imports TundraLib.Themes
 
 Public Class frmDictionary
     Dim c As TextBox
-    Dim SelectedCell As DataGridViewCell
     Public Loaded As Boolean = False
     Public Color1 As Color
     Public Color2 As Color
