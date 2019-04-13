@@ -127,9 +127,6 @@ Public Class NotebookEditor
     End Sub
 
     Private Sub NotebookEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' DocumentToolStrip.Renderer = Theme.GetToolStripRenderer()
-
-
         btnGo.Location = New Point(btnGo.Location.X, txtWebsite.Location.Y)
         btnGo.Height = txtWebsite.Height
     End Sub

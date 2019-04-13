@@ -9,14 +9,16 @@
         Dim CurrentPage As Integer = frmMain.tcNotebook.SelectedIndex
 
         If AddPage = True Then
-            Dim p As New NotebookPage
-            p.Title = txtName.Text
+            Dim p As New NotebookPage With {
+                .Title = txtName.Text
+            }
             CurrentDocument.Pages.Add(p)
             frmMain.UpdateTabs()
         ElseIf DuplicatePage = True Then
-            Dim p As New NotebookPage
-            p.Title = txtName.Text
-            p.RTF = CurrentDocument.Pages(CurrentPage).RTF
+            Dim p As New NotebookPage With {
+                .Title = txtName.Text,
+                .RTF = CurrentDocument.Pages(CurrentPage).RTF
+            }
             CurrentDocument.Pages.Add(p)
             frmMain.UpdateTabs()
         Else

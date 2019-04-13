@@ -9,6 +9,7 @@
    • Code cleanup
    • Remove TextArt
    • Add transparent color to color panel
+   • Switch icons from Breeze to Tlell
 
 Version 9.2 (August 20, 2018)
    • Minor startup improvements

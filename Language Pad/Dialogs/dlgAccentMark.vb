@@ -56,9 +56,10 @@ Public Class dlgAccentMark
         UpdateResult()
 
         For Each IPA As KeyValuePair(Of String, String) In Read(My.Resources.Accents)
-            Dim SymbolButton As New AccentCheckButton
-            SymbolButton.Text = "◌" + IPA.Value
-            SymbolButton.BackColor = Color.Transparent
+            Dim SymbolButton As New AccentCheckButton With {
+                .Text = "◌" + IPA.Value,
+                .BackColor = Color.Transparent
+            }
 
             Dim IPAFont = New Font("Calibri", 22, FontStyle.Regular)
             Dim IPAPadding = New Padding(0)
@@ -91,13 +92,15 @@ Public Class dlgAccentMark
         frmDictionary.CustomLayoutPanel.Controls.Clear()
         Dim LineList As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
         For Each IPA As String In LineList
-            Dim IPAButton As New SymbolButton
-            IPAButton.Text = IPA
+            Dim IPAButton As New SymbolButton With {
+                .Text = IPA
+            }
             AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
             frmMain.CustomLayoutPanel.Controls.Add(IPAButton)
 
-            Dim DictionaryIPAButton As New SymbolButton
-            DictionaryIPAButton.Text = IPA
+            Dim DictionaryIPAButton As New SymbolButton With {
+                .Text = IPA
+            }
             AddHandler DictionaryIPAButton.Click, AddressOf frmDictionary.InsertIPA
             frmDictionary.CustomLayoutPanel.Controls.Add(DictionaryIPAButton)
         Next

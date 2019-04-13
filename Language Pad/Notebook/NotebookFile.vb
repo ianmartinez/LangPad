@@ -131,9 +131,10 @@ Module NotebookFileAccess
         If CompatMode Then ' Use the legacy method of storing pages
             Dim PageOrder = Search(LineList, "Page Order").Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
             For Each PageTitle As String In PageOrder
-                Dim Page As New NotebookPage
-                Page.Title = PageTitle
-                Page.RTF = File.ReadAllText(PagesFolder & PageTitle & ".rtf")
+                Dim Page As New NotebookPage With {
+                    .Title = PageTitle,
+                    .RTF = File.ReadAllText(PagesFolder & PageTitle & ".rtf")
+                }
                 NewNotebook.Pages.Add(Page)
             Next
         Else ' Use the new method of storing pages that allows for arbitrary names
@@ -180,13 +181,15 @@ Module NotebookFileAccess
 
             Dim LineList2 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
             For Each IPA As String In LineList2
-                Dim SymbolButton As New SymbolButton
-                SymbolButton.Text = IPA
+                Dim SymbolButton As New SymbolButton With {
+                    .Text = IPA
+                }
                 AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
                 frmMain.CustomLayoutPanel.Controls.Add(SymbolButton)
 
-                Dim SymbolButtonDictionary As New SymbolButton
-                SymbolButtonDictionary.Text = IPA
+                Dim SymbolButtonDictionary As New SymbolButton With {
+                    .Text = IPA
+                }
                 AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                 frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
             Next

@@ -94,13 +94,15 @@ Public Class SymbolButton
 
             Dim LineList2 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
             For Each IPA As String In LineList2
-                Dim SymbolButton As New SymbolButton
-                SymbolButton.Text = IPA
+                Dim SymbolButton As New SymbolButton With {
+                    .Text = IPA
+                }
                 AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
                 frmMain.CustomLayoutPanel.Controls.Add(SymbolButton)
 
-                Dim SymbolButtonDictionary As New SymbolButton
-                SymbolButtonDictionary.Text = IPA
+                Dim SymbolButtonDictionary As New SymbolButton With {
+                    .Text = IPA
+                }
                 AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                 frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
             Next

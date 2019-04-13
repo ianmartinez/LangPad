@@ -5,7 +5,7 @@ Public Class dlgCustomSymbols
         Dim CustomTXT As String = ""
         For i = 0 To dgvSymbols.RowCount - 1
             If dgvSymbols.Rows.Item(i).Cells(0).Value = "" Then Continue For
-            CustomTXT = CustomTXT & String.Format("{0}{1}", dgvSymbols.Rows.Item(i).Cells(0).Value, Environment.NewLine)
+            CustomTXT &= String.Format("{0}{1}", dgvSymbols.Rows.Item(i).Cells(0).Value, Environment.NewLine)
         Next
         My.Settings.CustomSymbols = CustomTXT
 
@@ -14,13 +14,15 @@ Public Class dlgCustomSymbols
 
         Dim LineList2 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
         For Each IPA As String In LineList2
-            Dim SymbolButton As New SymbolButton
-            SymbolButton.Text = IPA
+            Dim SymbolButton As New SymbolButton With {
+                .Text = IPA
+            }
             AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
             frmMain.CustomLayoutPanel.Controls.Add(SymbolButton)
 
-            Dim SymbolButtonDictionary As New SymbolButton
-            SymbolButtonDictionary.Text = IPA
+            Dim SymbolButtonDictionary As New SymbolButton With {
+                .Text = IPA
+            }
             AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
             frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
         Next
@@ -68,7 +70,7 @@ Public Class dlgCustomSymbols
 
             For i = 0 To dgvSymbols.RowCount - 1
                 If dgvSymbols.Rows.Item(i).Cells(0).Value = "" Then Continue For
-                CustomTXT = CustomTXT & String.Format("{0}{1}", dgvSymbols.Rows.Item(i).Cells(0).Value, Environment.NewLine)
+                CustomTXT &= String.Format("{0}{1}", dgvSymbols.Rows.Item(i).Cells(0).Value, Environment.NewLine)
             Next
 
             File.WriteAllText(dlgSave.FileName, CustomTXT)

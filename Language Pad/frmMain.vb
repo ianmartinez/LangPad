@@ -32,16 +32,18 @@ Public Class frmMain
         NotebookEditor1.lbPages.Items.Clear()
 
         For Each p As NotebookPage In CurrentDocument.Pages
-            Dim Tab As New TabPage
-            Tab.Text = p.Title
+            Dim Tab As New TabPage With {
+                .Text = p.Title
+            }
 
-            Dim rtbDoc As New ExtendedRichTextBox
-            rtbDoc.Rtf = p.RTF
-            rtbDoc.Dock = DockStyle.Fill
-            rtbDoc.ScrollBars = RichTextBoxScrollBars.Both
-            rtbDoc.BorderStyle = BorderStyle.None
-            rtbDoc.ContextMenuStrip = cmsMain
-            rtbDoc.HideSelection = False
+            Dim rtbDoc As New ExtendedRichTextBox With {
+                .Rtf = p.RTF,
+                .Dock = DockStyle.Fill,
+                .ScrollBars = RichTextBoxScrollBars.Both,
+                .BorderStyle = BorderStyle.None,
+                .ContextMenuStrip = cmsMain,
+                .HideSelection = False
+            }
             AddHandler rtbDoc.TextChanged, AddressOf ModifiedHandler
 
             Tab.Controls.Add(rtbDoc)
@@ -196,10 +198,11 @@ Public Class frmMain
         End If
 
         SuspendLayout()
-        Dim TempRTF As New ExtendedRichTextBox
-        TempRTF.Rtf = rtb.Rtf
-        TempRTF.SelectionStart = rtb.SelectionStart
-        TempRTF.SelectionLength = rtb.SelectionLength
+        Dim TempRTF As New ExtendedRichTextBox With {
+            .Rtf = rtb.Rtf,
+            .SelectionStart = rtb.SelectionStart,
+            .SelectionLength = rtb.SelectionLength
+        }
 
 
         If TempRTF.SelectionLength > 0 Then
@@ -236,10 +239,11 @@ Public Class frmMain
 
     Private Sub ApplyFontChange(ByVal rtb As ExtendedRichTextBox, ByVal Font As Font)
         SuspendLayout()
-        Dim TempRTF As New ExtendedRichTextBox
-        TempRTF.Rtf = rtb.Rtf
-        TempRTF.SelectionStart = rtb.SelectionStart
-        TempRTF.SelectionLength = rtb.SelectionLength
+        Dim TempRTF As New ExtendedRichTextBox With {
+            .Rtf = rtb.Rtf,
+            .SelectionStart = rtb.SelectionStart,
+            .SelectionLength = rtb.SelectionLength
+        }
 
         If TempRTF.SelectionLength > 0 Then
             Dim Start As Integer = TempRTF.SelectionStart
@@ -275,10 +279,11 @@ Public Class frmMain
 
     Private Sub ApplySizeChange(ByVal rtb As ExtendedRichTextBox, ByVal Size As Integer)
         SuspendLayout()
-        Dim TempRTF As New ExtendedRichTextBox
-        TempRTF.Rtf = rtb.Rtf
-        TempRTF.SelectionStart = rtb.SelectionStart
-        TempRTF.SelectionLength = rtb.SelectionLength
+        Dim TempRTF As New ExtendedRichTextBox With {
+            .Rtf = rtb.Rtf,
+            .SelectionStart = rtb.SelectionStart,
+            .SelectionLength = rtb.SelectionLength
+        }
 
         If TempRTF.SelectionLength > 0 Then
             Dim Start As Integer = TempRTF.SelectionStart
@@ -358,7 +363,7 @@ Public Class frmMain
         Refresh()
     End Sub
 
-    Private Sub RichTextEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         On Error Resume Next
         Text = LangPadVersion
 
@@ -377,8 +382,9 @@ Public Class frmMain
                 CurrentDocument.Pages.Clear()
 
                 If FileEXT = "rtf" Then
-                    Dim p As New NotebookPage
-                    p.Title = "Untitled"
+                    Dim p As New NotebookPage With {
+                        .Title = "Untitled"
+                    }
                     Dim txtReader As StreamReader
                     txtReader = New StreamReader(My.Application.CommandLineArgs(0))
                     p.RTF = txtReader.ReadToEnd
@@ -387,8 +393,9 @@ Public Class frmMain
                     CurrentDocument.Pages.Add(p)
                     currentFile = My.Application.CommandLineArgs(0)
                 ElseIf FileEXT = "txt" Then
-                    Dim p As New NotebookPage
-                    p.Title = "Untitled"
+                    Dim p As New NotebookPage With {
+                        .Title = "Untitled"
+                    }
                     Dim txtReader As StreamReader
                     txtReader = New StreamReader(My.Application.CommandLineArgs(0))
                     p.RTF = txtReader.ReadToEnd
@@ -416,8 +423,9 @@ Public Class frmMain
         End If
 
         If CurrentDocument.Pages.Count = 0 Then
-            Dim p As New NotebookPage
-            p.Title = "Untitled"
+            Dim p As New NotebookPage With {
+                .Title = "Untitled"
+            }
             CurrentDocument.Pages.Add(p)
         End If
 
@@ -655,16 +663,17 @@ Public Class frmMain
             End If
         End If
 
-        CurrentDocument = New NotebookFile
-        CurrentDocument.Pages = New List(Of NotebookPage)
+        CurrentDocument = New NotebookFile With {
+            .Pages = New List(Of NotebookPage)
+        }
 
         tcNotebook.TabPages.Clear()
         NotebookEditor1.lbPages.Items.Clear()
 
-        Dim new_page As NotebookPage = New NotebookPage()
-
-        new_page.Title = "Untitled"
-        new_page.RTF = ""
+        Dim new_page As NotebookPage = New NotebookPage With {
+            .Title = "Untitled",
+            .RTF = ""
+        }
         CurrentDocument.Pages.Add(new_page)
         CurrentDocument.WordDictionary = New DictionaryFile
 
@@ -722,7 +731,6 @@ Public Class frmMain
                 txtWriter = New StreamWriter(currentFile)
                 txtWriter.Write(SelectedDocument.Text)
                 txtWriter.Close()
-                txtWriter = Nothing
                 SelectedDocument.SelectionStart = 0
                 SelectedDocument.SelectionLength = 0
             Else
@@ -891,17 +899,17 @@ Public Class frmMain
         If SelectedDocument.SelectionLength = 0 Then Exit Sub
 
         SuspendLayout()
-        Dim TempRTF As New ExtendedRichTextBox
-        TempRTF.Rtf = SelectedDocument.Rtf
-        TempRTF.SelectionStart = SelectedDocument.SelectionStart
-        TempRTF.SelectionLength = SelectedDocument.SelectionLength
-
-        TempRTF.SelectionFont = New Font("Calibri", 11)
-        TempRTF.SelectionColor = Color.Black
-        TempRTF.SelectionBackColor = Color.White
-        TempRTF.SelectionAlignment = HorizontalAlignment.Left
-        TempRTF.SelectionIndent = 0
-        TempRTF.SelectionCharOffset = 0
+        Dim TempRTF As New ExtendedRichTextBox With {
+            .Rtf = SelectedDocument.Rtf,
+            .SelectionStart = SelectedDocument.SelectionStart,
+            .SelectionLength = SelectedDocument.SelectionLength,
+            .SelectionFont = New Font("Calibri", 11),
+            .SelectionColor = Color.Black,
+            .SelectionBackColor = Color.White,
+            .SelectionAlignment = HorizontalAlignment.Left,
+            .SelectionIndent = 0,
+            .SelectionCharOffset = 0
+        }
 
         On Error Resume Next
         Dim CurrentPos As Integer = SelectedDocument.SelectionStart
@@ -931,17 +939,17 @@ Public Class frmMain
         If SelectedDocument.SelectionLength = 0 Then Exit Sub
 
         SuspendLayout()
-        Dim TempRTF As New ExtendedRichTextBox
-        TempRTF.Rtf = SelectedDocument.Rtf
-        TempRTF.SelectionStart = SelectedDocument.SelectionStart
-        TempRTF.SelectionLength = SelectedDocument.SelectionLength
-
-        TempRTF.SelectionFont = dlgStyle.StyleFont
-        TempRTF.SelectionColor = dlgStyle.StyleColor
-        TempRTF.SelectionBackColor = dlgStyle.StyleHighlight
-        TempRTF.SelectionAlignment = dlgStyle.StyleAlignment
-        TempRTF.SelectionIndent = dlgStyle.StyleIndent
-        TempRTF.SelectionCharOffset = dlgStyle.StyleCharOffset
+        Dim TempRTF As New ExtendedRichTextBox With {
+            .Rtf = SelectedDocument.Rtf,
+            .SelectionStart = SelectedDocument.SelectionStart,
+            .SelectionLength = SelectedDocument.SelectionLength,
+            .SelectionFont = dlgStyle.StyleFont,
+            .SelectionColor = dlgStyle.StyleColor,
+            .SelectionBackColor = dlgStyle.StyleHighlight,
+            .SelectionAlignment = dlgStyle.StyleAlignment,
+            .SelectionIndent = dlgStyle.StyleIndent,
+            .SelectionCharOffset = dlgStyle.StyleCharOffset
+        }
 
         On Error Resume Next
         Dim CurrentPos As Integer = SelectedDocument.SelectionStart
@@ -1016,8 +1024,9 @@ Public Class frmMain
     Public Sub ImportPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportPageToolStripMenuItem.Click
         If dlgOpenPage.ShowDialog = Windows.Forms.DialogResult.OK Then
             SaveTabs()
-            Dim p As New NotebookPage
-            p.Title = dlgOpenPage.FileName.Split("\").GetValue(dlgOpenPage.FileName.Split("\").Count - 1).ToString.Split(".").GetValue(0)
+            Dim p As New NotebookPage With {
+                .Title = dlgOpenPage.FileName.Split("\").GetValue(dlgOpenPage.FileName.Split("\").Count - 1).ToString.Split(".").GetValue(0)
+            }
 
             If dlgOpenPage.FileName = "" Then Exit Sub
             Dim strExt As String
@@ -1030,15 +1039,14 @@ Public Class frmMain
                     txtReader = New StreamReader(dlgOpenPage.FileName)
                     p.RTF = txtReader.ReadToEnd
                     txtReader.Close()
-                    txtReader = Nothing
                 Case Else
                     Dim txtReader As StreamReader
                     txtReader = New StreamReader(dlgOpenPage.FileName)
-                    Dim R As New RichTextBox
-                    R.Text = txtReader.ReadToEnd
+                    Dim R As New RichTextBox With {
+                        .Text = txtReader.ReadToEnd
+                    }
                     p.RTF = R.Rtf
                     txtReader.Close()
-                    txtReader = Nothing
             End Select
 
             CurrentDocument.Pages.Add(p)
@@ -1075,7 +1083,6 @@ Public Class frmMain
                     txtWriter = New StreamWriter(dlgSavePage.FileName)
                     txtWriter.Write(SelectedDocument.Rtf)
                     txtWriter.Close()
-                    txtWriter = Nothing
                     SelectedDocument.SelectionStart = 0
                     SelectedDocument.SelectionLength = 0
                 Case Else
@@ -1083,7 +1090,6 @@ Public Class frmMain
                     txtWriter = New StreamWriter(dlgSavePage.FileName)
                     txtWriter.Write(SelectedDocument.Text)
                     txtWriter.Close()
-                    txtWriter = Nothing
                     SelectedDocument.SelectionStart = 0
                     SelectedDocument.SelectionLength = 0
             End Select
@@ -1157,13 +1163,13 @@ Public Class frmMain
     Private Sub FontToolStripButton_Click(sender As Object, e As EventArgs) Handles FontToolStripButton.Click
         On Error Resume Next
         DisableFontChange = True
-        Dim dlgFont As New FontDialog
-        dlgFont.AllowSimulations = True
-        dlgFont.ShowColor = True
-        dlgFont.ShowEffects = True
-
-        dlgFont.Color = SelectedDocument.SelectionColor
-        dlgFont.Font = SelectedDocument.SelectionFont
+        Dim dlgFont As New FontDialog With {
+            .AllowSimulations = True,
+            .ShowColor = True,
+            .ShowEffects = True,
+            .Color = SelectedDocument.SelectionColor,
+            .Font = SelectedDocument.SelectionFont
+        }
         If dlgFont.ShowDialog() = Windows.Forms.DialogResult.OK Then
             SelectedDocument.SelectionColor = dlgFont.Color
             SelectedDocument.SelectionFont = dlgFont.Font

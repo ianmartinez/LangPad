@@ -61,11 +61,12 @@ Public Class frmDictionary
     Public Sub SaveDictionary()
         CurrentDocument.WordDictionary.Words.Clear()
         For i = 0 To dgvDictionary.RowCount - 1
-            Dim NewWord As New DictionaryWord
-            NewWord.Word = dgvDictionary.Rows.Item(i).Cells.Item(0).Value
-            NewWord.Pronunciation = dgvDictionary.Rows.Item(i).Cells.Item(1).Value
-            NewWord.Definition = dgvDictionary.Rows.Item(i).Cells.Item(2).Value
-            NewWord.Notes = dgvDictionary.Rows.Item(i).Cells.Item(3).Value
+            Dim NewWord As New DictionaryWord With {
+                .Word = dgvDictionary.Rows.Item(i).Cells.Item(0).Value,
+                .Pronunciation = dgvDictionary.Rows.Item(i).Cells.Item(1).Value,
+                .Definition = dgvDictionary.Rows.Item(i).Cells.Item(2).Value,
+                .Notes = dgvDictionary.Rows.Item(i).Cells.Item(3).Value
+            }
 
             CurrentDocument.WordDictionary.Words.Add(NewWord)
         Next
@@ -114,9 +115,10 @@ Public Class frmDictionary
         Dim rowIdx As String = (e.RowIndex + 1).ToString()
         Dim rowFont As Font = Font
 
-        Dim centerFormat = New StringFormat()
-        centerFormat.Alignment = StringAlignment.Center
-        centerFormat.LineAlignment = StringAlignment.Center
+        Dim centerFormat = New StringFormat With {
+            .Alignment = StringAlignment.Center,
+            .LineAlignment = StringAlignment.Center
+        }
 
         Dim headerBounds As Rectangle = New Rectangle(e.RowBounds.Left, e.RowBounds.Top, grid.RowHeadersWidth, e.RowBounds.Height)
         e.Graphics.DrawString(rowIdx, rowFont, SystemBrushes.ControlText, headerBounds, centerFormat)

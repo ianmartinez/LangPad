@@ -29,8 +29,6 @@ Partial Class dlgAbout
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.DoubleBufferedPanel1 = New TundraLib.DoubleBufferedPanel()
         Me.lblVersion = New System.Windows.Forms.Label()
@@ -38,7 +36,6 @@ Partial Class dlgAbout
         Me.TabControl1.SuspendLayout
         Me.TabPage1.SuspendLayout
         Me.TabPage2.SuspendLayout
-        Me.TabPage3.SuspendLayout
         Me.DoubleBufferedPanel1.SuspendLayout
         Me.SuspendLayout
         '
@@ -46,7 +43,6 @@ Partial Class dlgAbout
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.TabControl1.Location = New System.Drawing.Point(6, 106)
         Me.TabControl1.Name = "TabControl1"
@@ -105,33 +101,6 @@ Partial Class dlgAbout
         Me.TextBox2.Size = New System.Drawing.Size(510, 402)
         Me.TextBox2.TabIndex = 8
         Me.TextBox2.Text = resources.GetString("TextBox2.Text")
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(Me.TextBox3)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(6)
-        Me.TabPage3.Size = New System.Drawing.Size(522, 414)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Credits"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.Color.White
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox3.Location = New System.Drawing.Point(6, 6)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(510, 402)
-        Me.TextBox3.TabIndex = 9
-        Me.TextBox3.Text = resources.GetString("TextBox3.Text")
         '
         'DoubleBufferedPanel1
         '
@@ -195,8 +164,6 @@ Partial Class dlgAbout
         Me.TabPage1.PerformLayout
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout
         Me.DoubleBufferedPanel1.ResumeLayout(False)
         Me.DoubleBufferedPanel1.PerformLayout
         Me.ResumeLayout(False)
@@ -207,8 +174,6 @@ Partial Class dlgAbout
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents ttMain As ToolTip
     Friend WithEvents lblLanguagePad As Label
     Friend WithEvents lblVersion As Label

@@ -74,12 +74,12 @@ Public Class dlgStyle
     End Sub
 
     Private Sub btnFont_Click(sender As Object, e As EventArgs) Handles btnFont.Click
-        Dim dlgFont As New FontDialog
-        dlgFont.AllowSimulations = True
-        dlgFont.ShowColor = False
-        dlgFont.ShowEffects = True
-
-        dlgFont.Font = StyleFont
+        Dim dlgFont As New FontDialog With {
+            .AllowSimulations = True,
+            .ShowColor = False,
+            .ShowEffects = True,
+            .Font = StyleFont
+        }
         If dlgFont.ShowDialog() = Windows.Forms.DialogResult.OK Then
             StyleFont = dlgFont.Font
         End If

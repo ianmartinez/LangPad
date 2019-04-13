@@ -21,13 +21,15 @@ Namespace My
             If Settings.AccentMarks = True Then
                 ssLoading.lblLoading.Text = "Loading Accent Marks..."
                 For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Accents)
-                    Dim SymbolButton As New SymbolButton
-                    SymbolButton.Text = IPA.Value
+                    Dim SymbolButton As New SymbolButton With {
+                        .Text = IPA.Value
+                    }
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
                     frmMain.AccentsLayoutPanel.Controls.Add(SymbolButton)
 
-                    Dim SymbolButtonDictionary As New SymbolButton
-                    SymbolButtonDictionary.Text = IPA.Value
+                    Dim SymbolButtonDictionary As New SymbolButton With {
+                        .Text = IPA.Value
+                    }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.AccentsLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
@@ -41,13 +43,15 @@ Namespace My
             If Settings.IPAAffricates = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Affricates..."
                 For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Affricates)
-                    Dim SymbolButton As New SymbolButton
-                    SymbolButton.Text = IPA.Value
+                    Dim SymbolButton As New SymbolButton With {
+                        .Text = IPA.Value
+                    }
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
                     frmMain.AffricatesLayoutPanel.Controls.Add(SymbolButton)
 
-                    Dim SymbolButtonDictionary As New SymbolButton
-                    SymbolButtonDictionary.Text = IPA.Value
+                    Dim SymbolButtonDictionary As New SymbolButton With {
+                        .Text = IPA.Value
+                    }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.AffricatesLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
@@ -61,13 +65,15 @@ Namespace My
             If Settings.IPAConsonants = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Consonants..."
                 For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Consonants)
-                    Dim SymbolButton As New SymbolButton
-                    SymbolButton.Text = IPA.Value
+                    Dim SymbolButton As New SymbolButton With {
+                        .Text = IPA.Value
+                    }
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
                     frmMain.ConsonantsLayoutPanel.Controls.Add(SymbolButton)
 
-                    Dim SymbolButtonDictionary As New SymbolButton
-                    SymbolButtonDictionary.Text = IPA.Value
+                    Dim SymbolButtonDictionary As New SymbolButton With {
+                        .Text = IPA.Value
+                    }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.ConsonantsLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
@@ -81,13 +87,15 @@ Namespace My
             If Settings.IPATones = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Tones..."
                 For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.ToneIntonation)
-                    Dim SymbolButton As New SymbolButton
-                    SymbolButton.Text = IPA.Value
+                    Dim SymbolButton As New SymbolButton With {
+                        .Text = IPA.Value
+                    }
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
                     frmMain.ToneIntonationLayoutPanel.Controls.Add(SymbolButton)
 
-                    Dim SymbolButtonDictionary As New SymbolButton
-                    SymbolButtonDictionary.Text = IPA.Value
+                    Dim SymbolButtonDictionary As New SymbolButton With {
+                        .Text = IPA.Value
+                    }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.ToneIntonationLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
@@ -101,13 +109,15 @@ Namespace My
             If Settings.IPAVowels = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Vowels..."
                 For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Vowels)
-                    Dim SymbolButton As New SymbolButton
-                    SymbolButton.Text = IPA.Value
+                    Dim SymbolButton As New SymbolButton With {
+                        .Text = IPA.Value
+                    }
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
                     frmMain.VowelsLayoutPanel.Controls.Add(SymbolButton)
 
-                    Dim SymbolButtonDictionary As New SymbolButton
-                    SymbolButtonDictionary.Text = IPA.Value
+                    Dim SymbolButtonDictionary As New SymbolButton With {
+                        .Text = IPA.Value
+                    }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.VowelsLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
@@ -121,13 +131,15 @@ Namespace My
             If Settings.OtherIPA = True Then
                 ssLoading.lblLoading.Text = "Loading Other IPA Characters..."
                 For Each IPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Other)
-                    Dim SymbolButton As New SymbolButton
-                    SymbolButton.Text = IPA.Value
+                    Dim SymbolButton As New SymbolButton With {
+                        .Text = IPA.Value
+                    }
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
                     frmMain.OtherLayoutPanel.Controls.Add(SymbolButton)
 
-                    Dim SymbolButtonDictionary As New SymbolButton
-                    SymbolButtonDictionary.Text = IPA.Value
+                    Dim SymbolButtonDictionary As New SymbolButton With {
+                        .Text = IPA.Value
+                    }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.OtherLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
@@ -141,13 +153,15 @@ Namespace My
             If Settings.CommonChar = True Then
                 ssLoading.lblLoading.Text = "Loading Common Characters..."
                 For Each IPA As String In Resources.Common.Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
-                    Dim SymbolButton As New SymbolButton
-                    SymbolButton.Text = IPA
+                    Dim SymbolButton As New SymbolButton With {
+                        .Text = IPA
+                    }
                     AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
                     frmMain.CommonLayoutPanel.Controls.Add(SymbolButton)
 
-                    Dim SymbolButtonDictionary As New SymbolButton
-                    SymbolButtonDictionary.Text = IPA
+                    Dim SymbolButtonDictionary As New SymbolButton With {
+                        .Text = IPA
+                    }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                     frmDictionary.CommonLayoutPanel.Controls.Add(SymbolButtonDictionary)
                 Next
@@ -161,13 +175,15 @@ Namespace My
             ssLoading.lblLoading.Text = "Loading Custom Characters..."
             Dim LineList As String() = Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
             For Each IPA As String In LineList
-                Dim SymbolButton As New SymbolButton
-                SymbolButton.Text = IPA
+                Dim SymbolButton As New SymbolButton With {
+                    .Text = IPA
+                }
                 AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
                 frmMain.CustomLayoutPanel.Controls.Add(SymbolButton)
 
-                Dim SymbolButtonDictionary As New SymbolButton
-                SymbolButtonDictionary.Text = IPA
+                Dim SymbolButtonDictionary As New SymbolButton With {
+                    .Text = IPA
+                }
                 AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
                 frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
             Next

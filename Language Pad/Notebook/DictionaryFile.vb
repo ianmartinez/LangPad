@@ -66,11 +66,12 @@ Module DictionaryFileAccess
 
         For Each CurrentLine As KeyValuePair(Of String, String) In LineList
             If Not CurrentLine.Key.StartsWith("Word") Then Continue For
-            Dim NewWord As New DictionaryWord
-            NewWord.Word = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(0))
-            NewWord.Pronunciation = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(1))
-            NewWord.Definition = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(2))
-            NewWord.Notes = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(3))
+            Dim NewWord As New DictionaryWord With {
+                .Word = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(0)),
+                .Pronunciation = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(1)),
+                .Definition = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(2)),
+                .Notes = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(3))
+            }
 
             NewDictionary.Words.Add(NewWord)
         Next
@@ -85,11 +86,12 @@ Module DictionaryFileAccess
         For Each CurrentLine As String In Lines
             If CurrentLine.Trim().Equals("Word,Pronunciation,Definition,Notes") Then Continue For
 
-            Dim NewWord As New DictionaryWord
-            NewWord.Word = CurrentLine.Split(",").GetValue(0)
-            NewWord.Pronunciation = CurrentLine.Split(",").GetValue(1)
-            NewWord.Definition = CurrentLine.Split(",").GetValue(2)
-            NewWord.Notes = CurrentLine.Split(",").GetValue(3)
+            Dim NewWord As New DictionaryWord With {
+                .Word = CurrentLine.Split(",").GetValue(0),
+                .Pronunciation = CurrentLine.Split(",").GetValue(1),
+                .Definition = CurrentLine.Split(",").GetValue(2),
+                .Notes = CurrentLine.Split(",").GetValue(3)
+            }
 
             NewDictionary.Words.Add(NewWord)
         Next
