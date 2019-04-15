@@ -4,6 +4,7 @@
    • Merge symbols panel, custom characters dialog, and accent dialog into one panel
    • Separate custom characters into File and Local   
    • Fixed bug where dictionary wouldn't load if you opened a new notebook file when the dictionary was open
+   • Remove "Embed Custom Symbols" checkbox
    
 Version 9.3 (April 13, 2019)
    • Update to .NET Framework 4.7.2

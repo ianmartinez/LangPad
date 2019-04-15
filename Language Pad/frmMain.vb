@@ -64,7 +64,6 @@ Public Class frmMain
         NotebookEditor1.txtAuthor.Text = CurrentDocument.Author
         NotebookEditor1.txtWebsite.Text = CurrentDocument.Website
         NotebookEditor1.txtInfo.Text = CurrentDocument.Info
-        NotebookEditor1.cbEmbed.Checked = CurrentDocument.EmbedSymbols
 
         NotebookEditor1.lbPages.SelectedIndex = 0
         FirstTabUpdate = True
@@ -140,19 +139,6 @@ Public Class frmMain
         Clipboard.SetImage(Image)
         RichTextBox.Paste()
         Clipboard.SetDataObject(obj)
-    End Sub
-
-    Public Sub InsertText(ByVal RichTextBox As RichTextBox, ByVal Text As String)
-        On Error Resume Next
-        Dim CurrentPos As Integer = RichTextBox.SelectionStart
-        Dim obj As Object = Clipboard.GetDataObject
-        Clipboard.SetText(Text)
-        RichTextBox.Paste()
-        Clipboard.SetDataObject(obj)
-
-        RichTextBox.Focus()
-        RichTextBox.SelectionStart = CurrentPos + Text.Length
-        RichTextBox.SelectionLength = 0
     End Sub
 
     Private Sub SelectedDocument_LinkClicked(sender As Object, e As LinkClickedEventArgs) Handles SelectedDocument.LinkClicked
@@ -249,7 +235,6 @@ Public Class frmMain
         MainMenu.Renderer = Theme.GetMenuRenderer()
         FileToolStrip.Renderer = Theme.GetToolStripRenderer()
         FontToolStrip.Renderer = Theme.GetToolStripRenderer()
-        LinguisticsToolStrip.Renderer = Theme.GetToolStripRenderer()
         DataToolStrip.Renderer = Theme.GetToolStripRenderer()
         cmsMain.Renderer = Theme.GetMenuRenderer()
         frmRTF.SetTheme(Theme)
@@ -270,7 +255,6 @@ Public Class frmMain
         dlgAbout.BackColor = Theme.DialogBack
         dlgAccentMark.BackColor = Theme.DialogBack
         dlgAddPage.BackColor = Theme.DialogBack
-        dlgAppendReplace.BackColor = Theme.DialogBack
         dlgCustomSymbols.BackColor = Theme.DialogBack
         dlgCustomSymbols.dgvSymbols.BackgroundColor = Theme.DialogBack
         dlgCustomZoom.BackColor = Theme.DialogBack
@@ -283,7 +267,7 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        On Error Resume Next
+        'On Error Resume Next
         Text = LangPadVersion
 
         Title = Text
@@ -291,8 +275,6 @@ Public Class frmMain
 
         Dim rectF As New RectangleF(10, 10, 500, 500)
         Dim solidBrush As New SolidBrush(Color.Black)
-
-        SplitContainer1.Panel1Collapsed = True
 
         If My.Application.CommandLineArgs.Count > 0 Then
             If File.Exists(My.Application.CommandLineArgs(0)) Then
@@ -376,17 +358,22 @@ Public Class frmMain
 
         FileToolStrip.Location = New Point(0, 0)
         FontToolStrip.Location = New Point(FileToolStrip.Left + FileToolStrip.Width, 0)
-        LinguisticsToolStrip.Location = New Point(FontToolStrip.Left + FontToolStrip.Width, 0)
 
         dlgColor.FullOpen = True
         SetTheme(New GlacierTheme())
 
         ThemeCombo.SelectedItem = My.Settings.Theme
 
-        For Each c As StylizedColorButton In ColorLayoutPanel.Controls
-            c.ImageAlign = ContentAlignment.MiddleCenter
-            AddHandler c.Click, AddressOf ColorButton_Click
+        For Each button As Button In ColorLayoutPanel.Controls
+            If TypeOf button Is StylizedColorButton Then
+                button.ImageAlign = ContentAlignment.MiddleCenter
+                AddHandler button.Click, AddressOf ColorButton_Click
+            End If
         Next
+
+        charEdit.GetCurrentTexbox = Function()
+                                        Return SelectedDocument
+                                    End Function
     End Sub
 
     Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
@@ -400,12 +387,6 @@ Public Class frmMain
     Private Sub ToolStripContainer1_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ToolStripContainer1.TopToolStripPanel.SizeChanged,
         ToolStripContainer1.BottomToolStripPanel.SizeChanged, ToolStripContainer1.LeftToolStripPanel.SizeChanged, ToolStripContainer1.RightToolStripPanel.SizeChanged
         ToolStripContainer1.Invalidate()
-    End Sub
-
-    Public Sub InsertIPA(sender As Object, e As EventArgs)
-        Dim Button As Button = CType(sender, Button)
-        If My.Computer.Keyboard.CtrlKeyDown Then Exit Sub
-        InsertText(SelectedDocument, Button.Text)
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs)
@@ -763,25 +744,10 @@ Public Class frmMain
         SelectedDocument.WordWrap = WordWrapToolStripMenuItem.Checked
     End Sub
 
-    Private Sub SymbolsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SymbolsToolStripMenuItem.Click
-        SplitContainer1.Panel1Collapsed = SplitContainer1.Panel1Collapsed Xor True
-    End Sub
-
-    Private Sub CustomSymbolsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CustomSymbolsToolStripMenuItem.Click
+    Private Sub CustomSymbolsToolStripMenuItem_Click(sender As Object, e As EventArgs)
         dlgCustomSymbols.ShowDialog()
     End Sub
 
-    Private Sub AccentMarkToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AccentMarkToolStripMenuItem.Click
-        If SelectedDocument.SelectionLength > 0 Then
-            dlgAccentMark.Character = SelectedDocument.SelectedText
-        Else
-            dlgAccentMark.Character = ""
-        End If
-        If dlgAccentMark.ShowDialog = DialogResult.OK Then
-            InsertText(SelectedDocument, dlgAccentMark.Character)
-            dlgAccentMark.Character = ""
-        End If
-    End Sub
 
     Public Sub DictionaryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DictionaryToolStripMenuItem.Click
         frmDictionary.Show()
@@ -1132,20 +1098,8 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub SymbolsToolStripButton_Click(sender As Object, e As EventArgs) Handles SymbolsToolStripButton.Click
-        SymbolsToolStripMenuItem_Click(Me, e)
-    End Sub
-
-    Private Sub CustomSymbolsToolStripButton_Click(sender As Object, e As EventArgs) Handles CustomSymbolsToolStripButton.Click
+    Private Sub CustomSymbolsToolStripButton_Click(sender As Object, e As EventArgs)
         CustomSymbolsToolStripMenuItem_Click(Me, e)
-    End Sub
-
-    Private Sub AccentMarkToolStripButton_Click(sender As Object, e As EventArgs) Handles AccentMarkToolStripButton.Click
-        AccentMarkToolStripMenuItem_Click(Me, e)
-    End Sub
-
-    Private Sub ThemeCombo_Click(sender As Object, e As EventArgs) Handles ThemeCombo.Click
-
     End Sub
 
     Private Sub ColorPanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ColorPanelToolStripMenuItem.Click
@@ -1172,10 +1126,6 @@ Public Class frmMain
 
     Private Sub ToogleFormattingToolbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToogleFormattingToolbarToolStripMenuItem.Click
         FontToolStrip.Visible = FontToolStrip.Visible Xor True
-    End Sub
-
-    Private Sub ToggleLinguisticsToolbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleLinguisticsToolbarToolStripMenuItem.Click
-        LinguisticsToolStrip.Visible = LinguisticsToolStrip.Visible Xor True
     End Sub
 
     Private Sub ToggleStatusbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleStatusbarToolStripMenuItem.Click

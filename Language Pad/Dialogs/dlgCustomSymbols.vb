@@ -9,16 +9,12 @@ Public Class dlgCustomSymbols
         Next
         My.Settings.CustomSymbols = CustomTXT
 
-        frmMain.CustomLayoutPanel.Controls.Clear()
+        frmMain.charEdit.LocalCharPanel.Controls.Clear()
         frmDictionary.CustomLayoutPanel.Controls.Clear()
 
         Dim LineList2 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
         For Each IPA As String In LineList2
-            Dim SymbolButton As New SymbolButton With {
-                .Text = IPA
-            }
-            AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
-            frmMain.CustomLayoutPanel.Controls.Add(SymbolButton)
+            frmMain.charEdit.InsertCharacterButton(IPA, frmMain.charEdit.LocalCharPanel)
 
             Dim SymbolButtonDictionary As New SymbolButton With {
                 .Text = IPA

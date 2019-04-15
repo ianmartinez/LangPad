@@ -294,36 +294,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Radius=0
-        '''
-        '''Active Colors=~225|~225
-        '''Active Positions=0|1
-        '''Active Angle=90
-        '''Active Border Color=~173
-        '''Active Text Color=$2
-        '''Active Highlight Color=$0
-        '''
-        '''Hover Colors=#e5f1fb|#e5f1fb
-        '''Hover Positions=0|1
-        '''Hover Angle=90
-        '''Hover Border Color=#0078d7
-        '''Hover Text Color=$2
-        '''Hover Highlight Color=$0
-        '''
-        '''Pressed Colors=#cce4f7|#cce4f7
-        '''Pressed Positions=0|1
-        '''Pressed Angle=90
-        '''Pressed Border Color=#005499
-        '''Pressed Text Color=$2
-        '''Pressed Highlight Color=$0.
-        '''</summary>
-        Friend ReadOnly Property KeyStyle() As String
-            Get
-                Return ResourceManager.GetString("KeyStyle", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to 1=̩
         '''2=̯
         '''3=ʰ
@@ -498,20 +468,6 @@ Namespace My.Resources
         Friend ReadOnly Property ToneIntonation() As String
             Get
                 Return ResourceManager.GetString("ToneIntonation", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to Positions=0|0.9|1
-        '''Angle=90
-        '''Radius=0
-        '''Border Color=~171
-        '''Highlight Color$0
-        '''Bottom Only=1.
-        '''</summary>
-        Friend ReadOnly Property Top() As String
-            Get
-                Return ResourceManager.GetString("Top", resourceCulture)
             End Get
         End Property
         

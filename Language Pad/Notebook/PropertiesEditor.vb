@@ -1,7 +1,7 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports TundraLib.Themes
 
-Public Class NotebookEditor
+Public Class PropertiesEditor
     Public Color1 As Color
     Public Color2 As Color
     Public VerticalMenuGradient As Boolean = False
@@ -52,14 +52,6 @@ Public Class NotebookEditor
             CurrentDocument.Modified = True
         End If
         lbPages.Focus()
-    End Sub
-
-    Private Sub cbEmbed_CheckedChanged(sender As Object, e As EventArgs) Handles cbEmbed.CheckedChanged
-        If FirstTabUpdate = True Then
-            CurrentDocument.EmbedSymbols = cbEmbed.Checked
-        Else
-            CurrentDocument.Modified = True
-        End If
     End Sub
 
     Private Sub txtInfo_TextChanged(sender As Object, e As EventArgs) Handles txtInfo.TextChanged

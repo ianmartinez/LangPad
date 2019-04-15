@@ -11,7 +11,6 @@ End Class
 <Serializable()>
 Public Class NotebookFile
     Public Modified As Boolean = False
-    Public EmbedSymbols As Boolean = False
     Public DocumentPath As String
     Public ProgramVersion As String = ProgramVersion
     Public NTSpecificationVersion As Decimal = NTVersion
@@ -44,7 +43,6 @@ Public Class NotebookFile
         DocumentPath = FilePath
         Info = NewNotebook.Info
         CustomSymbols = NewNotebook.CustomSymbols
-        EmbedSymbols = NewNotebook.EmbedSymbols
         WordDictionary = NewNotebook.WordDictionary
     End Sub
 
@@ -95,12 +93,6 @@ Module NotebookFileAccess
             txtWriter.Write(Page.RTF)
             txtWriter.Close()
         Next
-
-        If Notebook.EmbedSymbols = True Then
-            Notebook.CustomSymbols = My.Settings.CustomSymbols
-        Else
-            Notebook.CustomSymbols = ""
-        End If
 
         'Write to disk
         File.WriteAllText(tmp & "\data.txt", Write(DataFile))
@@ -166,36 +158,12 @@ Module NotebookFileAccess
         NewNotebook.Info = File.ReadAllText(tmp & "\info.txt")
         NewNotebook.WordDictionary.Open(tmp & "\dictionary.txt")
 
-        If Not (NewNotebook.CustomSymbols = "") Then NewNotebook.EmbedSymbols = True
+        If NewNotebook.CustomSymbols <> "" Then
+            frmMain.charEdit.FilePanel.Controls.Clear()
 
-        If NewNotebook.CustomSymbols = "" Then
-        ElseIf NewNotebook.CustomSymbols = My.Settings.CustomSymbols Then
-        ElseIf My.Settings.CustomSymbols.StartsWith(NewNotebook.CustomSymbols) Then
-        Else
-            dlgAppendReplace.ShowDialog()
-            If dlgAppendReplace.Result = dlgAppendReplace.AppendReplaceDialogResult.Append Then
-                My.Settings.CustomSymbols = My.Settings.CustomSymbols & NewNotebook.CustomSymbols
-            ElseIf dlgAppendReplace.Result = dlgAppendReplace.AppendReplaceDialogResult.Replace Then
-                My.Settings.CustomSymbols = NewNotebook.CustomSymbols
-            Else
-            End If
-
-            frmMain.CustomLayoutPanel.Controls.Clear()
-            frmDictionary.CustomLayoutPanel.Controls.Clear()
-
-            Dim LineList2 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-            For Each IPA As String In LineList2
-                Dim SymbolButton As New SymbolButton With {
-                    .Text = IPA
-                }
-                AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
-                frmMain.CustomLayoutPanel.Controls.Add(SymbolButton)
-
-                Dim SymbolButtonDictionary As New SymbolButton With {
-                    .Text = IPA
-                }
-                AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
-                frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
+            Dim FileChars As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+            For Each FileChar As String In FileChars
+                frmMain.charEdit.InsertCharacterButton(FileChar, frmMain.charEdit.FilePanel)
             Next
         End If
 

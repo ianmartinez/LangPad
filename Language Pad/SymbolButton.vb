@@ -16,7 +16,6 @@
 
     Private Sub IPAToolTip_Popup(sender As Object, e As PopupEventArgs) Handles Me.Popup
         Dim TextSize As Size = TextRenderer.MeasureText(GetToolTip(e.AssociatedControl), New Font("Calibri", 42, FontStyle.Bold))
-
         e.ToolTipSize = New Size(TextSize.Width + 12, TextSize.Height + 12)
     End Sub
 
@@ -71,7 +70,6 @@ Public Class SymbolButton
         Margin = IPAMargin
         AutoSizeMode = AutoSizeMode.GrowAndShrink
         UseCompatibleTextRendering = True
-
     End Sub
     Private Sub InitializeComponent()
         SuspendLayout()
@@ -83,30 +81,7 @@ Public Class SymbolButton
     End Sub
 
     Private Sub SymbolButton_Click(sender As Object, e As EventArgs) Handles Me.Click
-        If My.Computer.Keyboard.CtrlKeyDown Then
-            Dim LineList1 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-            If LineList1.Contains(Text) Then Exit Sub
-
-            My.Settings.CustomSymbols = My.Settings.CustomSymbols & Environment.NewLine & Text
-
-            frmMain.CustomLayoutPanel.Controls.Clear()
-            frmDictionary.CustomLayoutPanel.Controls.Clear()
-
-            Dim LineList2 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-            For Each IPA As String In LineList2
-                Dim SymbolButton As New SymbolButton With {
-                    .Text = IPA
-                }
-                AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
-                frmMain.CustomLayoutPanel.Controls.Add(SymbolButton)
-
-                Dim SymbolButtonDictionary As New SymbolButton With {
-                    .Text = IPA
-                }
-                AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
-                frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
-            Next
-        End If
+        CharacterEditor.AddToLocal()
     End Sub
 End Class
 

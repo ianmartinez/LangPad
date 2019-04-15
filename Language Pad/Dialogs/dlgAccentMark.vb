@@ -88,15 +88,11 @@ Public Class dlgAccentMark
         NewSymbols = NewSymbols & Environment.NewLine & lblResult.Text
         My.Settings.CustomSymbols = NewSymbols
 
-        frmMain.CustomLayoutPanel.Controls.Clear()
+        frmMain.charEdit.LocalCharPanel.Controls.Clear()
         frmDictionary.CustomLayoutPanel.Controls.Clear()
         Dim LineList As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
         For Each IPA As String In LineList
-            Dim IPAButton As New SymbolButton With {
-                .Text = IPA
-            }
-            AddHandler IPAButton.Click, AddressOf frmMain.InsertIPA
-            frmMain.CustomLayoutPanel.Controls.Add(IPAButton)
+            frmMain.charEdit.InsertCharacterButton(IPA, frmMain.charEdit.LocalCharPanel)
 
             Dim DictionaryIPAButton As New SymbolButton With {
                 .Text = IPA
