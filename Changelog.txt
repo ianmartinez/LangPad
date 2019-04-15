@@ -1,4 +1,11 @@
-﻿Version 9.3 (May 13, 2019)
+﻿Version 9.4 (April 30, 2019)
+   • Move all notebook file/dictionary file handling to C# library
+   • Redesign symbols panel
+   • Merge symbols panel, custom characters dialog, and accent dialog into one panel
+   • Separate custom characters into File and Local   
+   • Fixed bug where dictionary wouldn't load if you opened a new notebook file when the dictionary was open
+   
+Version 9.3 (April 13, 2019)
    • Update to .NET Framework 4.7.2
    • Update to Visual Studio 2019
    • Multiple pages can now exist with the same name

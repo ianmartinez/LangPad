@@ -34,6 +34,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,6 +54,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="FixedSR.cs" />
+    <Compile Include="Notebook\NotebookFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StylizedColorButton.cs">
       <SubType>Component</SubType>
