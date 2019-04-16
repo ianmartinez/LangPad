@@ -748,11 +748,6 @@ Public Class frmMain
         dlgCustomSymbols.ShowDialog()
     End Sub
 
-
-    Public Sub DictionaryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DictionaryToolStripMenuItem.Click
-        frmDictionary.Show()
-    End Sub
-
     Private Sub ImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImageToolStripMenuItem.Click
         If dlgOpenImage.ShowDialog() = DialogResult.OK Then
             Dim strImagePath As String = dlgOpenImage.FileName
@@ -1154,5 +1149,9 @@ Public Class frmMain
         Else
             SelectedDocument.SelectionBackColor = Color.Transparent
         End If
+    End Sub
+
+    Public Sub DictionaryMenuItem_Click(sender As Object, e As EventArgs) Handles DictionaryMenuItem.Click
+        frmDictionary.Show()
     End Sub
 End Class

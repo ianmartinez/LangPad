@@ -6,6 +6,7 @@
    • Fixed bug where dictionary wouldn't load if you opened a new notebook file when the dictionary was open
    • Remove "Embed Custom Symbols" checkbox
    • Icon now shown in window
+   • Merge "Linguistics" menu and "Page" menu into "Notebook" menu
    
 Version 9.3 (April 13, 2019)
    • Update to .NET Framework 4.7.2

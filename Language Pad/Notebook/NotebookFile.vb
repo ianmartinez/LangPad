@@ -147,8 +147,6 @@ Module NotebookFileAccess
             Next
         End If
 
-
-
         NewNotebook.Title = Search(LineList, "Title")
         NewNotebook.Language = Search(LineList, "Language")
         NewNotebook.Author = Search(LineList, "Author")

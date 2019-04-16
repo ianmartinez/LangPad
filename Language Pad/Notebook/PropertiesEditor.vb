@@ -135,7 +135,7 @@ Public Class PropertiesEditor
     End Sub
 
     Private Sub DictionaryToolStripButton_Click(sender As Object, e As EventArgs) Handles DictionaryToolStripButton.Click
-        frmMain.DictionaryToolStripMenuItem_Click(Me, e)
+        frmMain.DictionaryMenuItem_Click(Me, e)
     End Sub
 
     Private Sub btnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
