@@ -1,5 +1,48 @@
 ﻿Public Class CharacterEditor
     Public GetCurrentTexbox As Func(Of TextBoxBase)
+    Public Property Character As String
+    Private AccentsList As List(Of String) = New List(Of String)
+    Private AccentsString As String = ""
+    Private Sub UpdateResult()
+        If txtCharacter.Text = "" Then
+            btnCharacter.Text = ""
+            Exit Sub
+        End If
+
+        If cbSmartReplace.Checked Then
+            Dim result As String = txtCharacter.Text & AccentsString '
+            pnlSmartReplace.BackColor = Color.DimGray
+
+            For Each pair As KeyValuePair(Of String, String) In SmartReplaceList
+                result = result.Replace(pair.Key, pair.Value)
+
+                If result.Contains(pair.Value) Then
+                    pnlSmartReplace.BackColor = Color.LimeGreen
+                End If
+            Next
+
+            btnCharacter.Text = result
+        Else
+            btnCharacter.Text = txtCharacter.Text & AccentsString
+        End If
+    End Sub
+
+    Private Sub ToggleAccent(sender As Object, e As EventArgs)
+        Dim button As AccentCheckButton = CType(sender, AccentCheckButton)
+
+        If (button.Checked) Then
+            AccentsList.Add(button.Text.Replace("◌", ""))
+        Else
+            AccentsList.Remove(button.Text.Replace("◌", ""))
+        End If
+
+        AccentsString = ""
+        For Each accent As String In AccentsList
+            AccentsString += accent
+        Next
+
+        UpdateResult()
+    End Sub
 
     Public Shared Sub AddToLocal()
         'If My.Computer.Keyboard.CtrlKeyDown Then
@@ -35,9 +78,21 @@
         Panel.Controls.Add(SymbolButton)
     End Sub
 
+    Public Sub InsertAccentButton(ByVal Text As String)
+        Dim AccentButton As New AccentCheckButton With {
+            .Text = "◌" + Text,
+            .BackColor = Color.Transparent,
+            .Padding = New Padding(0),
+            .Font = New Font("Calibri", 18, FontStyle.Bold),
+            .MinimumSize = New Size(42, 42),
+            .Margin = New Padding(1)
+        }
+        AddHandler AccentButton.Click, AddressOf ToggleAccent
+        AccentsLayoutPanel.Controls.Add(AccentButton)
+    End Sub
+
     Public Sub CharacterButtonClick(sender As Object, e As EventArgs)
         Dim Button As Button = CType(sender, Button)
-        If My.Computer.Keyboard.CtrlKeyDown Then Exit Sub
         InsertText(GetCurrentTexbox(), Button.Text)
     End Sub
 
@@ -52,5 +107,15 @@
         TextBox.Focus()
         TextBox.SelectionStart = CurrentPos + Text.Length
         TextBox.SelectionLength = 0
+    End Sub
+
+    Private Sub CharacterEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cbSmartReplace.Visible = My.Settings.SmartReplace
+        AccentsList.Clear()
+        AccentsString = ""
+        UpdateResult()
+
+        If Character = "" Then Character = "a"
+        txtCharacter.Text = Character
     End Sub
 End Class

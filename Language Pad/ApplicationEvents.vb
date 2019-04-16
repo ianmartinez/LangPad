@@ -18,23 +18,18 @@ Namespace My
             ssLoading.pbLoading.Value = 0
             ssLoading.lblLoading.Text = "Loading..."
 
-            If Settings.AccentMarks = True Then
-                ssLoading.lblLoading.Text = "Loading Accent Marks..."
-                For Each AccentMark As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Accents)
-                    frmMain.charEdit.InsertCharacterButton(AccentMark.Value, frmMain.charEdit.AccentsLayoutPanel)
+            ssLoading.lblLoading.Text = "Loading Accent Marks..."
+            For Each AccentMark As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Accents)
+                frmMain.charEdit.InsertAccentButton(AccentMark.Value)
 
-                    Dim SymbolButtonDictionary As New SymbolButton With {
-                        .Text = AccentMark.Value
-                    }
-                    AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
-                    frmDictionary.AccentsLayoutPanel.Controls.Add(SymbolButtonDictionary)
-                Next
-                ssLoading.pbLoading.Value = 10
-                ssLoading.Refresh()
-            Else
-                frmMain.charEdit.tcIPA.TabPages.Remove(frmMain.charEdit.AccentsTabPage)
-                frmDictionary.tcSymbols.TabPages.Remove(frmMain.charEdit.AccentsTabPage)
-            End If
+                Dim SymbolButtonDictionary As New SymbolButton With {
+                    .Text = AccentMark.Value
+                }
+                AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
+                frmDictionary.AccentsLayoutPanel.Controls.Add(SymbolButtonDictionary)
+            Next
+            ssLoading.pbLoading.Value = 10
+            ssLoading.Refresh()
 
             If Settings.IPAAffricates = True Then
                 ssLoading.lblLoading.Text = "Loading IPA Affricates..."

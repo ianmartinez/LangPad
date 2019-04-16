@@ -57,18 +57,6 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property AccentMarks() As Boolean
-            Get
-                Return CType(Me("AccentMarks"),Boolean)
-            End Get
-            Set
-                Me("AccentMarks") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
         Public Property IPAAffricates() As Boolean
             Get
                 Return CType(Me("IPAAffricates"),Boolean)

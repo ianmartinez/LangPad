@@ -55,9 +55,9 @@ Public Class dlgAccentMark
         AccentsString = ""
         UpdateResult()
 
-        For Each IPA As KeyValuePair(Of String, String) In Read(My.Resources.Accents)
+        For Each AccentMark As KeyValuePair(Of String, String) In Read(My.Resources.Accents)
             Dim SymbolButton As New AccentCheckButton With {
-                .Text = "◌" + IPA.Value,
+                .Text = "◌" + AccentMark.Value,
                 .BackColor = Color.Transparent
             }
 
