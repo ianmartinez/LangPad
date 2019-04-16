@@ -159,7 +159,7 @@ Module NotebookFileAccess
         If NewNotebook.CustomSymbols <> "" Then
             frmMain.charEdit.FilePanel.Controls.Clear()
 
-            Dim FileChars As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+            Dim FileChars As String() = NewNotebook.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
             For Each FileChar As String In FileChars
                 frmMain.charEdit.InsertCharacterButton(FileChar, frmMain.charEdit.FilePanel)
             Next
