@@ -73,10 +73,10 @@ Partial Class CharacterEditor
         Me.tcCharacters.Controls.Add(Me.tpCommon)
         Me.tcCharacters.Controls.Add(Me.tpIPA)
         Me.tcCharacters.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tcCharacters.Location = New System.Drawing.Point(0, 302)
+        Me.tcCharacters.Location = New System.Drawing.Point(0, 315)
         Me.tcCharacters.Name = "tcCharacters"
         Me.tcCharacters.SelectedIndex = 0
-        Me.tcCharacters.Size = New System.Drawing.Size(293, 354)
+        Me.tcCharacters.Size = New System.Drawing.Size(293, 341)
         Me.tcCharacters.TabIndex = 74
         '
         'tpFile
@@ -85,7 +85,7 @@ Partial Class CharacterEditor
         Me.tpFile.Location = New System.Drawing.Point(4, 22)
         Me.tpFile.Name = "tpFile"
         Me.tpFile.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpFile.Size = New System.Drawing.Size(285, 328)
+        Me.tpFile.Size = New System.Drawing.Size(285, 248)
         Me.tpFile.TabIndex = 0
         Me.tpFile.Text = "File"
         Me.tpFile.UseVisualStyleBackColor = True
@@ -99,7 +99,7 @@ Partial Class CharacterEditor
         Me.FilePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.FilePanel.Name = "FilePanel"
         Me.FilePanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.FilePanel.Size = New System.Drawing.Size(279, 322)
+        Me.FilePanel.Size = New System.Drawing.Size(279, 242)
         Me.FilePanel.TabIndex = 10
         '
         'tpLocal
@@ -131,7 +131,7 @@ Partial Class CharacterEditor
         Me.tpCommon.Location = New System.Drawing.Point(4, 22)
         Me.tpCommon.Name = "tpCommon"
         Me.tpCommon.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCommon.Size = New System.Drawing.Size(285, 328)
+        Me.tpCommon.Size = New System.Drawing.Size(285, 248)
         Me.tpCommon.TabIndex = 2
         Me.tpCommon.Text = "Common"
         Me.tpCommon.UseVisualStyleBackColor = True
@@ -145,7 +145,7 @@ Partial Class CharacterEditor
         Me.CommonLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.CommonLayoutPanel.Name = "CommonLayoutPanel"
         Me.CommonLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.CommonLayoutPanel.Size = New System.Drawing.Size(279, 322)
+        Me.CommonLayoutPanel.Size = New System.Drawing.Size(279, 242)
         Me.CommonLayoutPanel.TabIndex = 9
         '
         'tpIPA
@@ -154,7 +154,7 @@ Partial Class CharacterEditor
         Me.tpIPA.Location = New System.Drawing.Point(4, 22)
         Me.tpIPA.Name = "tpIPA"
         Me.tpIPA.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpIPA.Size = New System.Drawing.Size(285, 328)
+        Me.tpIPA.Size = New System.Drawing.Size(285, 315)
         Me.tpIPA.TabIndex = 3
         Me.tpIPA.Text = "IPA"
         Me.tpIPA.UseVisualStyleBackColor = True
@@ -171,7 +171,7 @@ Partial Class CharacterEditor
         Me.tcIPA.Margin = New System.Windows.Forms.Padding(2)
         Me.tcIPA.Name = "tcIPA"
         Me.tcIPA.SelectedIndex = 0
-        Me.tcIPA.Size = New System.Drawing.Size(279, 322)
+        Me.tcIPA.Size = New System.Drawing.Size(279, 309)
         Me.tcIPA.TabIndex = 72
         '
         'ConsonantsTabPage
@@ -180,7 +180,7 @@ Partial Class CharacterEditor
         Me.ConsonantsTabPage.Location = New System.Drawing.Point(4, 22)
         Me.ConsonantsTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.ConsonantsTabPage.Name = "ConsonantsTabPage"
-        Me.ConsonantsTabPage.Size = New System.Drawing.Size(271, 296)
+        Me.ConsonantsTabPage.Size = New System.Drawing.Size(271, 283)
         Me.ConsonantsTabPage.TabIndex = 0
         Me.ConsonantsTabPage.Text = "Consonants"
         Me.ConsonantsTabPage.UseVisualStyleBackColor = True
@@ -195,7 +195,7 @@ Partial Class CharacterEditor
         Me.ConsonantsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ConsonantsLayoutPanel.Name = "ConsonantsLayoutPanel"
         Me.ConsonantsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(271, 296)
+        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(271, 283)
         Me.ConsonantsLayoutPanel.TabIndex = 7
         '
         'AffricatesTabPage
@@ -304,13 +304,14 @@ Partial Class CharacterEditor
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(6)
-        Me.Panel1.Size = New System.Drawing.Size(293, 302)
+        Me.Panel1.Size = New System.Drawing.Size(293, 315)
         Me.Panel1.TabIndex = 75
         '
         'pnlSmartReplace
         '
+        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
-        Me.pnlSmartReplace.Location = New System.Drawing.Point(89, 86)
+        Me.pnlSmartReplace.Location = New System.Drawing.Point(95, 11)
         Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlSmartReplace.Name = "pnlSmartReplace"
         Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
@@ -318,10 +319,11 @@ Partial Class CharacterEditor
         '
         'cbSmartReplace
         '
+        Me.cbSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cbSmartReplace.AutoSize = True
         Me.cbSmartReplace.Checked = True
         Me.cbSmartReplace.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbSmartReplace.Location = New System.Drawing.Point(107, 86)
+        Me.cbSmartReplace.Location = New System.Drawing.Point(113, 10)
         Me.cbSmartReplace.Margin = New System.Windows.Forms.Padding(2)
         Me.cbSmartReplace.Name = "cbSmartReplace"
         Me.cbSmartReplace.Size = New System.Drawing.Size(96, 17)
@@ -332,19 +334,19 @@ Partial Class CharacterEditor
         'Button1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button1.Location = New System.Drawing.Point(190, 106)
+        Me.Button1.Location = New System.Drawing.Point(227, 57)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(76, 32)
+        Me.Button1.Size = New System.Drawing.Size(60, 32)
         Me.Button1.TabIndex = 79
-        Me.Button1.Text = "Clipboard"
+        Me.Button1.Text = "Copy"
         '
         'gbAccents
         '
         Me.gbAccents.Controls.Add(Me.AccentsLayoutPanel)
         Me.gbAccents.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.gbAccents.Location = New System.Drawing.Point(6, 170)
+        Me.gbAccents.Location = New System.Drawing.Point(6, 95)
         Me.gbAccents.Name = "gbAccents"
-        Me.gbAccents.Size = New System.Drawing.Size(281, 126)
+        Me.gbAccents.Size = New System.Drawing.Size(281, 214)
         Me.gbAccents.TabIndex = 78
         Me.gbAccents.TabStop = False
         Me.gbAccents.Text = "Accent Marks"
@@ -358,32 +360,32 @@ Partial Class CharacterEditor
         Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(275, 107)
+        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(275, 195)
         Me.AccentsLayoutPanel.TabIndex = 10
         '
         'txtCharacter
         '
         Me.txtCharacter.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtCharacter.Location = New System.Drawing.Point(26, 144)
+        Me.txtCharacter.Location = New System.Drawing.Point(95, 31)
         Me.txtCharacter.Name = "txtCharacter"
-        Me.txtCharacter.Size = New System.Drawing.Size(240, 20)
+        Me.txtCharacter.Size = New System.Drawing.Size(192, 20)
         Me.txtCharacter.TabIndex = 77
         '
         'btnAddToFile
         '
         Me.btnAddToFile.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAddToFile.Location = New System.Drawing.Point(108, 106)
+        Me.btnAddToFile.Location = New System.Drawing.Point(161, 57)
         Me.btnAddToFile.Name = "btnAddToFile"
-        Me.btnAddToFile.Size = New System.Drawing.Size(76, 32)
+        Me.btnAddToFile.Size = New System.Drawing.Size(60, 32)
         Me.btnAddToFile.TabIndex = 76
         Me.btnAddToFile.Text = "File"
         '
         'btnAddToLocal
         '
         Me.btnAddToLocal.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAddToLocal.Location = New System.Drawing.Point(26, 106)
+        Me.btnAddToLocal.Location = New System.Drawing.Point(95, 57)
         Me.btnAddToLocal.Name = "btnAddToLocal"
-        Me.btnAddToLocal.Size = New System.Drawing.Size(76, 32)
+        Me.btnAddToLocal.Size = New System.Drawing.Size(60, 32)
         Me.btnAddToLocal.TabIndex = 1
         Me.btnAddToLocal.Text = "Local"
         '
@@ -391,9 +393,9 @@ Partial Class CharacterEditor
         '
         Me.btnCharacter.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnCharacter.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCharacter.Location = New System.Drawing.Point(110, 9)
+        Me.btnCharacter.Location = New System.Drawing.Point(9, 9)
         Me.btnCharacter.Name = "btnCharacter"
-        Me.btnCharacter.Size = New System.Drawing.Size(72, 72)
+        Me.btnCharacter.Size = New System.Drawing.Size(80, 80)
         Me.btnCharacter.TabIndex = 0
         Me.btnCharacter.Text = "a"
         Me.btnCharacter.UseVisualStyleBackColor = True
@@ -404,6 +406,7 @@ Partial Class CharacterEditor
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.tcCharacters)
         Me.Controls.Add(Me.Panel1)
+        Me.MinimumSize = New System.Drawing.Size(293, 0)
         Me.Name = "CharacterEditor"
         Me.Size = New System.Drawing.Size(293, 656)
         Me.tcCharacters.ResumeLayout(False)

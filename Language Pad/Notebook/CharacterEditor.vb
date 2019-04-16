@@ -81,11 +81,10 @@
     Public Sub InsertAccentButton(ByVal Text As String)
         Dim AccentButton As New AccentCheckButton With {
             .Text = "◌" + Text,
-            .BackColor = Color.Transparent,
+            .Font = New Font("Calibri", 18, FontStyle.Regular),
+            .Margin = New Padding(1),
             .Padding = New Padding(0),
-            .Font = New Font("Calibri", 18, FontStyle.Bold),
-            .MinimumSize = New Size(42, 42),
-            .Margin = New Padding(1)
+            .MinimumSize = New Size(45, 45)
         }
         AddHandler AccentButton.Click, AddressOf ToggleAccent
         AccentsLayoutPanel.Controls.Add(AccentButton)
@@ -110,12 +109,16 @@
     End Sub
 
     Private Sub CharacterEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Character = "" Then Character = "a"
+        txtCharacter.Text = Character
+
         cbSmartReplace.Visible = My.Settings.SmartReplace
         AccentsList.Clear()
         AccentsString = ""
         UpdateResult()
+    End Sub
 
-        If Character = "" Then Character = "a"
-        txtCharacter.Text = Character
+    Private Sub TxtCharacter_TextChanged(sender As Object, e As EventArgs) Handles txtCharacter.TextChanged
+        UpdateResult()
     End Sub
 End Class

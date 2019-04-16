@@ -329,9 +329,9 @@ Partial Class frmMain
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.StylizedPanel1)
-        Me.SplitContainer2.Panel2MinSize = 275
+        Me.SplitContainer2.Panel2MinSize = 325
         Me.SplitContainer2.Size = New System.Drawing.Size(955, 369)
-        Me.SplitContainer2.SplitterDistance = 677
+        Me.SplitContainer2.SplitterDistance = 297
         Me.SplitContainer2.SplitterWidth = 2
         Me.SplitContainer2.TabIndex = 1
         '
@@ -342,7 +342,7 @@ Partial Class frmMain
         Me.tcNotebook.Margin = New System.Windows.Forms.Padding(2)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(677, 367)
+        Me.tcNotebook.Size = New System.Drawing.Size(297, 367)
         Me.tcNotebook.TabIndex = 73
         '
         'StylizedPanel1
@@ -354,7 +354,7 @@ Partial Class frmMain
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(276, 369)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(656, 369)
         Me.StylizedPanel1.TabIndex = 13
         '
         'tcNotebookProperties
@@ -365,7 +365,7 @@ Partial Class frmMain
         Me.tcNotebookProperties.Location = New System.Drawing.Point(0, 0)
         Me.tcNotebookProperties.Name = "tcNotebookProperties"
         Me.tcNotebookProperties.SelectedIndex = 0
-        Me.tcNotebookProperties.Size = New System.Drawing.Size(276, 369)
+        Me.tcNotebookProperties.Size = New System.Drawing.Size(656, 369)
         Me.tcNotebookProperties.TabIndex = 73
         '
         'tpNotebookProperties
@@ -374,7 +374,7 @@ Partial Class frmMain
         Me.tpNotebookProperties.Location = New System.Drawing.Point(4, 22)
         Me.tpNotebookProperties.Name = "tpNotebookProperties"
         Me.tpNotebookProperties.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpNotebookProperties.Size = New System.Drawing.Size(268, 343)
+        Me.tpNotebookProperties.Size = New System.Drawing.Size(648, 343)
         Me.tpNotebookProperties.TabIndex = 0
         Me.tpNotebookProperties.Text = "Properties"
         '
@@ -386,7 +386,7 @@ Partial Class frmMain
         Me.pnlProperties.MinimumSize = New System.Drawing.Size(262, 0)
         Me.pnlProperties.Name = "pnlProperties"
         Me.pnlProperties.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.pnlProperties.Size = New System.Drawing.Size(262, 337)
+        Me.pnlProperties.Size = New System.Drawing.Size(642, 337)
         Me.pnlProperties.TabIndex = 72
         '
         'tpCharacters
@@ -395,16 +395,18 @@ Partial Class frmMain
         Me.tpCharacters.Location = New System.Drawing.Point(4, 22)
         Me.tpCharacters.Name = "tpCharacters"
         Me.tpCharacters.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCharacters.Size = New System.Drawing.Size(268, 343)
+        Me.tpCharacters.Size = New System.Drawing.Size(648, 343)
         Me.tpCharacters.TabIndex = 1
         Me.tpCharacters.Text = "Characters"
         '
         'charEdit
         '
+        Me.charEdit.Character = "a"
         Me.charEdit.Dock = System.Windows.Forms.DockStyle.Fill
         Me.charEdit.Location = New System.Drawing.Point(3, 3)
+        Me.charEdit.MinimumSize = New System.Drawing.Size(293, 0)
         Me.charEdit.Name = "charEdit"
-        Me.charEdit.Size = New System.Drawing.Size(262, 337)
+        Me.charEdit.Size = New System.Drawing.Size(642, 337)
         Me.charEdit.TabIndex = 0
         '
         'dlgSaveNotebook
