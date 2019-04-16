@@ -315,7 +315,6 @@ Partial Class CharacterEditor
         Me.pnlSmartReplace.Name = "pnlSmartReplace"
         Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
         Me.pnlSmartReplace.TabIndex = 87
-        Me.pnlSmartReplace.Visible = False
         '
         'cbSmartReplace
         '
