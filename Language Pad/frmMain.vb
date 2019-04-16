@@ -28,8 +28,8 @@ Public Class frmMain
 
         tcNotebook.TabPages.Clear()
         rtbList.Clear()
-        NotebookEditor1.SuspendLayout()
-        NotebookEditor1.lbPages.Items.Clear()
+        pnlProperties.SuspendLayout()
+        pnlProperties.lbPages.Items.Clear()
 
         For Each p As NotebookPage In CurrentDocument.Pages
             Dim Tab As New TabPage With {
@@ -49,7 +49,7 @@ Public Class frmMain
             Tab.Controls.Add(rtbDoc)
             tcNotebook.TabPages.Add(Tab)
 
-            NotebookEditor1.lbPages.Items.Add(p.Title)
+            pnlProperties.lbPages.Items.Add(p.Title)
 
             rtbList.Add(rtbDoc)
         Next
@@ -57,15 +57,15 @@ Public Class frmMain
         tcNotebook.SelectedIndex = 0
         SelectedDocument = rtbList.Item(0)
         ResumeLayout()
-        NotebookEditor1.ResumeLayout()
+        pnlProperties.ResumeLayout()
 
-        NotebookEditor1.txtTitle.Text = CurrentDocument.Title
-        NotebookEditor1.txtLanguage.Text = CurrentDocument.Language
-        NotebookEditor1.txtAuthor.Text = CurrentDocument.Author
-        NotebookEditor1.txtWebsite.Text = CurrentDocument.Website
-        NotebookEditor1.txtInfo.Text = CurrentDocument.Info
+        pnlProperties.txtTitle.Text = CurrentDocument.Title
+        pnlProperties.txtLanguage.Text = CurrentDocument.Language
+        pnlProperties.txtAuthor.Text = CurrentDocument.Author
+        pnlProperties.txtWebsite.Text = CurrentDocument.Website
+        pnlProperties.txtInfo.Text = CurrentDocument.Info
 
-        NotebookEditor1.lbPages.SelectedIndex = 0
+        pnlProperties.lbPages.SelectedIndex = 0
         FirstTabUpdate = True
 
         lblPageCount.Text = "Page Count: " & CurrentDocument.Pages.Count
@@ -251,7 +251,7 @@ Public Class frmMain
         btnReplace.Top = txtFind.Top - (btnReplace.Height / 2 - txtFind.Height / 2)
         btnReplaceAll.Top = txtFind.Top - (btnReplaceAll.Height / 2 - txtFind.Height / 2)
 
-        NotebookEditor1.SetTheme(Theme)
+        pnlProperties.SetTheme(Theme)
         dlgAbout.BackColor = Theme.DialogBack
         dlgAccentMark.BackColor = Theme.DialogBack
         dlgAddPage.BackColor = Theme.DialogBack
@@ -348,7 +348,7 @@ Public Class frmMain
         CurrentDocument.Modified = False
         KeyPreview = True
 
-        SplitContainer2.SplitterDistance = (SplitContainer2.Width - NotebookEditor1.MinimumSize.Width) - 30
+        SplitContainer2.SplitterDistance = (SplitContainer2.Width - pnlProperties.MinimumSize.Width) - 30
 
         For i As Integer = 0 To 50
             IndentToolStripComboBox.Items.Add(i)
@@ -486,7 +486,7 @@ Public Class frmMain
         If Moving = False Then
             SaveTabs()
             SelectedDocument = rtbList.Item(tcNotebook.SelectedIndex)
-            NotebookEditor1.lbPages.SelectedIndex = tcNotebook.SelectedIndex
+            pnlProperties.lbPages.SelectedIndex = tcNotebook.SelectedIndex
             frmRTF.txtRTF.Text = SelectedDocument.Rtf
             WordWrapToolStripMenuItem.Checked = SelectedDocument.WordWrap
             SelectedDocument_TextChanged(Me, e)
@@ -568,7 +568,7 @@ Public Class frmMain
         }
 
         tcNotebook.TabPages.Clear()
-        NotebookEditor1.lbPages.Items.Clear()
+        pnlProperties.lbPages.Items.Clear()
 
         Dim new_page As NotebookPage = New NotebookPage With {
             .Title = "Untitled",

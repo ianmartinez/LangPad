@@ -25,21 +25,7 @@ Partial Class PropertiesEditor
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PropertiesEditor))
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
-        Me.DoubleBufferedPanel2 = New TundraLib.DoubleBufferedPanel()
-        Me.txtLanguage = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnGo = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtInfo = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtAuthor = New System.Windows.Forms.TextBox()
-        Me.txtWebsite = New System.Windows.Forms.TextBox()
-        Me.txtTitle = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.DocumentToolStripContainer = New System.Windows.Forms.ToolStripContainer()
-        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
-        Me.lbPages = New System.Windows.Forms.ListBox()
         Me.DocumentToolStrip = New System.Windows.Forms.ToolStrip()
         Me.PageUpToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PageDownToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -54,149 +40,27 @@ Partial Class PropertiesEditor
         Me.ExportToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DictionaryToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.DoubleBufferedPanel2.SuspendLayout()
+        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
+        Me.lbPages = New System.Windows.Forms.ListBox()
+        Me.DoubleBufferedPanel2 = New TundraLib.DoubleBufferedPanel()
+        Me.txtLanguage = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnGo = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtInfo = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtAuthor = New System.Windows.Forms.TextBox()
+        Me.txtWebsite = New System.Windows.Forms.TextBox()
+        Me.txtTitle = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.DocumentToolStripContainer.ContentPanel.SuspendLayout()
         Me.DocumentToolStripContainer.TopToolStripPanel.SuspendLayout()
         Me.DocumentToolStripContainer.SuspendLayout()
-        Me.StylizedPanel1.SuspendLayout()
         Me.DocumentToolStrip.SuspendLayout()
+        Me.StylizedPanel1.SuspendLayout()
+        Me.DoubleBufferedPanel2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'DoubleBufferedPanel2
-        '
-        Me.DoubleBufferedPanel2.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.DoubleBufferedPanel2.Controls.Add(Me.txtLanguage)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.Label5)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.btnGo)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.Label4)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.txtInfo)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.Label3)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.txtAuthor)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.txtWebsite)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.txtTitle)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.Label2)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.Label1)
-        Me.DoubleBufferedPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.DoubleBufferedPanel2.ForeColor = System.Drawing.Color.Black
-        Me.DoubleBufferedPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.DoubleBufferedPanel2.Margin = New System.Windows.Forms.Padding(2)
-        Me.DoubleBufferedPanel2.Name = "DoubleBufferedPanel2"
-        Me.DoubleBufferedPanel2.Padding = New System.Windows.Forms.Padding(1)
-        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(285, 307)
-        Me.DoubleBufferedPanel2.TabIndex = 78
-        '
-        'txtLanguage
-        '
-        Me.txtLanguage.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtLanguage.Location = New System.Drawing.Point(20, 76)
-        Me.txtLanguage.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
-        Me.txtLanguage.Name = "txtLanguage"
-        Me.txtLanguage.Size = New System.Drawing.Size(246, 20)
-        Me.txtLanguage.TabIndex = 80
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(18, 57)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(58, 13)
-        Me.Label5.TabIndex = 81
-        Me.Label5.Text = "Language:"
-        '
-        'btnGo
-        '
-        Me.btnGo.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnGo.Location = New System.Drawing.Point(227, 156)
-        Me.btnGo.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
-        Me.btnGo.Name = "btnGo"
-        Me.btnGo.Size = New System.Drawing.Size(38, 22)
-        Me.btnGo.TabIndex = 79
-        Me.btnGo.Text = "Go"
-        Me.btnGo.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(18, 182)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(28, 13)
-        Me.Label4.TabIndex = 78
-        Me.Label4.Text = "Info:"
-        '
-        'txtInfo
-        '
-        Me.txtInfo.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtInfo.Location = New System.Drawing.Point(20, 201)
-        Me.txtInfo.Margin = New System.Windows.Forms.Padding(2, 4, 2, 4)
-        Me.txtInfo.Multiline = True
-        Me.txtInfo.Name = "txtInfo"
-        Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo.Size = New System.Drawing.Size(246, 85)
-        Me.txtInfo.TabIndex = 5
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(18, 140)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 13)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Website:"
-        '
-        'txtAuthor
-        '
-        Me.txtAuthor.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtAuthor.Location = New System.Drawing.Point(20, 118)
-        Me.txtAuthor.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
-        Me.txtAuthor.Name = "txtAuthor"
-        Me.txtAuthor.Size = New System.Drawing.Size(246, 20)
-        Me.txtAuthor.TabIndex = 2
-        '
-        'txtWebsite
-        '
-        Me.txtWebsite.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtWebsite.Location = New System.Drawing.Point(20, 159)
-        Me.txtWebsite.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
-        Me.txtWebsite.Name = "txtWebsite"
-        Me.txtWebsite.Size = New System.Drawing.Size(204, 20)
-        Me.txtWebsite.TabIndex = 3
-        '
-        'txtTitle
-        '
-        Me.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtTitle.Location = New System.Drawing.Point(20, 35)
-        Me.txtTitle.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
-        Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(246, 20)
-        Me.txtTitle.TabIndex = 1
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 99)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Author:"
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(18, 15)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(30, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Title:"
         '
         'DocumentToolStripContainer
         '
@@ -208,49 +72,24 @@ Partial Class PropertiesEditor
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel1)
         Me.DocumentToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(285, 153)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(285, 128)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'DocumentToolStripContainer.LeftToolStripPanel
         '
-        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 307)
+        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 332)
         Me.DocumentToolStripContainer.Margin = New System.Windows.Forms.Padding(2)
         Me.DocumentToolStripContainer.Name = "DocumentToolStripContainer"
         '
         'DocumentToolStripContainer.RightToolStripPanel
         '
-        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(285, 182)
+        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(285, 157)
         Me.DocumentToolStripContainer.TabIndex = 81
         Me.DocumentToolStripContainer.Text = "ToolStripContainer1"
         '
         'DocumentToolStripContainer.TopToolStripPanel
         '
         Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.DocumentToolStrip)
-        '
-        'StylizedPanel1
-        '
-        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedPanel1.Controls.Add(Me.lbPages)
-        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
-        Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(285, 153)
-        Me.StylizedPanel1.TabIndex = 80
-        '
-        'lbPages
-        '
-        Me.lbPages.BackColor = System.Drawing.Color.White
-        Me.lbPages.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.lbPages.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbPages.ForeColor = System.Drawing.Color.Black
-        Me.lbPages.IntegralHeight = False
-        Me.lbPages.Location = New System.Drawing.Point(1, 0)
-        Me.lbPages.Margin = New System.Windows.Forms.Padding(2)
-        Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(284, 153)
-        Me.lbPages.TabIndex = 15
         '
         'DocumentToolStrip
         '
@@ -374,11 +213,169 @@ Partial Class PropertiesEditor
         Me.DictionaryToolStripButton.Size = New System.Drawing.Size(26, 26)
         Me.DictionaryToolStripButton.Text = "Dictionary"
         '
+        'StylizedPanel1
+        '
+        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedPanel1.Controls.Add(Me.lbPages)
+        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
+        Me.StylizedPanel1.Name = "StylizedPanel1"
+        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(285, 128)
+        Me.StylizedPanel1.TabIndex = 80
+        '
+        'lbPages
+        '
+        Me.lbPages.BackColor = System.Drawing.Color.White
+        Me.lbPages.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lbPages.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbPages.ForeColor = System.Drawing.Color.Black
+        Me.lbPages.IntegralHeight = False
+        Me.lbPages.Location = New System.Drawing.Point(1, 0)
+        Me.lbPages.Margin = New System.Windows.Forms.Padding(2)
+        Me.lbPages.Name = "lbPages"
+        Me.lbPages.Size = New System.Drawing.Size(284, 128)
+        Me.lbPages.TabIndex = 15
+        '
+        'DoubleBufferedPanel2
+        '
+        Me.DoubleBufferedPanel2.Controls.Add(Me.txtLanguage)
+        Me.DoubleBufferedPanel2.Controls.Add(Me.Label5)
+        Me.DoubleBufferedPanel2.Controls.Add(Me.btnGo)
+        Me.DoubleBufferedPanel2.Controls.Add(Me.Label4)
+        Me.DoubleBufferedPanel2.Controls.Add(Me.txtInfo)
+        Me.DoubleBufferedPanel2.Controls.Add(Me.Label3)
+        Me.DoubleBufferedPanel2.Controls.Add(Me.txtAuthor)
+        Me.DoubleBufferedPanel2.Controls.Add(Me.txtWebsite)
+        Me.DoubleBufferedPanel2.Controls.Add(Me.txtTitle)
+        Me.DoubleBufferedPanel2.Controls.Add(Me.Label2)
+        Me.DoubleBufferedPanel2.Controls.Add(Me.Label1)
+        Me.DoubleBufferedPanel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.DoubleBufferedPanel2.Location = New System.Drawing.Point(0, 0)
+        Me.DoubleBufferedPanel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.DoubleBufferedPanel2.Name = "DoubleBufferedPanel2"
+        Me.DoubleBufferedPanel2.Padding = New System.Windows.Forms.Padding(1)
+        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(285, 332)
+        Me.DoubleBufferedPanel2.TabIndex = 78
+        '
+        'txtLanguage
+        '
+        Me.txtLanguage.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtLanguage.Location = New System.Drawing.Point(20, 76)
+        Me.txtLanguage.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
+        Me.txtLanguage.Name = "txtLanguage"
+        Me.txtLanguage.Size = New System.Drawing.Size(246, 20)
+        Me.txtLanguage.TabIndex = 80
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(18, 57)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(58, 13)
+        Me.Label5.TabIndex = 81
+        Me.Label5.Text = "Language:"
+        '
+        'btnGo
+        '
+        Me.btnGo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnGo.Location = New System.Drawing.Point(228, 164)
+        Me.btnGo.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
+        Me.btnGo.Name = "btnGo"
+        Me.btnGo.Size = New System.Drawing.Size(38, 22)
+        Me.btnGo.TabIndex = 79
+        Me.btnGo.Text = "Go"
+        Me.btnGo.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(18, 192)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(28, 13)
+        Me.Label4.TabIndex = 78
+        Me.Label4.Text = "Info:"
+        '
+        'txtInfo
+        '
+        Me.txtInfo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtInfo.Location = New System.Drawing.Point(20, 211)
+        Me.txtInfo.Margin = New System.Windows.Forms.Padding(2, 4, 2, 4)
+        Me.txtInfo.Multiline = True
+        Me.txtInfo.Name = "txtInfo"
+        Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtInfo.Size = New System.Drawing.Size(246, 111)
+        Me.txtInfo.TabIndex = 5
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(18, 147)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Website:"
+        '
+        'txtAuthor
+        '
+        Me.txtAuthor.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtAuthor.Location = New System.Drawing.Point(20, 121)
+        Me.txtAuthor.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
+        Me.txtAuthor.Name = "txtAuthor"
+        Me.txtAuthor.Size = New System.Drawing.Size(246, 20)
+        Me.txtAuthor.TabIndex = 2
+        '
+        'txtWebsite
+        '
+        Me.txtWebsite.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtWebsite.Location = New System.Drawing.Point(20, 166)
+        Me.txtWebsite.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
+        Me.txtWebsite.Name = "txtWebsite"
+        Me.txtWebsite.Size = New System.Drawing.Size(204, 20)
+        Me.txtWebsite.TabIndex = 3
+        '
+        'txtTitle
+        '
+        Me.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtTitle.Location = New System.Drawing.Point(20, 31)
+        Me.txtTitle.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
+        Me.txtTitle.Name = "txtTitle"
+        Me.txtTitle.Size = New System.Drawing.Size(246, 20)
+        Me.txtTitle.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(18, 102)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(41, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Author:"
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(18, 11)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(30, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Title:"
+        '
         'PropertiesEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Transparent
         Me.Controls.Add(Me.DocumentToolStripContainer)
         Me.Controls.Add(Me.DoubleBufferedPanel2)
         Me.DoubleBuffered = True
@@ -386,16 +383,16 @@ Partial Class PropertiesEditor
         Me.MinimumSize = New System.Drawing.Size(272, 0)
         Me.Name = "PropertiesEditor"
         Me.Size = New System.Drawing.Size(285, 489)
-        Me.DoubleBufferedPanel2.ResumeLayout(False)
-        Me.DoubleBufferedPanel2.PerformLayout()
         Me.DocumentToolStripContainer.ContentPanel.ResumeLayout(False)
         Me.DocumentToolStripContainer.TopToolStripPanel.ResumeLayout(False)
         Me.DocumentToolStripContainer.TopToolStripPanel.PerformLayout()
         Me.DocumentToolStripContainer.ResumeLayout(False)
         Me.DocumentToolStripContainer.PerformLayout()
-        Me.StylizedPanel1.ResumeLayout(False)
         Me.DocumentToolStrip.ResumeLayout(False)
         Me.DocumentToolStrip.PerformLayout()
+        Me.StylizedPanel1.ResumeLayout(False)
+        Me.DoubleBufferedPanel2.ResumeLayout(False)
+        Me.DoubleBufferedPanel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

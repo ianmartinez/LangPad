@@ -10,10 +10,6 @@ Public Class PropertiesEditor
         Color1 = Theme.PanelBack
         Color2 = Theme.PanelBack
         VerticalMenuGradient = Theme.VerticalMenuGradient
-        DoubleBufferedPanel2.BackColor = Theme.PanelBack
-        BackColor = Theme.PanelBack
-        DoubleBufferedPanel2.ForeColor = Theme.PanelText
-
         DocumentToolStrip.Renderer = Theme.GetToolStripRenderer()
 
         Refresh()
