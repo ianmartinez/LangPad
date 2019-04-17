@@ -484,7 +484,7 @@ Partial Class CharacterEditor
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(267, 50)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Case"
+        Me.TabPage2.Text = "Change Case"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'btnUppercase
