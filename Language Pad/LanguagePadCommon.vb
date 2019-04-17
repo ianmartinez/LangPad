@@ -4,7 +4,7 @@ Imports TundraLib.Themes
 
 Module LanguagePadCommon
     Public CurrentDocument As New NotebookFile
-    Public NTVersion As Decimal = 2.0
+    Public NTVersion As Decimal = 2.1
     Public FirstTabUpdate As Boolean = False
     Public Initialized As Boolean = False
     Public SmartReplaceList As Dictionary(Of String, String) = New Dictionary(Of String, String)
