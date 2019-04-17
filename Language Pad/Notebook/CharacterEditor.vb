@@ -120,11 +120,22 @@
         UpdateResult()
     End Sub
 
+    Private Function GetButtonTextFromMenu(sender As Object) As String
+        Dim currentItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
+        Dim cms As ContextMenuStrip = CType(currentItem.Owner, ContextMenuStrip)
+        Return CType(cms.SourceControl, Button).Text
+    End Function
+
     Private Sub TxtCharacter_TextChanged(sender As Object, e As EventArgs) Handles txtCharacter.TextChanged
         UpdateResult()
     End Sub
 
     Private Sub CopyToClipboardMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToClipboardMenuItem.Click
-        Clipboard.SetText(CType(sender, Button).Text)
+        Clipboard.SetText(GetButtonTextFromMenu(sender))
+    End Sub
+
+    Private Sub CopyToEditorMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToEditorMenuItem.Click
+        txtCharacter.Text = GetButtonTextFromMenu(sender)
+
     End Sub
 End Class

@@ -43,6 +43,7 @@ Partial Class CharacterEditor
         Me.OtherTabPage = New System.Windows.Forms.TabPage()
         Me.OtherLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnCharacter = New System.Windows.Forms.Button()
         Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.cbSmartReplace = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -51,7 +52,6 @@ Partial Class CharacterEditor
         Me.txtCharacter = New System.Windows.Forms.TextBox()
         Me.btnAddToFile = New System.Windows.Forms.Button()
         Me.btnAddToLocal = New System.Windows.Forms.Button()
-        Me.btnCharacter = New System.Windows.Forms.Button()
         Me.menuCharButton = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CopyToEditorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -315,6 +315,16 @@ Partial Class CharacterEditor
         Me.Panel1.Size = New System.Drawing.Size(293, 315)
         Me.Panel1.TabIndex = 75
         '
+        'btnCharacter
+        '
+        Me.btnCharacter.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCharacter.Location = New System.Drawing.Point(9, 9)
+        Me.btnCharacter.Name = "btnCharacter"
+        Me.btnCharacter.Size = New System.Drawing.Size(80, 80)
+        Me.btnCharacter.TabIndex = 88
+        Me.btnCharacter.Text = "a"
+        Me.btnCharacter.UseVisualStyleBackColor = True
+        '
         'pnlSmartReplace
         '
         Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -342,7 +352,7 @@ Partial Class CharacterEditor
         'Button1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button1.Location = New System.Drawing.Point(227, 57)
+        Me.Button1.Location = New System.Drawing.Point(95, 57)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(60, 32)
         Me.Button1.TabIndex = 79
@@ -382,7 +392,7 @@ Partial Class CharacterEditor
         'btnAddToFile
         '
         Me.btnAddToFile.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAddToFile.Location = New System.Drawing.Point(95, 57)
+        Me.btnAddToFile.Location = New System.Drawing.Point(161, 57)
         Me.btnAddToFile.Name = "btnAddToFile"
         Me.btnAddToFile.Size = New System.Drawing.Size(60, 32)
         Me.btnAddToFile.TabIndex = 76
@@ -391,32 +401,22 @@ Partial Class CharacterEditor
         'btnAddToLocal
         '
         Me.btnAddToLocal.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAddToLocal.Location = New System.Drawing.Point(161, 57)
+        Me.btnAddToLocal.Location = New System.Drawing.Point(227, 57)
         Me.btnAddToLocal.Name = "btnAddToLocal"
         Me.btnAddToLocal.Size = New System.Drawing.Size(60, 32)
         Me.btnAddToLocal.TabIndex = 1
         Me.btnAddToLocal.Text = "Local"
         '
-        'btnCharacter
-        '
-        Me.btnCharacter.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCharacter.Location = New System.Drawing.Point(9, 9)
-        Me.btnCharacter.Name = "btnCharacter"
-        Me.btnCharacter.Size = New System.Drawing.Size(80, 80)
-        Me.btnCharacter.TabIndex = 88
-        Me.btnCharacter.Text = "a"
-        Me.btnCharacter.UseVisualStyleBackColor = True
-        '
         'menuCharButton
         '
-        Me.menuCharButton.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToEditorMenuItem, Me.ToolStripSeparator1, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem, Me.CopyToClipboardMenuItem})
+        Me.menuCharButton.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToEditorMenuItem, Me.ToolStripSeparator1, Me.CopyToClipboardMenuItem, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem})
         Me.menuCharButton.Name = "menuCharButton"
         Me.menuCharButton.Size = New System.Drawing.Size(181, 120)
         '
         'CopyToEditorMenuItem
         '
         Me.CopyToEditorMenuItem.Name = "CopyToEditorMenuItem"
-        Me.CopyToEditorMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.CopyToEditorMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CopyToEditorMenuItem.Text = "Copy to Editor"
         '
         'ToolStripSeparator1
@@ -439,7 +439,7 @@ Partial Class CharacterEditor
         'CopyToClipboardMenuItem
         '
         Me.CopyToClipboardMenuItem.Name = "CopyToClipboardMenuItem"
-        Me.CopyToClipboardMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyToClipboardMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.CopyToClipboardMenuItem.Text = "Copy to Clipboard"
         Me.CopyToClipboardMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
