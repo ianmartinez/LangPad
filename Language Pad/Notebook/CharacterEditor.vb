@@ -3,9 +3,11 @@
     Public Property Character As String
     Private AccentsList As List(Of String) = New List(Of String)
     Private AccentsString As String = ""
+
     Private Sub UpdateResult()
         If txtCharacter.Text = "" Then
             btnCharacter.Text = ""
+            pnlSmartReplace.BackColor = Color.DimGray
             Exit Sub
         End If
 
@@ -91,8 +93,7 @@
         AccentsLayoutPanel.Controls.Add(AccentButton)
     End Sub
 
-    Public Sub CharacterButtonClick(sender As Object, e As MouseEventArgs) Handles btnCharacter.MouseClick
-        If e.Button = MouseButtons.Right Then Exit Sub
+    Public Sub CharacterButtonClick(sender As Object, e As EventArgs) Handles btnCharacter.Click
         Dim Button As Button = CType(sender, Button)
         InsertText(GetCurrentTexbox(), Button.Text)
     End Sub
@@ -120,10 +121,26 @@
         UpdateResult()
     End Sub
 
+    Public Sub RefreshPanels()
+        For Each control In Controls
+            If TypeOf (control) Is FlowLayoutPanel Then
+                Dim panel = CType(control, FlowLayoutPanel)
+                panel.SetAutoScrollMargin(10, 10)
+                panel.PerformLayout()
+                panel.Refresh()
+            End If
+        Next
+
+        Refresh()
+    End Sub
+    Private Function GetButtonText(sender As Object) As String
+        Return CType(sender, Button).Text
+    End Function
+
     Private Function GetButtonTextFromMenu(sender As Object) As String
         Dim currentItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
         Dim cms As ContextMenuStrip = CType(currentItem.Owner, ContextMenuStrip)
-        Return CType(cms.SourceControl, Button).Text
+        Return GetButtonText(cms.SourceControl)
     End Function
 
     Private Sub TxtCharacter_TextChanged(sender As Object, e As EventArgs) Handles txtCharacter.TextChanged
@@ -136,6 +153,17 @@
 
     Private Sub CopyToEditorMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToEditorMenuItem.Click
         txtCharacter.Text = GetButtonTextFromMenu(sender)
+    End Sub
 
+    Private Sub BtnCopyToClipboard_Click(sender As Object, e As EventArgs) Handles btnCopyToClipboard.Click
+        Clipboard.SetText(GetButtonText(sender))
+    End Sub
+
+    Private Sub BtnUppercase_Click(sender As Object, e As EventArgs) Handles btnUppercase.Click
+        txtCharacter.Text = txtCharacter.Text.ToUpper()
+    End Sub
+
+    Private Sub BtnLowercase_Click(sender As Object, e As EventArgs) Handles btnLowercase.Click
+        txtCharacter.Text = txtCharacter.Text.ToLower()
     End Sub
 End Class

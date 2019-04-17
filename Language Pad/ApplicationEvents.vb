@@ -171,6 +171,7 @@ Namespace My
             dlgUpdate.StartupCheck = False
             ssLoading.pbLoading.Value = 100
             ssLoading.Refresh()
+            frmMain.charEdit.RefreshPanels()
         End Sub
     End Class
 End Namespace

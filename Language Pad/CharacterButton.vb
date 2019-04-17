@@ -7,7 +7,7 @@ Public Class CharacterButton
     Public Sub New()
         Dim IPAFont = New Font("Calibri", 11, FontStyle.Bold)
         Dim IPAPadding = New Padding(0)
-        Dim IPAMargin = New Padding(1)
+        Dim IPAMargin = New Padding(3, 3, 3, 6)
         Dim IPAMin = New Size(45, 32)
 
         Padding = IPAPadding

@@ -46,7 +46,7 @@ Partial Class CharacterEditor
         Me.btnCharacter = New System.Windows.Forms.Button()
         Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.cbSmartReplace = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCopyToClipboard = New System.Windows.Forms.Button()
         Me.gbAccents = New System.Windows.Forms.GroupBox()
         Me.AccentsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.txtCharacter = New System.Windows.Forms.TextBox()
@@ -55,9 +55,14 @@ Partial Class CharacterEditor
         Me.menuCharButton = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CopyToEditorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CopyToClipboardMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToFileMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToLocalMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CopyToClipboardMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.btnUppercase = New System.Windows.Forms.Button()
+        Me.btnLowercase = New System.Windows.Forms.Button()
         Me.tcCharacters.SuspendLayout()
         Me.tpFile.SuspendLayout()
         Me.tpLocal.SuspendLayout()
@@ -72,6 +77,9 @@ Partial Class CharacterEditor
         Me.Panel1.SuspendLayout()
         Me.gbAccents.SuspendLayout()
         Me.menuCharButton.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcCharacters
@@ -81,10 +89,10 @@ Partial Class CharacterEditor
         Me.tcCharacters.Controls.Add(Me.tpCommon)
         Me.tcCharacters.Controls.Add(Me.tpIPA)
         Me.tcCharacters.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tcCharacters.Location = New System.Drawing.Point(0, 315)
+        Me.tcCharacters.Location = New System.Drawing.Point(0, 397)
         Me.tcCharacters.Name = "tcCharacters"
         Me.tcCharacters.SelectedIndex = 0
-        Me.tcCharacters.Size = New System.Drawing.Size(293, 341)
+        Me.tcCharacters.Size = New System.Drawing.Size(293, 259)
         Me.tcCharacters.TabIndex = 74
         '
         'tpFile
@@ -93,7 +101,7 @@ Partial Class CharacterEditor
         Me.tpFile.Location = New System.Drawing.Point(4, 22)
         Me.tpFile.Name = "tpFile"
         Me.tpFile.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpFile.Size = New System.Drawing.Size(285, 315)
+        Me.tpFile.Size = New System.Drawing.Size(285, 233)
         Me.tpFile.TabIndex = 0
         Me.tpFile.Text = "File"
         Me.tpFile.UseVisualStyleBackColor = True
@@ -107,7 +115,7 @@ Partial Class CharacterEditor
         Me.FilePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.FilePanel.Name = "FilePanel"
         Me.FilePanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.FilePanel.Size = New System.Drawing.Size(279, 309)
+        Me.FilePanel.Size = New System.Drawing.Size(279, 227)
         Me.FilePanel.TabIndex = 10
         '
         'tpLocal
@@ -148,6 +156,7 @@ Partial Class CharacterEditor
         '
         Me.CommonLayoutPanel.AutoScroll = True
         Me.CommonLayoutPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
+        Me.CommonLayoutPanel.AutoSize = True
         Me.CommonLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CommonLayoutPanel.Location = New System.Drawing.Point(3, 3)
         Me.CommonLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
@@ -196,7 +205,7 @@ Partial Class CharacterEditor
         'ConsonantsLayoutPanel
         '
         Me.ConsonantsLayoutPanel.AutoScroll = True
-        Me.ConsonantsLayoutPanel.AutoScrollMargin = New System.Drawing.Size(15, 5)
+        Me.ConsonantsLayoutPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
         Me.ConsonantsLayoutPanel.AutoSize = True
         Me.ConsonantsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ConsonantsLayoutPanel.Location = New System.Drawing.Point(0, 0)
@@ -300,23 +309,22 @@ Partial Class CharacterEditor
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.txtCharacter)
+        Me.Panel1.Controls.Add(Me.TabControl1)
         Me.Panel1.Controls.Add(Me.btnCharacter)
         Me.Panel1.Controls.Add(Me.pnlSmartReplace)
         Me.Panel1.Controls.Add(Me.cbSmartReplace)
-        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.gbAccents)
-        Me.Panel1.Controls.Add(Me.txtCharacter)
-        Me.Panel1.Controls.Add(Me.btnAddToFile)
-        Me.Panel1.Controls.Add(Me.btnAddToLocal)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(6)
-        Me.Panel1.Size = New System.Drawing.Size(293, 315)
+        Me.Panel1.Size = New System.Drawing.Size(293, 397)
         Me.Panel1.TabIndex = 75
         '
         'btnCharacter
         '
+        Me.btnCharacter.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnCharacter.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCharacter.Location = New System.Drawing.Point(9, 9)
         Me.btnCharacter.Name = "btnCharacter"
@@ -329,7 +337,7 @@ Partial Class CharacterEditor
         '
         Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
-        Me.pnlSmartReplace.Location = New System.Drawing.Point(95, 11)
+        Me.pnlSmartReplace.Location = New System.Drawing.Point(95, 25)
         Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlSmartReplace.Name = "pnlSmartReplace"
         Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
@@ -341,7 +349,7 @@ Partial Class CharacterEditor
         Me.cbSmartReplace.AutoSize = True
         Me.cbSmartReplace.Checked = True
         Me.cbSmartReplace.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbSmartReplace.Location = New System.Drawing.Point(113, 10)
+        Me.cbSmartReplace.Location = New System.Drawing.Point(113, 24)
         Me.cbSmartReplace.Margin = New System.Windows.Forms.Padding(2)
         Me.cbSmartReplace.Name = "cbSmartReplace"
         Me.cbSmartReplace.Size = New System.Drawing.Size(96, 17)
@@ -349,20 +357,20 @@ Partial Class CharacterEditor
         Me.cbSmartReplace.Text = "Smart Replace"
         Me.cbSmartReplace.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnCopyToClipboard
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button1.Location = New System.Drawing.Point(95, 57)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(60, 32)
-        Me.Button1.TabIndex = 79
-        Me.Button1.Text = "Copy"
+        Me.btnCopyToClipboard.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnCopyToClipboard.Location = New System.Drawing.Point(22, 9)
+        Me.btnCopyToClipboard.Name = "btnCopyToClipboard"
+        Me.btnCopyToClipboard.Size = New System.Drawing.Size(70, 32)
+        Me.btnCopyToClipboard.TabIndex = 79
+        Me.btnCopyToClipboard.Text = "Clipboard"
         '
         'gbAccents
         '
         Me.gbAccents.Controls.Add(Me.AccentsLayoutPanel)
         Me.gbAccents.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.gbAccents.Location = New System.Drawing.Point(6, 95)
+        Me.gbAccents.Location = New System.Drawing.Point(6, 177)
         Me.gbAccents.Name = "gbAccents"
         Me.gbAccents.Size = New System.Drawing.Size(281, 214)
         Me.gbAccents.TabIndex = 78
@@ -384,26 +392,26 @@ Partial Class CharacterEditor
         'txtCharacter
         '
         Me.txtCharacter.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtCharacter.Location = New System.Drawing.Point(95, 31)
+        Me.txtCharacter.Location = New System.Drawing.Point(95, 45)
         Me.txtCharacter.Name = "txtCharacter"
-        Me.txtCharacter.Size = New System.Drawing.Size(192, 20)
+        Me.txtCharacter.Size = New System.Drawing.Size(189, 20)
         Me.txtCharacter.TabIndex = 77
         '
         'btnAddToFile
         '
         Me.btnAddToFile.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAddToFile.Location = New System.Drawing.Point(161, 57)
+        Me.btnAddToFile.Location = New System.Drawing.Point(98, 9)
         Me.btnAddToFile.Name = "btnAddToFile"
-        Me.btnAddToFile.Size = New System.Drawing.Size(60, 32)
+        Me.btnAddToFile.Size = New System.Drawing.Size(70, 32)
         Me.btnAddToFile.TabIndex = 76
         Me.btnAddToFile.Text = "File"
         '
         'btnAddToLocal
         '
         Me.btnAddToLocal.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAddToLocal.Location = New System.Drawing.Point(227, 57)
+        Me.btnAddToLocal.Location = New System.Drawing.Point(174, 9)
         Me.btnAddToLocal.Name = "btnAddToLocal"
-        Me.btnAddToLocal.Size = New System.Drawing.Size(60, 32)
+        Me.btnAddToLocal.Size = New System.Drawing.Size(70, 32)
         Me.btnAddToLocal.TabIndex = 1
         Me.btnAddToLocal.Text = "Local"
         '
@@ -411,18 +419,25 @@ Partial Class CharacterEditor
         '
         Me.menuCharButton.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToEditorMenuItem, Me.ToolStripSeparator1, Me.CopyToClipboardMenuItem, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem})
         Me.menuCharButton.Name = "menuCharButton"
-        Me.menuCharButton.Size = New System.Drawing.Size(181, 120)
+        Me.menuCharButton.Size = New System.Drawing.Size(172, 98)
         '
         'CopyToEditorMenuItem
         '
         Me.CopyToEditorMenuItem.Name = "CopyToEditorMenuItem"
-        Me.CopyToEditorMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyToEditorMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.CopyToEditorMenuItem.Text = "Copy to Editor"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(168, 6)
+        '
+        'CopyToClipboardMenuItem
+        '
+        Me.CopyToClipboardMenuItem.Name = "CopyToClipboardMenuItem"
+        Me.CopyToClipboardMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.CopyToClipboardMenuItem.Text = "Copy to Clipboard"
+        Me.CopyToClipboardMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
         'CopyToFileMenuItem
         '
@@ -436,12 +451,59 @@ Partial Class CharacterEditor
         Me.CopyToLocalMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.CopyToLocalMenuItem.Text = "Copy to Local"
         '
-        'CopyToClipboardMenuItem
+        'TabControl1
         '
-        Me.CopyToClipboardMenuItem.Name = "CopyToClipboardMenuItem"
-        Me.CopyToClipboardMenuItem.Size = New System.Drawing.Size(171, 22)
-        Me.CopyToClipboardMenuItem.Text = "Copy to Clipboard"
-        Me.CopyToClipboardMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        Me.TabControl1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Location = New System.Drawing.Point(9, 95)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(275, 76)
+        Me.TabControl1.TabIndex = 90
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.btnAddToLocal)
+        Me.TabPage1.Controls.Add(Me.btnAddToFile)
+        Me.TabPage1.Controls.Add(Me.btnCopyToClipboard)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(267, 50)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Copy To"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.btnLowercase)
+        Me.TabPage2.Controls.Add(Me.btnUppercase)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(267, 50)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Case"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'btnUppercase
+        '
+        Me.btnUppercase.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnUppercase.Location = New System.Drawing.Point(55, 9)
+        Me.btnUppercase.Name = "btnUppercase"
+        Me.btnUppercase.Size = New System.Drawing.Size(75, 32)
+        Me.btnUppercase.TabIndex = 77
+        Me.btnUppercase.Text = "Uppercase"
+        '
+        'btnLowercase
+        '
+        Me.btnLowercase.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnLowercase.Location = New System.Drawing.Point(136, 9)
+        Me.btnLowercase.Name = "btnLowercase"
+        Me.btnLowercase.Size = New System.Drawing.Size(75, 32)
+        Me.btnLowercase.TabIndex = 78
+        Me.btnLowercase.Text = "Lowercase"
         '
         'CharacterEditor
         '
@@ -456,6 +518,7 @@ Partial Class CharacterEditor
         Me.tpFile.ResumeLayout(False)
         Me.tpLocal.ResumeLayout(False)
         Me.tpCommon.ResumeLayout(False)
+        Me.tpCommon.PerformLayout()
         Me.tpIPA.ResumeLayout(False)
         Me.tcIPA.ResumeLayout(False)
         Me.ConsonantsTabPage.ResumeLayout(False)
@@ -468,6 +531,9 @@ Partial Class CharacterEditor
         Me.Panel1.PerformLayout()
         Me.gbAccents.ResumeLayout(False)
         Me.menuCharButton.ResumeLayout(False)
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -497,7 +563,7 @@ Partial Class CharacterEditor
     Friend WithEvents txtCharacter As TextBox
     Friend WithEvents btnAddToFile As Button
     Friend WithEvents btnAddToLocal As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnCopyToClipboard As Button
     Friend WithEvents pnlSmartReplace As TundraLib.DoubleBufferedPanel
     Friend WithEvents cbSmartReplace As CheckBox
     Friend WithEvents btnCharacter As Button
@@ -507,4 +573,9 @@ Partial Class CharacterEditor
     Friend WithEvents CopyToFileMenuItem As ToolStripMenuItem
     Friend WithEvents CopyToLocalMenuItem As ToolStripMenuItem
     Friend WithEvents CopyToClipboardMenuItem As ToolStripMenuItem
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents btnLowercase As Button
+    Friend WithEvents btnUppercase As Button
 End Class

@@ -1,6 +1,8 @@
 ﻿Version 9.4 (April 30, 2019)
    • Move all notebook file/dictionary file handling to C# library
    • Redesign symbols panel
+   • Copy custom characters to clipboard
+   • Add buttons to change case of characters in editor
    • Merge symbols panel, custom characters dialog, and accent dialog into one panel
    • Separate custom characters into File and Local   
    • Fixed bug where dictionary wouldn't load if you opened a new notebook file when the dictionary was open
