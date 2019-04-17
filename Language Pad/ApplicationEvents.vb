@@ -22,7 +22,7 @@ Namespace My
             For Each AccentMark As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Accents)
                 frmMain.charEdit.InsertAccentButton(AccentMark.Value)
 
-                Dim SymbolButtonDictionary As New SymbolButton With {
+                Dim SymbolButtonDictionary As New CharacterButton With {
                     .Text = AccentMark.Value
                 }
                 AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
@@ -36,7 +36,7 @@ Namespace My
                 For Each Affricate As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Affricates)
                     frmMain.charEdit.InsertCharacterButton(Affricate.Value, frmMain.charEdit.AffricatesLayoutPanel)
 
-                    Dim SymbolButtonDictionary As New SymbolButton With {
+                    Dim SymbolButtonDictionary As New CharacterButton With {
                         .Text = Affricate.Value
                     }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
@@ -54,7 +54,7 @@ Namespace My
                 For Each Consonant As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Consonants)
                     frmMain.charEdit.InsertCharacterButton(Consonant.Value, frmMain.charEdit.ConsonantsLayoutPanel)
 
-                    Dim SymbolButtonDictionary As New SymbolButton With {
+                    Dim SymbolButtonDictionary As New CharacterButton With {
                         .Text = Consonant.Value
                     }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
@@ -72,7 +72,7 @@ Namespace My
                 For Each Tone As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.ToneIntonation)
                     frmMain.charEdit.InsertCharacterButton(Tone.Value, frmMain.charEdit.ToneIntonationLayoutPanel)
 
-                    Dim SymbolButtonDictionary As New SymbolButton With {
+                    Dim SymbolButtonDictionary As New CharacterButton With {
                         .Text = Tone.Value
                     }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
@@ -91,7 +91,7 @@ Namespace My
                     frmMain.charEdit.InsertCharacterButton(Vowel.Value, frmMain.charEdit.VowelsLayoutPanel)
 
 
-                    Dim SymbolButtonDictionary As New SymbolButton With {
+                    Dim SymbolButtonDictionary As New CharacterButton With {
                         .Text = Vowel.Value
                     }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
@@ -109,7 +109,7 @@ Namespace My
                 For Each OtherIPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Other)
                     frmMain.charEdit.InsertCharacterButton(OtherIPA.Value, frmMain.charEdit.OtherLayoutPanel)
 
-                    Dim SymbolButtonDictionary As New SymbolButton With {
+                    Dim SymbolButtonDictionary As New CharacterButton With {
                         .Text = OtherIPA.Value
                     }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
@@ -127,7 +127,7 @@ Namespace My
                 For Each CommonChar As String In Resources.Common.Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
                     frmMain.charEdit.InsertCharacterButton(CommonChar, frmMain.charEdit.CommonLayoutPanel)
 
-                    Dim SymbolButtonDictionary As New SymbolButton With {
+                    Dim SymbolButtonDictionary As New CharacterButton With {
                         .Text = CommonChar
                     }
                     AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
@@ -145,7 +145,7 @@ Namespace My
             For Each LocalCharacter As String In LineList
                 frmMain.charEdit.InsertCharacterButton(LocalCharacter, frmMain.charEdit.LocalCharPanel)
 
-                Dim SymbolButtonDictionary As New SymbolButton With {
+                Dim SymbolButtonDictionary As New CharacterButton With {
                     .Text = LocalCharacter
                 }
                 AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA

@@ -139,6 +139,8 @@ Public Class PropertiesEditor
     End Sub
 
     Private Sub btnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
+        If String.IsNullOrWhiteSpace(txtWebsite.Text) Then Exit Sub
+
         If Not txtWebsite.Text.StartsWith("http://") Then
             Process.Start("http://" & txtWebsite.Text)
         Else
@@ -152,9 +154,5 @@ Public Class PropertiesEditor
         Else
             CurrentDocument.Modified = True
         End If
-    End Sub
-
-    Private Sub DoubleBufferedPanel2_Paint(sender As Object, e As PaintEventArgs) Handles DoubleBufferedPanel2.Paint
-
     End Sub
 End Class

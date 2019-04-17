@@ -1,5 +1,49 @@
-﻿Public Class IPAToolTip
+﻿
+Public Class CharacterButton
+    Inherits Button
+    Private components As System.ComponentModel.IContainer
+    Private ttIPa As New IPAToolTip
+
+    Public Sub New()
+        Dim IPAFont = New Font("Calibri", 11, FontStyle.Bold)
+        Dim IPAPadding = New Padding(0)
+        Dim IPAMargin = New Padding(1)
+        Dim IPAMin = New Size(45, 32)
+
+        Padding = IPAPadding
+        Font = IPAFont
+        AutoSize = True
+        MinimumSize = IPAMin
+        Margin = IPAMargin
+        AutoSizeMode = AutoSizeMode.GrowAndShrink
+        UseCompatibleTextRendering = True
+    End Sub
+
+    Private Sub SymbolButton_TextChanged(sender As Object, e As EventArgs) Handles Me.TextChanged
+        ttIPa.SetToolTip(Me, Text)
+    End Sub
+
+    Private Sub SymbolButton_Click(sender As Object, e As EventArgs) Handles Me.Click
+
+    End Sub
+
+    Private Sub InitializeComponent()
+        Me.SuspendLayout()
+        Me.ResumeLayout(False)
+    End Sub
+
+    Private Sub CharacterButton_MouseClick(sender As Object, e As MouseEventArgs) Handles MyBase.MouseClick
+
+        If e.Button = MouseButtons.Right Then
+        Else
+        End If
+    End Sub
+End Class
+
+
+Public Class IPAToolTip
     Inherits ToolTip
+
     Sub New()
         MyBase.New()
         OwnerDraw = True
@@ -50,38 +94,6 @@
 
         shadow.DrawText()
         text.DrawText()
-    End Sub
-End Class
-
-Public Class SymbolButton
-    Inherits Button
-    Private ttIPa As New IPAToolTip
-
-    Public Sub New()
-        Dim IPAFont = New Font("Calibri", 11, FontStyle.Bold)
-        Dim IPAPadding = New Padding(0)
-        Dim IPAMargin = New Padding(1)
-        Dim IPAMin = New Size(45, 32)
-
-        Padding = IPAPadding
-        Font = IPAFont
-        AutoSize = True
-        MinimumSize = IPAMin
-        Margin = IPAMargin
-        AutoSizeMode = AutoSizeMode.GrowAndShrink
-        UseCompatibleTextRendering = True
-    End Sub
-    Private Sub InitializeComponent()
-        SuspendLayout()
-        ResumeLayout(False)
-    End Sub
-
-    Private Sub SymbolButton_TextChanged(sender As Object, e As EventArgs) Handles Me.TextChanged
-        ttIPa.SetToolTip(Me, Text)
-    End Sub
-
-    Private Sub SymbolButton_Click(sender As Object, e As EventArgs) Handles Me.Click
-        CharacterEditor.AddToLocal()
     End Sub
 End Class
 

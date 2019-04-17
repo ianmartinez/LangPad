@@ -16,7 +16,7 @@ Public Class dlgCustomSymbols
         For Each IPA As String In LineList2
             frmMain.charEdit.InsertCharacterButton(IPA, frmMain.charEdit.LocalCharPanel)
 
-            Dim SymbolButtonDictionary As New SymbolButton With {
+            Dim SymbolButtonDictionary As New CharacterButton With {
                 .Text = IPA
             }
             AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA

@@ -360,7 +360,8 @@ Public Class frmMain
         FontToolStrip.Location = New Point(FileToolStrip.Left + FileToolStrip.Width, 0)
 
         dlgColor.FullOpen = True
-        SetTheme(New GlacierTheme())
+        StartupTheme = New GlacierTheme()
+        SetTheme(StartupTheme)
 
         ThemeCombo.SelectedItem = My.Settings.Theme
 

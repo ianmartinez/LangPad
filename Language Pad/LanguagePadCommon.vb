@@ -1,5 +1,6 @@
 ﻿Imports System.Globalization
 Imports System.Reflection
+Imports TundraLib.Themes
 
 Module LanguagePadCommon
     Public CurrentDocument As New NotebookFile
@@ -20,4 +21,6 @@ Module LanguagePadCommon
     Public SplashVersion As String = (Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(0) &
         If(Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1) = "0", "", "." &
         Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1)))
+
+    Public StartupTheme As Theme
 End Module

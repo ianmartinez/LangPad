@@ -94,7 +94,7 @@ Public Class dlgAccentMark
         For Each IPA As String In LineList
             frmMain.charEdit.InsertCharacterButton(IPA, frmMain.charEdit.LocalCharPanel)
 
-            Dim DictionaryIPAButton As New SymbolButton With {
+            Dim DictionaryIPAButton As New CharacterButton With {
                 .Text = IPA
             }
             AddHandler DictionaryIPAButton.Click, AddressOf frmDictionary.InsertIPA

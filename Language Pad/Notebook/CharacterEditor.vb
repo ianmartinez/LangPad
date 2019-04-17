@@ -72,10 +72,11 @@
     End Sub
 
     Public Sub InsertCharacterButton(ByVal Text As String, ByVal Panel As FlowLayoutPanel)
-        Dim SymbolButton As New SymbolButton
-        SymbolButton.Text = Text
-        AddHandler SymbolButton.Click, AddressOf CharacterButtonClick
-        Panel.Controls.Add(SymbolButton)
+        Dim CharacterButton As New CharacterButton
+        CharacterButton.Text = Text
+        AddHandler CharacterButton.MouseClick, AddressOf CharacterButtonClick
+        CharacterButton.ContextMenuStrip = menuCharButton
+        Panel.Controls.Add(CharacterButton)
     End Sub
 
     Public Sub InsertAccentButton(ByVal Text As String)
@@ -90,7 +91,8 @@
         AccentsLayoutPanel.Controls.Add(AccentButton)
     End Sub
 
-    Public Sub CharacterButtonClick(sender As Object, e As EventArgs)
+    Public Sub CharacterButtonClick(sender As Object, e As MouseEventArgs) Handles btnCharacter.MouseClick
+        If e.Button = MouseButtons.Right Then Exit Sub
         Dim Button As Button = CType(sender, Button)
         InsertText(GetCurrentTexbox(), Button.Text)
     End Sub
@@ -120,5 +122,9 @@
 
     Private Sub TxtCharacter_TextChanged(sender As Object, e As EventArgs) Handles txtCharacter.TextChanged
         UpdateResult()
+    End Sub
+
+    Private Sub CopyToClipboardMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToClipboardMenuItem.Click
+        Clipboard.SetText(CType(sender, Button).Text)
     End Sub
 End Class

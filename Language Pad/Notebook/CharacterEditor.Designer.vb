@@ -22,6 +22,7 @@ Partial Class CharacterEditor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.tcCharacters = New System.Windows.Forms.TabControl()
         Me.tpFile = New System.Windows.Forms.TabPage()
         Me.FilePanel = New System.Windows.Forms.FlowLayoutPanel()
@@ -51,6 +52,12 @@ Partial Class CharacterEditor
         Me.btnAddToFile = New System.Windows.Forms.Button()
         Me.btnAddToLocal = New System.Windows.Forms.Button()
         Me.btnCharacter = New System.Windows.Forms.Button()
+        Me.menuCharButton = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopyToEditorMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CopyToFileMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyToLocalMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyToClipboardMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tcCharacters.SuspendLayout()
         Me.tpFile.SuspendLayout()
         Me.tpLocal.SuspendLayout()
@@ -64,6 +71,7 @@ Partial Class CharacterEditor
         Me.OtherTabPage.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.gbAccents.SuspendLayout()
+        Me.menuCharButton.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcCharacters
@@ -85,7 +93,7 @@ Partial Class CharacterEditor
         Me.tpFile.Location = New System.Drawing.Point(4, 22)
         Me.tpFile.Name = "tpFile"
         Me.tpFile.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpFile.Size = New System.Drawing.Size(285, 248)
+        Me.tpFile.Size = New System.Drawing.Size(285, 315)
         Me.tpFile.TabIndex = 0
         Me.tpFile.Text = "File"
         Me.tpFile.UseVisualStyleBackColor = True
@@ -99,7 +107,7 @@ Partial Class CharacterEditor
         Me.FilePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.FilePanel.Name = "FilePanel"
         Me.FilePanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.FilePanel.Size = New System.Drawing.Size(279, 242)
+        Me.FilePanel.Size = New System.Drawing.Size(279, 309)
         Me.FilePanel.TabIndex = 10
         '
         'tpLocal
@@ -108,7 +116,7 @@ Partial Class CharacterEditor
         Me.tpLocal.Location = New System.Drawing.Point(4, 22)
         Me.tpLocal.Name = "tpLocal"
         Me.tpLocal.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpLocal.Size = New System.Drawing.Size(285, 328)
+        Me.tpLocal.Size = New System.Drawing.Size(285, 315)
         Me.tpLocal.TabIndex = 1
         Me.tpLocal.Text = "Local"
         Me.tpLocal.UseVisualStyleBackColor = True
@@ -122,7 +130,7 @@ Partial Class CharacterEditor
         Me.LocalCharPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.LocalCharPanel.Name = "LocalCharPanel"
         Me.LocalCharPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.LocalCharPanel.Size = New System.Drawing.Size(279, 322)
+        Me.LocalCharPanel.Size = New System.Drawing.Size(279, 309)
         Me.LocalCharPanel.TabIndex = 10
         '
         'tpCommon
@@ -131,7 +139,7 @@ Partial Class CharacterEditor
         Me.tpCommon.Location = New System.Drawing.Point(4, 22)
         Me.tpCommon.Name = "tpCommon"
         Me.tpCommon.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCommon.Size = New System.Drawing.Size(285, 248)
+        Me.tpCommon.Size = New System.Drawing.Size(285, 315)
         Me.tpCommon.TabIndex = 2
         Me.tpCommon.Text = "Common"
         Me.tpCommon.UseVisualStyleBackColor = True
@@ -145,7 +153,7 @@ Partial Class CharacterEditor
         Me.CommonLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.CommonLayoutPanel.Name = "CommonLayoutPanel"
         Me.CommonLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.CommonLayoutPanel.Size = New System.Drawing.Size(279, 242)
+        Me.CommonLayoutPanel.Size = New System.Drawing.Size(279, 309)
         Me.CommonLayoutPanel.TabIndex = 9
         '
         'tpIPA
@@ -204,7 +212,7 @@ Partial Class CharacterEditor
         Me.AffricatesTabPage.Location = New System.Drawing.Point(4, 22)
         Me.AffricatesTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.AffricatesTabPage.Name = "AffricatesTabPage"
-        Me.AffricatesTabPage.Size = New System.Drawing.Size(271, 314)
+        Me.AffricatesTabPage.Size = New System.Drawing.Size(271, 283)
         Me.AffricatesTabPage.TabIndex = 5
         Me.AffricatesTabPage.Text = "Affricates"
         Me.AffricatesTabPage.UseVisualStyleBackColor = True
@@ -218,7 +226,7 @@ Partial Class CharacterEditor
         Me.AffricatesLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AffricatesLayoutPanel.Name = "AffricatesLayoutPanel"
         Me.AffricatesLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(271, 314)
+        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(271, 283)
         Me.AffricatesLayoutPanel.TabIndex = 8
         '
         'VowelsTabPage
@@ -227,7 +235,7 @@ Partial Class CharacterEditor
         Me.VowelsTabPage.Location = New System.Drawing.Point(4, 22)
         Me.VowelsTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.VowelsTabPage.Name = "VowelsTabPage"
-        Me.VowelsTabPage.Size = New System.Drawing.Size(271, 314)
+        Me.VowelsTabPage.Size = New System.Drawing.Size(271, 283)
         Me.VowelsTabPage.TabIndex = 1
         Me.VowelsTabPage.Text = "Vowels"
         Me.VowelsTabPage.UseVisualStyleBackColor = True
@@ -241,7 +249,7 @@ Partial Class CharacterEditor
         Me.VowelsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.VowelsLayoutPanel.Name = "VowelsLayoutPanel"
         Me.VowelsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(271, 314)
+        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(271, 283)
         Me.VowelsLayoutPanel.TabIndex = 8
         '
         'ToneIntonationTabPage
@@ -250,9 +258,9 @@ Partial Class CharacterEditor
         Me.ToneIntonationTabPage.Location = New System.Drawing.Point(4, 22)
         Me.ToneIntonationTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.ToneIntonationTabPage.Name = "ToneIntonationTabPage"
-        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(271, 314)
+        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(271, 283)
         Me.ToneIntonationTabPage.TabIndex = 4
-        Me.ToneIntonationTabPage.Text = "Tone & Intonation"
+        Me.ToneIntonationTabPage.Text = "Tone"
         Me.ToneIntonationTabPage.UseVisualStyleBackColor = True
         '
         'ToneIntonationLayoutPanel
@@ -264,7 +272,7 @@ Partial Class CharacterEditor
         Me.ToneIntonationLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ToneIntonationLayoutPanel.Name = "ToneIntonationLayoutPanel"
         Me.ToneIntonationLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(271, 314)
+        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(271, 283)
         Me.ToneIntonationLayoutPanel.TabIndex = 10
         '
         'OtherTabPage
@@ -273,7 +281,7 @@ Partial Class CharacterEditor
         Me.OtherTabPage.Location = New System.Drawing.Point(4, 22)
         Me.OtherTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.OtherTabPage.Name = "OtherTabPage"
-        Me.OtherTabPage.Size = New System.Drawing.Size(271, 314)
+        Me.OtherTabPage.Size = New System.Drawing.Size(271, 283)
         Me.OtherTabPage.TabIndex = 2
         Me.OtherTabPage.Text = "Other"
         Me.OtherTabPage.UseVisualStyleBackColor = True
@@ -287,11 +295,12 @@ Partial Class CharacterEditor
         Me.OtherLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.OtherLayoutPanel.Name = "OtherLayoutPanel"
         Me.OtherLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.OtherLayoutPanel.Size = New System.Drawing.Size(271, 314)
+        Me.OtherLayoutPanel.Size = New System.Drawing.Size(271, 283)
         Me.OtherLayoutPanel.TabIndex = 8
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.btnCharacter)
         Me.Panel1.Controls.Add(Me.pnlSmartReplace)
         Me.Panel1.Controls.Add(Me.cbSmartReplace)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -299,7 +308,6 @@ Partial Class CharacterEditor
         Me.Panel1.Controls.Add(Me.txtCharacter)
         Me.Panel1.Controls.Add(Me.btnAddToFile)
         Me.Panel1.Controls.Add(Me.btnAddToLocal)
-        Me.Panel1.Controls.Add(Me.btnCharacter)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -374,7 +382,7 @@ Partial Class CharacterEditor
         'btnAddToFile
         '
         Me.btnAddToFile.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAddToFile.Location = New System.Drawing.Point(161, 57)
+        Me.btnAddToFile.Location = New System.Drawing.Point(95, 57)
         Me.btnAddToFile.Name = "btnAddToFile"
         Me.btnAddToFile.Size = New System.Drawing.Size(60, 32)
         Me.btnAddToFile.TabIndex = 76
@@ -383,7 +391,7 @@ Partial Class CharacterEditor
         'btnAddToLocal
         '
         Me.btnAddToLocal.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAddToLocal.Location = New System.Drawing.Point(95, 57)
+        Me.btnAddToLocal.Location = New System.Drawing.Point(161, 57)
         Me.btnAddToLocal.Name = "btnAddToLocal"
         Me.btnAddToLocal.Size = New System.Drawing.Size(60, 32)
         Me.btnAddToLocal.TabIndex = 1
@@ -391,14 +399,49 @@ Partial Class CharacterEditor
         '
         'btnCharacter
         '
-        Me.btnCharacter.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnCharacter.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCharacter.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCharacter.Location = New System.Drawing.Point(9, 9)
         Me.btnCharacter.Name = "btnCharacter"
         Me.btnCharacter.Size = New System.Drawing.Size(80, 80)
-        Me.btnCharacter.TabIndex = 0
+        Me.btnCharacter.TabIndex = 88
         Me.btnCharacter.Text = "a"
         Me.btnCharacter.UseVisualStyleBackColor = True
+        '
+        'menuCharButton
+        '
+        Me.menuCharButton.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToEditorMenuItem, Me.ToolStripSeparator1, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem, Me.CopyToClipboardMenuItem})
+        Me.menuCharButton.Name = "menuCharButton"
+        Me.menuCharButton.Size = New System.Drawing.Size(181, 120)
+        '
+        'CopyToEditorMenuItem
+        '
+        Me.CopyToEditorMenuItem.Name = "CopyToEditorMenuItem"
+        Me.CopyToEditorMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.CopyToEditorMenuItem.Text = "Copy to Editor"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(168, 6)
+        '
+        'CopyToFileMenuItem
+        '
+        Me.CopyToFileMenuItem.Name = "CopyToFileMenuItem"
+        Me.CopyToFileMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.CopyToFileMenuItem.Text = "Copy to File"
+        '
+        'CopyToLocalMenuItem
+        '
+        Me.CopyToLocalMenuItem.Name = "CopyToLocalMenuItem"
+        Me.CopyToLocalMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.CopyToLocalMenuItem.Text = "Copy to Local"
+        '
+        'CopyToClipboardMenuItem
+        '
+        Me.CopyToClipboardMenuItem.Name = "CopyToClipboardMenuItem"
+        Me.CopyToClipboardMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyToClipboardMenuItem.Text = "Copy to Clipboard"
+        Me.CopyToClipboardMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
         'CharacterEditor
         '
@@ -424,6 +467,7 @@ Partial Class CharacterEditor
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.gbAccents.ResumeLayout(False)
+        Me.menuCharButton.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -453,8 +497,14 @@ Partial Class CharacterEditor
     Friend WithEvents txtCharacter As TextBox
     Friend WithEvents btnAddToFile As Button
     Friend WithEvents btnAddToLocal As Button
-    Friend WithEvents btnCharacter As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents pnlSmartReplace As TundraLib.DoubleBufferedPanel
     Friend WithEvents cbSmartReplace As CheckBox
+    Friend WithEvents btnCharacter As Button
+    Friend WithEvents menuCharButton As ContextMenuStrip
+    Friend WithEvents CopyToEditorMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents CopyToFileMenuItem As ToolStripMenuItem
+    Friend WithEvents CopyToLocalMenuItem As ToolStripMenuItem
+    Friend WithEvents CopyToClipboardMenuItem As ToolStripMenuItem
 End Class

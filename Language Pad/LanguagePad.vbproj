@@ -219,7 +219,7 @@
     <Compile Include="ssLoading.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SymbolButton.vb">
+    <Compile Include="CharacterButton.vb">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
@@ -275,8 +275,8 @@
     <EmbeddedResource Include="ssLoading.resx">
       <DependentUpon>ssLoading.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SymbolButton.resx">
-      <DependentUpon>SymbolButton.vb</DependentUpon>
+    <EmbeddedResource Include="CharacterButton.resx">
+      <DependentUpon>CharacterButton.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
