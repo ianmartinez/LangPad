@@ -3,6 +3,7 @@ Imports TundraLib.Themes
 
 Module LanguagePadCommon
     Public CurrentDocument As New NotebookFile
+    Public CharTool As CharacterEditorToolWindow
     Public NTVersion As Decimal = 2.1
     Public FirstTabUpdate As Boolean = False
     Public Initialized As Boolean = False

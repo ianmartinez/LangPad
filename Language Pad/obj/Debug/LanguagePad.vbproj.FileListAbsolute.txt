@@ -116,6 +116,7 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\Language Pad
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\TundraLib.dll
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\TundraLib.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbprojAssemblyReference.cache
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.CharacterEditorToolWindow.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAbout.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAddPage.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgCustomZoom.resources
@@ -130,6 +131,7 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.CharacterEditor.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.PropertiesEditor.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.ssLoading.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.CharacterButton.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbproj.GenerateResource.cache
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbproj.CoreCompileInputs.cache
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.exe.manifest
@@ -138,4 +140,3 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LanguagePad.
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.exe
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.xml
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.pdb
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.CharacterButton.resources

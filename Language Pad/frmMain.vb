@@ -28,8 +28,8 @@ Public Class frmMain
 
         tcNotebook.TabPages.Clear()
         rtbList.Clear()
-        pnlProperties.SuspendLayout()
-        pnlProperties.lbPages.Items.Clear()
+        pnlDocumentProperties.SuspendLayout()
+        pnlDocumentProperties.lbPages.Items.Clear()
 
         For Each p As NotebookPage In CurrentDocument.Pages
             Dim Tab As New TabPage With {
@@ -49,7 +49,7 @@ Public Class frmMain
             Tab.Controls.Add(rtbDoc)
             tcNotebook.TabPages.Add(Tab)
 
-            pnlProperties.lbPages.Items.Add(p.Title)
+            pnlDocumentProperties.lbPages.Items.Add(p.Title)
 
             rtbList.Add(rtbDoc)
         Next
@@ -57,15 +57,15 @@ Public Class frmMain
         tcNotebook.SelectedIndex = 0
         SelectedDocument = rtbList.Item(0)
         ResumeLayout()
-        pnlProperties.ResumeLayout()
+        pnlDocumentProperties.ResumeLayout()
 
-        pnlProperties.txtTitle.Text = CurrentDocument.Title
-        pnlProperties.txtLanguage.Text = CurrentDocument.Language
-        pnlProperties.txtAuthor.Text = CurrentDocument.Author
-        pnlProperties.txtWebsite.Text = CurrentDocument.Website
-        pnlProperties.txtInfo.Text = CurrentDocument.Info
+        pnlDocumentProperties.txtTitle.Text = CurrentDocument.Title
+        pnlDocumentProperties.txtLanguage.Text = CurrentDocument.Language
+        pnlDocumentProperties.txtAuthor.Text = CurrentDocument.Author
+        pnlDocumentProperties.txtWebsite.Text = CurrentDocument.Website
+        pnlDocumentProperties.txtInfo.Text = CurrentDocument.Info
 
-        pnlProperties.lbPages.SelectedIndex = 0
+        pnlDocumentProperties.lbPages.SelectedIndex = 0
         FirstTabUpdate = True
 
         lblPageCount.Text = "Page Count: " & CurrentDocument.Pages.Count
@@ -251,7 +251,7 @@ Public Class frmMain
         btnReplace.Top = txtFind.Top - (btnReplace.Height / 2 - txtFind.Height / 2)
         btnReplaceAll.Top = txtFind.Top - (btnReplaceAll.Height / 2 - txtFind.Height / 2)
 
-        pnlProperties.SetTheme(Theme)
+        pnlDocumentProperties.SetTheme(Theme)
         dlgAbout.BackColor = Theme.DialogBack
         dlgAddPage.BackColor = Theme.DialogBack
         dlgCustomZoom.BackColor = Theme.DialogBack
@@ -345,7 +345,7 @@ Public Class frmMain
         CurrentDocument.Modified = False
         KeyPreview = True
 
-        SplitLayoutPanel.SplitterDistance = (SplitLayoutPanel.Width - pnlProperties.MinimumSize.Width) - 30
+        SplitLayoutPanel.SplitterDistance = (SplitLayoutPanel.Width - pnlDocumentProperties.MinimumSize.Width) - 30
 
         For i As Integer = 0 To 50
             IndentToolStripComboBox.Items.Add(i)
@@ -369,9 +369,6 @@ Public Class frmMain
             End If
         Next
 
-        charEdit.GetCurrentTexbox = Function()
-                                        Return SelectedDocument
-                                    End Function
     End Sub
 
     Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles MainToolStripContainer.TopToolStripPanel.Paint,
@@ -484,7 +481,7 @@ Public Class frmMain
         If Moving = False Then
             SaveTabs()
             SelectedDocument = rtbList.Item(tcNotebook.SelectedIndex)
-            pnlProperties.lbPages.SelectedIndex = tcNotebook.SelectedIndex
+            pnlDocumentProperties.lbPages.SelectedIndex = tcNotebook.SelectedIndex
             frmRTF.txtRTF.Text = SelectedDocument.Rtf
             WordWrapToolStripMenuItem.Checked = SelectedDocument.WordWrap
             SelectedDocument_TextChanged(Me, e)
@@ -566,7 +563,7 @@ Public Class frmMain
         }
 
         tcNotebook.TabPages.Clear()
-        pnlProperties.lbPages.Items.Clear()
+        pnlDocumentProperties.lbPages.Items.Clear()
 
         Dim new_page As NotebookPage = New NotebookPage With {
             .Title = "Untitled",
@@ -1143,5 +1140,27 @@ Public Class frmMain
 
     Public Sub DictionaryMenuItem_Click(sender As Object, e As EventArgs) Handles DictionaryMenuItem.Click
         frmDictionary.Show()
+    End Sub
+
+    Private Sub FrmMain_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+        CharTool.GetCurrentTexbox = Function()
+                                        Return SelectedDocument
+                                    End Function
+    End Sub
+
+    Private Sub CharacterEditorToolStripButton_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripButton.Click
+        CharacterEditorToolStripMenuItem_Click(Me, e)
+    End Sub
+
+    Private Sub CharacterEditorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripMenuItem.Click
+        CharTool.Show()
+    End Sub
+
+    Private Sub FrmMain_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        If Me.WindowState = FormWindowState.Minimized Then
+            CharTool.Visible = False
+        Else
+            CharTool.Visible = True
+        End If
     End Sub
 End Class

@@ -11,6 +11,7 @@
    • Toggle affricate button to dynamically create affricates (ts -> t͡s)
    • Fixed bug where dictionary wouldn't load if you opened a new notebook file when the dictionary was open
    • Character search
+   • Speed up startup time
    
 Version 9.3 (April 13, 2019)
    • Update to .NET Framework 4.7.2

@@ -106,7 +106,7 @@
         TextBox.Paste()
         Clipboard.SetDataObject(obj)
 
-        TextBox.Focus()
+        '    TextBox.Focus()
         TextBox.SelectionStart = CurrentPos + Text.Length
         TextBox.SelectionLength = 0
     End Sub

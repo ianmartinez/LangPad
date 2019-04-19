@@ -109,6 +109,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterEditorToolWindow.Designer.vb">
+      <DependentUpon>CharacterEditorToolWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CharacterEditorToolWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dialogs\dlgHtml.Designer.vb">
       <DependentUpon>dlgHtml.vb</DependentUpon>
     </Compile>
@@ -212,6 +218,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CharacterEditorToolWindow.resx">
+      <DependentUpon>CharacterEditorToolWindow.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgAbout.resx">
       <DependentUpon>dlgAbout.vb</DependentUpon>
     </EmbeddedResource>
