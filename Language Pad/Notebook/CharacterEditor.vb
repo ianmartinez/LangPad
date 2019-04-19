@@ -151,7 +151,7 @@
         Clipboard.SetText(GetButtonTextFromMenu(sender))
     End Sub
 
-    Private Sub CopyToEditorMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToEditorMenuItem.Click
+    Private Sub CopyToEditorMenuItem_Click(sender As Object, e As EventArgs) Handles ReplaceEditorCharacterMenuItem.Click
         txtCharacter.Text = GetButtonTextFromMenu(sender)
     End Sub
 
@@ -165,5 +165,19 @@
 
     Private Sub BtnLowercase_Click(sender As Object, e As EventArgs) Handles btnLowercase.Click
         txtCharacter.Text = txtCharacter.Text.ToLower()
+    End Sub
+
+    Private Sub BtnAffricate_Click(sender As Object, e As EventArgs) Handles btnAffricate.Click
+        Dim affricateChar As String = "◌͡◌".Replace("◌", "")
+
+        If txtCharacter.Text.Contains(affricateChar) Then
+            txtCharacter.Text = txtCharacter.Text.Replace(affricateChar, "")
+        Else
+            txtCharacter.Text = txtCharacter.Text.Insert(Math.Max(txtCharacter.Text.Length - 1, 0), affricateChar)
+        End If
+    End Sub
+
+    Private Sub AddToEditorCharacterMenuItem_Click(sender As Object, e As EventArgs) Handles AddToEditorCharacterMenuItem.Click
+        txtCharacter.Text &= GetButtonTextFromMenu(sender)
     End Sub
 End Class
