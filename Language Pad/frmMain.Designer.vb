@@ -39,21 +39,14 @@ Partial Class frmMain
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SelectAllContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeselectAllContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.SplitLayoutPanel = New System.Windows.Forms.SplitContainer()
         Me.tcNotebook = New System.Windows.Forms.TabControl()
-        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
-        Me.tcNotebookProperties = New System.Windows.Forms.TabControl()
-        Me.tpNotebookProperties = New System.Windows.Forms.TabPage()
-        Me.pnlProperties = New Language_Pad.PropertiesEditor()
-        Me.tpCharacters = New System.Windows.Forms.TabPage()
-        Me.charEdit = New Language_Pad.CharacterEditor()
         Me.dlgSaveNotebook = New System.Windows.Forms.SaveFileDialog()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
-        Me.btnTransparentColor = New System.Windows.Forms.Button()
         Me.dlgSaveImage = New System.Windows.Forms.SaveFileDialog()
-        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.DataToolStrip = New System.Windows.Forms.ToolStrip()
         Me.CharCountToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
@@ -63,40 +56,6 @@ Partial Class frmMain
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ThemeCombo = New System.Windows.Forms.ToolStripComboBox()
-        Me.pnlFindReplace = New TundraLib.DoubleBufferedPanel()
-        Me.btnFindNext = New System.Windows.Forms.Button()
-        Me.btnReplaceAll = New System.Windows.Forms.Button()
-        Me.txtReplace = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.txtFind = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.btnReplace = New System.Windows.Forms.Button()
-        Me.btnFind = New System.Windows.Forms.Button()
-        Me.pnlColor = New TundraLib.DoubleBufferedPanel()
-        Me.ColorLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.StylizedColorButton1 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton2 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton3 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton4 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton5 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton6 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton7 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton8 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton9 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton10 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton11 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton12 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton20 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton21 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton13 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton14 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton15 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton16 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton17 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton18 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton19 = New TundraLib.StylizedColorButton()
-        Me.rbHighlight = New System.Windows.Forms.RadioButton()
-        Me.rbTextColor = New System.Windows.Forms.RadioButton()
         Me.FontToolStrip = New System.Windows.Forms.ToolStrip()
         Me.FontToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
@@ -200,26 +159,67 @@ Partial Class frmMain
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.pnlFindReplace = New TundraLib.DoubleBufferedPanel()
+        Me.btnFindNext = New System.Windows.Forms.Button()
+        Me.btnReplaceAll = New System.Windows.Forms.Button()
+        Me.txtReplace = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.txtFind = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.btnReplace = New System.Windows.Forms.Button()
+        Me.btnFind = New System.Windows.Forms.Button()
+        Me.pnlColor = New TundraLib.DoubleBufferedPanel()
+        Me.ColorLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.btnTransparentColor = New System.Windows.Forms.Button()
+        Me.StylizedColorButton1 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton2 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton3 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton4 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton5 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton6 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton7 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton8 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton9 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton10 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton11 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton12 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton20 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton21 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton13 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton14 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton15 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton16 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton17 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton18 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton19 = New TundraLib.StylizedColorButton()
+        Me.rbHighlight = New System.Windows.Forms.RadioButton()
+        Me.rbTextColor = New System.Windows.Forms.RadioButton()
+        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
+        Me.tcNotebookProperties = New System.Windows.Forms.TabControl()
+        Me.tpNotebookProperties = New System.Windows.Forms.TabPage()
+        Me.pnlProperties = New Language_Pad.PropertiesEditor()
+        Me.tpCharacters = New System.Windows.Forms.TabPage()
+        Me.charEdit = New Language_Pad.CharacterEditor()
         Me.cmsMain.SuspendLayout
-        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer2.Panel1.SuspendLayout
-        Me.SplitContainer2.Panel2.SuspendLayout
-        Me.SplitContainer2.SuspendLayout
+        CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitLayoutPanel.Panel1.SuspendLayout
+        Me.SplitLayoutPanel.Panel2.SuspendLayout
+        Me.SplitLayoutPanel.SuspendLayout
+        Me.MainToolStripContainer.BottomToolStripPanel.SuspendLayout
+        Me.MainToolStripContainer.ContentPanel.SuspendLayout
+        Me.MainToolStripContainer.TopToolStripPanel.SuspendLayout
+        Me.MainToolStripContainer.SuspendLayout
+        Me.DataToolStrip.SuspendLayout
+        Me.FontToolStrip.SuspendLayout
+        Me.FileToolStrip.SuspendLayout
+        Me.MainMenu.SuspendLayout
+        Me.pnlFindReplace.SuspendLayout
+        Me.pnlColor.SuspendLayout
+        Me.ColorLayoutPanel.SuspendLayout
         Me.StylizedPanel1.SuspendLayout
         Me.tcNotebookProperties.SuspendLayout
         Me.tpNotebookProperties.SuspendLayout
         Me.tpCharacters.SuspendLayout
-        Me.ToolStripContainer1.BottomToolStripPanel.SuspendLayout
-        Me.ToolStripContainer1.ContentPanel.SuspendLayout
-        Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout
-        Me.ToolStripContainer1.SuspendLayout
-        Me.DataToolStrip.SuspendLayout
-        Me.pnlFindReplace.SuspendLayout
-        Me.pnlColor.SuspendLayout
-        Me.ColorLayoutPanel.SuspendLayout
-        Me.FontToolStrip.SuspendLayout
-        Me.FileToolStrip.SuspendLayout
-        Me.MainMenu.SuspendLayout
         Me.SuspendLayout
         '
         'dlgOpenImage
@@ -313,101 +313,36 @@ Partial Class frmMain
         Me.DeselectAllContextMenuItem.Size = New System.Drawing.Size(141, 28)
         Me.DeselectAllContextMenuItem.Text = "Deselect All"
         '
-        'SplitContainer2
+        'SplitLayoutPanel
         '
-        Me.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2
-        Me.SplitContainer2.Location = New System.Drawing.Point(0, 132)
-        Me.SplitContainer2.Margin = New System.Windows.Forms.Padding(2)
-        Me.SplitContainer2.Name = "SplitContainer2"
+        Me.SplitLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitLayoutPanel.FixedPanel = System.Windows.Forms.FixedPanel.Panel2
+        Me.SplitLayoutPanel.Location = New System.Drawing.Point(0, 24)
+        Me.SplitLayoutPanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.SplitLayoutPanel.Name = "SplitLayoutPanel"
         '
-        'SplitContainer2.Panel1
+        'SplitLayoutPanel.Panel1
         '
-        Me.SplitContainer2.Panel1.Controls.Add(Me.tcNotebook)
-        Me.SplitContainer2.Panel1.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.SplitLayoutPanel.Panel1.Controls.Add(Me.MainToolStripContainer)
         '
-        'SplitContainer2.Panel2
+        'SplitLayoutPanel.Panel2
         '
-        Me.SplitContainer2.Panel2.Controls.Add(Me.StylizedPanel1)
-        Me.SplitContainer2.Panel2MinSize = 325
-        Me.SplitContainer2.Size = New System.Drawing.Size(955, 369)
-        Me.SplitContainer2.SplitterDistance = 299
-        Me.SplitContainer2.SplitterWidth = 2
-        Me.SplitContainer2.TabIndex = 1
+        Me.SplitLayoutPanel.Panel2.Controls.Add(Me.StylizedPanel1)
+        Me.SplitLayoutPanel.Panel2MinSize = 325
+        Me.SplitLayoutPanel.Size = New System.Drawing.Size(1257, 737)
+        Me.SplitLayoutPanel.SplitterDistance = 911
+        Me.SplitLayoutPanel.SplitterWidth = 2
+        Me.SplitLayoutPanel.TabIndex = 1
         '
         'tcNotebook
         '
         Me.tcNotebook.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tcNotebook.Location = New System.Drawing.Point(0, 2)
+        Me.tcNotebook.Location = New System.Drawing.Point(0, 132)
         Me.tcNotebook.Margin = New System.Windows.Forms.Padding(2)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(299, 367)
+        Me.tcNotebook.Size = New System.Drawing.Size(911, 542)
         Me.tcNotebook.TabIndex = 73
-        '
-        'StylizedPanel1
-        '
-        Me.StylizedPanel1.AutoScroll = True
-        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedPanel1.Controls.Add(Me.tcNotebookProperties)
-        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(654, 369)
-        Me.StylizedPanel1.TabIndex = 13
-        '
-        'tcNotebookProperties
-        '
-        Me.tcNotebookProperties.Controls.Add(Me.tpNotebookProperties)
-        Me.tcNotebookProperties.Controls.Add(Me.tpCharacters)
-        Me.tcNotebookProperties.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tcNotebookProperties.Location = New System.Drawing.Point(0, 0)
-        Me.tcNotebookProperties.Name = "tcNotebookProperties"
-        Me.tcNotebookProperties.SelectedIndex = 0
-        Me.tcNotebookProperties.Size = New System.Drawing.Size(654, 369)
-        Me.tcNotebookProperties.TabIndex = 73
-        '
-        'tpNotebookProperties
-        '
-        Me.tpNotebookProperties.Controls.Add(Me.pnlProperties)
-        Me.tpNotebookProperties.Location = New System.Drawing.Point(4, 22)
-        Me.tpNotebookProperties.Name = "tpNotebookProperties"
-        Me.tpNotebookProperties.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpNotebookProperties.Size = New System.Drawing.Size(646, 343)
-        Me.tpNotebookProperties.TabIndex = 0
-        Me.tpNotebookProperties.Text = "Properties"
-        '
-        'pnlProperties
-        '
-        Me.pnlProperties.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlProperties.Location = New System.Drawing.Point(3, 3)
-        Me.pnlProperties.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlProperties.MinimumSize = New System.Drawing.Size(262, 0)
-        Me.pnlProperties.Name = "pnlProperties"
-        Me.pnlProperties.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.pnlProperties.Size = New System.Drawing.Size(640, 337)
-        Me.pnlProperties.TabIndex = 72
-        '
-        'tpCharacters
-        '
-        Me.tpCharacters.Controls.Add(Me.charEdit)
-        Me.tpCharacters.Location = New System.Drawing.Point(4, 22)
-        Me.tpCharacters.Name = "tpCharacters"
-        Me.tpCharacters.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCharacters.Size = New System.Drawing.Size(646, 343)
-        Me.tpCharacters.TabIndex = 1
-        Me.tpCharacters.Text = "Characters"
-        '
-        'charEdit
-        '
-        Me.charEdit.Character = "a"
-        Me.charEdit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.charEdit.Location = New System.Drawing.Point(3, 3)
-        Me.charEdit.MinimumSize = New System.Drawing.Size(293, 0)
-        Me.charEdit.Name = "charEdit"
-        Me.charEdit.Size = New System.Drawing.Size(640, 337)
-        Me.charEdit.TabIndex = 0
         '
         'dlgSaveNotebook
         '
@@ -421,55 +356,41 @@ Partial Class frmMain
         '
         Me.dlgSave.Filter = "Notebook file (*.nt)|*.nt|Zip files (*.zip)|*.zip|All files (*.*)|*.*"
         '
-        'btnTransparentColor
-        '
-        Me.btnTransparentColor.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnTransparentColor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTransparentColor.ForeColor = System.Drawing.Color.Red
-        Me.btnTransparentColor.Location = New System.Drawing.Point(7, 7)
-        Me.btnTransparentColor.Name = "btnTransparentColor"
-        Me.btnTransparentColor.Size = New System.Drawing.Size(32, 33)
-        Me.btnTransparentColor.TabIndex = 21
-        Me.btnTransparentColor.Text = "X"
-        Me.ttMain.SetToolTip(Me.btnTransparentColor, "Transparent")
-        Me.btnTransparentColor.UseVisualStyleBackColor = True
-        '
         'dlgSaveImage
         '
         Me.dlgSaveImage.Filter = "PNG files (*.png)|*.png|All files (*.*)|*.*"
         '
-        'ToolStripContainer1
+        'MainToolStripContainer
         '
         '
-        'ToolStripContainer1.BottomToolStripPanel
+        'MainToolStripContainer.BottomToolStripPanel
         '
-        Me.ToolStripContainer1.BottomToolStripPanel.Controls.Add(Me.DataToolStrip)
+        Me.MainToolStripContainer.BottomToolStripPanel.Controls.Add(Me.DataToolStrip)
         '
-        'ToolStripContainer1.ContentPanel
+        'MainToolStripContainer.ContentPanel
         '
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.SplitContainer2)
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.pnlFindReplace)
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.pnlColor)
-        Me.ToolStripContainer1.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(955, 501)
-        Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.tcNotebook)
+        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.pnlFindReplace)
+        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.pnlColor)
+        Me.MainToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(911, 674)
+        Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
-        'ToolStripContainer1.LeftToolStripPanel
+        'MainToolStripContainer.LeftToolStripPanel
         '
-        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 24)
-        Me.ToolStripContainer1.Margin = New System.Windows.Forms.Padding(2)
-        Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 0)
+        Me.MainToolStripContainer.Margin = New System.Windows.Forms.Padding(2)
+        Me.MainToolStripContainer.Name = "MainToolStripContainer"
         '
-        'ToolStripContainer1.RightToolStripPanel
+        'MainToolStripContainer.RightToolStripPanel
         '
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(955, 602)
-        Me.ToolStripContainer1.TabIndex = 74
-        Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(911, 737)
+        Me.MainToolStripContainer.TabIndex = 74
         '
-        'ToolStripContainer1.TopToolStripPanel
+        'MainToolStripContainer.TopToolStripPanel
         '
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.FontToolStrip)
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.FileToolStrip)
+        Me.MainToolStripContainer.TopToolStripPanel.Controls.Add(Me.FileToolStrip)
+        Me.MainToolStripContainer.TopToolStripPanel.Controls.Add(Me.FontToolStrip)
         '
         'DataToolStrip
         '
@@ -479,7 +400,7 @@ Partial Class frmMain
         Me.DataToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel, Me.ToolStripSeparator11, Me.lblPageCount, Me.ToolStripSeparator12, Me.ToolStripLabel1, Me.ThemeCombo})
         Me.DataToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DataToolStrip.Name = "DataToolStrip"
-        Me.DataToolStrip.Size = New System.Drawing.Size(955, 25)
+        Me.DataToolStrip.Size = New System.Drawing.Size(911, 25)
         Me.DataToolStrip.Stretch = True
         Me.DataToolStrip.TabIndex = 2
         '
@@ -533,524 +454,12 @@ Partial Class frmMain
         Me.ThemeCombo.Size = New System.Drawing.Size(145, 25)
         Me.ThemeCombo.Visible = False
         '
-        'pnlFindReplace
-        '
-        Me.pnlFindReplace.BackColor = System.Drawing.Color.Transparent
-        Me.pnlFindReplace.Controls.Add(Me.btnFindNext)
-        Me.pnlFindReplace.Controls.Add(Me.btnReplaceAll)
-        Me.pnlFindReplace.Controls.Add(Me.txtReplace)
-        Me.pnlFindReplace.Controls.Add(Me.Label18)
-        Me.pnlFindReplace.Controls.Add(Me.txtFind)
-        Me.pnlFindReplace.Controls.Add(Me.Label17)
-        Me.pnlFindReplace.Controls.Add(Me.btnReplace)
-        Me.pnlFindReplace.Controls.Add(Me.btnFind)
-        Me.pnlFindReplace.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlFindReplace.Location = New System.Drawing.Point(0, 97)
-        Me.pnlFindReplace.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlFindReplace.Name = "pnlFindReplace"
-        Me.pnlFindReplace.Size = New System.Drawing.Size(955, 35)
-        Me.pnlFindReplace.TabIndex = 72
-        Me.pnlFindReplace.Visible = False
-        '
-        'btnFindNext
-        '
-        Me.btnFindNext.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnFindNext.Location = New System.Drawing.Point(398, 5)
-        Me.btnFindNext.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnFindNext.Name = "btnFindNext"
-        Me.btnFindNext.Size = New System.Drawing.Size(78, 24)
-        Me.btnFindNext.TabIndex = 69
-        Me.btnFindNext.Text = " Find Next"
-        Me.btnFindNext.UseVisualStyleBackColor = False
-        '
-        'btnReplaceAll
-        '
-        Me.btnReplaceAll.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnReplaceAll.Location = New System.Drawing.Point(562, 5)
-        Me.btnReplaceAll.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnReplaceAll.Name = "btnReplaceAll"
-        Me.btnReplaceAll.Size = New System.Drawing.Size(78, 24)
-        Me.btnReplaceAll.TabIndex = 71
-        Me.btnReplaceAll.Text = "Replace All"
-        Me.btnReplaceAll.UseVisualStyleBackColor = False
-        '
-        'txtReplace
-        '
-        Me.txtReplace.Location = New System.Drawing.Point(203, 9)
-        Me.txtReplace.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtReplace.Name = "txtReplace"
-        Me.txtReplace.Size = New System.Drawing.Size(112, 20)
-        Me.txtReplace.TabIndex = 67
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(150, 11)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(2)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(50, 13)
-        Me.Label18.TabIndex = 85
-        Me.Label18.Text = "Replace:"
-        '
-        'txtFind
-        '
-        Me.txtFind.Location = New System.Drawing.Point(40, 9)
-        Me.txtFind.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtFind.Name = "txtFind"
-        Me.txtFind.Size = New System.Drawing.Size(108, 20)
-        Me.txtFind.TabIndex = 66
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(6, 11)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(2)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(30, 13)
-        Me.Label17.TabIndex = 83
-        Me.Label17.Text = "Find:"
-        '
-        'btnReplace
-        '
-        Me.btnReplace.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnReplace.Location = New System.Drawing.Point(480, 5)
-        Me.btnReplace.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnReplace.Name = "btnReplace"
-        Me.btnReplace.Size = New System.Drawing.Size(78, 24)
-        Me.btnReplace.TabIndex = 70
-        Me.btnReplace.Text = "Replace"
-        Me.btnReplace.UseVisualStyleBackColor = False
-        '
-        'btnFind
-        '
-        Me.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnFind.Location = New System.Drawing.Point(317, 5)
-        Me.btnFind.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnFind.Name = "btnFind"
-        Me.btnFind.Size = New System.Drawing.Size(78, 24)
-        Me.btnFind.TabIndex = 68
-        Me.btnFind.Text = "Find"
-        Me.btnFind.UseVisualStyleBackColor = False
-        '
-        'pnlColor
-        '
-        Me.pnlColor.BackColor = System.Drawing.Color.Transparent
-        Me.pnlColor.Controls.Add(Me.ColorLayoutPanel)
-        Me.pnlColor.Controls.Add(Me.rbHighlight)
-        Me.pnlColor.Controls.Add(Me.rbTextColor)
-        Me.pnlColor.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlColor.Location = New System.Drawing.Point(0, 0)
-        Me.pnlColor.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlColor.Name = "pnlColor"
-        Me.pnlColor.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
-        Me.pnlColor.Size = New System.Drawing.Size(955, 97)
-        Me.pnlColor.TabIndex = 74
-        Me.pnlColor.Visible = False
-        '
-        'ColorLayoutPanel
-        '
-        Me.ColorLayoutPanel.AutoScroll = True
-        Me.ColorLayoutPanel.AutoScrollMargin = New System.Drawing.Size(15, 5)
-        Me.ColorLayoutPanel.BackColor = System.Drawing.Color.Transparent
-        Me.ColorLayoutPanel.Controls.Add(Me.btnTransparentColor)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton1)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton2)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton3)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton4)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton5)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton6)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton7)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton8)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton9)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton10)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton11)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton12)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton20)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton21)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton13)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton14)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton15)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton16)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton17)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton18)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton19)
-        Me.ColorLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ColorLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.ColorLayoutPanel.Location = New System.Drawing.Point(0, 32)
-        Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.ColorLayoutPanel.Name = "ColorLayoutPanel"
-        Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(4)
-        Me.ColorLayoutPanel.Size = New System.Drawing.Size(955, 64)
-        Me.ColorLayoutPanel.TabIndex = 70
-        '
-        'StylizedColorButton1
-        '
-        Me.StylizedColorButton1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton1.Color = System.Drawing.Color.Black
-        Me.StylizedColorButton1.Image = CType(resources.GetObject("StylizedColorButton1.Image"), System.Drawing.Image)
-        Me.StylizedColorButton1.Location = New System.Drawing.Point(44, 6)
-        Me.StylizedColorButton1.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton1.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton1.Name = "StylizedColorButton1"
-        Me.StylizedColorButton1.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton1.RightClickMode = True
-        Me.StylizedColorButton1.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton1.TabIndex = 0
-        Me.StylizedColorButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton1.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton2
-        '
-        Me.StylizedColorButton2.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton2.Color = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.StylizedColorButton2.Image = CType(resources.GetObject("StylizedColorButton2.Image"), System.Drawing.Image)
-        Me.StylizedColorButton2.Location = New System.Drawing.Point(80, 6)
-        Me.StylizedColorButton2.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton2.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton2.Name = "StylizedColorButton2"
-        Me.StylizedColorButton2.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton2.RightClickMode = True
-        Me.StylizedColorButton2.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton2.TabIndex = 1
-        Me.StylizedColorButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton2.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton3
-        '
-        Me.StylizedColorButton3.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton3.Color = System.Drawing.Color.Silver
-        Me.StylizedColorButton3.Image = CType(resources.GetObject("StylizedColorButton3.Image"), System.Drawing.Image)
-        Me.StylizedColorButton3.Location = New System.Drawing.Point(116, 6)
-        Me.StylizedColorButton3.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton3.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton3.Name = "StylizedColorButton3"
-        Me.StylizedColorButton3.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton3.RightClickMode = True
-        Me.StylizedColorButton3.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton3.TabIndex = 2
-        Me.StylizedColorButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton3.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton4
-        '
-        Me.StylizedColorButton4.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton4.Color = System.Drawing.Color.Gainsboro
-        Me.StylizedColorButton4.Image = CType(resources.GetObject("StylizedColorButton4.Image"), System.Drawing.Image)
-        Me.StylizedColorButton4.Location = New System.Drawing.Point(152, 6)
-        Me.StylizedColorButton4.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton4.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton4.Name = "StylizedColorButton4"
-        Me.StylizedColorButton4.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton4.RightClickMode = True
-        Me.StylizedColorButton4.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton4.TabIndex = 3
-        Me.StylizedColorButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton4.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton5
-        '
-        Me.StylizedColorButton5.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton5.Color = System.Drawing.Color.White
-        Me.StylizedColorButton5.Image = CType(resources.GetObject("StylizedColorButton5.Image"), System.Drawing.Image)
-        Me.StylizedColorButton5.Location = New System.Drawing.Point(188, 6)
-        Me.StylizedColorButton5.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton5.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton5.Name = "StylizedColorButton5"
-        Me.StylizedColorButton5.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton5.RightClickMode = True
-        Me.StylizedColorButton5.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton5.TabIndex = 4
-        Me.StylizedColorButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton5.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton6
-        '
-        Me.StylizedColorButton6.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton6.Color = System.Drawing.Color.Red
-        Me.StylizedColorButton6.Image = CType(resources.GetObject("StylizedColorButton6.Image"), System.Drawing.Image)
-        Me.StylizedColorButton6.Location = New System.Drawing.Point(224, 6)
-        Me.StylizedColorButton6.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton6.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton6.Name = "StylizedColorButton6"
-        Me.StylizedColorButton6.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton6.RightClickMode = True
-        Me.StylizedColorButton6.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton6.TabIndex = 5
-        Me.StylizedColorButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton6.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton7
-        '
-        Me.StylizedColorButton7.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton7.Color = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedColorButton7.Image = CType(resources.GetObject("StylizedColorButton7.Image"), System.Drawing.Image)
-        Me.StylizedColorButton7.Location = New System.Drawing.Point(260, 6)
-        Me.StylizedColorButton7.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton7.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton7.Name = "StylizedColorButton7"
-        Me.StylizedColorButton7.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton7.RightClickMode = True
-        Me.StylizedColorButton7.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton7.TabIndex = 6
-        Me.StylizedColorButton7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton7.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton8
-        '
-        Me.StylizedColorButton8.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton8.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedColorButton8.Image = CType(resources.GetObject("StylizedColorButton8.Image"), System.Drawing.Image)
-        Me.StylizedColorButton8.Location = New System.Drawing.Point(296, 6)
-        Me.StylizedColorButton8.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton8.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton8.Name = "StylizedColorButton8"
-        Me.StylizedColorButton8.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton8.RightClickMode = True
-        Me.StylizedColorButton8.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton8.TabIndex = 7
-        Me.StylizedColorButton8.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton8.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton9
-        '
-        Me.StylizedColorButton9.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton9.Color = System.Drawing.Color.Goldenrod
-        Me.StylizedColorButton9.Image = CType(resources.GetObject("StylizedColorButton9.Image"), System.Drawing.Image)
-        Me.StylizedColorButton9.Location = New System.Drawing.Point(332, 6)
-        Me.StylizedColorButton9.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton9.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton9.Name = "StylizedColorButton9"
-        Me.StylizedColorButton9.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton9.RightClickMode = True
-        Me.StylizedColorButton9.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton9.TabIndex = 8
-        Me.StylizedColorButton9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton9.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton10
-        '
-        Me.StylizedColorButton10.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton10.Color = System.Drawing.Color.Yellow
-        Me.StylizedColorButton10.Image = CType(resources.GetObject("StylizedColorButton10.Image"), System.Drawing.Image)
-        Me.StylizedColorButton10.Location = New System.Drawing.Point(368, 6)
-        Me.StylizedColorButton10.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton10.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton10.Name = "StylizedColorButton10"
-        Me.StylizedColorButton10.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton10.RightClickMode = True
-        Me.StylizedColorButton10.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton10.TabIndex = 9
-        Me.StylizedColorButton10.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton10.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton11
-        '
-        Me.StylizedColorButton11.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton11.Color = System.Drawing.Color.Lime
-        Me.StylizedColorButton11.Image = CType(resources.GetObject("StylizedColorButton11.Image"), System.Drawing.Image)
-        Me.StylizedColorButton11.Location = New System.Drawing.Point(404, 6)
-        Me.StylizedColorButton11.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton11.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton11.Name = "StylizedColorButton11"
-        Me.StylizedColorButton11.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton11.RightClickMode = True
-        Me.StylizedColorButton11.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton11.TabIndex = 10
-        Me.StylizedColorButton11.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton11.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton12
-        '
-        Me.StylizedColorButton12.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton12.Color = System.Drawing.Color.OliveDrab
-        Me.StylizedColorButton12.Image = CType(resources.GetObject("StylizedColorButton12.Image"), System.Drawing.Image)
-        Me.StylizedColorButton12.Location = New System.Drawing.Point(440, 6)
-        Me.StylizedColorButton12.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton12.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton12.Name = "StylizedColorButton12"
-        Me.StylizedColorButton12.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton12.RightClickMode = True
-        Me.StylizedColorButton12.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton12.TabIndex = 11
-        Me.StylizedColorButton12.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton12.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton20
-        '
-        Me.StylizedColorButton20.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton20.Color = System.Drawing.Color.Green
-        Me.StylizedColorButton20.Image = CType(resources.GetObject("StylizedColorButton20.Image"), System.Drawing.Image)
-        Me.StylizedColorButton20.Location = New System.Drawing.Point(476, 6)
-        Me.StylizedColorButton20.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton20.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton20.Name = "StylizedColorButton20"
-        Me.StylizedColorButton20.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton20.RightClickMode = True
-        Me.StylizedColorButton20.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton20.TabIndex = 12
-        Me.StylizedColorButton20.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton20.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton21
-        '
-        Me.StylizedColorButton21.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton21.Color = System.Drawing.Color.DarkGreen
-        Me.StylizedColorButton21.Image = CType(resources.GetObject("StylizedColorButton21.Image"), System.Drawing.Image)
-        Me.StylizedColorButton21.Location = New System.Drawing.Point(512, 6)
-        Me.StylizedColorButton21.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton21.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton21.Name = "StylizedColorButton21"
-        Me.StylizedColorButton21.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton21.RightClickMode = True
-        Me.StylizedColorButton21.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton21.TabIndex = 13
-        Me.StylizedColorButton21.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton21.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton13
-        '
-        Me.StylizedColorButton13.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton13.Color = System.Drawing.Color.CadetBlue
-        Me.StylizedColorButton13.Image = CType(resources.GetObject("StylizedColorButton13.Image"), System.Drawing.Image)
-        Me.StylizedColorButton13.Location = New System.Drawing.Point(548, 6)
-        Me.StylizedColorButton13.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton13.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton13.Name = "StylizedColorButton13"
-        Me.StylizedColorButton13.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton13.RightClickMode = True
-        Me.StylizedColorButton13.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton13.TabIndex = 14
-        Me.StylizedColorButton13.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton13.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton14
-        '
-        Me.StylizedColorButton14.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton14.Color = System.Drawing.Color.DeepSkyBlue
-        Me.StylizedColorButton14.Image = CType(resources.GetObject("StylizedColorButton14.Image"), System.Drawing.Image)
-        Me.StylizedColorButton14.Location = New System.Drawing.Point(584, 6)
-        Me.StylizedColorButton14.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton14.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton14.Name = "StylizedColorButton14"
-        Me.StylizedColorButton14.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton14.RightClickMode = True
-        Me.StylizedColorButton14.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton14.TabIndex = 15
-        Me.StylizedColorButton14.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton14.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton15
-        '
-        Me.StylizedColorButton15.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton15.Color = System.Drawing.Color.Blue
-        Me.StylizedColorButton15.Image = CType(resources.GetObject("StylizedColorButton15.Image"), System.Drawing.Image)
-        Me.StylizedColorButton15.Location = New System.Drawing.Point(620, 6)
-        Me.StylizedColorButton15.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton15.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton15.Name = "StylizedColorButton15"
-        Me.StylizedColorButton15.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton15.RightClickMode = True
-        Me.StylizedColorButton15.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton15.TabIndex = 16
-        Me.StylizedColorButton15.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton15.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton16
-        '
-        Me.StylizedColorButton16.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton16.Color = System.Drawing.Color.DarkSlateBlue
-        Me.StylizedColorButton16.Image = CType(resources.GetObject("StylizedColorButton16.Image"), System.Drawing.Image)
-        Me.StylizedColorButton16.Location = New System.Drawing.Point(656, 6)
-        Me.StylizedColorButton16.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton16.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton16.Name = "StylizedColorButton16"
-        Me.StylizedColorButton16.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton16.RightClickMode = True
-        Me.StylizedColorButton16.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton16.TabIndex = 17
-        Me.StylizedColorButton16.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton16.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton17
-        '
-        Me.StylizedColorButton17.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton17.Color = System.Drawing.Color.Purple
-        Me.StylizedColorButton17.Image = CType(resources.GetObject("StylizedColorButton17.Image"), System.Drawing.Image)
-        Me.StylizedColorButton17.Location = New System.Drawing.Point(692, 6)
-        Me.StylizedColorButton17.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton17.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton17.Name = "StylizedColorButton17"
-        Me.StylizedColorButton17.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton17.RightClickMode = True
-        Me.StylizedColorButton17.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton17.TabIndex = 18
-        Me.StylizedColorButton17.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton17.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton18
-        '
-        Me.StylizedColorButton18.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton18.Color = System.Drawing.Color.DeepPink
-        Me.StylizedColorButton18.Image = CType(resources.GetObject("StylizedColorButton18.Image"), System.Drawing.Image)
-        Me.StylizedColorButton18.Location = New System.Drawing.Point(728, 6)
-        Me.StylizedColorButton18.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton18.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton18.Name = "StylizedColorButton18"
-        Me.StylizedColorButton18.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton18.RightClickMode = True
-        Me.StylizedColorButton18.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton18.TabIndex = 19
-        Me.StylizedColorButton18.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton18.UseVisualStyleBackColor = True
-        '
-        'StylizedColorButton19
-        '
-        Me.StylizedColorButton19.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton19.Color = System.Drawing.Color.Fuchsia
-        Me.StylizedColorButton19.Image = CType(resources.GetObject("StylizedColorButton19.Image"), System.Drawing.Image)
-        Me.StylizedColorButton19.Location = New System.Drawing.Point(764, 6)
-        Me.StylizedColorButton19.Margin = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton19.MinimumSize = New System.Drawing.Size(2, 16)
-        Me.StylizedColorButton19.Name = "StylizedColorButton19"
-        Me.StylizedColorButton19.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
-        Me.StylizedColorButton19.RightClickMode = True
-        Me.StylizedColorButton19.Size = New System.Drawing.Size(32, 33)
-        Me.StylizedColorButton19.TabIndex = 20
-        Me.StylizedColorButton19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.StylizedColorButton19.UseVisualStyleBackColor = True
-        '
-        'rbHighlight
-        '
-        Me.rbHighlight.AutoSize = True
-        Me.rbHighlight.BackColor = System.Drawing.Color.Transparent
-        Me.rbHighlight.Location = New System.Drawing.Point(53, 9)
-        Me.rbHighlight.Margin = New System.Windows.Forms.Padding(2)
-        Me.rbHighlight.Name = "rbHighlight"
-        Me.rbHighlight.Size = New System.Drawing.Size(66, 17)
-        Me.rbHighlight.TabIndex = 1
-        Me.rbHighlight.Text = "Highlight"
-        Me.rbHighlight.UseVisualStyleBackColor = False
-        '
-        'rbTextColor
-        '
-        Me.rbTextColor.AutoSize = True
-        Me.rbTextColor.BackColor = System.Drawing.Color.Transparent
-        Me.rbTextColor.Checked = True
-        Me.rbTextColor.Location = New System.Drawing.Point(6, 9)
-        Me.rbTextColor.Margin = New System.Windows.Forms.Padding(2)
-        Me.rbTextColor.Name = "rbTextColor"
-        Me.rbTextColor.Size = New System.Drawing.Size(46, 17)
-        Me.rbTextColor.TabIndex = 0
-        Me.rbTextColor.TabStop = True
-        Me.rbTextColor.Text = "Text"
-        Me.rbTextColor.UseVisualStyleBackColor = False
-        '
         'FontToolStrip
         '
         Me.FontToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.FontToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.FontToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripButton, Me.ToolStripSeparator9, Me.BoldToolStripButton, Me.ItalicToolStripButton, Me.UnderlineToolStripButton, Me.StrikeToolStripButton, Me.ToolStripSeparator5, Me.AlignLeftToolStripButton, Me.AlignCenterToolStripButton, Me.AlignRightToolStripButton, Me.ToolStripSeparator8, Me.IndentToolStripComboBox, Me.IndentToolStripButton})
-        Me.FontToolStrip.Location = New System.Drawing.Point(3, 0)
+        Me.FontToolStrip.Location = New System.Drawing.Point(261, 0)
         Me.FontToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.FontToolStrip.Name = "FontToolStrip"
         Me.FontToolStrip.Size = New System.Drawing.Size(366, 38)
@@ -1172,7 +581,7 @@ Partial Class frmMain
         Me.FileToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.FileToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.FileToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.toolStripSeparator, Me.CutToolStripButton, Me.CopyToolStripButton, Me.PasteToolStripButton, Me.PastePlainToolStripButton, Me.toolStripSeparator2, Me.UndoToolStripButton, Me.RedoToolStripButton})
-        Me.FileToolStrip.Location = New System.Drawing.Point(3, 38)
+        Me.FileToolStrip.Location = New System.Drawing.Point(3, 0)
         Me.FileToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.FileToolStrip.Name = "FileToolStrip"
         Me.FileToolStrip.Size = New System.Drawing.Size(258, 38)
@@ -1285,7 +694,7 @@ Partial Class frmMain
         Me.MainMenu.Location = New System.Drawing.Point(0, 0)
         Me.MainMenu.Name = "MainMenu"
         Me.MainMenu.Padding = New System.Windows.Forms.Padding(3, 1, 0, 1)
-        Me.MainMenu.Size = New System.Drawing.Size(955, 24)
+        Me.MainMenu.Size = New System.Drawing.Size(1257, 24)
         Me.MainMenu.TabIndex = 75
         Me.MainMenu.Text = "MenuStrip1"
         '
@@ -1824,12 +1233,600 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(122, 28)
         Me.AboutToolStripMenuItem.Text = "About..."
         '
+        'pnlFindReplace
+        '
+        Me.pnlFindReplace.BackColor = System.Drawing.Color.Transparent
+        Me.pnlFindReplace.Controls.Add(Me.btnFindNext)
+        Me.pnlFindReplace.Controls.Add(Me.btnReplaceAll)
+        Me.pnlFindReplace.Controls.Add(Me.txtReplace)
+        Me.pnlFindReplace.Controls.Add(Me.Label18)
+        Me.pnlFindReplace.Controls.Add(Me.txtFind)
+        Me.pnlFindReplace.Controls.Add(Me.Label17)
+        Me.pnlFindReplace.Controls.Add(Me.btnReplace)
+        Me.pnlFindReplace.Controls.Add(Me.btnFind)
+        Me.pnlFindReplace.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlFindReplace.Location = New System.Drawing.Point(0, 97)
+        Me.pnlFindReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlFindReplace.Name = "pnlFindReplace"
+        Me.pnlFindReplace.Size = New System.Drawing.Size(911, 35)
+        Me.pnlFindReplace.TabIndex = 72
+        Me.pnlFindReplace.Visible = False
+        '
+        'btnFindNext
+        '
+        Me.btnFindNext.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnFindNext.Location = New System.Drawing.Point(398, 5)
+        Me.btnFindNext.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnFindNext.Name = "btnFindNext"
+        Me.btnFindNext.Size = New System.Drawing.Size(78, 24)
+        Me.btnFindNext.TabIndex = 69
+        Me.btnFindNext.Text = " Find Next"
+        Me.btnFindNext.UseVisualStyleBackColor = False
+        '
+        'btnReplaceAll
+        '
+        Me.btnReplaceAll.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnReplaceAll.Location = New System.Drawing.Point(562, 5)
+        Me.btnReplaceAll.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnReplaceAll.Name = "btnReplaceAll"
+        Me.btnReplaceAll.Size = New System.Drawing.Size(78, 24)
+        Me.btnReplaceAll.TabIndex = 71
+        Me.btnReplaceAll.Text = "Replace All"
+        Me.btnReplaceAll.UseVisualStyleBackColor = False
+        '
+        'txtReplace
+        '
+        Me.txtReplace.Location = New System.Drawing.Point(203, 9)
+        Me.txtReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtReplace.Name = "txtReplace"
+        Me.txtReplace.Size = New System.Drawing.Size(112, 20)
+        Me.txtReplace.TabIndex = 67
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(150, 11)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(2)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(50, 13)
+        Me.Label18.TabIndex = 85
+        Me.Label18.Text = "Replace:"
+        '
+        'txtFind
+        '
+        Me.txtFind.Location = New System.Drawing.Point(40, 9)
+        Me.txtFind.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtFind.Name = "txtFind"
+        Me.txtFind.Size = New System.Drawing.Size(108, 20)
+        Me.txtFind.TabIndex = 66
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(6, 11)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(2)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(30, 13)
+        Me.Label17.TabIndex = 83
+        Me.Label17.Text = "Find:"
+        '
+        'btnReplace
+        '
+        Me.btnReplace.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnReplace.Location = New System.Drawing.Point(480, 5)
+        Me.btnReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnReplace.Name = "btnReplace"
+        Me.btnReplace.Size = New System.Drawing.Size(78, 24)
+        Me.btnReplace.TabIndex = 70
+        Me.btnReplace.Text = "Replace"
+        Me.btnReplace.UseVisualStyleBackColor = False
+        '
+        'btnFind
+        '
+        Me.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnFind.Location = New System.Drawing.Point(317, 5)
+        Me.btnFind.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnFind.Name = "btnFind"
+        Me.btnFind.Size = New System.Drawing.Size(78, 24)
+        Me.btnFind.TabIndex = 68
+        Me.btnFind.Text = "Find"
+        Me.btnFind.UseVisualStyleBackColor = False
+        '
+        'pnlColor
+        '
+        Me.pnlColor.BackColor = System.Drawing.Color.Transparent
+        Me.pnlColor.Controls.Add(Me.ColorLayoutPanel)
+        Me.pnlColor.Controls.Add(Me.rbHighlight)
+        Me.pnlColor.Controls.Add(Me.rbTextColor)
+        Me.pnlColor.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlColor.Location = New System.Drawing.Point(0, 0)
+        Me.pnlColor.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlColor.Name = "pnlColor"
+        Me.pnlColor.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
+        Me.pnlColor.Size = New System.Drawing.Size(911, 97)
+        Me.pnlColor.TabIndex = 74
+        Me.pnlColor.Visible = False
+        '
+        'ColorLayoutPanel
+        '
+        Me.ColorLayoutPanel.AutoScroll = True
+        Me.ColorLayoutPanel.AutoScrollMargin = New System.Drawing.Size(15, 5)
+        Me.ColorLayoutPanel.BackColor = System.Drawing.Color.Transparent
+        Me.ColorLayoutPanel.Controls.Add(Me.btnTransparentColor)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton1)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton2)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton3)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton4)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton5)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton6)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton7)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton8)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton9)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton10)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton11)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton12)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton20)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton21)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton13)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton14)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton15)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton16)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton17)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton18)
+        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton19)
+        Me.ColorLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ColorLayoutPanel.Location = New System.Drawing.Point(0, 32)
+        Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.ColorLayoutPanel.Name = "ColorLayoutPanel"
+        Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(4)
+        Me.ColorLayoutPanel.Size = New System.Drawing.Size(911, 64)
+        Me.ColorLayoutPanel.TabIndex = 70
+        '
+        'btnTransparentColor
+        '
+        Me.btnTransparentColor.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnTransparentColor.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTransparentColor.ForeColor = System.Drawing.Color.Red
+        Me.btnTransparentColor.Location = New System.Drawing.Point(7, 7)
+        Me.btnTransparentColor.Name = "btnTransparentColor"
+        Me.btnTransparentColor.Size = New System.Drawing.Size(32, 31)
+        Me.btnTransparentColor.TabIndex = 21
+        Me.btnTransparentColor.Text = "X"
+        Me.ttMain.SetToolTip(Me.btnTransparentColor, "Transparent")
+        Me.btnTransparentColor.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton1
+        '
+        Me.StylizedColorButton1.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton1.Color = System.Drawing.Color.Black
+        Me.StylizedColorButton1.Image = CType(resources.GetObject("StylizedColorButton1.Image"), System.Drawing.Image)
+        Me.StylizedColorButton1.Location = New System.Drawing.Point(44, 6)
+        Me.StylizedColorButton1.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton1.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton1.Name = "StylizedColorButton1"
+        Me.StylizedColorButton1.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton1.RightClickMode = True
+        Me.StylizedColorButton1.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton1.TabIndex = 0
+        Me.StylizedColorButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton1.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton2
+        '
+        Me.StylizedColorButton2.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton2.Color = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.StylizedColorButton2.Image = CType(resources.GetObject("StylizedColorButton2.Image"), System.Drawing.Image)
+        Me.StylizedColorButton2.Location = New System.Drawing.Point(80, 6)
+        Me.StylizedColorButton2.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton2.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton2.Name = "StylizedColorButton2"
+        Me.StylizedColorButton2.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton2.RightClickMode = True
+        Me.StylizedColorButton2.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton2.TabIndex = 1
+        Me.StylizedColorButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton2.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton3
+        '
+        Me.StylizedColorButton3.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton3.Color = System.Drawing.Color.Silver
+        Me.StylizedColorButton3.Image = CType(resources.GetObject("StylizedColorButton3.Image"), System.Drawing.Image)
+        Me.StylizedColorButton3.Location = New System.Drawing.Point(116, 6)
+        Me.StylizedColorButton3.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton3.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton3.Name = "StylizedColorButton3"
+        Me.StylizedColorButton3.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton3.RightClickMode = True
+        Me.StylizedColorButton3.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton3.TabIndex = 2
+        Me.StylizedColorButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton3.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton4
+        '
+        Me.StylizedColorButton4.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton4.Color = System.Drawing.Color.Gainsboro
+        Me.StylizedColorButton4.Image = CType(resources.GetObject("StylizedColorButton4.Image"), System.Drawing.Image)
+        Me.StylizedColorButton4.Location = New System.Drawing.Point(152, 6)
+        Me.StylizedColorButton4.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton4.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton4.Name = "StylizedColorButton4"
+        Me.StylizedColorButton4.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton4.RightClickMode = True
+        Me.StylizedColorButton4.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton4.TabIndex = 3
+        Me.StylizedColorButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton4.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton5
+        '
+        Me.StylizedColorButton5.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton5.Color = System.Drawing.Color.White
+        Me.StylizedColorButton5.Image = CType(resources.GetObject("StylizedColorButton5.Image"), System.Drawing.Image)
+        Me.StylizedColorButton5.Location = New System.Drawing.Point(188, 6)
+        Me.StylizedColorButton5.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton5.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton5.Name = "StylizedColorButton5"
+        Me.StylizedColorButton5.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton5.RightClickMode = True
+        Me.StylizedColorButton5.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton5.TabIndex = 4
+        Me.StylizedColorButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton5.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton6
+        '
+        Me.StylizedColorButton6.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton6.Color = System.Drawing.Color.Red
+        Me.StylizedColorButton6.Image = CType(resources.GetObject("StylizedColorButton6.Image"), System.Drawing.Image)
+        Me.StylizedColorButton6.Location = New System.Drawing.Point(224, 6)
+        Me.StylizedColorButton6.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton6.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton6.Name = "StylizedColorButton6"
+        Me.StylizedColorButton6.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton6.RightClickMode = True
+        Me.StylizedColorButton6.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton6.TabIndex = 5
+        Me.StylizedColorButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton6.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton7
+        '
+        Me.StylizedColorButton7.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton7.Color = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.StylizedColorButton7.Image = CType(resources.GetObject("StylizedColorButton7.Image"), System.Drawing.Image)
+        Me.StylizedColorButton7.Location = New System.Drawing.Point(260, 6)
+        Me.StylizedColorButton7.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton7.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton7.Name = "StylizedColorButton7"
+        Me.StylizedColorButton7.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton7.RightClickMode = True
+        Me.StylizedColorButton7.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton7.TabIndex = 6
+        Me.StylizedColorButton7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton7.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton8
+        '
+        Me.StylizedColorButton8.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton8.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.StylizedColorButton8.Image = CType(resources.GetObject("StylizedColorButton8.Image"), System.Drawing.Image)
+        Me.StylizedColorButton8.Location = New System.Drawing.Point(296, 6)
+        Me.StylizedColorButton8.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton8.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton8.Name = "StylizedColorButton8"
+        Me.StylizedColorButton8.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton8.RightClickMode = True
+        Me.StylizedColorButton8.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton8.TabIndex = 7
+        Me.StylizedColorButton8.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton8.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton9
+        '
+        Me.StylizedColorButton9.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton9.Color = System.Drawing.Color.Goldenrod
+        Me.StylizedColorButton9.Image = CType(resources.GetObject("StylizedColorButton9.Image"), System.Drawing.Image)
+        Me.StylizedColorButton9.Location = New System.Drawing.Point(332, 6)
+        Me.StylizedColorButton9.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton9.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton9.Name = "StylizedColorButton9"
+        Me.StylizedColorButton9.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton9.RightClickMode = True
+        Me.StylizedColorButton9.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton9.TabIndex = 8
+        Me.StylizedColorButton9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton9.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton10
+        '
+        Me.StylizedColorButton10.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton10.Color = System.Drawing.Color.Yellow
+        Me.StylizedColorButton10.Image = CType(resources.GetObject("StylizedColorButton10.Image"), System.Drawing.Image)
+        Me.StylizedColorButton10.Location = New System.Drawing.Point(368, 6)
+        Me.StylizedColorButton10.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton10.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton10.Name = "StylizedColorButton10"
+        Me.StylizedColorButton10.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton10.RightClickMode = True
+        Me.StylizedColorButton10.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton10.TabIndex = 9
+        Me.StylizedColorButton10.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton10.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton11
+        '
+        Me.StylizedColorButton11.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton11.Color = System.Drawing.Color.Lime
+        Me.StylizedColorButton11.Image = CType(resources.GetObject("StylizedColorButton11.Image"), System.Drawing.Image)
+        Me.StylizedColorButton11.Location = New System.Drawing.Point(404, 6)
+        Me.StylizedColorButton11.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton11.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton11.Name = "StylizedColorButton11"
+        Me.StylizedColorButton11.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton11.RightClickMode = True
+        Me.StylizedColorButton11.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton11.TabIndex = 10
+        Me.StylizedColorButton11.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton11.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton12
+        '
+        Me.StylizedColorButton12.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton12.Color = System.Drawing.Color.OliveDrab
+        Me.StylizedColorButton12.Image = CType(resources.GetObject("StylizedColorButton12.Image"), System.Drawing.Image)
+        Me.StylizedColorButton12.Location = New System.Drawing.Point(440, 6)
+        Me.StylizedColorButton12.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton12.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton12.Name = "StylizedColorButton12"
+        Me.StylizedColorButton12.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton12.RightClickMode = True
+        Me.StylizedColorButton12.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton12.TabIndex = 11
+        Me.StylizedColorButton12.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton12.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton20
+        '
+        Me.StylizedColorButton20.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton20.Color = System.Drawing.Color.Green
+        Me.StylizedColorButton20.Image = CType(resources.GetObject("StylizedColorButton20.Image"), System.Drawing.Image)
+        Me.StylizedColorButton20.Location = New System.Drawing.Point(476, 6)
+        Me.StylizedColorButton20.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton20.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton20.Name = "StylizedColorButton20"
+        Me.StylizedColorButton20.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton20.RightClickMode = True
+        Me.StylizedColorButton20.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton20.TabIndex = 12
+        Me.StylizedColorButton20.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton20.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton21
+        '
+        Me.StylizedColorButton21.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton21.Color = System.Drawing.Color.DarkGreen
+        Me.StylizedColorButton21.Image = CType(resources.GetObject("StylizedColorButton21.Image"), System.Drawing.Image)
+        Me.StylizedColorButton21.Location = New System.Drawing.Point(512, 6)
+        Me.StylizedColorButton21.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton21.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton21.Name = "StylizedColorButton21"
+        Me.StylizedColorButton21.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton21.RightClickMode = True
+        Me.StylizedColorButton21.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton21.TabIndex = 13
+        Me.StylizedColorButton21.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton21.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton13
+        '
+        Me.StylizedColorButton13.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton13.Color = System.Drawing.Color.CadetBlue
+        Me.StylizedColorButton13.Image = CType(resources.GetObject("StylizedColorButton13.Image"), System.Drawing.Image)
+        Me.StylizedColorButton13.Location = New System.Drawing.Point(548, 6)
+        Me.StylizedColorButton13.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton13.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton13.Name = "StylizedColorButton13"
+        Me.StylizedColorButton13.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton13.RightClickMode = True
+        Me.StylizedColorButton13.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton13.TabIndex = 14
+        Me.StylizedColorButton13.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton13.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton14
+        '
+        Me.StylizedColorButton14.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton14.Color = System.Drawing.Color.DeepSkyBlue
+        Me.StylizedColorButton14.Image = CType(resources.GetObject("StylizedColorButton14.Image"), System.Drawing.Image)
+        Me.StylizedColorButton14.Location = New System.Drawing.Point(584, 6)
+        Me.StylizedColorButton14.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton14.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton14.Name = "StylizedColorButton14"
+        Me.StylizedColorButton14.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton14.RightClickMode = True
+        Me.StylizedColorButton14.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton14.TabIndex = 15
+        Me.StylizedColorButton14.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton14.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton15
+        '
+        Me.StylizedColorButton15.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton15.Color = System.Drawing.Color.Blue
+        Me.StylizedColorButton15.Image = CType(resources.GetObject("StylizedColorButton15.Image"), System.Drawing.Image)
+        Me.StylizedColorButton15.Location = New System.Drawing.Point(620, 6)
+        Me.StylizedColorButton15.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton15.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton15.Name = "StylizedColorButton15"
+        Me.StylizedColorButton15.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton15.RightClickMode = True
+        Me.StylizedColorButton15.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton15.TabIndex = 16
+        Me.StylizedColorButton15.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton15.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton16
+        '
+        Me.StylizedColorButton16.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton16.Color = System.Drawing.Color.DarkSlateBlue
+        Me.StylizedColorButton16.Image = CType(resources.GetObject("StylizedColorButton16.Image"), System.Drawing.Image)
+        Me.StylizedColorButton16.Location = New System.Drawing.Point(656, 6)
+        Me.StylizedColorButton16.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton16.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton16.Name = "StylizedColorButton16"
+        Me.StylizedColorButton16.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton16.RightClickMode = True
+        Me.StylizedColorButton16.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton16.TabIndex = 17
+        Me.StylizedColorButton16.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton16.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton17
+        '
+        Me.StylizedColorButton17.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton17.Color = System.Drawing.Color.Purple
+        Me.StylizedColorButton17.Image = CType(resources.GetObject("StylizedColorButton17.Image"), System.Drawing.Image)
+        Me.StylizedColorButton17.Location = New System.Drawing.Point(692, 6)
+        Me.StylizedColorButton17.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton17.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton17.Name = "StylizedColorButton17"
+        Me.StylizedColorButton17.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton17.RightClickMode = True
+        Me.StylizedColorButton17.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton17.TabIndex = 18
+        Me.StylizedColorButton17.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton17.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton18
+        '
+        Me.StylizedColorButton18.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton18.Color = System.Drawing.Color.DeepPink
+        Me.StylizedColorButton18.Image = CType(resources.GetObject("StylizedColorButton18.Image"), System.Drawing.Image)
+        Me.StylizedColorButton18.Location = New System.Drawing.Point(728, 6)
+        Me.StylizedColorButton18.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton18.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton18.Name = "StylizedColorButton18"
+        Me.StylizedColorButton18.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton18.RightClickMode = True
+        Me.StylizedColorButton18.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton18.TabIndex = 19
+        Me.StylizedColorButton18.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.StylizedColorButton18.UseVisualStyleBackColor = True
+        '
+        'StylizedColorButton19
+        '
+        Me.StylizedColorButton19.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedColorButton19.Color = System.Drawing.Color.Fuchsia
+        Me.StylizedColorButton19.Image = CType(resources.GetObject("StylizedColorButton19.Image"), System.Drawing.Image)
+        Me.StylizedColorButton19.Location = New System.Drawing.Point(764, 6)
+        Me.StylizedColorButton19.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedColorButton19.MinimumSize = New System.Drawing.Size(2, 16)
+        Me.StylizedColorButton19.Name = "StylizedColorButton19"
+        Me.StylizedColorButton19.Padding = New System.Windows.Forms.Padding(0, 1, 0, 1)
+        Me.StylizedColorButton19.RightClickMode = True
+        Me.StylizedColorButton19.Size = New System.Drawing.Size(32, 33)
+        Me.StylizedColorButton19.TabIndex = 20
+        Me.StylizedColorButton19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.StylizedColorButton19.UseVisualStyleBackColor = True
+        '
+        'rbHighlight
+        '
+        Me.rbHighlight.AutoSize = True
+        Me.rbHighlight.BackColor = System.Drawing.Color.Transparent
+        Me.rbHighlight.Location = New System.Drawing.Point(53, 9)
+        Me.rbHighlight.Margin = New System.Windows.Forms.Padding(2)
+        Me.rbHighlight.Name = "rbHighlight"
+        Me.rbHighlight.Size = New System.Drawing.Size(66, 17)
+        Me.rbHighlight.TabIndex = 1
+        Me.rbHighlight.Text = "Highlight"
+        Me.rbHighlight.UseVisualStyleBackColor = False
+        '
+        'rbTextColor
+        '
+        Me.rbTextColor.AutoSize = True
+        Me.rbTextColor.BackColor = System.Drawing.Color.Transparent
+        Me.rbTextColor.Checked = True
+        Me.rbTextColor.Location = New System.Drawing.Point(6, 9)
+        Me.rbTextColor.Margin = New System.Windows.Forms.Padding(2)
+        Me.rbTextColor.Name = "rbTextColor"
+        Me.rbTextColor.Size = New System.Drawing.Size(46, 17)
+        Me.rbTextColor.TabIndex = 0
+        Me.rbTextColor.TabStop = True
+        Me.rbTextColor.Text = "Text"
+        Me.rbTextColor.UseVisualStyleBackColor = False
+        '
+        'StylizedPanel1
+        '
+        Me.StylizedPanel1.AutoScroll = True
+        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedPanel1.Controls.Add(Me.tcNotebookProperties)
+        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.StylizedPanel1.Name = "StylizedPanel1"
+        Me.StylizedPanel1.Size = New System.Drawing.Size(344, 737)
+        Me.StylizedPanel1.TabIndex = 13
+        '
+        'tcNotebookProperties
+        '
+        Me.tcNotebookProperties.Controls.Add(Me.tpNotebookProperties)
+        Me.tcNotebookProperties.Controls.Add(Me.tpCharacters)
+        Me.tcNotebookProperties.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tcNotebookProperties.Location = New System.Drawing.Point(0, 0)
+        Me.tcNotebookProperties.Name = "tcNotebookProperties"
+        Me.tcNotebookProperties.SelectedIndex = 0
+        Me.tcNotebookProperties.Size = New System.Drawing.Size(344, 737)
+        Me.tcNotebookProperties.TabIndex = 73
+        '
+        'tpNotebookProperties
+        '
+        Me.tpNotebookProperties.Controls.Add(Me.pnlProperties)
+        Me.tpNotebookProperties.Location = New System.Drawing.Point(4, 22)
+        Me.tpNotebookProperties.Name = "tpNotebookProperties"
+        Me.tpNotebookProperties.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpNotebookProperties.Size = New System.Drawing.Size(336, 711)
+        Me.tpNotebookProperties.TabIndex = 0
+        Me.tpNotebookProperties.Text = "Properties"
+        '
+        'pnlProperties
+        '
+        Me.pnlProperties.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlProperties.Location = New System.Drawing.Point(3, 3)
+        Me.pnlProperties.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlProperties.MinimumSize = New System.Drawing.Size(262, 0)
+        Me.pnlProperties.Name = "pnlProperties"
+        Me.pnlProperties.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
+        Me.pnlProperties.Size = New System.Drawing.Size(330, 705)
+        Me.pnlProperties.TabIndex = 72
+        '
+        'tpCharacters
+        '
+        Me.tpCharacters.Controls.Add(Me.charEdit)
+        Me.tpCharacters.Location = New System.Drawing.Point(4, 22)
+        Me.tpCharacters.Name = "tpCharacters"
+        Me.tpCharacters.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpCharacters.Size = New System.Drawing.Size(336, 711)
+        Me.tpCharacters.TabIndex = 1
+        Me.tpCharacters.Text = "Characters"
+        '
+        'charEdit
+        '
+        Me.charEdit.Character = "a"
+        Me.charEdit.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.charEdit.Location = New System.Drawing.Point(3, 3)
+        Me.charEdit.MinimumSize = New System.Drawing.Size(293, 0)
+        Me.charEdit.Name = "charEdit"
+        Me.charEdit.Size = New System.Drawing.Size(330, 705)
+        Me.charEdit.TabIndex = 0
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(955, 626)
-        Me.Controls.Add(Me.ToolStripContainer1)
+        Me.ClientSize = New System.Drawing.Size(1257, 761)
+        Me.Controls.Add(Me.SplitLayoutPanel)
         Me.Controls.Add(Me.MainMenu)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1838,34 +1835,34 @@ Partial Class frmMain
         Me.Name = "frmMain"
         Me.Text = "Language Pad X.x"
         Me.cmsMain.ResumeLayout(False)
-        Me.SplitContainer2.Panel1.ResumeLayout(False)
-        Me.SplitContainer2.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer2.ResumeLayout(False)
-        Me.StylizedPanel1.ResumeLayout(False)
-        Me.tcNotebookProperties.ResumeLayout(False)
-        Me.tpNotebookProperties.ResumeLayout(False)
-        Me.tpCharacters.ResumeLayout(False)
-        Me.ToolStripContainer1.BottomToolStripPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.BottomToolStripPanel.PerformLayout
-        Me.ToolStripContainer1.ContentPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.TopToolStripPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.TopToolStripPanel.PerformLayout
-        Me.ToolStripContainer1.ResumeLayout(False)
-        Me.ToolStripContainer1.PerformLayout
+        Me.SplitLayoutPanel.Panel1.ResumeLayout(False)
+        Me.SplitLayoutPanel.Panel2.ResumeLayout(False)
+        CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitLayoutPanel.ResumeLayout(False)
+        Me.MainToolStripContainer.BottomToolStripPanel.ResumeLayout(False)
+        Me.MainToolStripContainer.BottomToolStripPanel.PerformLayout
+        Me.MainToolStripContainer.ContentPanel.ResumeLayout(False)
+        Me.MainToolStripContainer.TopToolStripPanel.ResumeLayout(False)
+        Me.MainToolStripContainer.TopToolStripPanel.PerformLayout
+        Me.MainToolStripContainer.ResumeLayout(False)
+        Me.MainToolStripContainer.PerformLayout
         Me.DataToolStrip.ResumeLayout(False)
         Me.DataToolStrip.PerformLayout
-        Me.pnlFindReplace.ResumeLayout(False)
-        Me.pnlFindReplace.PerformLayout
-        Me.pnlColor.ResumeLayout(False)
-        Me.pnlColor.PerformLayout
-        Me.ColorLayoutPanel.ResumeLayout(False)
         Me.FontToolStrip.ResumeLayout(False)
         Me.FontToolStrip.PerformLayout
         Me.FileToolStrip.ResumeLayout(False)
         Me.FileToolStrip.PerformLayout
         Me.MainMenu.ResumeLayout(False)
         Me.MainMenu.PerformLayout
+        Me.pnlFindReplace.ResumeLayout(False)
+        Me.pnlFindReplace.PerformLayout
+        Me.pnlColor.ResumeLayout(False)
+        Me.pnlColor.PerformLayout
+        Me.ColorLayoutPanel.ResumeLayout(False)
+        Me.StylizedPanel1.ResumeLayout(False)
+        Me.tcNotebookProperties.ResumeLayout(False)
+        Me.tpNotebookProperties.ResumeLayout(False)
+        Me.tpCharacters.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout
 
@@ -1894,7 +1891,7 @@ Partial Class frmMain
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents SelectAllContextMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeselectAllContextMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SplitContainer2 As System.Windows.Forms.SplitContainer
+    Friend WithEvents SplitLayoutPanel As System.Windows.Forms.SplitContainer
     Friend WithEvents tcNotebook As System.Windows.Forms.TabControl
     Friend WithEvents dlgSaveNotebook As System.Windows.Forms.SaveFileDialog
     Friend WithEvents dlgOpen As System.Windows.Forms.OpenFileDialog
@@ -1903,7 +1900,7 @@ Partial Class frmMain
     Friend WithEvents pnlProperties As Language_Pad.PropertiesEditor
     Friend WithEvents ttMain As System.Windows.Forms.ToolTip
     Friend WithEvents dlgSaveImage As System.Windows.Forms.SaveFileDialog
-    Friend WithEvents ToolStripContainer1 As ToolStripContainer
+    Friend WithEvents MainToolStripContainer As ToolStripContainer
     Friend WithEvents FileToolStrip As ToolStrip
     Friend WithEvents NewToolStripButton As ToolStripButton
     Friend WithEvents OpenToolStripButton As ToolStripButton

@@ -335,7 +335,7 @@ Public Class frmMain
         Initialized = True
         UpdateTabs()
 
-        SplitContainer2.Panel2Collapsed = False
+        SplitLayoutPanel.Panel2Collapsed = False
         SelectedDocument_TextChanged(Me, e)
 
         If dlgUpdate.NewestVersion > CurrentVersion Then
@@ -348,7 +348,7 @@ Public Class frmMain
         CurrentDocument.Modified = False
         KeyPreview = True
 
-        SplitContainer2.SplitterDistance = (SplitContainer2.Width - pnlProperties.MinimumSize.Width) - 30
+        SplitLayoutPanel.SplitterDistance = (SplitLayoutPanel.Width - pnlProperties.MinimumSize.Width) - 30
 
         For i As Integer = 0 To 50
             IndentToolStripComboBox.Items.Add(i)
@@ -377,17 +377,17 @@ Public Class frmMain
                                     End Function
     End Sub
 
-    Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
-        ToolStripContainer1.BottomToolStripPanel.Paint, ToolStripContainer1.LeftToolStripPanel.Paint, ToolStripContainer1.RightToolStripPanel.Paint
+    Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles MainToolStripContainer.TopToolStripPanel.Paint,
+        MainToolStripContainer.BottomToolStripPanel.Paint, MainToolStripContainer.LeftToolStripPanel.Paint, MainToolStripContainer.RightToolStripPanel.Paint
         Dim g As Graphics = e.Graphics
-        Dim rect As New Rectangle(0, 0, ToolStripContainer1.Width, Height)
-        Dim b As New LinearGradientBrush(rect, Color1, Color2, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
+        Dim rect As New Rectangle(0, 0, MainToolStripContainer.Width, Height)
+        Dim b As New LinearGradientBrush(rect, BackColor, BackColor, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
         g.FillRectangle(b, rect)
     End Sub
 
-    Private Sub ToolStripContainer1_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ToolStripContainer1.TopToolStripPanel.SizeChanged,
-        ToolStripContainer1.BottomToolStripPanel.SizeChanged, ToolStripContainer1.LeftToolStripPanel.SizeChanged, ToolStripContainer1.RightToolStripPanel.SizeChanged
-        ToolStripContainer1.Invalidate()
+    Private Sub ToolStripContainer1_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles MainToolStripContainer.TopToolStripPanel.SizeChanged,
+        MainToolStripContainer.BottomToolStripPanel.SizeChanged, MainToolStripContainer.LeftToolStripPanel.SizeChanged, MainToolStripContainer.RightToolStripPanel.SizeChanged
+        MainToolStripContainer.Invalidate()
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs)
@@ -495,11 +495,11 @@ Public Class frmMain
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs)
-        SplitContainer2.Panel2Collapsed = True
+        SplitLayoutPanel.Panel2Collapsed = True
     End Sub
 
     Private Sub btnNotebookEditor_Click(sender As Object, e As EventArgs)
-        SplitContainer2.Panel2Collapsed = False
+        SplitLayoutPanel.Panel2Collapsed = False
     End Sub
 
     Private Sub frmMain_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
@@ -1113,7 +1113,7 @@ Public Class frmMain
     End Sub
 
     Private Sub ToggleSidebarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleSidebarToolStripMenuItem.Click
-        SplitContainer2.Panel2Collapsed = SplitContainer2.Panel2Collapsed Xor True
+        SplitLayoutPanel.Panel2Collapsed = SplitLayoutPanel.Panel2Collapsed Xor True
     End Sub
 
     Private Sub ToggleCommonToolbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleCommonToolbarToolStripMenuItem.Click
@@ -1129,19 +1129,19 @@ Public Class frmMain
     End Sub
 
     Private Sub FullModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FullModeToolStripMenuItem.Click
-        SplitContainer2.Panel2Collapsed = False
-        ToolStripContainer1.TopToolStripPanelVisible = True
-        ToolStripContainer1.BottomToolStripPanelVisible = True
-        ToolStripContainer1.LeftToolStripPanelVisible = True
-        ToolStripContainer1.RightToolStripPanelVisible = True
+        SplitLayoutPanel.Panel2Collapsed = False
+        MainToolStripContainer.TopToolStripPanelVisible = True
+        MainToolStripContainer.BottomToolStripPanelVisible = True
+        MainToolStripContainer.LeftToolStripPanelVisible = True
+        MainToolStripContainer.RightToolStripPanelVisible = True
     End Sub
 
     Private Sub MinimalModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimalModeToolStripMenuItem.Click
-        SplitContainer2.Panel2Collapsed = True
-        ToolStripContainer1.TopToolStripPanelVisible = False
-        ToolStripContainer1.BottomToolStripPanelVisible = False
-        ToolStripContainer1.LeftToolStripPanelVisible = False
-        ToolStripContainer1.RightToolStripPanelVisible = False
+        SplitLayoutPanel.Panel2Collapsed = True
+        MainToolStripContainer.TopToolStripPanelVisible = False
+        MainToolStripContainer.BottomToolStripPanelVisible = False
+        MainToolStripContainer.LeftToolStripPanelVisible = False
+        MainToolStripContainer.RightToolStripPanelVisible = False
     End Sub
 
     Private Sub BtnTransparentColor_Click(sender As Object, e As EventArgs) Handles btnTransparentColor.Click

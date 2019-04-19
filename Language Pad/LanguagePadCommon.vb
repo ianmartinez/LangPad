@@ -1,5 +1,4 @@
 ﻿Imports System.Globalization
-Imports System.Reflection
 Imports TundraLib.Themes
 
 Module LanguagePadCommon
