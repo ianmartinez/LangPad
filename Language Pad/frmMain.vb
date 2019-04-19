@@ -253,10 +253,7 @@ Public Class frmMain
 
         pnlProperties.SetTheme(Theme)
         dlgAbout.BackColor = Theme.DialogBack
-        dlgAccentMark.BackColor = Theme.DialogBack
         dlgAddPage.BackColor = Theme.DialogBack
-        dlgCustomSymbols.BackColor = Theme.DialogBack
-        dlgCustomSymbols.dgvSymbols.BackgroundColor = Theme.DialogBack
         dlgCustomZoom.BackColor = Theme.DialogBack
         dlgHtml.BackColor = Theme.DialogBack
         dlgSettings.BackColor = Theme.DialogBack
@@ -745,10 +742,6 @@ Public Class frmMain
         SelectedDocument.WordWrap = WordWrapToolStripMenuItem.Checked
     End Sub
 
-    Private Sub CustomSymbolsToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        dlgCustomSymbols.ShowDialog()
-    End Sub
-
     Private Sub ImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImageToolStripMenuItem.Click
         If dlgOpenImage.ShowDialog() = DialogResult.OK Then
             Dim strImagePath As String = dlgOpenImage.FileName
@@ -1092,10 +1085,6 @@ Public Class frmMain
         Else
             SetTheme(New GlacierTheme)
         End If
-    End Sub
-
-    Private Sub CustomSymbolsToolStripButton_Click(sender As Object, e As EventArgs)
-        CustomSymbolsToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub ColorPanelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ColorPanelToolStripMenuItem.Click

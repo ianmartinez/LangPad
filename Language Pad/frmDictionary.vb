@@ -176,27 +176,6 @@ Public Class frmDictionary
         SplitContainer1.Panel1Collapsed = SplitContainer1.Panel1Collapsed Xor True
     End Sub
 
-    Private Sub CustomSymbolsToolStripButton_Click(sender As Object, e As EventArgs) Handles CustomSymbolsToolStripButton.Click
-        dlgCustomSymbols.ShowDialog()
-    End Sub
-
-    Private Sub AccentMarkToolStripButton_Click(sender As Object, e As EventArgs) Handles AccentMarkToolStripButton.Click
-        On Error Resume Next
-        dgvDictionary.Focus()
-        dgvDictionary.BeginEdit(False)
-
-        If c.SelectionLength > 0 Then
-            dlgAccentMark.Character = c.SelectedText
-        Else
-            dlgAccentMark.Character = ""
-        End If
-
-        If dlgAccentMark.ShowDialog = DialogResult.OK Then
-            InsertText(c, dlgAccentMark.Character)
-            dlgAccentMark.Character = ""
-        End If
-    End Sub
-
     Private Sub AddToolStripButton_Click(sender As Object, e As EventArgs) Handles AddToolStripButton.Click
         dgvDictionary.Rows.Add(1)
     End Sub

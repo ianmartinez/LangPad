@@ -117,9 +117,7 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\TundraLib.dl
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\TundraLib.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbprojAssemblyReference.cache
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAbout.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAccentMark.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAddPage.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgCustomSymbols.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgCustomZoom.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgSettings.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgStyle.resources

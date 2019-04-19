@@ -122,22 +122,10 @@
     <Compile Include="Dialogs\dlgAbout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\dlgAccentMark.Designer.vb">
-      <DependentUpon>dlgAccentMark.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Dialogs\dlgAccentMark.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Dialogs\dlgAddPage.Designer.vb">
       <DependentUpon>dlgAddPage.vb</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\dlgAddPage.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\dlgCustomSymbols.Designer.vb">
-      <DependentUpon>dlgCustomSymbols.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Dialogs\dlgCustomSymbols.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\dlgCustomZoom.Designer.vb">
@@ -227,14 +215,8 @@
     <EmbeddedResource Include="Dialogs\dlgAbout.resx">
       <DependentUpon>dlgAbout.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgAccentMark.resx">
-      <DependentUpon>dlgAccentMark.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgAddPage.resx">
       <DependentUpon>dlgAddPage.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgCustomSymbols.resx">
-      <DependentUpon>dlgCustomSymbols.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlgCustomZoom.resx">
       <DependentUpon>dlgCustomZoom.vb</DependentUpon>
