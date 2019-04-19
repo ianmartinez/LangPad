@@ -156,7 +156,7 @@
     End Sub
 
     Private Sub BtnCopyToClipboard_Click(sender As Object, e As EventArgs) Handles btnCopyToClipboard.Click
-        Clipboard.SetText(GetButtonText(sender))
+        Clipboard.SetText(btnCharacter.Text)
     End Sub
 
     Private Sub BtnUppercase_Click(sender As Object, e As EventArgs) Handles btnUppercase.Click
