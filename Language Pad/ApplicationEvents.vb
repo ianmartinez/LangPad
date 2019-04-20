@@ -29,7 +29,7 @@ Namespace My
 
             ssLoading.lblLoading.Text = "Loading IPA Affricates..."
             For Each Affricate As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Affricates)
-                CharTool.charEdit.InsertCharacterButton(Affricate.Value, CharTool.charEdit.AffricatesLayoutPanel)
+                CharTool.charEdit.InsertCharacterButton(Affricate.Value, CharTool.charEdit.AffricatesLayoutPanel, Affricate.Key)
             Next
 
             ssLoading.pbLoading.Value = 20
@@ -53,15 +53,15 @@ Namespace My
 
             ssLoading.lblLoading.Text = "Loading IPA Vowels..."
             For Each Vowel As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Vowels)
-                CharTool.charEdit.InsertCharacterButton(Vowel.Value, CharTool.charEdit.VowelsLayoutPanel)
+                CharTool.charEdit.InsertCharacterButton(Vowel.Value, CharTool.charEdit.VowelsLayoutPanel, Vowel.Key)
             Next
 
             ssLoading.pbLoading.Value = 50
             ssLoading.Refresh()
 
-            ssLoading.lblLoading.Text = "Loading Other IPA Characters..."
-            For Each OtherIPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Other)
-                CharTool.charEdit.InsertCharacterButton(OtherIPA.Value, CharTool.charEdit.OtherLayoutPanel)
+            ssLoading.lblLoading.Text = "Loading IPA Diacritics..."
+            For Each Diacritic As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Diacritics)
+                CharTool.charEdit.InsertCharacterButton(Diacritic.Value, CharTool.charEdit.DiacriticsLayoutPanel, Diacritic.Key)
             Next
 
             ssLoading.pbLoading.Value = 60

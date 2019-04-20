@@ -19,7 +19,7 @@ Public Class CharacterButton
         Margin = IPAMargin
         AutoSizeMode = AutoSizeMode.GrowAndShrink
         UseCompatibleTextRendering = True
-        ttIPa.CharName = CharName
+        ttIPa.CharName = CharName.Replace("/", vbCrLf)
     End Sub
 
     Private Sub SymbolButton_TextChanged(sender As Object, e As EventArgs) Handles Me.TextChanged
@@ -50,8 +50,10 @@ Public Class IPAToolTip
         MyBase.New(Cont)
         OwnerDraw = True
         ReshowDelay = 10
+        AutoPopDelay = 20
         InitialDelay = 10
         AutomaticDelay = 2
+
         AddHandler Draw, AddressOf OnDraw
     End Sub
 
@@ -78,7 +80,7 @@ Public Class IPAToolTip
         ' Draw the name
         If Not String.IsNullOrWhiteSpace(CharName) Then
             Dim nameRect = New Rectangle(e.Bounds.Left + ((e.Bounds.Width / 2) - (CharNameSize.Width / 2)), e.Bounds.Top + 3, e.Bounds.Right, e.Bounds.Bottom - 6)
-            Dim nameShadowRect = New Rectangle(nameRect.X + 2, nameRect.Y + 2, nameRect.Width - 2, nameRect.Height - 2)
+            Dim nameShadowRect = New Rectangle(nameRect.X + 1, nameRect.Y + 1, nameRect.Width, nameRect.Height)
             e.Graphics.DrawString(CharName, CharNameFont, New SolidBrush(Color.Black), nameShadowRect)
             e.Graphics.DrawString(CharName, CharNameFont, New SolidBrush(Color.Gainsboro), nameRect)
         End If
@@ -88,7 +90,7 @@ Public Class IPAToolTip
                                      e.Bounds.Top + If(String.IsNullOrWhiteSpace(CharName), 0, CharNameSize.Height + 6) + 3,
                                      e.Bounds.Right,
                                      e.Bounds.Bottom - 6)
-        Dim textShadowRect = New Rectangle(textRect.X + 2, textRect.Y + 2, textRect.Width - 2, textRect.Height - 2)
+        Dim textShadowRect = New Rectangle(textRect.X + 2, textRect.Y + 2, textRect.Width, textRect.Height)
         e.Graphics.DrawString(e.ToolTipText, TextFont, New SolidBrush(Color.Black), textShadowRect)
         e.Graphics.DrawString(e.ToolTipText, TextFont, New SolidBrush(Color.White), textRect)
     End Sub
@@ -112,7 +114,7 @@ Public Class AccentCheckButton
         Appearance = Appearance.Button
         TextAlign = ContentAlignment.MiddleCenter
         UseCompatibleTextRendering = True
-        ttIPa.CharName = CharName
+        ttIPa.CharName = CharName.Replace("/", vbCrLf)
     End Sub
 
     Private Sub InitializeComponent()
