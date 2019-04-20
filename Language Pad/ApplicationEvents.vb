@@ -45,7 +45,7 @@ Namespace My
 
             ssLoading.lblLoading.Text = "Loading IPA Tones..."
             For Each Tone As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.ToneIntonation)
-                CharTool.charEdit.InsertCharacterButton(Tone.Value, CharTool.charEdit.ToneIntonationLayoutPanel)
+                CharTool.charEdit.InsertCharacterButton(Tone.Value, CharTool.charEdit.ToneIntonationLayoutPanel, Tone.Key)
             Next
 
             ssLoading.pbLoading.Value = 40

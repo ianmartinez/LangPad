@@ -13,7 +13,7 @@
    • Pressing shift when inserting a character will insert it in uppercase
    • Tooltips now provide more detail (b̪ shows "Voiced labiodental stop")
    • Character search
-   • Speed up startup time
+   • Expanded IPA diacritics
    
 Version 9.3 (April 13, 2019)
    • Update to .NET Framework 4.7.2

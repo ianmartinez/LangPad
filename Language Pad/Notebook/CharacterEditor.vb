@@ -146,7 +146,7 @@
     Private Function GetButtonTextFromMenu(sender As Object) As String
         Dim currentItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
         Dim cms As ContextMenuStrip = CType(currentItem.Owner, ContextMenuStrip)
-        Return GetButtonText(cms.SourceControl)
+        Return GetButtonText(cms.SourceControl).Replace("◌", "")
     End Function
 
     Private Sub TxtCharacter_TextChanged(sender As Object, e As EventArgs) Handles txtCharacter.TextChanged
@@ -185,15 +185,5 @@
 
     Private Sub AddToEditorCharacterMenuItem_Click(sender As Object, e As EventArgs) Handles AddToEditorCharacterMenuItem.Click
         txtCharacter.Text &= GetButtonTextFromMenu(sender)
-    End Sub
-
-    Private Sub BtnToogleAffricateBelow_Click(sender As Object, e As EventArgs) Handles btnToogleAffricateBelow.Click
-        Dim affricateChar As String = "◌͜◌".Replace("◌", "")
-
-        If txtCharacter.Text.Contains(affricateChar) Then
-            txtCharacter.Text = txtCharacter.Text.Replace(affricateChar, "")
-        Else
-            txtCharacter.Text = txtCharacter.Text.Insert(Math.Max(txtCharacter.Text.Length - 1, 0), affricateChar)
-        End If
     End Sub
 End Class

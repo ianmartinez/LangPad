@@ -139,9 +139,6 @@
   <data name="HtmlTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HtmlTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="KeyStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KeyStyle.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;iso-8859-1</value>
-  </data>
   <data name="SmartReplace" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SmartReplace.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>

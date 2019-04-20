@@ -63,7 +63,6 @@ Partial Class CharacterEditor
         Me.txtCharacter = New System.Windows.Forms.TextBox()
         Me.cbSmartReplace = New System.Windows.Forms.CheckBox()
         Me.btnAddToFile = New System.Windows.Forms.Button()
-        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.btnCopyToClipboard = New System.Windows.Forms.Button()
         Me.menuCharButton = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AddToEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -74,7 +73,7 @@ Partial Class CharacterEditor
         Me.CopyToLocalMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.btnToogleAffricateBelow = New System.Windows.Forms.Button()
+        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.tcCharacters.SuspendLayout()
         Me.tpFile.SuspendLayout()
         Me.tpLocal.SuspendLayout()
@@ -216,7 +215,7 @@ Partial Class CharacterEditor
         Me.tpCyrillic.Location = New System.Drawing.Point(4, 22)
         Me.tpCyrillic.Margin = New System.Windows.Forms.Padding(2)
         Me.tpCyrillic.Name = "tpCyrillic"
-        Me.tpCyrillic.Size = New System.Drawing.Size(278, 252)
+        Me.tpCyrillic.Size = New System.Drawing.Size(278, 230)
         Me.tpCyrillic.TabIndex = 5
         Me.tpCyrillic.Text = "Cyrillic"
         Me.tpCyrillic.UseVisualStyleBackColor = True
@@ -230,7 +229,7 @@ Partial Class CharacterEditor
         Me.CyrillicExtendedPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.CyrillicExtendedPanel.Name = "CyrillicExtendedPanel"
         Me.CyrillicExtendedPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.CyrillicExtendedPanel.Size = New System.Drawing.Size(278, 252)
+        Me.CyrillicExtendedPanel.Size = New System.Drawing.Size(278, 230)
         Me.CyrillicExtendedPanel.TabIndex = 8
         '
         'tpGreek
@@ -239,7 +238,7 @@ Partial Class CharacterEditor
         Me.tpGreek.Location = New System.Drawing.Point(4, 22)
         Me.tpGreek.Margin = New System.Windows.Forms.Padding(2)
         Me.tpGreek.Name = "tpGreek"
-        Me.tpGreek.Size = New System.Drawing.Size(278, 252)
+        Me.tpGreek.Size = New System.Drawing.Size(278, 230)
         Me.tpGreek.TabIndex = 1
         Me.tpGreek.Text = "Greek"
         Me.tpGreek.UseVisualStyleBackColor = True
@@ -253,7 +252,7 @@ Partial Class CharacterEditor
         Me.GreekExtendedPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.GreekExtendedPanel.Name = "GreekExtendedPanel"
         Me.GreekExtendedPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.GreekExtendedPanel.Size = New System.Drawing.Size(278, 252)
+        Me.GreekExtendedPanel.Size = New System.Drawing.Size(278, 230)
         Me.GreekExtendedPanel.TabIndex = 8
         '
         'tpIPA
@@ -311,7 +310,7 @@ Partial Class CharacterEditor
         Me.AffricatesTabPage.Location = New System.Drawing.Point(4, 22)
         Me.AffricatesTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.AffricatesTabPage.Name = "AffricatesTabPage"
-        Me.AffricatesTabPage.Size = New System.Drawing.Size(278, 252)
+        Me.AffricatesTabPage.Size = New System.Drawing.Size(278, 230)
         Me.AffricatesTabPage.TabIndex = 5
         Me.AffricatesTabPage.Text = "Affricates"
         Me.AffricatesTabPage.UseVisualStyleBackColor = True
@@ -325,7 +324,7 @@ Partial Class CharacterEditor
         Me.AffricatesLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AffricatesLayoutPanel.Name = "AffricatesLayoutPanel"
         Me.AffricatesLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(278, 252)
+        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(278, 230)
         Me.AffricatesLayoutPanel.TabIndex = 8
         '
         'VowelsTabPage
@@ -334,7 +333,7 @@ Partial Class CharacterEditor
         Me.VowelsTabPage.Location = New System.Drawing.Point(4, 22)
         Me.VowelsTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.VowelsTabPage.Name = "VowelsTabPage"
-        Me.VowelsTabPage.Size = New System.Drawing.Size(278, 252)
+        Me.VowelsTabPage.Size = New System.Drawing.Size(278, 230)
         Me.VowelsTabPage.TabIndex = 1
         Me.VowelsTabPage.Text = "Vowels"
         Me.VowelsTabPage.UseVisualStyleBackColor = True
@@ -348,7 +347,7 @@ Partial Class CharacterEditor
         Me.VowelsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.VowelsLayoutPanel.Name = "VowelsLayoutPanel"
         Me.VowelsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(278, 252)
+        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(278, 230)
         Me.VowelsLayoutPanel.TabIndex = 8
         '
         'ToneIntonationTabPage
@@ -458,7 +457,6 @@ Partial Class CharacterEditor
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnToogleAffricateBelow)
         Me.GroupBox1.Controls.Add(Me.btnAffricate)
         Me.GroupBox1.Controls.Add(Me.btnLowercase)
         Me.GroupBox1.Controls.Add(Me.btnUppercase)
@@ -474,17 +472,17 @@ Partial Class CharacterEditor
         '
         Me.btnAffricate.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnAffricate.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAffricate.Location = New System.Drawing.Point(172, 17)
+        Me.btnAffricate.Location = New System.Drawing.Point(200, 17)
         Me.btnAffricate.Name = "btnAffricate"
         Me.btnAffricate.Size = New System.Drawing.Size(50, 32)
         Me.btnAffricate.TabIndex = 78
         Me.btnAffricate.Text = "◌͡◌"
-        Me.ttMain.SetToolTip(Me.btnAffricate, "Toggle Affricate Above")
+        Me.ttMain.SetToolTip(Me.btnAffricate, "Toggle Affricate")
         '
         'btnLowercase
         '
         Me.btnLowercase.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnLowercase.Location = New System.Drawing.Point(10, 17)
+        Me.btnLowercase.Location = New System.Drawing.Point(38, 17)
         Me.btnLowercase.Name = "btnLowercase"
         Me.btnLowercase.Size = New System.Drawing.Size(75, 32)
         Me.btnLowercase.TabIndex = 78
@@ -493,7 +491,7 @@ Partial Class CharacterEditor
         'btnUppercase
         '
         Me.btnUppercase.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnUppercase.Location = New System.Drawing.Point(91, 17)
+        Me.btnUppercase.Location = New System.Drawing.Point(119, 17)
         Me.btnUppercase.Name = "btnUppercase"
         Me.btnUppercase.Size = New System.Drawing.Size(75, 32)
         Me.btnUppercase.TabIndex = 77
@@ -565,16 +563,6 @@ Partial Class CharacterEditor
         Me.btnAddToFile.TabIndex = 76
         Me.btnAddToFile.Text = "File"
         '
-        'pnlSmartReplace
-        '
-        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
-        Me.pnlSmartReplace.Location = New System.Drawing.Point(92, 4)
-        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlSmartReplace.Name = "pnlSmartReplace"
-        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
-        Me.pnlSmartReplace.TabIndex = 87
-        '
         'btnCopyToClipboard
         '
         Me.btnCopyToClipboard.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -645,16 +633,15 @@ Partial Class CharacterEditor
         Me.SplitContainer1.SplitterDistance = 398
         Me.SplitContainer1.TabIndex = 76
         '
-        'btnToogleAffricateBelow
+        'pnlSmartReplace
         '
-        Me.btnToogleAffricateBelow.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnToogleAffricateBelow.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnToogleAffricateBelow.Location = New System.Drawing.Point(228, 17)
-        Me.btnToogleAffricateBelow.Name = "btnToogleAffricateBelow"
-        Me.btnToogleAffricateBelow.Size = New System.Drawing.Size(50, 32)
-        Me.btnToogleAffricateBelow.TabIndex = 79
-        Me.btnToogleAffricateBelow.Text = "◌͜◌"
-        Me.ttMain.SetToolTip(Me.btnToogleAffricateBelow, "Toggle Affricate Below")
+        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
+        Me.pnlSmartReplace.Location = New System.Drawing.Point(92, 4)
+        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlSmartReplace.Name = "pnlSmartReplace"
+        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
+        Me.pnlSmartReplace.TabIndex = 87
         '
         'CharacterEditor
         '
@@ -749,5 +736,4 @@ Partial Class CharacterEditor
     Friend WithEvents GreekExtendedPanel As FlowLayoutPanel
     Friend WithEvents pnlTop As Panel
     Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents btnToogleAffricateBelow As Button
 End Class

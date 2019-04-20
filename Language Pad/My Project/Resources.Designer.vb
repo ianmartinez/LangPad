@@ -285,36 +285,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Radius=0
-        '''
-        '''Active Colors=~225|~225
-        '''Active Positions=0|1
-        '''Active Angle=90
-        '''Active Border Color=~173
-        '''Active Text Color=$2
-        '''Active Highlight Color=$0
-        '''
-        '''Hover Colors=#e5f1fb|#e5f1fb
-        '''Hover Positions=0|1
-        '''Hover Angle=90
-        '''Hover Border Color=#0078d7
-        '''Hover Text Color=$2
-        '''Hover Highlight Color=$0
-        '''
-        '''Pressed Colors=#cce4f7|#cce4f7
-        '''Pressed Positions=0|1
-        '''Pressed Angle=90
-        '''Pressed Border Color=#005499
-        '''Pressed Text Color=$2
-        '''Pressed Highlight Color=$0.
-        '''</summary>
-        Friend ReadOnly Property KeyStyle() As String
-            Get
-                Return ResourceManager.GetString("KeyStyle", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to Á=Á
         '''á=á
         '''Ǽ=Ǽ
@@ -420,20 +390,30 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to 1=|
-        '''2=‖
-        '''3=˥
-        '''4=˦
-        '''5=˧
-        '''6=˨
-        '''7=˩
-        '''8=ꜛ
-        '''9=ꜜ
-        '''10=↓
-        '''11=↑
-        '''12=→
-        '''13=↗
-        '''14=↘.
+        '''  Looks up a localized string similar to Extra-high (top) diacritic=◌̋
+        '''Extra-high (top) bar=˥
+        '''High tone diacritic=◌́
+        '''High tone bar=˦
+        '''Mid tone diacritic=◌̄
+        '''Mid tone bar=˧
+        '''Low tone diacritic=◌̀
+        '''Low tone bar=˨
+        '''Extra-low (bottom) diacritic=◌̏
+        '''Extra-low (bottom) bar=˩
+        '''Rising diacritic=◌̌
+        '''Rising bar=˩˥
+        '''Falling diacritic=◌̂
+        '''Falling bar=˥˩
+        '''High rising diacritic=◌᷄
+        '''High rising bar=˦˥
+        '''Low rising diacritic=◌᷅
+        '''Low rising bar=˩˨
+        '''Rising-falling diacritic=◌᷈
+        '''Rising-falling bar=˧˦˧
+        '''Downstep=◌ꜜ
+        '''Upstep=◌ꜛ
+        '''Global rise=↗︎
+        '''Global fall=↘︎.
         '''</summary>
         Friend ReadOnly Property ToneIntonation() As String
             Get
