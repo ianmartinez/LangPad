@@ -169,6 +169,8 @@ Public Class frmMain
             End If
         End If
 
+        CharTool.Close()
+        If frmDictionary IsNot Nothing Then frmDictionary.Close()
         My.Settings.Theme = ThemeCombo.SelectedItem
         My.Settings.Save()
     End Sub
