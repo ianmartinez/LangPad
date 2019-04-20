@@ -44,10 +44,10 @@ Partial Class frmRTF
         '
         Me.txtRTF.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtRTF.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtRTF.Font = New System.Drawing.Font("Consolas", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRTF.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRTF.ForeColor = System.Drawing.Color.Black
         Me.txtRTF.Location = New System.Drawing.Point(0, 0)
-        Me.txtRTF.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtRTF.Margin = New System.Windows.Forms.Padding(2)
         Me.txtRTF.Name = "txtRTF"
         Me.txtRTF.Size = New System.Drawing.Size(680, 476)
         Me.txtRTF.TabIndex = 1
@@ -62,14 +62,14 @@ Partial Class frmRTF
         'ToolStripContainer1.ContentPanel
         '
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.txtRTF)
-        Me.ToolStripContainer1.ContentPanel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ToolStripContainer1.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(680, 476)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'ToolStripContainer1.LeftToolStripPanel
         '
         Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStripContainer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ToolStripContainer1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
         '
         'ToolStripContainer1.RightToolStripPanel
@@ -170,7 +170,7 @@ Partial Class frmRTF
         Me.ClientSize = New System.Drawing.Size(680, 505)
         Me.Controls.Add(Me.ToolStripContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmRTF"
         Me.ShowIcon = False
         Me.Text = "RTF Editor"
