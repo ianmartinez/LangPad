@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CharacterEditor
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class CharacterEditor
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.tcCharacters = New System.Windows.Forms.TabControl()
@@ -28,8 +28,8 @@ Partial Class CharacterEditor
         Me.FilePanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.tpLocal = New System.Windows.Forms.TabPage()
         Me.LocalCharPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.tpCommon = New System.Windows.Forms.TabPage()
-        Me.CommonLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.tpExtended = New System.Windows.Forms.TabPage()
+        Me.LatinExtendedLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.tpIPA = New System.Windows.Forms.TabPage()
         Me.tcIPA = New System.Windows.Forms.TabControl()
         Me.ConsonantsTabPage = New System.Windows.Forms.TabPage()
@@ -42,34 +42,40 @@ Partial Class CharacterEditor
         Me.ToneIntonationLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.OtherTabPage = New System.Windows.Forms.TabPage()
         Me.OtherLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.tpSearch = New System.Windows.Forms.TabPage()
+        Me.SearchCharactersPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.txtCharacter = New System.Windows.Forms.TextBox()
         Me.btnAddToLocal = New System.Windows.Forms.Button()
+        Me.txtCharacter = New System.Windows.Forms.TextBox()
         Me.btnAddToFile = New System.Windows.Forms.Button()
         Me.btnCopyToClipboard = New System.Windows.Forms.Button()
-        Me.btnLowercase = New System.Windows.Forms.Button()
-        Me.btnUppercase = New System.Windows.Forms.Button()
         Me.btnCharacter = New System.Windows.Forms.Button()
         Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.cbSmartReplace = New System.Windows.Forms.CheckBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnAffricate = New System.Windows.Forms.Button()
+        Me.btnLowercase = New System.Windows.Forms.Button()
+        Me.btnUppercase = New System.Windows.Forms.Button()
         Me.gbAccents = New System.Windows.Forms.GroupBox()
         Me.AccentsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.menuCharButton = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.AddToEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReplaceEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.CopyToClipboardMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToFileMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToLocalMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
-        Me.AddToEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnAffricate = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.tpSearch = New System.Windows.Forms.TabPage()
-        Me.SearchCharactersPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.tpLatin = New System.Windows.Forms.TabPage()
+        Me.tpCyrillic = New System.Windows.Forms.TabPage()
+        Me.CyrillicExtendedPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.tpGreek = New System.Windows.Forms.TabPage()
+        Me.GreekExtendedPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.tcCharacters.SuspendLayout()
         Me.tpFile.SuspendLayout()
         Me.tpLocal.SuspendLayout()
-        Me.tpCommon.SuspendLayout()
+        Me.tpExtended.SuspendLayout()
         Me.tpIPA.SuspendLayout()
         Me.tcIPA.SuspendLayout()
         Me.ConsonantsTabPage.SuspendLayout()
@@ -77,18 +83,22 @@ Partial Class CharacterEditor
         Me.VowelsTabPage.SuspendLayout()
         Me.ToneIntonationTabPage.SuspendLayout()
         Me.OtherTabPage.SuspendLayout()
+        Me.tpSearch.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.gbAccents.SuspendLayout()
         Me.menuCharButton.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.tpSearch.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.tpLatin.SuspendLayout()
+        Me.tpCyrillic.SuspendLayout()
+        Me.tpGreek.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcCharacters
         '
         Me.tcCharacters.Controls.Add(Me.tpFile)
         Me.tcCharacters.Controls.Add(Me.tpLocal)
-        Me.tcCharacters.Controls.Add(Me.tpCommon)
+        Me.tcCharacters.Controls.Add(Me.tpExtended)
         Me.tcCharacters.Controls.Add(Me.tpIPA)
         Me.tcCharacters.Controls.Add(Me.tpSearch)
         Me.tcCharacters.Dock = System.Windows.Forms.DockStyle.Fill
@@ -128,7 +138,7 @@ Partial Class CharacterEditor
         Me.tpLocal.Location = New System.Drawing.Point(4, 22)
         Me.tpLocal.Name = "tpLocal"
         Me.tpLocal.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpLocal.Size = New System.Drawing.Size(285, 233)
+        Me.tpLocal.Size = New System.Drawing.Size(285, 282)
         Me.tpLocal.TabIndex = 1
         Me.tpLocal.Text = "Local"
         Me.tpLocal.UseVisualStyleBackColor = True
@@ -142,32 +152,32 @@ Partial Class CharacterEditor
         Me.LocalCharPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.LocalCharPanel.Name = "LocalCharPanel"
         Me.LocalCharPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.LocalCharPanel.Size = New System.Drawing.Size(279, 227)
+        Me.LocalCharPanel.Size = New System.Drawing.Size(279, 276)
         Me.LocalCharPanel.TabIndex = 10
         '
-        'tpCommon
+        'tpExtended
         '
-        Me.tpCommon.Controls.Add(Me.CommonLayoutPanel)
-        Me.tpCommon.Location = New System.Drawing.Point(4, 22)
-        Me.tpCommon.Name = "tpCommon"
-        Me.tpCommon.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCommon.Size = New System.Drawing.Size(285, 233)
-        Me.tpCommon.TabIndex = 2
-        Me.tpCommon.Text = "Common"
-        Me.tpCommon.UseVisualStyleBackColor = True
+        Me.tpExtended.Controls.Add(Me.TabControl1)
+        Me.tpExtended.Location = New System.Drawing.Point(4, 22)
+        Me.tpExtended.Name = "tpExtended"
+        Me.tpExtended.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpExtended.Size = New System.Drawing.Size(285, 282)
+        Me.tpExtended.TabIndex = 2
+        Me.tpExtended.Text = "Extended"
+        Me.tpExtended.UseVisualStyleBackColor = True
         '
-        'CommonLayoutPanel
+        'LatinExtendedLayoutPanel
         '
-        Me.CommonLayoutPanel.AutoScroll = True
-        Me.CommonLayoutPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.CommonLayoutPanel.AutoSize = True
-        Me.CommonLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CommonLayoutPanel.Location = New System.Drawing.Point(3, 3)
-        Me.CommonLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.CommonLayoutPanel.Name = "CommonLayoutPanel"
-        Me.CommonLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.CommonLayoutPanel.Size = New System.Drawing.Size(279, 227)
-        Me.CommonLayoutPanel.TabIndex = 9
+        Me.LatinExtendedLayoutPanel.AutoScroll = True
+        Me.LatinExtendedLayoutPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
+        Me.LatinExtendedLayoutPanel.AutoSize = True
+        Me.LatinExtendedLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LatinExtendedLayoutPanel.Location = New System.Drawing.Point(0, 0)
+        Me.LatinExtendedLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.LatinExtendedLayoutPanel.Name = "LatinExtendedLayoutPanel"
+        Me.LatinExtendedLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
+        Me.LatinExtendedLayoutPanel.Size = New System.Drawing.Size(271, 250)
+        Me.LatinExtendedLayoutPanel.TabIndex = 9
         '
         'tpIPA
         '
@@ -224,7 +234,7 @@ Partial Class CharacterEditor
         Me.AffricatesTabPage.Location = New System.Drawing.Point(4, 22)
         Me.AffricatesTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.AffricatesTabPage.Name = "AffricatesTabPage"
-        Me.AffricatesTabPage.Size = New System.Drawing.Size(271, 283)
+        Me.AffricatesTabPage.Size = New System.Drawing.Size(271, 250)
         Me.AffricatesTabPage.TabIndex = 5
         Me.AffricatesTabPage.Text = "Affricates"
         Me.AffricatesTabPage.UseVisualStyleBackColor = True
@@ -238,7 +248,7 @@ Partial Class CharacterEditor
         Me.AffricatesLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AffricatesLayoutPanel.Name = "AffricatesLayoutPanel"
         Me.AffricatesLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(271, 283)
+        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(271, 250)
         Me.AffricatesLayoutPanel.TabIndex = 8
         '
         'VowelsTabPage
@@ -247,7 +257,7 @@ Partial Class CharacterEditor
         Me.VowelsTabPage.Location = New System.Drawing.Point(4, 22)
         Me.VowelsTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.VowelsTabPage.Name = "VowelsTabPage"
-        Me.VowelsTabPage.Size = New System.Drawing.Size(271, 283)
+        Me.VowelsTabPage.Size = New System.Drawing.Size(271, 250)
         Me.VowelsTabPage.TabIndex = 1
         Me.VowelsTabPage.Text = "Vowels"
         Me.VowelsTabPage.UseVisualStyleBackColor = True
@@ -261,7 +271,7 @@ Partial Class CharacterEditor
         Me.VowelsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.VowelsLayoutPanel.Name = "VowelsLayoutPanel"
         Me.VowelsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(271, 283)
+        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(271, 250)
         Me.VowelsLayoutPanel.TabIndex = 8
         '
         'ToneIntonationTabPage
@@ -270,7 +280,7 @@ Partial Class CharacterEditor
         Me.ToneIntonationTabPage.Location = New System.Drawing.Point(4, 22)
         Me.ToneIntonationTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.ToneIntonationTabPage.Name = "ToneIntonationTabPage"
-        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(271, 283)
+        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(271, 250)
         Me.ToneIntonationTabPage.TabIndex = 4
         Me.ToneIntonationTabPage.Text = "Tone"
         Me.ToneIntonationTabPage.UseVisualStyleBackColor = True
@@ -284,7 +294,7 @@ Partial Class CharacterEditor
         Me.ToneIntonationLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ToneIntonationLayoutPanel.Name = "ToneIntonationLayoutPanel"
         Me.ToneIntonationLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(271, 283)
+        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(271, 250)
         Me.ToneIntonationLayoutPanel.TabIndex = 10
         '
         'OtherTabPage
@@ -293,7 +303,7 @@ Partial Class CharacterEditor
         Me.OtherTabPage.Location = New System.Drawing.Point(4, 22)
         Me.OtherTabPage.Margin = New System.Windows.Forms.Padding(2)
         Me.OtherTabPage.Name = "OtherTabPage"
-        Me.OtherTabPage.Size = New System.Drawing.Size(271, 283)
+        Me.OtherTabPage.Size = New System.Drawing.Size(271, 250)
         Me.OtherTabPage.TabIndex = 2
         Me.OtherTabPage.Text = "Other"
         Me.OtherTabPage.UseVisualStyleBackColor = True
@@ -307,8 +317,32 @@ Partial Class CharacterEditor
         Me.OtherLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.OtherLayoutPanel.Name = "OtherLayoutPanel"
         Me.OtherLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.OtherLayoutPanel.Size = New System.Drawing.Size(271, 283)
+        Me.OtherLayoutPanel.Size = New System.Drawing.Size(271, 250)
         Me.OtherLayoutPanel.TabIndex = 8
+        '
+        'tpSearch
+        '
+        Me.tpSearch.Controls.Add(Me.SearchCharactersPanel)
+        Me.tpSearch.Location = New System.Drawing.Point(4, 22)
+        Me.tpSearch.Name = "tpSearch"
+        Me.tpSearch.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpSearch.Size = New System.Drawing.Size(285, 282)
+        Me.tpSearch.TabIndex = 4
+        Me.tpSearch.Text = "Search"
+        Me.tpSearch.UseVisualStyleBackColor = True
+        '
+        'SearchCharactersPanel
+        '
+        Me.SearchCharactersPanel.AutoScroll = True
+        Me.SearchCharactersPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
+        Me.SearchCharactersPanel.AutoSize = True
+        Me.SearchCharactersPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SearchCharactersPanel.Location = New System.Drawing.Point(3, 3)
+        Me.SearchCharactersPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.SearchCharactersPanel.Name = "SearchCharactersPanel"
+        Me.SearchCharactersPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
+        Me.SearchCharactersPanel.Size = New System.Drawing.Size(279, 276)
+        Me.SearchCharactersPanel.TabIndex = 8
         '
         'Panel1
         '
@@ -328,14 +362,6 @@ Partial Class CharacterEditor
         Me.Panel1.Size = New System.Drawing.Size(293, 382)
         Me.Panel1.TabIndex = 75
         '
-        'txtCharacter
-        '
-        Me.txtCharacter.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtCharacter.Location = New System.Drawing.Point(94, 29)
-        Me.txtCharacter.Name = "txtCharacter"
-        Me.txtCharacter.Size = New System.Drawing.Size(189, 20)
-        Me.txtCharacter.TabIndex = 77
-        '
         'btnAddToLocal
         '
         Me.btnAddToLocal.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -344,6 +370,14 @@ Partial Class CharacterEditor
         Me.btnAddToLocal.Size = New System.Drawing.Size(55, 32)
         Me.btnAddToLocal.TabIndex = 1
         Me.btnAddToLocal.Text = "Local"
+        '
+        'txtCharacter
+        '
+        Me.txtCharacter.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtCharacter.Location = New System.Drawing.Point(94, 29)
+        Me.txtCharacter.Name = "txtCharacter"
+        Me.txtCharacter.Size = New System.Drawing.Size(189, 20)
+        Me.txtCharacter.TabIndex = 77
         '
         'btnAddToFile
         '
@@ -362,24 +396,6 @@ Partial Class CharacterEditor
         Me.btnCopyToClipboard.Size = New System.Drawing.Size(70, 32)
         Me.btnCopyToClipboard.TabIndex = 79
         Me.btnCopyToClipboard.Text = "Clipboard"
-        '
-        'btnLowercase
-        '
-        Me.btnLowercase.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnLowercase.Location = New System.Drawing.Point(34, 19)
-        Me.btnLowercase.Name = "btnLowercase"
-        Me.btnLowercase.Size = New System.Drawing.Size(75, 32)
-        Me.btnLowercase.TabIndex = 78
-        Me.btnLowercase.Text = "Lowercase"
-        '
-        'btnUppercase
-        '
-        Me.btnUppercase.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnUppercase.Location = New System.Drawing.Point(115, 19)
-        Me.btnUppercase.Name = "btnUppercase"
-        Me.btnUppercase.Size = New System.Drawing.Size(75, 32)
-        Me.btnUppercase.TabIndex = 77
-        Me.btnUppercase.Text = "Uppercase"
         '
         'btnCharacter
         '
@@ -416,6 +432,48 @@ Partial Class CharacterEditor
         Me.cbSmartReplace.Text = "Smart Replace"
         Me.cbSmartReplace.UseVisualStyleBackColor = True
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.btnAffricate)
+        Me.GroupBox1.Controls.Add(Me.btnLowercase)
+        Me.GroupBox1.Controls.Add(Me.btnUppercase)
+        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 95)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(281, 67)
+        Me.GroupBox1.TabIndex = 89
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Modify Character"
+        '
+        'btnAffricate
+        '
+        Me.btnAffricate.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnAffricate.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAffricate.Location = New System.Drawing.Point(196, 19)
+        Me.btnAffricate.Name = "btnAffricate"
+        Me.btnAffricate.Size = New System.Drawing.Size(50, 32)
+        Me.btnAffricate.TabIndex = 78
+        Me.btnAffricate.Text = "◌͡◌"
+        Me.ttMain.SetToolTip(Me.btnAffricate, "Toggle Affricate")
+        '
+        'btnLowercase
+        '
+        Me.btnLowercase.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnLowercase.Location = New System.Drawing.Point(34, 19)
+        Me.btnLowercase.Name = "btnLowercase"
+        Me.btnLowercase.Size = New System.Drawing.Size(75, 32)
+        Me.btnLowercase.TabIndex = 78
+        Me.btnLowercase.Text = "Lowercase"
+        '
+        'btnUppercase
+        '
+        Me.btnUppercase.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnUppercase.Location = New System.Drawing.Point(115, 19)
+        Me.btnUppercase.Name = "btnUppercase"
+        Me.btnUppercase.Size = New System.Drawing.Size(75, 32)
+        Me.btnUppercase.TabIndex = 77
+        Me.btnUppercase.Text = "Uppercase"
+        '
         'gbAccents
         '
         Me.gbAccents.Controls.Add(Me.AccentsLayoutPanel)
@@ -444,6 +502,12 @@ Partial Class CharacterEditor
         Me.menuCharButton.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToEditorCharacterMenuItem, Me.ReplaceEditorCharacterMenuItem, Me.ToolStripSeparator1, Me.CopyToClipboardMenuItem, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem})
         Me.menuCharButton.Name = "menuCharButton"
         Me.menuCharButton.Size = New System.Drawing.Size(204, 120)
+        '
+        'AddToEditorCharacterMenuItem
+        '
+        Me.AddToEditorCharacterMenuItem.Name = "AddToEditorCharacterMenuItem"
+        Me.AddToEditorCharacterMenuItem.Size = New System.Drawing.Size(203, 22)
+        Me.AddToEditorCharacterMenuItem.Text = "Add to Editor Character"
         '
         'ReplaceEditorCharacterMenuItem
         '
@@ -475,59 +539,74 @@ Partial Class CharacterEditor
         Me.CopyToLocalMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.CopyToLocalMenuItem.Text = "Copy to Local"
         '
-        'AddToEditorCharacterMenuItem
+        'TabControl1
         '
-        Me.AddToEditorCharacterMenuItem.Name = "AddToEditorCharacterMenuItem"
-        Me.AddToEditorCharacterMenuItem.Size = New System.Drawing.Size(203, 22)
-        Me.AddToEditorCharacterMenuItem.Text = "Add to Editor Character"
+        Me.TabControl1.Controls.Add(Me.tpLatin)
+        Me.TabControl1.Controls.Add(Me.tpCyrillic)
+        Me.TabControl1.Controls.Add(Me.tpGreek)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(3, 3)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(279, 276)
+        Me.TabControl1.TabIndex = 73
         '
-        'btnAffricate
+        'tpLatin
         '
-        Me.btnAffricate.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAffricate.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAffricate.Location = New System.Drawing.Point(196, 19)
-        Me.btnAffricate.Name = "btnAffricate"
-        Me.btnAffricate.Size = New System.Drawing.Size(50, 32)
-        Me.btnAffricate.TabIndex = 78
-        Me.btnAffricate.Text = "◌͡◌"
-        Me.ttMain.SetToolTip(Me.btnAffricate, "Toggle Affricate")
+        Me.tpLatin.Controls.Add(Me.LatinExtendedLayoutPanel)
+        Me.tpLatin.Location = New System.Drawing.Point(4, 22)
+        Me.tpLatin.Margin = New System.Windows.Forms.Padding(2)
+        Me.tpLatin.Name = "tpLatin"
+        Me.tpLatin.Size = New System.Drawing.Size(271, 250)
+        Me.tpLatin.TabIndex = 0
+        Me.tpLatin.Text = "Latin"
+        Me.tpLatin.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'tpCyrillic
         '
-        Me.GroupBox1.Controls.Add(Me.btnAffricate)
-        Me.GroupBox1.Controls.Add(Me.btnLowercase)
-        Me.GroupBox1.Controls.Add(Me.btnUppercase)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 95)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(281, 67)
-        Me.GroupBox1.TabIndex = 89
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Modify Character"
+        Me.tpCyrillic.Controls.Add(Me.CyrillicExtendedPanel)
+        Me.tpCyrillic.Location = New System.Drawing.Point(4, 22)
+        Me.tpCyrillic.Margin = New System.Windows.Forms.Padding(2)
+        Me.tpCyrillic.Name = "tpCyrillic"
+        Me.tpCyrillic.Size = New System.Drawing.Size(271, 250)
+        Me.tpCyrillic.TabIndex = 5
+        Me.tpCyrillic.Text = "Cyrillic"
+        Me.tpCyrillic.UseVisualStyleBackColor = True
         '
-        'tpSearch
+        'CyrillicExtendedPanel
         '
-        Me.tpSearch.Controls.Add(Me.SearchCharactersPanel)
-        Me.tpSearch.Location = New System.Drawing.Point(4, 22)
-        Me.tpSearch.Name = "tpSearch"
-        Me.tpSearch.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpSearch.Size = New System.Drawing.Size(285, 282)
-        Me.tpSearch.TabIndex = 4
-        Me.tpSearch.Text = "Search"
-        Me.tpSearch.UseVisualStyleBackColor = True
+        Me.CyrillicExtendedPanel.AutoScroll = True
+        Me.CyrillicExtendedPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
+        Me.CyrillicExtendedPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CyrillicExtendedPanel.Location = New System.Drawing.Point(0, 0)
+        Me.CyrillicExtendedPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.CyrillicExtendedPanel.Name = "CyrillicExtendedPanel"
+        Me.CyrillicExtendedPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
+        Me.CyrillicExtendedPanel.Size = New System.Drawing.Size(271, 250)
+        Me.CyrillicExtendedPanel.TabIndex = 8
         '
-        'SearchCharactersPanel
+        'tpGreek
         '
-        Me.SearchCharactersPanel.AutoScroll = True
-        Me.SearchCharactersPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.SearchCharactersPanel.AutoSize = True
-        Me.SearchCharactersPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SearchCharactersPanel.Location = New System.Drawing.Point(3, 3)
-        Me.SearchCharactersPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.SearchCharactersPanel.Name = "SearchCharactersPanel"
-        Me.SearchCharactersPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.SearchCharactersPanel.Size = New System.Drawing.Size(279, 276)
-        Me.SearchCharactersPanel.TabIndex = 8
+        Me.tpGreek.Controls.Add(Me.GreekExtendedPanel)
+        Me.tpGreek.Location = New System.Drawing.Point(4, 22)
+        Me.tpGreek.Margin = New System.Windows.Forms.Padding(2)
+        Me.tpGreek.Name = "tpGreek"
+        Me.tpGreek.Size = New System.Drawing.Size(271, 250)
+        Me.tpGreek.TabIndex = 1
+        Me.tpGreek.Text = "Greek"
+        Me.tpGreek.UseVisualStyleBackColor = True
+        '
+        'GreekExtendedPanel
+        '
+        Me.GreekExtendedPanel.AutoScroll = True
+        Me.GreekExtendedPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
+        Me.GreekExtendedPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GreekExtendedPanel.Location = New System.Drawing.Point(0, 0)
+        Me.GreekExtendedPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.GreekExtendedPanel.Name = "GreekExtendedPanel"
+        Me.GreekExtendedPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
+        Me.GreekExtendedPanel.Size = New System.Drawing.Size(271, 250)
+        Me.GreekExtendedPanel.TabIndex = 8
         '
         'CharacterEditor
         '
@@ -541,8 +620,7 @@ Partial Class CharacterEditor
         Me.tcCharacters.ResumeLayout(False)
         Me.tpFile.ResumeLayout(False)
         Me.tpLocal.ResumeLayout(False)
-        Me.tpCommon.ResumeLayout(False)
-        Me.tpCommon.PerformLayout()
+        Me.tpExtended.ResumeLayout(False)
         Me.tpIPA.ResumeLayout(False)
         Me.tcIPA.ResumeLayout(False)
         Me.ConsonantsTabPage.ResumeLayout(False)
@@ -551,13 +629,18 @@ Partial Class CharacterEditor
         Me.VowelsTabPage.ResumeLayout(False)
         Me.ToneIntonationTabPage.ResumeLayout(False)
         Me.OtherTabPage.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.gbAccents.ResumeLayout(False)
-        Me.menuCharButton.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
         Me.tpSearch.ResumeLayout(False)
         Me.tpSearch.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.gbAccents.ResumeLayout(False)
+        Me.menuCharButton.ResumeLayout(False)
+        Me.TabControl1.ResumeLayout(False)
+        Me.tpLatin.ResumeLayout(False)
+        Me.tpLatin.PerformLayout()
+        Me.tpCyrillic.ResumeLayout(False)
+        Me.tpGreek.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -565,8 +648,8 @@ Partial Class CharacterEditor
     Friend WithEvents tcCharacters As TabControl
     Friend WithEvents tpFile As TabPage
     Friend WithEvents tpLocal As TabPage
-    Friend WithEvents tpCommon As TabPage
-    Friend WithEvents CommonLayoutPanel As FlowLayoutPanel
+    Friend WithEvents tpExtended As TabPage
+    Friend WithEvents LatinExtendedLayoutPanel As FlowLayoutPanel
     Friend WithEvents tpIPA As TabPage
     Friend WithEvents tcIPA As TabControl
     Friend WithEvents ConsonantsTabPage As TabPage
@@ -605,4 +688,10 @@ Partial Class CharacterEditor
     Friend WithEvents btnAffricate As Button
     Friend WithEvents tpSearch As TabPage
     Friend WithEvents SearchCharactersPanel As FlowLayoutPanel
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents tpLatin As TabPage
+    Friend WithEvents tpCyrillic As TabPage
+    Friend WithEvents CyrillicExtendedPanel As FlowLayoutPanel
+    Friend WithEvents tpGreek As TabPage
+    Friend WithEvents GreekExtendedPanel As FlowLayoutPanel
 End Class

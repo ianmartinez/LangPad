@@ -1,4 +1,6 @@
 ﻿
+Imports TundraLib.Themes
+
 Public Class CharacterButton
     Inherits Button
     Private components As System.ComponentModel.IContainer
@@ -43,6 +45,7 @@ End Class
 
 Public Class IPAToolTip
     Inherits ToolTip
+    Public CharName As String = ""
 
     Sub New()
         MyBase.New()
@@ -64,36 +67,17 @@ Public Class IPAToolTip
     End Sub
 
     Private Sub OnDraw(ByVal sender As Object, ByVal e As DrawToolTipEventArgs)
-        Dim rectBorder As New Rectangle(0, 0, e.Bounds.Width - 1, e.Bounds.Height - 1)
-        Dim rect As New Rectangle(1, 1, e.Bounds.Width - 2, e.Bounds.Height - 2)
-        Dim b As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(120, 120, 120), Color.FromArgb(20, 20, 20), 45)
-        Dim b2 As New Pen(Color.FromArgb(0, 0, 0))
+        Dim rect As New Rectangle(0, 0, e.Bounds.Width - 1, e.Bounds.Height - 1)
+        Dim background As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(120, 120, 120), Color.FromArgb(20, 20, 20), 45)
+        Dim border As New Pen(Color.FromArgb(0, 0, 0))
 
-        e.Graphics.FillRectangle(b, rect)
-        e.Graphics.DrawRectangle(b2, rectBorder)
+        e.Graphics.FillRectangle(background, rect)
+        e.Graphics.DrawRectangle(border, rect)
 
-        Dim text As DrawToolTipEventArgs = New DrawToolTipEventArgs(
-           e.Graphics,
-           e.AssociatedWindow,
-           e.AssociatedControl,
-           New Rectangle(e.Bounds.Left + 3, e.Bounds.Top + 3, e.Bounds.Right - 6, e.Bounds.Bottom - 6),
-           e.ToolTipText,
-           BackColor,
-           Color.FromArgb(255, 255, 255),
-           New Font("Calibri", 42, FontStyle.Bold))
-
-        Dim shadow As DrawToolTipEventArgs = New DrawToolTipEventArgs(
-           e.Graphics,
-           e.AssociatedWindow,
-           e.AssociatedControl,
-           New Rectangle(e.Bounds.Left + 5, e.Bounds.Top + 5, e.Bounds.Right - 8, e.Bounds.Bottom - 8),
-           e.ToolTipText,
-           BackColor,
-           Color.FromArgb(0, 0, 0),
-           New Font("Calibri", 42, FontStyle.Bold))
-
-        shadow.DrawText()
-        text.DrawText()
+        Dim textRect = New Rectangle(e.Bounds.Left + 3, e.Bounds.Top + 3, e.Bounds.Right - 6, e.Bounds.Bottom - 6)
+        Dim textShadowRect = New Rectangle(e.Bounds.Left + 5, e.Bounds.Top + 5, e.Bounds.Right - 8, e.Bounds.Bottom - 8)
+        e.Graphics.DrawString(e.ToolTipText, New Font("Calibri", 42, FontStyle.Bold), New SolidBrush(Color.FromArgb(0, 0, 0)), textShadowRect)
+        e.Graphics.DrawString(e.ToolTipText, New Font("Calibri", 42, FontStyle.Bold), New SolidBrush(Color.FromArgb(255, 255, 255)), textRect)
     End Sub
 End Class
 
@@ -101,7 +85,7 @@ Public Class AccentCheckButton
     Inherits CheckBox
     Private ttIPa As New IPAToolTip
 
-    Public Sub New()
+    Public Sub New(Optional CharName = "")
         Dim IPAFont = New Font("Calibri", 14, FontStyle.Regular)
         Dim IPAPadding = New Padding(0)
         Dim IPAMargin = New Padding(1)
@@ -115,6 +99,7 @@ Public Class AccentCheckButton
         Appearance = Appearance.Button
         TextAlign = ContentAlignment.MiddleCenter
         UseCompatibleTextRendering = True
+        ttIPa.CharName = CharName
     End Sub
 
     Private Sub InitializeComponent()

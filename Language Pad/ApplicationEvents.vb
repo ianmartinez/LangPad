@@ -27,77 +27,53 @@ Namespace My
             ssLoading.pbLoading.Value = 10
             ssLoading.Refresh()
 
-            If Settings.IPAAffricates = True Then
-                ssLoading.lblLoading.Text = "Loading IPA Affricates..."
-                For Each Affricate As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Affricates)
-                    CharTool.charEdit.InsertCharacterButton(Affricate.Value, CharTool.charEdit.AffricatesLayoutPanel)
-                Next
+            ssLoading.lblLoading.Text = "Loading IPA Affricates..."
+            For Each Affricate As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Affricates)
+                CharTool.charEdit.InsertCharacterButton(Affricate.Value, CharTool.charEdit.AffricatesLayoutPanel)
+            Next
 
-                ssLoading.pbLoading.Value = 20
-                ssLoading.Refresh()
-            Else
-                CharTool.charEdit.tcIPA.TabPages.Remove(CharTool.charEdit.AffricatesTabPage)
-            End If
+            ssLoading.pbLoading.Value = 20
+            ssLoading.Refresh()
 
-            If Settings.IPAConsonants = True Then
-                ssLoading.lblLoading.Text = "Loading IPA Consonants..."
-                For Each Consonant As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Consonants)
-                    CharTool.charEdit.InsertCharacterButton(Consonant.Value, CharTool.charEdit.ConsonantsLayoutPanel)
-                Next
+            ssLoading.lblLoading.Text = "Loading IPA Consonants..."
+            For Each Consonant As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Consonants)
+                CharTool.charEdit.InsertCharacterButton(Consonant.Value, CharTool.charEdit.ConsonantsLayoutPanel)
+            Next
 
-                ssLoading.pbLoading.Value = 30
-                ssLoading.Refresh()
-            Else
-                CharTool.charEdit.tcIPA.TabPages.Remove(CharTool.charEdit.ConsonantsTabPage)
-            End If
+            ssLoading.pbLoading.Value = 30
+            ssLoading.Refresh()
 
-            If Settings.IPATones = True Then
-                ssLoading.lblLoading.Text = "Loading IPA Tones..."
-                For Each Tone As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.ToneIntonation)
-                    CharTool.charEdit.InsertCharacterButton(Tone.Value, CharTool.charEdit.ToneIntonationLayoutPanel)
-                Next
+            ssLoading.lblLoading.Text = "Loading IPA Tones..."
+            For Each Tone As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.ToneIntonation)
+                CharTool.charEdit.InsertCharacterButton(Tone.Value, CharTool.charEdit.ToneIntonationLayoutPanel)
+            Next
 
-                ssLoading.pbLoading.Value = 40
-                ssLoading.Refresh()
-            Else
-                CharTool.charEdit.tcIPA.TabPages.Remove(CharTool.charEdit.ToneIntonationTabPage)
-            End If
+            ssLoading.pbLoading.Value = 40
+            ssLoading.Refresh()
 
-            If Settings.IPAVowels = True Then
-                ssLoading.lblLoading.Text = "Loading IPA Vowels..."
-                For Each Vowel As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Vowels)
-                    CharTool.charEdit.InsertCharacterButton(Vowel.Value, CharTool.charEdit.VowelsLayoutPanel)
-                Next
+            ssLoading.lblLoading.Text = "Loading IPA Vowels..."
+            For Each Vowel As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Vowels)
+                CharTool.charEdit.InsertCharacterButton(Vowel.Value, CharTool.charEdit.VowelsLayoutPanel)
+            Next
 
-                ssLoading.pbLoading.Value = 50
-                ssLoading.Refresh()
-            Else
-                CharTool.charEdit.tcIPA.TabPages.Remove(CharTool.charEdit.VowelsTabPage)
-            End If
+            ssLoading.pbLoading.Value = 50
+            ssLoading.Refresh()
 
-            If Settings.OtherIPA = True Then
-                ssLoading.lblLoading.Text = "Loading Other IPA Characters..."
-                For Each OtherIPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Other)
-                    CharTool.charEdit.InsertCharacterButton(OtherIPA.Value, CharTool.charEdit.OtherLayoutPanel)
-                Next
+            ssLoading.lblLoading.Text = "Loading Other IPA Characters..."
+            For Each OtherIPA As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Other)
+                CharTool.charEdit.InsertCharacterButton(OtherIPA.Value, CharTool.charEdit.OtherLayoutPanel)
+            Next
 
-                ssLoading.pbLoading.Value = 60
-                ssLoading.Refresh()
-            Else
-                CharTool.charEdit.tcIPA.TabPages.Remove(CharTool.charEdit.OtherTabPage)
-            End If
+            ssLoading.pbLoading.Value = 60
+            ssLoading.Refresh()
 
-            If Settings.CommonChar = True Then
-                ssLoading.lblLoading.Text = "Loading Common Characters..."
-                For Each CommonChar As String In Resources.Common.Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
-                    CharTool.charEdit.InsertCharacterButton(CommonChar, CharTool.charEdit.CommonLayoutPanel)
-                Next
+            ssLoading.lblLoading.Text = "Loading Common Characters..."
+            For Each CommonChar As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Common)
+                CharTool.charEdit.InsertCharacterButton(CommonChar.Value, CharTool.charEdit.LatinExtendedLayoutPanel)
+            Next
 
-                ssLoading.pbLoading.Value = 70
-                ssLoading.Refresh()
-            Else
-                CharTool.charEdit.tcIPA.TabPages.Remove(CharTool.charEdit.tpCommon)
-            End If
+            ssLoading.pbLoading.Value = 70
+            ssLoading.Refresh()
 
             ssLoading.lblLoading.Text = "Loading Local Custom Characters..."
             Dim LineList As String() = Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)

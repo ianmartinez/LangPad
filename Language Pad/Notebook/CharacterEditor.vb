@@ -83,7 +83,7 @@
 
     Public Sub InsertAccentButton(ByVal Text As String)
         Dim AccentButton As New AccentCheckButton With {
-            .Text = "◌" + Text,
+            .Text = Text,
             .Font = New Font("Calibri", 18, FontStyle.Regular),
             .Margin = New Padding(1),
             .Padding = New Padding(0),
