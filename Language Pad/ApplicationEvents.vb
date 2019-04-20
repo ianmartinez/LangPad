@@ -37,7 +37,7 @@ Namespace My
 
             ssLoading.lblLoading.Text = "Loading IPA Consonants..."
             For Each Consonant As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Consonants)
-                CharTool.charEdit.InsertCharacterButton(Consonant.Value, CharTool.charEdit.ConsonantsLayoutPanel)
+                CharTool.charEdit.InsertCharacterButton(Consonant.Value, CharTool.charEdit.ConsonantsLayoutPanel, Consonant.Key)
             Next
 
             ssLoading.pbLoading.Value = 30
