@@ -63,6 +63,7 @@ Partial Class CharacterEditor
         Me.txtCharacter = New System.Windows.Forms.TextBox()
         Me.cbSmartReplace = New System.Windows.Forms.CheckBox()
         Me.btnAddToFile = New System.Windows.Forms.Button()
+        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.btnCopyToClipboard = New System.Windows.Forms.Button()
         Me.menuCharButton = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AddToEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -73,7 +74,8 @@ Partial Class CharacterEditor
         Me.CopyToLocalMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.SuprasegmentalsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.tcCharacters.SuspendLayout()
         Me.tpFile.SuspendLayout()
         Me.tpLocal.SuspendLayout()
@@ -99,6 +101,7 @@ Partial Class CharacterEditor
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcCharacters
@@ -273,6 +276,7 @@ Partial Class CharacterEditor
         Me.tcIPA.Controls.Add(Me.VowelsTabPage)
         Me.tcIPA.Controls.Add(Me.ToneIntonationTabPage)
         Me.tcIPA.Controls.Add(Me.DiacriticsTabPage)
+        Me.tcIPA.Controls.Add(Me.TabPage1)
         Me.tcIPA.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tcIPA.Location = New System.Drawing.Point(3, 3)
         Me.tcIPA.Name = "tcIPA"
@@ -563,6 +567,16 @@ Partial Class CharacterEditor
         Me.btnAddToFile.TabIndex = 76
         Me.btnAddToFile.Text = "File"
         '
+        'pnlSmartReplace
+        '
+        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
+        Me.pnlSmartReplace.Location = New System.Drawing.Point(92, 4)
+        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlSmartReplace.Name = "pnlSmartReplace"
+        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
+        Me.pnlSmartReplace.TabIndex = 87
+        '
         'btnCopyToClipboard
         '
         Me.btnCopyToClipboard.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -633,15 +647,28 @@ Partial Class CharacterEditor
         Me.SplitContainer1.SplitterDistance = 398
         Me.SplitContainer1.TabIndex = 76
         '
-        'pnlSmartReplace
+        'TabPage1
         '
-        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
-        Me.pnlSmartReplace.Location = New System.Drawing.Point(92, 4)
-        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlSmartReplace.Name = "pnlSmartReplace"
-        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
-        Me.pnlSmartReplace.TabIndex = 87
+        Me.TabPage1.Controls.Add(Me.SuprasegmentalsLayoutPanel)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(278, 230)
+        Me.TabPage1.TabIndex = 6
+        Me.TabPage1.Text = "Suprasegmentals"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'SuprasegmentalsLayoutPanel
+        '
+        Me.SuprasegmentalsLayoutPanel.AutoScroll = True
+        Me.SuprasegmentalsLayoutPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
+        Me.SuprasegmentalsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SuprasegmentalsLayoutPanel.Location = New System.Drawing.Point(3, 3)
+        Me.SuprasegmentalsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.SuprasegmentalsLayoutPanel.Name = "SuprasegmentalsLayoutPanel"
+        Me.SuprasegmentalsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
+        Me.SuprasegmentalsLayoutPanel.Size = New System.Drawing.Size(272, 224)
+        Me.SuprasegmentalsLayoutPanel.TabIndex = 9
         '
         'CharacterEditor
         '
@@ -681,6 +708,7 @@ Partial Class CharacterEditor
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -736,4 +764,6 @@ Partial Class CharacterEditor
     Friend WithEvents GreekExtendedPanel As FlowLayoutPanel
     Friend WithEvents pnlTop As Panel
     Friend WithEvents SplitContainer1 As SplitContainer
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents SuprasegmentalsLayoutPanel As FlowLayoutPanel
 End Class

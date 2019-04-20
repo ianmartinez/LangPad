@@ -142,6 +142,9 @@
   <data name="SmartReplace" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SmartReplace.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="Suprasegmentals" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Suprasegmentals.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="TableTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TableTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>

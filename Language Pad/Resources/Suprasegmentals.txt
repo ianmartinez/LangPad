@@ -1,0 +1,10 @@
+﻿Primary stress=ˈ◌
+Secondary stress=ˌ◌
+Long=◌ː
+Half long=◌ˑ
+Extra long=◌ːː
+Extra-short=◌̆
+Minor (foot) group=|
+Major (intonation) group=‖
+Syllable break=.
+Linking (absence of a break)=‿

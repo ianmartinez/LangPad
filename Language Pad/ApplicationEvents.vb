@@ -64,6 +64,14 @@ Namespace My
                 CharTool.charEdit.InsertCharacterButton(Diacritic.Value, CharTool.charEdit.DiacriticsLayoutPanel, Diacritic.Key)
             Next
 
+            ssLoading.pbLoading.Value = 50
+            ssLoading.Refresh()
+
+            ssLoading.lblLoading.Text = "Loading IPA Suprasegmentals..."
+            For Each Suprasegmental As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Suprasegmentals)
+                CharTool.charEdit.InsertCharacterButton(Suprasegmental.Value, CharTool.charEdit.SuprasegmentalsLayoutPanel, Suprasegmental.Key)
+            Next
+
             ssLoading.pbLoading.Value = 60
             ssLoading.Refresh()
 

@@ -379,6 +379,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Primary stress=ˈ◌
+        '''Secondary stress=ˌ◌
+        '''Long=◌ː
+        '''Half long=◌ˑ
+        '''Extra long=◌ːː
+        '''Extra-short=◌̆
+        '''Minor (foot) group=|
+        '''Major (intonation) group=‖
+        '''Syllable break=.
+        '''Linking (absence of a break)=‿.
+        '''</summary>
+        Friend ReadOnly Property Suprasegmentals() As String
+            Get
+                Return ResourceManager.GetString("Suprasegmentals", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to 		&lt;table&gt;
         '''{0}
         '''		&lt;/table&gt;.

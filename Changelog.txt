@@ -13,7 +13,8 @@
    • Pressing shift when inserting a character will insert it in uppercase
    • Tooltips now provide more detail (b̪ shows "Voiced labiodental stop")
    • Character search
-   • Expanded IPA diacritics
+   • Expanded IPA to include many more characters and diacritics
+   • Add tab dedicated to suprasegmentals (a -> aː)
    
 Version 9.3 (April 13, 2019)
    • Update to .NET Framework 4.7.2

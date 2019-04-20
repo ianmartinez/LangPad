@@ -308,6 +308,20 @@ Ȏ=Ȏ
 ȏ [rest of string was truncated]&quot;;.
 </summary>
 </member>
+<member name="P:Language_Pad.My.Resources.Resources.Suprasegmentals">
+<summary>
+  Looks up a localized string similar to Primary stress=ˈ◌
+Secondary stress=ˌ◌
+Long=◌ː
+Half long=◌ˑ
+Extra long=◌ːː
+Extra-short=◌̆
+Minor (foot) group=|
+Major (intonation) group=‖
+Syllable break=.
+Linking (absence of a break)=‿.
+</summary>
+</member>
 <member name="P:Language_Pad.My.Resources.Resources.TableTemplate">
 <summary>
   Looks up a localized string similar to 		&lt;table&gt;
