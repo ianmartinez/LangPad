@@ -26,9 +26,9 @@ Partial Class dlgAbout
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dlgAbout))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtLicense = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtChangelog = New System.Windows.Forms.TextBox()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.DoubleBufferedPanel1 = New TundraLib.DoubleBufferedPanel()
         Me.lblVersion = New System.Windows.Forms.Label()
@@ -47,60 +47,62 @@ Partial Class dlgAbout
         Me.TabControl1.Location = New System.Drawing.Point(6, 94)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(647, 559)
+        Me.TabControl1.Size = New System.Drawing.Size(647, 377)
         Me.TabControl1.TabIndex = 9
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.txtLicense)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(6)
-        Me.TabPage1.Size = New System.Drawing.Size(522, 414)
+        Me.TabPage1.Size = New System.Drawing.Size(639, 351)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "License"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtLicense
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(6, 6)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(510, 402)
-        Me.TextBox1.TabIndex = 7
-        Me.TextBox1.Text = resources.GetString("TextBox1.Text")
+        Me.txtLicense.BackColor = System.Drawing.Color.White
+        Me.txtLicense.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtLicense.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtLicense.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLicense.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtLicense.Location = New System.Drawing.Point(6, 6)
+        Me.txtLicense.Multiline = True
+        Me.txtLicense.Name = "txtLicense"
+        Me.txtLicense.ReadOnly = True
+        Me.txtLicense.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtLicense.Size = New System.Drawing.Size(627, 339)
+        Me.txtLicense.TabIndex = 7
+        Me.txtLicense.Text = resources.GetString("txtLicense.Text")
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.TextBox2)
+        Me.TabPage2.Controls.Add(Me.txtChangelog)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(6)
-        Me.TabPage2.Size = New System.Drawing.Size(639, 533)
+        Me.TabPage2.Size = New System.Drawing.Size(639, 351)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Changelog"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtChangelog
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox2.Location = New System.Drawing.Point(6, 6)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox2.Size = New System.Drawing.Size(627, 521)
-        Me.TextBox2.TabIndex = 8
-        Me.TextBox2.Text = resources.GetString("TextBox2.Text")
+        Me.txtChangelog.BackColor = System.Drawing.Color.White
+        Me.txtChangelog.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtChangelog.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtChangelog.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtChangelog.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtChangelog.Location = New System.Drawing.Point(6, 6)
+        Me.txtChangelog.Multiline = True
+        Me.txtChangelog.Name = "txtChangelog"
+        Me.txtChangelog.ReadOnly = True
+        Me.txtChangelog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtChangelog.Size = New System.Drawing.Size(627, 339)
+        Me.txtChangelog.TabIndex = 8
+        Me.txtChangelog.Text = resources.GetString("txtChangelog.Text")
         '
         'DoubleBufferedPanel1
         '
@@ -148,7 +150,7 @@ Partial Class dlgAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(659, 659)
+        Me.ClientSize = New System.Drawing.Size(659, 477)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.DoubleBufferedPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -171,9 +173,9 @@ Partial Class dlgAbout
     End Sub
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtLicense As System.Windows.Forms.TextBox
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtChangelog As System.Windows.Forms.TextBox
     Friend WithEvents ttMain As ToolTip
     Friend WithEvents lblLanguagePad As Label
     Friend WithEvents lblVersion As Label
