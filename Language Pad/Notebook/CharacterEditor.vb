@@ -81,8 +81,8 @@
         Panel.Controls.Add(CharacterButton)
     End Sub
 
-    Public Sub InsertAccentButton(ByVal Text As String)
-        Dim AccentButton As New AccentCheckButton With {
+    Public Sub InsertAccentButton(ByVal Text As String, ByVal CharName As String)
+        Dim AccentButton As New AccentCheckButton(CharName) With {
             .Text = Text,
             .Font = New Font("Calibri", 18, FontStyle.Regular),
             .Margin = New Padding(1),

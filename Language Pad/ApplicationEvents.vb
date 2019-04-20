@@ -21,7 +21,7 @@ Namespace My
 
             ssLoading.lblLoading.Text = "Loading Accent Marks..."
             For Each AccentMark As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Accents)
-                CharTool.charEdit.InsertAccentButton(AccentMark.Value)
+                CharTool.charEdit.InsertAccentButton(AccentMark.Value, AccentMark.Key)
             Next
 
             ssLoading.pbLoading.Value = 10

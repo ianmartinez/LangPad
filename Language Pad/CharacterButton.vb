@@ -61,9 +61,13 @@ Public Class IPAToolTip
         AddHandler Draw, AddressOf OnDraw
     End Sub
 
+    Private CharNameFont = New Font("Calibri", 12, FontStyle.Regular)
+    Private TextFont = New Font("Calibri", 42, FontStyle.Bold)
     Private Sub IPAToolTip_Popup(sender As Object, e As PopupEventArgs) Handles Me.Popup
-        Dim TextSize As Size = TextRenderer.MeasureText(GetToolTip(e.AssociatedControl), New Font("Calibri", 42, FontStyle.Bold))
-        e.ToolTipSize = New Size(TextSize.Width + 12, TextSize.Height + 12)
+        Dim CharacterTextSize As Size = TextRenderer.MeasureText(GetToolTip(e.AssociatedControl), TextFont)
+        Dim NameTextSize As Size = TextRenderer.MeasureText(CharName, CharNameFont)
+        Dim Padding = New Size(12, If(String.IsNullOrWhiteSpace(CharName), 8, 16))
+        e.ToolTipSize = New Size(Math.Max(NameTextSize.Width, CharacterTextSize.Width) + Padding.Width, (NameTextSize.Height + CharacterTextSize.Height) + Padding.Height)
     End Sub
 
     Private Sub OnDraw(ByVal sender As Object, ByVal e As DrawToolTipEventArgs)
@@ -74,10 +78,21 @@ Public Class IPAToolTip
         e.Graphics.FillRectangle(background, rect)
         e.Graphics.DrawRectangle(border, rect)
 
-        Dim textRect = New Rectangle(e.Bounds.Left + 3, e.Bounds.Top + 3, e.Bounds.Right - 6, e.Bounds.Bottom - 6)
-        Dim textShadowRect = New Rectangle(e.Bounds.Left + 5, e.Bounds.Top + 5, e.Bounds.Right - 8, e.Bounds.Bottom - 8)
-        e.Graphics.DrawString(e.ToolTipText, New Font("Calibri", 42, FontStyle.Bold), New SolidBrush(Color.FromArgb(0, 0, 0)), textShadowRect)
-        e.Graphics.DrawString(e.ToolTipText, New Font("Calibri", 42, FontStyle.Bold), New SolidBrush(Color.FromArgb(255, 255, 255)), textRect)
+        Dim CharNameSize = TextRenderer.MeasureText(CharName, CharNameFont)
+
+        ' Draw the name
+        If Not String.IsNullOrWhiteSpace(CharName) Then
+            Dim nameRect = New Rectangle(e.Bounds.Left + 3, e.Bounds.Top + 3, e.Bounds.Right - 6, e.Bounds.Bottom - 6)
+            Dim nameShadowRect = New Rectangle(nameRect.X + 2, nameRect.Y + 2, nameRect.Width - 2, nameRect.Height - 2)
+            e.Graphics.DrawString(CharName, CharNameFont, New SolidBrush(Color.FromArgb(0, 0, 0)), nameShadowRect)
+            e.Graphics.DrawString(CharName, CharNameFont, New SolidBrush(Color.FromArgb(255, 255, 255)), nameRect)
+        End If
+
+        ' Draw the character
+        Dim textRect = New Rectangle(e.Bounds.Left + 3, e.Bounds.Top + If(String.IsNullOrWhiteSpace(CharName), 0, CharNameSize.Height + 6) + 3, e.Bounds.Right - 6, e.Bounds.Bottom - 6)
+        Dim textShadowRect = New Rectangle(textRect.X + 2, textRect.Y + 2, textRect.Width - 2, textRect.Height - 2)
+        e.Graphics.DrawString(e.ToolTipText, TextFont, New SolidBrush(Color.FromArgb(0, 0, 0)), textShadowRect)
+        e.Graphics.DrawString(e.ToolTipText, TextFont, New SolidBrush(Color.FromArgb(255, 255, 255)), textRect)
     End Sub
 End Class
 
