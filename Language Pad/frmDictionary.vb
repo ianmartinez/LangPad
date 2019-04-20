@@ -87,6 +87,11 @@ Public Class frmDictionary
 
     Private Sub frmDictionary_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         e.Cancel = True
+        If frmMain IsNot Nothing Then
+            CharTool.Owner = frmMain
+            frmMain.frmMain_Activated(sender, e)
+            CharTool.Show()
+        End If
         SaveDictionary()
         Hide()
     End Sub

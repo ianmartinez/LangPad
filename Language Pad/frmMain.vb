@@ -1146,7 +1146,7 @@ Public Class frmMain
         frmDictionary.Show()
     End Sub
 
-    Private Sub frmMain_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+    Public Sub frmMain_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         CharTool.Owner = Me
         CharTool.GetCurrentTexbox = Function()
                                         Return SelectedDocument
