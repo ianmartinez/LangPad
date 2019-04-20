@@ -11,6 +11,7 @@
    • Toggle affricate button to dynamically create affricates (ts -> t͡s)
    • Fixed bug where dictionary wouldn't load if you opened a new notebook file when the dictionary was open
    • Pressing shift when inserting a character will insert it in uppercase
+   • Tooltips now provide more detail (b̪ shows "Voiced labiodental stop")
    • Character search
    • Speed up startup time
    

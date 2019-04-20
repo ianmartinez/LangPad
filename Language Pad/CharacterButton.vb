@@ -6,7 +6,7 @@ Public Class CharacterButton
     Private components As System.ComponentModel.IContainer
     Private ttIPa As New IPAToolTip
 
-    Public Sub New()
+    Public Sub New(Optional CharName = "")
         Dim IPAFont = New Font("Calibri", 11, FontStyle.Bold)
         Dim IPAPadding = New Padding(0)
         Dim IPAMargin = New Padding(3, 3, 3, 6)
@@ -19,6 +19,7 @@ Public Class CharacterButton
         Margin = IPAMargin
         AutoSizeMode = AutoSizeMode.GrowAndShrink
         UseCompatibleTextRendering = True
+        ttIPa.CharName = CharName
     End Sub
 
     Private Sub SymbolButton_TextChanged(sender As Object, e As EventArgs) Handles Me.TextChanged
@@ -32,13 +33,6 @@ Public Class CharacterButton
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         Me.ResumeLayout(False)
-    End Sub
-
-    Private Sub CharacterButton_MouseClick(sender As Object, e As MouseEventArgs) Handles MyBase.MouseClick
-
-        If e.Button = MouseButtons.Right Then
-        Else
-        End If
     End Sub
 End Class
 
@@ -66,7 +60,7 @@ Public Class IPAToolTip
     Private Sub IPAToolTip_Popup(sender As Object, e As PopupEventArgs) Handles Me.Popup
         Dim CharacterTextSize As Size = TextRenderer.MeasureText(GetToolTip(e.AssociatedControl), TextFont)
         Dim NameTextSize As Size = TextRenderer.MeasureText(CharName, CharNameFont)
-        Dim Padding = New Size(12, If(String.IsNullOrWhiteSpace(CharName), 8, 16))
+        Dim Padding = New Size(12, If(String.IsNullOrWhiteSpace(CharName), 14, 16))
         e.ToolTipSize = New Size(Math.Max(NameTextSize.Width, CharacterTextSize.Width) + Padding.Width, (NameTextSize.Height + CharacterTextSize.Height) + Padding.Height)
     End Sub
 
@@ -79,17 +73,21 @@ Public Class IPAToolTip
         e.Graphics.DrawRectangle(border, rect)
 
         Dim CharNameSize = TextRenderer.MeasureText(CharName, CharNameFont)
+        Dim TextSize = TextRenderer.MeasureText(e.ToolTipText, TextFont)
 
         ' Draw the name
         If Not String.IsNullOrWhiteSpace(CharName) Then
-            Dim nameRect = New Rectangle(e.Bounds.Left + 3, e.Bounds.Top + 3, e.Bounds.Right - 6, e.Bounds.Bottom - 6)
+            Dim nameRect = New Rectangle(e.Bounds.Left + ((e.Bounds.Width / 2) - (CharNameSize.Width / 2)), e.Bounds.Top + 3, e.Bounds.Right, e.Bounds.Bottom - 6)
             Dim nameShadowRect = New Rectangle(nameRect.X + 2, nameRect.Y + 2, nameRect.Width - 2, nameRect.Height - 2)
             e.Graphics.DrawString(CharName, CharNameFont, New SolidBrush(Color.FromArgb(0, 0, 0)), nameShadowRect)
             e.Graphics.DrawString(CharName, CharNameFont, New SolidBrush(Color.FromArgb(255, 255, 255)), nameRect)
         End If
 
         ' Draw the character
-        Dim textRect = New Rectangle(e.Bounds.Left + 3, e.Bounds.Top + If(String.IsNullOrWhiteSpace(CharName), 0, CharNameSize.Height + 6) + 3, e.Bounds.Right - 6, e.Bounds.Bottom - 6)
+        Dim textRect = New Rectangle(e.Bounds.Left + ((e.Bounds.Width / 2) - (TextSize.Width / 2)),
+                                     e.Bounds.Top + If(String.IsNullOrWhiteSpace(CharName), 0, CharNameSize.Height + 6) + 3,
+                                     e.Bounds.Right,
+                                     e.Bounds.Bottom - 6)
         Dim textShadowRect = New Rectangle(textRect.X + 2, textRect.Y + 2, textRect.Width - 2, textRect.Height - 2)
         e.Graphics.DrawString(e.ToolTipText, TextFont, New SolidBrush(Color.FromArgb(0, 0, 0)), textShadowRect)
         e.Graphics.DrawString(e.ToolTipText, TextFont, New SolidBrush(Color.FromArgb(255, 255, 255)), textRect)

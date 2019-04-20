@@ -73,8 +73,8 @@
         'End If
     End Sub
 
-    Public Sub InsertCharacterButton(ByVal Text As String, ByVal Panel As FlowLayoutPanel)
-        Dim CharacterButton As New CharacterButton
+    Public Sub InsertCharacterButton(ByVal Text As String, ByVal Panel As FlowLayoutPanel, Optional ByVal CharName As String = "")
+        Dim CharacterButton As New CharacterButton(CharName)
         CharacterButton.Text = Text
         AddHandler CharacterButton.MouseClick, AddressOf CharacterButtonClick
         CharacterButton.ContextMenuStrip = menuCharButton
