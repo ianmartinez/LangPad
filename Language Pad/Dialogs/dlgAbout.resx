@@ -130,7 +130,28 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
   </data>
   <data name="TextBox2.Text" xml:space="preserve">
-    <value>Version 9.3 (May 13, 2019)
+    <value>Version 9.4 (April 30, 2019)
+   • Redesign symbols panel
+   • Copy custom characters to clipboard
+   • Add buttons to change case of characters in editor
+   • Merge symbols panel, custom characters dialog, and accent dialog into one panel
+   • Separate custom characters into File and Local   
+   • Remove "Embed Custom Symbols" checkbox
+   • Icon now shown in window
+   • Merge "Linguistics" menu and "Page" menu into "Notebook" menu
+   • Improve look of settings dialog
+   • Toggle affricate button to dynamically create affricates (ts -&gt; t͡s)
+   • Pressing shift when inserting a character will insert it in uppercase
+   • Tooltips now provide more detail (b̪ shows "Voiced labiodental stop")
+   • Expanded IPA to include many more characters and diacritics
+   • Add extended Cyrillic &amp; Greek
+   • Add tab dedicated to suprasegmentals (a -&gt; aː)
+   • Default font for the editor is now Calibri, which displays Unicode better
+   • Fix bug in Export to HTML process when encountering empty cells in the dictionary window
+   • Fixed bug where dictionary wouldn't load if you opened a new notebook file when the dictionary was open
+   • Character search
+   
+Version 9.3 (April 13, 2019)
    • Update to .NET Framework 4.7.2
    • Update to Visual Studio 2019
    • Multiple pages can now exist with the same name

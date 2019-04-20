@@ -43,11 +43,11 @@ Partial Class dlgAbout
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TabControl1.Location = New System.Drawing.Point(6, 106)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(6, 94)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(530, 440)
+        Me.TabControl1.Size = New System.Drawing.Size(647, 559)
         Me.TabControl1.TabIndex = 9
         '
         'TabPage1
@@ -82,7 +82,7 @@ Partial Class dlgAbout
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(6)
-        Me.TabPage2.Size = New System.Drawing.Size(522, 414)
+        Me.TabPage2.Size = New System.Drawing.Size(639, 533)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Changelog"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -98,7 +98,7 @@ Partial Class dlgAbout
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox2.Size = New System.Drawing.Size(510, 402)
+        Me.TextBox2.Size = New System.Drawing.Size(627, 521)
         Me.TextBox2.TabIndex = 8
         Me.TextBox2.Text = resources.GetString("TextBox2.Text")
         '
@@ -114,7 +114,7 @@ Partial Class dlgAbout
         Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(6, 6)
         Me.DoubleBufferedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel1.Name = "DoubleBufferedPanel1"
-        Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(530, 88)
+        Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(647, 88)
         Me.DoubleBufferedPanel1.TabIndex = 76
         '
         'lblVersion
@@ -148,7 +148,7 @@ Partial Class dlgAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(542, 552)
+        Me.ClientSize = New System.Drawing.Size(659, 659)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.DoubleBufferedPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
