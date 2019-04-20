@@ -369,6 +369,8 @@ Public Class frmMain
             End If
         Next
 
+        CharTool.Show()
+        CharTool.Owner = Me
     End Sub
 
     Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles MainToolStripContainer.TopToolStripPanel.Paint,
@@ -1142,10 +1144,15 @@ Public Class frmMain
         frmDictionary.Show()
     End Sub
 
-    Private Sub FrmMain_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+    Private Sub frmMain_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         CharTool.GetCurrentTexbox = Function()
                                         Return SelectedDocument
                                     End Function
+
+
+    End Sub
+
+    Private Sub frmMain_Deactivate(sender As Object, e As EventArgs) Handles MyBase.Deactivate
     End Sub
 
     Private Sub CharacterEditorToolStripButton_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripButton.Click
@@ -1156,7 +1163,7 @@ Public Class frmMain
         CharTool.Show()
     End Sub
 
-    Private Sub FrmMain_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+    Private Sub frmMain_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
         If Me.WindowState = FormWindowState.Minimized Then
             CharTool.Visible = False
         Else

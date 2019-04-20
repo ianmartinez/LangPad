@@ -42,11 +42,12 @@ Partial Class CharacterEditorToolWindow
         Me.ClientSize = New System.Drawing.Size(339, 748)
         Me.Controls.Add(Me.charEdit)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "CharacterEditorToolWindow"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.Text = "Characters"
-        Me.TopMost = True
         Me.ResumeLayout(False)
 
     End Sub
