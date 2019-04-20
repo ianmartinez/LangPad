@@ -79,8 +79,8 @@ Public Class IPAToolTip
         If Not String.IsNullOrWhiteSpace(CharName) Then
             Dim nameRect = New Rectangle(e.Bounds.Left + ((e.Bounds.Width / 2) - (CharNameSize.Width / 2)), e.Bounds.Top + 3, e.Bounds.Right, e.Bounds.Bottom - 6)
             Dim nameShadowRect = New Rectangle(nameRect.X + 2, nameRect.Y + 2, nameRect.Width - 2, nameRect.Height - 2)
-            e.Graphics.DrawString(CharName, CharNameFont, New SolidBrush(Color.FromArgb(0, 0, 0)), nameShadowRect)
-            e.Graphics.DrawString(CharName, CharNameFont, New SolidBrush(Color.FromArgb(255, 255, 255)), nameRect)
+            e.Graphics.DrawString(CharName, CharNameFont, New SolidBrush(Color.Black), nameShadowRect)
+            e.Graphics.DrawString(CharName, CharNameFont, New SolidBrush(Color.Gainsboro), nameRect)
         End If
 
         ' Draw the character
@@ -89,8 +89,8 @@ Public Class IPAToolTip
                                      e.Bounds.Right,
                                      e.Bounds.Bottom - 6)
         Dim textShadowRect = New Rectangle(textRect.X + 2, textRect.Y + 2, textRect.Width - 2, textRect.Height - 2)
-        e.Graphics.DrawString(e.ToolTipText, TextFont, New SolidBrush(Color.FromArgb(0, 0, 0)), textShadowRect)
-        e.Graphics.DrawString(e.ToolTipText, TextFont, New SolidBrush(Color.FromArgb(255, 255, 255)), textRect)
+        e.Graphics.DrawString(e.ToolTipText, TextFont, New SolidBrush(Color.Black), textShadowRect)
+        e.Graphics.DrawString(e.ToolTipText, TextFont, New SolidBrush(Color.White), textRect)
     End Sub
 End Class
 
