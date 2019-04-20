@@ -37,8 +37,8 @@ Public Class frmMain
             }
 
             Dim rtbDoc As New ExtendedRichTextBox With {
-                .Rtf = p.RTF,
                 .Font = New Font("Calibri", 11, FontStyle.Regular),
+                .Rtf = p.RTF,
                 .Dock = DockStyle.Fill,
                 .ScrollBars = RichTextBoxScrollBars.Both,
                 .BorderStyle = BorderStyle.None,
