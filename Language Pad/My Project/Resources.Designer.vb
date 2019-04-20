@@ -192,6 +192,45 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Ye grave /e/=ѐ
+        '''Yo /jo/=ё
+        '''Dje /dʑ/=ђ
+        '''Gje /dʑ/=ѓ
+        '''Yest/Ukrainian Ye /je/=є
+        '''Dze /dz/=ѕ
+        '''Dotted I /i/=і
+        '''Yi /ji/=ї
+        '''Je /j/=ј
+        '''Lje /ʎ/=љ
+        '''Nje /ɲ/=њ
+        '''Tshe /tɕ/=ћ
+        '''Kje /c/=ќ
+        '''I with grave /i/=ѝ
+        '''Short U /w/=ў
+        '''Dzhe /ɖʐ/=џ
+        '''Omega /o/=ѡ
+        '''Yat /æ/=ѣ
+        '''Short I with tail /j̊/=ҋ
+        '''Semisoft sign /◌ʲ/=ҍ
+        '''Er with tick /r̥/=ҏ
+        '''Ge with upturn /ɡ/=ґ
+        '''Ghayn/Ge with stroke /ʁ/=ғ
+        '''Ge with middle hook /ɣ/=ҕ
+        '''Zhje /tʂ/, /dʑ/=җ
+        '''Dhe /ð/=ҙ
+        '''Ka with descender /q/=қ
+        '''Ka with vertical stroke /ɟ/=ҝ
+        '''Ka with stroke /qʼ/=ҟ
+        '''Bashkir Qa/Bashkir Ka /q/=ҡ
+        '''En with descen [rest of string was truncated]&quot;;.
+        '''</summary>
+        Friend ReadOnly Property Cyrillic() As String
+            Get
+                Return ResourceManager.GetString("Cyrillic", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Voiceless below=◌̥
         '''Voiceless above=◌̊
         '''Voiced=◌̬
@@ -222,6 +261,23 @@ Namespace My.Resources
         Friend ReadOnly Property Diacritics() As String
             Get
                 Return ResourceManager.GetString("Diacritics", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Kai (and)=ϗ
+        '''Digamma /w/=ϝ
+        '''Pamphylian Digamma /w/=ͷ
+        '''Heta /h/=ͱ
+        '''Koppa /k/=ϙ
+        '''San /s/=Ϻ
+        '''Sampi /s/=ϡ
+        '''Archaic Sampi /s/=ͳ
+        '''Sho /ʃ/=ϸ.
+        '''</summary>
+        Friend ReadOnly Property Greek() As String
+            Get
+                Return ResourceManager.GetString("Greek", resourceCulture)
             End Get
         End Property
         

@@ -38,6 +38,7 @@ Public Class frmMain
 
             Dim rtbDoc As New ExtendedRichTextBox With {
                 .Rtf = p.RTF,
+                .Font = New Font("Calibri", 11, FontStyle.Regular),
                 .Dock = DockStyle.Fill,
                 .ScrollBars = RichTextBoxScrollBars.Both,
                 .BorderStyle = BorderStyle.None,
@@ -266,7 +267,6 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'On Error Resume Next
         Text = LangPadVersion
 
         Title = Text

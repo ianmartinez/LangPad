@@ -327,7 +327,7 @@ Partial Class frmMain
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.StylizedPanel1)
         Me.SplitLayoutPanel.Panel2MinSize = 325
         Me.SplitLayoutPanel.Size = New System.Drawing.Size(1257, 737)
-        Me.SplitLayoutPanel.SplitterDistance = 330
+        Me.SplitLayoutPanel.SplitterDistance = 930
         Me.SplitLayoutPanel.SplitterWidth = 2
         Me.SplitLayoutPanel.TabIndex = 1
         '
@@ -344,7 +344,7 @@ Partial Class frmMain
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.pnlFindReplace)
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.pnlColor)
         Me.MainToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(330, 636)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(930, 674)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'MainToolStripContainer.LeftToolStripPanel
@@ -355,7 +355,7 @@ Partial Class frmMain
         '
         'MainToolStripContainer.RightToolStripPanel
         '
-        Me.MainToolStripContainer.Size = New System.Drawing.Size(330, 737)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(930, 737)
         Me.MainToolStripContainer.TabIndex = 74
         '
         'MainToolStripContainer.TopToolStripPanel
@@ -371,7 +371,7 @@ Partial Class frmMain
         Me.DataToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel, Me.ToolStripSeparator11, Me.lblPageCount, Me.ToolStripSeparator12, Me.ToolStripLabel1, Me.ThemeCombo})
         Me.DataToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DataToolStrip.Name = "DataToolStrip"
-        Me.DataToolStrip.Size = New System.Drawing.Size(330, 25)
+        Me.DataToolStrip.Size = New System.Drawing.Size(930, 25)
         Me.DataToolStrip.Stretch = True
         Me.DataToolStrip.TabIndex = 2
         '
@@ -432,7 +432,7 @@ Partial Class frmMain
         Me.tcNotebook.Margin = New System.Windows.Forms.Padding(2)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(330, 504)
+        Me.tcNotebook.Size = New System.Drawing.Size(930, 542)
         Me.tcNotebook.TabIndex = 73
         '
         'pnlFindReplace
@@ -450,7 +450,7 @@ Partial Class frmMain
         Me.pnlFindReplace.Location = New System.Drawing.Point(0, 97)
         Me.pnlFindReplace.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlFindReplace.Name = "pnlFindReplace"
-        Me.pnlFindReplace.Size = New System.Drawing.Size(330, 35)
+        Me.pnlFindReplace.Size = New System.Drawing.Size(930, 35)
         Me.pnlFindReplace.TabIndex = 72
         Me.pnlFindReplace.Visible = False
         '
@@ -545,7 +545,7 @@ Partial Class frmMain
         Me.pnlColor.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlColor.Name = "pnlColor"
         Me.pnlColor.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
-        Me.pnlColor.Size = New System.Drawing.Size(330, 97)
+        Me.pnlColor.Size = New System.Drawing.Size(930, 97)
         Me.pnlColor.TabIndex = 74
         Me.pnlColor.Visible = False
         '
@@ -581,7 +581,7 @@ Partial Class frmMain
         Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorLayoutPanel.Name = "ColorLayoutPanel"
         Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(4)
-        Me.ColorLayoutPanel.Size = New System.Drawing.Size(330, 64)
+        Me.ColorLayoutPanel.Size = New System.Drawing.Size(930, 64)
         Me.ColorLayoutPanel.TabIndex = 70
         '
         'btnTransparentColor
@@ -714,7 +714,7 @@ Partial Class frmMain
         Me.StylizedColorButton8.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton8.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.StylizedColorButton8.Image = CType(resources.GetObject("StylizedColorButton8.Image"), System.Drawing.Image)
-        Me.StylizedColorButton8.Location = New System.Drawing.Point(6, 43)
+        Me.StylizedColorButton8.Location = New System.Drawing.Point(296, 6)
         Me.StylizedColorButton8.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton8.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton8.Name = "StylizedColorButton8"
@@ -730,7 +730,7 @@ Partial Class frmMain
         Me.StylizedColorButton9.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton9.Color = System.Drawing.Color.Goldenrod
         Me.StylizedColorButton9.Image = CType(resources.GetObject("StylizedColorButton9.Image"), System.Drawing.Image)
-        Me.StylizedColorButton9.Location = New System.Drawing.Point(42, 43)
+        Me.StylizedColorButton9.Location = New System.Drawing.Point(332, 6)
         Me.StylizedColorButton9.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton9.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton9.Name = "StylizedColorButton9"
@@ -746,7 +746,7 @@ Partial Class frmMain
         Me.StylizedColorButton10.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton10.Color = System.Drawing.Color.Yellow
         Me.StylizedColorButton10.Image = CType(resources.GetObject("StylizedColorButton10.Image"), System.Drawing.Image)
-        Me.StylizedColorButton10.Location = New System.Drawing.Point(78, 43)
+        Me.StylizedColorButton10.Location = New System.Drawing.Point(368, 6)
         Me.StylizedColorButton10.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton10.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton10.Name = "StylizedColorButton10"
@@ -762,7 +762,7 @@ Partial Class frmMain
         Me.StylizedColorButton11.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton11.Color = System.Drawing.Color.Lime
         Me.StylizedColorButton11.Image = CType(resources.GetObject("StylizedColorButton11.Image"), System.Drawing.Image)
-        Me.StylizedColorButton11.Location = New System.Drawing.Point(114, 43)
+        Me.StylizedColorButton11.Location = New System.Drawing.Point(404, 6)
         Me.StylizedColorButton11.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton11.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton11.Name = "StylizedColorButton11"
@@ -778,7 +778,7 @@ Partial Class frmMain
         Me.StylizedColorButton12.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton12.Color = System.Drawing.Color.OliveDrab
         Me.StylizedColorButton12.Image = CType(resources.GetObject("StylizedColorButton12.Image"), System.Drawing.Image)
-        Me.StylizedColorButton12.Location = New System.Drawing.Point(150, 43)
+        Me.StylizedColorButton12.Location = New System.Drawing.Point(440, 6)
         Me.StylizedColorButton12.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton12.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton12.Name = "StylizedColorButton12"
@@ -794,7 +794,7 @@ Partial Class frmMain
         Me.StylizedColorButton20.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton20.Color = System.Drawing.Color.Green
         Me.StylizedColorButton20.Image = CType(resources.GetObject("StylizedColorButton20.Image"), System.Drawing.Image)
-        Me.StylizedColorButton20.Location = New System.Drawing.Point(186, 43)
+        Me.StylizedColorButton20.Location = New System.Drawing.Point(476, 6)
         Me.StylizedColorButton20.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton20.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton20.Name = "StylizedColorButton20"
@@ -810,7 +810,7 @@ Partial Class frmMain
         Me.StylizedColorButton21.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton21.Color = System.Drawing.Color.DarkGreen
         Me.StylizedColorButton21.Image = CType(resources.GetObject("StylizedColorButton21.Image"), System.Drawing.Image)
-        Me.StylizedColorButton21.Location = New System.Drawing.Point(222, 43)
+        Me.StylizedColorButton21.Location = New System.Drawing.Point(512, 6)
         Me.StylizedColorButton21.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton21.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton21.Name = "StylizedColorButton21"
@@ -826,7 +826,7 @@ Partial Class frmMain
         Me.StylizedColorButton13.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton13.Color = System.Drawing.Color.CadetBlue
         Me.StylizedColorButton13.Image = CType(resources.GetObject("StylizedColorButton13.Image"), System.Drawing.Image)
-        Me.StylizedColorButton13.Location = New System.Drawing.Point(258, 43)
+        Me.StylizedColorButton13.Location = New System.Drawing.Point(548, 6)
         Me.StylizedColorButton13.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton13.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton13.Name = "StylizedColorButton13"
@@ -842,7 +842,7 @@ Partial Class frmMain
         Me.StylizedColorButton14.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton14.Color = System.Drawing.Color.DeepSkyBlue
         Me.StylizedColorButton14.Image = CType(resources.GetObject("StylizedColorButton14.Image"), System.Drawing.Image)
-        Me.StylizedColorButton14.Location = New System.Drawing.Point(6, 80)
+        Me.StylizedColorButton14.Location = New System.Drawing.Point(584, 6)
         Me.StylizedColorButton14.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton14.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton14.Name = "StylizedColorButton14"
@@ -858,7 +858,7 @@ Partial Class frmMain
         Me.StylizedColorButton15.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton15.Color = System.Drawing.Color.Blue
         Me.StylizedColorButton15.Image = CType(resources.GetObject("StylizedColorButton15.Image"), System.Drawing.Image)
-        Me.StylizedColorButton15.Location = New System.Drawing.Point(42, 80)
+        Me.StylizedColorButton15.Location = New System.Drawing.Point(620, 6)
         Me.StylizedColorButton15.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton15.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton15.Name = "StylizedColorButton15"
@@ -874,7 +874,7 @@ Partial Class frmMain
         Me.StylizedColorButton16.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton16.Color = System.Drawing.Color.DarkSlateBlue
         Me.StylizedColorButton16.Image = CType(resources.GetObject("StylizedColorButton16.Image"), System.Drawing.Image)
-        Me.StylizedColorButton16.Location = New System.Drawing.Point(78, 80)
+        Me.StylizedColorButton16.Location = New System.Drawing.Point(656, 6)
         Me.StylizedColorButton16.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton16.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton16.Name = "StylizedColorButton16"
@@ -890,7 +890,7 @@ Partial Class frmMain
         Me.StylizedColorButton17.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton17.Color = System.Drawing.Color.Purple
         Me.StylizedColorButton17.Image = CType(resources.GetObject("StylizedColorButton17.Image"), System.Drawing.Image)
-        Me.StylizedColorButton17.Location = New System.Drawing.Point(114, 80)
+        Me.StylizedColorButton17.Location = New System.Drawing.Point(692, 6)
         Me.StylizedColorButton17.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton17.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton17.Name = "StylizedColorButton17"
@@ -906,7 +906,7 @@ Partial Class frmMain
         Me.StylizedColorButton18.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton18.Color = System.Drawing.Color.DeepPink
         Me.StylizedColorButton18.Image = CType(resources.GetObject("StylizedColorButton18.Image"), System.Drawing.Image)
-        Me.StylizedColorButton18.Location = New System.Drawing.Point(150, 80)
+        Me.StylizedColorButton18.Location = New System.Drawing.Point(728, 6)
         Me.StylizedColorButton18.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton18.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton18.Name = "StylizedColorButton18"
@@ -922,7 +922,7 @@ Partial Class frmMain
         Me.StylizedColorButton19.BackColor = System.Drawing.Color.Transparent
         Me.StylizedColorButton19.Color = System.Drawing.Color.Fuchsia
         Me.StylizedColorButton19.Image = CType(resources.GetObject("StylizedColorButton19.Image"), System.Drawing.Image)
-        Me.StylizedColorButton19.Location = New System.Drawing.Point(186, 80)
+        Me.StylizedColorButton19.Location = New System.Drawing.Point(764, 6)
         Me.StylizedColorButton19.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedColorButton19.MinimumSize = New System.Drawing.Size(2, 16)
         Me.StylizedColorButton19.Name = "StylizedColorButton19"
@@ -964,10 +964,10 @@ Partial Class frmMain
         Me.FontToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.FontToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.FontToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripButton, Me.ToolStripSeparator9, Me.BoldToolStripButton, Me.ItalicToolStripButton, Me.UnderlineToolStripButton, Me.StrikeToolStripButton, Me.ToolStripSeparator5, Me.AlignLeftToolStripButton, Me.AlignCenterToolStripButton, Me.AlignRightToolStripButton, Me.ToolStripSeparator8, Me.IndentToolStripComboBox, Me.IndentToolStripButton})
-        Me.FontToolStrip.Location = New System.Drawing.Point(3, 0)
+        Me.FontToolStrip.Location = New System.Drawing.Point(325, 0)
         Me.FontToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.FontToolStrip.Name = "FontToolStrip"
-        Me.FontToolStrip.Size = New System.Drawing.Size(327, 38)
+        Me.FontToolStrip.Size = New System.Drawing.Size(366, 38)
         Me.FontToolStrip.TabIndex = 1
         '
         'FontToolStripButton
@@ -1069,7 +1069,7 @@ Partial Class frmMain
         '
         Me.IndentToolStripComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.IndentToolStripComboBox.Name = "IndentToolStripComboBox"
-        Me.IndentToolStripComboBox.Size = New System.Drawing.Size(100, 23)
+        Me.IndentToolStripComboBox.Size = New System.Drawing.Size(100, 38)
         '
         'IndentToolStripButton
         '
@@ -1078,7 +1078,7 @@ Partial Class frmMain
         Me.IndentToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.IndentToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.IndentToolStripButton.Name = "IndentToolStripButton"
-        Me.IndentToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.IndentToolStripButton.Size = New System.Drawing.Size(26, 35)
         Me.IndentToolStripButton.Text = "Indent"
         '
         'FileToolStrip
@@ -1086,10 +1086,10 @@ Partial Class frmMain
         Me.FileToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.FileToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.FileToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.toolStripSeparator, Me.CutToolStripButton, Me.CopyToolStripButton, Me.PasteToolStripButton, Me.PastePlainToolStripButton, Me.toolStripSeparator2, Me.UndoToolStripButton, Me.RedoToolStripButton, Me.ToolStripSeparator14, Me.CharacterEditorToolStripButton})
-        Me.FileToolStrip.Location = New System.Drawing.Point(3, 38)
+        Me.FileToolStrip.Location = New System.Drawing.Point(3, 0)
         Me.FileToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.FileToolStrip.Name = "FileToolStrip"
-        Me.FileToolStrip.Size = New System.Drawing.Size(290, 38)
+        Me.FileToolStrip.Size = New System.Drawing.Size(321, 38)
         Me.FileToolStrip.TabIndex = 0
         '
         'NewToolStripButton
@@ -1205,7 +1205,7 @@ Partial Class frmMain
         Me.CharacterEditorToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CharacterEditorToolStripButton.Name = "CharacterEditorToolStripButton"
         Me.CharacterEditorToolStripButton.Size = New System.Drawing.Size(26, 35)
-        Me.CharacterEditorToolStripButton.Text = "CharacterEditor"
+        Me.CharacterEditorToolStripButton.Text = "Character Editor"
         '
         'StylizedPanel1
         '
@@ -1216,7 +1216,7 @@ Partial Class frmMain
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(925, 737)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(325, 737)
         Me.StylizedPanel1.TabIndex = 13
         '
         'pnlDocumentProperties
@@ -1226,7 +1226,7 @@ Partial Class frmMain
         Me.pnlDocumentProperties.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlDocumentProperties.MinimumSize = New System.Drawing.Size(272, 0)
         Me.pnlDocumentProperties.Name = "pnlDocumentProperties"
-        Me.pnlDocumentProperties.Size = New System.Drawing.Size(925, 737)
+        Me.pnlDocumentProperties.Size = New System.Drawing.Size(325, 737)
         Me.pnlDocumentProperties.TabIndex = 0
         '
         'dlgSaveNotebook

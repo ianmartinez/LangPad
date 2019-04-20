@@ -48,12 +48,15 @@ Partial Class CharacterEditor
         Me.ToneIntonationLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.DiacriticsTabPage = New System.Windows.Forms.TabPage()
         Me.DiacriticsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.SuprasegmentalsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.tpSearch = New System.Windows.Forms.TabPage()
         Me.SearchCharactersPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.pnlModifyChar = New System.Windows.Forms.Panel()
         Me.gbAccents = New System.Windows.Forms.GroupBox()
         Me.AccentsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnClearAll = New System.Windows.Forms.Button()
         Me.btnAffricate = New System.Windows.Forms.Button()
         Me.btnLowercase = New System.Windows.Forms.Button()
         Me.btnUppercase = New System.Windows.Forms.Button()
@@ -63,7 +66,6 @@ Partial Class CharacterEditor
         Me.txtCharacter = New System.Windows.Forms.TextBox()
         Me.cbSmartReplace = New System.Windows.Forms.CheckBox()
         Me.btnAddToFile = New System.Windows.Forms.Button()
-        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.btnCopyToClipboard = New System.Windows.Forms.Button()
         Me.menuCharButton = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AddToEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -74,8 +76,7 @@ Partial Class CharacterEditor
         Me.CopyToLocalMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.SuprasegmentalsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.tcCharacters.SuspendLayout()
         Me.tpFile.SuspendLayout()
         Me.tpLocal.SuspendLayout()
@@ -91,6 +92,7 @@ Partial Class CharacterEditor
         Me.VowelsTabPage.SuspendLayout()
         Me.ToneIntonationTabPage.SuspendLayout()
         Me.DiacriticsTabPage.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
         Me.tpSearch.SuspendLayout()
         Me.pnlModifyChar.SuspendLayout()
         Me.gbAccents.SuspendLayout()
@@ -101,7 +103,6 @@ Partial Class CharacterEditor
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcCharacters
@@ -400,6 +401,29 @@ Partial Class CharacterEditor
         Me.DiacriticsLayoutPanel.Size = New System.Drawing.Size(278, 230)
         Me.DiacriticsLayoutPanel.TabIndex = 8
         '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.SuprasegmentalsLayoutPanel)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(278, 230)
+        Me.TabPage1.TabIndex = 6
+        Me.TabPage1.Text = "Suprasegmentals"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'SuprasegmentalsLayoutPanel
+        '
+        Me.SuprasegmentalsLayoutPanel.AutoScroll = True
+        Me.SuprasegmentalsLayoutPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
+        Me.SuprasegmentalsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SuprasegmentalsLayoutPanel.Location = New System.Drawing.Point(3, 3)
+        Me.SuprasegmentalsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.SuprasegmentalsLayoutPanel.Name = "SuprasegmentalsLayoutPanel"
+        Me.SuprasegmentalsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
+        Me.SuprasegmentalsLayoutPanel.Size = New System.Drawing.Size(272, 224)
+        Me.SuprasegmentalsLayoutPanel.TabIndex = 9
+        '
         'tpSearch
         '
         Me.tpSearch.Controls.Add(Me.SearchCharactersPanel)
@@ -461,6 +485,7 @@ Partial Class CharacterEditor
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnClearAll)
         Me.GroupBox1.Controls.Add(Me.btnAffricate)
         Me.GroupBox1.Controls.Add(Me.btnLowercase)
         Me.GroupBox1.Controls.Add(Me.btnUppercase)
@@ -472,11 +497,21 @@ Partial Class CharacterEditor
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Modify Character"
         '
+        'btnClearAll
+        '
+        Me.btnClearAll.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnClearAll.ForeColor = System.Drawing.Color.Firebrick
+        Me.btnClearAll.Location = New System.Drawing.Point(216, 21)
+        Me.btnClearAll.Name = "btnClearAll"
+        Me.btnClearAll.Size = New System.Drawing.Size(65, 32)
+        Me.btnClearAll.TabIndex = 79
+        Me.btnClearAll.Text = "Clear All"
+        '
         'btnAffricate
         '
         Me.btnAffricate.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnAffricate.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAffricate.Location = New System.Drawing.Point(200, 17)
+        Me.btnAffricate.Location = New System.Drawing.Point(160, 21)
         Me.btnAffricate.Name = "btnAffricate"
         Me.btnAffricate.Size = New System.Drawing.Size(50, 32)
         Me.btnAffricate.TabIndex = 78
@@ -486,18 +521,18 @@ Partial Class CharacterEditor
         'btnLowercase
         '
         Me.btnLowercase.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnLowercase.Location = New System.Drawing.Point(38, 17)
+        Me.btnLowercase.Location = New System.Drawing.Point(8, 21)
         Me.btnLowercase.Name = "btnLowercase"
-        Me.btnLowercase.Size = New System.Drawing.Size(75, 32)
+        Me.btnLowercase.Size = New System.Drawing.Size(70, 32)
         Me.btnLowercase.TabIndex = 78
         Me.btnLowercase.Text = "Lowercase"
         '
         'btnUppercase
         '
         Me.btnUppercase.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnUppercase.Location = New System.Drawing.Point(119, 17)
+        Me.btnUppercase.Location = New System.Drawing.Point(84, 21)
         Me.btnUppercase.Name = "btnUppercase"
-        Me.btnUppercase.Size = New System.Drawing.Size(75, 32)
+        Me.btnUppercase.Size = New System.Drawing.Size(70, 32)
         Me.btnUppercase.TabIndex = 77
         Me.btnUppercase.Text = "Uppercase"
         '
@@ -539,9 +574,10 @@ Partial Class CharacterEditor
         'txtCharacter
         '
         Me.txtCharacter.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtCharacter.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCharacter.Location = New System.Drawing.Point(92, 24)
         Me.txtCharacter.Name = "txtCharacter"
-        Me.txtCharacter.Size = New System.Drawing.Size(189, 20)
+        Me.txtCharacter.Size = New System.Drawing.Size(189, 22)
         Me.txtCharacter.TabIndex = 77
         '
         'cbSmartReplace
@@ -566,16 +602,6 @@ Partial Class CharacterEditor
         Me.btnAddToFile.Size = New System.Drawing.Size(52, 32)
         Me.btnAddToFile.TabIndex = 76
         Me.btnAddToFile.Text = "File"
-        '
-        'pnlSmartReplace
-        '
-        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
-        Me.pnlSmartReplace.Location = New System.Drawing.Point(92, 4)
-        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlSmartReplace.Name = "pnlSmartReplace"
-        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
-        Me.pnlSmartReplace.TabIndex = 87
         '
         'btnCopyToClipboard
         '
@@ -647,28 +673,15 @@ Partial Class CharacterEditor
         Me.SplitContainer1.SplitterDistance = 398
         Me.SplitContainer1.TabIndex = 76
         '
-        'TabPage1
+        'pnlSmartReplace
         '
-        Me.TabPage1.Controls.Add(Me.SuprasegmentalsLayoutPanel)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(278, 230)
-        Me.TabPage1.TabIndex = 6
-        Me.TabPage1.Text = "Suprasegmentals"
-        Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'SuprasegmentalsLayoutPanel
-        '
-        Me.SuprasegmentalsLayoutPanel.AutoScroll = True
-        Me.SuprasegmentalsLayoutPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.SuprasegmentalsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuprasegmentalsLayoutPanel.Location = New System.Drawing.Point(3, 3)
-        Me.SuprasegmentalsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.SuprasegmentalsLayoutPanel.Name = "SuprasegmentalsLayoutPanel"
-        Me.SuprasegmentalsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.SuprasegmentalsLayoutPanel.Size = New System.Drawing.Size(272, 224)
-        Me.SuprasegmentalsLayoutPanel.TabIndex = 9
+        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
+        Me.pnlSmartReplace.Location = New System.Drawing.Point(92, 4)
+        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlSmartReplace.Name = "pnlSmartReplace"
+        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
+        Me.pnlSmartReplace.TabIndex = 87
         '
         'CharacterEditor
         '
@@ -696,6 +709,7 @@ Partial Class CharacterEditor
         Me.VowelsTabPage.ResumeLayout(False)
         Me.ToneIntonationTabPage.ResumeLayout(False)
         Me.DiacriticsTabPage.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
         Me.tpSearch.ResumeLayout(False)
         Me.tpSearch.PerformLayout()
         Me.pnlModifyChar.ResumeLayout(False)
@@ -708,7 +722,6 @@ Partial Class CharacterEditor
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -766,4 +779,5 @@ Partial Class CharacterEditor
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents SuprasegmentalsLayoutPanel As FlowLayoutPanel
+    Friend WithEvents btnClearAll As Button
 End Class

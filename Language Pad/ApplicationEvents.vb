@@ -75,9 +75,17 @@ Namespace My
             ssLoading.pbLoading.Value = 60
             ssLoading.Refresh()
 
-            ssLoading.lblLoading.Text = "Loading Common Characters..."
-            For Each CommonChar As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Common)
-                CharTool.charEdit.InsertCharacterButton(CommonChar.Value, CharTool.charEdit.LatinExtendedLayoutPanel)
+            ssLoading.lblLoading.Text = "Loading Extended Characters..."
+            For Each LatinExtended As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Common)
+                CharTool.charEdit.InsertCharacterButton(LatinExtended.Value, CharTool.charEdit.LatinExtendedLayoutPanel, LatinExtended.Key, False)
+            Next
+
+            For Each CyrillicExtended As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Cyrillic)
+                CharTool.charEdit.InsertCharacterButton(CyrillicExtended.Value, CharTool.charEdit.CyrillicExtendedPanel, CyrillicExtended.Key, False)
+            Next
+
+            For Each GreekExtended As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Greek)
+                CharTool.charEdit.InsertCharacterButton(GreekExtended.Value, CharTool.charEdit.GreekExtendedPanel, GreekExtended.Key, False)
             Next
 
             ssLoading.pbLoading.Value = 70

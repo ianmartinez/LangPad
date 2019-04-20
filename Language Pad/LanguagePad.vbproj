@@ -352,6 +352,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Suprasegmentals.txt" />
+    <None Include="Resources\Cyrillic.txt" />
+    <None Include="Resources\Greek.txt" />
     <Content Include="Version9Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

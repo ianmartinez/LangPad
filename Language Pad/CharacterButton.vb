@@ -6,7 +6,7 @@ Public Class CharacterButton
     Private components As System.ComponentModel.IContainer
     Private ttIPa As New IPAToolTip
 
-    Public Sub New(Optional CharName = "")
+    Public Sub New(Optional CharName = "", Optional MultiLine = True)
         Dim IPAFont = New Font("Calibri", 11, FontStyle.Bold)
         Dim IPAPadding = New Padding(0)
         Dim IPAMargin = New Padding(3, 3, 3, 6)
@@ -19,7 +19,7 @@ Public Class CharacterButton
         Margin = IPAMargin
         AutoSizeMode = AutoSizeMode.GrowAndShrink
         UseCompatibleTextRendering = True
-        ttIPa.CharName = CharName.Replace("/", vbCrLf)
+        ttIPa.CharName = If(MultiLine, CharName.Replace("/", vbCrLf), CharName)
     End Sub
 
     Private Sub SymbolButton_TextChanged(sender As Object, e As EventArgs) Handles Me.TextChanged
@@ -100,7 +100,7 @@ Public Class AccentCheckButton
     Inherits CheckBox
     Private ttIPa As New IPAToolTip
 
-    Public Sub New(Optional CharName = "")
+    Public Sub New(Optional CharName = "", Optional MultiLine = True)
         Dim IPAFont = New Font("Calibri", 14, FontStyle.Regular)
         Dim IPAPadding = New Padding(0)
         Dim IPAMargin = New Padding(1)
@@ -114,7 +114,7 @@ Public Class AccentCheckButton
         Appearance = Appearance.Button
         TextAlign = ContentAlignment.MiddleCenter
         UseCompatibleTextRendering = True
-        ttIPa.CharName = CharName.Replace("/", vbCrLf)
+        ttIPa.CharName = If(MultiLine, CharName.Replace("/", vbCrLf), CharName)
     End Sub
 
     Private Sub InitializeComponent()

@@ -130,8 +130,14 @@
   <data name="Consonants" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Consonants.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="Cyrillic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cyrillic.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="Diacritics" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Other.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Greek" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Greek.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="HtmlStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HtmlStyle.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>

@@ -14,7 +14,9 @@
    • Tooltips now provide more detail (b̪ shows "Voiced labiodental stop")
    • Character search
    • Expanded IPA to include many more characters and diacritics
+   • Add extended Cyrillic & Greek
    • Add tab dedicated to suprasegmentals (a -> aː)
+   • Default font for the editor is now Calibri, which displays Unicode better
    
 Version 9.3 (April 13, 2019)
    • Update to .NET Framework 4.7.2

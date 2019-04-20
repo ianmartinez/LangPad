@@ -29,6 +29,7 @@
         End If
     End Sub
 
+
     Private Sub ToggleAccent(sender As Object, e As EventArgs)
         Dim button As AccentCheckButton = CType(sender, AccentCheckButton)
 
@@ -73,8 +74,8 @@
         'End If
     End Sub
 
-    Public Sub InsertCharacterButton(ByVal Text As String, ByVal Panel As FlowLayoutPanel, Optional ByVal CharName As String = "")
-        Dim CharacterButton As New CharacterButton(CharName)
+    Public Sub InsertCharacterButton(ByVal Text As String, ByVal Panel As FlowLayoutPanel, Optional ByVal CharName As String = "", Optional MultiLine As Boolean = True)
+        Dim CharacterButton As New CharacterButton(CharName, MultiLine)
         CharacterButton.Text = Text
         AddHandler CharacterButton.MouseClick, AddressOf CharacterButtonClick
         CharacterButton.ContextMenuStrip = menuCharButton
@@ -185,5 +186,19 @@
 
     Private Sub AddToEditorCharacterMenuItem_Click(sender As Object, e As EventArgs) Handles AddToEditorCharacterMenuItem.Click
         txtCharacter.Text &= GetButtonTextFromMenu(sender)
+    End Sub
+
+    Private Sub BtnClearAll_Click(sender As Object, e As EventArgs) Handles btnClearAll.Click
+        For Each control As Control In AccentsLayoutPanel.Controls
+            If TypeOf control Is AccentCheckButton Then
+                Dim button As AccentCheckButton = CType(control, AccentCheckButton)
+                button.Checked = False
+            End If
+        Next
+
+        AccentsList.Clear()
+        AccentsString = ""
+        txtCharacter.Text = ""
+        UpdateResult()
     End Sub
 End Class
