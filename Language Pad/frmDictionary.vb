@@ -5,7 +5,7 @@ Imports System.Text
 Imports TundraLib.Themes
 
 Public Class frmDictionary
-    Dim c As TextBox
+    Dim CurrentTextbox As TextBox
     Public Loaded As Boolean = False
     Public Color1 As Color
     Public Color2 As Color
@@ -91,7 +91,7 @@ Public Class frmDictionary
         dgvDictionary.Focus()
         dgvDictionary.BeginEdit(False)
 
-        InsertText(c, Button.Text)
+        InsertText(CurrentTextbox, Button.Text)
     End Sub
 
     Private Sub frmDictionary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -100,7 +100,7 @@ Public Class frmDictionary
     End Sub
 
     Private Sub dgvDictionary_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles dgvDictionary.EditingControlShowing
-        c = e.Control
+        CurrentTextbox = e.Control
     End Sub
 
     Private Sub frmDictionary_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
@@ -172,10 +172,6 @@ Public Class frmDictionary
         End If
     End Sub
 
-    Private Sub SymbolsToolStripButton_Click(sender As Object, e As EventArgs) Handles SymbolsToolStripButton.Click
-        SplitContainer1.Panel1Collapsed = SplitContainer1.Panel1Collapsed Xor True
-    End Sub
-
     Private Sub AddToolStripButton_Click(sender As Object, e As EventArgs) Handles AddToolStripButton.Click
         dgvDictionary.Rows.Add(1)
     End Sub
@@ -244,5 +240,21 @@ Public Class frmDictionary
 
     Private Sub dgvDictionary_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellContentClick
 
+    End Sub
+
+    Private Sub CharacterEditorToolStripButton_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripButton.Click
+        CharTool.Show()
+    End Sub
+
+    Private Sub frmDictionary_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+        CharTool.Owner = Me
+        CharTool.GetCurrentTexbox = Function()
+                                        If dgvDictionary.CurrentCell IsNot Nothing Then
+                                            dgvDictionary.Focus()
+                                            dgvDictionary.BeginEdit(False)
+                                        End If
+
+                                        Return CurrentTextbox
+                                    End Function
     End Sub
 End Class

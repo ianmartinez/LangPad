@@ -1147,11 +1147,10 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+        CharTool.Owner = Me
         CharTool.GetCurrentTexbox = Function()
                                         Return SelectedDocument
                                     End Function
-
-
     End Sub
 
     Private Sub frmMain_Deactivate(sender As Object, e As EventArgs) Handles MyBase.Deactivate

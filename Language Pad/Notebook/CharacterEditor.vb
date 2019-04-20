@@ -94,8 +94,12 @@
     End Sub
 
     Public Sub CharacterButtonClick(sender As Object, e As EventArgs) Handles btnCharacter.Click
-        Dim Button As Button = CType(sender, Button)
-        InsertText(GetCurrentTexbox(), Button.Text)
+        Dim CurrentTextBox = GetCurrentTexbox()
+
+        If CurrentTextBox IsNot Nothing Then
+            Dim Button As Button = CType(sender, Button)
+            InsertText(CurrentTextBox, Button.Text)
+        End If
     End Sub
 
     Public Sub InsertText(ByVal TextBox As TextBoxBase, ByVal Text As String)
@@ -106,9 +110,11 @@
         TextBox.Paste()
         Clipboard.SetDataObject(obj)
 
-        '    TextBox.Focus()
         TextBox.SelectionStart = CurrentPos + Text.Length
         TextBox.SelectionLength = 0
+
+        ' Keep the window focused
+        Show()
     End Sub
 
     Private Sub CharacterEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
