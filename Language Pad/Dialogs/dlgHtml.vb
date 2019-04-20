@@ -8,6 +8,7 @@ Public Class dlgHtml
         Dim SortedWordList As List(Of DictionaryWord) = New List(Of DictionaryWord)
 
         For Each word As DictionaryWord In CurrentDocument.WordDictionary.Words
+
             SortedWordList.Add(word)
         Next
 

@@ -67,6 +67,11 @@ Public Class frmDictionary
                 .Notes = dgvDictionary.Rows.Item(i).Cells.Item(3).Value
             }
 
+            If NewWord.Word = Nothing Then NewWord.Word = ""
+            If NewWord.Pronunciation = Nothing Then NewWord.Pronunciation = ""
+            If NewWord.Definition = Nothing Then NewWord.Definition = ""
+            If NewWord.Notes = Nothing Then NewWord.Notes = ""
+
             CurrentDocument.WordDictionary.Words.Add(NewWord)
         Next
     End Sub

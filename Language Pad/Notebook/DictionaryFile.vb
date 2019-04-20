@@ -4,10 +4,10 @@ Imports TundraLib.ZiaFile
 <Serializable()>
 Public Class DictionaryWord
     Implements IComparable, IComparer
-    Public Word As String
-    Public Pronunciation As String
-    Public Definition As String
-    Public Notes As String
+    Public Word As String = ""
+    Public Pronunciation As String = ""
+    Public Definition As String = ""
+    Public Notes As String = ""
 
     Public Function CompareTo(obj As Object) As Integer Implements IComparable.CompareTo
         Return Word.CompareTo(CType(obj, DictionaryWord).Word)
