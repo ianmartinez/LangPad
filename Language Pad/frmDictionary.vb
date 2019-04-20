@@ -71,29 +71,6 @@ Public Class frmDictionary
         Next
     End Sub
 
-    Public Sub InsertText(ByVal Textbox As TextBox, ByVal Text As String)
-        On Error Resume Next
-        Dim CurrentPos As Integer = Textbox.SelectionStart
-        Dim obj As Object = Clipboard.GetDataObject
-        Clipboard.SetText(Text)
-        Textbox.Paste()
-        Clipboard.SetDataObject(obj)
-
-        Textbox.Focus()
-        Textbox.SelectionStart = CurrentPos + Text.Length
-        Textbox.SelectionLength = 0
-    End Sub
-
-    Public Sub InsertIPA(sender As Object, e As EventArgs)
-        On Error Resume Next
-        If My.Computer.Keyboard.CtrlKeyDown Then Exit Sub
-        Dim Button As Button = CType(sender, Button)
-        dgvDictionary.Focus()
-        dgvDictionary.BeginEdit(False)
-
-        InsertText(CurrentTextbox, Button.Text)
-    End Sub
-
     Private Sub frmDictionary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadDictionary()
         Loaded = True
@@ -236,10 +213,6 @@ Public Class frmDictionary
         Else
             MessageBox.Show("""" + txtFind.Text + """ was not found " + "")
         End If
-    End Sub
-
-    Private Sub dgvDictionary_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellContentClick
-
     End Sub
 
     Private Sub CharacterEditorToolStripButton_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripButton.Click
