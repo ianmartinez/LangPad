@@ -21,6 +21,7 @@ Voiced velar affricate=ɡ͡ɣ
 Voiceless uvular affricate=q͡χ
 Voiced epiglottal affricate=ʡ͡ʢ
 Voiceless glottal affricate=ʔ͡h
+Voiceless uvular fricative trill=x͡ʀ̥
 Voiceless alveolar lateral affricate=t͡ɬ
 Voiced alveolar lateral affricate=d͡ɮ
 Voiceless retroflex lateral affricate=ʈ͜ɭ̊˔
