@@ -47,31 +47,34 @@
         UpdateResult()
     End Sub
 
-    Public Shared Sub AddToLocal()
-        'If My.Computer.Keyboard.CtrlKeyDown Then
-        '    Dim LineList1 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-        '    If LineList1.Contains(Text) Then Exit Sub
+    Public Sub AddToLocal(Character As String)
+        Dim OriginalLocalCharacters As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+        If OriginalLocalCharacters.Contains(Character) Then Exit Sub
 
-        '    My.Settings.CustomSymbols = My.Settings.CustomSymbols & Environment.NewLine & Text
+        My.Settings.CustomSymbols = My.Settings.CustomSymbols & Environment.NewLine & Character
 
-        '    frmMain.CustomLayoutPanel.Controls.Clear()
-        '    frmDictionary.CustomLayoutPanel.Controls.Clear()
+        LocalCharPanel.Controls.Clear()
 
-        '    Dim LineList2 As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-        '    For Each IPA As String In LineList2
-        '        Dim SymbolButton As New SymbolButton With {
-        '            .Text = IPA
-        '        }
-        '        AddHandler SymbolButton.Click, AddressOf frmMain.InsertIPA
-        '        frmMain.CustomLayoutPanel.Controls.Add(SymbolButton)
+        Dim LocalCharacters As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+        For Each LocalCharacter As String In LocalCharacters
+            InsertCharacterButton(LocalCharacter, LocalCharPanel)
+        Next
+    End Sub
 
-        '        Dim SymbolButtonDictionary As New SymbolButton With {
-        '            .Text = IPA
-        '        }
-        '        AddHandler SymbolButtonDictionary.Click, AddressOf frmDictionary.InsertIPA
-        '        frmDictionary.CustomLayoutPanel.Controls.Add(SymbolButtonDictionary)
-        '    Next
-        'End If
+    Public Sub AddToFile(Character As String)
+        Dim OriginalFileChars As String() = CurrentDocument.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+        If OriginalFileChars.Contains(Character) Then Exit Sub
+
+        CurrentDocument.CustomSymbols = CurrentDocument.CustomSymbols & Environment.NewLine & Character
+
+        FilePanel.Controls.Clear()
+
+        Dim FileChars As String() = CurrentDocument.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+        For Each FileChar As String In FileChars
+            InsertCharacterButton(FileChar, FilePanel)
+        Next
+
+        CurrentDocument.Modified = True
     End Sub
 
     Public Sub InsertCharacterButton(ByVal Text As String, ByVal Panel As FlowLayoutPanel, Optional ByVal CharName As String = "", Optional MultiLine As Boolean = True)
@@ -200,5 +203,13 @@
         AccentsString = ""
         txtCharacter.Text = ""
         UpdateResult()
+    End Sub
+
+    Private Sub BtnAddToFile_Click(sender As Object, e As EventArgs) Handles btnAddToFile.Click
+        AddToFile(btnCharacter.Text)
+    End Sub
+
+    Private Sub BtnAddToLocal_Click(sender As Object, e As EventArgs) Handles btnAddToLocal.Click
+        AddToLocal(btnCharacter.Text)
     End Sub
 End Class

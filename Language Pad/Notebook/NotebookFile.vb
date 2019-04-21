@@ -11,16 +11,16 @@ End Class
 <Serializable()>
 Public Class NotebookFile
     Public Modified As Boolean = False
-    Public DocumentPath As String
+    Public DocumentPath As String = ""
     Public ProgramVersion As String = ProgramVersion
     Public NTSpecificationVersion As Decimal = NTVersion
 
-    Public Title As String
-    Public Language As String
-    Public Author As String
-    Public Website As String
-    Public CustomSymbols As String
-    Public Info As String
+    Public Title As String = ""
+    Public Language As String = ""
+    Public Author As String = ""
+    Public Website As String = ""
+    Public CustomSymbols As String = ""
+    Public Info As String = ""
 
     Public Pages As New List(Of NotebookPage)
     Public WordDictionary As New DictionaryFile

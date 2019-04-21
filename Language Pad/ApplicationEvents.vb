@@ -92,8 +92,8 @@ Namespace My
             ssLoading.Refresh()
 
             ssLoading.lblLoading.Text = "Loading Local Custom Characters..."
-            Dim LineList As String() = Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-            For Each LocalCharacter As String In LineList
+            Dim LocalCharacters As String() = Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+            For Each LocalCharacter As String In LocalCharacters
                 CharTool.charEdit.InsertCharacterButton(LocalCharacter, CharTool.charEdit.LocalCharPanel)
             Next
 
