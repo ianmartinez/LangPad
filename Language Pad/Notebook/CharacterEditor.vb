@@ -98,11 +98,23 @@
     End Sub
 
     Public Sub CharacterButtonClick(sender As Object, e As EventArgs) Handles btnCharacter.Click
-        Dim CurrentTextBox = GetCurrentTexbox()
+        Dim Button As Button = CType(sender, Button)
 
-        If CurrentTextBox IsNot Nothing Then
-            Dim Button As Button = CType(sender, Button)
-            InsertText(CurrentTextBox, Button.Text.Replace("◌", ""))
+        If My.Computer.Keyboard.AltKeyDown Then
+            AddToFile(Button.Text)
+        ElseIf My.Computer.Keyboard.CtrlKeyDown Then
+            AddToLocal(Button.Text)
+        Else
+            Dim CurrentTextBox = GetCurrentTexbox()
+            Dim ButtonText = Button.Text.Replace("◌", "")
+
+            If CurrentTextBox IsNot Nothing Then
+                If My.Computer.Keyboard.ShiftKeyDown Then
+                    ButtonText = ButtonText.ToUpper()
+                End If
+
+                InsertText(CurrentTextBox, ButtonText)
+            End If
         End If
     End Sub
 
@@ -211,5 +223,13 @@
 
     Private Sub BtnAddToLocal_Click(sender As Object, e As EventArgs) Handles btnAddToLocal.Click
         AddToLocal(btnCharacter.Text)
+    End Sub
+
+    Private Sub CopyToFileMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToFileMenuItem.Click
+        AddToFile(GetButtonTextFromMenu(sender))
+    End Sub
+
+    Private Sub CopyToLocalMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToLocalMenuItem.Click
+        AddToLocal(GetButtonTextFromMenu(sender))
     End Sub
 End Class

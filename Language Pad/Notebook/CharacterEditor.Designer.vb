@@ -616,7 +616,7 @@ Partial Class CharacterEditor
         '
         Me.menuCharButton.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToEditorCharacterMenuItem, Me.ReplaceEditorCharacterMenuItem, Me.ToolStripSeparator1, Me.CopyToClipboardMenuItem, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem})
         Me.menuCharButton.Name = "menuCharButton"
-        Me.menuCharButton.Size = New System.Drawing.Size(204, 120)
+        Me.menuCharButton.Size = New System.Drawing.Size(204, 142)
         '
         'AddToEditorCharacterMenuItem
         '
