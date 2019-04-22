@@ -130,7 +130,7 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
   </data>
   <data name="txtChangelog.Text" xml:space="preserve">
-    <value>Version 9.4 (April 30, 2019)
+    <value>Version 9.4 (April 24, 2019)
    • Redesign symbols panel
    • Copy custom characters to clipboard
    • Add buttons to change case of characters in editor
@@ -146,9 +146,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
    • Expanded IPA to include many more characters and diacritics
    • Add extended Cyrillic &amp; Greek
    • Add tab dedicated to suprasegmentals (a -&gt; aː)
+   • Add placeholder character to diacritic buttons for easier readability
    • Default font for the editor is now Calibri, which displays Unicode better
    • Fix bug in Export to HTML process when encountering empty cells in the dictionary window
-   • Fixed bug where dictionary wouldn't load if you opened a new notebook file when the dictionary was open
+   • Fixed bug where dictionary wouldn't reload if you opened a new notebook file when the dictionary window was open
    • Character search
    
 Version 9.3 (April 13, 2019)

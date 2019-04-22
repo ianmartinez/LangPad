@@ -47,7 +47,7 @@ Partial Class dlgAbout
         Me.TabControl1.Location = New System.Drawing.Point(6, 94)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(647, 377)
+        Me.TabControl1.Size = New System.Drawing.Size(733, 429)
         Me.TabControl1.TabIndex = 9
         '
         'TabPage1
@@ -56,7 +56,7 @@ Partial Class dlgAbout
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(6)
-        Me.TabPage1.Size = New System.Drawing.Size(639, 351)
+        Me.TabPage1.Size = New System.Drawing.Size(725, 403)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "License"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -73,7 +73,7 @@ Partial Class dlgAbout
         Me.txtLicense.Name = "txtLicense"
         Me.txtLicense.ReadOnly = True
         Me.txtLicense.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtLicense.Size = New System.Drawing.Size(627, 339)
+        Me.txtLicense.Size = New System.Drawing.Size(713, 391)
         Me.txtLicense.TabIndex = 7
         Me.txtLicense.Text = resources.GetString("txtLicense.Text")
         '
@@ -83,7 +83,7 @@ Partial Class dlgAbout
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(6)
-        Me.TabPage2.Size = New System.Drawing.Size(639, 351)
+        Me.TabPage2.Size = New System.Drawing.Size(725, 403)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Changelog"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -100,7 +100,7 @@ Partial Class dlgAbout
         Me.txtChangelog.Name = "txtChangelog"
         Me.txtChangelog.ReadOnly = True
         Me.txtChangelog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtChangelog.Size = New System.Drawing.Size(627, 339)
+        Me.txtChangelog.Size = New System.Drawing.Size(713, 391)
         Me.txtChangelog.TabIndex = 8
         Me.txtChangelog.Text = resources.GetString("txtChangelog.Text")
         '
@@ -116,7 +116,7 @@ Partial Class dlgAbout
         Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(6, 6)
         Me.DoubleBufferedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel1.Name = "DoubleBufferedPanel1"
-        Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(647, 88)
+        Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(733, 88)
         Me.DoubleBufferedPanel1.TabIndex = 76
         '
         'lblVersion
@@ -150,7 +150,7 @@ Partial Class dlgAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(659, 477)
+        Me.ClientSize = New System.Drawing.Size(745, 529)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.DoubleBufferedPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog

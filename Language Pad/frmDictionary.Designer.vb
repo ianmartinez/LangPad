@@ -374,8 +374,8 @@ Partial Class frmDictionary
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(888, 552)
         Me.Controls.Add(Me.ToolStripContainer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDictionary"
-        Me.ShowIcon = False
         Me.Text = "Dictionary"
         CType(Me.dgvDictionary, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStripContainer1.ContentPanel.ResumeLayout(False)
