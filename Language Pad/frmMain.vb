@@ -608,6 +608,7 @@ Public Class frmMain
 
             CurrentDocument = OpenFile
             UpdateTabs()
+            frmDictionary.LoadDictionary()
             currentFile = dlgOpen.FileName
             SelectedDocument.Modified = False
         End If

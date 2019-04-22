@@ -42,7 +42,7 @@ Public Class frmDictionary
 
     Public Sub LoadDictionary()
         dgvDictionary.Rows.Clear()
-
+        Dim words = CurrentDocument.WordDictionary.Words
         For Each w As DictionaryWord In CurrentDocument.WordDictionary.Words
             Dim r As New DataGridViewRow
             r.CreateCells(dgvDictionary)

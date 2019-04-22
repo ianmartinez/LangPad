@@ -1,3 +1,2 @@
 For 9.4:
-   • Fixed bug where dictionary wouldn't load if you opened a new notebook file when the dictionary was open
    • Update help file

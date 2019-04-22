@@ -33,6 +33,13 @@ Partial Class frmDictionary
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.dlgFont = New System.Windows.Forms.FontDialog()
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.pnlFindReplace = New TundraLib.DoubleBufferedPanel()
+        Me.cbStartsWith = New System.Windows.Forms.CheckBox()
+        Me.rbDefinition = New System.Windows.Forms.RadioButton()
+        Me.rbWord = New System.Windows.Forms.RadioButton()
+        Me.txtFind = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.btnFind = New System.Windows.Forms.Button()
         Me.MainToolStrip = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -48,19 +55,12 @@ Partial Class frmDictionary
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.FindToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.dlgSaveHtml = New System.Windows.Forms.SaveFileDialog()
-        Me.pnlFindReplace = New TundraLib.DoubleBufferedPanel()
-        Me.cbStartsWith = New System.Windows.Forms.CheckBox()
-        Me.rbDefinition = New System.Windows.Forms.RadioButton()
-        Me.rbWord = New System.Windows.Forms.RadioButton()
-        Me.txtFind = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.btnFind = New System.Windows.Forms.Button()
         CType(Me.dgvDictionary, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout
         Me.ToolStripContainer1.SuspendLayout
-        Me.MainToolStrip.SuspendLayout
         Me.pnlFindReplace.SuspendLayout
+        Me.MainToolStrip.SuspendLayout
         Me.SuspendLayout
         '
         'dgvDictionary
@@ -158,6 +158,90 @@ Partial Class frmDictionary
         'ToolStripContainer1.TopToolStripPanel
         '
         Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.MainToolStrip)
+        '
+        'pnlFindReplace
+        '
+        Me.pnlFindReplace.BackColor = System.Drawing.Color.Transparent
+        Me.pnlFindReplace.Controls.Add(Me.cbStartsWith)
+        Me.pnlFindReplace.Controls.Add(Me.rbDefinition)
+        Me.pnlFindReplace.Controls.Add(Me.rbWord)
+        Me.pnlFindReplace.Controls.Add(Me.txtFind)
+        Me.pnlFindReplace.Controls.Add(Me.Label17)
+        Me.pnlFindReplace.Controls.Add(Me.btnFind)
+        Me.pnlFindReplace.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlFindReplace.Location = New System.Drawing.Point(0, 0)
+        Me.pnlFindReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlFindReplace.Name = "pnlFindReplace"
+        Me.pnlFindReplace.Size = New System.Drawing.Size(888, 35)
+        Me.pnlFindReplace.TabIndex = 75
+        Me.pnlFindReplace.Visible = False
+        '
+        'cbStartsWith
+        '
+        Me.cbStartsWith.AutoSize = True
+        Me.cbStartsWith.Location = New System.Drawing.Point(312, 10)
+        Me.cbStartsWith.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbStartsWith.Name = "cbStartsWith"
+        Me.cbStartsWith.Size = New System.Drawing.Size(78, 17)
+        Me.cbStartsWith.TabIndex = 69
+        Me.cbStartsWith.Text = "Starts With"
+        Me.cbStartsWith.UseVisualStyleBackColor = True
+        '
+        'rbDefinition
+        '
+        Me.rbDefinition.AutoSize = True
+        Me.rbDefinition.Checked = True
+        Me.rbDefinition.Location = New System.Drawing.Point(449, 9)
+        Me.rbDefinition.Margin = New System.Windows.Forms.Padding(2)
+        Me.rbDefinition.Name = "rbDefinition"
+        Me.rbDefinition.Size = New System.Drawing.Size(69, 17)
+        Me.rbDefinition.TabIndex = 71
+        Me.rbDefinition.TabStop = True
+        Me.rbDefinition.Text = "Definition"
+        Me.rbDefinition.UseVisualStyleBackColor = True
+        '
+        'rbWord
+        '
+        Me.rbWord.AutoSize = True
+        Me.rbWord.Location = New System.Drawing.Point(394, 9)
+        Me.rbWord.Margin = New System.Windows.Forms.Padding(2)
+        Me.rbWord.Name = "rbWord"
+        Me.rbWord.Size = New System.Drawing.Size(51, 17)
+        Me.rbWord.TabIndex = 70
+        Me.rbWord.Text = "Word"
+        Me.rbWord.UseVisualStyleBackColor = True
+        '
+        'txtFind
+        '
+        Me.txtFind.Location = New System.Drawing.Point(40, 9)
+        Me.txtFind.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtFind.Name = "txtFind"
+        Me.txtFind.Size = New System.Drawing.Size(268, 20)
+        Me.txtFind.TabIndex = 66
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(6, 11)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(2)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(30, 13)
+        Me.Label17.TabIndex = 83
+        Me.Label17.Text = "Find:"
+        '
+        'btnFind
+        '
+        Me.btnFind.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnFind.FlatAppearance.BorderSize = 0
+        Me.btnFind.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnFind.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnFind.Location = New System.Drawing.Point(522, 5)
+        Me.btnFind.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnFind.Name = "btnFind"
+        Me.btnFind.Size = New System.Drawing.Size(78, 24)
+        Me.btnFind.TabIndex = 67
+        Me.btnFind.Text = "Find"
         '
         'MainToolStrip
         '
@@ -284,90 +368,6 @@ Partial Class frmDictionary
         '
         Me.dlgSaveHtml.Filter = "HTML Page (*.html)|*.html|Text files (*.txt)|*.txt|All files (*.*)|*.*"
         '
-        'pnlFindReplace
-        '
-        Me.pnlFindReplace.BackColor = System.Drawing.Color.Transparent
-        Me.pnlFindReplace.Controls.Add(Me.cbStartsWith)
-        Me.pnlFindReplace.Controls.Add(Me.rbDefinition)
-        Me.pnlFindReplace.Controls.Add(Me.rbWord)
-        Me.pnlFindReplace.Controls.Add(Me.txtFind)
-        Me.pnlFindReplace.Controls.Add(Me.Label17)
-        Me.pnlFindReplace.Controls.Add(Me.btnFind)
-        Me.pnlFindReplace.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlFindReplace.Location = New System.Drawing.Point(0, 0)
-        Me.pnlFindReplace.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlFindReplace.Name = "pnlFindReplace"
-        Me.pnlFindReplace.Size = New System.Drawing.Size(888, 35)
-        Me.pnlFindReplace.TabIndex = 75
-        Me.pnlFindReplace.Visible = False
-        '
-        'cbStartsWith
-        '
-        Me.cbStartsWith.AutoSize = True
-        Me.cbStartsWith.Location = New System.Drawing.Point(312, 10)
-        Me.cbStartsWith.Margin = New System.Windows.Forms.Padding(2)
-        Me.cbStartsWith.Name = "cbStartsWith"
-        Me.cbStartsWith.Size = New System.Drawing.Size(78, 17)
-        Me.cbStartsWith.TabIndex = 69
-        Me.cbStartsWith.Text = "Starts With"
-        Me.cbStartsWith.UseVisualStyleBackColor = True
-        '
-        'rbDefinition
-        '
-        Me.rbDefinition.AutoSize = True
-        Me.rbDefinition.Checked = True
-        Me.rbDefinition.Location = New System.Drawing.Point(449, 9)
-        Me.rbDefinition.Margin = New System.Windows.Forms.Padding(2)
-        Me.rbDefinition.Name = "rbDefinition"
-        Me.rbDefinition.Size = New System.Drawing.Size(69, 17)
-        Me.rbDefinition.TabIndex = 71
-        Me.rbDefinition.TabStop = True
-        Me.rbDefinition.Text = "Definition"
-        Me.rbDefinition.UseVisualStyleBackColor = True
-        '
-        'rbWord
-        '
-        Me.rbWord.AutoSize = True
-        Me.rbWord.Location = New System.Drawing.Point(394, 9)
-        Me.rbWord.Margin = New System.Windows.Forms.Padding(2)
-        Me.rbWord.Name = "rbWord"
-        Me.rbWord.Size = New System.Drawing.Size(51, 17)
-        Me.rbWord.TabIndex = 70
-        Me.rbWord.Text = "Word"
-        Me.rbWord.UseVisualStyleBackColor = True
-        '
-        'txtFind
-        '
-        Me.txtFind.Location = New System.Drawing.Point(40, 9)
-        Me.txtFind.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtFind.Name = "txtFind"
-        Me.txtFind.Size = New System.Drawing.Size(268, 20)
-        Me.txtFind.TabIndex = 66
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(6, 11)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(2)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(30, 13)
-        Me.Label17.TabIndex = 83
-        Me.Label17.Text = "Find:"
-        '
-        'btnFind
-        '
-        Me.btnFind.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnFind.FlatAppearance.BorderSize = 0
-        Me.btnFind.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnFind.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnFind.Location = New System.Drawing.Point(522, 5)
-        Me.btnFind.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnFind.Name = "btnFind"
-        Me.btnFind.Size = New System.Drawing.Size(78, 24)
-        Me.btnFind.TabIndex = 67
-        Me.btnFind.Text = "Find"
-        '
         'frmDictionary
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -383,10 +383,10 @@ Partial Class frmDictionary
         Me.ToolStripContainer1.TopToolStripPanel.PerformLayout
         Me.ToolStripContainer1.ResumeLayout(False)
         Me.ToolStripContainer1.PerformLayout
-        Me.MainToolStrip.ResumeLayout(False)
-        Me.MainToolStrip.PerformLayout
         Me.pnlFindReplace.ResumeLayout(False)
         Me.pnlFindReplace.PerformLayout
+        Me.MainToolStrip.ResumeLayout(False)
+        Me.MainToolStrip.PerformLayout
         Me.ResumeLayout(False)
 
     End Sub
