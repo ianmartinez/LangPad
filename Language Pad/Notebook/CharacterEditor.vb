@@ -52,7 +52,10 @@
         If OriginalLocalCharacters.Contains(Character) Then Exit Sub
 
         My.Settings.CustomSymbols = My.Settings.CustomSymbols & Environment.NewLine & Character
+        RefreshLocal()
+    End Sub
 
+    Public Sub RefreshLocal()
         LocalCharPanel.Controls.Clear()
 
         Dim LocalCharacters As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
@@ -66,17 +69,18 @@
         If OriginalFileChars.Contains(Character) Then Exit Sub
 
         CurrentDocument.CustomSymbols = CurrentDocument.CustomSymbols & Environment.NewLine & Character
+        RefreshFile()
+        CurrentDocument.Modified = True
+    End Sub
 
+    Public Sub RefreshFile()
         FilePanel.Controls.Clear()
 
         Dim FileChars As String() = CurrentDocument.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
         For Each FileChar As String In FileChars
             InsertCharacterButton(FileChar, FilePanel)
         Next
-
-        CurrentDocument.Modified = True
     End Sub
-
     Public Sub InsertCharacterButton(ByVal Text As String, ByVal Panel As FlowLayoutPanel, Optional ByVal CharName As String = "", Optional MultiLine As Boolean = True)
         Dim CharacterButton As New CharacterButton(CharName, MultiLine)
         CharacterButton.Text = Text
@@ -101,7 +105,7 @@
         Dim Button As Button = CType(sender, Button)
 
         If My.Computer.Keyboard.AltKeyDown Then
-            AddToFile(Button.Text)
+            txtCharacter.Text += Button.Text.Replace("◌", "")
         ElseIf My.Computer.Keyboard.CtrlKeyDown Then
             AddToLocal(Button.Text)
         Else
@@ -234,6 +238,37 @@
     End Sub
 
     Private Sub RemoveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveToolStripMenuItem.Click
+        Dim currentItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
+        Dim cms As ContextMenuStrip = CType(currentItem.Owner, ContextMenuStrip)
+        Dim button = CType(cms.SourceControl, CharacterButton)
 
+        If button.Parent Is FilePanel Then
+            Dim FileChars As List(Of String) = CurrentDocument.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries).ToList()
+            If FileChars.Contains(button.Text) Then
+                FileChars.Remove(button.Text)
+                CurrentDocument.CustomSymbols = String.Join(Environment.NewLine, FileChars.ToArray())
+                RefreshFile()
+            End If
+        ElseIf button.Parent Is LocalCharPanel Then
+            Dim LocalChars As List(Of String) = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries).ToList()
+            If LocalChars.Contains(button.Text) Then
+                LocalChars.Remove(button.Text)
+                My.Settings.CustomSymbols = String.Join(Environment.NewLine, LocalChars.ToArray())
+                RefreshLocal()
+            End If
+        End If
+    End Sub
+
+    Private Sub MenuCharButton_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles menuCharButton.Opening
+        Dim cms As ContextMenuStrip = CType(sender, ContextMenuStrip)
+        Dim button = CType(cms.SourceControl, CharacterButton)
+
+        RemoveCharSplitter.Visible = False
+        RemoveToolStripMenuItem.Visible = False
+
+        If button.Parent Is FilePanel Or button.Parent Is LocalCharPanel Then
+            RemoveCharSplitter.Visible = True
+            RemoveToolStripMenuItem.Visible = True
+        End If
     End Sub
 End Class

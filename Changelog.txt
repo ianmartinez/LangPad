@@ -14,6 +14,7 @@
    • Expanded IPA to include many more characters and diacritics
    • Add extended Cyrillic & Greek
    • Add tab dedicated to suprasegmentals (a -> aː)
+   • Add placeholder character to diacritic buttons for easier readability
    • Default font for the editor is now Calibri, which displays Unicode better
    • Fix bug in Export to HTML process when encountering empty cells in the dictionary window
    • Fixed bug where dictionary wouldn't load if you opened a new notebook file when the dictionary was open

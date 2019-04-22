@@ -66,7 +66,6 @@ Partial Class CharacterEditor
         Me.txtCharacter = New System.Windows.Forms.TextBox()
         Me.cbSmartReplace = New System.Windows.Forms.CheckBox()
         Me.btnAddToFile = New System.Windows.Forms.Button()
-        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.btnCopyToClipboard = New System.Windows.Forms.Button()
         Me.menuCharButton = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AddToEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -75,10 +74,11 @@ Partial Class CharacterEditor
         Me.CopyToClipboardMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToFileMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToLocalMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RemoveCharSplitter = New System.Windows.Forms.ToolStripSeparator()
+        Me.RemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.RemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.tcCharacters.SuspendLayout()
         Me.tpFile.SuspendLayout()
         Me.tpLocal.SuspendLayout()
@@ -605,16 +605,6 @@ Partial Class CharacterEditor
         Me.btnAddToFile.TabIndex = 76
         Me.btnAddToFile.Text = "File"
         '
-        'pnlSmartReplace
-        '
-        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
-        Me.pnlSmartReplace.Location = New System.Drawing.Point(92, 4)
-        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlSmartReplace.Name = "pnlSmartReplace"
-        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
-        Me.pnlSmartReplace.TabIndex = 87
-        '
         'btnCopyToClipboard
         '
         Me.btnCopyToClipboard.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -626,7 +616,7 @@ Partial Class CharacterEditor
         '
         'menuCharButton
         '
-        Me.menuCharButton.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToEditorCharacterMenuItem, Me.ReplaceEditorCharacterMenuItem, Me.ToolStripSeparator1, Me.CopyToClipboardMenuItem, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem, Me.ToolStripMenuItem1, Me.RemoveToolStripMenuItem})
+        Me.menuCharButton.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToEditorCharacterMenuItem, Me.ReplaceEditorCharacterMenuItem, Me.ToolStripSeparator1, Me.CopyToClipboardMenuItem, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem, Me.RemoveCharSplitter, Me.RemoveToolStripMenuItem})
         Me.menuCharButton.Name = "menuCharButton"
         Me.menuCharButton.Size = New System.Drawing.Size(204, 170)
         '
@@ -666,6 +656,17 @@ Partial Class CharacterEditor
         Me.CopyToLocalMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.CopyToLocalMenuItem.Text = "Copy to Local"
         '
+        'RemoveCharSplitter
+        '
+        Me.RemoveCharSplitter.Name = "RemoveCharSplitter"
+        Me.RemoveCharSplitter.Size = New System.Drawing.Size(200, 6)
+        '
+        'RemoveToolStripMenuItem
+        '
+        Me.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem"
+        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
+        Me.RemoveToolStripMenuItem.Text = "Remove"
+        '
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -685,16 +686,15 @@ Partial Class CharacterEditor
         Me.SplitContainer1.SplitterDistance = 398
         Me.SplitContainer1.TabIndex = 76
         '
-        'ToolStripMenuItem1
+        'pnlSmartReplace
         '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(200, 6)
-        '
-        'RemoveToolStripMenuItem
-        '
-        Me.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem"
-        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
-        Me.RemoveToolStripMenuItem.Text = "Remove"
+        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
+        Me.pnlSmartReplace.Location = New System.Drawing.Point(92, 4)
+        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlSmartReplace.Name = "pnlSmartReplace"
+        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
+        Me.pnlSmartReplace.TabIndex = 87
         '
         'CharacterEditor
         '
@@ -793,6 +793,6 @@ Partial Class CharacterEditor
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents SuprasegmentalsLayoutPanel As FlowLayoutPanel
     Friend WithEvents btnClearAll As Button
-    Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
+    Friend WithEvents RemoveCharSplitter As ToolStripSeparator
     Friend WithEvents RemoveToolStripMenuItem As ToolStripMenuItem
 End Class
