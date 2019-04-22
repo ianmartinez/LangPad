@@ -23,11 +23,24 @@ Partial Class CharacterEditor
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CharacterEditor))
         Me.tcCharacters = New System.Windows.Forms.TabControl()
-        Me.tpFile = New System.Windows.Forms.TabPage()
-        Me.FilePanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.tpLocal = New System.Windows.Forms.TabPage()
+        Me.LocalToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.LocalCharPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.LocalToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.ImportLocalToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.SaveLocalToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ClearLocalToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.tpFile = New System.Windows.Forms.TabPage()
+        Me.FileToolStripContainer = New System.Windows.Forms.ToolStripContainer()
+        Me.FilePanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.FileToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.ImportFileToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ExportFileToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ClearFileToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.tpExtended = New System.Windows.Forms.TabPage()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpLatin = New System.Windows.Forms.TabPage()
@@ -66,6 +79,7 @@ Partial Class CharacterEditor
         Me.txtCharacter = New System.Windows.Forms.TextBox()
         Me.cbSmartReplace = New System.Windows.Forms.CheckBox()
         Me.btnAddToFile = New System.Windows.Forms.Button()
+        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.btnCopyToClipboard = New System.Windows.Forms.Button()
         Me.menuCharButton = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AddToEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -78,10 +92,17 @@ Partial Class CharacterEditor
         Me.RemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.tcCharacters.SuspendLayout()
-        Me.tpFile.SuspendLayout()
         Me.tpLocal.SuspendLayout()
+        Me.LocalToolStripContainer.ContentPanel.SuspendLayout()
+        Me.LocalToolStripContainer.TopToolStripPanel.SuspendLayout()
+        Me.LocalToolStripContainer.SuspendLayout()
+        Me.LocalToolStrip.SuspendLayout()
+        Me.tpFile.SuspendLayout()
+        Me.FileToolStripContainer.ContentPanel.SuspendLayout()
+        Me.FileToolStripContainer.TopToolStripPanel.SuspendLayout()
+        Me.FileToolStripContainer.SuspendLayout()
+        Me.FileToolStrip.SuspendLayout()
         Me.tpExtended.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.tpLatin.SuspendLayout()
@@ -122,32 +143,9 @@ Partial Class CharacterEditor
         Me.tcCharacters.Size = New System.Drawing.Size(300, 288)
         Me.tcCharacters.TabIndex = 74
         '
-        'tpFile
-        '
-        Me.tpFile.Controls.Add(Me.FilePanel)
-        Me.tpFile.Location = New System.Drawing.Point(4, 22)
-        Me.tpFile.Name = "tpFile"
-        Me.tpFile.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpFile.Size = New System.Drawing.Size(292, 262)
-        Me.tpFile.TabIndex = 0
-        Me.tpFile.Text = "File"
-        Me.tpFile.UseVisualStyleBackColor = True
-        '
-        'FilePanel
-        '
-        Me.FilePanel.AutoScroll = True
-        Me.FilePanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.FilePanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FilePanel.Location = New System.Drawing.Point(3, 3)
-        Me.FilePanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.FilePanel.Name = "FilePanel"
-        Me.FilePanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.FilePanel.Size = New System.Drawing.Size(286, 256)
-        Me.FilePanel.TabIndex = 10
-        '
         'tpLocal
         '
-        Me.tpLocal.Controls.Add(Me.LocalCharPanel)
+        Me.tpLocal.Controls.Add(Me.LocalToolStripContainer)
         Me.tpLocal.Location = New System.Drawing.Point(4, 22)
         Me.tpLocal.Name = "tpLocal"
         Me.tpLocal.Padding = New System.Windows.Forms.Padding(3)
@@ -156,17 +154,172 @@ Partial Class CharacterEditor
         Me.tpLocal.Text = "Local"
         Me.tpLocal.UseVisualStyleBackColor = True
         '
+        'LocalToolStripContainer
+        '
+        '
+        'LocalToolStripContainer.ContentPanel
+        '
+        Me.LocalToolStripContainer.ContentPanel.Controls.Add(Me.LocalCharPanel)
+        Me.LocalToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.LocalToolStripContainer.ContentPanel.Size = New System.Drawing.Size(286, 227)
+        Me.LocalToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LocalToolStripContainer.Location = New System.Drawing.Point(3, 3)
+        Me.LocalToolStripContainer.Margin = New System.Windows.Forms.Padding(2)
+        Me.LocalToolStripContainer.Name = "LocalToolStripContainer"
+        Me.LocalToolStripContainer.Size = New System.Drawing.Size(286, 256)
+        Me.LocalToolStripContainer.TabIndex = 83
+        '
+        'LocalToolStripContainer.TopToolStripPanel
+        '
+        Me.LocalToolStripContainer.TopToolStripPanel.Controls.Add(Me.LocalToolStrip)
+        '
         'LocalCharPanel
         '
         Me.LocalCharPanel.AutoScroll = True
         Me.LocalCharPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
         Me.LocalCharPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LocalCharPanel.Location = New System.Drawing.Point(3, 3)
+        Me.LocalCharPanel.Location = New System.Drawing.Point(0, 0)
         Me.LocalCharPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.LocalCharPanel.Name = "LocalCharPanel"
         Me.LocalCharPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.LocalCharPanel.Size = New System.Drawing.Size(286, 256)
+        Me.LocalCharPanel.Size = New System.Drawing.Size(286, 227)
         Me.LocalCharPanel.TabIndex = 10
+        '
+        'LocalToolStrip
+        '
+        Me.LocalToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.LocalToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.LocalToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.LocalToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportLocalToolStripButton, Me.SaveLocalToolStripButton, Me.ToolStripSeparator2, Me.ClearLocalToolStripButton})
+        Me.LocalToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.LocalToolStrip.Name = "LocalToolStrip"
+        Me.LocalToolStrip.Size = New System.Drawing.Size(286, 29)
+        Me.LocalToolStrip.Stretch = True
+        Me.LocalToolStrip.TabIndex = 0
+        '
+        'ImportLocalToolStripButton
+        '
+        Me.ImportLocalToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ImportLocalToolStripButton.Image = CType(resources.GetObject("ImportLocalToolStripButton.Image"), System.Drawing.Image)
+        Me.ImportLocalToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ImportLocalToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ImportLocalToolStripButton.Name = "ImportLocalToolStripButton"
+        Me.ImportLocalToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.ImportLocalToolStripButton.Text = "Import..."
+        '
+        'SaveLocalToolStripButton
+        '
+        Me.SaveLocalToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SaveLocalToolStripButton.Image = CType(resources.GetObject("SaveLocalToolStripButton.Image"), System.Drawing.Image)
+        Me.SaveLocalToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.SaveLocalToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveLocalToolStripButton.Name = "SaveLocalToolStripButton"
+        Me.SaveLocalToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.SaveLocalToolStripButton.Text = "Export..."
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 29)
+        '
+        'ClearLocalToolStripButton
+        '
+        Me.ClearLocalToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ClearLocalToolStripButton.Image = CType(resources.GetObject("ClearLocalToolStripButton.Image"), System.Drawing.Image)
+        Me.ClearLocalToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ClearLocalToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ClearLocalToolStripButton.Name = "ClearLocalToolStripButton"
+        Me.ClearLocalToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.ClearLocalToolStripButton.Text = "Clear"
+        '
+        'tpFile
+        '
+        Me.tpFile.Controls.Add(Me.FileToolStripContainer)
+        Me.tpFile.Location = New System.Drawing.Point(4, 22)
+        Me.tpFile.Name = "tpFile"
+        Me.tpFile.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpFile.Size = New System.Drawing.Size(292, 262)
+        Me.tpFile.TabIndex = 0
+        Me.tpFile.Text = "File"
+        Me.tpFile.UseVisualStyleBackColor = True
+        '
+        'FileToolStripContainer
+        '
+        '
+        'FileToolStripContainer.ContentPanel
+        '
+        Me.FileToolStripContainer.ContentPanel.Controls.Add(Me.FilePanel)
+        Me.FileToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.FileToolStripContainer.ContentPanel.Size = New System.Drawing.Size(286, 227)
+        Me.FileToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FileToolStripContainer.Location = New System.Drawing.Point(3, 3)
+        Me.FileToolStripContainer.Margin = New System.Windows.Forms.Padding(2)
+        Me.FileToolStripContainer.Name = "FileToolStripContainer"
+        Me.FileToolStripContainer.Size = New System.Drawing.Size(286, 256)
+        Me.FileToolStripContainer.TabIndex = 82
+        '
+        'FileToolStripContainer.TopToolStripPanel
+        '
+        Me.FileToolStripContainer.TopToolStripPanel.Controls.Add(Me.FileToolStrip)
+        '
+        'FilePanel
+        '
+        Me.FilePanel.AutoScroll = True
+        Me.FilePanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
+        Me.FilePanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FilePanel.Location = New System.Drawing.Point(0, 0)
+        Me.FilePanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.FilePanel.Name = "FilePanel"
+        Me.FilePanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
+        Me.FilePanel.Size = New System.Drawing.Size(286, 227)
+        Me.FilePanel.TabIndex = 10
+        '
+        'FileToolStrip
+        '
+        Me.FileToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.FileToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.FileToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.FileToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportFileToolStripButton, Me.ExportFileToolStripButton, Me.ToolStripSeparator5, Me.ClearFileToolStripButton})
+        Me.FileToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.FileToolStrip.Name = "FileToolStrip"
+        Me.FileToolStrip.Size = New System.Drawing.Size(286, 29)
+        Me.FileToolStrip.Stretch = True
+        Me.FileToolStrip.TabIndex = 0
+        '
+        'ImportFileToolStripButton
+        '
+        Me.ImportFileToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ImportFileToolStripButton.Image = CType(resources.GetObject("ImportFileToolStripButton.Image"), System.Drawing.Image)
+        Me.ImportFileToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ImportFileToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ImportFileToolStripButton.Name = "ImportFileToolStripButton"
+        Me.ImportFileToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.ImportFileToolStripButton.Text = "Import..."
+        '
+        'ExportFileToolStripButton
+        '
+        Me.ExportFileToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ExportFileToolStripButton.Image = CType(resources.GetObject("ExportFileToolStripButton.Image"), System.Drawing.Image)
+        Me.ExportFileToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ExportFileToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ExportFileToolStripButton.Name = "ExportFileToolStripButton"
+        Me.ExportFileToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.ExportFileToolStripButton.Text = "Export..."
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 29)
+        '
+        'ClearFileToolStripButton
+        '
+        Me.ClearFileToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ClearFileToolStripButton.Image = CType(resources.GetObject("ClearFileToolStripButton.Image"), System.Drawing.Image)
+        Me.ClearFileToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ClearFileToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ClearFileToolStripButton.Name = "ClearFileToolStripButton"
+        Me.ClearFileToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.ClearFileToolStripButton.Text = "Clear"
         '
         'tpExtended
         '
@@ -605,6 +758,16 @@ Partial Class CharacterEditor
         Me.btnAddToFile.TabIndex = 76
         Me.btnAddToFile.Text = "File"
         '
+        'pnlSmartReplace
+        '
+        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
+        Me.pnlSmartReplace.Location = New System.Drawing.Point(92, 4)
+        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlSmartReplace.Name = "pnlSmartReplace"
+        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
+        Me.pnlSmartReplace.TabIndex = 87
+        '
         'btnCopyToClipboard
         '
         Me.btnCopyToClipboard.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -686,16 +849,6 @@ Partial Class CharacterEditor
         Me.SplitContainer1.SplitterDistance = 398
         Me.SplitContainer1.TabIndex = 76
         '
-        'pnlSmartReplace
-        '
-        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
-        Me.pnlSmartReplace.Location = New System.Drawing.Point(92, 4)
-        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlSmartReplace.Name = "pnlSmartReplace"
-        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
-        Me.pnlSmartReplace.TabIndex = 87
-        '
         'CharacterEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -706,8 +859,22 @@ Partial Class CharacterEditor
         Me.Name = "CharacterEditor"
         Me.Size = New System.Drawing.Size(300, 690)
         Me.tcCharacters.ResumeLayout(False)
-        Me.tpFile.ResumeLayout(False)
         Me.tpLocal.ResumeLayout(False)
+        Me.LocalToolStripContainer.ContentPanel.ResumeLayout(False)
+        Me.LocalToolStripContainer.TopToolStripPanel.ResumeLayout(False)
+        Me.LocalToolStripContainer.TopToolStripPanel.PerformLayout()
+        Me.LocalToolStripContainer.ResumeLayout(False)
+        Me.LocalToolStripContainer.PerformLayout()
+        Me.LocalToolStrip.ResumeLayout(False)
+        Me.LocalToolStrip.PerformLayout()
+        Me.tpFile.ResumeLayout(False)
+        Me.FileToolStripContainer.ContentPanel.ResumeLayout(False)
+        Me.FileToolStripContainer.TopToolStripPanel.ResumeLayout(False)
+        Me.FileToolStripContainer.TopToolStripPanel.PerformLayout()
+        Me.FileToolStripContainer.ResumeLayout(False)
+        Me.FileToolStripContainer.PerformLayout()
+        Me.FileToolStrip.ResumeLayout(False)
+        Me.FileToolStrip.PerformLayout()
         Me.tpExtended.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.tpLatin.ResumeLayout(False)
@@ -795,4 +962,16 @@ Partial Class CharacterEditor
     Friend WithEvents btnClearAll As Button
     Friend WithEvents RemoveCharSplitter As ToolStripSeparator
     Friend WithEvents RemoveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FileToolStripContainer As ToolStripContainer
+    Friend WithEvents FileToolStrip As ToolStrip
+    Friend WithEvents ImportFileToolStripButton As ToolStripButton
+    Friend WithEvents ExportFileToolStripButton As ToolStripButton
+    Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
+    Friend WithEvents ClearFileToolStripButton As ToolStripButton
+    Friend WithEvents LocalToolStripContainer As ToolStripContainer
+    Friend WithEvents LocalToolStrip As ToolStrip
+    Friend WithEvents ImportLocalToolStripButton As ToolStripButton
+    Friend WithEvents SaveLocalToolStripButton As ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents ClearLocalToolStripButton As ToolStripButton
 End Class

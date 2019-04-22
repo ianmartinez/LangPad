@@ -1,8 +1,23 @@
-﻿Public Class CharacterEditor
+﻿Imports TundraLib.Themes
+
+Public Class CharacterEditor
     Public GetCurrentTexbox As Func(Of TextBoxBase)
     Public Property Character As String
     Private AccentsList As List(Of String) = New List(Of String)
     Private AccentsString As String = ""
+    Public Color1 As Color
+    Public Color2 As Color
+    Public VerticalMenuGradient As Boolean = False
+
+    Public Sub SetTheme(Theme As Theme)
+        Color1 = Theme.PanelBack
+        Color2 = Theme.PanelBack
+        VerticalMenuGradient = Theme.VerticalMenuGradient
+        FileToolStrip.Renderer = Theme.GetToolStripRenderer()
+        LocalToolStrip.Renderer = Theme.GetToolStripRenderer()
+
+        Refresh()
+    End Sub
 
     Private Sub UpdateResult()
         If txtCharacter.Text = "" Then
@@ -269,6 +284,25 @@
         If button.Parent Is FilePanel Or button.Parent Is LocalCharPanel Then
             RemoveCharSplitter.Visible = True
             RemoveToolStripMenuItem.Visible = True
+        End If
+    End Sub
+
+    Private Function ClearConfirm() As DialogResult
+        Return MessageBox.Show("Are you sure you want to clear all characters? This cannot be undone.", "", MessageBoxButtons.YesNoCancel)
+    End Function
+
+    Private Sub ClearLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ClearLocalToolStripButton.Click
+        If ClearConfirm() = DialogResult.Yes Then
+            My.Settings.CustomSymbols = ""
+            RefreshLocal()
+        End If
+    End Sub
+
+    Private Sub ClearFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ClearFileToolStripButton.Click
+        If ClearConfirm() = DialogResult.Yes Then
+            CurrentDocument.CustomSymbols = ""
+            CurrentDocument.Modified = True
+            RefreshFile()
         End If
     End Sub
 End Class

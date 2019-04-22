@@ -255,6 +255,7 @@ Public Class frmMain
         btnReplaceAll.Top = txtFind.Top - (btnReplaceAll.Height / 2 - txtFind.Height / 2)
 
         pnlDocumentProperties.SetTheme(Theme)
+        CharTool.charEdit.SetTheme(Theme)
         dlgAbout.BackColor = Theme.DialogBack
         dlgAddPage.BackColor = Theme.DialogBack
         dlgCustomZoom.BackColor = Theme.DialogBack

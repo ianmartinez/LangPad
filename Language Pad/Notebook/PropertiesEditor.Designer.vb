@@ -26,6 +26,8 @@ Partial Class PropertiesEditor
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PropertiesEditor))
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.DocumentToolStripContainer = New System.Windows.Forms.ToolStripContainer()
+        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
+        Me.lbPages = New System.Windows.Forms.ListBox()
         Me.DocumentToolStrip = New System.Windows.Forms.ToolStrip()
         Me.PageUpToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PageDownToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -40,8 +42,6 @@ Partial Class PropertiesEditor
         Me.ExportToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DictionaryToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
-        Me.lbPages = New System.Windows.Forms.ListBox()
         Me.DoubleBufferedPanel2 = New TundraLib.DoubleBufferedPanel()
         Me.txtLanguage = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -57,8 +57,8 @@ Partial Class PropertiesEditor
         Me.DocumentToolStripContainer.ContentPanel.SuspendLayout()
         Me.DocumentToolStripContainer.TopToolStripPanel.SuspendLayout()
         Me.DocumentToolStripContainer.SuspendLayout()
-        Me.DocumentToolStrip.SuspendLayout()
         Me.StylizedPanel1.SuspendLayout()
+        Me.DocumentToolStrip.SuspendLayout()
         Me.DoubleBufferedPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -90,6 +90,31 @@ Partial Class PropertiesEditor
         'DocumentToolStripContainer.TopToolStripPanel
         '
         Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.DocumentToolStrip)
+        '
+        'StylizedPanel1
+        '
+        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedPanel1.Controls.Add(Me.lbPages)
+        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
+        Me.StylizedPanel1.Name = "StylizedPanel1"
+        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(285, 128)
+        Me.StylizedPanel1.TabIndex = 80
+        '
+        'lbPages
+        '
+        Me.lbPages.BackColor = System.Drawing.Color.White
+        Me.lbPages.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lbPages.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbPages.ForeColor = System.Drawing.Color.Black
+        Me.lbPages.IntegralHeight = False
+        Me.lbPages.Location = New System.Drawing.Point(1, 0)
+        Me.lbPages.Margin = New System.Windows.Forms.Padding(2)
+        Me.lbPages.Name = "lbPages"
+        Me.lbPages.Size = New System.Drawing.Size(284, 128)
+        Me.lbPages.TabIndex = 15
         '
         'DocumentToolStrip
         '
@@ -212,31 +237,6 @@ Partial Class PropertiesEditor
         Me.DictionaryToolStripButton.Name = "DictionaryToolStripButton"
         Me.DictionaryToolStripButton.Size = New System.Drawing.Size(26, 26)
         Me.DictionaryToolStripButton.Text = "Dictionary"
-        '
-        'StylizedPanel1
-        '
-        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedPanel1.Controls.Add(Me.lbPages)
-        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
-        Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(285, 128)
-        Me.StylizedPanel1.TabIndex = 80
-        '
-        'lbPages
-        '
-        Me.lbPages.BackColor = System.Drawing.Color.White
-        Me.lbPages.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.lbPages.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbPages.ForeColor = System.Drawing.Color.Black
-        Me.lbPages.IntegralHeight = False
-        Me.lbPages.Location = New System.Drawing.Point(1, 0)
-        Me.lbPages.Margin = New System.Windows.Forms.Padding(2)
-        Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(284, 128)
-        Me.lbPages.TabIndex = 15
         '
         'DoubleBufferedPanel2
         '
@@ -388,9 +388,9 @@ Partial Class PropertiesEditor
         Me.DocumentToolStripContainer.TopToolStripPanel.PerformLayout()
         Me.DocumentToolStripContainer.ResumeLayout(False)
         Me.DocumentToolStripContainer.PerformLayout()
+        Me.StylizedPanel1.ResumeLayout(False)
         Me.DocumentToolStrip.ResumeLayout(False)
         Me.DocumentToolStrip.PerformLayout()
-        Me.StylizedPanel1.ResumeLayout(False)
         Me.DoubleBufferedPanel2.ResumeLayout(False)
         Me.DoubleBufferedPanel2.PerformLayout()
         Me.ResumeLayout(False)
