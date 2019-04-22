@@ -109,8 +109,8 @@ Partial Class CharacterEditor
         '
         'tcCharacters
         '
-        Me.tcCharacters.Controls.Add(Me.tpFile)
         Me.tcCharacters.Controls.Add(Me.tpLocal)
+        Me.tcCharacters.Controls.Add(Me.tpFile)
         Me.tcCharacters.Controls.Add(Me.tpExtended)
         Me.tcCharacters.Controls.Add(Me.tpIPA)
         Me.tcCharacters.Controls.Add(Me.tpSearch)
@@ -556,7 +556,7 @@ Partial Class CharacterEditor
         'btnAddToLocal
         '
         Me.btnAddToLocal.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAddToLocal.Location = New System.Drawing.Point(226, 52)
+        Me.btnAddToLocal.Location = New System.Drawing.Point(168, 52)
         Me.btnAddToLocal.Name = "btnAddToLocal"
         Me.btnAddToLocal.Size = New System.Drawing.Size(55, 32)
         Me.btnAddToLocal.TabIndex = 1
@@ -599,7 +599,7 @@ Partial Class CharacterEditor
         'btnAddToFile
         '
         Me.btnAddToFile.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAddToFile.Location = New System.Drawing.Point(168, 52)
+        Me.btnAddToFile.Location = New System.Drawing.Point(229, 52)
         Me.btnAddToFile.Name = "btnAddToFile"
         Me.btnAddToFile.Size = New System.Drawing.Size(52, 32)
         Me.btnAddToFile.TabIndex = 76
@@ -618,7 +618,7 @@ Partial Class CharacterEditor
         '
         Me.menuCharButton.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToEditorCharacterMenuItem, Me.ReplaceEditorCharacterMenuItem, Me.ToolStripSeparator1, Me.CopyToClipboardMenuItem, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem, Me.RemoveCharSplitter, Me.RemoveToolStripMenuItem})
         Me.menuCharButton.Name = "menuCharButton"
-        Me.menuCharButton.Size = New System.Drawing.Size(204, 170)
+        Me.menuCharButton.Size = New System.Drawing.Size(204, 148)
         '
         'AddToEditorCharacterMenuItem
         '
