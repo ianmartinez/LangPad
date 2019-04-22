@@ -232,4 +232,8 @@
     Private Sub CopyToLocalMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToLocalMenuItem.Click
         AddToLocal(GetButtonTextFromMenu(sender))
     End Sub
+
+    Private Sub RemoveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveToolStripMenuItem.Click
+
+    End Sub
 End Class
