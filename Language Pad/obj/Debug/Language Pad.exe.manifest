@@ -50,19 +50,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e1Rjfeju+262yGV6Dgn9H7sb/804QZF0xxaLajF6Nqw=</dsig:DigestValue>
+        <dsig:DigestValue>2f2Rfgv5R7MMEDFErGjPdfBUQlKmbz4P10rFraNZfwM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TundraLib.dll" size="33280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TundraLib.dll" size="33792">
       <assemblyIdentity name="TundraLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cXavfgy6veiDBQA5dpMPDP9mDRNwgJ0+lrQziDtsbJM=</dsig:DigestValue>
+        <dsig:DigestValue>xlNZDoofa53rISyocMDE4L7G/4bdzUn0CeCipfIptjQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

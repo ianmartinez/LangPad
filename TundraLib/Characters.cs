@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace TundraLib
@@ -61,16 +62,29 @@ namespace TundraLib
 
         public CharacterInfo[] Search(string query, CharacterType type)
         {
-            var queryMatch = from _char in Characters where _char.Description.ToLower().Contains(query.ToLower()) select _char;
-            
+            var terms = query.ToLower().Split(new string[] { "/" }, StringSplitOptions.RemoveEmptyEntries);
+            var queryMatches = new List<CharacterInfo>();
+
+            foreach (var _term in terms)
+            {
+                foreach (var _char in Characters)
+                {
+                    // If a match is found and the character hasn't been added yet
+                    if (_char.Description.ToLower().Contains(_term) 
+                        && (queryMatches.Count((existingChar) => (existingChar.Description == _char.Description && existingChar.Character == _char.Character)) == 0))
+                    {
+                        queryMatches.Add(_char);
+                    }
+                }
+            }
             switch (type)
             {
                 case CharacterType.All:
-                    return queryMatch.ToArray();
+                    return queryMatches.ToArray();
                 case CharacterType.IPAAll:
-                    return (from _char in queryMatch where _char.IsIPA select _char).ToArray();
+                    return (from _char in queryMatches where _char.IsIPA select _char).ToArray();
                 default:
-                    return (from _char in queryMatch where (_char.Type == type) select _char).ToArray();
+                    return (from _char in queryMatches where (_char.Type == type) select _char).ToArray();
 
             }
         }
