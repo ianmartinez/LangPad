@@ -402,4 +402,12 @@ Public Class CharacterEditor
 
         SearchCharactersPanel.ResumeLayout()
     End Sub
+
+    Private Sub SearchQueryTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SearchQueryTextBox.KeyPress
+        If e.KeyChar = ChrW(Keys.Enter) Then SearchToolStripButton_Click(sender, e)
+    End Sub
+
+    Private Sub SearchModeDropDown_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SearchModeDropDown.KeyPress
+        If e.KeyChar = ChrW(Keys.Enter) Then SearchToolStripButton_Click(sender, e)
+    End Sub
 End Class
