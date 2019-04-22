@@ -1,5 +1,4 @@
 For 9.4:
    • Fixed bug where dictionary wouldn't load if you opened a new notebook file when the dictionary was open
    • Character search
-   • Restore functionality to import/export/delete all characters
    • Update help file

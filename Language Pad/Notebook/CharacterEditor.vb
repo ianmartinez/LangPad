@@ -1,4 +1,5 @@
-﻿Imports TundraLib.Themes
+﻿Imports System.IO
+Imports TundraLib.Themes
 
 Public Class CharacterEditor
     Public GetCurrentTexbox As Func(Of TextBoxBase)
@@ -303,6 +304,46 @@ Public Class CharacterEditor
             CurrentDocument.CustomSymbols = ""
             CurrentDocument.Modified = True
             RefreshFile()
+        End If
+    End Sub
+
+    Private Sub ImportFile(FileName As String, ByRef Symbols As String)
+        Dim Lines As String() = File.ReadAllText(FileName).Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+        Dim Chars As List(Of String) = Symbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries).ToList()
+
+        For i = 0 To Lines.Length - 1
+            If Lines.GetValue(i) = "" Then Continue For
+            If Chars.Contains(Lines.GetValue(i)) Then Continue For
+
+            Chars.Add(Lines.GetValue(i))
+        Next
+
+        Symbols = String.Join(Environment.NewLine, Chars)
+    End Sub
+
+    Private Sub ImportLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportLocalToolStripButton.Click
+        If dlgOpen.ShowDialog = Windows.Forms.DialogResult.OK Then
+            ImportFile(dlgOpen.FileName, My.Settings.CustomSymbols)
+            RefreshLocal()
+        End If
+    End Sub
+
+    Private Sub ImportFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportFileToolStripButton.Click
+        If dlgOpen.ShowDialog = Windows.Forms.DialogResult.OK Then
+            ImportFile(dlgOpen.FileName, CurrentDocument.CustomSymbols)
+            RefreshFile()
+        End If
+    End Sub
+
+    Private Sub ExportLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportLocalToolStripButton.Click
+        If dlgSave.ShowDialog = Windows.Forms.DialogResult.OK Then
+            File.WriteAllText(dlgSave.FileName, My.Settings.CustomSymbols)
+        End If
+    End Sub
+
+    Private Sub ExportFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportFileToolStripButton.Click
+        If dlgSave.ShowDialog = Windows.Forms.DialogResult.OK Then
+            File.WriteAllText(dlgSave.FileName, CurrentDocument.CustomSymbols)
         End If
     End Sub
 End Class
