@@ -16,6 +16,7 @@ Public Class CharacterEditor
         VerticalMenuGradient = Theme.VerticalMenuGradient
         FileToolStrip.Renderer = Theme.GetToolStripRenderer()
         LocalToolStrip.Renderer = Theme.GetToolStripRenderer()
+        SearchToolStrip.Renderer = Theme.GetToolStripRenderer()
 
         Refresh()
     End Sub
@@ -161,6 +162,10 @@ Public Class CharacterEditor
         AccentsList.Clear()
         AccentsString = ""
         UpdateResult()
+
+        If SearchModeDropDown.SelectedIndex = -1 Then
+            SearchModeDropDown.SelectedIndex = 0
+        End If
     End Sub
 
     Public Sub RefreshPanels()
@@ -223,7 +228,7 @@ Public Class CharacterEditor
         txtCharacter.Text &= GetButtonTextFromMenu(sender)
     End Sub
 
-    Private Sub BtnClearAll_Click(sender As Object, e As EventArgs) Handles btnClearAll.Click
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         For Each control As Control In AccentsLayoutPanel.Controls
             If TypeOf control Is AccentCheckButton Then
                 Dim button As AccentCheckButton = CType(control, AccentCheckButton)

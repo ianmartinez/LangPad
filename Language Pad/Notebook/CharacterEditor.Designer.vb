@@ -64,12 +64,18 @@ Partial Class CharacterEditor
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.SuprasegmentalsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.tpSearch = New System.Windows.Forms.TabPage()
+        Me.SearchToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.SearchCharactersPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.SearchToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.SearchQueryTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.SearchModeDropDown = New System.Windows.Forms.ToolStripComboBox()
+        Me.SearchToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.pnlModifyChar = New System.Windows.Forms.Panel()
         Me.gbAccents = New System.Windows.Forms.GroupBox()
         Me.AccentsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnClearAll = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.btnAffricate = New System.Windows.Forms.Button()
         Me.btnLowercase = New System.Windows.Forms.Button()
         Me.btnUppercase = New System.Windows.Forms.Button()
@@ -119,6 +125,10 @@ Partial Class CharacterEditor
         Me.DiacriticsTabPage.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.tpSearch.SuspendLayout()
+        Me.SearchToolStripContainer.ContentPanel.SuspendLayout()
+        Me.SearchToolStripContainer.TopToolStripPanel.SuspendLayout()
+        Me.SearchToolStripContainer.SuspendLayout()
+        Me.SearchToolStrip.SuspendLayout()
         Me.pnlModifyChar.SuspendLayout()
         Me.gbAccents.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -142,7 +152,7 @@ Partial Class CharacterEditor
         Me.tcCharacters.Multiline = True
         Me.tcCharacters.Name = "tcCharacters"
         Me.tcCharacters.SelectedIndex = 0
-        Me.tcCharacters.Size = New System.Drawing.Size(300, 288)
+        Me.tcCharacters.Size = New System.Drawing.Size(340, 288)
         Me.tcCharacters.TabIndex = 74
         '
         'tpLocal
@@ -583,14 +593,33 @@ Partial Class CharacterEditor
         '
         'tpSearch
         '
-        Me.tpSearch.Controls.Add(Me.SearchCharactersPanel)
+        Me.tpSearch.Controls.Add(Me.SearchToolStripContainer)
         Me.tpSearch.Location = New System.Drawing.Point(4, 22)
         Me.tpSearch.Name = "tpSearch"
         Me.tpSearch.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpSearch.Size = New System.Drawing.Size(292, 262)
+        Me.tpSearch.Size = New System.Drawing.Size(332, 262)
         Me.tpSearch.TabIndex = 4
         Me.tpSearch.Text = "Search"
         Me.tpSearch.UseVisualStyleBackColor = True
+        '
+        'SearchToolStripContainer
+        '
+        '
+        'SearchToolStripContainer.ContentPanel
+        '
+        Me.SearchToolStripContainer.ContentPanel.Controls.Add(Me.SearchCharactersPanel)
+        Me.SearchToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.SearchToolStripContainer.ContentPanel.Size = New System.Drawing.Size(326, 227)
+        Me.SearchToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SearchToolStripContainer.Location = New System.Drawing.Point(3, 3)
+        Me.SearchToolStripContainer.Margin = New System.Windows.Forms.Padding(2)
+        Me.SearchToolStripContainer.Name = "SearchToolStripContainer"
+        Me.SearchToolStripContainer.Size = New System.Drawing.Size(326, 256)
+        Me.SearchToolStripContainer.TabIndex = 84
+        '
+        'SearchToolStripContainer.TopToolStripPanel
+        '
+        Me.SearchToolStripContainer.TopToolStripPanel.Controls.Add(Me.SearchToolStrip)
         '
         'SearchCharactersPanel
         '
@@ -598,12 +627,52 @@ Partial Class CharacterEditor
         Me.SearchCharactersPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
         Me.SearchCharactersPanel.AutoSize = True
         Me.SearchCharactersPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SearchCharactersPanel.Location = New System.Drawing.Point(3, 3)
+        Me.SearchCharactersPanel.Location = New System.Drawing.Point(0, 0)
         Me.SearchCharactersPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.SearchCharactersPanel.Name = "SearchCharactersPanel"
         Me.SearchCharactersPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.SearchCharactersPanel.Size = New System.Drawing.Size(286, 256)
+        Me.SearchCharactersPanel.Size = New System.Drawing.Size(326, 227)
         Me.SearchCharactersPanel.TabIndex = 8
+        '
+        'SearchToolStrip
+        '
+        Me.SearchToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.SearchToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.SearchToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.SearchToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SearchQueryTextBox, Me.ToolStripLabel1, Me.SearchModeDropDown, Me.SearchToolStripButton})
+        Me.SearchToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.SearchToolStrip.Name = "SearchToolStrip"
+        Me.SearchToolStrip.Size = New System.Drawing.Size(326, 29)
+        Me.SearchToolStrip.Stretch = True
+        Me.SearchToolStrip.TabIndex = 0
+        '
+        'SearchQueryTextBox
+        '
+        Me.SearchQueryTextBox.Name = "SearchQueryTextBox"
+        Me.SearchQueryTextBox.Size = New System.Drawing.Size(135, 29)
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(17, 26)
+        Me.ToolStripLabel1.Text = "in"
+        '
+        'SearchModeDropDown
+        '
+        Me.SearchModeDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.SearchModeDropDown.Items.AddRange(New Object() {"All", "Extended Latin", "Extended Cyrillic", "Extended Green", "IPA (All)", "IPA Consonants", "IPA Affricates", "IPA Vowels", "IPA Tone", "IPA Diacritics", "IPA Suprasegmentals"})
+        Me.SearchModeDropDown.Name = "SearchModeDropDown"
+        Me.SearchModeDropDown.Size = New System.Drawing.Size(121, 29)
+        '
+        'SearchToolStripButton
+        '
+        Me.SearchToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SearchToolStripButton.Image = CType(resources.GetObject("SearchToolStripButton.Image"), System.Drawing.Image)
+        Me.SearchToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.SearchToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SearchToolStripButton.Name = "SearchToolStripButton"
+        Me.SearchToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.SearchToolStripButton.Text = "Clear"
         '
         'pnlModifyChar
         '
@@ -614,7 +683,7 @@ Partial Class CharacterEditor
         Me.pnlModifyChar.Location = New System.Drawing.Point(0, 0)
         Me.pnlModifyChar.Name = "pnlModifyChar"
         Me.pnlModifyChar.Padding = New System.Windows.Forms.Padding(6)
-        Me.pnlModifyChar.Size = New System.Drawing.Size(300, 398)
+        Me.pnlModifyChar.Size = New System.Drawing.Size(340, 398)
         Me.pnlModifyChar.TabIndex = 75
         '
         'gbAccents
@@ -623,7 +692,7 @@ Partial Class CharacterEditor
         Me.gbAccents.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gbAccents.Location = New System.Drawing.Point(6, 163)
         Me.gbAccents.Name = "gbAccents"
-        Me.gbAccents.Size = New System.Drawing.Size(288, 229)
+        Me.gbAccents.Size = New System.Drawing.Size(328, 229)
         Me.gbAccents.TabIndex = 78
         Me.gbAccents.TabStop = False
         Me.gbAccents.Text = "Accent Marks"
@@ -637,38 +706,38 @@ Partial Class CharacterEditor
         Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 0, 4)
-        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(282, 210)
+        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(322, 210)
         Me.AccentsLayoutPanel.TabIndex = 10
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnClearAll)
+        Me.GroupBox1.Controls.Add(Me.btnClear)
         Me.GroupBox1.Controls.Add(Me.btnAffricate)
         Me.GroupBox1.Controls.Add(Me.btnLowercase)
         Me.GroupBox1.Controls.Add(Me.btnUppercase)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(6, 96)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(288, 67)
+        Me.GroupBox1.Size = New System.Drawing.Size(328, 67)
         Me.GroupBox1.TabIndex = 89
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Modify Character"
         '
-        'btnClearAll
+        'btnClear
         '
-        Me.btnClearAll.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnClearAll.ForeColor = System.Drawing.Color.Firebrick
-        Me.btnClearAll.Location = New System.Drawing.Point(216, 21)
-        Me.btnClearAll.Name = "btnClearAll"
-        Me.btnClearAll.Size = New System.Drawing.Size(65, 32)
-        Me.btnClearAll.TabIndex = 79
-        Me.btnClearAll.Text = "Clear All"
+        Me.btnClear.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.btnClear.ForeColor = System.Drawing.Color.Firebrick
+        Me.btnClear.Location = New System.Drawing.Point(236, 21)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(65, 32)
+        Me.btnClear.TabIndex = 79
+        Me.btnClear.Text = "Clear"
         '
         'btnAffricate
         '
         Me.btnAffricate.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnAffricate.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAffricate.Location = New System.Drawing.Point(160, 21)
+        Me.btnAffricate.Location = New System.Drawing.Point(180, 21)
         Me.btnAffricate.Name = "btnAffricate"
         Me.btnAffricate.Size = New System.Drawing.Size(50, 32)
         Me.btnAffricate.TabIndex = 78
@@ -678,7 +747,7 @@ Partial Class CharacterEditor
         'btnLowercase
         '
         Me.btnLowercase.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnLowercase.Location = New System.Drawing.Point(8, 21)
+        Me.btnLowercase.Location = New System.Drawing.Point(28, 21)
         Me.btnLowercase.Name = "btnLowercase"
         Me.btnLowercase.Size = New System.Drawing.Size(70, 32)
         Me.btnLowercase.TabIndex = 78
@@ -687,7 +756,7 @@ Partial Class CharacterEditor
         'btnUppercase
         '
         Me.btnUppercase.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnUppercase.Location = New System.Drawing.Point(84, 21)
+        Me.btnUppercase.Location = New System.Drawing.Point(104, 21)
         Me.btnUppercase.Name = "btnUppercase"
         Me.btnUppercase.Size = New System.Drawing.Size(70, 32)
         Me.btnUppercase.TabIndex = 77
@@ -705,13 +774,13 @@ Partial Class CharacterEditor
         Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTop.Location = New System.Drawing.Point(6, 6)
         Me.pnlTop.Name = "pnlTop"
-        Me.pnlTop.Size = New System.Drawing.Size(288, 90)
+        Me.pnlTop.Size = New System.Drawing.Size(328, 90)
         Me.pnlTop.TabIndex = 90
         '
         'btnAddToLocal
         '
         Me.btnAddToLocal.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAddToLocal.Location = New System.Drawing.Point(168, 52)
+        Me.btnAddToLocal.Location = New System.Drawing.Point(188, 52)
         Me.btnAddToLocal.Name = "btnAddToLocal"
         Me.btnAddToLocal.Size = New System.Drawing.Size(55, 32)
         Me.btnAddToLocal.TabIndex = 1
@@ -721,7 +790,7 @@ Partial Class CharacterEditor
         '
         Me.btnCharacter.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnCharacter.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCharacter.Location = New System.Drawing.Point(7, 3)
+        Me.btnCharacter.Location = New System.Drawing.Point(27, 3)
         Me.btnCharacter.Name = "btnCharacter"
         Me.btnCharacter.Size = New System.Drawing.Size(80, 81)
         Me.btnCharacter.TabIndex = 88
@@ -732,7 +801,7 @@ Partial Class CharacterEditor
         '
         Me.txtCharacter.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.txtCharacter.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCharacter.Location = New System.Drawing.Point(92, 24)
+        Me.txtCharacter.Location = New System.Drawing.Point(112, 24)
         Me.txtCharacter.Name = "txtCharacter"
         Me.txtCharacter.Size = New System.Drawing.Size(189, 22)
         Me.txtCharacter.TabIndex = 77
@@ -743,7 +812,7 @@ Partial Class CharacterEditor
         Me.cbSmartReplace.AutoSize = True
         Me.cbSmartReplace.Checked = True
         Me.cbSmartReplace.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbSmartReplace.Location = New System.Drawing.Point(110, 3)
+        Me.cbSmartReplace.Location = New System.Drawing.Point(130, 3)
         Me.cbSmartReplace.Margin = New System.Windows.Forms.Padding(2)
         Me.cbSmartReplace.Name = "cbSmartReplace"
         Me.cbSmartReplace.Size = New System.Drawing.Size(96, 17)
@@ -754,7 +823,7 @@ Partial Class CharacterEditor
         'btnAddToFile
         '
         Me.btnAddToFile.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnAddToFile.Location = New System.Drawing.Point(229, 52)
+        Me.btnAddToFile.Location = New System.Drawing.Point(249, 52)
         Me.btnAddToFile.Name = "btnAddToFile"
         Me.btnAddToFile.Size = New System.Drawing.Size(52, 32)
         Me.btnAddToFile.TabIndex = 76
@@ -763,7 +832,7 @@ Partial Class CharacterEditor
         'btnCopyToClipboard
         '
         Me.btnCopyToClipboard.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnCopyToClipboard.Location = New System.Drawing.Point(92, 52)
+        Me.btnCopyToClipboard.Location = New System.Drawing.Point(112, 52)
         Me.btnCopyToClipboard.Name = "btnCopyToClipboard"
         Me.btnCopyToClipboard.Size = New System.Drawing.Size(70, 32)
         Me.btnCopyToClipboard.TabIndex = 79
@@ -837,7 +906,7 @@ Partial Class CharacterEditor
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.tcCharacters)
-        Me.SplitContainer1.Size = New System.Drawing.Size(300, 690)
+        Me.SplitContainer1.Size = New System.Drawing.Size(340, 690)
         Me.SplitContainer1.SplitterDistance = 398
         Me.SplitContainer1.TabIndex = 76
         '
@@ -853,7 +922,7 @@ Partial Class CharacterEditor
         '
         Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
-        Me.pnlSmartReplace.Location = New System.Drawing.Point(92, 4)
+        Me.pnlSmartReplace.Location = New System.Drawing.Point(112, 4)
         Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlSmartReplace.Name = "pnlSmartReplace"
         Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
@@ -865,9 +934,9 @@ Partial Class CharacterEditor
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.SplitContainer1)
         Me.DoubleBuffered = True
-        Me.MinimumSize = New System.Drawing.Size(300, 0)
+        Me.MinimumSize = New System.Drawing.Size(340, 0)
         Me.Name = "CharacterEditor"
-        Me.Size = New System.Drawing.Size(300, 690)
+        Me.Size = New System.Drawing.Size(340, 690)
         Me.tcCharacters.ResumeLayout(False)
         Me.tpLocal.ResumeLayout(False)
         Me.LocalToolStripContainer.ContentPanel.ResumeLayout(False)
@@ -901,7 +970,14 @@ Partial Class CharacterEditor
         Me.DiacriticsTabPage.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.tpSearch.ResumeLayout(False)
-        Me.tpSearch.PerformLayout()
+        Me.SearchToolStripContainer.ContentPanel.ResumeLayout(False)
+        Me.SearchToolStripContainer.ContentPanel.PerformLayout()
+        Me.SearchToolStripContainer.TopToolStripPanel.ResumeLayout(False)
+        Me.SearchToolStripContainer.TopToolStripPanel.PerformLayout()
+        Me.SearchToolStripContainer.ResumeLayout(False)
+        Me.SearchToolStripContainer.PerformLayout()
+        Me.SearchToolStrip.ResumeLayout(False)
+        Me.SearchToolStrip.PerformLayout()
         Me.pnlModifyChar.ResumeLayout(False)
         Me.gbAccents.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
@@ -969,7 +1045,7 @@ Partial Class CharacterEditor
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents SuprasegmentalsLayoutPanel As FlowLayoutPanel
-    Friend WithEvents btnClearAll As Button
+    Friend WithEvents btnClear As Button
     Friend WithEvents RemoveCharSplitter As ToolStripSeparator
     Friend WithEvents RemoveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FileToolStripContainer As ToolStripContainer
@@ -986,4 +1062,10 @@ Partial Class CharacterEditor
     Friend WithEvents ClearLocalToolStripButton As ToolStripButton
     Friend WithEvents dlgSave As SaveFileDialog
     Friend WithEvents dlgOpen As OpenFileDialog
+    Friend WithEvents SearchToolStripContainer As ToolStripContainer
+    Friend WithEvents SearchToolStrip As ToolStrip
+    Friend WithEvents SearchQueryTextBox As ToolStripTextBox
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents SearchModeDropDown As ToolStripComboBox
+    Friend WithEvents SearchToolStripButton As ToolStripButton
 End Class
