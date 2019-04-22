@@ -148,8 +148,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
    • Add tab dedicated to suprasegmentals (a -&gt; aː)
    • Add placeholder character to diacritic buttons for easier readability
    • Default font for the editor is now Calibri, which displays Unicode better
-   • Fix bug in Export to HTML process when encountering empty cells in the dictionary window
+   • Fixed bug in Export to HTML process when encountering empty cells in the dictionary window
    • Fixed bug where dictionary wouldn't reload if you opened a new notebook file when the dictionary window was open
+   • Fixed bug where pressing the remove button on the dictionary could throw an error
    • Character search
    
 Version 9.3 (April 13, 2019)

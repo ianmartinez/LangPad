@@ -164,7 +164,9 @@ Public Class frmDictionary
     End Sub
 
     Private Sub RemoveToolStripButton_Click(sender As Object, e As EventArgs) Handles RemoveToolStripButton.Click
-        dgvDictionary.Rows.RemoveAt(dgvDictionary.CurrentCell.RowIndex)
+        If dgvDictionary.CurrentCell IsNot Nothing Then
+            dgvDictionary.Rows.RemoveAt(dgvDictionary.CurrentCell.RowIndex)
+        End If
     End Sub
 
     Private Sub FontToolStripButton_Click(sender As Object, e As EventArgs) Handles FontToolStripButton.Click

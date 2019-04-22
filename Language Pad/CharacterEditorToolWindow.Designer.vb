@@ -23,7 +23,7 @@ Partial Class CharacterEditorToolWindow
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.charEdit = New Language_Pad.CharacterEditor()
-        Me.SuspendLayout()
+        Me.SuspendLayout
         '
         'charEdit
         '
@@ -47,6 +47,7 @@ Partial Class CharacterEditorToolWindow
         Me.Name = "CharacterEditorToolWindow"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Characters"
         Me.ResumeLayout(False)
 
