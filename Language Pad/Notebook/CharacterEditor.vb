@@ -393,9 +393,13 @@ Public Class CharacterEditor
 
         SearchCharactersPanel.Controls.Clear()
 
+        SearchCharactersPanel.SuspendLayout()
+
         Dim Matches = CharSearch.Search(SearchQueryTextBox.Text, SearchMode)
         For Each Character As CharacterInfo In Matches
             InsertCharacterButton(Character.Character, SearchCharactersPanel, Character.Description, Character.MultiLine)
         Next
+
+        SearchCharactersPanel.ResumeLayout()
     End Sub
 End Class
