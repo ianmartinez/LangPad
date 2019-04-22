@@ -29,7 +29,7 @@ Namespace My
 
             ssLoading.lblLoading.Text = "Loading IPA Affricates..."
             For Each Affricate As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Affricates)
-                CharTool.charEdit.InsertCharacterButton(Affricate.Value, CharTool.charEdit.AffricatesLayoutPanel, Affricate.Key)
+                CharTool.charEdit.InsertCharacterButton(Affricate.Value, CharTool.charEdit.AffricatesLayoutPanel, Affricate.Key, True, True, CharacterType.IPAAffricate)
             Next
 
             ssLoading.pbLoading.Value = 20
@@ -37,7 +37,7 @@ Namespace My
 
             ssLoading.lblLoading.Text = "Loading IPA Consonants..."
             For Each Consonant As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Consonants)
-                CharTool.charEdit.InsertCharacterButton(Consonant.Value, CharTool.charEdit.ConsonantsLayoutPanel, Consonant.Key)
+                CharTool.charEdit.InsertCharacterButton(Consonant.Value, CharTool.charEdit.ConsonantsLayoutPanel, Consonant.Key, True, True, CharacterType.IPAConsonant)
             Next
 
             ssLoading.pbLoading.Value = 30
@@ -45,7 +45,7 @@ Namespace My
 
             ssLoading.lblLoading.Text = "Loading IPA Tones..."
             For Each Tone As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.ToneIntonation)
-                CharTool.charEdit.InsertCharacterButton(Tone.Value, CharTool.charEdit.ToneIntonationLayoutPanel, Tone.Key)
+                CharTool.charEdit.InsertCharacterButton(Tone.Value, CharTool.charEdit.ToneIntonationLayoutPanel, Tone.Key, True, True, CharacterType.IPATone)
             Next
 
             ssLoading.pbLoading.Value = 40
@@ -53,7 +53,7 @@ Namespace My
 
             ssLoading.lblLoading.Text = "Loading IPA Vowels..."
             For Each Vowel As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Vowels)
-                CharTool.charEdit.InsertCharacterButton(Vowel.Value, CharTool.charEdit.VowelsLayoutPanel, Vowel.Key)
+                CharTool.charEdit.InsertCharacterButton(Vowel.Value, CharTool.charEdit.VowelsLayoutPanel, Vowel.Key, True, True, CharacterType.IPAVowel)
             Next
 
             ssLoading.pbLoading.Value = 50
@@ -61,7 +61,7 @@ Namespace My
 
             ssLoading.lblLoading.Text = "Loading IPA Diacritics..."
             For Each Diacritic As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Diacritics)
-                CharTool.charEdit.InsertCharacterButton(Diacritic.Value, CharTool.charEdit.DiacriticsLayoutPanel, Diacritic.Key)
+                CharTool.charEdit.InsertCharacterButton(Diacritic.Value, CharTool.charEdit.DiacriticsLayoutPanel, Diacritic.Key, True, True, CharacterType.IPADiacritic)
             Next
 
             ssLoading.pbLoading.Value = 50
@@ -69,7 +69,7 @@ Namespace My
 
             ssLoading.lblLoading.Text = "Loading IPA Suprasegmentals..."
             For Each Suprasegmental As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Suprasegmentals)
-                CharTool.charEdit.InsertCharacterButton(Suprasegmental.Value, CharTool.charEdit.SuprasegmentalsLayoutPanel, Suprasegmental.Key)
+                CharTool.charEdit.InsertCharacterButton(Suprasegmental.Value, CharTool.charEdit.SuprasegmentalsLayoutPanel, Suprasegmental.Key, True, True, CharacterType.IPASuprasegmental)
             Next
 
             ssLoading.pbLoading.Value = 60
@@ -77,15 +77,15 @@ Namespace My
 
             ssLoading.lblLoading.Text = "Loading Extended Characters..."
             For Each LatinExtended As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Common)
-                CharTool.charEdit.InsertCharacterButton(LatinExtended.Value, CharTool.charEdit.LatinExtendedLayoutPanel, LatinExtended.Key, False)
+                CharTool.charEdit.InsertCharacterButton(LatinExtended.Value, CharTool.charEdit.LatinExtendedLayoutPanel, LatinExtended.Key, False, True, CharacterType.ExtendedLatin)
             Next
 
             For Each CyrillicExtended As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Cyrillic)
-                CharTool.charEdit.InsertCharacterButton(CyrillicExtended.Value, CharTool.charEdit.CyrillicExtendedPanel, CyrillicExtended.Key, False)
+                CharTool.charEdit.InsertCharacterButton(CyrillicExtended.Value, CharTool.charEdit.CyrillicExtendedPanel, CyrillicExtended.Key, False, True, CharacterType.ExtendedCyrillic)
             Next
 
             For Each GreekExtended As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Greek)
-                CharTool.charEdit.InsertCharacterButton(GreekExtended.Value, CharTool.charEdit.GreekExtendedPanel, GreekExtended.Key, False)
+                CharTool.charEdit.InsertCharacterButton(GreekExtended.Value, CharTool.charEdit.GreekExtendedPanel, GreekExtended.Key, False, True, CharacterType.ExtendedGreek)
             Next
 
             ssLoading.pbLoading.Value = 70

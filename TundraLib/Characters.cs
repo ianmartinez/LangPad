@@ -1,43 +1,83 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TundraLib
 {
-    public class CharInfo
+    public class CharacterInfo
     {
+        public string Description;
         public string Character;
+        public CharacterType Type;
+        public bool MultiLine;
 
-        public CharInfo(string Character)
+        public CharacterInfo(string character, string description, CharacterType type, bool multiline)
         {
-            this.Character = Character;
+            Character = character;
+            Description = description;
+            Type = type;
+            MultiLine = multiline;
+        }
+
+        public bool IsIPA
+        {
+            get
+            {
+                var IPATypes = new CharacterType[] {
+                CharacterType.IPAConsonant,
+                CharacterType.IPAAffricate,
+                CharacterType.IPAVowel,
+                CharacterType.IPATone,
+                CharacterType.IPADiacritic,
+                CharacterType.IPASuprasegmental};
+
+                return IPATypes.Contains(Type);
+            }
         }
     }
 
-    public class SmartReplaceInfo
+    public enum CharacterType
     {
-        public string Start;
-        public string Finish;
-
-        public SmartReplaceInfo(string Start, string Finish)
-        {
-            this.Start = Start;
-            this.Finish = Finish;
-        }
+        All,
+        ExtendedLatin,
+        ExtendedCyrillic,
+        ExtendedGreek,
+        IPAAll,
+        IPAConsonant,
+        IPAAffricate,
+        IPAVowel,
+        IPATone,
+        IPADiacritic,
+        IPASuprasegmental
     }
 
-    public static class Characters
+    public class CharacterSearch
     {
-        public static List<CharInfo> Accents = new List<CharInfo>();
-        public static List<CharInfo> Affricates = new List<CharInfo>();
-        public static List<CharInfo> Common = new List<CharInfo>();
-        public static List<CharInfo> Consonants = new List<CharInfo>();
-        public static List<CharInfo> Other = new List<CharInfo>();
-        public static List<SmartReplaceInfo> SmartReplace = new List<SmartReplaceInfo>();
-        public static List<CharInfo> ToneIntonation = new List<CharInfo>();
-        public static List<CharInfo> Vowels = new List<CharInfo>();
+        public static List<CharacterInfo> Characters;
 
+        public CharacterSearch()
+        {
+            Characters = new List<CharacterInfo>();
+        }
+
+        public CharacterInfo[] Search(string query, CharacterType type)
+        {
+            var queryMatch = from _char in Characters where _char.Description.ToLower().Contains(query.ToLower()) select _char;
+            
+            switch (type)
+            {
+                case CharacterType.All:
+                    return queryMatch.ToArray();
+                case CharacterType.IPAAll:
+                    return (from _char in queryMatch where _char.IsIPA select _char).ToArray();
+                default:
+                    return (from _char in queryMatch where (_char.Type == type) select _char).ToArray();
+
+            }
+        }
+
+        public void Add(string character, string description, CharacterType type, bool multiline)
+        {
+            Characters.Add(new CharacterInfo(character, description, type, multiline));
+        }
     }
 }

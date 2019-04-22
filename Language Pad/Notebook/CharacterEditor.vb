@@ -1,8 +1,10 @@
 ﻿Imports System.IO
 Imports TundraLib.Themes
+Imports TundraLib
 
 Public Class CharacterEditor
     Public GetCurrentTexbox As Func(Of TextBoxBase)
+    Public CharSearch As New CharacterSearch()
     Public Property Character As String
     Private AccentsList As List(Of String) = New List(Of String)
     Private AccentsString As String = ""
@@ -98,12 +100,18 @@ Public Class CharacterEditor
             InsertCharacterButton(FileChar, FilePanel)
         Next
     End Sub
-    Public Sub InsertCharacterButton(ByVal Text As String, ByVal Panel As FlowLayoutPanel, Optional ByVal CharName As String = "", Optional MultiLine As Boolean = True)
+
+    Public Sub InsertCharacterButton(Text As String, Panel As FlowLayoutPanel, Optional CharName As String = "", Optional MultiLine As Boolean = True,
+                                     Optional InSearch As Boolean = False, Optional CharType As CharacterType = CharacterType.All)
         Dim CharacterButton As New CharacterButton(CharName, MultiLine)
         CharacterButton.Text = Text
         AddHandler CharacterButton.MouseClick, AddressOf CharacterButtonClick
         CharacterButton.ContextMenuStrip = menuCharButton
         Panel.Controls.Add(CharacterButton)
+
+        If InSearch Then
+            CharSearch.Add(Text, CharName, CharType, MultiLine)
+        End If
     End Sub
 
     Public Sub InsertAccentButton(ByVal Text As String, ByVal CharName As String)
@@ -350,5 +358,44 @@ Public Class CharacterEditor
         If dlgSave.ShowDialog = Windows.Forms.DialogResult.OK Then
             File.WriteAllText(dlgSave.FileName, CurrentDocument.CustomSymbols)
         End If
+    End Sub
+
+    Private Sub SearchToolStripButton_Click(sender As Object, e As EventArgs) Handles SearchToolStripButton.Click
+        Dim SearchModeString = SearchModeDropDown.SelectedItem.ToString()
+        Dim SearchMode As CharacterType = CharacterType.All
+
+        Select Case SearchModeString
+            Case "All"
+                SearchMode = CharacterType.All
+
+            Case "Extended Latin"
+                SearchMode = CharacterType.ExtendedLatin
+            Case "Extended Cyrillic"
+                SearchMode = CharacterType.ExtendedCyrillic
+            Case "Extended Greek"
+                SearchMode = CharacterType.ExtendedGreek
+
+            Case "IPA (All)"
+                SearchMode = CharacterType.IPAAll
+            Case "IPA Consonants"
+                SearchMode = CharacterType.IPAConsonant
+            Case "IPA Affricates"
+                SearchMode = CharacterType.IPAAffricate
+            Case "IPA Vowels"
+                SearchMode = CharacterType.IPAVowel
+            Case "IPA Tones"
+                SearchMode = CharacterType.IPATone
+            Case "IPA Diacritics"
+                SearchMode = CharacterType.IPADiacritic
+            Case "IPA Suprasegmentals"
+                SearchMode = CharacterType.IPASuprasegmental
+        End Select
+
+        SearchCharactersPanel.Controls.Clear()
+
+        Dim Matches = CharSearch.Search(SearchQueryTextBox.Text, SearchMode)
+        For Each Character As CharacterInfo In Matches
+            InsertCharacterButton(Character.Character, SearchCharactersPanel, Character.Description, Character.MultiLine)
+        Next
     End Sub
 End Class
