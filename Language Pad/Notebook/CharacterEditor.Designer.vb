@@ -85,6 +85,7 @@ Partial Class CharacterEditor
         Me.txtCharacter = New System.Windows.Forms.TextBox()
         Me.cbSmartReplace = New System.Windows.Forms.CheckBox()
         Me.btnAddToFile = New System.Windows.Forms.Button()
+        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.btnCopyToClipboard = New System.Windows.Forms.Button()
         Me.menuCharButton = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AddToEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -99,7 +100,6 @@ Partial Class CharacterEditor
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
-        Me.pnlSmartReplace = New TundraLib.DoubleBufferedPanel()
         Me.tcCharacters.SuspendLayout()
         Me.tpLocal.SuspendLayout()
         Me.LocalToolStripContainer.ContentPanel.SuspendLayout()
@@ -672,7 +672,7 @@ Partial Class CharacterEditor
         Me.SearchToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.SearchToolStripButton.Name = "SearchToolStripButton"
         Me.SearchToolStripButton.Size = New System.Drawing.Size(26, 26)
-        Me.SearchToolStripButton.Text = "Clear"
+        Me.SearchToolStripButton.Text = "Search"
         '
         'pnlModifyChar
         '
@@ -829,6 +829,16 @@ Partial Class CharacterEditor
         Me.btnAddToFile.TabIndex = 76
         Me.btnAddToFile.Text = "File"
         '
+        'pnlSmartReplace
+        '
+        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
+        Me.pnlSmartReplace.Location = New System.Drawing.Point(112, 4)
+        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
+        Me.pnlSmartReplace.Name = "pnlSmartReplace"
+        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
+        Me.pnlSmartReplace.TabIndex = 87
+        '
         'btnCopyToClipboard
         '
         Me.btnCopyToClipboard.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -917,16 +927,6 @@ Partial Class CharacterEditor
         'dlgOpen
         '
         Me.dlgOpen.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
-        '
-        'pnlSmartReplace
-        '
-        Me.pnlSmartReplace.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.pnlSmartReplace.BackColor = System.Drawing.Color.DimGray
-        Me.pnlSmartReplace.Location = New System.Drawing.Point(112, 4)
-        Me.pnlSmartReplace.Margin = New System.Windows.Forms.Padding(2)
-        Me.pnlSmartReplace.Name = "pnlSmartReplace"
-        Me.pnlSmartReplace.Size = New System.Drawing.Size(14, 15)
-        Me.pnlSmartReplace.TabIndex = 87
         '
         'CharacterEditor
         '

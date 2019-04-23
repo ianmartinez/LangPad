@@ -326,7 +326,7 @@ Partial Class frmMain
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.StylizedPanel1)
         Me.SplitLayoutPanel.Panel2MinSize = 325
         Me.SplitLayoutPanel.Size = New System.Drawing.Size(1257, 737)
-        Me.SplitLayoutPanel.SplitterDistance = 894
+        Me.SplitLayoutPanel.SplitterDistance = 896
         Me.SplitLayoutPanel.SplitterWidth = 2
         Me.SplitLayoutPanel.TabIndex = 1
         '
@@ -343,7 +343,7 @@ Partial Class frmMain
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.pnlFindReplace)
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.pnlColor)
         Me.MainToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(894, 636)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(896, 674)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'MainToolStripContainer.LeftToolStripPanel
@@ -354,13 +354,13 @@ Partial Class frmMain
         '
         'MainToolStripContainer.RightToolStripPanel
         '
-        Me.MainToolStripContainer.Size = New System.Drawing.Size(894, 737)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(896, 737)
         Me.MainToolStripContainer.TabIndex = 74
         '
         'MainToolStripContainer.TopToolStripPanel
         '
-        Me.MainToolStripContainer.TopToolStripPanel.Controls.Add(Me.FileToolStrip)
         Me.MainToolStripContainer.TopToolStripPanel.Controls.Add(Me.FontToolStrip)
+        Me.MainToolStripContainer.TopToolStripPanel.Controls.Add(Me.FileToolStrip)
         '
         'DataToolStrip
         '
@@ -370,7 +370,7 @@ Partial Class frmMain
         Me.DataToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel, Me.ToolStripSeparator11, Me.lblPageCount, Me.ToolStripSeparator12, Me.ToolStripLabel1, Me.ThemeCombo})
         Me.DataToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DataToolStrip.Name = "DataToolStrip"
-        Me.DataToolStrip.Size = New System.Drawing.Size(894, 25)
+        Me.DataToolStrip.Size = New System.Drawing.Size(896, 25)
         Me.DataToolStrip.Stretch = True
         Me.DataToolStrip.TabIndex = 2
         '
@@ -431,7 +431,7 @@ Partial Class frmMain
         Me.tcNotebook.Margin = New System.Windows.Forms.Padding(2)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(894, 504)
+        Me.tcNotebook.Size = New System.Drawing.Size(896, 542)
         Me.tcNotebook.TabIndex = 73
         '
         'pnlFindReplace
@@ -449,7 +449,7 @@ Partial Class frmMain
         Me.pnlFindReplace.Location = New System.Drawing.Point(0, 97)
         Me.pnlFindReplace.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlFindReplace.Name = "pnlFindReplace"
-        Me.pnlFindReplace.Size = New System.Drawing.Size(894, 35)
+        Me.pnlFindReplace.Size = New System.Drawing.Size(896, 35)
         Me.pnlFindReplace.TabIndex = 72
         Me.pnlFindReplace.Visible = False
         '
@@ -544,7 +544,7 @@ Partial Class frmMain
         Me.pnlColor.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlColor.Name = "pnlColor"
         Me.pnlColor.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
-        Me.pnlColor.Size = New System.Drawing.Size(894, 97)
+        Me.pnlColor.Size = New System.Drawing.Size(896, 97)
         Me.pnlColor.TabIndex = 74
         Me.pnlColor.Visible = False
         '
@@ -580,7 +580,7 @@ Partial Class frmMain
         Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorLayoutPanel.Name = "ColorLayoutPanel"
         Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(4)
-        Me.ColorLayoutPanel.Size = New System.Drawing.Size(894, 64)
+        Me.ColorLayoutPanel.Size = New System.Drawing.Size(896, 64)
         Me.ColorLayoutPanel.TabIndex = 70
         '
         'btnTransparentColor
@@ -963,7 +963,7 @@ Partial Class frmMain
         Me.FileToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.FileToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.FileToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.toolStripSeparator, Me.CutToolStripButton, Me.CopyToolStripButton, Me.PasteToolStripButton, Me.PastePlainToolStripButton, Me.toolStripSeparator2, Me.UndoToolStripButton, Me.RedoToolStripButton, Me.ToolStripSeparator14, Me.CharacterEditorToolStripButton})
-        Me.FileToolStrip.Location = New System.Drawing.Point(3, 38)
+        Me.FileToolStrip.Location = New System.Drawing.Point(3, 0)
         Me.FileToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.FileToolStrip.Name = "FileToolStrip"
         Me.FileToolStrip.Size = New System.Drawing.Size(290, 38)
@@ -1089,7 +1089,7 @@ Partial Class frmMain
         Me.FontToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.FontToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.FontToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripButton, Me.ToolStripSeparator9, Me.BoldToolStripButton, Me.ItalicToolStripButton, Me.UnderlineToolStripButton, Me.StrikeToolStripButton, Me.ToolStripSeparator5, Me.AlignLeftToolStripButton, Me.AlignCenterToolStripButton, Me.AlignRightToolStripButton, Me.ToolStripSeparator8, Me.IndentToolStripComboBox, Me.IndentToolStripButton})
-        Me.FontToolStrip.Location = New System.Drawing.Point(3, 0)
+        Me.FontToolStrip.Location = New System.Drawing.Point(293, 0)
         Me.FontToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.FontToolStrip.Name = "FontToolStrip"
         Me.FontToolStrip.Size = New System.Drawing.Size(366, 38)
@@ -1215,7 +1215,7 @@ Partial Class frmMain
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(361, 737)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(359, 737)
         Me.StylizedPanel1.TabIndex = 13
         '
         'pnlDocumentProperties
@@ -1225,7 +1225,7 @@ Partial Class frmMain
         Me.pnlDocumentProperties.Margin = New System.Windows.Forms.Padding(2)
         Me.pnlDocumentProperties.MinimumSize = New System.Drawing.Size(272, 0)
         Me.pnlDocumentProperties.Name = "pnlDocumentProperties"
-        Me.pnlDocumentProperties.Size = New System.Drawing.Size(361, 737)
+        Me.pnlDocumentProperties.Size = New System.Drawing.Size(359, 737)
         Me.pnlDocumentProperties.TabIndex = 0
         '
         'dlgSaveNotebook

@@ -1,2 +1,2 @@
-For 9.4:
-   • Update help file
+For 9.5:
+   • Move dictionary files to CSV
