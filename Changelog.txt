@@ -1,4 +1,10 @@
-﻿Version 9.4 (April 24, 2019)
+﻿Version 9.5 (May 3, 2019)
+   • Minimum sidebar size reduced
+   • Update toolbar icons
+   • Move document properties from the sidebar to a separarate window
+   • Move to HTML
+   
+Version 9.4 (April 24, 2019)
    • Redesign symbols panel
    • Copy custom characters to clipboard
    • Add buttons to change case of characters in editor
@@ -9,7 +15,7 @@
    • Merge "Linguistics" menu and "Page" menu into "Notebook" menu
    • Improve look of settings dialog
    • Toggle affricate button to dynamically create affricates (ts -> t͡s)
-   • Pressing shift when inserting a character will insert it in uppercase
+   • Pressing SHIFT when inserting a character will insert it in uppercase
    • Tooltips now provide more detail (b̪ shows "Voiced labiodental stop")
    • Expanded IPA to include many more characters and diacritics
    • Add extended Cyrillic & Greek
