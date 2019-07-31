@@ -26,9 +26,14 @@ namespace NotebookFile
             }
         }
 
-        public static Dictionary<string, string> Read(string Data)
+        public static string[] ToLines(string data)
         {
-            string[] lines = Data.Split(new string[] { Environment.NewLine, "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            return data.Split(new string[] { Environment.NewLine, "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+        }
+
+        public static Dictionary<string, string> Read(string data)
+        {
+            string[] lines = ToLines(data);
             Dictionary<string, string> kvList = new Dictionary<string, string>();
 
             foreach (string line in lines)
@@ -57,12 +62,13 @@ namespace NotebookFile
 
                 result = result.Insert(result.Length, Environment.NewLine);
             }
+
             return result;
         }
 
         public static string Search(Dictionary<string, string> data, string key)
         {
-            return data[key];
+            return data[key] ?? "";
         }
 
         public static string GetValue(string data, string key)

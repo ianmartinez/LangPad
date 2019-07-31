@@ -2,44 +2,34 @@
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 using static NotebookFile.KeyValue;
 
 namespace NotebookFile
 {
     public class Notebook
     {
-        private static readonly string appDataFolder =
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        public const double CurrentSpec = 3.0;
 
-        public string FilePath { get; set; }
-        public decimal AppVersion { get; set; }
-        public decimal SpecVersion { get; set; }
+        public string FilePath { get; set; } = "";
+        public double SpecVersion { get; set; } = CurrentSpec;
 
-        public string Title { get; set; }
-        public string Language { get; set; }
-        public string Author { get; set; }
-        public string Website { get; set; }
-        public string Info { get; set; }
+        public string Title { get; set; } = "Untitled";
+        public string Language { get; set; } = "";
+        public string Author { get; set; } = "";
+        public string Website { get; set; } = "";
+        public string Info { get; set; } = "";
 
-        public string Stylesheet { get; set; }
+        public string Stylesheet { get; set; } = "";
 
-        public List<string> Characters { get; set; }
-        public List<Page> Pages { get; set; }
-        public Dictionary Dictionary { get; set; }
-
+        public List<string> Characters { get; set; } = new List<string>();
+        public List<Page> Pages { get; set; } = new List<Page>();
+        public Dictionary NotebookDictionary { get; set; } = new Dictionary();
 
         public void Save(string filePath)
         {
-            // Temporary folder to be zipped
-            var guid = Guid.NewGuid();
-            var rootFolder = string.Format("{0}\\notebook-{1}", appDataFolder, guid.ToString());
-            var pagesFolder = string.Format("{0}\\pages", rootFolder);
-
-            if (Directory.Exists(rootFolder))
-                Directory.Delete(rootFolder, true);
-
-            Directory.CreateDirectory(rootFolder);
-            Directory.CreateDirectory(pagesFolder);
+            var temp = new TempFolder();
+            Directory.CreateDirectory(temp.PagesFolder);
 
             var dataFile = new List<Line>()
             {
@@ -48,36 +38,58 @@ namespace NotebookFile
                 new Line(LineType.KeyValue, "Language", Language),
                 new Line(LineType.KeyValue, "Author", Author),
                 new Line(LineType.KeyValue, "Website", Website),
-                new Line(LineType.KeyValue, "AppVersion", AppVersion.ToString()),
                 new Line(LineType.KeyValue, "SpecVersion", SpecVersion.ToString()),
 
                 new Line(LineType.Blank),
                 new Line(LineType.Comment, "Pages")
             };
 
-            for(var i=0; i<Pages.Count; i++)
+            for (var i = 0; i < Pages.Count; i++)
             {
                 var page = Pages[i];
                 dataFile.Add(new Line(LineType.KeyValue, "Page" + i, FormatString(page.Title)));
-
-                var pageWriter = new StreamWriter(string.Format("{0}\\{1}.html", pagesFolder, i.ToString()));
-                pageWriter.Write(page.Content);
-                pageWriter.Close();
+                File.WriteAllText(temp.GetPagePath(i), page.Content);
             }
 
-            File.WriteAllText(string.Format("{0}\\data.txt", rootFolder), Write(dataFile));
-            File.WriteAllText(string.Format("{0}\\info.txt", rootFolder), Info);
-            File.WriteAllText(string.Format("{0}\\characters.txt", rootFolder), string.Join("\n", Characters));
-            Dictionary.Save(string.Format("{0}\\dictionary.txt", rootFolder));
+            File.WriteAllText(temp.DataFile, Write(dataFile));
+            File.WriteAllText(temp.StylesheetFile, Stylesheet);
+            File.WriteAllText(temp.InfoFile, Info);
+            File.WriteAllText(temp.CharactersFile, string.Join("\n", Characters));
+            NotebookDictionary.Save(temp.DictionaryFile);
 
+            ZipFile.CreateFromDirectory(temp.RootFolder, filePath, CompressionLevel.Optimal, false);
             FilePath = filePath;
-            ZipFile.CreateFromDirectory(rootFolder, FilePath, CompressionLevel.Optimal, false);
         }
 
         public void Open(string filePath)
         {
-            if (File.Exists(filePath))
-                File.Delete(filePath);
+            var temp = new TempFolder();
+            ZipFile.ExtractToDirectory(filePath, temp.RootFolder);
+
+            var dataFileLines = Read(File.ReadAllText(temp.DataFile));
+            SpecVersion = double.Parse(Search(dataFileLines, "SpecVersion"));
+            Title = Search(dataFileLines, "Title");
+            Language = Search(dataFileLines, "Language");
+            Author = Search(dataFileLines, "Author");
+            Website = Search(dataFileLines, "Website");
+            Characters = new List<string>(ToLines(File.ReadAllText(temp.CharactersFile)));
+            Stylesheet = File.ReadAllText(temp.StylesheetFile);
+            Info = File.ReadAllText(temp.InfoFile);
+            NotebookDictionary.Open(temp.DictionaryFile);
+
+            Pages.Clear();
+            var pageCount = Directory.EnumerateFiles(temp.RootFolder).Count();
+            for (var i = 0; i < pageCount; i++)
+            {
+                Pages.Add(new Page()
+                {
+                    Title = Search(dataFileLines, "Page" + i),
+                    Content = File.ReadAllText(temp.GetPagePath(i))
+                });
+            }
+
+            Directory.Delete(temp.RootFolder, true);
+            FilePath = filePath;
         }
     }
 }
