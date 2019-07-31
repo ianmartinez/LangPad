@@ -1,0 +1,9 @@
+C:\Users\ianma\Documents\GitHub\Language-Pad\NotebookFile\NotebookFile\bin\Debug\netstandard2.0\NotebookFile.deps.json
+C:\Users\ianma\Documents\GitHub\Language-Pad\NotebookFile\NotebookFile\bin\Debug\netstandard2.0\NotebookFile.dll
+C:\Users\ianma\Documents\GitHub\Language-Pad\NotebookFile\NotebookFile\bin\Debug\netstandard2.0\NotebookFile.pdb
+C:\Users\ianma\Documents\GitHub\Language-Pad\NotebookFile\NotebookFile\obj\Debug\netstandard2.0\NotebookFile.csprojAssemblyReference.cache
+C:\Users\ianma\Documents\GitHub\Language-Pad\NotebookFile\NotebookFile\obj\Debug\netstandard2.0\NotebookFile.csproj.CoreCompileInputs.cache
+C:\Users\ianma\Documents\GitHub\Language-Pad\NotebookFile\NotebookFile\obj\Debug\netstandard2.0\NotebookFile.AssemblyInfoInputs.cache
+C:\Users\ianma\Documents\GitHub\Language-Pad\NotebookFile\NotebookFile\obj\Debug\netstandard2.0\NotebookFile.AssemblyInfo.cs
+C:\Users\ianma\Documents\GitHub\Language-Pad\NotebookFile\NotebookFile\obj\Debug\netstandard2.0\NotebookFile.dll
+C:\Users\ianma\Documents\GitHub\Language-Pad\NotebookFile\NotebookFile\obj\Debug\netstandard2.0\NotebookFile.pdb
