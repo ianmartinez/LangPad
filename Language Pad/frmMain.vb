@@ -648,13 +648,19 @@ Public Class frmMain
             Cursor = Cursors.WaitCursor
             If dlgSave.FileName = "" Then Exit Sub
 
-            CurrentDocument.Save(dlgSave.FileName)
-            currentFile = dlgSave.FileName
+            If dlgSave.FileName.EndsWith(".thw") Then
+                MessageBox.Show("This file is being exported to the new Thorn Writer format. This is not compatible with Language Pad.")
 
-            SelectedDocument.Modified = False
-            SetTitle()
+
+            Else
+                CurrentDocument.Save(dlgSave.FileName)
+                currentFile = dlgSave.FileName
+
+                SelectedDocument.Modified = False
+                SetTitle()
+            End If
             Cursor = Cursors.Default
-        End If
+            End If
     End Sub
 
     Private Sub PrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintToolStripMenuItem.Click
@@ -1172,5 +1178,9 @@ Public Class frmMain
         Else
             CharTool.Visible = True
         End If
+    End Sub
+
+    Private Sub ExportToThornWriterToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

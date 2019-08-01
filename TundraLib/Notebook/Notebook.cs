@@ -14,7 +14,7 @@ namespace NotebookFile
         public string FilePath { get; set; } = "";
         public double SpecVersion { get; set; } = CurrentSpec;
 
-        public string Title { get; set; } = "Untitled";
+        public string Title { get; set; } = "";
         public string Language { get; set; } = "";
         public string Author { get; set; } = "";
         public string Website { get; set; } = "";
