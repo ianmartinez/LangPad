@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NotebookFile
+namespace ThornWriter.NotebookFile
 {
     public static class KeyValue
     {
@@ -48,7 +48,7 @@ namespace NotebookFile
             return kvList;
         }
 
-        public static string Write(List<Line> lines, bool makeCompatible = false)
+        public static string Write(List<Line> lines, bool makeCompatible = true)
         {
             string result = "";
             foreach (Line line in lines)

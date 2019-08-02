@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using static ThornWriter.NotebookFile.KeyValue;
 
-namespace NotebookFile
+namespace ThornWriter.NotebookFile
 {
     /* 
         Serialize as:
@@ -24,14 +21,24 @@ namespace NotebookFile
     {
         public List<DictionaryWord> Words { get; set; } = new List<DictionaryWord>();
 
-        public void Open(string fileName)
+        public string Save()
         {
+            var dictionaryFile = new List<Line>();
 
-        }
+            for (var i = 0; i < Words.Count; i++)
+            {
+                var word = Words[i];
+                if (i > 0)
+                    dictionaryFile.Add(new Line(LineType.Blank));
 
-        public void Save(string fileName)
-        {
+                dictionaryFile.Add(new Line(LineType.Comment, "Word" + i));
+                dictionaryFile.Add(new Line(LineType.KeyValue, i + ".word", word.Word));
+                dictionaryFile.Add(new Line(LineType.KeyValue, i + ".pronunciation", word.Pronunciation));
+                dictionaryFile.Add(new Line(LineType.KeyValue, i + ".definition", word.Definition));
+                dictionaryFile.Add(new Line(LineType.KeyValue, i + ".notes", word.Notes));
+            }
 
+            return Write(dictionaryFile);
         }
     }
 }

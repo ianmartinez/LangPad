@@ -651,7 +651,33 @@ Public Class frmMain
             If dlgSave.FileName.EndsWith(".thw") Then
                 MessageBox.Show("This file is being exported to the new Thorn Writer format. This is not compatible with Language Pad.")
 
+                Dim thwFile = New ThornWriter.NotebookFile.Notebook
+                thwFile.Title = CurrentDocument.Title
+                thwFile.Language = CurrentDocument.Language
+                thwFile.Author = CurrentDocument.Author
+                thwFile.Language = CurrentDocument.Language
+                thwFile.Website = CurrentDocument.Website
+                thwFile.Info = CurrentDocument.Info
 
+                thwFile.Stylesheet = ""
+                thwFile.Characters = ThornWriter.NotebookFile.KeyValue.ToLines(CurrentDocument.CustomSymbols).ToList()
+                For Each page In CurrentDocument.Pages
+                    Dim p As New ThornWriter.NotebookFile.Page
+                    p.Title = page.Title
+                    p.Content = RtfPipe.Rtf.ToHtml(page.RTF).ToString()
+                    thwFile.Pages.Add(p)
+                Next
+
+                For Each word In CurrentDocument.WordDictionary.Words
+                    Dim w As New ThornWriter.NotebookFile.DictionaryWord
+                    w.Definition = word.Definition
+                    w.Notes = word.Notes
+                    w.Pronunciation = word.Pronunciation
+                    w.Word = word.Word
+                    thwFile.NotebookDictionary.Words.Add(w)
+                Next
+
+                thwFile.Save(dlgSave.FileName)
             Else
                 CurrentDocument.Save(dlgSave.FileName)
                 currentFile = dlgSave.FileName
@@ -660,7 +686,7 @@ Public Class frmMain
                 SetTitle()
             End If
             Cursor = Cursors.Default
-            End If
+        End If
     End Sub
 
     Private Sub PrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintToolStripMenuItem.Click

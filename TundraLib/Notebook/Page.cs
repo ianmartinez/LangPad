@@ -1,4 +1,4 @@
-﻿namespace NotebookFile
+﻿namespace ThornWriter.NotebookFile
 {
     public class Page
     {
