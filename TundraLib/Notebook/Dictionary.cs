@@ -28,10 +28,11 @@ namespace ThornWriter.NotebookFile
             for (var i = 0; i < Words.Count; i++)
             {
                 var word = Words[i];
+
                 if (i > 0)
                     dictionaryFile.Add(new Line(LineType.Blank));
 
-                dictionaryFile.Add(new Line(LineType.Comment, "Word" + i));
+                dictionaryFile.Add(new Line(LineType.Comment, "Word " + i));
                 dictionaryFile.Add(new Line(LineType.KeyValue, i + ".word", word.Word));
                 dictionaryFile.Add(new Line(LineType.KeyValue, i + ".pronunciation", word.Pronunciation));
                 dictionaryFile.Add(new Line(LineType.KeyValue, i + ".definition", word.Definition));

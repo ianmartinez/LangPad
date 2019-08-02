@@ -43,6 +43,11 @@ namespace ThornWriter.NotebookFile
             for (var i = 0; i < Pages.Count; i++)
             {
                 var page = Pages[i];
+
+                if (i > 0)
+                    pagesFile.Add(new Line(LineType.Blank));
+
+                pagesFile.Add(new Line(LineType.Comment, "Page " + i));
                 pagesFile.Add(new Line(LineType.KeyValue, i + ".title", page.Title));
                 File.WriteAllText(temp.GetPagePath(i), page.Content);
             }
