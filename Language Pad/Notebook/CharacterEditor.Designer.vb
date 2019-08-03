@@ -100,45 +100,45 @@ Partial Class CharacterEditor
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
-        Me.tcCharacters.SuspendLayout()
-        Me.tpLocal.SuspendLayout()
-        Me.LocalToolStripContainer.ContentPanel.SuspendLayout()
-        Me.LocalToolStripContainer.TopToolStripPanel.SuspendLayout()
-        Me.LocalToolStripContainer.SuspendLayout()
-        Me.LocalToolStrip.SuspendLayout()
-        Me.tpFile.SuspendLayout()
-        Me.FileToolStripContainer.ContentPanel.SuspendLayout()
-        Me.FileToolStripContainer.TopToolStripPanel.SuspendLayout()
-        Me.FileToolStripContainer.SuspendLayout()
-        Me.FileToolStrip.SuspendLayout()
-        Me.tpExtended.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.tpLatin.SuspendLayout()
-        Me.tpCyrillic.SuspendLayout()
-        Me.tpGreek.SuspendLayout()
-        Me.tpIPA.SuspendLayout()
-        Me.tcIPA.SuspendLayout()
-        Me.ConsonantsTabPage.SuspendLayout()
-        Me.AffricatesTabPage.SuspendLayout()
-        Me.VowelsTabPage.SuspendLayout()
-        Me.ToneIntonationTabPage.SuspendLayout()
-        Me.DiacriticsTabPage.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.tpSearch.SuspendLayout()
-        Me.SearchToolStripContainer.ContentPanel.SuspendLayout()
-        Me.SearchToolStripContainer.TopToolStripPanel.SuspendLayout()
-        Me.SearchToolStripContainer.SuspendLayout()
-        Me.SearchToolStrip.SuspendLayout()
-        Me.pnlModifyChar.SuspendLayout()
-        Me.gbAccents.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.pnlTop.SuspendLayout()
-        Me.menuCharButton.SuspendLayout()
+        Me.tcCharacters.SuspendLayout
+        Me.tpLocal.SuspendLayout
+        Me.LocalToolStripContainer.ContentPanel.SuspendLayout
+        Me.LocalToolStripContainer.TopToolStripPanel.SuspendLayout
+        Me.LocalToolStripContainer.SuspendLayout
+        Me.LocalToolStrip.SuspendLayout
+        Me.tpFile.SuspendLayout
+        Me.FileToolStripContainer.ContentPanel.SuspendLayout
+        Me.FileToolStripContainer.TopToolStripPanel.SuspendLayout
+        Me.FileToolStripContainer.SuspendLayout
+        Me.FileToolStrip.SuspendLayout
+        Me.tpExtended.SuspendLayout
+        Me.TabControl1.SuspendLayout
+        Me.tpLatin.SuspendLayout
+        Me.tpCyrillic.SuspendLayout
+        Me.tpGreek.SuspendLayout
+        Me.tpIPA.SuspendLayout
+        Me.tcIPA.SuspendLayout
+        Me.ConsonantsTabPage.SuspendLayout
+        Me.AffricatesTabPage.SuspendLayout
+        Me.VowelsTabPage.SuspendLayout
+        Me.ToneIntonationTabPage.SuspendLayout
+        Me.DiacriticsTabPage.SuspendLayout
+        Me.TabPage1.SuspendLayout
+        Me.tpSearch.SuspendLayout
+        Me.SearchToolStripContainer.ContentPanel.SuspendLayout
+        Me.SearchToolStripContainer.TopToolStripPanel.SuspendLayout
+        Me.SearchToolStripContainer.SuspendLayout
+        Me.SearchToolStrip.SuspendLayout
+        Me.pnlModifyChar.SuspendLayout
+        Me.gbAccents.SuspendLayout
+        Me.GroupBox1.SuspendLayout
+        Me.pnlTop.SuspendLayout
+        Me.menuCharButton.SuspendLayout
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer1.Panel1.SuspendLayout()
-        Me.SplitContainer1.Panel2.SuspendLayout()
-        Me.SplitContainer1.SuspendLayout()
-        Me.SuspendLayout()
+        Me.SplitContainer1.Panel1.SuspendLayout
+        Me.SplitContainer1.Panel2.SuspendLayout
+        Me.SplitContainer1.SuspendLayout
+        Me.SuspendLayout
         '
         'tcCharacters
         '
@@ -648,6 +648,7 @@ Partial Class CharacterEditor
         '
         'SearchQueryTextBox
         '
+        Me.SearchQueryTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SearchQueryTextBox.Name = "SearchQueryTextBox"
         Me.SearchQueryTextBox.Size = New System.Drawing.Size(135, 29)
         '
@@ -941,29 +942,29 @@ Partial Class CharacterEditor
         Me.tpLocal.ResumeLayout(False)
         Me.LocalToolStripContainer.ContentPanel.ResumeLayout(False)
         Me.LocalToolStripContainer.TopToolStripPanel.ResumeLayout(False)
-        Me.LocalToolStripContainer.TopToolStripPanel.PerformLayout()
+        Me.LocalToolStripContainer.TopToolStripPanel.PerformLayout
         Me.LocalToolStripContainer.ResumeLayout(False)
-        Me.LocalToolStripContainer.PerformLayout()
+        Me.LocalToolStripContainer.PerformLayout
         Me.LocalToolStrip.ResumeLayout(False)
-        Me.LocalToolStrip.PerformLayout()
+        Me.LocalToolStrip.PerformLayout
         Me.tpFile.ResumeLayout(False)
         Me.FileToolStripContainer.ContentPanel.ResumeLayout(False)
         Me.FileToolStripContainer.TopToolStripPanel.ResumeLayout(False)
-        Me.FileToolStripContainer.TopToolStripPanel.PerformLayout()
+        Me.FileToolStripContainer.TopToolStripPanel.PerformLayout
         Me.FileToolStripContainer.ResumeLayout(False)
-        Me.FileToolStripContainer.PerformLayout()
+        Me.FileToolStripContainer.PerformLayout
         Me.FileToolStrip.ResumeLayout(False)
-        Me.FileToolStrip.PerformLayout()
+        Me.FileToolStrip.PerformLayout
         Me.tpExtended.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.tpLatin.ResumeLayout(False)
-        Me.tpLatin.PerformLayout()
+        Me.tpLatin.PerformLayout
         Me.tpCyrillic.ResumeLayout(False)
         Me.tpGreek.ResumeLayout(False)
         Me.tpIPA.ResumeLayout(False)
         Me.tcIPA.ResumeLayout(False)
         Me.ConsonantsTabPage.ResumeLayout(False)
-        Me.ConsonantsTabPage.PerformLayout()
+        Me.ConsonantsTabPage.PerformLayout
         Me.AffricatesTabPage.ResumeLayout(False)
         Me.VowelsTabPage.ResumeLayout(False)
         Me.ToneIntonationTabPage.ResumeLayout(False)
@@ -971,18 +972,18 @@ Partial Class CharacterEditor
         Me.TabPage1.ResumeLayout(False)
         Me.tpSearch.ResumeLayout(False)
         Me.SearchToolStripContainer.ContentPanel.ResumeLayout(False)
-        Me.SearchToolStripContainer.ContentPanel.PerformLayout()
+        Me.SearchToolStripContainer.ContentPanel.PerformLayout
         Me.SearchToolStripContainer.TopToolStripPanel.ResumeLayout(False)
-        Me.SearchToolStripContainer.TopToolStripPanel.PerformLayout()
+        Me.SearchToolStripContainer.TopToolStripPanel.PerformLayout
         Me.SearchToolStripContainer.ResumeLayout(False)
-        Me.SearchToolStripContainer.PerformLayout()
+        Me.SearchToolStripContainer.PerformLayout
         Me.SearchToolStrip.ResumeLayout(False)
-        Me.SearchToolStrip.PerformLayout()
+        Me.SearchToolStrip.PerformLayout
         Me.pnlModifyChar.ResumeLayout(False)
         Me.gbAccents.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.pnlTop.ResumeLayout(False)
-        Me.pnlTop.PerformLayout()
+        Me.pnlTop.PerformLayout
         Me.menuCharButton.ResumeLayout(False)
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)

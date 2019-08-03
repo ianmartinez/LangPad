@@ -45,7 +45,7 @@ Partial Class dlgUpdate
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(0, 85)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(579, 28)
         Me.Label3.TabIndex = 74
@@ -56,7 +56,7 @@ Partial Class dlgUpdate
         '
         Me.txtDecription.BackColor = System.Drawing.SystemColors.Window
         Me.txtDecription.Location = New System.Drawing.Point(11, 143)
-        Me.txtDecription.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDecription.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDecription.Multiline = True
         Me.txtDecription.Name = "txtDecription"
         Me.txtDecription.ReadOnly = True
@@ -77,7 +77,7 @@ Partial Class dlgUpdate
         Me.btnReddit.ForeColor = System.Drawing.Color.Black
         Me.btnReddit.Image = CType(resources.GetObject("btnReddit.Image"), System.Drawing.Image)
         Me.btnReddit.Location = New System.Drawing.Point(6, 7)
-        Me.btnReddit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnReddit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnReddit.Name = "btnReddit"
         Me.btnReddit.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.btnReddit.Size = New System.Drawing.Size(34, 35)
@@ -99,7 +99,7 @@ Partial Class dlgUpdate
         Me.btnSource.ForeColor = System.Drawing.Color.Black
         Me.btnSource.Image = CType(resources.GetObject("btnSource.Image"), System.Drawing.Image)
         Me.btnSource.Location = New System.Drawing.Point(6, 46)
-        Me.btnSource.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSource.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSource.Name = "btnSource"
         Me.btnSource.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.btnSource.Size = New System.Drawing.Size(34, 35)
@@ -128,7 +128,7 @@ Partial Class dlgUpdate
         Me.btnOK.BackColor = System.Drawing.Color.Transparent
         Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnOK.Location = New System.Drawing.Point(2, 2)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(107, 25)
         Me.btnOK.TabIndex = 1
@@ -141,7 +141,7 @@ Partial Class dlgUpdate
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnCancel.Location = New System.Drawing.Point(113, 2)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(108, 25)
         Me.btnCancel.TabIndex = 0
@@ -159,7 +159,7 @@ Partial Class dlgUpdate
         Me.StylizedPanel1.Controls.Add(Me.Label3)
         Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Size = New System.Drawing.Size(579, 113)
         Me.StylizedPanel1.TabIndex = 79

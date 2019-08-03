@@ -44,10 +44,10 @@ Partial Class dlgAbout
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(6, 94)
+        Me.TabControl1.Location = New System.Drawing.Point(6, 99)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(733, 429)
+        Me.TabControl1.Size = New System.Drawing.Size(471, 413)
         Me.TabControl1.TabIndex = 9
         '
         'TabPage1
@@ -56,7 +56,7 @@ Partial Class dlgAbout
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(6)
-        Me.TabPage1.Size = New System.Drawing.Size(725, 403)
+        Me.TabPage1.Size = New System.Drawing.Size(463, 387)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "License"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -73,7 +73,7 @@ Partial Class dlgAbout
         Me.txtLicense.Name = "txtLicense"
         Me.txtLicense.ReadOnly = True
         Me.txtLicense.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtLicense.Size = New System.Drawing.Size(713, 391)
+        Me.txtLicense.Size = New System.Drawing.Size(451, 375)
         Me.txtLicense.TabIndex = 7
         Me.txtLicense.Text = resources.GetString("txtLicense.Text")
         '
@@ -83,7 +83,7 @@ Partial Class dlgAbout
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(6)
-        Me.TabPage2.Size = New System.Drawing.Size(725, 403)
+        Me.TabPage2.Size = New System.Drawing.Size(463, 387)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Changelog"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -100,13 +100,13 @@ Partial Class dlgAbout
         Me.txtChangelog.Name = "txtChangelog"
         Me.txtChangelog.ReadOnly = True
         Me.txtChangelog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtChangelog.Size = New System.Drawing.Size(713, 391)
+        Me.txtChangelog.Size = New System.Drawing.Size(451, 375)
         Me.txtChangelog.TabIndex = 8
         Me.txtChangelog.Text = resources.GetString("txtChangelog.Text")
         '
         'DoubleBufferedPanel1
         '
-        Me.DoubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DoubleBufferedPanel1.BackColor = System.Drawing.Color.MidnightBlue
         Me.DoubleBufferedPanel1.BackgroundImage = CType(resources.GetObject("DoubleBufferedPanel1.BackgroundImage"), System.Drawing.Image)
         Me.DoubleBufferedPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.DoubleBufferedPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -116,7 +116,7 @@ Partial Class dlgAbout
         Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(6, 6)
         Me.DoubleBufferedPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel1.Name = "DoubleBufferedPanel1"
-        Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(733, 88)
+        Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(471, 93)
         Me.DoubleBufferedPanel1.TabIndex = 76
         '
         'lblVersion
@@ -124,7 +124,7 @@ Partial Class dlgAbout
         Me.lblVersion.AutoSize = True
         Me.lblVersion.BackColor = System.Drawing.Color.Transparent
         Me.lblVersion.ForeColor = System.Drawing.Color.White
-        Me.lblVersion.Location = New System.Drawing.Point(7, 51)
+        Me.lblVersion.Location = New System.Drawing.Point(7, 61)
         Me.lblVersion.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(60, 13)
@@ -136,12 +136,12 @@ Partial Class dlgAbout
         '
         Me.lblLanguagePad.AutoSize = True
         Me.lblLanguagePad.BackColor = System.Drawing.Color.Transparent
-        Me.lblLanguagePad.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLanguagePad.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
-        Me.lblLanguagePad.Location = New System.Drawing.Point(6, 21)
+        Me.lblLanguagePad.Location = New System.Drawing.Point(7, 20)
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
         Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(133, 24)
+        Me.lblLanguagePad.Size = New System.Drawing.Size(169, 29)
         Me.lblLanguagePad.TabIndex = 12
         Me.lblLanguagePad.Text = "Language Pad"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -150,7 +150,7 @@ Partial Class dlgAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(745, 529)
+        Me.ClientSize = New System.Drawing.Size(483, 518)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.DoubleBufferedPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog

@@ -72,7 +72,7 @@ Partial Class PropertiesEditor
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel1)
         Me.DocumentToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(285, 128)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(272, 128)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'DocumentToolStripContainer.LeftToolStripPanel
@@ -83,7 +83,7 @@ Partial Class PropertiesEditor
         '
         'DocumentToolStripContainer.RightToolStripPanel
         '
-        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(285, 157)
+        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(272, 157)
         Me.DocumentToolStripContainer.TabIndex = 81
         Me.DocumentToolStripContainer.Text = "ToolStripContainer1"
         '
@@ -100,7 +100,7 @@ Partial Class PropertiesEditor
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 0)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(1, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(285, 128)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(272, 128)
         Me.StylizedPanel1.TabIndex = 80
         '
         'lbPages
@@ -113,7 +113,7 @@ Partial Class PropertiesEditor
         Me.lbPages.Location = New System.Drawing.Point(1, 0)
         Me.lbPages.Margin = New System.Windows.Forms.Padding(2)
         Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(284, 128)
+        Me.lbPages.Size = New System.Drawing.Size(271, 128)
         Me.lbPages.TabIndex = 15
         '
         'DocumentToolStrip
@@ -124,7 +124,7 @@ Partial Class PropertiesEditor
         Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton, Me.ToolStripSeparator4, Me.DictionaryToolStripButton})
         Me.DocumentToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DocumentToolStrip.Name = "DocumentToolStrip"
-        Me.DocumentToolStrip.Size = New System.Drawing.Size(285, 29)
+        Me.DocumentToolStrip.Size = New System.Drawing.Size(272, 29)
         Me.DocumentToolStrip.Stretch = True
         Me.DocumentToolStrip.TabIndex = 0
         '
@@ -256,13 +256,13 @@ Partial Class PropertiesEditor
         Me.DoubleBufferedPanel2.Margin = New System.Windows.Forms.Padding(2)
         Me.DoubleBufferedPanel2.Name = "DoubleBufferedPanel2"
         Me.DoubleBufferedPanel2.Padding = New System.Windows.Forms.Padding(1)
-        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(285, 332)
+        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(272, 332)
         Me.DoubleBufferedPanel2.TabIndex = 78
         '
         'txtLanguage
         '
         Me.txtLanguage.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtLanguage.Location = New System.Drawing.Point(20, 76)
+        Me.txtLanguage.Location = New System.Drawing.Point(14, 76)
         Me.txtLanguage.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.txtLanguage.Name = "txtLanguage"
         Me.txtLanguage.Size = New System.Drawing.Size(246, 20)
@@ -272,7 +272,7 @@ Partial Class PropertiesEditor
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(18, 57)
+        Me.Label5.Location = New System.Drawing.Point(12, 57)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(58, 13)
@@ -282,7 +282,7 @@ Partial Class PropertiesEditor
         'btnGo
         '
         Me.btnGo.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnGo.Location = New System.Drawing.Point(228, 164)
+        Me.btnGo.Location = New System.Drawing.Point(222, 164)
         Me.btnGo.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.btnGo.Name = "btnGo"
         Me.btnGo.Size = New System.Drawing.Size(38, 22)
@@ -294,7 +294,7 @@ Partial Class PropertiesEditor
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(18, 192)
+        Me.Label4.Location = New System.Drawing.Point(12, 192)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(28, 13)
@@ -304,7 +304,7 @@ Partial Class PropertiesEditor
         'txtInfo
         '
         Me.txtInfo.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtInfo.Location = New System.Drawing.Point(20, 211)
+        Me.txtInfo.Location = New System.Drawing.Point(14, 211)
         Me.txtInfo.Margin = New System.Windows.Forms.Padding(2, 4, 2, 4)
         Me.txtInfo.Multiline = True
         Me.txtInfo.Name = "txtInfo"
@@ -316,7 +316,7 @@ Partial Class PropertiesEditor
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(18, 147)
+        Me.Label3.Location = New System.Drawing.Point(12, 147)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 13)
@@ -326,7 +326,7 @@ Partial Class PropertiesEditor
         'txtAuthor
         '
         Me.txtAuthor.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtAuthor.Location = New System.Drawing.Point(20, 121)
+        Me.txtAuthor.Location = New System.Drawing.Point(14, 121)
         Me.txtAuthor.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.txtAuthor.Name = "txtAuthor"
         Me.txtAuthor.Size = New System.Drawing.Size(246, 20)
@@ -335,7 +335,7 @@ Partial Class PropertiesEditor
         'txtWebsite
         '
         Me.txtWebsite.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtWebsite.Location = New System.Drawing.Point(20, 166)
+        Me.txtWebsite.Location = New System.Drawing.Point(14, 166)
         Me.txtWebsite.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.txtWebsite.Name = "txtWebsite"
         Me.txtWebsite.Size = New System.Drawing.Size(204, 20)
@@ -344,7 +344,7 @@ Partial Class PropertiesEditor
         'txtTitle
         '
         Me.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtTitle.Location = New System.Drawing.Point(20, 31)
+        Me.txtTitle.Location = New System.Drawing.Point(14, 31)
         Me.txtTitle.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.txtTitle.Name = "txtTitle"
         Me.txtTitle.Size = New System.Drawing.Size(246, 20)
@@ -354,7 +354,7 @@ Partial Class PropertiesEditor
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 102)
+        Me.Label2.Location = New System.Drawing.Point(12, 102)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 13)
@@ -365,7 +365,7 @@ Partial Class PropertiesEditor
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(18, 11)
+        Me.Label1.Location = New System.Drawing.Point(12, 11)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 4, 2, 2)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(30, 13)
@@ -382,7 +382,7 @@ Partial Class PropertiesEditor
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MinimumSize = New System.Drawing.Size(272, 0)
         Me.Name = "PropertiesEditor"
-        Me.Size = New System.Drawing.Size(285, 489)
+        Me.Size = New System.Drawing.Size(272, 489)
         Me.DocumentToolStripContainer.ContentPanel.ResumeLayout(False)
         Me.DocumentToolStripContainer.TopToolStripPanel.ResumeLayout(False)
         Me.DocumentToolStripContainer.TopToolStripPanel.PerformLayout()

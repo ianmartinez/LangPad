@@ -348,7 +348,8 @@ Public Class frmMain
         CurrentDocument.Modified = False
         KeyPreview = True
 
-        SplitLayoutPanel.SplitterDistance = (SplitLayoutPanel.Width - pnlDocumentProperties.MinimumSize.Width) - 30
+        SplitLayoutPanel.Panel2MinSize = 275
+        SplitLayoutPanel.SplitterDistance = (SplitLayoutPanel.Width - pnlDocumentProperties.MinimumSize.Width) - 50
 
         For i As Integer = 0 To 50
             IndentToolStripComboBox.Items.Add(i)
@@ -990,6 +991,8 @@ Public Class frmMain
                     txtWriter.Close()
                     SelectedDocument.SelectionStart = 0
                     SelectedDocument.SelectionLength = 0
+                Case ".HTML"
+                    File.WriteAllText(dlgSavePage.FileName, RtfPipe.Rtf.ToHtml(SelectedDocument.Rtf).ToString())
                 Case Else
                     Dim txtWriter As StreamWriter
                     txtWriter = New StreamWriter(dlgSavePage.FileName)
