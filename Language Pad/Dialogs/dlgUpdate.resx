@@ -117,45 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnReddit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEQAAABECAYAAAA4E5OyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAd
-        hwAAHYcBj+XxZQAAAChJREFUeF7twQEBAAAAgiD/r25IQAAAAAAAAAAAAAAAAAAAAAAAwKEaSIQAATP6
-        u1UAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnReddit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABISURBVEhL7Y7B
-        CQAwCAPdf1wXaCnkGyLkUzAHgYDiWWEh3X2c4AxntESwBerL/wUKW/Bmao7KiQCVEwEqZ7REGAuc4EzY
-        Q9UFZ+IbovDH+6UAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="ttMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="btnSource.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEQAAABECAYAAAA4E5OyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAd
-        hwAAHYcBj+XxZQAAAChJREFUeF7twQEBAAAAgiD/r25IQAAAAAAAAAAAAAAAAAAAAAAAwKEaSIQAATP6
-        u1UAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnSource.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFeSURBVEhL7ZNL
-        TgJBFEVxogM/GxF/m3IRgFsADNEwM3EksAdxD0DcARIIIf2J0/bc5KZjxGpoHeiAk9yk36v3qXrVVdnx
-        /0nT9DxJkts4jicotcb42qydOaw8WZYdUKiLpqhGsYvZbHYo8X1Jg7rWoii6V6zTtsPFX0h+ms/nR3av
-        sVgsjonpETss1YSEroqTtGdXEMUQ3yf+zq5iNHMdvWjnX9FJlMPYqnaF8YXWbObge9T8ba5BXgO1bIah
-        0ESnsJmDP0OvoT9HF8/62GYYgpLvxuMG0js7vbY7RzmsxTbDEPOjBsvl8oS1yGYYgn4zopHNMOyujeo2
-        c0h+2HDJN8Q0bYbRDgmc6tezayMezxtNTu0qRs9fL7TEQxtQvGPXZvTsSRqiftFJvPMBeiZn3+7tUBM9
-        f5J19MZqtbrS3yXp2zPXWqd08c9QoIpaFBujxBqhJv7tZr7jD6lUPgC6NJVEGeZYxQAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="StylizedPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/4QDKRXhpZgAATU0AKgAAAAgADAEAAAMAAAABCgAAAAEBAAMAAAAB
