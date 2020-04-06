@@ -1,4 +1,5 @@
 ﻿Imports System.Globalization
+Imports TundraLib
 Imports TundraLib.Themes
 
 Module LanguagePadCommon
@@ -23,4 +24,12 @@ Module LanguagePadCommon
         Application.ProductVersion.Split(DecimalSep, StringSplitOptions.RemoveEmptyEntries).GetValue(1)))
 
     Public StartupTheme As Theme
+
+    Public Function GetIconResolution() As IconResolution
+        If My.Settings.HiDPI Then
+            Return IconResolution.HiDPI
+        Else
+            Return IconResolution.Normal
+        End If
+    End Function
 End Module

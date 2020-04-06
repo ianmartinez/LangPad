@@ -74,6 +74,41 @@ Public Class frmMain
         WordWrapToolStripMenuItem.Checked = SelectedDocument.WordWrap
     End Sub
 
+    Public Sub SetIcons()
+        Dim res As IconResolution = GetIconResolution()
+
+        ' Toolstrip
+        NewToolStripButton.Image = IconManager.Get("document-new", IconSize.IconLarge, res)
+        OpenToolStripButton.Image = IconManager.Get("document-open", IconSize.IconLarge, res)
+        SaveToolStripButton.Image = IconManager.Get("document-save", IconSize.IconLarge, res)
+
+        CutToolStripButton.Image = IconManager.Get("edit-cut", IconSize.IconLarge, res)
+        CopyToolStripButton.Image = IconManager.Get("edit-copy", IconSize.IconLarge, res)
+        PasteToolStripButton.Image = IconManager.Get("edit-paste", IconSize.IconLarge, res)
+        PastePlainToolStripButton.Image = IconManager.Get("filetype-text", IconSize.IconLarge, res)
+
+        UndoToolStripButton.Image = IconManager.Get("edit-undo", IconSize.IconLarge, res)
+        RedoToolStripButton.Image = IconManager.Get("edit-redo", IconSize.IconLarge, res)
+
+        CharacterEditorToolStripButton.Image = IconManager.Get("language", IconSize.IconLarge, res)
+
+        FontToolStripButton.Image = IconManager.Get("font", IconSize.IconLarge, res)
+
+        BoldToolStripButton.Image = IconManager.Get("format-text-bold", IconSize.IconLarge, res)
+        ItalicToolStripButton.Image = IconManager.Get("format-text-italic", IconSize.IconLarge, res)
+        UnderlineToolStripButton.Image = IconManager.Get("format-text-underline", IconSize.IconLarge, res)
+        StrikeToolStripButton.Image = IconManager.Get("format-text-strikethrough", IconSize.IconLarge, res)
+
+        AlignLeftToolStripButton.Image = IconManager.Get("format-justify-left", IconSize.IconLarge, res)
+        AlignCenterToolStripButton.Image = IconManager.Get("format-justify-center", IconSize.IconLarge, res)
+        AlignRightToolStripButton.Image = IconManager.Get("format-justify-right", IconSize.IconLarge, res)
+
+        IndentToolStripButton.Image = IconManager.Get("format-indent-more", IconSize.IconLarge, res)
+
+        ' File Menu
+
+    End Sub
+
     Public Sub ModifiedHandler(sender As Object, e As EventArgs)
         CurrentDocument.Modified = True
     End Sub
@@ -374,6 +409,7 @@ Public Class frmMain
 
         CharTool.Show()
         CharTool.Owner = Me
+        SetIcons()
     End Sub
 
     Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles MainToolStripContainer.TopToolStripPanel.Paint,
