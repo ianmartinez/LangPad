@@ -78,34 +78,41 @@ Public Class frmMain
         Dim res As IconResolution = GetIconResolution()
 
         ' Toolstrip
-        NewToolStripButton.Image = IconManager.Get("document-new", IconSize.IconLarge, res)
-        OpenToolStripButton.Image = IconManager.Get("document-open", IconSize.IconLarge, res)
-        SaveToolStripButton.Image = IconManager.Get("document-save", IconSize.IconLarge, res)
+        NewToolStripButton.Image = IconManager.Get("document-new", IconSize.Large, res)
+        OpenToolStripButton.Image = IconManager.Get("document-open", IconSize.Large, res)
+        SaveToolStripButton.Image = IconManager.Get("document-save", IconSize.Large, res)
 
-        CutToolStripButton.Image = IconManager.Get("edit-cut", IconSize.IconLarge, res)
-        CopyToolStripButton.Image = IconManager.Get("edit-copy", IconSize.IconLarge, res)
-        PasteToolStripButton.Image = IconManager.Get("edit-paste", IconSize.IconLarge, res)
-        PastePlainToolStripButton.Image = IconManager.Get("filetype-text", IconSize.IconLarge, res)
+        CutToolStripButton.Image = IconManager.Get("edit-cut", IconSize.Large, res)
+        CopyToolStripButton.Image = IconManager.Get("edit-copy", IconSize.Large, res)
+        PasteToolStripButton.Image = IconManager.Get("edit-paste", IconSize.Large, res)
+        PastePlainToolStripButton.Image = IconManager.Get("filetype-text", IconSize.Large, res)
 
-        UndoToolStripButton.Image = IconManager.Get("edit-undo", IconSize.IconLarge, res)
-        RedoToolStripButton.Image = IconManager.Get("edit-redo", IconSize.IconLarge, res)
+        UndoToolStripButton.Image = IconManager.Get("edit-undo", IconSize.Large, res)
+        RedoToolStripButton.Image = IconManager.Get("edit-redo", IconSize.Large, res)
 
-        CharacterEditorToolStripButton.Image = IconManager.Get("language", IconSize.IconLarge, res)
+        CharacterEditorToolStripButton.Image = IconManager.Get("language", IconSize.Large, res)
 
-        FontToolStripButton.Image = IconManager.Get("font", IconSize.IconLarge, res)
+        FontToolStripButton.Image = IconManager.Get("font", IconSize.Large, res)
 
-        BoldToolStripButton.Image = IconManager.Get("format-text-bold", IconSize.IconLarge, res)
-        ItalicToolStripButton.Image = IconManager.Get("format-text-italic", IconSize.IconLarge, res)
-        UnderlineToolStripButton.Image = IconManager.Get("format-text-underline", IconSize.IconLarge, res)
-        StrikeToolStripButton.Image = IconManager.Get("format-text-strikethrough", IconSize.IconLarge, res)
+        BoldToolStripButton.Image = IconManager.Get("format-text-bold", IconSize.Large, res)
+        ItalicToolStripButton.Image = IconManager.Get("format-text-italic", IconSize.Large, res)
+        UnderlineToolStripButton.Image = IconManager.Get("format-text-underline", IconSize.Large, res)
+        StrikeToolStripButton.Image = IconManager.Get("format-text-strikethrough", IconSize.Large, res)
 
-        AlignLeftToolStripButton.Image = IconManager.Get("format-justify-left", IconSize.IconLarge, res)
-        AlignCenterToolStripButton.Image = IconManager.Get("format-justify-center", IconSize.IconLarge, res)
-        AlignRightToolStripButton.Image = IconManager.Get("format-justify-right", IconSize.IconLarge, res)
+        AlignLeftToolStripButton.Image = IconManager.Get("format-justify-left", IconSize.Large, res)
+        AlignCenterToolStripButton.Image = IconManager.Get("format-justify-center", IconSize.Large, res)
+        AlignRightToolStripButton.Image = IconManager.Get("format-justify-right", IconSize.Large, res)
 
-        IndentToolStripButton.Image = IconManager.Get("format-indent-more", IconSize.IconLarge, res)
+        IndentToolStripButton.Image = IconManager.Get("format-indent-more", IconSize.Large, res)
 
         ' File Menu
+        NewToolStripMenuItem.Image = IconManager.Get("document-new", IconSize.Small, res)
+        OpenToolStripMenuItem.Image = IconManager.Get("document-open", IconSize.Small, res)
+        SaveToolStripMenuItem.Image = IconManager.Get("document-save", IconSize.Small, res)
+        SaveAsToolStripMenuItem.Image = IconManager.Get("document-save-as", IconSize.Small, res)
+        PrintToolStripMenuItem.Image = IconManager.Get("document-print", IconSize.Small, res)
+        PageSetupToolStripMenuItem.Image = IconManager.Get("tool-measure", IconSize.Small, res)
+        PrintPreviewToolStripMenuItem.Image = IconManager.Get("document-print-preview", IconSize.Small, res)
 
     End Sub
 

@@ -165,7 +165,7 @@
     <EmbeddedResource Include="Resources\Icon24\document-print.png" />
     <EmbeddedResource Include="Resources\Icon24\document-properties.png" />
     <EmbeddedResource Include="Resources\Icon24\document-revert.png" />
-    <EmbeddedResource Include="Resources\Icon24\document-save -as.png" />
+    <EmbeddedResource Include="Resources\Icon24\document-save-as.png" />
     <EmbeddedResource Include="Resources\Icon24\document-save.png" />
     <EmbeddedResource Include="Resources\Icon24\download.png" />
     <EmbeddedResource Include="Resources\Icon24\draw-cuboid.png" />
@@ -540,7 +540,7 @@
     <EmbeddedResource Include="Resources\Icon32\document-print.png" />
     <EmbeddedResource Include="Resources\Icon32\document-properties.png" />
     <EmbeddedResource Include="Resources\Icon32\document-revert.png" />
-    <EmbeddedResource Include="Resources\Icon32\document-save -as.png" />
+    <EmbeddedResource Include="Resources\Icon32\document-save-as.png" />
     <EmbeddedResource Include="Resources\Icon32\document-save.png" />
     <EmbeddedResource Include="Resources\Icon32\download.png" />
     <EmbeddedResource Include="Resources\Icon32\draw-cuboid.png" />
@@ -915,7 +915,7 @@
     <EmbeddedResource Include="Resources\Icon48\document-print.png" />
     <EmbeddedResource Include="Resources\Icon48\document-properties.png" />
     <EmbeddedResource Include="Resources\Icon48\document-revert.png" />
-    <EmbeddedResource Include="Resources\Icon48\document-save -as.png" />
+    <EmbeddedResource Include="Resources\Icon48\document-save-as.png" />
     <EmbeddedResource Include="Resources\Icon48\document-save.png" />
     <EmbeddedResource Include="Resources\Icon48\download.png" />
     <EmbeddedResource Include="Resources\Icon48\draw-cuboid.png" />

@@ -6,7 +6,7 @@ namespace TundraLib
 {
     public enum IconSize
     {
-        IconSmall, IconLarge
+        Small, Large
     }
 
     public enum IconResolution
@@ -21,9 +21,9 @@ namespace TundraLib
             string folder;
 
             if (iconResolution == IconResolution.Normal)
-                folder = (iconSize == IconSize.IconLarge) ? "Icon32" : "Icon24";
+                folder = (iconSize == IconSize.Large) ? "Icon32" : "Icon24";
             else
-                folder = (iconSize == IconSize.IconLarge) ? "Icon48" : "Icon32";
+                folder = (iconSize == IconSize.Large) ? "Icon48" : "Icon32";
 
             var resourceName = string.Format("TundraLib.Resources.{0}.{1}.png", folder, name);
             var assembly = Assembly.GetExecutingAssembly();
