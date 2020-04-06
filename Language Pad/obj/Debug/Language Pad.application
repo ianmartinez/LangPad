@@ -4,17 +4,17 @@
   <description asmv2:publisher="Language Pad" asmv2:product="Language Pad" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Language Pad.exe.manifest" size="6666">
+    <dependentAssembly dependencyType="install" codebase="Language Pad.exe.manifest" size="6776">
       <assemblyIdentity name="Language Pad.exe" version="9.5.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lVf++fifd5imRYkBtkEBzlbuebqt96/AyRHVgHzHhzA=</dsig:DigestValue>
+        <dsig:DigestValue>g+aHv+o0MgqR+ugKIPTay5CDw8kUGoxfQQh2BZxqM+k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

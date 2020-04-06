@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="1216000">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="1216512">
       <assemblyIdentity name="Language Pad" version="9.5.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RN1bQbgMuxakNrweC0LSiPl2onK0nKHMX7PF82Ya77M=</dsig:DigestValue>
+        <dsig:DigestValue>vnY3dT2NjO9yvNdq3YAh9atUtMstuXZ9moWwaYUycd8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,17 +74,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FkeeBScfdUuT/Nx+JkgPsz62wi5L+CBw92qDzQEQeHA=</dsig:DigestValue>
+        <dsig:DigestValue>xgIpx+LaS8upeSH/iauMLcRt4twCiKvFIvT2Jc7iFX0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Language Pad.exe.config" size="2404">
+  <file name="Language Pad.exe.config" size="2445">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>JX/wE6/12fThfoh0pHMzDQ7TfHpSh685l4VMAZpqyMc=</dsig:DigestValue>
+      <dsig:DigestValue>AEAFweclDZpNfl26MjlaC4Poboyf3jDq075NQBNTYxU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Version9Icon.ico" size="151865">
@@ -98,7 +98,8 @@
   </file>
   <asmv3:application xmlns="urn:schemas-microsoft-com:asm.v1">
     <asmv3:windowsSettings xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">
-      <dpiAware>false</dpiAware>
+      <dpiAwareness xmlns="http://schemas.microsoft.com/SMI/2016/WindowsSettings">PerMonitorV2</dpiAwareness>
+      <dpiAware>true</dpiAware>
     </asmv3:windowsSettings>
   </asmv3:application>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

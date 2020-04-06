@@ -97,11 +97,10 @@ Namespace My.Resources
         '''Voiced retroflex sibilant affricate=ɖ͡ʐ
         '''Voiceless alveolo-palatal sibilant affricate=t͡ɕ
         '''Voiced alveolo-palatal sibilant affricate=d͡ʑ
+        '''Voiceless bilabial post-trilled dental stop=t̪͡ʙ̥
         '''Voiceless bilabial affricate=p͡ɸ
         '''Voiced bilabial affricate=b͡β
-        '''Voiceless labiodental affricate=p̪͡f
-        '''Voiced labiodental affricate=b̪͡v
-        '''Voiceless dental non-sib [rest of string was truncated]&quot;;.
+        '''Voiceless labiodental affricate=p̪ [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property Affricates() As String
             Get
@@ -149,11 +148,7 @@ Namespace My.Resources
         '''W circumflex=ŵ
         '''Y circumflex=ŷ
         '''Z circumflex=ẑ
-        '''A grave=à
-        '''E grave=è
-        '''I grave=ì
-        '''O grave=ò
-        '''U gra [rest of string was truncated]&quot;;.
+        '''A grav [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property Common() As String
             Get
@@ -183,7 +178,7 @@ Namespace My.Resources
         '''Voiced linguolabial stop=d̼
         '''Voiceless dental stop=t̪
         '''Voiced dental stop=d̪
-        '''Voiceless alveolar stop= [rest of string was truncated]&quot;;.
+        '''Voi [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property Consonants() As String
             Get
@@ -221,8 +216,7 @@ Namespace My.Resources
         '''Ka with descender /q/=қ
         '''Ka with vertical stroke /ɟ/=ҝ
         '''Ka with stroke /qʼ/=ҟ
-        '''Bashkir Qa/Bashkir Ka /q/=ҡ
-        '''En with descen [rest of string was truncated]&quot;;.
+        '''Bashkir Qa/Ba [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property Cyrillic() As String
             Get
@@ -234,7 +228,10 @@ Namespace My.Resources
         '''  Looks up a localized string similar to Voiceless below=◌̥
         '''Voiceless above=◌̊
         '''Voiced=◌̬
+        '''Faucalized voice=◌͈
+        '''Hollow voice=◌͚
         '''Aspirated=◌ʰ
+        '''Breathy voice/Murmured Voice=◌ʱ
         '''More rounded below=◌̹
         '''More rounded above=◌͗
         '''More rounded aside=◌˒
@@ -251,12 +248,7 @@ Namespace My.Resources
         '''Syllabic/Vocalic above=◌̍
         '''Non-syllabic/Semivowel below=◌̯
         '''Non-syllabic/Semivowel above=◌̑
-        '''Rhotic/R-colored=◌˞
-        '''Breathy voiced=◌̤
-        '''Creaky voiced=◌̰
-        '''Linguolabial=◌̼
-        '''Labialized=◌ʷ
-        '''Palatalize [rest of string was truncated]&quot;;.
+        '''Rhot [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property Diacritics() As String
             Get
@@ -464,30 +456,26 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Extra-high (top) diacritic=◌̋
-        '''Extra-high (top) bar=˥
+        '''  Looks up a localized string similar to Extra-high (top) tone diacritic=◌̋
+        '''Extra-high (top) tone bar=˥
         '''High tone diacritic=◌́
         '''High tone bar=˦
         '''Mid tone diacritic=◌̄
         '''Mid tone bar=˧
         '''Low tone diacritic=◌̀
         '''Low tone bar=˨
-        '''Extra-low (bottom) diacritic=◌̏
-        '''Extra-low (bottom) bar=˩
-        '''Rising diacritic=◌̌
-        '''Rising bar=˩˥
-        '''Falling diacritic=◌̂
-        '''Falling bar=˥˩
-        '''High rising diacritic=◌᷄
-        '''High rising bar=˦˥
-        '''Low rising diacritic=◌᷅
-        '''Low rising bar=˩˨
-        '''Rising-falling diacritic=◌᷈
-        '''Rising-falling bar=˧˦˧
-        '''Downstep=◌ꜜ
-        '''Upstep=◌ꜛ
-        '''Global rise=↗︎
-        '''Global fall=↘︎.
+        '''Extra-low (bottom) tone diacritic=◌̏
+        '''Extra-low (bottom) tone bar=˩
+        '''Rising tone diacritic=◌̌
+        '''Rising tone bar=˩˥
+        '''Falling tone diacritic=◌̂
+        '''Falling tone bar=˥˩
+        '''High rising tone diacritic=◌᷄
+        '''High rising tone bar=˦˥
+        '''Low rising tone diacritic=◌᷅
+        '''Low rising tone bar=˩˨
+        '''Rising-falling tone diacritic=◌᷈
+        '''Rising-falling tone b [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property ToneIntonation() As String
             Get
@@ -528,7 +516,7 @@ Namespace My.Resources
         '''Close central compressed vowel/High central compressed vowel=ÿ
         '''Close back unrounded vowel/High back unrounded vowel=ɯ
         '''Close back rounded vowel/High back rounded vowel=u
-        '''Close back compressed vowel/High back compressed vowel=ɯᵝ [rest of string was truncated]&quot;;.
+        '''Close back compressed vowel/High back compressed  [rest of string was truncated]&quot;;.
         '''</summary>
         Friend ReadOnly Property Vowels() As String
             Get
