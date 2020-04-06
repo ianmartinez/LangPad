@@ -9,6 +9,7 @@
         My.Settings.Updates = cbUpdates.Checked
         My.Settings.HiDPI = cbHidpi.Checked
         My.Settings.Save()
+        frmMain.SetIcons()
 
         Close()
     End Sub

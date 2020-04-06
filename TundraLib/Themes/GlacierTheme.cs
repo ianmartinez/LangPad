@@ -139,9 +139,10 @@ namespace TundraLib.Themes
             base.OnRenderSeparator(e);
 
             SolidBrush DarkLine = new SolidBrush(GlacierColors.GlacierImageMarginLine);
-            SolidBrush WhiteLine = new SolidBrush(Color.White);
-            Rectangle rect = new Rectangle(42, 3, e.Item.Width - 42, 1);
-            Rectangle rect2 = new Rectangle(42, 4, e.Item.Width - 42, 1);
+            SolidBrush WhiteLine = new SolidBrush(Color.FromArgb(100, 255, 255, 255));
+            int offset = 0;
+            Rectangle rect = new Rectangle(offset, 3, e.Item.Width - offset, 1);
+            Rectangle rect2 = new Rectangle(offset, 4, e.Item.Width - offset, 1);
             e.Graphics.FillRectangle(DarkLine, rect);
             e.Graphics.FillRectangle(WhiteLine, rect2);
         }
