@@ -2,6 +2,7 @@
 
     Private Sub dlgSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cbUpdates.Checked = My.Settings.Updates
+        cbHidpi.Checked = My.Settings.HiDPI
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click

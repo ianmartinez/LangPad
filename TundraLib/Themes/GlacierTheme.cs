@@ -140,8 +140,8 @@ namespace TundraLib.Themes
 
             SolidBrush DarkLine = new SolidBrush(GlacierColors.GlacierImageMarginLine);
             SolidBrush WhiteLine = new SolidBrush(Color.White);
-            Rectangle rect = new Rectangle(32, 3, e.Item.Width - 32, 1);
-            Rectangle rect2 = new Rectangle(32, 4, e.Item.Width - 32, 1);
+            Rectangle rect = new Rectangle(42, 3, e.Item.Width - 42, 1);
+            Rectangle rect2 = new Rectangle(42, 4, e.Item.Width - 42, 1);
             e.Graphics.FillRectangle(DarkLine, rect);
             e.Graphics.FillRectangle(WhiteLine, rect2);
         }
