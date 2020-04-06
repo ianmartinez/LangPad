@@ -46,10 +46,9 @@ Partial Class frmRTF
         Me.txtRTF.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtRTF.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRTF.ForeColor = System.Drawing.Color.Black
-        Me.txtRTF.Location = New System.Drawing.Point(0, 0)
-        Me.txtRTF.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtRTF.Location = New System.Drawing.Point(0, 1)
         Me.txtRTF.Name = "txtRTF"
-        Me.txtRTF.Size = New System.Drawing.Size(680, 476)
+        Me.txtRTF.Size = New System.Drawing.Size(1020, 735)
         Me.txtRTF.TabIndex = 1
         Me.txtRTF.Text = ""
         '
@@ -61,20 +60,20 @@ Partial Class frmRTF
         '
         'ToolStripContainer1.ContentPanel
         '
+        Me.ToolStripContainer1.ContentPanel.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.txtRTF)
-        Me.ToolStripContainer1.ContentPanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(680, 476)
+        Me.ToolStripContainer1.ContentPanel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1020, 736)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'ToolStripContainer1.LeftToolStripPanel
         '
         Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStripContainer1.Margin = New System.Windows.Forms.Padding(2)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
         '
         'ToolStripContainer1.RightToolStripPanel
         '
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(680, 505)
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(1020, 777)
         Me.ToolStripContainer1.TabIndex = 2
         Me.ToolStripContainer1.Text = "ToolStripContainer1"
         '
@@ -84,12 +83,13 @@ Partial Class frmRTF
         '
         'MainToolStrip
         '
-        Me.MainToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.MainToolStrip.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.MainToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoToolStripButton, Me.RedoToolStripButton, Me.ToolStripSeparator1, Me.CutToolStripButton, Me.CopyToolStripButton, Me.PasteToolStripButton, Me.ToolStripSeparator2, Me.RefreshToolStripButton})
         Me.MainToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.MainToolStrip.Name = "MainToolStrip"
-        Me.MainToolStrip.Size = New System.Drawing.Size(680, 29)
+        Me.MainToolStrip.Size = New System.Drawing.Size(1020, 41)
         Me.MainToolStrip.Stretch = True
         Me.MainToolStrip.TabIndex = 0
         '
@@ -100,7 +100,7 @@ Partial Class frmRTF
         Me.UndoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.UndoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.UndoToolStripButton.Name = "UndoToolStripButton"
-        Me.UndoToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.UndoToolStripButton.Size = New System.Drawing.Size(36, 36)
         Me.UndoToolStripButton.Text = "Undo"
         '
         'RedoToolStripButton
@@ -110,13 +110,13 @@ Partial Class frmRTF
         Me.RedoToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RedoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RedoToolStripButton.Name = "RedoToolStripButton"
-        Me.RedoToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.RedoToolStripButton.Size = New System.Drawing.Size(36, 36)
         Me.RedoToolStripButton.Text = "Redo"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 29)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 41)
         '
         'CutToolStripButton
         '
@@ -125,7 +125,7 @@ Partial Class frmRTF
         Me.CutToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CutToolStripButton.Name = "CutToolStripButton"
-        Me.CutToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.CutToolStripButton.Size = New System.Drawing.Size(36, 36)
         Me.CutToolStripButton.Text = "Cut"
         '
         'CopyToolStripButton
@@ -135,7 +135,7 @@ Partial Class frmRTF
         Me.CopyToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CopyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CopyToolStripButton.Name = "CopyToolStripButton"
-        Me.CopyToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.CopyToolStripButton.Size = New System.Drawing.Size(36, 36)
         Me.CopyToolStripButton.Text = "Copy"
         '
         'PasteToolStripButton
@@ -145,13 +145,13 @@ Partial Class frmRTF
         Me.PasteToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PasteToolStripButton.Name = "PasteToolStripButton"
-        Me.PasteToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.PasteToolStripButton.Size = New System.Drawing.Size(36, 36)
         Me.PasteToolStripButton.Text = "Paste"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 29)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 41)
         '
         'RefreshToolStripButton
         '
@@ -160,17 +160,16 @@ Partial Class frmRTF
         Me.RefreshToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RefreshToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RefreshToolStripButton.Name = "RefreshToolStripButton"
-        Me.RefreshToolStripButton.Size = New System.Drawing.Size(26, 26)
+        Me.RefreshToolStripButton.Size = New System.Drawing.Size(36, 36)
         Me.RefreshToolStripButton.Text = "Refresh"
         '
         'frmRTF
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(680, 505)
+        Me.ClientSize = New System.Drawing.Size(1020, 777)
         Me.Controls.Add(Me.ToolStripContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmRTF"
         Me.ShowIcon = False
         Me.Text = "RTF Editor"

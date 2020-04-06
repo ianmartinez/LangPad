@@ -1,4 +1,5 @@
 ﻿Imports System.Drawing.Drawing2D
+Imports TundraLib
 Imports TundraLib.Themes
 
 Public Class frmRTF
@@ -17,6 +18,17 @@ Public Class frmRTF
         Refresh()
     End Sub
 
+    Public Sub SetIcons()
+        Dim res As IconResolution = GetIconResolution()
+
+        UndoToolStripButton.Image = IconManager.Get("edit-undo", IconSize.Large, res)
+        RedoToolStripButton.Image = IconManager.Get("edit-redo", IconSize.Large, res)
+        CutToolStripButton.Image = IconManager.Get("edit-cut", IconSize.Large, res)
+        CopyToolStripButton.Image = IconManager.Get("edit-copy", IconSize.Large, res)
+        PasteToolStripButton.Image = IconManager.Get("edit-paste", IconSize.Large, res)
+        RefreshToolStripButton.Image = IconManager.Get("refresh", IconSize.Large, res)
+    End Sub
+
     Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
         ToolStripContainer1.BottomToolStripPanel.Paint, ToolStripContainer1.LeftToolStripPanel.Paint, ToolStripContainer1.RightToolStripPanel.Paint
         Dim g As Graphics = e.Graphics
@@ -32,6 +44,7 @@ Public Class frmRTF
 
     Private Sub frmRTF_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtRTF.Text = frmMain.SelectedDocument.Rtf
+        SetIcons()
     End Sub
 
     Private Sub UndoToolStripButton_Click(sender As Object, e As EventArgs) Handles UndoToolStripButton.Click

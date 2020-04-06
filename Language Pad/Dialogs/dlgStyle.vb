@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports TundraLib
 Imports TundraLib.ZiaFile
 
 Public Class dlgStyle
@@ -23,8 +24,24 @@ Public Class dlgStyle
         nudOffset.Value = StyleCharOffset
     End Sub
 
+    Public Sub SetIcons()
+        Dim res As IconResolution = GetIconResolution()
+
+        btnOpen.Image = IconManager.Get("document-open", IconSize.Large, res)
+        btnSave.Image = IconManager.Get("document-save", IconSize.Large, res)
+        btnDeleteAll.Image = IconManager.Get("edit-clear", IconSize.Large, res)
+
+        btnLeft.Image = IconManager.Get("format-justify-left", IconSize.Small, res)
+        btnCenter.Image = IconManager.Get("format-justify-center", IconSize.Small, res)
+        btnRight.Image = IconManager.Get("format-justify-right", IconSize.Small, res)
+        btnOffset.Image = IconManager.Get("align-vertical-center", IconSize.Small, res)
+        btnIndent.Image = IconManager.Get("format-indent-more", IconSize.Small, res)
+        btnFont.Image = IconManager.Get("font", IconSize.Small, res)
+    End Sub
+
     Private Sub dlgStyle_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ApplyStyle()
+        SetIcons()
 
         btnColor.Color = StyleColor
         btnHighlight.Color = StyleHighlight

@@ -9,7 +9,11 @@
         My.Settings.Updates = cbUpdates.Checked
         My.Settings.HiDPI = cbHidpi.Checked
         My.Settings.Save()
+
+        ' Refresh icons to DPI setting
         frmMain.SetIcons()
+        frmRTF.SetIcons()
+        dlgStyle.SetIcons()
 
         Close()
     End Sub
