@@ -66,7 +66,7 @@ namespace TundraLib.Themes
             toolStrip.ForeColor = Color.Black;
         }
 
-        // Render horizontal bakcground gradient
+        // Render horizontal background gradient
         protected override void OnRenderToolStripBackground(ToolStripRenderEventArgs e)
         {
             base.OnRenderToolStripBackground(e);
@@ -105,9 +105,9 @@ namespace TundraLib.Themes
         }
 
         // Render Checkmark 
-        protected override void OnRenderItemCheck(ToolStripItemImageRenderEventArgs e)
+       /*protected override void OnRenderItemCheck(ToolStripItemImageRenderEventArgs e)
         {
-            var imgSize = new Size(22, 22);
+            var imgSize = e.ImageRectangle.Size;
 
             if (e.Item.Image != null)
                 imgSize = e.Item.Image.Size;
@@ -131,7 +131,7 @@ namespace TundraLib.Themes
                 e.Graphics.FillRectangle(b, rect);
                 e.Graphics.FillRectangle(b2, rect2);
             }
-        }
+        }*/
 
         // Render separator
         protected override void OnRenderSeparator(ToolStripSeparatorRenderEventArgs e)

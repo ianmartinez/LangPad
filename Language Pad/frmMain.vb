@@ -91,6 +91,7 @@ Public Class frmMain
         RedoToolStripButton.Image = IconManager.Get("edit-redo", IconSize.Large, res)
 
         CharacterEditorToolStripButton.Image = IconManager.Get("language", IconSize.Large, res)
+        DictionaryToolStripButton.Image = IconManager.Get("dictionary", IconSize.Large, res)
 
         FontToolStripButton.Image = IconManager.Get("font", IconSize.Large, res)
 
@@ -111,9 +112,61 @@ Public Class frmMain
         SaveToolStripMenuItem.Image = IconManager.Get("document-save", IconSize.Small, res)
         SaveAsToolStripMenuItem.Image = IconManager.Get("document-save-as", IconSize.Small, res)
         PrintToolStripMenuItem.Image = IconManager.Get("document-print", IconSize.Small, res)
-        PageSetupToolStripMenuItem.Image = IconManager.Get("tool-measure", IconSize.Small, res)
         PrintPreviewToolStripMenuItem.Image = IconManager.Get("document-print-preview", IconSize.Small, res)
+        PageSetupToolStripMenuItem.Image = IconManager.Get("tool-measure", IconSize.Small, res)
+        RTFEditorToolStripMenuItem.Image = IconManager.Get("text-edit", IconSize.Small, res)
+        QuitToolStripMenuItem.Image = IconManager.Get("window-close", IconSize.Small, res)
 
+        ' Edit Menu
+        UndoToolStripMenuItem.Image = IconManager.Get("edit-undo", IconSize.Small, res)
+        RedoToolStripMenuItem.Image = IconManager.Get("edit-redo", IconSize.Small, res)
+        CutToolStripMenuItem.Image = IconManager.Get("edit-cut", IconSize.Small, res)
+        CopyToolStripMenuItem.Image = IconManager.Get("edit-copy", IconSize.Small, res)
+        PasteToolStripMenuItem.Image = IconManager.Get("edit-paste", IconSize.Small, res)
+        PastePlainToolStripMenuItem.Image = IconManager.Get("filetype-text", IconSize.Small, res)
+        FindToolStripMenuItem.Image = IconManager.Get("edit-find-replace", IconSize.Small, res)
+        SelectAllToolStripMenuItem.Image = IconManager.Get("edit-select-all", IconSize.Small, res)
+
+        ' View Menu
+        ZoomInToolStripMenuItem.Image = IconManager.Get("zoom-in", IconSize.Small, res)
+        ZoomOutToolStripMenuItem.Image = IconManager.Get("zoom-out", IconSize.Small, res)
+        ZoomToolStripMenuItem.Image = IconManager.Get("zoom-original", IconSize.Small, res)
+        EditZoomToolStripMenuItem.Image = IconManager.Get("zoom", IconSize.Small, res)
+
+        ' Notebook Menu
+        AddPageToolStripMenuItem.Image = IconManager.Get("list-add", IconSize.Small, res)
+        RemovePageToolStripMenuItem.Image = IconManager.Get("list-remove", IconSize.Small, res)
+        DuplicatePageToolStripMenuItem.Image = IconManager.Get("edit-copy", IconSize.Small, res)
+        ImportPageToolStripMenuItem.Image = IconManager.Get("document-import", IconSize.Small, res)
+        ExportPageToolStripMenuItem.Image = IconManager.Get("document-export", IconSize.Small, res)
+        RenamePageToolStripMenuItem.Image = IconManager.Get("edit", IconSize.Small, res)
+        DictionaryMenuItem.Image = IconManager.Get("dictionary", IconSize.Small, res)
+
+        ' Insert
+        ImageToolStripMenuItem.Image = IconManager.Get("filetype-image", IconSize.Small, res)
+
+        ' Style
+        ColorPanelToolStripMenuItem.Image = IconManager.Get("color-picker", IconSize.Small, res)
+        TextColorToolStripMenuItem.Image = IconManager.Get("fill-color", IconSize.Small, res)
+        HighlightToolStripMenuItem.Image = IconManager.Get("format-text-highlight", IconSize.Small, res)
+        InsertBulletsToolStripMenuItem.Image = IconManager.Get("list-add", IconSize.Small, res)
+        RemoveBulletsToolStripMenuItem.Image = IconManager.Get("list-remove", IconSize.Small, res)
+        EditStyleToolStripMenuItem.Image = IconManager.Get("template", IconSize.Small, res)
+
+        ' Tools
+        CharacterEditorToolStripMenuItem.Image = IconManager.Get("language", IconSize.Small, res)
+        UpdateToolStripMenuItem.Image = IconManager.Get("update", IconSize.Small, res)
+        SettingsToolStripMenuItem.Image = IconManager.Get("config", IconSize.Small, res)
+
+        ' Help
+        AboutToolStripMenuItem.Image = IconManager.Get("help", IconSize.Small, res)
+
+        ' Context Menu
+        CopyContextMenuItem.Image = IconManager.Get("edit-copy", IconSize.Small, res)
+        PasteContextMenuItem.Image = IconManager.Get("edit-paste", IconSize.Small, res)
+        PastePlainContextMenuItem.Image = IconManager.Get("filetype-text", IconSize.Small, res)
+        CutContextMenuItem.Image = IconManager.Get("edit-cut", IconSize.Small, res)
+        SelectAllContextMenuItem.Image = IconManager.Get("edit-select-all", IconSize.Small, res)
     End Sub
 
     Public Sub ModifiedHandler(sender As Object, e As EventArgs)
@@ -1238,5 +1291,17 @@ Public Class frmMain
         Else
             CharTool.Visible = True
         End If
+    End Sub
+
+    Private Sub QuitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuitToolStripMenuItem.Click
+        Close()
+    End Sub
+
+    Private Sub DictionaryToolStripButton_Click(sender As Object, e As EventArgs) Handles DictionaryToolStripButton.Click
+        DictionaryMenuItem_Click(Me, e)
+    End Sub
+
+    Private Sub PastePlainContextMenuItem_Click(sender As Object, e As EventArgs) Handles PastePlainContextMenuItem.Click
+        PastePlainToolStripMenuItem_Click(Me, e)
     End Sub
 End Class

@@ -1,9 +1,9 @@
 ﻿ Version 9.5 (April 12, 2020)
    • Full HiDPI support
    • Use Taiga icon pack
-   • Bug fixes
    • Export to new Thorn Writer format
    • Export to HTML
+   • Bug fixes
 
 Version 9.4 (April 24, 2019)
    • Redesign symbols panel
