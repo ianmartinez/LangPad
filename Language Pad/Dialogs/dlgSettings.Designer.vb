@@ -26,6 +26,7 @@ Partial Class dlgSettings
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.cbHidpi = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -34,9 +35,10 @@ Partial Class dlgSettings
         Me.cbUpdates.AutoSize = True
         Me.cbUpdates.Checked = True
         Me.cbUpdates.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbUpdates.Location = New System.Drawing.Point(31, 30)
+        Me.cbUpdates.Location = New System.Drawing.Point(46, 46)
+        Me.cbUpdates.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cbUpdates.Name = "cbUpdates"
-        Me.cbUpdates.Size = New System.Drawing.Size(163, 17)
+        Me.cbUpdates.Size = New System.Drawing.Size(241, 24)
         Me.cbUpdates.TabIndex = 8
         Me.cbUpdates.Text = "Check for updates on startup"
         Me.cbUpdates.UseVisualStyleBackColor = True
@@ -49,21 +51,21 @@ Partial Class dlgSettings
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(72, 68)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(108, 134)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 29)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(219, 45)
         Me.TableLayoutPanel1.TabIndex = 75
         '
         'btnOK
         '
         Me.btnOK.BackColor = System.Drawing.Color.Transparent
         Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOK.Location = New System.Drawing.Point(2, 2)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnOK.Location = New System.Drawing.Point(3, 3)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(69, 25)
+        Me.btnOK.Size = New System.Drawing.Size(103, 39)
         Me.btnOK.TabIndex = 1
         Me.btnOK.Text = "OK"
         Me.btnOK.UseVisualStyleBackColor = False
@@ -73,24 +75,36 @@ Partial Class dlgSettings
         Me.btnCancel.BackColor = System.Drawing.Color.Transparent
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCancel.Location = New System.Drawing.Point(75, 2)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCancel.Location = New System.Drawing.Point(112, 3)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(69, 25)
+        Me.btnCancel.Size = New System.Drawing.Size(104, 39)
         Me.btnCancel.TabIndex = 0
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
+        'cbHidpi
+        '
+        Me.cbHidpi.AutoSize = True
+        Me.cbHidpi.Location = New System.Drawing.Point(46, 80)
+        Me.cbHidpi.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cbHidpi.Name = "cbHidpi"
+        Me.cbHidpi.Size = New System.Drawing.Size(200, 24)
+        Me.cbHidpi.TabIndex = 76
+        Me.cbHidpi.Text = "Use large icons (HiDPI)"
+        Me.cbHidpi.UseVisualStyleBackColor = True
+        '
         'dlgSettings
         '
         Me.AcceptButton = Me.btnOK
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(225, 105)
+        Me.ClientSize = New System.Drawing.Size(338, 191)
+        Me.Controls.Add(Me.cbHidpi)
         Me.Controls.Add(Me.cbUpdates)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "dlgSettings"
@@ -106,4 +120,5 @@ Partial Class dlgSettings
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents btnOK As Button
     Friend WithEvents btnCancel As Button
+    Friend WithEvents cbHidpi As CheckBox
 End Class

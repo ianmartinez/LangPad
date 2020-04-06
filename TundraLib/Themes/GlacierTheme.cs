@@ -23,7 +23,7 @@ namespace TundraLib.Themes
 
         public static Color GlacierVerBG_GrayBlue = Color.FromArgb(255, 196, 203, 219);
         public static Color GlacierVerBG_White = Color.FromArgb(255, 250, 250, 250);
-        public static Color GlacierVerBG_Shadow = Color.FromArgb(255, 203, 204, 205);
+        public static Color GlacierVerBG_Shadow = Color.FromArgb(255, 245, 245, 245);
 
         public static Color GlacierToolstripBtnGrad_Blue = Color.FromArgb(255, 223, 242, 252);
         public static Color GlacierToolstripBtnGrad_White = Color.FromArgb(255, 223, 242, 252);
@@ -31,8 +31,8 @@ namespace TundraLib.Themes
         public static Color GlacierToolstripBtnGrad_Blue_Pressed = Color.FromArgb(255, 124, 177, 204);
         public static Color GlacierToolstripBtnGrad_White_Pressed = Color.FromArgb(255, 228, 245, 252);
 
-        public static Color GlacierHorBG_Color1 = Color.FromArgb(255, 233, 234, 235);
-        public static Color GlacierHorBG_Color2 = Color.FromArgb(255, 213, 214, 215);
+        public static Color GlacierHorBG_Color1 = Color.FromArgb(0, 250, 250, 250);
+        public static Color GlacierHorBG_Color2 = Color.FromArgb(0, 242, 242, 242);
 
         public static Color GlacierImageMarginBG_Color1 = Color.FromArgb(255, 218, 218, 218);
         public static Color GlacierImageMarginBG_Color2 = Color.FromArgb(255, 238, 238, 238);
@@ -71,7 +71,7 @@ namespace TundraLib.Themes
         {
             base.OnRenderToolStripBackground(e);
 
-            LinearGradientBrush b = new LinearGradientBrush(e.AffectedBounds, Color.FromArgb(255, 233, 233, 233), Color.FromArgb(255, 233, 233, 233), LinearGradientMode.Vertical);
+            LinearGradientBrush b = new LinearGradientBrush(e.AffectedBounds, Color.FromArgb(255, 255, 255, 255), Color.FromArgb(255, 245, 245, 245), LinearGradientMode.Vertical);
             e.Graphics.FillRectangle(b, e.AffectedBounds);
         }
 

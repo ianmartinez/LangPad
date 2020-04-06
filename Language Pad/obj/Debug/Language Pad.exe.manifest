@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="1216512">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Language Pad.exe" size="1235968">
       <assemblyIdentity name="Language Pad" version="9.5.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vnY3dT2NjO9yvNdq3YAh9atUtMstuXZ9moWwaYUycd8=</dsig:DigestValue>
+        <dsig:DigestValue>VWvnBpJ9u3IX1Hd5zfYoF/+CV9cHLrUXvFIQw3xlDxQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -67,24 +67,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TundraLib.dll" size="40448">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TundraLib.dll" size="41984">
       <assemblyIdentity name="TundraLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xgIpx+LaS8upeSH/iauMLcRt4twCiKvFIvT2Jc7iFX0=</dsig:DigestValue>
+        <dsig:DigestValue>pT6WqO4ym6Xn6/x3tnYQ5cRWMZ81BSUhRVvBr5H2ugU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Language Pad.exe.config" size="2445">
+  <file name="Language Pad.exe.config" size="2565">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>AEAFweclDZpNfl26MjlaC4Poboyf3jDq075NQBNTYxU=</dsig:DigestValue>
+      <dsig:DigestValue>MuhLZnb0rdfMCe46cZMejdqYA6cFDNhlzBpHHSaJ/sA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Version9Icon.ico" size="151865">

@@ -101,6 +101,18 @@ Namespace My
                 Me("SmartReplace") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property HiDPI() As Boolean
+            Get
+                Return CType(Me("HiDPI"),Boolean)
+            End Get
+            Set
+                Me("HiDPI") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

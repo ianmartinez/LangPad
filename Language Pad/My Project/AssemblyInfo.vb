@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("Ian Martinez")>
 <Assembly: AssemblyProduct("Language Pad")>
-<Assembly: AssemblyCopyright("Copyright © 2019 Ian Martinez")>
+<Assembly: AssemblyCopyright("Copyright © 2020 Ian Martinez")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

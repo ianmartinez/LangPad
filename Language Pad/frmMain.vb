@@ -16,6 +16,7 @@ Public Class frmMain
     Public Notebook As New List(Of String)
     Public Moving As Boolean = False
     Public DisableFontChange As Boolean
+
     Public Sub SaveTabs()
         For i = 0 To tcNotebook.TabPages.Count - 1
             CurrentDocument.Pages.Item(i).RTF = rtbList.Item(i).Rtf
@@ -236,8 +237,7 @@ Public Class frmMain
         VerticalMenuGradient = Theme.VerticalMenuGradient
 
         MainMenu.Renderer = Theme.GetMenuRenderer()
-        FileToolStrip.Renderer = Theme.GetToolStripRenderer()
-        FontToolStrip.Renderer = Theme.GetToolStripRenderer()
+        MainToolStrip.Renderer = Theme.GetToolStripRenderer()
         DataToolStrip.Renderer = Theme.GetToolStripRenderer()
         cmsMain.Renderer = Theme.GetMenuRenderer()
         frmRTF.SetTheme(Theme)
@@ -357,8 +357,7 @@ Public Class frmMain
 
         IndentToolStripComboBox.SelectedItem = 1
 
-        FileToolStrip.Location = New Point(0, 0)
-        FontToolStrip.Location = New Point(FileToolStrip.Left + FileToolStrip.Width, 0)
+        MainToolStrip.Location = New Point(0, 0)
 
         dlgColor.FullOpen = True
         StartupTheme = New GlacierTheme()
@@ -1028,10 +1027,6 @@ Public Class frmMain
         dlgAbout.ShowDialog()
     End Sub
 
-    Private Sub FontCombo_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
         NewToolStripMenuItem_Click(Me, e)
     End Sub
@@ -1085,7 +1080,7 @@ Public Class frmMain
         DisableFontChange = False
     End Sub
 
-    Private Sub AlignLeftToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignLeftToolStripButton.Click
+    Private Sub AlignLeftToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignRightToolStripButton.Click
         SelectedDocument.SelectionAlignment = HorizontalAlignment.Left
     End Sub
 
@@ -1144,11 +1139,7 @@ Public Class frmMain
     End Sub
 
     Private Sub ToggleCommonToolbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleCommonToolbarToolStripMenuItem.Click
-        FileToolStrip.Visible = FileToolStrip.Visible Xor True
-    End Sub
-
-    Private Sub ToogleFormattingToolbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToogleFormattingToolbarToolStripMenuItem.Click
-        FontToolStrip.Visible = FontToolStrip.Visible Xor True
+        MainToolStrip.Visible = MainToolStrip.Visible Xor True
     End Sub
 
     Private Sub ToggleStatusbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleStatusbarToolStripMenuItem.Click
@@ -1190,9 +1181,6 @@ Public Class frmMain
                                     End Function
     End Sub
 
-    Private Sub frmMain_Deactivate(sender As Object, e As EventArgs) Handles MyBase.Deactivate
-    End Sub
-
     Private Sub CharacterEditorToolStripButton_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripButton.Click
         CharacterEditorToolStripMenuItem_Click(Me, e)
     End Sub
@@ -1207,9 +1195,5 @@ Public Class frmMain
         Else
             CharTool.Visible = True
         End If
-    End Sub
-
-    Private Sub ExportToThornWriterToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
     End Sub
 End Class

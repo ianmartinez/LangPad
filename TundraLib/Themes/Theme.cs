@@ -91,10 +91,10 @@ namespace TundraLib.Themes
     {
         public GlacierTheme() : base("Glacier")
         {
-            Color1 = Color.FromArgb(255, 233, 233, 233);
-            Color2 = Color.FromArgb(255, 233, 233, 233);
+            Color1 = Color.FromArgb(255, 255, 255, 255);
+            Color2 = Color.FromArgb(255, 255, 255, 255);
             DialogBack = SystemColors.Control;
-            PanelBack = Color.FromArgb(255, 243, 244, 245);
+            PanelBack = Color.FromArgb(255, 245, 245, 245);
 
             VerticalMenuGradient = true;
         }

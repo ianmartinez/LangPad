@@ -6,6 +6,7 @@
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
         My.Settings.Updates = cbUpdates.Checked
+        My.Settings.HiDPI = cbHidpi.Checked
         My.Settings.Save()
 
         Close()
