@@ -1,4 +1,9 @@
-﻿Version 9.5 (August 22, 2019)
+﻿ Version 9.6 (March 12, 2020)
+   • Full HiDPI support
+   • Use Taiga icon pack
+   • Bug fixes
+ 
+ Version 9.5 (August 22, 2019)
    • Export to new Thorn Writer format
    • Export to HTML
 
