@@ -19,6 +19,7 @@ Public Class CharacterEditor
         FileToolStrip.Renderer = Theme.GetToolStripRenderer()
         LocalToolStrip.Renderer = Theme.GetToolStripRenderer()
         SearchToolStrip.Renderer = Theme.GetToolStripRenderer()
+        menuCharButton.Renderer = Theme.GetMenuRenderer()
 
         Refresh()
     End Sub

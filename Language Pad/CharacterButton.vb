@@ -2,7 +2,6 @@
     Inherits Button
     Private components As System.ComponentModel.IContainer
     Private ttIPa As New IPAToolTip
-
     Public Sub New(Optional CharName = "", Optional MultiLine = True)
         Dim IPAFont = New Font("Calibri", 11, FontStyle.Bold)
         Dim IPAPadding = New Padding(0)

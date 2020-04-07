@@ -644,7 +644,6 @@ Partial Class CharacterEditor
         'SearchQueryTextBox
         '
         Me.SearchQueryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SearchQueryTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SearchQueryTextBox.Name = "SearchQueryTextBox"
         Me.SearchQueryTextBox.Size = New System.Drawing.Size(180, 41)
         '
@@ -864,7 +863,7 @@ Partial Class CharacterEditor
         Me.menuCharButton.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.menuCharButton.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToEditorCharacterMenuItem, Me.ReplaceEditorCharacterMenuItem, Me.ToolStripSeparator1, Me.CopyToClipboardMenuItem, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem, Me.RemoveCharSplitter, Me.RemoveToolStripMenuItem})
         Me.menuCharButton.Name = "menuCharButton"
-        Me.menuCharButton.Size = New System.Drawing.Size(276, 208)
+        Me.menuCharButton.Size = New System.Drawing.Size(276, 241)
         '
         'AddToEditorCharacterMenuItem
         '
