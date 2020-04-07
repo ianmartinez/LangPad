@@ -112,8 +112,8 @@ Public Class frmMain
         SaveToolStripMenuItem.Image = IconManager.Get("document-save", IconSize.Small, res)
         SaveAsToolStripMenuItem.Image = IconManager.Get("document-save-as", IconSize.Small, res)
         PrintToolStripMenuItem.Image = IconManager.Get("document-print", IconSize.Small, res)
-        PageSetupToolStripMenuItem.Image = IconManager.Get("document-page-setup", IconSize.Small, res)
         PrintPreviewToolStripMenuItem.Image = IconManager.Get("document-print-preview", IconSize.Small, res)
+        PageSetupToolStripMenuItem.Image = IconManager.Get("document-page-setup", IconSize.Small, res)
         RTFEditorToolStripMenuItem.Image = IconManager.Get("text-edit", IconSize.Small, res)
         QuitToolStripMenuItem.Image = IconManager.Get("window-close", IconSize.Small, res)
 
@@ -1234,7 +1234,7 @@ Public Class frmMain
         SplitLayoutPanel.Panel2Collapsed = SplitLayoutPanel.Panel2Collapsed Xor True
     End Sub
 
-    Private Sub ToggleCommonToolbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleCommonToolbarToolStripMenuItem.Click
+    Private Sub ToggleToolbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleToolbarToolStripMenuItem.Click
         MainToolStrip.Visible = MainToolStrip.Visible Xor True
     End Sub
 

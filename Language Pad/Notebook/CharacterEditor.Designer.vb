@@ -153,7 +153,7 @@ Partial Class CharacterEditor
         Me.tcCharacters.Multiline = True
         Me.tcCharacters.Name = "tcCharacters"
         Me.tcCharacters.SelectedIndex = 0
-        Me.tcCharacters.Size = New System.Drawing.Size(510, 658)
+        Me.tcCharacters.Size = New System.Drawing.Size(510, 282)
         Me.tcCharacters.TabIndex = 74
         '
         'tpLocal
@@ -163,7 +163,7 @@ Partial Class CharacterEditor
         Me.tpLocal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tpLocal.Name = "tpLocal"
         Me.tpLocal.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tpLocal.Size = New System.Drawing.Size(502, 625)
+        Me.tpLocal.Size = New System.Drawing.Size(502, 249)
         Me.tpLocal.TabIndex = 1
         Me.tpLocal.Text = "Local"
         Me.tpLocal.UseVisualStyleBackColor = True
@@ -174,11 +174,11 @@ Partial Class CharacterEditor
         'LocalToolStripContainer.ContentPanel
         '
         Me.LocalToolStripContainer.ContentPanel.Controls.Add(Me.LocalCharPanel)
-        Me.LocalToolStripContainer.ContentPanel.Size = New System.Drawing.Size(494, 574)
+        Me.LocalToolStripContainer.ContentPanel.Size = New System.Drawing.Size(494, 198)
         Me.LocalToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LocalToolStripContainer.Location = New System.Drawing.Point(4, 5)
         Me.LocalToolStripContainer.Name = "LocalToolStripContainer"
-        Me.LocalToolStripContainer.Size = New System.Drawing.Size(494, 615)
+        Me.LocalToolStripContainer.Size = New System.Drawing.Size(494, 239)
         Me.LocalToolStripContainer.TabIndex = 83
         '
         'LocalToolStripContainer.TopToolStripPanel
@@ -194,7 +194,7 @@ Partial Class CharacterEditor
         Me.LocalCharPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.LocalCharPanel.Name = "LocalCharPanel"
         Me.LocalCharPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.LocalCharPanel.Size = New System.Drawing.Size(494, 574)
+        Me.LocalCharPanel.Size = New System.Drawing.Size(494, 198)
         Me.LocalCharPanel.TabIndex = 10
         '
         'LocalToolStrip
@@ -480,7 +480,7 @@ Partial Class CharacterEditor
         Me.AffricatesTabPage.Controls.Add(Me.AffricatesLayoutPanel)
         Me.AffricatesTabPage.Location = New System.Drawing.Point(4, 29)
         Me.AffricatesTabPage.Name = "AffricatesTabPage"
-        Me.AffricatesTabPage.Size = New System.Drawing.Size(486, 367)
+        Me.AffricatesTabPage.Size = New System.Drawing.Size(486, 582)
         Me.AffricatesTabPage.TabIndex = 5
         Me.AffricatesTabPage.Text = "Affricates"
         Me.AffricatesTabPage.UseVisualStyleBackColor = True
@@ -494,7 +494,7 @@ Partial Class CharacterEditor
         Me.AffricatesLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.AffricatesLayoutPanel.Name = "AffricatesLayoutPanel"
         Me.AffricatesLayoutPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(486, 367)
+        Me.AffricatesLayoutPanel.Size = New System.Drawing.Size(486, 582)
         Me.AffricatesLayoutPanel.TabIndex = 8
         '
         'VowelsTabPage
@@ -502,7 +502,7 @@ Partial Class CharacterEditor
         Me.VowelsTabPage.Controls.Add(Me.VowelsLayoutPanel)
         Me.VowelsTabPage.Location = New System.Drawing.Point(4, 29)
         Me.VowelsTabPage.Name = "VowelsTabPage"
-        Me.VowelsTabPage.Size = New System.Drawing.Size(486, 367)
+        Me.VowelsTabPage.Size = New System.Drawing.Size(486, 582)
         Me.VowelsTabPage.TabIndex = 1
         Me.VowelsTabPage.Text = "Vowels"
         Me.VowelsTabPage.UseVisualStyleBackColor = True
@@ -516,7 +516,7 @@ Partial Class CharacterEditor
         Me.VowelsLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.VowelsLayoutPanel.Name = "VowelsLayoutPanel"
         Me.VowelsLayoutPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(486, 367)
+        Me.VowelsLayoutPanel.Size = New System.Drawing.Size(486, 582)
         Me.VowelsLayoutPanel.TabIndex = 8
         '
         'ToneIntonationTabPage
@@ -524,7 +524,7 @@ Partial Class CharacterEditor
         Me.ToneIntonationTabPage.Controls.Add(Me.ToneIntonationLayoutPanel)
         Me.ToneIntonationTabPage.Location = New System.Drawing.Point(4, 29)
         Me.ToneIntonationTabPage.Name = "ToneIntonationTabPage"
-        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(486, 367)
+        Me.ToneIntonationTabPage.Size = New System.Drawing.Size(486, 582)
         Me.ToneIntonationTabPage.TabIndex = 4
         Me.ToneIntonationTabPage.Text = "Tones"
         Me.ToneIntonationTabPage.UseVisualStyleBackColor = True
@@ -538,7 +538,7 @@ Partial Class CharacterEditor
         Me.ToneIntonationLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.ToneIntonationLayoutPanel.Name = "ToneIntonationLayoutPanel"
         Me.ToneIntonationLayoutPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(486, 367)
+        Me.ToneIntonationLayoutPanel.Size = New System.Drawing.Size(486, 582)
         Me.ToneIntonationLayoutPanel.TabIndex = 10
         '
         'DiacriticsTabPage
@@ -546,7 +546,7 @@ Partial Class CharacterEditor
         Me.DiacriticsTabPage.Controls.Add(Me.DiacriticsLayoutPanel)
         Me.DiacriticsTabPage.Location = New System.Drawing.Point(4, 29)
         Me.DiacriticsTabPage.Name = "DiacriticsTabPage"
-        Me.DiacriticsTabPage.Size = New System.Drawing.Size(486, 367)
+        Me.DiacriticsTabPage.Size = New System.Drawing.Size(486, 582)
         Me.DiacriticsTabPage.TabIndex = 2
         Me.DiacriticsTabPage.Text = "Diacritics"
         Me.DiacriticsTabPage.UseVisualStyleBackColor = True
@@ -560,7 +560,7 @@ Partial Class CharacterEditor
         Me.DiacriticsLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.DiacriticsLayoutPanel.Name = "DiacriticsLayoutPanel"
         Me.DiacriticsLayoutPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.DiacriticsLayoutPanel.Size = New System.Drawing.Size(486, 367)
+        Me.DiacriticsLayoutPanel.Size = New System.Drawing.Size(486, 582)
         Me.DiacriticsLayoutPanel.TabIndex = 8
         '
         'TabPage1
@@ -570,7 +570,7 @@ Partial Class CharacterEditor
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TabPage1.Size = New System.Drawing.Size(486, 367)
+        Me.TabPage1.Size = New System.Drawing.Size(486, 582)
         Me.TabPage1.TabIndex = 6
         Me.TabPage1.Text = "Suprasegmentals"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -584,7 +584,7 @@ Partial Class CharacterEditor
         Me.SuprasegmentalsLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.SuprasegmentalsLayoutPanel.Name = "SuprasegmentalsLayoutPanel"
         Me.SuprasegmentalsLayoutPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.SuprasegmentalsLayoutPanel.Size = New System.Drawing.Size(478, 357)
+        Me.SuprasegmentalsLayoutPanel.Size = New System.Drawing.Size(478, 572)
         Me.SuprasegmentalsLayoutPanel.TabIndex = 9
         '
         'tpSearch
@@ -680,7 +680,7 @@ Partial Class CharacterEditor
         Me.pnlModifyChar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.pnlModifyChar.Name = "pnlModifyChar"
         Me.pnlModifyChar.Padding = New System.Windows.Forms.Padding(9)
-        Me.pnlModifyChar.Size = New System.Drawing.Size(510, 398)
+        Me.pnlModifyChar.Size = New System.Drawing.Size(510, 420)
         Me.pnlModifyChar.TabIndex = 75
         '
         'gbAccents
@@ -691,7 +691,7 @@ Partial Class CharacterEditor
         Me.gbAccents.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.gbAccents.Name = "gbAccents"
         Me.gbAccents.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.gbAccents.Size = New System.Drawing.Size(492, 139)
+        Me.gbAccents.Size = New System.Drawing.Size(492, 161)
         Me.gbAccents.TabIndex = 78
         Me.gbAccents.TabStop = False
         Me.gbAccents.Text = "Accent Marks"
@@ -705,7 +705,7 @@ Partial Class CharacterEditor
         Me.AccentsLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.AccentsLayoutPanel.Name = "AccentsLayoutPanel"
         Me.AccentsLayoutPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(484, 110)
+        Me.AccentsLayoutPanel.Size = New System.Drawing.Size(484, 132)
         Me.AccentsLayoutPanel.TabIndex = 10
         '
         'GroupBox1
@@ -927,8 +927,8 @@ Partial Class CharacterEditor
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.tcCharacters)
-        Me.SplitContainer1.Size = New System.Drawing.Size(510, 1062)
-        Me.SplitContainer1.SplitterDistance = 398
+        Me.SplitContainer1.Size = New System.Drawing.Size(510, 708)
+        Me.SplitContainer1.SplitterDistance = 420
         Me.SplitContainer1.SplitterWidth = 6
         Me.SplitContainer1.TabIndex = 76
         '
@@ -949,7 +949,7 @@ Partial Class CharacterEditor
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MinimumSize = New System.Drawing.Size(510, 0)
         Me.Name = "CharacterEditor"
-        Me.Size = New System.Drawing.Size(340, 708)
+        Me.Size = New System.Drawing.Size(510, 708)
         Me.tcCharacters.ResumeLayout(False)
         Me.tpLocal.ResumeLayout(False)
         Me.LocalToolStripContainer.ContentPanel.ResumeLayout(False)

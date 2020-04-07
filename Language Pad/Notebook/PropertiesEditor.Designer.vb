@@ -242,39 +242,39 @@ Partial Class PropertiesEditor
         '
         Me.Label4.AutoSize = True
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Location = New System.Drawing.Point(13, 312)
+        Me.Label4.Location = New System.Drawing.Point(23, 312)
         Me.Label4.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(396, 20)
+        Me.Label4.Size = New System.Drawing.Size(376, 20)
         Me.Label4.TabIndex = 78
         Me.Label4.Text = "Info:"
         '
         'txtInfo
         '
         Me.txtInfo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtInfo.Location = New System.Drawing.Point(13, 341)
+        Me.txtInfo.Location = New System.Drawing.Point(23, 341)
         Me.txtInfo.Margin = New System.Windows.Forms.Padding(3, 6, 3, 6)
         Me.txtInfo.Multiline = True
         Me.txtInfo.Name = "txtInfo"
         Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo.Size = New System.Drawing.Size(396, 115)
+        Me.txtInfo.Size = New System.Drawing.Size(376, 115)
         Me.txtInfo.TabIndex = 5
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Location = New System.Drawing.Point(13, 202)
+        Me.Label3.Location = New System.Drawing.Point(23, 202)
         Me.Label3.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(396, 20)
+        Me.Label3.Size = New System.Drawing.Size(376, 20)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Website:"
         '
         'btnGo
         '
         Me.btnGo.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btnGo.Location = New System.Drawing.Point(302, 0)
+        Me.btnGo.Location = New System.Drawing.Point(282, 0)
         Me.btnGo.Margin = New System.Windows.Forms.Padding(3, 3, 0, 3)
         Me.btnGo.MinimumSize = New System.Drawing.Size(80, 0)
         Me.btnGo.Name = "btnGo"
@@ -286,58 +286,58 @@ Partial Class PropertiesEditor
         'txtWebsite
         '
         Me.txtWebsite.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtWebsite.Location = New System.Drawing.Point(13, 231)
+        Me.txtWebsite.Location = New System.Drawing.Point(23, 231)
         Me.txtWebsite.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.txtWebsite.Name = "txtWebsite"
-        Me.txtWebsite.Size = New System.Drawing.Size(396, 26)
+        Me.txtWebsite.Size = New System.Drawing.Size(376, 26)
         Me.txtWebsite.TabIndex = 3
         '
         'txtLanguage
         '
         Me.txtLanguage.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtLanguage.Location = New System.Drawing.Point(13, 103)
+        Me.txtLanguage.Location = New System.Drawing.Point(23, 103)
         Me.txtLanguage.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.txtLanguage.Name = "txtLanguage"
-        Me.txtLanguage.Size = New System.Drawing.Size(396, 26)
+        Me.txtLanguage.Size = New System.Drawing.Size(376, 26)
         Me.txtLanguage.TabIndex = 80
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Location = New System.Drawing.Point(13, 74)
+        Me.Label5.Location = New System.Drawing.Point(23, 74)
         Me.Label5.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(396, 20)
+        Me.Label5.Size = New System.Drawing.Size(376, 20)
         Me.Label5.TabIndex = 81
         Me.Label5.Text = "Language:"
         '
         'txtAuthor
         '
         Me.txtAuthor.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtAuthor.Location = New System.Drawing.Point(13, 167)
+        Me.txtAuthor.Location = New System.Drawing.Point(23, 167)
         Me.txtAuthor.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.txtAuthor.Name = "txtAuthor"
-        Me.txtAuthor.Size = New System.Drawing.Size(396, 26)
+        Me.txtAuthor.Size = New System.Drawing.Size(376, 26)
         Me.txtAuthor.TabIndex = 2
         '
         'txtTitle
         '
         Me.txtTitle.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtTitle.Location = New System.Drawing.Point(13, 39)
+        Me.txtTitle.Location = New System.Drawing.Point(23, 39)
         Me.txtTitle.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(396, 26)
+        Me.txtTitle.Size = New System.Drawing.Size(376, 26)
         Me.txtTitle.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Location = New System.Drawing.Point(13, 138)
+        Me.Label2.Location = New System.Drawing.Point(23, 138)
         Me.Label2.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(396, 20)
+        Me.Label2.Size = New System.Drawing.Size(376, 20)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Author:"
         '
@@ -345,10 +345,10 @@ Partial Class PropertiesEditor
         '
         Me.Label1.AutoSize = True
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Location = New System.Drawing.Point(13, 10)
+        Me.Label1.Location = New System.Drawing.Point(23, 10)
         Me.Label1.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(396, 20)
+        Me.Label1.Size = New System.Drawing.Size(376, 20)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Title:"
         '
@@ -370,7 +370,7 @@ Partial Class PropertiesEditor
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(10, 4, 10, 4)
+        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(20, 4, 20, 4)
         Me.TableLayoutPanel1.RowCount = 13
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
@@ -392,9 +392,9 @@ Partial Class PropertiesEditor
         '
         Me.Panel1.Controls.Add(Me.btnGo)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(13, 263)
+        Me.Panel1.Location = New System.Drawing.Point(23, 263)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(396, 40)
+        Me.Panel1.Size = New System.Drawing.Size(376, 40)
         Me.Panel1.TabIndex = 16
         '
         'PropertiesEditor
