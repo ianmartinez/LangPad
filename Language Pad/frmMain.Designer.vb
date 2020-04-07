@@ -116,8 +116,7 @@ Partial Class frmMain
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.IndentToolStripComboBox = New System.Windows.Forms.ToolStripComboBox()
         Me.IndentToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
-        Me.pnlDocumentProperties = New Language_Pad.PropertiesEditor()
+        Me.PropertiesContainerPanel = New TundraLib.DoubleBufferedPanel()
         Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
         Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
@@ -201,6 +200,7 @@ Partial Class frmMain
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.pnlDocumentProperties = New Language_Pad.PropertiesEditor()
         Me.cmsMain.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
@@ -215,7 +215,7 @@ Partial Class frmMain
         Me.pnlColor.SuspendLayout()
         Me.ColorLayoutPanel.SuspendLayout()
         Me.MainToolStrip.SuspendLayout()
-        Me.StylizedPanel1.SuspendLayout()
+        Me.PropertiesContainerPanel.SuspendLayout()
         Me.MainMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -318,18 +318,20 @@ Partial Class frmMain
         '
         Me.SplitLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitLayoutPanel.FixedPanel = System.Windows.Forms.FixedPanel.Panel2
-        Me.SplitLayoutPanel.Location = New System.Drawing.Point(0, 33)
+        Me.SplitLayoutPanel.Location = New System.Drawing.Point(0, 0)
         Me.SplitLayoutPanel.Name = "SplitLayoutPanel"
         '
         'SplitLayoutPanel.Panel1
         '
-        Me.SplitLayoutPanel.Panel1.Controls.Add(Me.MainToolStripContainer)
+        Me.SplitLayoutPanel.Panel1.Controls.Add(Me.tcNotebook)
+        Me.SplitLayoutPanel.Panel1.Controls.Add(Me.pnlFindReplace)
+        Me.SplitLayoutPanel.Panel1.Controls.Add(Me.pnlColor)
         '
         'SplitLayoutPanel.Panel2
         '
-        Me.SplitLayoutPanel.Panel2.Controls.Add(Me.StylizedPanel1)
+        Me.SplitLayoutPanel.Panel2.Controls.Add(Me.PropertiesContainerPanel)
         Me.SplitLayoutPanel.Panel2MinSize = 365
-        Me.SplitLayoutPanel.Size = New System.Drawing.Size(1731, 1033)
+        Me.SplitLayoutPanel.Size = New System.Drawing.Size(1731, 962)
         Me.SplitLayoutPanel.SplitterDistance = 1327
         Me.SplitLayoutPanel.SplitterWidth = 3
         Me.SplitLayoutPanel.TabIndex = 1
@@ -343,20 +345,18 @@ Partial Class frmMain
         '
         'MainToolStripContainer.ContentPanel
         '
-        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.tcNotebook)
-        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.pnlFindReplace)
-        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.pnlColor)
-        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1327, 962)
+        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.SplitLayoutPanel)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1731, 962)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'MainToolStripContainer.LeftToolStripPanel
         '
-        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 0)
+        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 33)
         Me.MainToolStripContainer.Name = "MainToolStripContainer"
         '
         'MainToolStripContainer.RightToolStripPanel
         '
-        Me.MainToolStripContainer.Size = New System.Drawing.Size(1327, 1033)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(1731, 1033)
         Me.MainToolStripContainer.TabIndex = 74
         '
         'MainToolStripContainer.TopToolStripPanel
@@ -371,36 +371,36 @@ Partial Class frmMain
         Me.DataToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel, Me.ToolStripSeparator11, Me.lblPageCount, Me.ToolStripSeparator12, Me.ToolStripLabel1, Me.ThemeCombo})
         Me.DataToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DataToolStrip.Name = "DataToolStrip"
-        Me.DataToolStrip.Size = New System.Drawing.Size(1327, 30)
+        Me.DataToolStrip.Size = New System.Drawing.Size(1731, 30)
         Me.DataToolStrip.Stretch = True
         Me.DataToolStrip.TabIndex = 2
         '
         'CharCountToolStripLabel
         '
         Me.CharCountToolStripLabel.Name = "CharCountToolStripLabel"
-        Me.CharCountToolStripLabel.Size = New System.Drawing.Size(158, 25)
+        Me.CharCountToolStripLabel.Size = New System.Drawing.Size(158, 33)
         Me.CharCountToolStripLabel.Text = "Character Count: 0"
         '
         'ToolStripSeparator10
         '
         Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
-        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 30)
+        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 38)
         '
         'WordCountToolStripLabel
         '
         Me.WordCountToolStripLabel.Name = "WordCountToolStripLabel"
-        Me.WordCountToolStripLabel.Size = New System.Drawing.Size(128, 25)
+        Me.WordCountToolStripLabel.Size = New System.Drawing.Size(128, 33)
         Me.WordCountToolStripLabel.Text = "Word Count: 0"
         '
         'ToolStripSeparator11
         '
         Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
-        Me.ToolStripSeparator11.Size = New System.Drawing.Size(6, 30)
+        Me.ToolStripSeparator11.Size = New System.Drawing.Size(6, 38)
         '
         'lblPageCount
         '
         Me.lblPageCount.Name = "lblPageCount"
-        Me.lblPageCount.Size = New System.Drawing.Size(122, 25)
+        Me.lblPageCount.Size = New System.Drawing.Size(122, 33)
         Me.lblPageCount.Text = "Page Count: 0"
         '
         'ToolStripSeparator12
@@ -934,10 +934,11 @@ Partial Class frmMain
         Me.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.MainToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.toolStripSeparator, Me.CutToolStripButton, Me.CopyToolStripButton, Me.PasteToolStripButton, Me.PastePlainToolStripButton, Me.toolStripSeparator2, Me.UndoToolStripButton, Me.RedoToolStripButton, Me.ToolStripSeparator9, Me.CharacterEditorToolStripButton, Me.DictionaryToolStripButton, Me.ToolStripSeparator14, Me.FontToolStripButton, Me.ToolStripSeparator15, Me.BoldToolStripButton, Me.ItalicToolStripButton, Me.UnderlineToolStripButton, Me.StrikeToolStripButton, Me.ToolStripSeparator5, Me.AlignLeftToolStripButton, Me.AlignCenterToolStripButton, Me.AlignRightToolStripButton, Me.ToolStripSeparator8, Me.IndentToolStripComboBox, Me.IndentToolStripButton})
-        Me.MainToolStrip.Location = New System.Drawing.Point(4, 0)
+        Me.MainToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.MainToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.MainToolStrip.Name = "MainToolStrip"
-        Me.MainToolStrip.Size = New System.Drawing.Size(870, 41)
+        Me.MainToolStrip.Size = New System.Drawing.Size(1731, 41)
+        Me.MainToolStrip.Stretch = True
         Me.MainToolStrip.TabIndex = 0
         '
         'NewToolStripButton
@@ -1181,24 +1182,16 @@ Partial Class frmMain
         Me.IndentToolStripButton.Size = New System.Drawing.Size(36, 36)
         Me.IndentToolStripButton.Text = "Indent"
         '
-        'StylizedPanel1
+        'PropertiesContainerPanel
         '
-        Me.StylizedPanel1.AutoScroll = True
-        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedPanel1.Controls.Add(Me.pnlDocumentProperties)
-        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(401, 1033)
-        Me.StylizedPanel1.TabIndex = 13
-        '
-        'pnlDocumentProperties
-        '
-        Me.pnlDocumentProperties.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlDocumentProperties.Location = New System.Drawing.Point(0, 0)
-        Me.pnlDocumentProperties.Name = "pnlDocumentProperties"
-        Me.pnlDocumentProperties.Size = New System.Drawing.Size(401, 1033)
-        Me.pnlDocumentProperties.TabIndex = 0
+        Me.PropertiesContainerPanel.AutoScroll = True
+        Me.PropertiesContainerPanel.BackColor = System.Drawing.Color.Transparent
+        Me.PropertiesContainerPanel.Controls.Add(Me.pnlDocumentProperties)
+        Me.PropertiesContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PropertiesContainerPanel.Location = New System.Drawing.Point(0, 0)
+        Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
+        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(401, 962)
+        Me.PropertiesContainerPanel.TabIndex = 13
         '
         'dlgOpen
         '
@@ -1215,7 +1208,6 @@ Partial Class frmMain
         '
         'MainMenu
         '
-        Me.MainMenu.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MainMenu.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.MainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.PageToolStripMenuItem, Me.InsertToolStripMenuItem, Me.StyleToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MainMenu.Location = New System.Drawing.Point(0, 0)
@@ -1737,12 +1729,20 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(176, 34)
         Me.AboutToolStripMenuItem.Text = "About..."
         '
+        'pnlDocumentProperties
+        '
+        Me.pnlDocumentProperties.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlDocumentProperties.Location = New System.Drawing.Point(0, 0)
+        Me.pnlDocumentProperties.Name = "pnlDocumentProperties"
+        Me.pnlDocumentProperties.Size = New System.Drawing.Size(401, 962)
+        Me.pnlDocumentProperties.TabIndex = 0
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1731, 1066)
-        Me.Controls.Add(Me.SplitLayoutPanel)
+        Me.Controls.Add(Me.MainToolStripContainer)
         Me.Controls.Add(Me.MainMenu)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1770,7 +1770,7 @@ Partial Class frmMain
         Me.ColorLayoutPanel.ResumeLayout(False)
         Me.MainToolStrip.ResumeLayout(False)
         Me.MainToolStrip.PerformLayout()
-        Me.StylizedPanel1.ResumeLayout(False)
+        Me.PropertiesContainerPanel.ResumeLayout(False)
         Me.MainMenu.ResumeLayout(False)
         Me.MainMenu.PerformLayout()
         Me.ResumeLayout(False)
@@ -1805,7 +1805,7 @@ Partial Class frmMain
     Friend WithEvents tcNotebook As System.Windows.Forms.TabControl
     Friend WithEvents dlgOpen As System.Windows.Forms.OpenFileDialog
     Friend WithEvents dlgSave As System.Windows.Forms.SaveFileDialog
-    Friend WithEvents StylizedPanel1 As TundraLib.DoubleBufferedPanel
+    Friend WithEvents PropertiesContainerPanel As TundraLib.DoubleBufferedPanel
     Friend WithEvents ttMain As System.Windows.Forms.ToolTip
     Friend WithEvents dlgSaveImage As System.Windows.Forms.SaveFileDialog
     Friend WithEvents MainToolStripContainer As ToolStripContainer

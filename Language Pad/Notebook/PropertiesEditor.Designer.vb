@@ -247,7 +247,7 @@ Partial Class PropertiesEditor
         '
         Me.Label4.AutoSize = True
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Location = New System.Drawing.Point(23, 312)
+        Me.Label4.Location = New System.Drawing.Point(23, 307)
         Me.Label4.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(376, 20)
@@ -257,12 +257,12 @@ Partial Class PropertiesEditor
         'txtInfo
         '
         Me.txtInfo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtInfo.Location = New System.Drawing.Point(23, 341)
+        Me.txtInfo.Location = New System.Drawing.Point(23, 336)
         Me.txtInfo.Margin = New System.Windows.Forms.Padding(3, 6, 3, 6)
         Me.txtInfo.Multiline = True
         Me.txtInfo.Name = "txtInfo"
         Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo.Size = New System.Drawing.Size(376, 149)
+        Me.txtInfo.Size = New System.Drawing.Size(376, 154)
         Me.txtInfo.TabIndex = 5
         '
         'Label3
@@ -283,7 +283,7 @@ Partial Class PropertiesEditor
         Me.btnGo.Margin = New System.Windows.Forms.Padding(3, 3, 0, 3)
         Me.btnGo.MinimumSize = New System.Drawing.Size(80, 0)
         Me.btnGo.Name = "btnGo"
-        Me.btnGo.Size = New System.Drawing.Size(94, 40)
+        Me.btnGo.Size = New System.Drawing.Size(94, 35)
         Me.btnGo.TabIndex = 79
         Me.btnGo.Text = "Go"
         Me.btnGo.UseVisualStyleBackColor = True
@@ -399,7 +399,7 @@ Partial Class PropertiesEditor
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(23, 263)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(376, 40)
+        Me.Panel1.Size = New System.Drawing.Size(376, 35)
         Me.Panel1.TabIndex = 16
         '
         'MainSplitContainer
