@@ -33,10 +33,9 @@ Partial Class ssLoading
         '
         'pbLoading
         '
-        Me.pbLoading.Location = New System.Drawing.Point(6, 192)
-        Me.pbLoading.Margin = New System.Windows.Forms.Padding(2)
+        Me.pbLoading.Location = New System.Drawing.Point(9, 236)
         Me.pbLoading.Name = "pbLoading"
-        Me.pbLoading.Size = New System.Drawing.Size(459, 21)
+        Me.pbLoading.Size = New System.Drawing.Size(756, 32)
         Me.pbLoading.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.pbLoading.TabIndex = 81
         '
@@ -45,10 +44,10 @@ Partial Class ssLoading
         Me.lblVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblVersion.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.lblVersion.ForeColor = System.Drawing.Color.White
-        Me.lblVersion.Location = New System.Drawing.Point(0, 126)
-        Me.lblVersion.Margin = New System.Windows.Forms.Padding(2)
+        Me.lblVersion.Location = New System.Drawing.Point(0, 138)
+        Me.lblVersion.Margin = New System.Windows.Forms.Padding(3)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(476, 34)
+        Me.lblVersion.Size = New System.Drawing.Size(777, 52)
         Me.lblVersion.TabIndex = 74
         Me.lblVersion.Text = "Version 1.0"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -60,9 +59,8 @@ Partial Class ssLoading
         Me.lblLanguagePad.Font = New System.Drawing.Font("Tahoma", 22.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
         Me.lblLanguagePad.Location = New System.Drawing.Point(0, 0)
-        Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(476, 126)
+        Me.lblLanguagePad.Size = New System.Drawing.Size(777, 138)
         Me.lblLanguagePad.TabIndex = 12
         Me.lblLanguagePad.Text = "Language Pad"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -70,10 +68,9 @@ Partial Class ssLoading
         'lblLoading
         '
         Me.lblLoading.AutoSize = True
-        Me.lblLoading.Location = New System.Drawing.Point(4, 166)
-        Me.lblLoading.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblLoading.Location = New System.Drawing.Point(12, 206)
         Me.lblLoading.Name = "lblLoading"
-        Me.lblLoading.Size = New System.Drawing.Size(54, 13)
+        Me.lblLoading.Size = New System.Drawing.Size(78, 20)
         Me.lblLoading.TabIndex = 82
         Me.lblLoading.Text = "Loading..."
         '
@@ -86,21 +83,20 @@ Partial Class ssLoading
         Me.pnlTop.Controls.Add(Me.lblVersion)
         Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTop.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTop.Margin = New System.Windows.Forms.Padding(6)
+        Me.pnlTop.Margin = New System.Windows.Forms.Padding(9)
         Me.pnlTop.Name = "pnlTop"
-        Me.pnlTop.Size = New System.Drawing.Size(476, 160)
+        Me.pnlTop.Size = New System.Drawing.Size(777, 190)
         Me.pnlTop.TabIndex = 83
         '
         'ssLoading
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(476, 221)
+        Me.ClientSize = New System.Drawing.Size(777, 284)
         Me.Controls.Add(Me.pnlTop)
         Me.Controls.Add(Me.lblLoading)
         Me.Controls.Add(Me.pbLoading)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "ssLoading"
@@ -108,7 +104,7 @@ Partial Class ssLoading
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.pnlTop.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents pbLoading As ProgressBar

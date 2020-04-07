@@ -1,7 +1,4 @@
-﻿
-Imports TundraLib.Themes
-
-Public Class CharacterButton
+﻿Public Class CharacterButton
     Inherits Button
     Private components As System.ComponentModel.IContainer
     Private ttIPa As New IPAToolTip
@@ -31,7 +28,6 @@ Public Class CharacterButton
         ResumeLayout(False)
     End Sub
 End Class
-
 
 Public Class IPAToolTip
     Inherits ToolTip

@@ -13,3 +13,4 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\TundraLib\obj\Debug\TundraLib.cspro
 C:\Users\ianma\Documents\GitHub\Language-Pad\TundraLib\obj\Debug\TundraLib.csproj.CoreCompileInputs.cache
 C:\Users\ianma\Documents\GitHub\Language-Pad\TundraLib\obj\Debug\TundraLib.dll
 C:\Users\ianma\Documents\GitHub\Language-Pad\TundraLib\obj\Debug\TundraLib.pdb
+C:\Users\ianma\Documents\GitHub\Language-Pad\TundraLib\obj\Debug\TundraLib.csprojAssemblyReference.cache
