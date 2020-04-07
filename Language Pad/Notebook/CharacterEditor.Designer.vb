@@ -251,7 +251,7 @@ Partial Class CharacterEditor
         Me.tpFile.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tpFile.Name = "tpFile"
         Me.tpFile.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tpFile.Size = New System.Drawing.Size(502, 625)
+        Me.tpFile.Size = New System.Drawing.Size(502, 249)
         Me.tpFile.TabIndex = 0
         Me.tpFile.Text = "File"
         Me.tpFile.UseVisualStyleBackColor = True
@@ -262,11 +262,11 @@ Partial Class CharacterEditor
         'FileToolStripContainer.ContentPanel
         '
         Me.FileToolStripContainer.ContentPanel.Controls.Add(Me.FilePanel)
-        Me.FileToolStripContainer.ContentPanel.Size = New System.Drawing.Size(494, 574)
+        Me.FileToolStripContainer.ContentPanel.Size = New System.Drawing.Size(494, 198)
         Me.FileToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FileToolStripContainer.Location = New System.Drawing.Point(4, 5)
         Me.FileToolStripContainer.Name = "FileToolStripContainer"
-        Me.FileToolStripContainer.Size = New System.Drawing.Size(494, 615)
+        Me.FileToolStripContainer.Size = New System.Drawing.Size(494, 239)
         Me.FileToolStripContainer.TabIndex = 82
         '
         'FileToolStripContainer.TopToolStripPanel
@@ -282,7 +282,7 @@ Partial Class CharacterEditor
         Me.FilePanel.Margin = New System.Windows.Forms.Padding(6)
         Me.FilePanel.Name = "FilePanel"
         Me.FilePanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.FilePanel.Size = New System.Drawing.Size(494, 574)
+        Me.FilePanel.Size = New System.Drawing.Size(494, 198)
         Me.FilePanel.TabIndex = 10
         '
         'FileToolStrip
@@ -339,7 +339,7 @@ Partial Class CharacterEditor
         Me.tpExtended.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tpExtended.Name = "tpExtended"
         Me.tpExtended.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tpExtended.Size = New System.Drawing.Size(502, 625)
+        Me.tpExtended.Size = New System.Drawing.Size(502, 249)
         Me.tpExtended.TabIndex = 2
         Me.tpExtended.Text = "Extended"
         Me.tpExtended.UseVisualStyleBackColor = True
@@ -354,7 +354,7 @@ Partial Class CharacterEditor
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(494, 615)
+        Me.TabControl1.Size = New System.Drawing.Size(494, 239)
         Me.TabControl1.TabIndex = 73
         '
         'tpLatin
@@ -362,7 +362,7 @@ Partial Class CharacterEditor
         Me.tpLatin.Controls.Add(Me.LatinExtendedLayoutPanel)
         Me.tpLatin.Location = New System.Drawing.Point(4, 29)
         Me.tpLatin.Name = "tpLatin"
-        Me.tpLatin.Size = New System.Drawing.Size(486, 582)
+        Me.tpLatin.Size = New System.Drawing.Size(486, 206)
         Me.tpLatin.TabIndex = 0
         Me.tpLatin.Text = "Latin"
         Me.tpLatin.UseVisualStyleBackColor = True
@@ -377,7 +377,7 @@ Partial Class CharacterEditor
         Me.LatinExtendedLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.LatinExtendedLayoutPanel.Name = "LatinExtendedLayoutPanel"
         Me.LatinExtendedLayoutPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.LatinExtendedLayoutPanel.Size = New System.Drawing.Size(486, 582)
+        Me.LatinExtendedLayoutPanel.Size = New System.Drawing.Size(486, 206)
         Me.LatinExtendedLayoutPanel.TabIndex = 9
         '
         'tpCyrillic
@@ -431,7 +431,7 @@ Partial Class CharacterEditor
         Me.tpIPA.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tpIPA.Name = "tpIPA"
         Me.tpIPA.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tpIPA.Size = New System.Drawing.Size(502, 625)
+        Me.tpIPA.Size = New System.Drawing.Size(502, 249)
         Me.tpIPA.TabIndex = 3
         Me.tpIPA.Text = "IPA"
         Me.tpIPA.UseVisualStyleBackColor = True
@@ -449,7 +449,7 @@ Partial Class CharacterEditor
         Me.tcIPA.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tcIPA.Name = "tcIPA"
         Me.tcIPA.SelectedIndex = 0
-        Me.tcIPA.Size = New System.Drawing.Size(494, 615)
+        Me.tcIPA.Size = New System.Drawing.Size(494, 239)
         Me.tcIPA.TabIndex = 72
         '
         'ConsonantsTabPage
@@ -457,7 +457,7 @@ Partial Class CharacterEditor
         Me.ConsonantsTabPage.Controls.Add(Me.ConsonantsLayoutPanel)
         Me.ConsonantsTabPage.Location = New System.Drawing.Point(4, 29)
         Me.ConsonantsTabPage.Name = "ConsonantsTabPage"
-        Me.ConsonantsTabPage.Size = New System.Drawing.Size(486, 582)
+        Me.ConsonantsTabPage.Size = New System.Drawing.Size(486, 206)
         Me.ConsonantsTabPage.TabIndex = 0
         Me.ConsonantsTabPage.Text = "Consonants"
         Me.ConsonantsTabPage.UseVisualStyleBackColor = True
@@ -472,7 +472,7 @@ Partial Class CharacterEditor
         Me.ConsonantsLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.ConsonantsLayoutPanel.Name = "ConsonantsLayoutPanel"
         Me.ConsonantsLayoutPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(486, 582)
+        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(486, 206)
         Me.ConsonantsLayoutPanel.TabIndex = 7
         '
         'AffricatesTabPage
@@ -594,7 +594,7 @@ Partial Class CharacterEditor
         Me.tpSearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tpSearch.Name = "tpSearch"
         Me.tpSearch.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tpSearch.Size = New System.Drawing.Size(502, 625)
+        Me.tpSearch.Size = New System.Drawing.Size(502, 249)
         Me.tpSearch.TabIndex = 4
         Me.tpSearch.Text = "Search"
         Me.tpSearch.UseVisualStyleBackColor = True
@@ -605,11 +605,11 @@ Partial Class CharacterEditor
         'SearchToolStripContainer.ContentPanel
         '
         Me.SearchToolStripContainer.ContentPanel.Controls.Add(Me.SearchCharactersPanel)
-        Me.SearchToolStripContainer.ContentPanel.Size = New System.Drawing.Size(494, 574)
+        Me.SearchToolStripContainer.ContentPanel.Size = New System.Drawing.Size(494, 198)
         Me.SearchToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SearchToolStripContainer.Location = New System.Drawing.Point(4, 5)
         Me.SearchToolStripContainer.Name = "SearchToolStripContainer"
-        Me.SearchToolStripContainer.Size = New System.Drawing.Size(494, 615)
+        Me.SearchToolStripContainer.Size = New System.Drawing.Size(494, 239)
         Me.SearchToolStripContainer.TabIndex = 84
         '
         'SearchToolStripContainer.TopToolStripPanel
@@ -626,7 +626,7 @@ Partial Class CharacterEditor
         Me.SearchCharactersPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.SearchCharactersPanel.Name = "SearchCharactersPanel"
         Me.SearchCharactersPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.SearchCharactersPanel.Size = New System.Drawing.Size(494, 574)
+        Me.SearchCharactersPanel.Size = New System.Drawing.Size(494, 198)
         Me.SearchCharactersPanel.TabIndex = 8
         '
         'SearchToolStrip
@@ -643,9 +643,10 @@ Partial Class CharacterEditor
         '
         'SearchQueryTextBox
         '
+        Me.SearchQueryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.SearchQueryTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SearchQueryTextBox.Name = "SearchQueryTextBox"
-        Me.SearchQueryTextBox.Size = New System.Drawing.Size(135, 41)
+        Me.SearchQueryTextBox.Size = New System.Drawing.Size(180, 41)
         '
         'ToolStripLabel1
         '
@@ -656,9 +657,10 @@ Partial Class CharacterEditor
         'SearchModeDropDown
         '
         Me.SearchModeDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.SearchModeDropDown.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.SearchModeDropDown.Items.AddRange(New Object() {"All", "Extended Latin", "Extended Cyrillic", "Extended Greek", "IPA (All)", "IPA Consonants", "IPA Affricates", "IPA Vowels", "IPA Tones", "IPA Diacritics", "IPA Suprasegmentals"})
         Me.SearchModeDropDown.Name = "SearchModeDropDown"
-        Me.SearchModeDropDown.Size = New System.Drawing.Size(121, 41)
+        Me.SearchModeDropDown.Size = New System.Drawing.Size(180, 41)
         '
         'SearchToolStripButton
         '
