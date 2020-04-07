@@ -33,6 +33,7 @@ Public Class frmDictionary
 
         NewToolStripButton.Image = IconManager.Get("document-new", IconSize.Large, res)
         OpenToolStripButton.Image = IconManager.Get("document-open", IconSize.Large, res)
+        SaveToolStripButton.Image = IconManager.Get("document-save", IconSize.Large, res)
         ExportHtmlToolStripButton.Image = IconManager.Get("filetype-html", IconSize.Large, res)
         CharacterEditorToolStripButton.Image = IconManager.Get("language", IconSize.Large, res)
         AddToolStripButton.Image = IconManager.Get("list-add", IconSize.Large, res)
