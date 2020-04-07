@@ -3,9 +3,10 @@
    • Use Taiga icon pack
    • Export to new Thorn Writer format
    • Export pages to HTML
-   • Export pages to Markdown
-   • Remember display font chosen by user on dictionary window
-   • Fixed bug where character editor window would pop up after being closed
+   **• Export pages to Markdown
+   **• Remember display font chosen by user on dictionary window
+   **• Fixed bug where character editor window would pop up after being closed
+   **• Fixed bug where sometimes the second file loaded in a row wouldn't fully load
 
 Version 9.4 (April 24, 2019)
    • Redesign symbols panel
