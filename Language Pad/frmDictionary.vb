@@ -105,9 +105,8 @@ Public Class frmDictionary
     Private Sub frmDictionary_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         e.Cancel = True
         If frmMain IsNot Nothing Then
-            CharTool.Owner = frmMain
-            frmMain.frmMain_Activated(sender, e)
-            CharTool.Show()
+            CharTool.TargetForm = frmMain
+            frmMain.Activate()
         End If
         SaveDictionary()
         Hide()
@@ -249,7 +248,7 @@ Public Class frmDictionary
     End Sub
 
     Private Sub frmDictionary_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-        CharTool.Owner = Me
+        CharTool.TargetForm = Me
         CharTool.GetCurrentTexbox = Function()
                                         If dgvDictionary.CurrentCell IsNot Nothing Then
                                             dgvDictionary.Focus()

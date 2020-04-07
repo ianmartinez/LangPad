@@ -50,7 +50,7 @@ Public Class CharacterEditor
         End If
 
         If cbSmartReplace.Checked Then
-            Dim result As String = txtCharacter.Text & AccentsString '
+            Dim result As String = txtCharacter.Text & AccentsString
             pnlSmartReplace.BackColor = Color.DimGray
 
             For Each pair As KeyValuePair(Of String, String) In SmartReplaceList
@@ -167,12 +167,16 @@ Public Class CharacterEditor
     End Sub
 
     Public Sub InsertText(ByVal TextBox As TextBoxBase, ByVal Text As String)
-        On Error Resume Next
+        Dim IsRTF = TypeOf TextBox Is RichTextBox
         Dim CurrentPos As Integer = TextBox.SelectionStart
-        Dim obj As Object = Clipboard.GetDataObject
-        Clipboard.SetText(Text)
-        TextBox.Paste()
-        Clipboard.SetDataObject(obj)
+
+        If (IsRTF) Then
+            Dim rtf As RichTextBox = CType(TextBox, RichTextBox)
+            rtf.SelectionLength = 0
+            rtf.SelectedText = Text
+        Else
+            TextBox.Text = TextBox.Text.Insert(CurrentPos, Text)
+        End If
 
         TextBox.SelectionStart = CurrentPos + Text.Length
         TextBox.SelectionLength = 0

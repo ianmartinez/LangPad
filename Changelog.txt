@@ -3,10 +3,12 @@
    • Use Taiga icon pack
    • Export to new Thorn Writer format
    • Export pages to HTML
+   **• Add option in settings to load character editor on startup
    **• Export pages to Markdown
    **• Remember display font chosen by user on dictionary window
    • Fixed bug where "clear style" on edit style dialog wouldn't refresh the preview
-   **• Fixed bug where character editor window would pop up after being closed
+   • Fixed bug where character editor would pop up after being closed
+   • Fixed bug where character insertion would sometimes fail
    • Fixed bug where sometimes the second file loaded in a row wouldn't fully load
 
 Version 9.4 (April 24, 2019)

@@ -473,7 +473,7 @@ Public Class frmMain
         Next
 
         CharTool.Show()
-        CharTool.Owner = Me
+        CharTool.TargetForm = Me
         SetIcons()
     End Sub
 
@@ -1276,7 +1276,7 @@ Public Class frmMain
     End Sub
 
     Public Sub frmMain_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-        CharTool.Owner = Me
+        CharTool.TargetForm = Me
         CharTool.GetCurrentTexbox = Function()
                                         Return SelectedDocument
                                     End Function
@@ -1291,11 +1291,11 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
-        If Me.WindowState = FormWindowState.Minimized Then
-            CharTool.Visible = False
-        Else
-            CharTool.Visible = True
-        End If
+        'If Me.WindowState = FormWindowState.Minimized Then
+        '    CharTool.Visible = False
+        'Else
+        '    CharTool.Visible = True
+        'End If
     End Sub
 
     Private Sub QuitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuitToolStripMenuItem.Click

@@ -15,6 +15,16 @@
         End Set
     End Property
 
+    Public Property TargetForm As Form
+        Get
+            Return Owner
+        End Get
+
+        Set(value As Form)
+            Owner = value
+        End Set
+    End Property
+
     Public Sub SetIcons()
         charEdit.SetIcons()
     End Sub
