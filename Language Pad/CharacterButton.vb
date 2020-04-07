@@ -26,13 +26,9 @@ Public Class CharacterButton
         ttIPa.SetToolTip(Me, Text)
     End Sub
 
-    Private Sub SymbolButton_Click(sender As Object, e As EventArgs) Handles Me.Click
-
-    End Sub
-
     Private Sub InitializeComponent()
-        Me.SuspendLayout()
-        Me.ResumeLayout(False)
+        SuspendLayout()
+        ResumeLayout(False)
     End Sub
 End Class
 
@@ -68,7 +64,7 @@ Public Class IPAToolTip
 
     Private Sub OnDraw(ByVal sender As Object, ByVal e As DrawToolTipEventArgs)
         Dim rect As New Rectangle(0, 0, e.Bounds.Width - 1, e.Bounds.Height - 1)
-        Dim background As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(120, 120, 120), Color.FromArgb(20, 20, 20), 45)
+        Dim background As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(60, 60, 60), Color.FromArgb(20, 20, 20), 90)
         Dim border As New Pen(Color.FromArgb(0, 0, 0))
 
         e.Graphics.FillRectangle(background, rect)
