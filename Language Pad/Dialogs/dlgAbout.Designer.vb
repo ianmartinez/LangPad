@@ -30,15 +30,17 @@ Partial Class dlgAbout
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.txtChangelog = New System.Windows.Forms.TextBox()
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
-        Me.DoubleBufferedPanel1 = New TundraLib.DoubleBufferedPanel()
-        Me.lblVersion = New System.Windows.Forms.Label()
-        Me.lblLanguagePad = New System.Windows.Forms.Label()
         Me.MainTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+        Me.HeaderBorderPanel = New TundraLib.DoubleBufferedPanel()
+        Me.HeaderPanel = New TundraLib.DoubleBufferedPanel()
+        Me.lblLanguagePad = New System.Windows.Forms.Label()
+        Me.lblVersion = New System.Windows.Forms.Label()
         Me.MainTabControl.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.DoubleBufferedPanel1.SuspendLayout()
         Me.MainTableLayoutPanel.SuspendLayout()
+        Me.HeaderBorderPanel.SuspendLayout()
+        Me.HeaderPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'MainTabControl
@@ -46,11 +48,11 @@ Partial Class dlgAbout
         Me.MainTabControl.Controls.Add(Me.TabPage1)
         Me.MainTabControl.Controls.Add(Me.TabPage2)
         Me.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainTabControl.Location = New System.Drawing.Point(7, 158)
+        Me.MainTabControl.Location = New System.Drawing.Point(7, 168)
         Me.MainTabControl.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MainTabControl.Name = "MainTabControl"
         Me.MainTabControl.SelectedIndex = 0
-        Me.MainTabControl.Size = New System.Drawing.Size(698, 525)
+        Me.MainTabControl.Size = New System.Drawing.Size(707, 556)
         Me.MainTabControl.TabIndex = 9
         '
         'TabPage1
@@ -60,7 +62,7 @@ Partial Class dlgAbout
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(9)
-        Me.TabPage1.Size = New System.Drawing.Size(690, 492)
+        Me.TabPage1.Size = New System.Drawing.Size(699, 523)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "License"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -77,7 +79,7 @@ Partial Class dlgAbout
         Me.txtLicense.Name = "txtLicense"
         Me.txtLicense.ReadOnly = True
         Me.txtLicense.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtLicense.Size = New System.Drawing.Size(672, 474)
+        Me.txtLicense.Size = New System.Drawing.Size(681, 505)
         Me.txtLicense.TabIndex = 7
         Me.txtLicense.Text = resources.GetString("txtLicense.Text")
         '
@@ -88,7 +90,7 @@ Partial Class dlgAbout
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(9)
-        Me.TabPage2.Size = New System.Drawing.Size(690, 492)
+        Me.TabPage2.Size = New System.Drawing.Size(699, 523)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Changelog"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -105,72 +107,84 @@ Partial Class dlgAbout
         Me.txtChangelog.Name = "txtChangelog"
         Me.txtChangelog.ReadOnly = True
         Me.txtChangelog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtChangelog.Size = New System.Drawing.Size(672, 474)
+        Me.txtChangelog.Size = New System.Drawing.Size(681, 505)
         Me.txtChangelog.TabIndex = 8
         Me.txtChangelog.Text = resources.GetString("txtChangelog.Text")
-        '
-        'DoubleBufferedPanel1
-        '
-        Me.DoubleBufferedPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DoubleBufferedPanel1.BackgroundImage = CType(resources.GetObject("DoubleBufferedPanel1.BackgroundImage"), System.Drawing.Image)
-        Me.DoubleBufferedPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.DoubleBufferedPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.DoubleBufferedPanel1.Controls.Add(Me.lblVersion)
-        Me.DoubleBufferedPanel1.Controls.Add(Me.lblLanguagePad)
-        Me.DoubleBufferedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DoubleBufferedPanel1.Location = New System.Drawing.Point(6, 6)
-        Me.DoubleBufferedPanel1.Name = "DoubleBufferedPanel1"
-        Me.DoubleBufferedPanel1.Size = New System.Drawing.Size(700, 144)
-        Me.DoubleBufferedPanel1.TabIndex = 76
-        '
-        'lblVersion
-        '
-        Me.lblVersion.AutoSize = True
-        Me.lblVersion.BackColor = System.Drawing.Color.Transparent
-        Me.lblVersion.ForeColor = System.Drawing.Color.White
-        Me.lblVersion.Location = New System.Drawing.Point(10, 94)
-        Me.lblVersion.Margin = New System.Windows.Forms.Padding(9, 5, 4, 5)
-        Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(89, 20)
-        Me.lblVersion.TabIndex = 74
-        Me.lblVersion.Text = "Version 1.0"
-        Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblLanguagePad
-        '
-        Me.lblLanguagePad.AutoSize = True
-        Me.lblLanguagePad.BackColor = System.Drawing.Color.Transparent
-        Me.lblLanguagePad.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
-        Me.lblLanguagePad.Location = New System.Drawing.Point(10, 31)
-        Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(9, 5, 4, 5)
-        Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(251, 40)
-        Me.lblLanguagePad.TabIndex = 12
-        Me.lblLanguagePad.Text = "Language Pad"
-        Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'MainTableLayoutPanel
         '
         Me.MainTableLayoutPanel.ColumnCount = 1
         Me.MainTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.MainTableLayoutPanel.Controls.Add(Me.DoubleBufferedPanel1, 0, 0)
+        Me.MainTableLayoutPanel.Controls.Add(Me.HeaderBorderPanel, 0, 0)
         Me.MainTableLayoutPanel.Controls.Add(Me.MainTabControl, 0, 1)
         Me.MainTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainTableLayoutPanel.Location = New System.Drawing.Point(6, 6)
         Me.MainTableLayoutPanel.Name = "MainTableLayoutPanel"
         Me.MainTableLayoutPanel.Padding = New System.Windows.Forms.Padding(3)
         Me.MainTableLayoutPanel.RowCount = 2
-        Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
+        Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 160.0!))
         Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.MainTableLayoutPanel.Size = New System.Drawing.Size(712, 691)
+        Me.MainTableLayoutPanel.Size = New System.Drawing.Size(721, 732)
         Me.MainTableLayoutPanel.TabIndex = 77
+        '
+        'HeaderBorderPanel
+        '
+        Me.HeaderBorderPanel.BackColor = System.Drawing.Color.Black
+        Me.HeaderBorderPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.HeaderBorderPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HeaderBorderPanel.Controls.Add(Me.HeaderPanel)
+        Me.HeaderBorderPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HeaderBorderPanel.Location = New System.Drawing.Point(6, 6)
+        Me.HeaderBorderPanel.Name = "HeaderBorderPanel"
+        Me.HeaderBorderPanel.Padding = New System.Windows.Forms.Padding(1)
+        Me.HeaderBorderPanel.Size = New System.Drawing.Size(709, 154)
+        Me.HeaderBorderPanel.TabIndex = 76
+        '
+        'HeaderPanel
+        '
+        Me.HeaderPanel.BackgroundImage = CType(resources.GetObject("HeaderPanel.BackgroundImage"), System.Drawing.Image)
+        Me.HeaderPanel.Controls.Add(Me.lblLanguagePad)
+        Me.HeaderPanel.Controls.Add(Me.lblVersion)
+        Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.HeaderPanel.Location = New System.Drawing.Point(1, 1)
+        Me.HeaderPanel.Name = "HeaderPanel"
+        Me.HeaderPanel.Size = New System.Drawing.Size(705, 150)
+        Me.HeaderPanel.TabIndex = 76
+        '
+        'lblLanguagePad
+        '
+        Me.lblLanguagePad.BackColor = System.Drawing.Color.Transparent
+        Me.lblLanguagePad.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblLanguagePad.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
+        Me.lblLanguagePad.Location = New System.Drawing.Point(0, 0)
+        Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(9, 5, 4, 5)
+        Me.lblLanguagePad.Name = "lblLanguagePad"
+        Me.lblLanguagePad.Padding = New System.Windows.Forms.Padding(10, 2, 0, 0)
+        Me.lblLanguagePad.Size = New System.Drawing.Size(705, 105)
+        Me.lblLanguagePad.TabIndex = 12
+        Me.lblLanguagePad.Text = "Language Pad"
+        Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblVersion
+        '
+        Me.lblVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lblVersion.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.lblVersion.ForeColor = System.Drawing.Color.White
+        Me.lblVersion.Location = New System.Drawing.Point(0, 105)
+        Me.lblVersion.Margin = New System.Windows.Forms.Padding(3)
+        Me.lblVersion.Name = "lblVersion"
+        Me.lblVersion.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.lblVersion.Size = New System.Drawing.Size(705, 45)
+        Me.lblVersion.TabIndex = 75
+        Me.lblVersion.Text = "Version 1.0"
+        Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'dlgAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(724, 703)
+        Me.ClientSize = New System.Drawing.Size(733, 744)
         Me.Controls.Add(Me.MainTableLayoutPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -186,9 +200,9 @@ Partial Class dlgAbout
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        Me.DoubleBufferedPanel1.ResumeLayout(False)
-        Me.DoubleBufferedPanel1.PerformLayout()
         Me.MainTableLayoutPanel.ResumeLayout(False)
+        Me.HeaderBorderPanel.ResumeLayout(False)
+        Me.HeaderPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -199,7 +213,8 @@ Partial Class dlgAbout
     Friend WithEvents txtChangelog As System.Windows.Forms.TextBox
     Friend WithEvents ttMain As ToolTip
     Friend WithEvents lblLanguagePad As Label
-    Friend WithEvents lblVersion As Label
-    Friend WithEvents DoubleBufferedPanel1 As TundraLib.DoubleBufferedPanel
+    Friend WithEvents HeaderBorderPanel As TundraLib.DoubleBufferedPanel
     Friend WithEvents MainTableLayoutPanel As TableLayoutPanel
+    Friend WithEvents lblVersion As Label
+    Friend WithEvents HeaderPanel As TundraLib.DoubleBufferedPanel
 End Class
