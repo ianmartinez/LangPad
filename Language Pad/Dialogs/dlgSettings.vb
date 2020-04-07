@@ -13,6 +13,7 @@
         ' Refresh icons to DPI setting
         frmMain.SetIcons()
         frmRTF.SetIcons()
+        frmDictionary.SetIcons()
         dlgStyle.SetIcons()
 
         Close()

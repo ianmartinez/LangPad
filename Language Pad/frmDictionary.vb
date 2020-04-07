@@ -2,6 +2,7 @@
 Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports System.Text
+Imports TundraLib
 Imports TundraLib.Themes
 
 Public Class frmDictionary
@@ -26,6 +27,20 @@ Public Class frmDictionary
 
         Refresh()
     End Sub
+
+    Public Sub SetIcons()
+        Dim res As IconResolution = GetIconResolution()
+
+        NewToolStripButton.Image = IconManager.Get("document-new", IconSize.Large, res)
+        OpenToolStripButton.Image = IconManager.Get("document-open", IconSize.Large, res)
+        ExportHtmlToolStripButton.Image = IconManager.Get("filetype-html", IconSize.Large, res)
+        CharacterEditorToolStripButton.Image = IconManager.Get("language", IconSize.Large, res)
+        AddToolStripButton.Image = IconManager.Get("list-add", IconSize.Large, res)
+        RemoveToolStripButton.Image = IconManager.Get("list-remove", IconSize.Large, res)
+        FontToolStripButton.Image = IconManager.Get("font", IconSize.Large, res)
+        FindToolStripButton.Image = IconManager.Get("edit-find", IconSize.Large, res)
+    End Sub
+
 
     Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
         ToolStripContainer1.BottomToolStripPanel.Paint, ToolStripContainer1.LeftToolStripPanel.Paint, ToolStripContainer1.RightToolStripPanel.Paint
@@ -77,6 +92,7 @@ Public Class frmDictionary
     End Sub
 
     Private Sub frmDictionary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SetIcons()
         LoadDictionary()
         Loaded = True
     End Sub

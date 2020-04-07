@@ -112,8 +112,8 @@ Public Class frmMain
         SaveToolStripMenuItem.Image = IconManager.Get("document-save", IconSize.Small, res)
         SaveAsToolStripMenuItem.Image = IconManager.Get("document-save-as", IconSize.Small, res)
         PrintToolStripMenuItem.Image = IconManager.Get("document-print", IconSize.Small, res)
+        PageSetupToolStripMenuItem.Image = IconManager.Get("document-page-setup", IconSize.Small, res)
         PrintPreviewToolStripMenuItem.Image = IconManager.Get("document-print-preview", IconSize.Small, res)
-        PageSetupToolStripMenuItem.Image = IconManager.Get("tool-measure", IconSize.Small, res)
         RTFEditorToolStripMenuItem.Image = IconManager.Get("text-edit", IconSize.Small, res)
         QuitToolStripMenuItem.Image = IconManager.Get("window-close", IconSize.Small, res)
 
