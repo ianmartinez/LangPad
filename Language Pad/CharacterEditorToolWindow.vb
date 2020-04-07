@@ -7,7 +7,7 @@
 
         Set(value As Func(Of TextBoxBase))
             _GetCurrentTexbox = Function()
-                                    CharTool.Focus()
+                                    CharEditor.Focus()
                                     Return value()
                                 End Function
 

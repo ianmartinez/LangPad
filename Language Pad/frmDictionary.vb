@@ -105,7 +105,7 @@ Public Class frmDictionary
     Private Sub frmDictionary_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         e.Cancel = True
         If frmMain IsNot Nothing Then
-            CharTool.TargetForm = frmMain
+            CharEditor.TargetForm = frmMain
             frmMain.Activate()
         End If
         SaveDictionary()
@@ -244,12 +244,12 @@ Public Class frmDictionary
     End Sub
 
     Private Sub CharacterEditorToolStripButton_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripButton.Click
-        CharTool.Show()
+        CharEditor.Show()
     End Sub
 
     Private Sub frmDictionary_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-        CharTool.TargetForm = Me
-        CharTool.GetCurrentTexbox = Function()
+        CharEditor.TargetForm = Me
+        CharEditor.GetCurrentTexbox = Function()
                                         If dgvDictionary.CurrentCell IsNot Nothing Then
                                             dgvDictionary.Focus()
                                             dgvDictionary.BeginEdit(False)

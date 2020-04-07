@@ -272,7 +272,7 @@ Public Class frmMain
             End If
         End If
 
-        CharTool.Close()
+        CharEditor.Close()
         If frmDictionary IsNot Nothing Then frmDictionary.Close()
         My.Settings.Theme = ThemeCombo.SelectedItem
         My.Settings.Save()
@@ -356,7 +356,7 @@ Public Class frmMain
         btnReplaceAll.Top = txtFind.Top - (btnReplaceAll.Height / 2 - txtFind.Height / 2)
 
         pnlDocumentProperties.SetTheme(Theme)
-        CharTool.charEdit.SetTheme(Theme)
+        CharEditor.charEdit.SetTheme(Theme)
         dlgAbout.BackColor = Theme.DialogBack
         dlgAddPage.BackColor = Theme.DialogBack
         dlgCustomZoom.BackColor = Theme.DialogBack
@@ -473,8 +473,14 @@ Public Class frmMain
             End If
         Next
 
-        CharTool.Show()
-        CharTool.TargetForm = Me
+        ' Show character editor to the right of this form
+        CharEditor.Show()
+        CharEditor.TargetForm = Me
+        Dim ScreenWidth As Integer = My.Computer.Screen.Bounds.Width
+        Dim ScreenX As Integer = ScreenWidth - 20 - CharEditor.Width
+        Dim CharToolX = Math.Min(ScreenX, Location.X + Width + 20)
+        CharEditor.Location = New Point(CharToolX, Location.Y)
+
         SetIcons()
     End Sub
 
@@ -1277,14 +1283,14 @@ Public Class frmMain
     End Sub
 
     Public Sub frmMain_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-        CharTool.TargetForm = Me
-        CharTool.GetCurrentTexbox = Function()
-                                        If LastFocused Is Nothing Then
-                                            LastFocused = SelectedDocument
-                                        End If
+        CharEditor.TargetForm = Me
+        CharEditor.GetCurrentTexbox = Function()
+                                          If LastFocused Is Nothing Then
+                                              LastFocused = SelectedDocument
+                                          End If
 
-                                        Return LastFocused
-                                    End Function
+                                          Return LastFocused
+                                      End Function
     End Sub
 
     Private Sub CharacterEditorToolStripButton_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripButton.Click
@@ -1292,7 +1298,7 @@ Public Class frmMain
     End Sub
 
     Private Sub CharacterEditorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripMenuItem.Click
-        CharTool.Show()
+        CharEditor.Show()
     End Sub
 
     Private Sub frmMain_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
