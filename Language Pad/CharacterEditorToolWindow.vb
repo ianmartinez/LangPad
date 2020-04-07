@@ -29,7 +29,6 @@
 
     Private Sub CharacterEditorToolWindow_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then e.Cancel = True
-
         Visible = False
     End Sub
 End Class

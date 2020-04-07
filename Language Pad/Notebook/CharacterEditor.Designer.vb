@@ -949,7 +949,7 @@ Partial Class CharacterEditor
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MinimumSize = New System.Drawing.Size(510, 0)
         Me.Name = "CharacterEditor"
-        Me.Size = New System.Drawing.Size(510, 1062)
+        Me.Size = New System.Drawing.Size(340, 708)
         Me.tcCharacters.ResumeLayout(False)
         Me.tpLocal.ResumeLayout(False)
         Me.LocalToolStripContainer.ContentPanel.ResumeLayout(False)

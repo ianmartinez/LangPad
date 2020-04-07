@@ -1,4 +1,5 @@
 ﻿Imports System.Drawing.Drawing2D
+Imports TundraLib
 Imports TundraLib.Themes
 
 Public Class PropertiesEditor
@@ -13,6 +14,20 @@ Public Class PropertiesEditor
         DocumentToolStrip.Renderer = Theme.GetToolStripRenderer()
 
         Refresh()
+    End Sub
+
+    Public Sub SetIcons()
+        Dim res As IconResolution = GetIconResolution()
+
+        PageUpToolStripButton.Image = IconManager.Get("go-up", IconSize.Small, res)
+        PageDownToolStripButton.Image = IconManager.Get("go-down", IconSize.Small, res)
+        AddToolStripButton.Image = IconManager.Get("list-add", IconSize.Small, res)
+        RemoveToolStripButton.Image = IconManager.Get("list-remove", IconSize.Small, res)
+        DuplicateToolStripButton.Image = IconManager.Get("edit-copy", IconSize.Small, res)
+        RenameToolStripButton.Image = IconManager.Get("edit", IconSize.Small, res)
+        ImportToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, res)
+        ExportToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, res)
+        DictionaryToolStripButton.Image = IconManager.Get("dictionary", IconSize.Small, res)
     End Sub
 
     Private Sub txtTitle_TextChanged(sender As Object, e As EventArgs) Handles txtTitle.TextChanged
@@ -154,5 +169,9 @@ Public Class PropertiesEditor
         Else
             CurrentDocument.Modified = True
         End If
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
     End Sub
 End Class

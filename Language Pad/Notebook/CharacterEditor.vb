@@ -32,7 +32,6 @@ Public Class CharacterEditor
         ExportFileToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, res)
         ClearFileToolStripButton.Image = IconManager.Get("edit-clear", IconSize.Small, res)
 
-
         ' File
         ImportFileToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, res)
         ExportFileToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, res)

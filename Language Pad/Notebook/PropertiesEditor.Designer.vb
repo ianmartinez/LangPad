@@ -42,24 +42,26 @@ Partial Class PropertiesEditor
         Me.ExportToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DictionaryToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.DoubleBufferedPanel2 = New TundraLib.DoubleBufferedPanel()
-        Me.txtLanguage = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnGo = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtInfo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtAuthor = New System.Windows.Forms.TextBox()
+        Me.btnGo = New System.Windows.Forms.Button()
         Me.txtWebsite = New System.Windows.Forms.TextBox()
+        Me.txtLanguage = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtAuthor = New System.Windows.Forms.TextBox()
         Me.txtTitle = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DocumentToolStripContainer.ContentPanel.SuspendLayout()
         Me.DocumentToolStripContainer.TopToolStripPanel.SuspendLayout()
         Me.DocumentToolStripContainer.SuspendLayout()
         Me.StylizedPanel1.SuspendLayout()
         Me.DocumentToolStrip.SuspendLayout()
-        Me.DoubleBufferedPanel2.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DocumentToolStripContainer
@@ -71,17 +73,17 @@ Partial Class PropertiesEditor
         'DocumentToolStripContainer.ContentPanel
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel1)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(413, 369)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(422, 487)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'DocumentToolStripContainer.LeftToolStripPanel
         '
-        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 511)
+        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 466)
         Me.DocumentToolStripContainer.Name = "DocumentToolStripContainer"
         '
         'DocumentToolStripContainer.RightToolStripPanel
         '
-        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(413, 410)
+        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(422, 528)
         Me.DocumentToolStripContainer.TabIndex = 81
         Me.DocumentToolStripContainer.Text = "ToolStripContainer1"
         '
@@ -98,7 +100,7 @@ Partial Class PropertiesEditor
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(413, 369)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(422, 487)
         Me.StylizedPanel1.TabIndex = 80
         '
         'lbPages
@@ -111,7 +113,7 @@ Partial Class PropertiesEditor
         Me.lbPages.ItemHeight = 20
         Me.lbPages.Location = New System.Drawing.Point(2, 0)
         Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(411, 369)
+        Me.lbPages.Size = New System.Drawing.Size(420, 487)
         Me.lbPages.TabIndex = 15
         '
         'DocumentToolStrip
@@ -122,7 +124,7 @@ Partial Class PropertiesEditor
         Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton, Me.ToolStripSeparator4, Me.DictionaryToolStripButton})
         Me.DocumentToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DocumentToolStrip.Name = "DocumentToolStrip"
-        Me.DocumentToolStrip.Size = New System.Drawing.Size(413, 41)
+        Me.DocumentToolStrip.Size = New System.Drawing.Size(422, 41)
         Me.DocumentToolStrip.Stretch = True
         Me.DocumentToolStrip.TabIndex = 0
         '
@@ -236,149 +238,174 @@ Partial Class PropertiesEditor
         Me.DictionaryToolStripButton.Size = New System.Drawing.Size(36, 36)
         Me.DictionaryToolStripButton.Text = "Dictionary"
         '
-        'DoubleBufferedPanel2
-        '
-        Me.DoubleBufferedPanel2.Controls.Add(Me.txtLanguage)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.Label5)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.btnGo)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.Label4)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.txtInfo)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.Label3)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.txtAuthor)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.txtWebsite)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.txtTitle)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.Label2)
-        Me.DoubleBufferedPanel2.Controls.Add(Me.Label1)
-        Me.DoubleBufferedPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.DoubleBufferedPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.DoubleBufferedPanel2.Name = "DoubleBufferedPanel2"
-        Me.DoubleBufferedPanel2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DoubleBufferedPanel2.Size = New System.Drawing.Size(413, 511)
-        Me.DoubleBufferedPanel2.TabIndex = 78
-        '
-        'txtLanguage
-        '
-        Me.txtLanguage.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtLanguage.Location = New System.Drawing.Point(23, 117)
-        Me.txtLanguage.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
-        Me.txtLanguage.Name = "txtLanguage"
-        Me.txtLanguage.Size = New System.Drawing.Size(367, 26)
-        Me.txtLanguage.TabIndex = 80
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(20, 88)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(85, 20)
-        Me.Label5.TabIndex = 81
-        Me.Label5.Text = "Language:"
-        '
-        'btnGo
-        '
-        Me.btnGo.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnGo.Location = New System.Drawing.Point(335, 252)
-        Me.btnGo.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
-        Me.btnGo.Name = "btnGo"
-        Me.btnGo.Size = New System.Drawing.Size(57, 34)
-        Me.btnGo.TabIndex = 79
-        Me.btnGo.Text = "Go"
-        Me.btnGo.UseVisualStyleBackColor = True
-        '
         'Label4
         '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(20, 295)
+        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label4.Location = New System.Drawing.Point(13, 312)
         Me.Label4.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 20)
+        Me.Label4.Size = New System.Drawing.Size(396, 20)
         Me.Label4.TabIndex = 78
         Me.Label4.Text = "Info:"
         '
         'txtInfo
         '
-        Me.txtInfo.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtInfo.Location = New System.Drawing.Point(23, 325)
+        Me.txtInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtInfo.Location = New System.Drawing.Point(13, 341)
         Me.txtInfo.Margin = New System.Windows.Forms.Padding(3, 6, 3, 6)
         Me.txtInfo.Multiline = True
         Me.txtInfo.Name = "txtInfo"
         Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo.Size = New System.Drawing.Size(367, 169)
+        Me.txtInfo.Size = New System.Drawing.Size(396, 115)
         Me.txtInfo.TabIndex = 5
         '
         'Label3
         '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(20, 226)
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label3.Location = New System.Drawing.Point(13, 202)
         Me.Label3.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 20)
+        Me.Label3.Size = New System.Drawing.Size(396, 20)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Website:"
         '
-        'txtAuthor
+        'btnGo
         '
-        Me.txtAuthor.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtAuthor.Location = New System.Drawing.Point(23, 186)
-        Me.txtAuthor.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
-        Me.txtAuthor.Name = "txtAuthor"
-        Me.txtAuthor.Size = New System.Drawing.Size(367, 26)
-        Me.txtAuthor.TabIndex = 2
+        Me.btnGo.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnGo.Location = New System.Drawing.Point(302, 0)
+        Me.btnGo.Margin = New System.Windows.Forms.Padding(3, 3, 0, 3)
+        Me.btnGo.MinimumSize = New System.Drawing.Size(80, 0)
+        Me.btnGo.Name = "btnGo"
+        Me.btnGo.Size = New System.Drawing.Size(94, 40)
+        Me.btnGo.TabIndex = 79
+        Me.btnGo.Text = "Go"
+        Me.btnGo.UseVisualStyleBackColor = True
         '
         'txtWebsite
         '
-        Me.txtWebsite.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtWebsite.Location = New System.Drawing.Point(23, 255)
+        Me.txtWebsite.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtWebsite.Location = New System.Drawing.Point(13, 231)
         Me.txtWebsite.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.txtWebsite.Name = "txtWebsite"
-        Me.txtWebsite.Size = New System.Drawing.Size(304, 26)
+        Me.txtWebsite.Size = New System.Drawing.Size(396, 26)
         Me.txtWebsite.TabIndex = 3
+        '
+        'txtLanguage
+        '
+        Me.txtLanguage.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtLanguage.Location = New System.Drawing.Point(13, 103)
+        Me.txtLanguage.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
+        Me.txtLanguage.Name = "txtLanguage"
+        Me.txtLanguage.Size = New System.Drawing.Size(396, 26)
+        Me.txtLanguage.TabIndex = 80
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label5.Location = New System.Drawing.Point(13, 74)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(396, 20)
+        Me.Label5.TabIndex = 81
+        Me.Label5.Text = "Language:"
+        '
+        'txtAuthor
+        '
+        Me.txtAuthor.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtAuthor.Location = New System.Drawing.Point(13, 167)
+        Me.txtAuthor.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
+        Me.txtAuthor.Name = "txtAuthor"
+        Me.txtAuthor.Size = New System.Drawing.Size(396, 26)
+        Me.txtAuthor.TabIndex = 2
         '
         'txtTitle
         '
-        Me.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtTitle.Location = New System.Drawing.Point(23, 48)
+        Me.txtTitle.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtTitle.Location = New System.Drawing.Point(13, 39)
         Me.txtTitle.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(367, 26)
+        Me.txtTitle.Size = New System.Drawing.Size(396, 26)
         Me.txtTitle.TabIndex = 1
         '
         'Label2
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(20, 157)
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.Location = New System.Drawing.Point(13, 138)
         Me.Label2.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 20)
+        Me.Label2.Size = New System.Drawing.Size(396, 20)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Author:"
         '
         'Label1
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(20, 17)
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label1.Location = New System.Drawing.Point(13, 10)
         Me.Label1.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 20)
+        Me.Label1.Size = New System.Drawing.Size(396, 20)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Title:"
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 1
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 10)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtWebsite, 0, 9)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtInfo, 0, 12)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 11)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtLanguage, 0, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 8)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtTitle, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtAuthor, 0, 6)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(10, 4, 10, 4)
+        Me.TableLayoutPanel1.RowCount = 13
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(422, 466)
+        Me.TableLayoutPanel1.TabIndex = 82
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.btnGo)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(13, 263)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(396, 40)
+        Me.Panel1.TabIndex = 16
         '
         'PropertiesEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.DocumentToolStripContainer)
-        Me.Controls.Add(Me.DoubleBufferedPanel2)
+        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.DoubleBuffered = True
-        Me.MinimumSize = New System.Drawing.Size(408, 0)
         Me.Name = "PropertiesEditor"
-        Me.Size = New System.Drawing.Size(413, 921)
+        Me.Size = New System.Drawing.Size(422, 994)
         Me.DocumentToolStripContainer.ContentPanel.ResumeLayout(False)
         Me.DocumentToolStripContainer.TopToolStripPanel.ResumeLayout(False)
         Me.DocumentToolStripContainer.TopToolStripPanel.PerformLayout()
@@ -387,8 +414,9 @@ Partial Class PropertiesEditor
         Me.StylizedPanel1.ResumeLayout(False)
         Me.DocumentToolStrip.ResumeLayout(False)
         Me.DocumentToolStrip.PerformLayout()
-        Me.DoubleBufferedPanel2.ResumeLayout(False)
-        Me.DoubleBufferedPanel2.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -399,7 +427,6 @@ Partial Class PropertiesEditor
     Friend WithEvents txtAuthor As System.Windows.Forms.TextBox
     Friend WithEvents txtWebsite As System.Windows.Forms.TextBox
     Friend WithEvents lbPages As System.Windows.Forms.ListBox
-    Friend WithEvents DoubleBufferedPanel2 As TundraLib.DoubleBufferedPanel
     Friend WithEvents ttMain As System.Windows.Forms.ToolTip
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtInfo As System.Windows.Forms.TextBox
@@ -422,4 +449,6 @@ Partial Class PropertiesEditor
     Friend WithEvents btnGo As Button
     Friend WithEvents txtLanguage As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents Panel1 As Panel
 End Class
