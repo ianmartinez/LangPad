@@ -15,6 +15,7 @@
         frmRTF.SetIcons()
         frmDictionary.SetIcons()
         dlgStyle.SetIcons()
+        CharacterEditorToolWindow.SetIcons()
 
         Close()
     End Sub

@@ -23,6 +23,26 @@ Public Class CharacterEditor
         Refresh()
     End Sub
 
+
+    Public Sub SetIcons()
+        Dim res As IconResolution = GetIconResolution()
+
+        ' Local
+        ImportFileToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, res)
+        ExportFileToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, res)
+        ClearFileToolStripButton.Image = IconManager.Get("edit-clear", IconSize.Small, res)
+
+
+        ' File
+        ImportFileToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, res)
+        ExportFileToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, res)
+        ClearFileToolStripButton.Image = IconManager.Get("edit-clear", IconSize.Small, res)
+
+        ' Search
+        SearchToolStripButton.Image = IconManager.Get("edit-find", IconSize.Small, res)
+
+    End Sub
+
     Private Sub UpdateResult()
         If txtCharacter.Text = "" Then
             btnCharacter.Text = ""
@@ -163,6 +183,8 @@ Public Class CharacterEditor
     End Sub
 
     Private Sub CharacterEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SetIcons()
+
         If Character = "" Then Character = "a"
         txtCharacter.Text = Character
 
