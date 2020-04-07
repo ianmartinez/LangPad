@@ -16,6 +16,7 @@ Public Class frmMain
     Public Notebook As New List(Of String)
     Public Moving As Boolean = False
     Public DisableFontChange As Boolean
+    Public IsLoading As Boolean = False
 
     Public Sub SaveTabs()
         For i = 0 To tcNotebook.TabPages.Count - 1
@@ -24,7 +25,6 @@ Public Class frmMain
     End Sub
 
     Public Sub UpdateTabs()
-        On Error Resume Next
         SuspendLayout()
 
         tcNotebook.TabPages.Clear()
@@ -57,7 +57,9 @@ Public Class frmMain
         Next
 
         tcNotebook.SelectedIndex = 0
-        SelectedDocument = rtbList.Item(0)
+        If (rtbList.Count > 0) Then
+            SelectedDocument = rtbList.Item(0)
+        End If
         ResumeLayout()
         pnlDocumentProperties.ResumeLayout()
 
@@ -67,7 +69,10 @@ Public Class frmMain
         pnlDocumentProperties.txtWebsite.Text = CurrentDocument.Website
         pnlDocumentProperties.txtInfo.Text = CurrentDocument.Info
 
-        pnlDocumentProperties.lbPages.SelectedIndex = 0
+        If pnlDocumentProperties.lbPages.Items.Count > 0 Then
+            pnlDocumentProperties.lbPages.SelectedIndex = 0
+        End If
+
         FirstTabUpdate = True
 
         lblPageCount.Text = "Page Count: " & CurrentDocument.Pages.Count
@@ -304,7 +309,7 @@ Public Class frmMain
             TempRTF.SelectionFont = New Font(TempRTF.SelectionFont, TempRTF.SelectionFont.Style Xor FontStyle)
         End If
 
-        On Error Resume Next
+
         Dim CurrentPos As Integer = rtb.SelectionStart
         Dim CurrentLength As Integer = rtb.SelectionLength
 
@@ -577,8 +582,7 @@ Public Class frmMain
     End Sub
 
     Private Sub tcNotebook_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcNotebook.SelectedIndexChanged
-        On Error Resume Next
-        If tcNotebook.SelectedIndex = -1 Then Exit Sub
+        If tcNotebook.SelectedIndex = -1 Or IsLoading Then Exit Sub
         If Moving = False Then
             SaveTabs()
             SelectedDocument = rtbList.Item(tcNotebook.SelectedIndex)
@@ -681,6 +685,8 @@ Public Class frmMain
     End Sub
 
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
+        IsLoading = True
+
         If SelectedDocument.Modified Then
             Dim Mode = ModifiedWarning()
             If Mode = DialogResult.Yes Then
@@ -710,6 +716,7 @@ Public Class frmMain
         End If
 
         SetTitle()
+        IsLoading = False
     End Sub
 
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
@@ -912,7 +919,6 @@ Public Class frmMain
             .SelectionCharOffset = 0
         }
 
-        On Error Resume Next
         Dim CurrentPos As Integer = SelectedDocument.SelectionStart
         Dim CurrentLength As Integer = SelectedDocument.SelectionLength
 
@@ -952,7 +958,6 @@ Public Class frmMain
             .SelectionCharOffset = dlgStyle.StyleCharOffset
         }
 
-        On Error Resume Next
         Dim CurrentPos As Integer = SelectedDocument.SelectionStart
         Dim CurrentLength As Integer = SelectedDocument.SelectionLength
 
@@ -1006,7 +1011,8 @@ Public Class frmMain
     End Sub
 
     Public Sub RemovePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemovePageToolStripMenuItem.Click
-        If CurrentDocument.Pages.Count = 0 Then Exit Sub
+        If CurrentDocument.Pages.Count = 0 Or tcNotebook.SelectedIndex < 0 Then Exit Sub
+
         SaveTabs()
         If MessageBox.Show("Are you sure you want to delete this page? This cannot be undone.", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = Windows.Forms.DialogResult.Yes Then
             CurrentDocument.Pages.RemoveAt(tcNotebook.SelectedIndex)
@@ -1160,7 +1166,6 @@ Public Class frmMain
     End Sub
 
     Private Sub FontToolStripButton_Click(sender As Object, e As EventArgs) Handles FontToolStripButton.Click
-        On Error Resume Next
         DisableFontChange = True
         Dim dlgFont As New FontDialog With {
             .AllowSimulations = True,

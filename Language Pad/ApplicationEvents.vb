@@ -14,6 +14,7 @@ Namespace My
 
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
             On Error Resume Next
+
             CharTool = New CharacterEditorToolWindow
 
             ssLoading.pbLoading.Value = 0
