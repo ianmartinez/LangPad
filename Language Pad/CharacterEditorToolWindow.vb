@@ -30,7 +30,7 @@
     End Sub
 
     Private Sub CharacterEditorToolWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        charEdit.GetCurrentTexbox = GetCurrentTexbox
+        charEdit.GetCurrentTexbox = GetCurrentTexbox()
         MinimumSize = New Size(charEdit.MinimumSize.Width + 10, charEdit.MinimumSize.Height + 10)
     End Sub
 

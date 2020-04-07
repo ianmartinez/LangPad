@@ -17,6 +17,7 @@ Public Class frmMain
     Public Moving As Boolean = False
     Public DisableFontChange As Boolean
     Public IsLoading As Boolean = False
+    Public LastFocused As TextBoxBase
 
     Public Sub SaveTabs()
         For i = 0 To tcNotebook.TabPages.Count - 1
@@ -1278,7 +1279,11 @@ Public Class frmMain
     Public Sub frmMain_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         CharTool.TargetForm = Me
         CharTool.GetCurrentTexbox = Function()
-                                        Return SelectedDocument
+                                        If LastFocused Is Nothing Then
+                                            LastFocused = SelectedDocument
+                                        End If
+
+                                        Return LastFocused
                                     End Function
     End Sub
 
@@ -1308,5 +1313,9 @@ Public Class frmMain
 
     Private Sub PastePlainContextMenuItem_Click(sender As Object, e As EventArgs) Handles PastePlainContextMenuItem.Click
         PastePlainToolStripMenuItem_Click(Me, e)
+    End Sub
+
+    Private Sub SelectedDocument_GotFocus(sender As Object, e As EventArgs) Handles SelectedDocument.GotFocus
+        LastFocused = SelectedDocument
     End Sub
 End Class

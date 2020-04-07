@@ -171,7 +171,23 @@ Public Class PropertiesEditor
         End If
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub txtTitle_Enter(sender As Object, e As EventArgs) Handles txtTitle.Enter
+        frmMain.LastFocused = txtTitle
+    End Sub
 
+    Private Sub txtLanguage_Enter(sender As Object, e As EventArgs) Handles txtLanguage.Enter
+        frmMain.LastFocused = txtLanguage
+    End Sub
+
+    Private Sub txtAuthor_Enter(sender As Object, e As EventArgs) Handles txtAuthor.Enter
+        frmMain.LastFocused = txtAuthor
+    End Sub
+
+    Private Sub txtWebsite_Enter(sender As Object, e As EventArgs) Handles txtWebsite.Enter
+        frmMain.LastFocused = txtWebsite
+    End Sub
+
+    Private Sub txtInfo_Enter(sender As Object, e As EventArgs) Handles txtInfo.Enter
+        frmMain.LastFocused = txtInfo
     End Sub
 End Class

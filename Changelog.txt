@@ -6,9 +6,10 @@
    **• Add option in settings to load character editor on startup
    **• Export pages to Markdown
    **• Remember display font chosen by user on dictionary window
-   • Fixed bug where "clear style" on edit style dialog wouldn't refresh the preview
+   • Character editor can now be used on text boxes in properties panel
+   • Fixed bug where "clear style" button on edit style dialog wouldn't refresh the preview
    • Fixed bug where character editor would pop up after being closed
-   • Fixed bug where character insertion would sometimes fail
+   • Fixed bug where character insertion could sometimes fail
    • Fixed bug where sometimes the second file loaded in a row wouldn't fully load
 
 Version 9.4 (April 24, 2019)
@@ -166,7 +167,7 @@ Version 5.2 (August 10, 2015)
    • Massive internal improvements
    • Improved updating system
    • Small UI improvements
-   • Added to github
+   • Added to GitHub
    • Microsoft Sans Serif fonts are no longer forced by default
    
 Version 5.1 (August 7, 2015)
