@@ -53,15 +53,20 @@ Partial Class PropertiesEditor
         Me.txtTitle = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.PropertiesTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.MainSplitContainer = New System.Windows.Forms.SplitContainer()
         Me.DocumentToolStripContainer.ContentPanel.SuspendLayout()
         Me.DocumentToolStripContainer.TopToolStripPanel.SuspendLayout()
         Me.DocumentToolStripContainer.SuspendLayout()
         Me.StylizedPanel1.SuspendLayout()
         Me.DocumentToolStrip.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.PropertiesTableLayoutPanel.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.MainSplitContainer, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MainSplitContainer.Panel1.SuspendLayout()
+        Me.MainSplitContainer.Panel2.SuspendLayout()
+        Me.MainSplitContainer.SuspendLayout()
         Me.SuspendLayout()
         '
         'DocumentToolStripContainer
@@ -73,17 +78,17 @@ Partial Class PropertiesEditor
         'DocumentToolStripContainer.ContentPanel
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel1)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(422, 487)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(422, 449)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'DocumentToolStripContainer.LeftToolStripPanel
         '
-        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 466)
+        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(0, 0)
         Me.DocumentToolStripContainer.Name = "DocumentToolStripContainer"
         '
         'DocumentToolStripContainer.RightToolStripPanel
         '
-        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(422, 528)
+        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(422, 490)
         Me.DocumentToolStripContainer.TabIndex = 81
         Me.DocumentToolStripContainer.Text = "ToolStripContainer1"
         '
@@ -100,7 +105,7 @@ Partial Class PropertiesEditor
         Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(422, 487)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(422, 449)
         Me.StylizedPanel1.TabIndex = 80
         '
         'lbPages
@@ -113,7 +118,7 @@ Partial Class PropertiesEditor
         Me.lbPages.ItemHeight = 20
         Me.lbPages.Location = New System.Drawing.Point(2, 0)
         Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(420, 487)
+        Me.lbPages.Size = New System.Drawing.Size(420, 449)
         Me.lbPages.TabIndex = 15
         '
         'DocumentToolStrip
@@ -257,7 +262,7 @@ Partial Class PropertiesEditor
         Me.txtInfo.Multiline = True
         Me.txtInfo.Name = "txtInfo"
         Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo.Size = New System.Drawing.Size(376, 115)
+        Me.txtInfo.Size = New System.Drawing.Size(376, 149)
         Me.txtInfo.TabIndex = 5
         '
         'Label3
@@ -352,41 +357,41 @@ Partial Class PropertiesEditor
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Title:"
         '
-        'TableLayoutPanel1
+        'PropertiesTableLayoutPanel
         '
-        Me.TableLayoutPanel1.ColumnCount = 1
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 10)
-        Me.TableLayoutPanel1.Controls.Add(Me.txtWebsite, 0, 9)
-        Me.TableLayoutPanel1.Controls.Add(Me.txtInfo, 0, 12)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 11)
-        Me.TableLayoutPanel1.Controls.Add(Me.txtLanguage, 0, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 8)
-        Me.TableLayoutPanel1.Controls.Add(Me.txtTitle, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.txtAuthor, 0, 6)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(20, 4, 20, 4)
-        Me.TableLayoutPanel1.RowCount = 13
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(422, 466)
-        Me.TableLayoutPanel1.TabIndex = 82
+        Me.PropertiesTableLayoutPanel.ColumnCount = 1
+        Me.PropertiesTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.PropertiesTableLayoutPanel.Controls.Add(Me.Panel1, 0, 10)
+        Me.PropertiesTableLayoutPanel.Controls.Add(Me.txtWebsite, 0, 9)
+        Me.PropertiesTableLayoutPanel.Controls.Add(Me.txtInfo, 0, 12)
+        Me.PropertiesTableLayoutPanel.Controls.Add(Me.Label4, 0, 11)
+        Me.PropertiesTableLayoutPanel.Controls.Add(Me.txtLanguage, 0, 4)
+        Me.PropertiesTableLayoutPanel.Controls.Add(Me.Label1, 0, 0)
+        Me.PropertiesTableLayoutPanel.Controls.Add(Me.Label3, 0, 8)
+        Me.PropertiesTableLayoutPanel.Controls.Add(Me.txtTitle, 0, 1)
+        Me.PropertiesTableLayoutPanel.Controls.Add(Me.Label5, 0, 3)
+        Me.PropertiesTableLayoutPanel.Controls.Add(Me.Label2, 0, 5)
+        Me.PropertiesTableLayoutPanel.Controls.Add(Me.txtAuthor, 0, 6)
+        Me.PropertiesTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PropertiesTableLayoutPanel.Location = New System.Drawing.Point(0, 0)
+        Me.PropertiesTableLayoutPanel.Name = "PropertiesTableLayoutPanel"
+        Me.PropertiesTableLayoutPanel.Padding = New System.Windows.Forms.Padding(20, 4, 20, 4)
+        Me.PropertiesTableLayoutPanel.RowCount = 13
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.PropertiesTableLayoutPanel.Size = New System.Drawing.Size(422, 500)
+        Me.PropertiesTableLayoutPanel.TabIndex = 82
         '
         'Panel1
         '
@@ -397,12 +402,31 @@ Partial Class PropertiesEditor
         Me.Panel1.Size = New System.Drawing.Size(376, 40)
         Me.Panel1.TabIndex = 16
         '
+        'MainSplitContainer
+        '
+        Me.MainSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MainSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.MainSplitContainer.Location = New System.Drawing.Point(0, 0)
+        Me.MainSplitContainer.Name = "MainSplitContainer"
+        Me.MainSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'MainSplitContainer.Panel1
+        '
+        Me.MainSplitContainer.Panel1.Controls.Add(Me.PropertiesTableLayoutPanel)
+        Me.MainSplitContainer.Panel1MinSize = 500
+        '
+        'MainSplitContainer.Panel2
+        '
+        Me.MainSplitContainer.Panel2.Controls.Add(Me.DocumentToolStripContainer)
+        Me.MainSplitContainer.Size = New System.Drawing.Size(422, 994)
+        Me.MainSplitContainer.SplitterDistance = 500
+        Me.MainSplitContainer.TabIndex = 83
+        '
         'PropertiesEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.DocumentToolStripContainer)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.MainSplitContainer)
         Me.DoubleBuffered = True
         Me.Name = "PropertiesEditor"
         Me.Size = New System.Drawing.Size(422, 994)
@@ -414,9 +438,13 @@ Partial Class PropertiesEditor
         Me.StylizedPanel1.ResumeLayout(False)
         Me.DocumentToolStrip.ResumeLayout(False)
         Me.DocumentToolStrip.PerformLayout()
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
+        Me.PropertiesTableLayoutPanel.ResumeLayout(False)
+        Me.PropertiesTableLayoutPanel.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        Me.MainSplitContainer.Panel1.ResumeLayout(False)
+        Me.MainSplitContainer.Panel2.ResumeLayout(False)
+        CType(Me.MainSplitContainer, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MainSplitContainer.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -449,6 +477,7 @@ Partial Class PropertiesEditor
     Friend WithEvents btnGo As Button
     Friend WithEvents txtLanguage As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents PropertiesTableLayoutPanel As TableLayoutPanel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents MainSplitContainer As SplitContainer
 End Class

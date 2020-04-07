@@ -330,7 +330,7 @@ Partial Class frmMain
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.StylizedPanel1)
         Me.SplitLayoutPanel.Panel2MinSize = 365
         Me.SplitLayoutPanel.Size = New System.Drawing.Size(1731, 1033)
-        Me.SplitLayoutPanel.SplitterDistance = 1326
+        Me.SplitLayoutPanel.SplitterDistance = 1327
         Me.SplitLayoutPanel.SplitterWidth = 3
         Me.SplitLayoutPanel.TabIndex = 1
         '
@@ -346,7 +346,7 @@ Partial Class frmMain
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.tcNotebook)
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.pnlFindReplace)
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.pnlColor)
-        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1326, 962)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1327, 962)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'MainToolStripContainer.LeftToolStripPanel
@@ -356,7 +356,7 @@ Partial Class frmMain
         '
         'MainToolStripContainer.RightToolStripPanel
         '
-        Me.MainToolStripContainer.Size = New System.Drawing.Size(1326, 1033)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(1327, 1033)
         Me.MainToolStripContainer.TabIndex = 74
         '
         'MainToolStripContainer.TopToolStripPanel
@@ -371,7 +371,7 @@ Partial Class frmMain
         Me.DataToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel, Me.ToolStripSeparator11, Me.lblPageCount, Me.ToolStripSeparator12, Me.ToolStripLabel1, Me.ThemeCombo})
         Me.DataToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DataToolStrip.Name = "DataToolStrip"
-        Me.DataToolStrip.Size = New System.Drawing.Size(1326, 30)
+        Me.DataToolStrip.Size = New System.Drawing.Size(1327, 30)
         Me.DataToolStrip.Stretch = True
         Me.DataToolStrip.TabIndex = 2
         '
@@ -431,7 +431,7 @@ Partial Class frmMain
         Me.tcNotebook.Location = New System.Drawing.Point(0, 172)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(1326, 790)
+        Me.tcNotebook.Size = New System.Drawing.Size(1327, 790)
         Me.tcNotebook.TabIndex = 73
         '
         'pnlFindReplace
@@ -448,7 +448,7 @@ Partial Class frmMain
         Me.pnlFindReplace.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlFindReplace.Location = New System.Drawing.Point(0, 118)
         Me.pnlFindReplace.Name = "pnlFindReplace"
-        Me.pnlFindReplace.Size = New System.Drawing.Size(1326, 54)
+        Me.pnlFindReplace.Size = New System.Drawing.Size(1327, 54)
         Me.pnlFindReplace.TabIndex = 72
         Me.pnlFindReplace.Visible = False
         '
@@ -536,7 +536,7 @@ Partial Class frmMain
         Me.pnlColor.Location = New System.Drawing.Point(0, 0)
         Me.pnlColor.Name = "pnlColor"
         Me.pnlColor.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.pnlColor.Size = New System.Drawing.Size(1326, 118)
+        Me.pnlColor.Size = New System.Drawing.Size(1327, 118)
         Me.pnlColor.TabIndex = 74
         Me.pnlColor.Visible = False
         '
@@ -572,7 +572,7 @@ Partial Class frmMain
         Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.ColorLayoutPanel.Name = "ColorLayoutPanel"
         Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(6)
-        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1326, 68)
+        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1327, 68)
         Me.ColorLayoutPanel.TabIndex = 70
         '
         'btnTransparentColor
@@ -1189,7 +1189,7 @@ Partial Class frmMain
         Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
         Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Size = New System.Drawing.Size(402, 1033)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(401, 1033)
         Me.StylizedPanel1.TabIndex = 13
         '
         'pnlDocumentProperties
@@ -1197,7 +1197,7 @@ Partial Class frmMain
         Me.pnlDocumentProperties.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlDocumentProperties.Location = New System.Drawing.Point(0, 0)
         Me.pnlDocumentProperties.Name = "pnlDocumentProperties"
-        Me.pnlDocumentProperties.Size = New System.Drawing.Size(402, 1033)
+        Me.pnlDocumentProperties.Size = New System.Drawing.Size(401, 1033)
         Me.pnlDocumentProperties.TabIndex = 0
         '
         'dlgOpen
@@ -1237,7 +1237,7 @@ Partial Class frmMain
         Me.NewToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(227, 34)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'OpenToolStripMenuItem
@@ -1245,40 +1245,40 @@ Partial Class frmMain
         Me.OpenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.OpenToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(227, 34)
         Me.OpenToolStripMenuItem.Text = "Open..."
         '
         'toolStripSeparator3
         '
         Me.toolStripSeparator3.Name = "toolStripSeparator3"
-        Me.toolStripSeparator3.Size = New System.Drawing.Size(267, 6)
+        Me.toolStripSeparator3.Size = New System.Drawing.Size(224, 6)
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.SaveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(227, 34)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'SaveAsToolStripMenuItem
         '
         Me.SaveAsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(227, 34)
         Me.SaveAsToolStripMenuItem.Text = "Save As..."
         '
         'toolStripSeparator4
         '
         Me.toolStripSeparator4.Name = "toolStripSeparator4"
-        Me.toolStripSeparator4.Size = New System.Drawing.Size(267, 6)
+        Me.toolStripSeparator4.Size = New System.Drawing.Size(224, 6)
         '
         'PrintToolStripMenuItem
         '
         Me.PrintToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PrintToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(227, 34)
         Me.PrintToolStripMenuItem.Text = "Print..."
         '
         'PrintPreviewToolStripMenuItem
@@ -1286,37 +1286,37 @@ Partial Class frmMain
         Me.PrintPreviewToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PrintPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PrintPreviewToolStripMenuItem.Name = "PrintPreviewToolStripMenuItem"
-        Me.PrintPreviewToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.PrintPreviewToolStripMenuItem.Size = New System.Drawing.Size(227, 34)
         Me.PrintPreviewToolStripMenuItem.Text = "Print Preview..."
         '
         'PageSetupToolStripMenuItem
         '
         Me.PageSetupToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PageSetupToolStripMenuItem.Name = "PageSetupToolStripMenuItem"
-        Me.PageSetupToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.PageSetupToolStripMenuItem.Size = New System.Drawing.Size(227, 34)
         Me.PageSetupToolStripMenuItem.Text = "Page Setup..."
         '
         'ToolStripMenuItem22
         '
         Me.ToolStripMenuItem22.Name = "ToolStripMenuItem22"
-        Me.ToolStripMenuItem22.Size = New System.Drawing.Size(267, 6)
+        Me.ToolStripMenuItem22.Size = New System.Drawing.Size(224, 6)
         '
         'RTFEditorToolStripMenuItem
         '
         Me.RTFEditorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RTFEditorToolStripMenuItem.Name = "RTFEditorToolStripMenuItem"
-        Me.RTFEditorToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.RTFEditorToolStripMenuItem.Size = New System.Drawing.Size(227, 34)
         Me.RTFEditorToolStripMenuItem.Text = "RTF Editor..."
         '
         'ToolStripSeparator16
         '
         Me.ToolStripSeparator16.Name = "ToolStripSeparator16"
-        Me.ToolStripSeparator16.Size = New System.Drawing.Size(267, 6)
+        Me.ToolStripSeparator16.Size = New System.Drawing.Size(224, 6)
         '
         'QuitToolStripMenuItem
         '
         Me.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem"
-        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(227, 34)
         Me.QuitToolStripMenuItem.Text = "Quit"
         '
         'EditToolStripMenuItem
