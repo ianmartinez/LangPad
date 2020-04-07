@@ -10,11 +10,11 @@
    • Launch character editor to right of main window on startup
    • Character editor can now be used on text boxes in properties panel
    • Character editor context menu now matches application theme
-   • Fixed bug where "clear style" button on edit style dialog wouldn't refresh the preview
-   • Fixed bug where character editor would pop up after being closed
-   • Fixed bug where character insertion could sometimes fail
-   • Fixed bug where the second file loaded in a row sometimes wouldn't fully load
-   • Fixed bug where scrollbar would show on accents panel in character editor even when not needed
+   • Bug fix: "clear style" button on edit style dialog wouldn't refresh preview
+   • Bug fix: character editor would pop up after being closed
+   • Bug fix: character insertion could sometimes fail
+   • Bug fix: the second file loaded in a row sometimes wouldn't fully load
+   • Bug fix: scrollbar would show on accents panel in character editor even when not needed
 
 Version 9.4 (April 24, 2019)
    • Redesign symbols panel
