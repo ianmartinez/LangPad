@@ -34,9 +34,6 @@
         MinimumSize = New Size(charEdit.MinimumSize.Width + 10, charEdit.MinimumSize.Height + 10)
     End Sub
 
-    Private Sub CharacterEditorToolWindow_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-    End Sub
-
     Private Sub CharacterEditorToolWindow_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then e.Cancel = True
         Visible = False

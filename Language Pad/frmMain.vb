@@ -1296,11 +1296,7 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
-        'If Me.WindowState = FormWindowState.Minimized Then
-        '    CharTool.Visible = False
-        'Else
-        '    CharTool.Visible = True
-        'End If
+
     End Sub
 
     Private Sub QuitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuitToolStripMenuItem.Click

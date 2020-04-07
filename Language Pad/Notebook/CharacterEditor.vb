@@ -435,4 +435,12 @@ Public Class CharacterEditor
     Private Sub SearchModeDropDown_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SearchModeDropDown.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then SearchToolStripButton_Click(sender, e)
     End Sub
+
+    Private Sub CharacterEditor_VisibleChanged(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
+        ' Force WinForms to refresh the autoscroll dimensions because it calculates
+        ' it wrong the first time.
+        AccentsLayoutPanel.AutoScroll = False
+        Refresh()
+        AccentsLayoutPanel.AutoScroll = True
+    End Sub
 End Class
