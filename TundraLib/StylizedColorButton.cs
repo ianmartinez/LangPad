@@ -32,7 +32,7 @@ namespace TundraLib
         private Bitmap ColorBitmap;
         private void GenerateColorBitmap()
         {
-            ColorBitmap = new Bitmap(22, 22);
+            ColorBitmap = new Bitmap(32, 32);
             Graphics ColorGraphics = Graphics.FromImage(ColorBitmap);
             Rectangle ColorRectangle = new Rectangle(1, 1, ColorBitmap.Width - 2, ColorBitmap.Height - 2);
             ColorGraphics.CompositingQuality = CompositingQuality.HighQuality;
