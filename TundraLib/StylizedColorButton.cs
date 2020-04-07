@@ -46,7 +46,7 @@ namespace TundraLib
             InitializeComponent();
             TextAlign = ContentAlignment.MiddleRight;
             ImageAlign = ContentAlignment.MiddleCenter;
-            MinimumSize = new Size(3, 30);
+            MinimumSize = new Size(30, 30);
         }
 
         private void StylizedColorButton_Resize(object sender, EventArgs e)

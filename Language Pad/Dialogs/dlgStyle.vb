@@ -9,6 +9,7 @@ Public Class dlgStyle
     Public StyleHighlight As Color = Color.White
     Public StyleIndent As Integer = 0
     Public StyleCharOffset As Integer = 0
+    Public UpdatingColor As Boolean = False
 
     Private Sub ApplyStyle()
         rtbPreview.SelectAll()
@@ -22,6 +23,10 @@ Public Class dlgStyle
 
         nudIndent.Value = StyleIndent
         nudOffset.Value = StyleCharOffset
+        If Not UpdatingColor Then
+            btnColor.Color = StyleColor
+            btnHighlight.Color = StyleHighlight
+        End If
     End Sub
 
     Public Sub SetIcons()
@@ -82,12 +87,16 @@ Public Class dlgStyle
     End Sub
 
     Private Sub btnColor_ColorChanged(sender As Object, e As EventArgs) Handles btnColor.ColorChanged
+        UpdatingColor = True
         StyleColor = btnColor.Color
         ApplyStyle()
+        UpdatingColor = False
     End Sub
     Private Sub btnHighlight_ColorChanged(sender As Object, e As EventArgs) Handles btnHighlight.ColorChanged
+        UpdatingColor = True
         StyleHighlight = btnHighlight.Color
         ApplyStyle()
+        UpdatingColor = False
     End Sub
 
     Private Sub btnFont_Click(sender As Object, e As EventArgs) Handles btnFont.Click
@@ -139,5 +148,6 @@ Public Class dlgStyle
 
         nudIndent.Value = StyleIndent
         nudOffset.Value = StyleCharOffset
+        ApplyStyle()
     End Sub
 End Class
