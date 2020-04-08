@@ -32,6 +32,7 @@
     Private Sub CharacterEditorToolWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         charEdit.GetCurrentTexbox = GetCurrentTexbox()
         MinimumSize = New Size(charEdit.MinimumSize.Width + 10, charEdit.MinimumSize.Height + 10)
+        SetIcons()
     End Sub
 
     Private Sub CharacterEditorToolWindow_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

@@ -62,7 +62,7 @@ Partial Class dlgAbout
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(9)
-        Me.TabPage1.Size = New System.Drawing.Size(699, 523)
+        Me.TabPage1.Size = New System.Drawing.Size(860, 523)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "License"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -79,7 +79,7 @@ Partial Class dlgAbout
         Me.txtLicense.Name = "txtLicense"
         Me.txtLicense.ReadOnly = True
         Me.txtLicense.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtLicense.Size = New System.Drawing.Size(681, 505)
+        Me.txtLicense.Size = New System.Drawing.Size(842, 505)
         Me.txtLicense.TabIndex = 7
         Me.txtLicense.Text = resources.GetString("txtLicense.Text")
         '

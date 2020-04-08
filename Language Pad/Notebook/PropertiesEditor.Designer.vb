@@ -26,8 +26,6 @@ Partial Class PropertiesEditor
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PropertiesEditor))
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.DocumentToolStripContainer = New System.Windows.Forms.ToolStripContainer()
-        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
-        Me.lbPages = New System.Windows.Forms.ListBox()
         Me.DocumentToolStrip = New System.Windows.Forms.ToolStrip()
         Me.PageUpToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PageDownToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -56,10 +54,11 @@ Partial Class PropertiesEditor
         Me.PropertiesTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MainSplitContainer = New System.Windows.Forms.SplitContainer()
+        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
+        Me.lbPages = New System.Windows.Forms.ListBox()
         Me.DocumentToolStripContainer.ContentPanel.SuspendLayout()
         Me.DocumentToolStripContainer.TopToolStripPanel.SuspendLayout()
         Me.DocumentToolStripContainer.SuspendLayout()
-        Me.StylizedPanel1.SuspendLayout()
         Me.DocumentToolStrip.SuspendLayout()
         Me.PropertiesTableLayoutPanel.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -67,6 +66,7 @@ Partial Class PropertiesEditor
         Me.MainSplitContainer.Panel1.SuspendLayout()
         Me.MainSplitContainer.Panel2.SuspendLayout()
         Me.MainSplitContainer.SuspendLayout()
+        Me.StylizedPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DocumentToolStripContainer
@@ -78,7 +78,7 @@ Partial Class PropertiesEditor
         'DocumentToolStripContainer.ContentPanel
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel1)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(422, 449)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(370, 524)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'DocumentToolStripContainer.LeftToolStripPanel
@@ -88,38 +88,13 @@ Partial Class PropertiesEditor
         '
         'DocumentToolStripContainer.RightToolStripPanel
         '
-        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(422, 490)
+        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(370, 565)
         Me.DocumentToolStripContainer.TabIndex = 81
         Me.DocumentToolStripContainer.Text = "ToolStripContainer1"
         '
         'DocumentToolStripContainer.TopToolStripPanel
         '
         Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.DocumentToolStrip)
-        '
-        'StylizedPanel1
-        '
-        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedPanel1.Controls.Add(Me.lbPages)
-        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
-        Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(422, 449)
-        Me.StylizedPanel1.TabIndex = 80
-        '
-        'lbPages
-        '
-        Me.lbPages.BackColor = System.Drawing.Color.White
-        Me.lbPages.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.lbPages.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbPages.ForeColor = System.Drawing.Color.Black
-        Me.lbPages.IntegralHeight = False
-        Me.lbPages.ItemHeight = 20
-        Me.lbPages.Location = New System.Drawing.Point(2, 0)
-        Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(420, 449)
-        Me.lbPages.TabIndex = 15
         '
         'DocumentToolStrip
         '
@@ -129,7 +104,7 @@ Partial Class PropertiesEditor
         Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton, Me.ToolStripSeparator4, Me.DictionaryToolStripButton})
         Me.DocumentToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DocumentToolStrip.Name = "DocumentToolStrip"
-        Me.DocumentToolStrip.Size = New System.Drawing.Size(422, 41)
+        Me.DocumentToolStrip.Size = New System.Drawing.Size(370, 41)
         Me.DocumentToolStrip.Stretch = True
         Me.DocumentToolStrip.TabIndex = 0
         '
@@ -250,7 +225,7 @@ Partial Class PropertiesEditor
         Me.Label4.Location = New System.Drawing.Point(23, 307)
         Me.Label4.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(376, 20)
+        Me.Label4.Size = New System.Drawing.Size(324, 20)
         Me.Label4.TabIndex = 78
         Me.Label4.Text = "Notes:"
         '
@@ -262,7 +237,7 @@ Partial Class PropertiesEditor
         Me.txtInfo.Multiline = True
         Me.txtInfo.Name = "txtInfo"
         Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo.Size = New System.Drawing.Size(376, 154)
+        Me.txtInfo.Size = New System.Drawing.Size(324, 79)
         Me.txtInfo.TabIndex = 5
         '
         'Label3
@@ -272,14 +247,14 @@ Partial Class PropertiesEditor
         Me.Label3.Location = New System.Drawing.Point(23, 202)
         Me.Label3.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(376, 20)
+        Me.Label3.Size = New System.Drawing.Size(324, 20)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Website:"
         '
         'btnGo
         '
         Me.btnGo.Dock = System.Windows.Forms.DockStyle.Right
-        Me.btnGo.Location = New System.Drawing.Point(282, 0)
+        Me.btnGo.Location = New System.Drawing.Point(230, 0)
         Me.btnGo.Margin = New System.Windows.Forms.Padding(3, 3, 0, 3)
         Me.btnGo.MinimumSize = New System.Drawing.Size(80, 0)
         Me.btnGo.Name = "btnGo"
@@ -294,7 +269,7 @@ Partial Class PropertiesEditor
         Me.txtWebsite.Location = New System.Drawing.Point(23, 231)
         Me.txtWebsite.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.txtWebsite.Name = "txtWebsite"
-        Me.txtWebsite.Size = New System.Drawing.Size(376, 26)
+        Me.txtWebsite.Size = New System.Drawing.Size(324, 26)
         Me.txtWebsite.TabIndex = 3
         '
         'txtLanguage
@@ -303,7 +278,7 @@ Partial Class PropertiesEditor
         Me.txtLanguage.Location = New System.Drawing.Point(23, 103)
         Me.txtLanguage.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.txtLanguage.Name = "txtLanguage"
-        Me.txtLanguage.Size = New System.Drawing.Size(376, 26)
+        Me.txtLanguage.Size = New System.Drawing.Size(324, 26)
         Me.txtLanguage.TabIndex = 80
         '
         'Label5
@@ -313,7 +288,7 @@ Partial Class PropertiesEditor
         Me.Label5.Location = New System.Drawing.Point(23, 74)
         Me.Label5.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(376, 20)
+        Me.Label5.Size = New System.Drawing.Size(324, 20)
         Me.Label5.TabIndex = 81
         Me.Label5.Text = "Language:"
         '
@@ -323,7 +298,7 @@ Partial Class PropertiesEditor
         Me.txtAuthor.Location = New System.Drawing.Point(23, 167)
         Me.txtAuthor.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.txtAuthor.Name = "txtAuthor"
-        Me.txtAuthor.Size = New System.Drawing.Size(376, 26)
+        Me.txtAuthor.Size = New System.Drawing.Size(324, 26)
         Me.txtAuthor.TabIndex = 2
         '
         'txtTitle
@@ -332,7 +307,7 @@ Partial Class PropertiesEditor
         Me.txtTitle.Location = New System.Drawing.Point(23, 39)
         Me.txtTitle.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(376, 26)
+        Me.txtTitle.Size = New System.Drawing.Size(324, 26)
         Me.txtTitle.TabIndex = 1
         '
         'Label2
@@ -342,7 +317,7 @@ Partial Class PropertiesEditor
         Me.Label2.Location = New System.Drawing.Point(23, 138)
         Me.Label2.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(376, 20)
+        Me.Label2.Size = New System.Drawing.Size(324, 20)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Author:"
         '
@@ -353,7 +328,7 @@ Partial Class PropertiesEditor
         Me.Label1.Location = New System.Drawing.Point(23, 10)
         Me.Label1.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(376, 20)
+        Me.Label1.Size = New System.Drawing.Size(324, 20)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Title:"
         '
@@ -390,7 +365,7 @@ Partial Class PropertiesEditor
         Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.PropertiesTableLayoutPanel.Size = New System.Drawing.Size(422, 500)
+        Me.PropertiesTableLayoutPanel.Size = New System.Drawing.Size(370, 425)
         Me.PropertiesTableLayoutPanel.TabIndex = 82
         '
         'Panel1
@@ -399,7 +374,7 @@ Partial Class PropertiesEditor
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(23, 263)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(376, 35)
+        Me.Panel1.Size = New System.Drawing.Size(324, 35)
         Me.Panel1.TabIndex = 16
         '
         'MainSplitContainer
@@ -413,14 +388,39 @@ Partial Class PropertiesEditor
         'MainSplitContainer.Panel1
         '
         Me.MainSplitContainer.Panel1.Controls.Add(Me.PropertiesTableLayoutPanel)
-        Me.MainSplitContainer.Panel1MinSize = 500
+        Me.MainSplitContainer.Panel1MinSize = 380
         '
         'MainSplitContainer.Panel2
         '
         Me.MainSplitContainer.Panel2.Controls.Add(Me.DocumentToolStripContainer)
-        Me.MainSplitContainer.Size = New System.Drawing.Size(422, 994)
-        Me.MainSplitContainer.SplitterDistance = 500
+        Me.MainSplitContainer.Size = New System.Drawing.Size(370, 994)
+        Me.MainSplitContainer.SplitterDistance = 425
         Me.MainSplitContainer.TabIndex = 83
+        '
+        'StylizedPanel1
+        '
+        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedPanel1.Controls.Add(Me.lbPages)
+        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
+        Me.StylizedPanel1.Name = "StylizedPanel1"
+        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(370, 524)
+        Me.StylizedPanel1.TabIndex = 80
+        '
+        'lbPages
+        '
+        Me.lbPages.BackColor = System.Drawing.Color.White
+        Me.lbPages.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lbPages.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbPages.ForeColor = System.Drawing.Color.Black
+        Me.lbPages.IntegralHeight = False
+        Me.lbPages.ItemHeight = 20
+        Me.lbPages.Location = New System.Drawing.Point(2, 0)
+        Me.lbPages.Name = "lbPages"
+        Me.lbPages.Size = New System.Drawing.Size(368, 524)
+        Me.lbPages.TabIndex = 15
         '
         'PropertiesEditor
         '
@@ -429,13 +429,12 @@ Partial Class PropertiesEditor
         Me.Controls.Add(Me.MainSplitContainer)
         Me.DoubleBuffered = True
         Me.Name = "PropertiesEditor"
-        Me.Size = New System.Drawing.Size(422, 994)
+        Me.Size = New System.Drawing.Size(370, 994)
         Me.DocumentToolStripContainer.ContentPanel.ResumeLayout(False)
         Me.DocumentToolStripContainer.TopToolStripPanel.ResumeLayout(False)
         Me.DocumentToolStripContainer.TopToolStripPanel.PerformLayout()
         Me.DocumentToolStripContainer.ResumeLayout(False)
         Me.DocumentToolStripContainer.PerformLayout()
-        Me.StylizedPanel1.ResumeLayout(False)
         Me.DocumentToolStrip.ResumeLayout(False)
         Me.DocumentToolStrip.PerformLayout()
         Me.PropertiesTableLayoutPanel.ResumeLayout(False)
@@ -445,6 +444,7 @@ Partial Class PropertiesEditor
         Me.MainSplitContainer.Panel2.ResumeLayout(False)
         CType(Me.MainSplitContainer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MainSplitContainer.ResumeLayout(False)
+        Me.StylizedPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

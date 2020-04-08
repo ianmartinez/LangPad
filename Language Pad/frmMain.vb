@@ -79,6 +79,7 @@ Public Class frmMain
 
     Public Sub SetIcons()
         Dim res As IconResolution = GetIconResolution()
+        pnlDocumentProperties.SetIcons()
 
         ' Toolstrip
         NewToolStripButton.Image = IconManager.Get("document-new", IconSize.Large, res)

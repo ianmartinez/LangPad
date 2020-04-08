@@ -128,6 +128,7 @@ Public Class PropertiesEditor
     Private Sub NotebookEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnGo.Location = New Point(btnGo.Location.X, txtWebsite.Location.Y)
         btnGo.Height = txtWebsite.Height
+        SetIcons()
     End Sub
 
     Private Sub ToolStripContainer1_TopToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles DocumentToolStripContainer.TopToolStripPanel.Paint,

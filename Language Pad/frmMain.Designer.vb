@@ -330,9 +330,9 @@ Partial Class frmMain
         'SplitLayoutPanel.Panel2
         '
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.PropertiesContainerPanel)
-        Me.SplitLayoutPanel.Panel2MinSize = 365
+        Me.SplitLayoutPanel.Panel2MinSize = 350
         Me.SplitLayoutPanel.Size = New System.Drawing.Size(1731, 962)
-        Me.SplitLayoutPanel.SplitterDistance = 1339
+        Me.SplitLayoutPanel.SplitterDistance = 1378
         Me.SplitLayoutPanel.SplitterWidth = 3
         Me.SplitLayoutPanel.TabIndex = 1
         '
@@ -342,7 +342,7 @@ Partial Class frmMain
         Me.tcNotebook.Location = New System.Drawing.Point(0, 172)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(1339, 790)
+        Me.tcNotebook.Size = New System.Drawing.Size(1378, 790)
         Me.tcNotebook.TabIndex = 73
         '
         'pnlFindReplace
@@ -359,7 +359,7 @@ Partial Class frmMain
         Me.pnlFindReplace.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlFindReplace.Location = New System.Drawing.Point(0, 118)
         Me.pnlFindReplace.Name = "pnlFindReplace"
-        Me.pnlFindReplace.Size = New System.Drawing.Size(1339, 54)
+        Me.pnlFindReplace.Size = New System.Drawing.Size(1378, 54)
         Me.pnlFindReplace.TabIndex = 72
         Me.pnlFindReplace.Visible = False
         '
@@ -447,7 +447,7 @@ Partial Class frmMain
         Me.pnlColor.Location = New System.Drawing.Point(0, 0)
         Me.pnlColor.Name = "pnlColor"
         Me.pnlColor.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.pnlColor.Size = New System.Drawing.Size(1339, 118)
+        Me.pnlColor.Size = New System.Drawing.Size(1378, 118)
         Me.pnlColor.TabIndex = 74
         Me.pnlColor.Visible = False
         '
@@ -483,7 +483,7 @@ Partial Class frmMain
         Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.ColorLayoutPanel.Name = "ColorLayoutPanel"
         Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(6)
-        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1339, 68)
+        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1378, 68)
         Me.ColorLayoutPanel.TabIndex = 70
         '
         'btnTransparentColor
@@ -849,7 +849,7 @@ Partial Class frmMain
         Me.PropertiesContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PropertiesContainerPanel.Location = New System.Drawing.Point(0, 0)
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
-        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(389, 962)
+        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(350, 962)
         Me.PropertiesContainerPanel.TabIndex = 13
         '
         'pnlDocumentProperties
@@ -857,7 +857,7 @@ Partial Class frmMain
         Me.pnlDocumentProperties.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlDocumentProperties.Location = New System.Drawing.Point(0, 0)
         Me.pnlDocumentProperties.Name = "pnlDocumentProperties"
-        Me.pnlDocumentProperties.Size = New System.Drawing.Size(389, 962)
+        Me.pnlDocumentProperties.Size = New System.Drawing.Size(350, 962)
         Me.pnlDocumentProperties.TabIndex = 0
         '
         'MainToolStripContainer
@@ -1218,6 +1218,7 @@ Partial Class frmMain
         '
         'MainMenu
         '
+        Me.MainMenu.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MainMenu.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.MainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.PageToolStripMenuItem, Me.InsertToolStripMenuItem, Me.StyleToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MainMenu.Location = New System.Drawing.Point(0, 0)

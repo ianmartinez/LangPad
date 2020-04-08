@@ -24,14 +24,13 @@ Public Class CharacterEditor
         Refresh()
     End Sub
 
-
     Public Sub SetIcons()
         Dim res As IconResolution = GetIconResolution()
 
         ' Local
-        ImportFileToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, res)
-        ExportFileToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, res)
-        ClearFileToolStripButton.Image = IconManager.Get("edit-clear", IconSize.Small, res)
+        ImportLocalToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, res)
+        ExportLocalToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, res)
+        ClearLocalToolStripButton.Image = IconManager.Get("edit-clear", IconSize.Small, res)
 
         ' File
         ImportFileToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, res)
