@@ -108,16 +108,6 @@ Public Class frmDictionary
         CurrentTextbox = e.Control
     End Sub
 
-    Private Sub frmDictionary_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        e.Cancel = True
-        If frmMain IsNot Nothing Then
-            CharEditor.TargetForm = frmMain
-            frmMain.Activate()
-        End If
-        SaveDictionary()
-        Hide()
-    End Sub
-
     Private Sub dgvDictionary_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles dgvDictionary.RowPostPaint
         Dim grid As DataGridView = CType(sender, DataGridView)
         Dim rowIdx As String = (e.RowIndex + 1).ToString()
@@ -272,5 +262,15 @@ Public Class frmDictionary
         My.Settings.DictionaryFontColor = Color.Black
         My.Settings.Save()
         SetDisplayFont()
+    End Sub
+
+    Private Sub frmDictionary_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        e.Cancel = True
+        If frmMain IsNot Nothing Then
+            CharEditor.TargetForm = frmMain
+            frmMain.Activate()
+        End If
+        SaveDictionary()
+        Hide()
     End Sub
 End Class
