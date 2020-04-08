@@ -1,2 +1,0 @@
-For 9.5:
-   • Move dictionary files to CSV

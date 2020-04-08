@@ -78,6 +78,7 @@ Partial Class frmMain
         Me.rbHighlight = New System.Windows.Forms.RadioButton()
         Me.rbTextColor = New System.Windows.Forms.RadioButton()
         Me.PropertiesContainerPanel = New TundraLib.DoubleBufferedPanel()
+        Me.pnlDocumentProperties = New Language_Pad.PropertiesEditor()
         Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.DataToolStrip = New System.Windows.Forms.ToolStrip()
         Me.CharCountToolStripLabel = New System.Windows.Forms.ToolStripLabel()
@@ -200,7 +201,6 @@ Partial Class frmMain
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.pnlDocumentProperties = New Language_Pad.PropertiesEditor()
         Me.cmsMain.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
@@ -332,7 +332,7 @@ Partial Class frmMain
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.PropertiesContainerPanel)
         Me.SplitLayoutPanel.Panel2MinSize = 365
         Me.SplitLayoutPanel.Size = New System.Drawing.Size(1731, 962)
-        Me.SplitLayoutPanel.SplitterDistance = 1336
+        Me.SplitLayoutPanel.SplitterDistance = 1337
         Me.SplitLayoutPanel.SplitterWidth = 3
         Me.SplitLayoutPanel.TabIndex = 1
         '
@@ -342,7 +342,7 @@ Partial Class frmMain
         Me.tcNotebook.Location = New System.Drawing.Point(0, 172)
         Me.tcNotebook.Name = "tcNotebook"
         Me.tcNotebook.SelectedIndex = 0
-        Me.tcNotebook.Size = New System.Drawing.Size(1336, 790)
+        Me.tcNotebook.Size = New System.Drawing.Size(1337, 790)
         Me.tcNotebook.TabIndex = 73
         '
         'pnlFindReplace
@@ -359,7 +359,7 @@ Partial Class frmMain
         Me.pnlFindReplace.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlFindReplace.Location = New System.Drawing.Point(0, 118)
         Me.pnlFindReplace.Name = "pnlFindReplace"
-        Me.pnlFindReplace.Size = New System.Drawing.Size(1336, 54)
+        Me.pnlFindReplace.Size = New System.Drawing.Size(1337, 54)
         Me.pnlFindReplace.TabIndex = 72
         Me.pnlFindReplace.Visible = False
         '
@@ -447,7 +447,7 @@ Partial Class frmMain
         Me.pnlColor.Location = New System.Drawing.Point(0, 0)
         Me.pnlColor.Name = "pnlColor"
         Me.pnlColor.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.pnlColor.Size = New System.Drawing.Size(1336, 118)
+        Me.pnlColor.Size = New System.Drawing.Size(1337, 118)
         Me.pnlColor.TabIndex = 74
         Me.pnlColor.Visible = False
         '
@@ -483,7 +483,7 @@ Partial Class frmMain
         Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.ColorLayoutPanel.Name = "ColorLayoutPanel"
         Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(6)
-        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1336, 68)
+        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1337, 68)
         Me.ColorLayoutPanel.TabIndex = 70
         '
         'btnTransparentColor
@@ -848,8 +848,16 @@ Partial Class frmMain
         Me.PropertiesContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PropertiesContainerPanel.Location = New System.Drawing.Point(0, 0)
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
-        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(392, 962)
+        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(391, 962)
         Me.PropertiesContainerPanel.TabIndex = 13
+        '
+        'pnlDocumentProperties
+        '
+        Me.pnlDocumentProperties.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlDocumentProperties.Location = New System.Drawing.Point(0, 0)
+        Me.pnlDocumentProperties.Name = "pnlDocumentProperties"
+        Me.pnlDocumentProperties.Size = New System.Drawing.Size(391, 962)
+        Me.pnlDocumentProperties.TabIndex = 0
         '
         'MainToolStripContainer
         '
@@ -1730,14 +1738,6 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(176, 34)
         Me.AboutToolStripMenuItem.Text = "About..."
-        '
-        'pnlDocumentProperties
-        '
-        Me.pnlDocumentProperties.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlDocumentProperties.Location = New System.Drawing.Point(0, 0)
-        Me.pnlDocumentProperties.Name = "pnlDocumentProperties"
-        Me.pnlDocumentProperties.Size = New System.Drawing.Size(392, 962)
-        Me.pnlDocumentProperties.TabIndex = 0
         '
         'frmMain
         '

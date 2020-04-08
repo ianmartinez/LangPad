@@ -4,6 +4,7 @@
    • Export to new Thorn Writer format
    • Export pages to HTML
    • Add option in settings to load character editor on startup
+   • Tweaked app icon
    **• Export pages to Markdown
    **• Export dictionary to Markdown
    **• Copy text as Markdown

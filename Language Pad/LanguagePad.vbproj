@@ -65,7 +65,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Version9Icon.ico</ApplicationIcon>
+    <ApplicationIcon>Version10Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>38E3BF1F3A17B82E7D86BB07415687A38DCBFF85</ManifestCertificateThumbprint>
@@ -359,6 +359,7 @@
     <None Include="Resources\Suprasegmentals.txt" />
     <None Include="Resources\Cyrillic.txt" />
     <None Include="Resources\Greek.txt" />
+    <Content Include="Version10Icon.ico" />
     <Content Include="Version9Icon.ico" />
   </ItemGroup>
   <ItemGroup />
