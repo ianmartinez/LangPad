@@ -1282,6 +1282,7 @@ Public Class frmMain
 
     Public Sub DictionaryMenuItem_Click(sender As Object, e As EventArgs) Handles DictionaryMenuItem.Click
         frmDictionary.Show()
+        frmDictionary.Activate()
     End Sub
 
     Public Sub frmMain_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
