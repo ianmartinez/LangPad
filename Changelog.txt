@@ -3,6 +3,7 @@ Version 10.1 (TBD)
    **• Export dictionary to Markdown
    **• Copy text as Markdown
    **• Now has a dedicated installer
+   **• Easier resizing of images before insertion
 
 ﻿Version 10.0 (April 8, 2020)
    • Full HiDPI support

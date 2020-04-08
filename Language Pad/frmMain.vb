@@ -919,8 +919,8 @@ Public Class frmMain
         If dlgOpenImage.ShowDialog() = DialogResult.OK Then
             Dim strImagePath As String = dlgOpenImage.FileName
             Dim img As Image = Image.FromFile(strImagePath)
-            If img.Width * img.Height >= 1024 * 1024 Then
-                img = ResizeImage(img, New Size(1024, 1024), True)
+            If img.Width * img.Height >= My.Computer.Screen.Bounds.Width * My.Computer.Screen.Bounds.Height Then
+                img = ResizeImage(img, New Size(My.Computer.Screen.Bounds.Width, My.Computer.Screen.Bounds.Height), True)
             End If
             SelectedDocument.InsertImage(img)
         End If
