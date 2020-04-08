@@ -4,24 +4,21 @@ Imports TundraLib
 Imports TundraLib.Themes
 
 Public Class frmMain
-    Private dlgColor As New ColorDialog
-    Public Event EditText()
-    Private currentFile As String
-    Private checkPrint As Integer
-    Public ReadOnly AssociatedRichTextBox As RichTextBox = SelectedDocument
+    Private ReadOnly ColorPicker As New ColorDialog
+    Private CurrentFilePath As String
+    Private LastPrintedCharPos As Integer
     Public Title As String
-    Public rtbList As New List(Of ExtendedRichTextBox)
+    Public RtbList As New List(Of ExtendedRichTextBox)
     Public WithEvents SelectedDocument As New ExtendedRichTextBox
-    Public SelectedPage As Integer = 0
-    Public Notebook As New List(Of String)
     Public Moving As Boolean = False
     Public DisableFontChange As Boolean
     Public IsLoading As Boolean = False
     Public LastFocused As TextBoxBase
 
     Public Sub SaveTabs()
+        If Not CurrentDocument.Pages.Count = RtbList.Count Then Exit Sub ' Opening document
         For i = 0 To tcNotebook.TabPages.Count - 1
-            CurrentDocument.Pages.Item(i).RTF = rtbList.Item(i).Rtf
+            CurrentDocument.Pages.Item(i).RTF = RtbList.Item(i).Rtf
         Next
     End Sub
 
@@ -29,7 +26,7 @@ Public Class frmMain
         SuspendLayout()
 
         tcNotebook.TabPages.Clear()
-        rtbList.Clear()
+        RtbList.Clear()
         pnlDocumentProperties.SuspendLayout()
         pnlDocumentProperties.lbPages.Items.Clear()
 
@@ -54,12 +51,12 @@ Public Class frmMain
 
             pnlDocumentProperties.lbPages.Items.Add(p.Title)
 
-            rtbList.Add(rtbDoc)
+            RtbList.Add(rtbDoc)
         Next
 
         tcNotebook.SelectedIndex = 0
-        If (rtbList.Count > 0) Then
-            SelectedDocument = rtbList.Item(0)
+        If (RtbList.Count > 0) Then
+            SelectedDocument = RtbList.Item(0)
         End If
         ResumeLayout()
         pnlDocumentProperties.ResumeLayout()
@@ -188,10 +185,10 @@ Public Class frmMain
     End Function
 
     Public Sub SetTitle()
-        If currentFile = "" Then
+        If CurrentFilePath = "" Then
             Text = Title
         Else
-            Dim FileName As String = currentFile.Split("\").GetValue(currentFile.Split("\").Count - 1)
+            Dim FileName As String = CurrentFilePath.Split("\").GetValue(CurrentFilePath.Split("\").Count - 1)
             Text = Title & " - " & FileName
         End If
     End Sub
@@ -221,12 +218,12 @@ Public Class frmMain
     End Function
 
     Private Sub PrintDocument1_BeginPrint(ByVal sender As Object, ByVal e As Printing.PrintEventArgs) Handles pdMain.BeginPrint
-        checkPrint = 0
+        LastPrintedCharPos = 0
     End Sub
 
     Private Sub pdMain_PrintPage(ByVal sender As Object, ByVal e As Printing.PrintPageEventArgs) Handles pdMain.PrintPage
-        checkPrint = SelectedDocument.Print(checkPrint, SelectedDocument.TextLength, e)
-        If checkPrint < SelectedDocument.TextLength Then
+        LastPrintedCharPos = SelectedDocument.Print(LastPrintedCharPos, SelectedDocument.TextLength, e)
+        If LastPrintedCharPos < SelectedDocument.TextLength Then
             e.HasMorePages = True
         Else
             e.HasMorePages = False
@@ -251,7 +248,6 @@ Public Class frmMain
     End Sub
 
     Private Sub SelectedDocument_TextChanged(sender As Object, e As EventArgs) Handles SelectedDocument.TextChanged
-        RaiseEvent EditText()
         CharCountToolStripLabel.Text = "Character Count: " & SelectedDocument.TextLength
         WordCountToolStripLabel.Text = "Word Count: " & WordCount(SelectedDocument.Text)
         frmRTF.txtRTF.Text = SelectedDocument.Rtf
@@ -263,11 +259,18 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If CurrentDocument.Modified = True Then
+        Dim HasSaved As Boolean = False
+
+        If CurrentDocument.Modified Then
             Dim Mode = ModifiedWarning()
+
             If Mode = DialogResult.Yes Then
-                SaveToolStripMenuItem_Click(Me, e)
+                HasSaved = FileSave()
             ElseIf Mode = Windows.Forms.DialogResult.Cancel Then
+                e.Cancel = True
+            End If
+
+            If Mode = DialogResult.Yes AndAlso HasSaved = False Then
                 e.Cancel = True
             End If
         End If
@@ -393,7 +396,7 @@ Public Class frmMain
                     txtReader.Close()
 
                     CurrentDocument.Pages.Add(p)
-                    currentFile = My.Application.CommandLineArgs(0)
+                    CurrentFilePath = My.Application.CommandLineArgs(0)
                 ElseIf FileEXT = "txt" Then
                     Dim p As New NotebookPage With {
                         .Title = "Untitled"
@@ -404,7 +407,7 @@ Public Class frmMain
                     txtReader.Close()
 
                     CurrentDocument.Pages.Add(p)
-                    currentFile = My.Application.CommandLineArgs(0)
+                    CurrentFilePath = My.Application.CommandLineArgs(0)
                 Else
                     Dim AllowOpen As Boolean = True
                     Dim OpenFile As New NotebookFile()
@@ -418,7 +421,7 @@ Public Class frmMain
 
                     If AllowOpen Then
                         CurrentDocument = OpenFile
-                        currentFile = My.Application.CommandLineArgs(0)
+                        CurrentFilePath = My.Application.CommandLineArgs(0)
                     End If
                 End If
             End If
@@ -460,7 +463,7 @@ Public Class frmMain
 
         MainToolStrip.Location = New Point(0, 0)
 
-        dlgColor.FullOpen = True
+        ColorPicker.FullOpen = True
         StartupTheme = New GlacierTheme()
         SetTheme(StartupTheme)
 
@@ -497,13 +500,6 @@ Public Class frmMain
     Private Sub ToolStripContainer1_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles MainToolStripContainer.TopToolStripPanel.SizeChanged,
         MainToolStripContainer.BottomToolStripPanel.SizeChanged, MainToolStripContainer.LeftToolStripPanel.SizeChanged, MainToolStripContainer.RightToolStripPanel.SizeChanged
         MainToolStripContainer.Invalidate()
-    End Sub
-
-    Private Sub btnBack_Click(sender As Object, e As EventArgs)
-        dlgColor.Color = SelectedDocument.BackColor
-        If dlgColor.ShowDialog = DialogResult.OK Then
-            SelectedDocument.BackColor = dlgColor.Color
-        End If
     End Sub
 
     Private Sub btnFind_Click(sender As Object, e As EventArgs) Handles btnFind.Click
@@ -592,14 +588,16 @@ Public Class frmMain
 
     Private Sub tcNotebook_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcNotebook.SelectedIndexChanged
         If tcNotebook.SelectedIndex = -1 Or IsLoading Then Exit Sub
+        Dim OldModified = CurrentDocument.Modified
         If Moving = False Then
             SaveTabs()
-            SelectedDocument = rtbList.Item(tcNotebook.SelectedIndex)
+            SelectedDocument = RtbList.Item(tcNotebook.SelectedIndex)
             pnlDocumentProperties.lbPages.SelectedIndex = tcNotebook.SelectedIndex
             frmRTF.txtRTF.Text = SelectedDocument.Rtf
             WordWrapToolStripMenuItem.Checked = SelectedDocument.WordWrap
             SelectedDocument_TextChanged(Me, e)
         End If
+        CurrentDocument.Modified = OldModified
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs)
@@ -661,12 +659,18 @@ Public Class frmMain
     End Sub
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
-        If SelectedDocument.Modified Then
+        Dim HasSaved As Boolean = False
+
+        If CurrentDocument.Modified Then
             Dim Mode = ModifiedWarning()
 
             If Mode = DialogResult.Yes Then
-                SaveToolStripMenuItem_Click(Me, e)
+                HasSaved = FileSave()
             ElseIf Mode = Windows.Forms.DialogResult.Cancel Then
+                Exit Sub
+            End If
+
+            If Mode = DialogResult.Yes AndAlso HasSaved = False Then
                 Exit Sub
             End If
         End If
@@ -683,26 +687,31 @@ Public Class frmMain
             .RTF = ""
         }
         CurrentDocument.Pages.Add(new_page)
-        CurrentDocument.WordDictionary = New DictionaryFile
+        CurrentDocument.WordDictionary = New DictionaryFile()
         UpdateTabs()
 
         frmDictionary.LoadDictionary() ' Reset dictionary form
         CharEditor.charEdit.FilePanel.Controls.Clear() ' Reset character editor file tab
 
-        currentFile = ""
+        CurrentFilePath = ""
         SetTitle()
 
         CurrentDocument.Modified = False
     End Sub
 
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
-        IsLoading = True
+        Dim HasSaved As Boolean = False
 
-        If SelectedDocument.Modified Then
+        If CurrentDocument.Modified Then
             Dim Mode = ModifiedWarning()
+
             If Mode = DialogResult.Yes Then
-                SaveToolStripMenuItem_Click(Me, e)
+                HasSaved = FileSave()
             ElseIf Mode = Windows.Forms.DialogResult.Cancel Then
+                Exit Sub
+            End If
+
+            If Mode = DialogResult.Yes AndAlso HasSaved = False Then
                 Exit Sub
             End If
         End If
@@ -722,45 +731,20 @@ Public Class frmMain
             CurrentDocument = OpenFile
             UpdateTabs()
             frmDictionary.LoadDictionary()
-            currentFile = dlgOpen.FileName
-            SelectedDocument.Modified = False
+            CurrentFilePath = dlgOpen.FileName
+            CurrentDocument.Modified = False
         End If
 
         SetTitle()
         IsLoading = False
     End Sub
 
-    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
-        If currentFile = "" Then
-            SaveAsToolStripMenuItem_Click(Me, e)
-            Exit Sub
-        Else
-            Cursor = Cursors.WaitCursor
-            Dim strExt As String
-            strExt = Path.GetExtension(currentFile)
-            strExt = strExt.ToUpper()
-            If strExt = "RTF" Then
-                SelectedDocument.SaveFile(currentFile)
-            ElseIf strExt = "TXT" Then
-                Dim txtWriter As StreamWriter
-                txtWriter = New StreamWriter(currentFile)
-                txtWriter.Write(SelectedDocument.Text)
-                txtWriter.Close()
-                SelectedDocument.SelectionStart = 0
-                SelectedDocument.SelectionLength = 0
-            Else
-                CurrentDocument.Save(currentFile)
-                SelectedDocument.Modified = False
-                SetTitle()
-            End If
-        End If
-        Cursor = Cursors.Default
-    End Sub
+    Public Function FileSaveAs() As Boolean
+        Dim SavedFile As Boolean = False
 
-    Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsToolStripMenuItem.Click
         If dlgSave.ShowDialog = Windows.Forms.DialogResult.OK Then
             Cursor = Cursors.WaitCursor
-            If dlgSave.FileName = "" Then Exit Sub
+            If dlgSave.FileName = "" Then Return False
 
             If dlgSave.FileName.EndsWith(".thw") Then
                 MessageBox.Show("This file is being exported to the new Thorn Writer format. This is not compatible with Language Pad.")
@@ -794,13 +778,52 @@ Public Class frmMain
                 thwFile.Save(dlgSave.FileName)
             Else
                 CurrentDocument.Save(dlgSave.FileName)
-                currentFile = dlgSave.FileName
+                CurrentFilePath = dlgSave.FileName
 
-                SelectedDocument.Modified = False
+                CurrentDocument.Modified = False
                 SetTitle()
             End If
+            SavedFile = True
             Cursor = Cursors.Default
         End If
+
+        Return SavedFile
+    End Function
+
+    Public Function FileSave() As Boolean
+        If CurrentFilePath = "" Then
+            Return FileSaveAs()
+        Else
+            Cursor = Cursors.WaitCursor
+            Dim strExt As String
+            strExt = Path.GetExtension(CurrentFilePath)
+            strExt = strExt.ToUpper()
+            If strExt = "RTF" Then
+                SelectedDocument.SaveFile(CurrentFilePath)
+            ElseIf strExt = "TXT" Then
+                Dim txtWriter As StreamWriter
+                txtWriter = New StreamWriter(CurrentFilePath)
+                txtWriter.Write(SelectedDocument.Text)
+                txtWriter.Close()
+                SelectedDocument.SelectionStart = 0
+                SelectedDocument.SelectionLength = 0
+            Else
+                CurrentDocument.Save(CurrentFilePath)
+                CurrentDocument.Modified = False
+                SetTitle()
+            End If
+        End If
+
+        Cursor = Cursors.Default
+        Return True
+    End Function
+
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        FileSave()
+    End Sub
+
+    Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsToolStripMenuItem.Click
+        FileSaveAs()
     End Sub
 
     Private Sub PrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintToolStripMenuItem.Click
@@ -902,10 +925,6 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub TextArtToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub InsertBulletsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InsertBulletsToolStripMenuItem.Click
         SelectedDocument.SelectionBullet = True
     End Sub
@@ -1001,16 +1020,16 @@ Public Class frmMain
     End Sub
 
     Private Sub TextColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TextColorToolStripMenuItem.Click
-        dlgColor.Color = SelectedDocument.SelectionColor
-        If dlgColor.ShowDialog = DialogResult.OK Then
-            SelectedDocument.SelectionColor = dlgColor.Color
+        ColorPicker.Color = SelectedDocument.SelectionColor
+        If ColorPicker.ShowDialog = DialogResult.OK Then
+            SelectedDocument.SelectionColor = ColorPicker.Color
         End If
     End Sub
 
     Private Sub HighlightToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HighlightToolStripMenuItem.Click
-        dlgColor.Color = SelectedDocument.SelectionBackColor
-        If dlgColor.ShowDialog = DialogResult.OK Then
-            SelectedDocument.SelectionBackColor = dlgColor.Color
+        ColorPicker.Color = SelectedDocument.SelectionBackColor
+        If ColorPicker.ShowDialog = DialogResult.OK Then
+            SelectedDocument.SelectionBackColor = ColorPicker.Color
         End If
     End Sub
 
@@ -1033,10 +1052,14 @@ Public Class frmMain
     End Sub
 
     Public Sub DuplicatePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DuplicatePageToolStripMenuItem.Click
-        SaveTabs()
-        dlgAddPage.DuplicatePage = True
-        dlgAddPage.AddPage = False
-        dlgAddPage.ShowDialog()
+        Dim CurrentPage = tcNotebook.SelectedIndex
+        If Not CurrentPage = -1 Then
+            SaveTabs()
+            dlgAddPage.txtName.Text = CurrentDocument.Pages(CurrentPage).Title
+            dlgAddPage.DuplicatePage = True
+            dlgAddPage.AddPage = False
+            dlgAddPage.ShowDialog()
+        End If
     End Sub
 
     Public Sub ImportPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportPageToolStripMenuItem.Click

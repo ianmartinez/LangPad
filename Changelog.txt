@@ -13,6 +13,7 @@
    • Launch character editor to right of main window on startup
    • Character editor can now be used on text boxes in properties panel
    • Character editor context menu now matches application theme
+   • Duplicate pages now have the source page's title by default
    • Bug Fix: Creating a new notebook wouldn't clear words from the last file's dictionary
    • Bug Fix: When adding a new page to an empty notebook, the page's tab wouldn't automatically open
    • Bug Fix: Character editor file tab wouldn't be reset when creating a new file
@@ -22,6 +23,8 @@
    • Bug Fix: Character insertion could sometimes fail
    • Bug Fix: The second file loaded in a row sometimes wouldn't fully load
    • Bug Fix: Scrollbar would show on accents panel in character editor even when not needed
+   • Bug Fix: An unmodified document would sometimes be marked as modified
+   • Bug Fix: Clicking cancel on a save dialog after being asked save before closing would have no effect
 
 Version 9.4 (April 24, 2019)
    • Redesign symbols panel

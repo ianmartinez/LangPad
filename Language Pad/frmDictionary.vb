@@ -1,5 +1,4 @@
-﻿Imports System.ComponentModel
-Imports System.Drawing.Drawing2D
+﻿Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports System.Text
 Imports TundraLib
@@ -173,11 +172,13 @@ Public Class frmDictionary
 
     Private Sub AddToolStripButton_Click(sender As Object, e As EventArgs) Handles AddToolStripButton.Click
         dgvDictionary.Rows.Add(1)
+        CurrentDocument.Modified = True
     End Sub
 
     Private Sub RemoveToolStripButton_Click(sender As Object, e As EventArgs) Handles RemoveToolStripButton.Click
         If dgvDictionary.CurrentCell IsNot Nothing Then
             dgvDictionary.Rows.RemoveAt(dgvDictionary.CurrentCell.RowIndex)
+            CurrentDocument.Modified = True
         End If
     End Sub
 
@@ -198,6 +199,7 @@ Public Class frmDictionary
 
     Private Sub dgvDictionary_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellEndEdit
         SaveDictionary()
+        CurrentDocument.Modified = True
     End Sub
 
     Private Sub ExportHtmlToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportHtmlToolStripButton.Click

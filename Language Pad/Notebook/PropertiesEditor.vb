@@ -31,26 +31,23 @@ Public Class PropertiesEditor
     End Sub
 
     Private Sub txtTitle_TextChanged(sender As Object, e As EventArgs) Handles txtTitle.TextChanged
-        If FirstTabUpdate = True Then
+        If FirstTabUpdate Then
             CurrentDocument.Title = txtTitle.Text
-        Else
             CurrentDocument.Modified = True
         End If
         frmDictionary.Text = If(txtTitle.Text = "", "Dictionary", "Dictionary - " + txtTitle.Text)
     End Sub
 
     Private Sub txtAuthor_TextChanged(sender As Object, e As EventArgs) Handles txtAuthor.TextChanged
-        If FirstTabUpdate = True Then
+        If FirstTabUpdate Then
             CurrentDocument.Author = txtAuthor.Text
-        Else
             CurrentDocument.Modified = True
         End If
     End Sub
 
     Private Sub txtWebsite_TextChanged(sender As Object, e As EventArgs) Handles txtWebsite.TextChanged
-        If FirstTabUpdate = True Then
+        If FirstTabUpdate Then
             CurrentDocument.Website = txtWebsite.Text
-        Else
             CurrentDocument.Modified = True
         End If
     End Sub
@@ -66,9 +63,8 @@ Public Class PropertiesEditor
     End Sub
 
     Private Sub txtInfo_TextChanged(sender As Object, e As EventArgs) Handles txtInfo.TextChanged
-        If FirstTabUpdate = True Then
+        If FirstTabUpdate Then
             CurrentDocument.Info = txtInfo.Text
-        Else
             CurrentDocument.Modified = True
         End If
     End Sub
@@ -164,9 +160,8 @@ Public Class PropertiesEditor
     End Sub
 
     Private Sub txtLanguage_TextChanged(sender As Object, e As EventArgs) Handles txtLanguage.TextChanged
-        If FirstTabUpdate = True Then
+        If FirstTabUpdate Then
             CurrentDocument.Language = txtLanguage.Text
-        Else
             CurrentDocument.Modified = True
         End If
     End Sub

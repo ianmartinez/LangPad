@@ -10,7 +10,17 @@ End Class
 
 <Serializable()>
 Public Class NotebookFile
-    Public Modified As Boolean = False
+    Private _Modified As Boolean = False
+
+    Public Property Modified As Boolean
+        Get
+            Return _Modified
+        End Get
+        Set(value As Boolean)
+            _Modified = value
+        End Set
+    End Property
+
     Public DocumentPath As String = ""
     Public ProgramVersion As String = ProgramVersion
     Public NTSpecificationVersion As Decimal = NTVersion
