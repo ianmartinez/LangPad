@@ -10,7 +10,7 @@ Version 10.1 (TBD)
    • Export to new Thorn Writer format
    • Export pages to HTML
    • Add option in settings to load character editor on startup
-   • Tweaked app icon
+   • Updated app icon
    • Remember display font chosen by user on dictionary window
    • Launch character editor to right of main window on startup
    • Character editor can now be used on text boxes in properties panel
