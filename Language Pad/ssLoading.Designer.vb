@@ -35,7 +35,7 @@ Partial Class ssLoading
         '
         Me.pbLoading.Location = New System.Drawing.Point(9, 236)
         Me.pbLoading.Name = "pbLoading"
-        Me.pbLoading.Size = New System.Drawing.Size(657, 32)
+        Me.pbLoading.Size = New System.Drawing.Size(601, 32)
         Me.pbLoading.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         Me.pbLoading.TabIndex = 81
         '
@@ -47,7 +47,7 @@ Partial Class ssLoading
         Me.lblVersion.Location = New System.Drawing.Point(0, 138)
         Me.lblVersion.Margin = New System.Windows.Forms.Padding(3)
         Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(678, 52)
+        Me.lblVersion.Size = New System.Drawing.Size(622, 52)
         Me.lblVersion.TabIndex = 74
         Me.lblVersion.Text = "Version 1.0"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -60,7 +60,7 @@ Partial Class ssLoading
         Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
         Me.lblLanguagePad.Location = New System.Drawing.Point(0, 0)
         Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(678, 138)
+        Me.lblLanguagePad.Size = New System.Drawing.Size(622, 138)
         Me.lblLanguagePad.TabIndex = 12
         Me.lblLanguagePad.Text = "Language Pad"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -85,14 +85,14 @@ Partial Class ssLoading
         Me.pnlTop.Location = New System.Drawing.Point(0, 0)
         Me.pnlTop.Margin = New System.Windows.Forms.Padding(9)
         Me.pnlTop.Name = "pnlTop"
-        Me.pnlTop.Size = New System.Drawing.Size(678, 190)
+        Me.pnlTop.Size = New System.Drawing.Size(622, 190)
         Me.pnlTop.TabIndex = 83
         '
         'ssLoading
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(678, 284)
+        Me.ClientSize = New System.Drawing.Size(622, 284)
         Me.Controls.Add(Me.pnlTop)
         Me.Controls.Add(Me.lblLoading)
         Me.Controls.Add(Me.pbLoading)

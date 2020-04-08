@@ -125,6 +125,30 @@ Namespace My
                 Me("ShowCharacterEditorOnStartup") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Calibri, 9pt")>  _
+        Public Property DictionaryFont() As Global.System.Drawing.Font
+            Get
+                Return CType(Me("DictionaryFont"),Global.System.Drawing.Font)
+            End Get
+            Set
+                Me("DictionaryFont") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Black")>  _
+        Public Property DictionaryFontColor() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("DictionaryFontColor"),Global.System.Drawing.Color)
+            End Get
+            Set
+                Me("DictionaryFontColor") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

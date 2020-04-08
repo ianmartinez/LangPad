@@ -52,6 +52,7 @@ Partial Class frmDictionary
         Me.RemoveToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.FontToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ResetFontToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.FindToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.dlgSaveHtml = New System.Windows.Forms.SaveFileDialog()
@@ -76,7 +77,7 @@ Partial Class frmDictionary
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
@@ -244,7 +245,7 @@ Partial Class frmDictionary
         Me.MainToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.MainToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ExportHtmlToolStripButton, Me.ToolStripSeparator1, Me.CharacterEditorToolStripButton, Me.ToolStripSeparator2, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.ToolStripSeparator3, Me.FontToolStripButton, Me.ToolStripSeparator4, Me.FindToolStripButton})
+        Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ExportHtmlToolStripButton, Me.ToolStripSeparator1, Me.CharacterEditorToolStripButton, Me.ToolStripSeparator2, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.ToolStripSeparator3, Me.FontToolStripButton, Me.ResetFontToolStripButton, Me.ToolStripSeparator4, Me.FindToolStripButton})
         Me.MainToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.MainToolStrip.Name = "MainToolStrip"
         Me.MainToolStrip.Size = New System.Drawing.Size(1332, 41)
@@ -344,7 +345,17 @@ Partial Class frmDictionary
         Me.FontToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.FontToolStripButton.Name = "FontToolStripButton"
         Me.FontToolStripButton.Size = New System.Drawing.Size(36, 36)
-        Me.FontToolStripButton.Text = "Font"
+        Me.FontToolStripButton.Text = "Display Font"
+        '
+        'ResetFontToolStripButton
+        '
+        Me.ResetFontToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ResetFontToolStripButton.Image = CType(resources.GetObject("ResetFontToolStripButton.Image"), System.Drawing.Image)
+        Me.ResetFontToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ResetFontToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ResetFontToolStripButton.Name = "ResetFontToolStripButton"
+        Me.ResetFontToolStripButton.Size = New System.Drawing.Size(36, 36)
+        Me.ResetFontToolStripButton.Text = "Reset Display Font"
         '
         'ToolStripSeparator4
         '
@@ -400,7 +411,6 @@ Partial Class frmDictionary
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents CharacterEditorToolStripButton As ToolStripButton
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents FontToolStripButton As ToolStripButton
     Friend WithEvents AddToolStripButton As ToolStripButton
     Friend WithEvents RemoveToolStripButton As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
@@ -419,4 +429,6 @@ Partial Class frmDictionary
     Friend WithEvents cbStartsWith As CheckBox
     Friend WithEvents rbDefinition As RadioButton
     Friend WithEvents rbWord As RadioButton
+    Friend WithEvents FontToolStripButton As ToolStripButton
+    Friend WithEvents ResetFontToolStripButton As ToolStripButton
 End Class

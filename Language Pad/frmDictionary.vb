@@ -39,9 +39,9 @@ Public Class frmDictionary
         AddToolStripButton.Image = IconManager.Get("list-add", IconSize.Large, res)
         RemoveToolStripButton.Image = IconManager.Get("list-remove", IconSize.Large, res)
         FontToolStripButton.Image = IconManager.Get("font", IconSize.Large, res)
+        ResetFontToolStripButton.Image = IconManager.Get("restart", IconSize.Large, res)
         FindToolStripButton.Image = IconManager.Get("edit-find", IconSize.Large, res)
     End Sub
-
 
     Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
         ToolStripContainer1.BottomToolStripPanel.Paint, ToolStripContainer1.LeftToolStripPanel.Paint, ToolStripContainer1.RightToolStripPanel.Paint
@@ -54,6 +54,11 @@ Public Class frmDictionary
     Private Sub ToolStripContainer1_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ToolStripContainer1.TopToolStripPanel.SizeChanged,
         ToolStripContainer1.BottomToolStripPanel.SizeChanged, ToolStripContainer1.LeftToolStripPanel.SizeChanged, ToolStripContainer1.RightToolStripPanel.SizeChanged
         ToolStripContainer1.Invalidate()
+    End Sub
+
+    Public Sub SetDisplayFont()
+        dgvDictionary.DefaultCellStyle.Font = My.Settings.DictionaryFont
+        dgvDictionary.DefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
     End Sub
 
     Public Sub LoadDictionary()
@@ -95,6 +100,7 @@ Public Class frmDictionary
     Private Sub frmDictionary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetIcons()
         LoadDictionary()
+        SetDisplayFont()
         Loaded = True
     End Sub
 
@@ -189,8 +195,10 @@ Public Class frmDictionary
         dlgFont.Color = dgvDictionary.DefaultCellStyle.ForeColor
         dlgFont.Font = dgvDictionary.DefaultCellStyle.Font
         If dlgFont.ShowDialog = DialogResult.OK Then
-            dgvDictionary.DefaultCellStyle.Font = dlgFont.Font
-            dgvDictionary.DefaultCellStyle.ForeColor = dlgFont.Color
+            My.Settings.DictionaryFont = dlgFont.Font
+            My.Settings.DictionaryFontColor = dlgFont.Color
+            My.Settings.Save()
+            SetDisplayFont()
         End If
     End Sub
 
@@ -257,5 +265,12 @@ Public Class frmDictionary
 
                                         Return CurrentTextbox
                                     End Function
+    End Sub
+
+    Private Sub ResetFontToolStripButton_Click(sender As Object, e As EventArgs) Handles ResetFontToolStripButton.Click
+        My.Settings.DictionaryFont = New Font("Calibri", 9, FontStyle.Regular)
+        My.Settings.DictionaryFontColor = Color.Black
+        My.Settings.Save()
+        SetDisplayFont()
     End Sub
 End Class

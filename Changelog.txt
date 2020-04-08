@@ -3,13 +3,16 @@
    • Use Taiga icon pack
    • Export to new Thorn Writer format
    • Export pages to HTML
-   **• Add option in settings to load character editor on startup
+   • Add option in settings to load character editor on startup
    **• Export pages to Markdown
-   **• Remember display font chosen by user on dictionary window
+   **• Export dictionary to Markdown
+   **• Copy text as Markdown
+   • Remember display font chosen by user on dictionary window
    **• Now has a dedicated installer
    • Launch character editor to right of main window on startup
    • Character editor can now be used on text boxes in properties panel
    • Character editor context menu now matches application theme
+   **• Bug Fix: Dictionary would sometime appear behind the main window
    • Bug Fix: "Clear style" button on edit style dialog wouldn't refresh preview
    • Bug Fix: Character editor would pop up after being closed
    • Bug Fix: Character insertion could sometimes fail
