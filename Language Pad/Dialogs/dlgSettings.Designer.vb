@@ -27,6 +27,7 @@ Partial Class dlgSettings
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.cbHidpi = New System.Windows.Forms.CheckBox()
+        Me.cbShowCharacterEditor = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,7 +52,7 @@ Partial Class dlgSettings
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(108, 134)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(135, 190)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -85,7 +86,7 @@ Partial Class dlgSettings
         'cbHidpi
         '
         Me.cbHidpi.AutoSize = True
-        Me.cbHidpi.Location = New System.Drawing.Point(46, 80)
+        Me.cbHidpi.Location = New System.Drawing.Point(46, 114)
         Me.cbHidpi.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cbHidpi.Name = "cbHidpi"
         Me.cbHidpi.Size = New System.Drawing.Size(200, 24)
@@ -93,13 +94,27 @@ Partial Class dlgSettings
         Me.cbHidpi.Text = "Use large icons (HiDPI)"
         Me.cbHidpi.UseVisualStyleBackColor = True
         '
+        'cbShowCharacterEditor
+        '
+        Me.cbShowCharacterEditor.AutoSize = True
+        Me.cbShowCharacterEditor.Checked = True
+        Me.cbShowCharacterEditor.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.cbShowCharacterEditor.Location = New System.Drawing.Point(46, 80)
+        Me.cbShowCharacterEditor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cbShowCharacterEditor.Name = "cbShowCharacterEditor"
+        Me.cbShowCharacterEditor.Size = New System.Drawing.Size(266, 24)
+        Me.cbShowCharacterEditor.TabIndex = 77
+        Me.cbShowCharacterEditor.Text = "Show character editor on startup"
+        Me.cbShowCharacterEditor.UseVisualStyleBackColor = True
+        '
         'dlgSettings
         '
         Me.AcceptButton = Me.btnOK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(338, 191)
+        Me.ClientSize = New System.Drawing.Size(365, 247)
+        Me.Controls.Add(Me.cbShowCharacterEditor)
         Me.Controls.Add(Me.cbHidpi)
         Me.Controls.Add(Me.cbUpdates)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -121,4 +136,5 @@ Partial Class dlgSettings
     Friend WithEvents btnOK As Button
     Friend WithEvents btnCancel As Button
     Friend WithEvents cbHidpi As CheckBox
+    Friend WithEvents cbShowCharacterEditor As CheckBox
 End Class

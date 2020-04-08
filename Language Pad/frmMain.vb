@@ -474,7 +474,9 @@ Public Class frmMain
         Next
 
         ' Show character editor to the right of this form
-        CharEditor.Show()
+        If My.Settings.ShowCharacterEditorOnStartup Then
+            CharEditor.Show()
+        End If
         CharEditor.TargetForm = Me
         Dim ScreenWidth As Integer = My.Computer.Screen.Bounds.Width
         Dim ScreenX As Integer = ScreenWidth - 20 - CharEditor.Width
