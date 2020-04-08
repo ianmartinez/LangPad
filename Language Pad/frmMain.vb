@@ -248,9 +248,13 @@ Public Class frmMain
         Process.Start(Link)
     End Sub
 
-    Private Sub SelectedDocument_TextChanged(sender As Object, e As EventArgs) Handles SelectedDocument.TextChanged
+    Public Sub UpdateWordCount()
         CharCountToolStripLabel.Text = "Character Count: " & SelectedDocument.TextLength
         WordCountToolStripLabel.Text = "Word Count: " & WordCount(SelectedDocument.Text)
+    End Sub
+
+    Private Sub SelectedDocument_TextChanged(sender As Object, e As EventArgs) Handles SelectedDocument.TextChanged
+        UpdateWordCount()
         frmRTF.txtRTF.Text = SelectedDocument.Rtf
     End Sub
 
@@ -698,6 +702,7 @@ Public Class frmMain
         SetTitle()
 
         CurrentDocument.Modified = False
+        UpdateWordCount()
     End Sub
 
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
@@ -737,6 +742,7 @@ Public Class frmMain
         End If
 
         SetTitle()
+        UpdateWordCount()
         IsLoading = False
     End Sub
 

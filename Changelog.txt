@@ -4,7 +4,7 @@ Version 10.1 (TBD)
    **• Copy text as Markdown
    **• Now has a dedicated installer
    **• Easier resizing of images before insertion
-   **• Bug Fix: Word count wouldn't update automatically when opening a new file
+   • Bug Fix: Word count wouldn't update automatically when opening a new file
 
 ﻿Version 10.0 (April 8, 2020)
    • Full HiDPI support
