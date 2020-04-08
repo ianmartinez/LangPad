@@ -663,12 +663,11 @@ Public Class frmMain
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         If SelectedDocument.Modified Then
             Dim Mode = ModifiedWarning()
+
             If Mode = DialogResult.Yes Then
                 SaveToolStripMenuItem_Click(Me, e)
             ElseIf Mode = Windows.Forms.DialogResult.Cancel Then
                 Exit Sub
-            Else
-
             End If
         End If
 
@@ -685,8 +684,11 @@ Public Class frmMain
         }
         CurrentDocument.Pages.Add(new_page)
         CurrentDocument.WordDictionary = New DictionaryFile
-
         UpdateTabs()
+
+        frmDictionary.LoadDictionary() ' Reset dictionary form
+        CharEditor.charEdit.FilePanel.Controls.Clear() ' Reset character editor file tab
+
         currentFile = ""
         SetTitle()
 

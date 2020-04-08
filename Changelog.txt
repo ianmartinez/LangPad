@@ -12,6 +12,8 @@
    • Launch character editor to right of main window on startup
    • Character editor can now be used on text boxes in properties panel
    • Character editor context menu now matches application theme
+   • Bug Fix: Creating a new notebook wouldn't clear words from the last file's dictionary
+   • Bug Fix: Character editor file tab wouldn't be reset when creating a new file
    • Bug Fix: Dictionary would sometimes appear behind the main window
    • Bug Fix: "Clear style" button on edit style dialog wouldn't refresh preview
    • Bug Fix: Character editor would pop up after being closed
