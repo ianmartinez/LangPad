@@ -2,20 +2,20 @@ Version 10.1 (TBD)
    **• Export pages to Markdown
    **• Export dictionary to Markdown
    **• Copy text as Markdown
-   **• Now has a dedicated installer
 
 ﻿Version 10.0 (April 8, 2020)
    • Full HiDPI support
    • Use Taiga icon pack
-   • Export to new Thorn Writer format
-   • Export pages to HTML
    • Add option in settings to load character editor on startup
    • Updated app icon
+   • Now has a dedicated installer
    • Remember display font chosen by user on dictionary window
    • Launch character editor to right of main window on startup
    • Character editor can now be used on text boxes in properties panel
    • Character editor context menu now matches application theme
    • Duplicate pages now have the source page's title by default
+   • Export to new Thorn Writer format
+   • Export pages to HTML
    • Bug Fix: Creating a new notebook wouldn't clear words from the last file's dictionary
    • Bug Fix: When adding a new page to an empty notebook, the page's tab wouldn't automatically open
    • Bug Fix: Character editor file tab wouldn't be reset when creating a new file

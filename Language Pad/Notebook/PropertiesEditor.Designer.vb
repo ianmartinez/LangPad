@@ -252,7 +252,7 @@ Partial Class PropertiesEditor
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(376, 20)
         Me.Label4.TabIndex = 78
-        Me.Label4.Text = "Info:"
+        Me.Label4.Text = "Notes:"
         '
         'txtInfo
         '

@@ -52,7 +52,7 @@ Partial Class dlgAbout
         Me.MainTabControl.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MainTabControl.Name = "MainTabControl"
         Me.MainTabControl.SelectedIndex = 0
-        Me.MainTabControl.Size = New System.Drawing.Size(707, 556)
+        Me.MainTabControl.Size = New System.Drawing.Size(868, 556)
         Me.MainTabControl.TabIndex = 9
         '
         'TabPage1
@@ -90,7 +90,7 @@ Partial Class dlgAbout
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(9)
-        Me.TabPage2.Size = New System.Drawing.Size(699, 523)
+        Me.TabPage2.Size = New System.Drawing.Size(860, 523)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Changelog"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -107,7 +107,7 @@ Partial Class dlgAbout
         Me.txtChangelog.Name = "txtChangelog"
         Me.txtChangelog.ReadOnly = True
         Me.txtChangelog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtChangelog.Size = New System.Drawing.Size(681, 505)
+        Me.txtChangelog.Size = New System.Drawing.Size(842, 505)
         Me.txtChangelog.TabIndex = 8
         Me.txtChangelog.Text = resources.GetString("txtChangelog.Text")
         '
@@ -124,7 +124,7 @@ Partial Class dlgAbout
         Me.MainTableLayoutPanel.RowCount = 2
         Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 160.0!))
         Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.MainTableLayoutPanel.Size = New System.Drawing.Size(721, 732)
+        Me.MainTableLayoutPanel.Size = New System.Drawing.Size(882, 732)
         Me.MainTableLayoutPanel.TabIndex = 77
         '
         'HeaderBorderPanel
@@ -137,7 +137,7 @@ Partial Class dlgAbout
         Me.HeaderBorderPanel.Location = New System.Drawing.Point(6, 6)
         Me.HeaderBorderPanel.Name = "HeaderBorderPanel"
         Me.HeaderBorderPanel.Padding = New System.Windows.Forms.Padding(1)
-        Me.HeaderBorderPanel.Size = New System.Drawing.Size(709, 154)
+        Me.HeaderBorderPanel.Size = New System.Drawing.Size(870, 154)
         Me.HeaderBorderPanel.TabIndex = 76
         '
         'HeaderPanel
@@ -148,7 +148,7 @@ Partial Class dlgAbout
         Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.HeaderPanel.Location = New System.Drawing.Point(1, 1)
         Me.HeaderPanel.Name = "HeaderPanel"
-        Me.HeaderPanel.Size = New System.Drawing.Size(705, 150)
+        Me.HeaderPanel.Size = New System.Drawing.Size(866, 150)
         Me.HeaderPanel.TabIndex = 76
         '
         'lblLanguagePad
@@ -161,7 +161,7 @@ Partial Class dlgAbout
         Me.lblLanguagePad.Margin = New System.Windows.Forms.Padding(9, 5, 4, 5)
         Me.lblLanguagePad.Name = "lblLanguagePad"
         Me.lblLanguagePad.Padding = New System.Windows.Forms.Padding(10, 2, 0, 0)
-        Me.lblLanguagePad.Size = New System.Drawing.Size(705, 105)
+        Me.lblLanguagePad.Size = New System.Drawing.Size(866, 105)
         Me.lblLanguagePad.TabIndex = 12
         Me.lblLanguagePad.Text = "Language Pad"
         Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -175,7 +175,7 @@ Partial Class dlgAbout
         Me.lblVersion.Margin = New System.Windows.Forms.Padding(3)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.lblVersion.Size = New System.Drawing.Size(705, 45)
+        Me.lblVersion.Size = New System.Drawing.Size(866, 45)
         Me.lblVersion.TabIndex = 75
         Me.lblVersion.Text = "Version 1.0"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -184,7 +184,7 @@ Partial Class dlgAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(733, 744)
+        Me.ClientSize = New System.Drawing.Size(894, 744)
         Me.Controls.Add(Me.MainTableLayoutPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)

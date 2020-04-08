@@ -130,12 +130,30 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
   </data>
   <data name="txtChangelog.Text" xml:space="preserve">
-    <value> Version 9.5 (March 12, 2020)
+    <value>﻿Version 10.0 (April 8, 2020)
    • Full HiDPI support
    • Use Taiga icon pack
-   • Bug fixes
+   • Add option in settings to load character editor on startup
+   • Updated app icon
+   • Now has a dedicated installer
+   • Remember display font chosen by user on dictionary window
+   • Launch character editor to right of main window on startup
+   • Character editor can now be used on text boxes in properties panel
+   • Character editor context menu now matches application theme
+   • Duplicate pages now have the source page's title by default
    • Export to new Thorn Writer format
-   • Export to HTML
+   • Export pages to HTML
+   • Bug Fix: Creating a new notebook wouldn't clear words from the last file's dictionary
+   • Bug Fix: When adding a new page to an empty notebook, the page's tab wouldn't automatically open
+   • Bug Fix: Character editor file tab wouldn't be reset when creating a new file
+   • Bug Fix: Dictionary would sometimes appear behind the main window
+   • Bug Fix: "Clear style" button on edit style dialog wouldn't refresh preview
+   • Bug Fix: Character editor would pop up after being closed
+   • Bug Fix: Character insertion could sometimes fail
+   • Bug Fix: The second file loaded in a row sometimes wouldn't fully load
+   • Bug Fix: Scrollbar would show on accents panel in character editor even when not needed
+   • Bug Fix: An unmodified document would sometimes be marked as modified
+   • Bug Fix: Clicking cancel on a save dialog after being asked save before closing would have no effect
 
 Version 9.4 (April 24, 2019)
    • Redesign symbols panel
@@ -155,10 +173,10 @@ Version 9.4 (April 24, 2019)
    • Add tab dedicated to suprasegmentals (a -&gt; aː)
    • Add placeholder character to diacritic buttons for easier readability
    • Default font for the editor is now Calibri, which displays Unicode better
-   • Fixed bug in Export to HTML process when encountering empty cells in the dictionary window
-   • Fixed bug where dictionary wouldn't reload if you opened a new notebook file when the dictionary window was open
-   • Fixed bug where pressing the remove button on the dictionary could throw an error
    • Character search
+   • Bug Fix: Export to HTML process errored when encountering empty cells in the dictionary window
+   • Bug Fix: Dictionary wouldn't reload if you opened a new notebook file when the dictionary window was open
+   • Bug Fix: Pressing the remove button on the dictionary could throw an error
    
 Version 9.3 (April 13, 2019)
    • Update to .NET Framework 4.7.2
@@ -204,10 +222,10 @@ Version 9.0 (October 21, 2017)
    • Show/Hide statusbar
    • Full/Minimal mode toggles
    • Dictionary form now respects font dialog color
-   • Fixed broken URLs when clicking on links inside a document
-   • Fixed bug where clicking "New" would sometimes not clear every page
    • Fixed rendering of checked items on menus
    • Word wrap checkbox now updates when you change tabs
+   • Bug Fix: Links inside a document wouldn't open the correct URL
+   • Bug Fix: Clicking "New" wouldn't always clear every page
    
 Version 8.5 (October 13, 2017)
    • Help file included   
@@ -218,19 +236,19 @@ Version 8.5 (October 13, 2017)
    • 'Snow' theme now has a white background to match Windows 10
    • Multiple dialogs layouts have been tweaked
    • Dialogs now match theme
-   • Fixed bug where decimal separators other than "." would throw errors
-   • Re-design update dialog and fix buttons not working
+   • Re-design update dialog and fix buttons that weren't working
    • Auto-size dictionary cells
+   • Bug Fix: Decimal separators other than "." would throw errors with cultures other than "en-us"
    
 Version 8.2 (September 30, 2017)
    • Find words in dictionary   
    • Color panel for quick access to font/highlight colors   
    • Check for updates at startup now on by default    
    • Fixed typo on style dialog   
-   • Fixed accents remaining after Accents dialog closes and re-opens   
    • Revised look of color buttons   
    • Automatically open generated HTML file on completion   
    • Replace most StylizedButtons with native buttons   
+   • Bug Fix: Accents would remain on accents dialog even after it closed and re-opened   
    
 Version 8.1 (September 16, 2017)
    • Export dictionary to HTML
@@ -243,11 +261,11 @@ Version 8.1 (September 16, 2017)
    • Window background now matches theme
    • Fixed rendering of vertical toolbars
    • Fixed mislabeled tooltips
-   • Fixed bug where dictionary wouldn't show up on when re-opening
-   • Fixed bug where some context menu items would crash the program
-   • Fixed bug where CTRL+Click to add character to custom characters would insert it into document
-   • Fixed missing '0' value for indentation dropdown
    • Removed excessive whitespace around text art
+   • Fixed missing '0' value for indentation dropdown
+   • Bug Fix: Dictionary wouldn't show up when re-opening
+   • Bug Fix: Some context menu items would crash the program
+   • Bug Fix: CTRL+Click to add character to custom characters would insert it into document
    
 Version 8.0 (September 11, 2017)
    • Support for 4k screens
@@ -255,10 +273,10 @@ Version 8.0 (September 11, 2017)
    • Import dictionaries from CSV
    • Page count next to word and character count   
    • About dialog revised
-   • Fixed bug where clipboard content would insert itself when changing font style
    • Replaced tabbed interface with toolbar and menu interface 
    • Removed old bloat features like clip art, webcam insert, and the emotes panel
    • Replaced stylized buttons with native buttons
+   • Bug Fix: Clipboard content would insert itself when changing font style
    
 Version 7.0 (September 7, 2015)
    • Custom font in dictionary
@@ -270,8 +288,8 @@ Version 7.0 (September 7, 2015)
    • Improved help system
    • Default font in dictionary is now Calibri
    • Changed close icon on notebook editor
-   • Fixed saving issues on dictionaries
-   • Fixed saving issues on RTF files
+   • Bug Fix: Saving issues on dictionaries
+   • Bug Fix: Saving issues on RTF files
    
 Version 6.0 (August 29, 2015)
    • Dictionaries
@@ -285,14 +303,14 @@ Version 5.3 (August 13, 2015)
    • Clip art loading turned off by default
    • Quick access buttons
    • Changed right click menu style
-   • Fixed a bug when renaming a page 
+   • Bug Fix: Renaming a page could fail
    
 Version 5.2 (August 10, 2015)
    • Keyboard shortcuts
    • Massive internal improvements
    • Improved updating system
    • Small UI improvements
-   • Added to github
+   • Added to GitHub
    • Microsoft Sans Serif fonts are no longer forced by default
    
 Version 5.1 (August 7, 2015)
@@ -303,9 +321,9 @@ Version 5.1 (August 7, 2015)
    • Dialogs now only ask you to save if the file has been modified
    • Help file updated
    • Splash screen made even prettier
-   • Fixed bug during size changes with numerous different fonts
    • Fixed tab order on notebook tab
-   • Fixed bug that required multiple undos to undo a single font change
+   • Bug Fix: Not all formatting would be preserved during size changes on text with different fonts
+   • Bug Fix: Multiple undos were sometimes required to undo a single font change
    
 Version 5.0 (August 3, 2015)
    • Update checker
@@ -314,8 +332,8 @@ Version 5.0 (August 3, 2015)
    • Quick startup option to skip loading clipart and checking updates
    • Fixed some font issues in the UI
    • Redesigned splash screen
-   • Fixed huge font styling issues when changing font sizes and families
-   • Fixed flickering when switching tabs
+   • Bug Fix: Huge font styling issues when changing font sizes and families
+   • Bug Fix: Flickering when switching tabs in a notebook
    
 Version 4.3 (July 9, 2015)
    • Files are now saved in the same format they were opened as 
@@ -345,8 +363,6 @@ Version 4.2 (July 4, 2015)
    • Released source code
    
 Version 4.1 (July 1, 2015)
-   • Fixed bug where the file wouldn't save with only 1 tab
-   • Fixed bug where zip files wouldn't open from File Explorer
    • Allow embedding custom symbols in saved notebooks
    • Rename page button now in notebook editor
    • Inserting an image no longer makes the button white
@@ -355,6 +371,8 @@ Version 4.1 (July 1, 2015)
    • Fixed sidebar notebook list borders
    • Borders removed on tabs
    • Numerous small UI changes
+   • Bug Fix: Notebooks wouldn't save with only 1 tab
+   • Bug Fix: Zip files wouldn't open from File Explorer
    
 Version 4.0 (June 27, 2015)
    • New icon
@@ -386,8 +404,8 @@ Version 2.1 (May 13, 2015)
    • Icons changed in dialogs
    • Minor UI changes
    • Flash button in webcam dialog
-   • Fixed lost formatting when opening from File Explorer
    • Splash screen redesigned
+   • Bug Fix: Some formatting was lost when opening from File Explorer
    
 Version 2.0 (May 10, 2015)    
    • Icons changed
@@ -404,8 +422,8 @@ Version 2.0 (May 10, 2015)
    • Accent mark dialog redesigned
    • Add to custom symbols button in accent mark dialog
    • Macron Below in accent mark dialog
-   • Fixed distorted images when pasting
-   • Fixed errors when changing certain fonts
+   • Bug Fix: Images appeared distored when pasting
+   • Bug Fix: Errors when changing certain fonts
    
 Version 1.1 (May 3, 2015)
    • You can now open files directly in File Explorer

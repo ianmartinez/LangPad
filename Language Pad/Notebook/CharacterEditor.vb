@@ -173,7 +173,6 @@ Public Class CharacterEditor
 
         If (IsRTF) Then
             Dim rtf As RichTextBox = CType(TextBox, RichTextBox)
-            rtf.SelectionLength = 0
             rtf.SelectedText = Text
         Else
             TextBox.Text = TextBox.Text.Insert(CurrentPos, Text)
