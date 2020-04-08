@@ -4,7 +4,6 @@
     Public CurrentPos As Integer = 0
 
     Private Sub OK_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnOK.Click
-        On Error Resume Next
         frmMain.SaveTabs()
         Dim CurrentPage As Integer = frmMain.tcNotebook.SelectedIndex
 
@@ -26,7 +25,12 @@
             frmMain.UpdateTabs()
         End If
 
-        frmMain.tcNotebook.SelectedIndex = CurrentPage
+        If CurrentPage = -1 Then
+            frmMain.tcNotebook.SelectedIndex = 0
+        Else
+            frmMain.tcNotebook.SelectedIndex = CurrentPage
+        End If
+
         CurrentDocument.Modified = True
         DialogResult = DialogResult.OK
         Close()
