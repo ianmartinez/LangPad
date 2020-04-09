@@ -1,15 +1,14 @@
 ﻿Public Class SettingsDialog
-
-    Private Sub dlgSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cbUpdates.Checked = My.Settings.Updates
-        cbHidpi.Checked = My.Settings.HiDPI
-        cbShowCharacterEditor.Checked = My.Settings.ShowCharacterEditorOnStartup
+    Private Sub SettingsDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        UpdatesOnStartupCheck.Checked = My.Settings.Updates
+        LargeIconsCheck.Checked = My.Settings.HiDPI
+        ShowCharEditCheck.Checked = My.Settings.ShowCharacterEditorOnStartup
     End Sub
 
-    Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
-        My.Settings.Updates = cbUpdates.Checked
-        My.Settings.HiDPI = cbHidpi.Checked
-        My.Settings.ShowCharacterEditorOnStartup = cbShowCharacterEditor.Checked
+    Private Sub OkDialogButton_Click(sender As Object, e As EventArgs) Handles OkDialogButton.Click
+        My.Settings.Updates = UpdatesOnStartupCheck.Checked
+        My.Settings.HiDPI = LargeIconsCheck.Checked
+        My.Settings.ShowCharacterEditorOnStartup = ShowCharEditCheck.Checked
         My.Settings.Save()
 
         ' Refresh icons to DPI setting
@@ -22,7 +21,7 @@
         Close()
     End Sub
 
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelDialogButton.Click
         Close()
     End Sub
 End Class

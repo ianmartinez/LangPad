@@ -24,284 +24,282 @@ Partial Class StyleDialog
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StyleDialog))
-        Me.rtbPreview = New System.Windows.Forms.RichTextBox()
+        Me.PreviewRtb = New System.Windows.Forms.RichTextBox()
         Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
-        Me.btnFont = New System.Windows.Forms.Button()
-        Me.btnColor = New TundraLib.StylizedColorButton()
-        Me.btnRight = New System.Windows.Forms.Button()
-        Me.btnCenter = New System.Windows.Forms.Button()
-        Me.btnLeft = New System.Windows.Forms.Button()
-        Me.nudIndent = New System.Windows.Forms.NumericUpDown()
-        Me.btnIndent = New System.Windows.Forms.Button()
-        Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
-        Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
-        Me.nudOffset = New System.Windows.Forms.NumericUpDown()
-        Me.btnOffset = New System.Windows.Forms.Button()
-        Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
-        Me.btnHighlight = New TundraLib.StylizedColorButton()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.btnDeleteAll = New System.Windows.Forms.Button()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.btnOpen = New System.Windows.Forms.Button()
-        Me.StylizedPanel1.SuspendLayout
-        CType(Me.nudIndent, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudOffset, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FontButton = New System.Windows.Forms.Button()
+        Me.ColorButton = New TundraLib.StylizedColorButton()
+        Me.RightButton = New System.Windows.Forms.Button()
+        Me.CenterButton = New System.Windows.Forms.Button()
+        Me.LeftButton = New System.Windows.Forms.Button()
+        Me.IndentNud = New System.Windows.Forms.NumericUpDown()
+        Me.IndentButton = New System.Windows.Forms.Button()
+        Me.OpenDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.SaveDialog = New System.Windows.Forms.SaveFileDialog()
+        Me.OffsetNud = New System.Windows.Forms.NumericUpDown()
+        Me.OffsetButton = New System.Windows.Forms.Button()
+        Me.MainToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.HighlightButton = New TundraLib.StylizedColorButton()
+        Me.DeleteAllButton = New System.Windows.Forms.Button()
+        Me.SaveButton = New System.Windows.Forms.Button()
+        Me.OpenButton = New System.Windows.Forms.Button()
+        Me.StylizedPanel1.SuspendLayout()
+        CType(Me.IndentNud, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OffsetNud, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'rtbPreview
+        'PreviewRtb
         '
-        Me.rtbPreview.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.rtbPreview.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rtbPreview.Location = New System.Drawing.Point(1, 1)
-        Me.rtbPreview.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.rtbPreview.Name = "rtbPreview"
-        Me.rtbPreview.Size = New System.Drawing.Size(492, 150)
-        Me.rtbPreview.TabIndex = 0
-        Me.rtbPreview.Text = "Lorem Ipsum"
+        Me.PreviewRtb.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.PreviewRtb.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PreviewRtb.Location = New System.Drawing.Point(1, 1)
+        Me.PreviewRtb.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PreviewRtb.Name = "PreviewRtb"
+        Me.PreviewRtb.Size = New System.Drawing.Size(492, 150)
+        Me.PreviewRtb.TabIndex = 0
+        Me.PreviewRtb.Text = "Lorem Ipsum"
         '
         'StylizedPanel1
         '
         Me.StylizedPanel1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.StylizedPanel1.Controls.Add(Me.rtbPreview)
+        Me.StylizedPanel1.Controls.Add(Me.PreviewRtb)
         Me.StylizedPanel1.Location = New System.Drawing.Point(9, 106)
         Me.StylizedPanel1.Name = "StylizedPanel1"
         Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(1)
         Me.StylizedPanel1.Size = New System.Drawing.Size(494, 152)
         Me.StylizedPanel1.TabIndex = 84
         '
-        'btnFont
+        'FontButton
         '
-        Me.btnFont.BackColor = System.Drawing.Color.Transparent
-        Me.btnFont.Image = CType(resources.GetObject("btnFont.Image"), System.Drawing.Image)
-        Me.btnFont.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFont.Location = New System.Drawing.Point(372, 326)
-        Me.btnFont.Name = "btnFont"
-        Me.btnFont.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
-        Me.btnFont.Size = New System.Drawing.Size(130, 54)
-        Me.btnFont.TabIndex = 11
-        Me.btnFont.Text = "Font"
-        Me.btnFont.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnFont.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ttMain.SetToolTip(Me.btnFont, "Text font")
-        Me.btnFont.UseVisualStyleBackColor = False
+        Me.FontButton.BackColor = System.Drawing.Color.Transparent
+        Me.FontButton.Image = CType(resources.GetObject("FontButton.Image"), System.Drawing.Image)
+        Me.FontButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.FontButton.Location = New System.Drawing.Point(372, 326)
+        Me.FontButton.Name = "FontButton"
+        Me.FontButton.Padding = New System.Windows.Forms.Padding(0, 2, 0, 0)
+        Me.FontButton.Size = New System.Drawing.Size(130, 54)
+        Me.FontButton.TabIndex = 11
+        Me.FontButton.Text = "Font"
+        Me.FontButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.FontButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.MainToolTip.SetToolTip(Me.FontButton, "Text font")
+        Me.FontButton.UseVisualStyleBackColor = False
         '
-        'btnColor
+        'ColorButton
         '
-        Me.btnColor.BackColor = System.Drawing.Color.Transparent
-        Me.btnColor.Color = System.Drawing.Color.Black
-        Me.btnColor.Image = CType(resources.GetObject("btnColor.Image"), System.Drawing.Image)
-        Me.btnColor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnColor.Location = New System.Drawing.Point(189, 265)
-        Me.btnColor.MinimumSize = New System.Drawing.Size(3, 37)
-        Me.btnColor.Name = "btnColor"
-        Me.btnColor.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.btnColor.RightClickMode = False
-        Me.btnColor.Size = New System.Drawing.Size(108, 54)
-        Me.btnColor.TabIndex = 7
-        Me.btnColor.Text = " Text"
-        Me.btnColor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnColor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ttMain.SetToolTip(Me.btnColor, "Text color")
-        Me.btnColor.UseCompatibleTextRendering = True
-        Me.btnColor.UseVisualStyleBackColor = False
+        Me.ColorButton.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton.Color = System.Drawing.Color.Black
+        Me.ColorButton.Image = CType(resources.GetObject("ColorButton.Image"), System.Drawing.Image)
+        Me.ColorButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ColorButton.Location = New System.Drawing.Point(189, 265)
+        Me.ColorButton.MinimumSize = New System.Drawing.Size(3, 37)
+        Me.ColorButton.Name = "ColorButton"
+        Me.ColorButton.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.ColorButton.RightClickMode = False
+        Me.ColorButton.Size = New System.Drawing.Size(108, 54)
+        Me.ColorButton.TabIndex = 7
+        Me.ColorButton.Text = " Text"
+        Me.ColorButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ColorButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.MainToolTip.SetToolTip(Me.ColorButton, "Text color")
+        Me.ColorButton.UseCompatibleTextRendering = True
+        Me.ColorButton.UseVisualStyleBackColor = False
         '
-        'btnRight
+        'RightButton
         '
-        Me.btnRight.BackColor = System.Drawing.Color.Transparent
-        Me.btnRight.Image = CType(resources.GetObject("btnRight.Image"), System.Drawing.Image)
-        Me.btnRight.Location = New System.Drawing.Point(129, 265)
-        Me.btnRight.Name = "btnRight"
-        Me.btnRight.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.btnRight.Size = New System.Drawing.Size(54, 54)
-        Me.btnRight.TabIndex = 6
-        Me.btnRight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ttMain.SetToolTip(Me.btnRight, "Right align text")
-        Me.btnRight.UseVisualStyleBackColor = False
+        Me.RightButton.BackColor = System.Drawing.Color.Transparent
+        Me.RightButton.Image = CType(resources.GetObject("RightButton.Image"), System.Drawing.Image)
+        Me.RightButton.Location = New System.Drawing.Point(129, 265)
+        Me.RightButton.Name = "RightButton"
+        Me.RightButton.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
+        Me.RightButton.Size = New System.Drawing.Size(54, 54)
+        Me.RightButton.TabIndex = 6
+        Me.RightButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.RightButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.MainToolTip.SetToolTip(Me.RightButton, "Right align text")
+        Me.RightButton.UseVisualStyleBackColor = False
         '
-        'btnCenter
+        'CenterButton
         '
-        Me.btnCenter.BackColor = System.Drawing.Color.Transparent
-        Me.btnCenter.Image = CType(resources.GetObject("btnCenter.Image"), System.Drawing.Image)
-        Me.btnCenter.Location = New System.Drawing.Point(69, 265)
-        Me.btnCenter.Name = "btnCenter"
-        Me.btnCenter.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.btnCenter.Size = New System.Drawing.Size(54, 54)
-        Me.btnCenter.TabIndex = 5
-        Me.btnCenter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCenter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ttMain.SetToolTip(Me.btnCenter, "Center align text")
-        Me.btnCenter.UseVisualStyleBackColor = False
+        Me.CenterButton.BackColor = System.Drawing.Color.Transparent
+        Me.CenterButton.Image = CType(resources.GetObject("CenterButton.Image"), System.Drawing.Image)
+        Me.CenterButton.Location = New System.Drawing.Point(69, 265)
+        Me.CenterButton.Name = "CenterButton"
+        Me.CenterButton.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
+        Me.CenterButton.Size = New System.Drawing.Size(54, 54)
+        Me.CenterButton.TabIndex = 5
+        Me.CenterButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.CenterButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.MainToolTip.SetToolTip(Me.CenterButton, "Center align text")
+        Me.CenterButton.UseVisualStyleBackColor = False
         '
-        'btnLeft
+        'LeftButton
         '
-        Me.btnLeft.BackColor = System.Drawing.Color.Transparent
-        Me.btnLeft.Image = CType(resources.GetObject("btnLeft.Image"), System.Drawing.Image)
-        Me.btnLeft.Location = New System.Drawing.Point(9, 265)
-        Me.btnLeft.Name = "btnLeft"
-        Me.btnLeft.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.btnLeft.Size = New System.Drawing.Size(54, 54)
-        Me.btnLeft.TabIndex = 4
-        Me.btnLeft.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLeft.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ttMain.SetToolTip(Me.btnLeft, "Left align text")
-        Me.btnLeft.UseVisualStyleBackColor = False
+        Me.LeftButton.BackColor = System.Drawing.Color.Transparent
+        Me.LeftButton.Image = CType(resources.GetObject("LeftButton.Image"), System.Drawing.Image)
+        Me.LeftButton.Location = New System.Drawing.Point(9, 265)
+        Me.LeftButton.Name = "LeftButton"
+        Me.LeftButton.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
+        Me.LeftButton.Size = New System.Drawing.Size(54, 54)
+        Me.LeftButton.TabIndex = 4
+        Me.LeftButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LeftButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.MainToolTip.SetToolTip(Me.LeftButton, "Left align text")
+        Me.LeftButton.UseVisualStyleBackColor = False
         '
-        'nudIndent
+        'IndentNud
         '
-        Me.nudIndent.Location = New System.Drawing.Point(252, 342)
-        Me.nudIndent.Name = "nudIndent"
-        Me.nudIndent.Size = New System.Drawing.Size(114, 26)
-        Me.nudIndent.TabIndex = 8
+        Me.IndentNud.Location = New System.Drawing.Point(252, 342)
+        Me.IndentNud.Name = "IndentNud"
+        Me.IndentNud.Size = New System.Drawing.Size(114, 26)
+        Me.IndentNud.TabIndex = 8
         '
-        'btnIndent
+        'IndentButton
         '
-        Me.btnIndent.BackColor = System.Drawing.Color.Transparent
-        Me.btnIndent.Image = CType(resources.GetObject("btnIndent.Image"), System.Drawing.Image)
-        Me.btnIndent.Location = New System.Drawing.Point(192, 326)
-        Me.btnIndent.Name = "btnIndent"
-        Me.btnIndent.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.btnIndent.Size = New System.Drawing.Size(54, 54)
-        Me.btnIndent.TabIndex = 10
-        Me.btnIndent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ttMain.SetToolTip(Me.btnIndent, "Indent text")
-        Me.btnIndent.UseVisualStyleBackColor = False
+        Me.IndentButton.BackColor = System.Drawing.Color.Transparent
+        Me.IndentButton.Image = CType(resources.GetObject("IndentButton.Image"), System.Drawing.Image)
+        Me.IndentButton.Location = New System.Drawing.Point(192, 326)
+        Me.IndentButton.Name = "IndentButton"
+        Me.IndentButton.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
+        Me.IndentButton.Size = New System.Drawing.Size(54, 54)
+        Me.IndentButton.TabIndex = 10
+        Me.IndentButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.MainToolTip.SetToolTip(Me.IndentButton, "Indent text")
+        Me.IndentButton.UseVisualStyleBackColor = False
         '
-        'dlgOpen
+        'OpenDialog
         '
-        Me.dlgOpen.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
+        Me.OpenDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
         '
-        'dlgSave
+        'SaveDialog
         '
-        Me.dlgSave.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
+        Me.SaveDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
         '
-        'nudOffset
+        'OffsetNud
         '
-        Me.nudOffset.Location = New System.Drawing.Point(72, 342)
-        Me.nudOffset.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
-        Me.nudOffset.Name = "nudOffset"
-        Me.nudOffset.Size = New System.Drawing.Size(114, 26)
-        Me.nudOffset.TabIndex = 10
+        Me.OffsetNud.Location = New System.Drawing.Point(72, 342)
+        Me.OffsetNud.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
+        Me.OffsetNud.Name = "OffsetNud"
+        Me.OffsetNud.Size = New System.Drawing.Size(114, 26)
+        Me.OffsetNud.TabIndex = 10
         '
-        'btnOffset
+        'OffsetButton
         '
-        Me.btnOffset.BackColor = System.Drawing.Color.Transparent
-        Me.btnOffset.Image = CType(resources.GetObject("btnOffset.Image"), System.Drawing.Image)
-        Me.btnOffset.Location = New System.Drawing.Point(12, 326)
-        Me.btnOffset.Name = "btnOffset"
-        Me.btnOffset.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.btnOffset.Size = New System.Drawing.Size(54, 54)
-        Me.btnOffset.TabIndex = 9
-        Me.btnOffset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ttMain.SetToolTip(Me.btnOffset, "Character Offset")
-        Me.btnOffset.UseVisualStyleBackColor = False
+        Me.OffsetButton.BackColor = System.Drawing.Color.Transparent
+        Me.OffsetButton.Image = CType(resources.GetObject("OffsetButton.Image"), System.Drawing.Image)
+        Me.OffsetButton.Location = New System.Drawing.Point(12, 326)
+        Me.OffsetButton.Name = "OffsetButton"
+        Me.OffsetButton.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
+        Me.OffsetButton.Size = New System.Drawing.Size(54, 54)
+        Me.OffsetButton.TabIndex = 9
+        Me.OffsetButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.MainToolTip.SetToolTip(Me.OffsetButton, "Character Offset")
+        Me.OffsetButton.UseVisualStyleBackColor = False
         '
-        'btnHighlight
+        'HighlightButton
         '
-        Me.btnHighlight.BackColor = System.Drawing.Color.Transparent
-        Me.btnHighlight.Color = System.Drawing.Color.White
-        Me.btnHighlight.Image = CType(resources.GetObject("btnHighlight.Image"), System.Drawing.Image)
-        Me.btnHighlight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHighlight.Location = New System.Drawing.Point(303, 265)
-        Me.btnHighlight.MinimumSize = New System.Drawing.Size(3, 37)
-        Me.btnHighlight.Name = "btnHighlight"
-        Me.btnHighlight.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.btnHighlight.RightClickMode = False
-        Me.btnHighlight.Size = New System.Drawing.Size(200, 54)
-        Me.btnHighlight.TabIndex = 8
-        Me.btnHighlight.Text = " Highlight"
-        Me.btnHighlight.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHighlight.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.ttMain.SetToolTip(Me.btnHighlight, "Text color")
-        Me.btnHighlight.UseCompatibleTextRendering = True
-        Me.btnHighlight.UseVisualStyleBackColor = False
+        Me.HighlightButton.BackColor = System.Drawing.Color.Transparent
+        Me.HighlightButton.Color = System.Drawing.Color.White
+        Me.HighlightButton.Image = CType(resources.GetObject("HighlightButton.Image"), System.Drawing.Image)
+        Me.HighlightButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.HighlightButton.Location = New System.Drawing.Point(303, 265)
+        Me.HighlightButton.MinimumSize = New System.Drawing.Size(3, 37)
+        Me.HighlightButton.Name = "HighlightButton"
+        Me.HighlightButton.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.HighlightButton.RightClickMode = False
+        Me.HighlightButton.Size = New System.Drawing.Size(200, 54)
+        Me.HighlightButton.TabIndex = 8
+        Me.HighlightButton.Text = " Highlight"
+        Me.HighlightButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.HighlightButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.MainToolTip.SetToolTip(Me.HighlightButton, "Text color")
+        Me.HighlightButton.UseCompatibleTextRendering = True
+        Me.HighlightButton.UseVisualStyleBackColor = False
         '
-        'btnDeleteAll
+        'DeleteAllButton
         '
-        Me.btnDeleteAll.Image = CType(resources.GetObject("btnDeleteAll.Image"), System.Drawing.Image)
-        Me.btnDeleteAll.Location = New System.Drawing.Point(342, 11)
-        Me.btnDeleteAll.Name = "btnDeleteAll"
-        Me.btnDeleteAll.Size = New System.Drawing.Size(160, 89)
-        Me.btnDeleteAll.TabIndex = 3
-        Me.btnDeleteAll.Text = "Clear Style"
-        Me.btnDeleteAll.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnDeleteAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btnDeleteAll.UseVisualStyleBackColor = True
+        Me.DeleteAllButton.Image = CType(resources.GetObject("DeleteAllButton.Image"), System.Drawing.Image)
+        Me.DeleteAllButton.Location = New System.Drawing.Point(342, 11)
+        Me.DeleteAllButton.Name = "DeleteAllButton"
+        Me.DeleteAllButton.Size = New System.Drawing.Size(160, 89)
+        Me.DeleteAllButton.TabIndex = 3
+        Me.DeleteAllButton.Text = "Clear Style"
+        Me.DeleteAllButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.DeleteAllButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.DeleteAllButton.UseVisualStyleBackColor = True
         '
-        'btnSave
+        'SaveButton
         '
-        Me.btnSave.Image = CType(resources.GetObject("btnSave.Image"), System.Drawing.Image)
-        Me.btnSave.Location = New System.Drawing.Point(177, 11)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(160, 89)
-        Me.btnSave.TabIndex = 2
-        Me.btnSave.Text = "Save"
-        Me.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btnSave.UseVisualStyleBackColor = True
+        Me.SaveButton.Image = CType(resources.GetObject("SaveButton.Image"), System.Drawing.Image)
+        Me.SaveButton.Location = New System.Drawing.Point(177, 11)
+        Me.SaveButton.Name = "SaveButton"
+        Me.SaveButton.Size = New System.Drawing.Size(160, 89)
+        Me.SaveButton.TabIndex = 2
+        Me.SaveButton.Text = "Save"
+        Me.SaveButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.SaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.SaveButton.UseVisualStyleBackColor = True
         '
-        'btnOpen
+        'OpenButton
         '
-        Me.btnOpen.Image = CType(resources.GetObject("btnOpen.Image"), System.Drawing.Image)
-        Me.btnOpen.Location = New System.Drawing.Point(9, 11)
-        Me.btnOpen.Name = "btnOpen"
-        Me.btnOpen.Size = New System.Drawing.Size(160, 89)
-        Me.btnOpen.TabIndex = 1
-        Me.btnOpen.Text = "Open"
-        Me.btnOpen.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnOpen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btnOpen.UseVisualStyleBackColor = True
+        Me.OpenButton.Image = CType(resources.GetObject("OpenButton.Image"), System.Drawing.Image)
+        Me.OpenButton.Location = New System.Drawing.Point(9, 11)
+        Me.OpenButton.Name = "OpenButton"
+        Me.OpenButton.Size = New System.Drawing.Size(160, 89)
+        Me.OpenButton.TabIndex = 1
+        Me.OpenButton.Text = "Open"
+        Me.OpenButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.OpenButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.OpenButton.UseVisualStyleBackColor = True
         '
-        'dlgStyle
+        'StyleDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(510, 391)
-        Me.Controls.Add(Me.btnDeleteAll)
-        Me.Controls.Add(Me.btnSave)
-        Me.Controls.Add(Me.btnOpen)
-        Me.Controls.Add(Me.btnHighlight)
-        Me.Controls.Add(Me.nudOffset)
-        Me.Controls.Add(Me.btnOffset)
-        Me.Controls.Add(Me.btnRight)
-        Me.Controls.Add(Me.btnCenter)
-        Me.Controls.Add(Me.btnLeft)
-        Me.Controls.Add(Me.nudIndent)
-        Me.Controls.Add(Me.btnIndent)
-        Me.Controls.Add(Me.btnFont)
-        Me.Controls.Add(Me.btnColor)
+        Me.Controls.Add(Me.DeleteAllButton)
+        Me.Controls.Add(Me.SaveButton)
+        Me.Controls.Add(Me.OpenButton)
+        Me.Controls.Add(Me.HighlightButton)
+        Me.Controls.Add(Me.OffsetNud)
+        Me.Controls.Add(Me.OffsetButton)
+        Me.Controls.Add(Me.RightButton)
+        Me.Controls.Add(Me.CenterButton)
+        Me.Controls.Add(Me.LeftButton)
+        Me.Controls.Add(Me.IndentNud)
+        Me.Controls.Add(Me.IndentButton)
+        Me.Controls.Add(Me.FontButton)
+        Me.Controls.Add(Me.ColorButton)
         Me.Controls.Add(Me.StylizedPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "dlgStyle"
+        Me.Name = "StyleDialog"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Style"
         Me.StylizedPanel1.ResumeLayout(False)
-        CType(Me.nudIndent, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudOffset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IndentNud, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OffsetNud, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents rtbPreview As RichTextBox
+    Friend WithEvents PreviewRtb As RichTextBox
     Friend WithEvents StylizedPanel1 As TundraLib.DoubleBufferedPanel
-    Friend WithEvents btnColor As TundraLib.StylizedColorButton
-    Friend WithEvents nudIndent As NumericUpDown
-    Friend WithEvents dlgOpen As OpenFileDialog
-    Friend WithEvents dlgSave As SaveFileDialog
-    Friend WithEvents nudOffset As NumericUpDown
-    Friend WithEvents ttMain As ToolTip
-    Friend WithEvents btnHighlight As TundraLib.StylizedColorButton
-    Friend WithEvents ToolTip1 As ToolTip
-    Friend WithEvents btnFont As Button
-    Friend WithEvents btnRight As Button
-    Friend WithEvents btnCenter As Button
-    Friend WithEvents btnLeft As Button
-    Friend WithEvents btnIndent As Button
-    Friend WithEvents btnOffset As Button
-    Friend WithEvents btnDeleteAll As Button
-    Friend WithEvents btnSave As Button
-    Friend WithEvents btnOpen As Button
+    Friend WithEvents ColorButton As TundraLib.StylizedColorButton
+    Friend WithEvents IndentNud As NumericUpDown
+    Friend WithEvents OpenDialog As OpenFileDialog
+    Friend WithEvents SaveDialog As SaveFileDialog
+    Friend WithEvents OffsetNud As NumericUpDown
+    Friend WithEvents MainToolTip As ToolTip
+    Friend WithEvents HighlightButton As TundraLib.StylizedColorButton
+    Friend WithEvents FontButton As Button
+    Friend WithEvents RightButton As Button
+    Friend WithEvents CenterButton As Button
+    Friend WithEvents LeftButton As Button
+    Friend WithEvents IndentButton As Button
+    Friend WithEvents OffsetButton As Button
+    Friend WithEvents DeleteAllButton As Button
+    Friend WithEvents SaveButton As Button
+    Friend WithEvents OpenButton As Button
 End Class

@@ -23,11 +23,11 @@ Partial Class NamePageDialog
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtName = New System.Windows.Forms.TextBox()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnOK = New System.Windows.Forms.Button()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.NameTextBox = New System.Windows.Forms.TextBox()
+        Me.ButtonTableLayout = New System.Windows.Forms.TableLayoutPanel()
+        Me.OkDialogButton = New System.Windows.Forms.Button()
+        Me.CancelDialogButton = New System.Windows.Forms.Button()
+        Me.ButtonTableLayout.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -41,87 +41,86 @@ Partial Class NamePageDialog
         Me.Label1.TabIndex = 73
         Me.Label1.Text = "Name:"
         '
-        'txtName
+        'NameTextBox
         '
-        Me.txtName.Dock = System.Windows.Forms.DockStyle.Top
-        Me.txtName.Location = New System.Drawing.Point(9, 31)
-        Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(282, 26)
-        Me.txtName.TabIndex = 0
+        Me.NameTextBox.Dock = System.Windows.Forms.DockStyle.Top
+        Me.NameTextBox.Location = New System.Drawing.Point(9, 31)
+        Me.NameTextBox.Name = "NameTextBox"
+        Me.NameTextBox.Size = New System.Drawing.Size(282, 26)
+        Me.NameTextBox.TabIndex = 0
         '
-        'TableLayoutPanel1
+        'ButtonTableLayout
         '
-        Me.TableLayoutPanel1.AutoSize = True
-        Me.TableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(9, 82)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(0, 9, 0, 5)
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(282, 56)
-        Me.TableLayoutPanel1.TabIndex = 74
+        Me.ButtonTableLayout.AutoSize = True
+        Me.ButtonTableLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.ButtonTableLayout.ColumnCount = 2
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.Controls.Add(Me.OkDialogButton, 0, 0)
+        Me.ButtonTableLayout.Controls.Add(Me.CancelDialogButton, 1, 0)
+        Me.ButtonTableLayout.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ButtonTableLayout.Location = New System.Drawing.Point(9, 82)
+        Me.ButtonTableLayout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ButtonTableLayout.Name = "ButtonTableLayout"
+        Me.ButtonTableLayout.Padding = New System.Windows.Forms.Padding(0, 9, 0, 5)
+        Me.ButtonTableLayout.RowCount = 1
+        Me.ButtonTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.Size = New System.Drawing.Size(282, 56)
+        Me.ButtonTableLayout.TabIndex = 74
         '
-        'btnOK
+        'OkDialogButton
         '
-        Me.btnOK.AutoSize = True
-        Me.btnOK.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOK.Location = New System.Drawing.Point(3, 12)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Padding = New System.Windows.Forms.Padding(3)
-        Me.btnOK.Size = New System.Drawing.Size(135, 36)
-        Me.btnOK.TabIndex = 1
-        Me.btnOK.Text = "OK"
-        Me.btnOK.UseVisualStyleBackColor = True
+        Me.OkDialogButton.AutoSize = True
+        Me.OkDialogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.OkDialogButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.OkDialogButton.Location = New System.Drawing.Point(3, 12)
+        Me.OkDialogButton.Name = "OkDialogButton"
+        Me.OkDialogButton.Padding = New System.Windows.Forms.Padding(3)
+        Me.OkDialogButton.Size = New System.Drawing.Size(135, 36)
+        Me.OkDialogButton.TabIndex = 1
+        Me.OkDialogButton.Text = "OK"
+        Me.OkDialogButton.UseVisualStyleBackColor = True
         '
-        'btnCancel
+        'CancelDialogButton
         '
-        Me.btnCancel.AutoSize = True
-        Me.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCancel.Location = New System.Drawing.Point(144, 12)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Padding = New System.Windows.Forms.Padding(3)
-        Me.btnCancel.Size = New System.Drawing.Size(135, 36)
-        Me.btnCancel.TabIndex = 0
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.CancelDialogButton.AutoSize = True
+        Me.CancelDialogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.CancelDialogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.CancelDialogButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CancelDialogButton.Location = New System.Drawing.Point(144, 12)
+        Me.CancelDialogButton.Name = "CancelDialogButton"
+        Me.CancelDialogButton.Padding = New System.Windows.Forms.Padding(3)
+        Me.CancelDialogButton.Size = New System.Drawing.Size(135, 36)
+        Me.CancelDialogButton.TabIndex = 0
+        Me.CancelDialogButton.Text = "Cancel"
+        Me.CancelDialogButton.UseVisualStyleBackColor = True
         '
-        'dlgAddPage
+        'NamePageDialog
         '
-        Me.AcceptButton = Me.btnOK
+        Me.AcceptButton = Me.OkDialogButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(300, 143)
-        Me.Controls.Add(Me.txtName)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.NameTextBox)
+        Me.Controls.Add(Me.ButtonTableLayout)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "dlgAddPage"
+        Me.Name = "NamePageDialog"
         Me.Padding = New System.Windows.Forms.Padding(9, 5, 9, 5)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
+        Me.ButtonTableLayout.ResumeLayout(False)
+        Me.ButtonTableLayout.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents txtName As System.Windows.Forms.TextBox
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents btnOK As Button
-    Friend WithEvents btnCancel As Button
+    Friend WithEvents NameTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents ButtonTableLayout As TableLayoutPanel
+    Friend WithEvents OkDialogButton As Button
+    Friend WithEvents CancelDialogButton As Button
 End Class

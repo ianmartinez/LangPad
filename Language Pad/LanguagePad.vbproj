@@ -118,10 +118,10 @@
     <Compile Include="CharacterEditorToolWindow.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\ExportHTMLDialog.Designer.vb">
-      <DependentUpon>ExportHTMLDialog.vb</DependentUpon>
+    <Compile Include="Dialogs\ExportHtmlDialog.Designer.vb">
+      <DependentUpon>ExportHtmlDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\ExportHTMLDialog.vb">
+    <Compile Include="Dialogs\ExportHtmlDialog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
@@ -255,8 +255,8 @@
     <EmbeddedResource Include="DictionaryForm.resx">
       <DependentUpon>DictionaryForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\ExportHTMLDialog.resx">
-      <DependentUpon>ExportHTMLDialog.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\ExportHtmlDialog.resx">
+      <DependentUpon>ExportHtmlDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>

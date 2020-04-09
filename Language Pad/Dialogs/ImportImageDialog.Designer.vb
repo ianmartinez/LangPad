@@ -22,57 +22,57 @@ Partial Class ImportImageDialog
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.OK_Button = New System.Windows.Forms.Button()
-        Me.Cancel_Button = New System.Windows.Forms.Button()
+        Me.ButtonTableLayout = New System.Windows.Forms.TableLayoutPanel()
+        Me.OkDialogButton = New System.Windows.Forms.Button()
+        Me.CancelDialogButton = New System.Windows.Forms.Button()
         Me.PreviewPictureBox = New System.Windows.Forms.PictureBox()
         Me.WidthLabel = New System.Windows.Forms.Label()
         Me.WidthNud = New System.Windows.Forms.NumericUpDown()
         Me.HeightNud = New System.Windows.Forms.NumericUpDown()
         Me.HeightLabel = New System.Windows.Forms.Label()
         Me.LockAspectCheckBox = New System.Windows.Forms.CheckBox()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.ButtonTableLayout.SuspendLayout()
         CType(Me.PreviewPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.WidthNud, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HeightNud, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TableLayoutPanel1
+        'ButtonTableLayout
         '
-        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(493, 554)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(219, 45)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.ButtonTableLayout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonTableLayout.ColumnCount = 2
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.Controls.Add(Me.OkDialogButton, 0, 0)
+        Me.ButtonTableLayout.Controls.Add(Me.CancelDialogButton, 1, 0)
+        Me.ButtonTableLayout.Location = New System.Drawing.Point(493, 554)
+        Me.ButtonTableLayout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ButtonTableLayout.Name = "ButtonTableLayout"
+        Me.ButtonTableLayout.RowCount = 1
+        Me.ButtonTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.Size = New System.Drawing.Size(219, 45)
+        Me.ButtonTableLayout.TabIndex = 0
         '
-        'OK_Button
+        'OkDialogButton
         '
-        Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.OK_Button.Location = New System.Drawing.Point(4, 5)
-        Me.OK_Button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.OK_Button.Name = "OK_Button"
-        Me.OK_Button.Size = New System.Drawing.Size(100, 35)
-        Me.OK_Button.TabIndex = 0
-        Me.OK_Button.Text = "OK"
+        Me.OkDialogButton.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.OkDialogButton.Location = New System.Drawing.Point(4, 5)
+        Me.OkDialogButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.OkDialogButton.Name = "OkDialogButton"
+        Me.OkDialogButton.Size = New System.Drawing.Size(100, 35)
+        Me.OkDialogButton.TabIndex = 0
+        Me.OkDialogButton.Text = "OK"
         '
-        'Cancel_Button
+        'CancelDialogButton
         '
-        Me.Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel_Button.Location = New System.Drawing.Point(114, 5)
-        Me.Cancel_Button.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Cancel_Button.Name = "Cancel_Button"
-        Me.Cancel_Button.Size = New System.Drawing.Size(100, 35)
-        Me.Cancel_Button.TabIndex = 1
-        Me.Cancel_Button.Text = "Cancel"
+        Me.CancelDialogButton.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.CancelDialogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.CancelDialogButton.Location = New System.Drawing.Point(114, 5)
+        Me.CancelDialogButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CancelDialogButton.Name = "CancelDialogButton"
+        Me.CancelDialogButton.Size = New System.Drawing.Size(100, 35)
+        Me.CancelDialogButton.TabIndex = 1
+        Me.CancelDialogButton.Text = "Cancel"
         '
         'PreviewPictureBox
         '
@@ -135,12 +135,12 @@ Partial Class ImportImageDialog
         Me.LockAspectCheckBox.Text = "Lock Aspect Ratio"
         Me.LockAspectCheckBox.UseVisualStyleBackColor = True
         '
-        'ResizeImageDialog
+        'ImportImageDialog
         '
-        Me.AcceptButton = Me.OK_Button
+        Me.AcceptButton = Me.OkDialogButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.Cancel_Button
+        Me.CancelButton = Me.CancelDialogButton
         Me.ClientSize = New System.Drawing.Size(729, 617)
         Me.Controls.Add(Me.LockAspectCheckBox)
         Me.Controls.Add(Me.HeightNud)
@@ -148,16 +148,16 @@ Partial Class ImportImageDialog
         Me.Controls.Add(Me.WidthNud)
         Me.Controls.Add(Me.WidthLabel)
         Me.Controls.Add(Me.PreviewPictureBox)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.ButtonTableLayout)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "ResizeImageDialog"
+        Me.Name = "ImportImageDialog"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Import Image"
-        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.ButtonTableLayout.ResumeLayout(False)
         CType(Me.PreviewPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.WidthNud, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.HeightNud, System.ComponentModel.ISupportInitialize).EndInit()
@@ -165,9 +165,9 @@ Partial Class ImportImageDialog
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents OK_Button As System.Windows.Forms.Button
-    Friend WithEvents Cancel_Button As System.Windows.Forms.Button
+    Friend WithEvents ButtonTableLayout As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents OkDialogButton As System.Windows.Forms.Button
+    Friend WithEvents CancelDialogButton As System.Windows.Forms.Button
     Friend WithEvents WidthLabel As Label
     Friend WithEvents WidthNud As NumericUpDown
     Friend WithEvents HeightNud As NumericUpDown

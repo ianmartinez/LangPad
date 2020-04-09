@@ -22,26 +22,27 @@ Partial Class CustomZoomDialog
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.nudZoom = New System.Windows.Forms.NumericUpDown()
+        Me.ZoomNud = New System.Windows.Forms.NumericUpDown()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnOK = New System.Windows.Forms.Button()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        CType(Me.nudZoom, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.ButtonTableLayout = New System.Windows.Forms.TableLayoutPanel()
+        Me.OkDialogButton = New System.Windows.Forms.Button()
+        Me.CancelDialogButton = New System.Windows.Forms.Button()
+        CType(Me.ZoomNud, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ButtonTableLayout.SuspendLayout()
         Me.SuspendLayout()
         '
-        'nudZoom
+        'ZoomNud
         '
-        Me.nudZoom.DecimalPlaces = 3
-        Me.nudZoom.Dock = System.Windows.Forms.DockStyle.Top
-        Me.nudZoom.Location = New System.Drawing.Point(9, 31)
-        Me.nudZoom.Maximum = New Decimal(New Integer() {64, 0, 0, 0})
-        Me.nudZoom.Minimum = New Decimal(New Integer() {15626, 0, 0, 393216})
-        Me.nudZoom.Name = "nudZoom"
-        Me.nudZoom.Size = New System.Drawing.Size(380, 26)
-        Me.nudZoom.TabIndex = 6
-        Me.nudZoom.Value = New Decimal(New Integer() {64, 0, 0, 0})
+        Me.ZoomNud.DecimalPlaces = 3
+        Me.ZoomNud.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ZoomNud.Increment = New Decimal(New Integer() {1, 0, 0, 65536})
+        Me.ZoomNud.Location = New System.Drawing.Point(9, 31)
+        Me.ZoomNud.Maximum = New Decimal(New Integer() {64, 0, 0, 0})
+        Me.ZoomNud.Minimum = New Decimal(New Integer() {15626, 0, 0, 393216})
+        Me.ZoomNud.Name = "ZoomNud"
+        Me.ZoomNud.Size = New System.Drawing.Size(380, 26)
+        Me.ZoomNud.TabIndex = 6
+        Me.ZoomNud.Value = New Decimal(New Integer() {64, 0, 0, 0})
         '
         'Label2
         '
@@ -54,81 +55,80 @@ Partial Class CustomZoomDialog
         Me.Label2.TabIndex = 75
         Me.Label2.Text = "Zoom Factor:"
         '
-        'TableLayoutPanel1
+        'ButtonTableLayout
         '
-        Me.TableLayoutPanel1.AutoSize = True
-        Me.TableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(9, 84)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(0, 9, 0, 5)
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(380, 56)
-        Me.TableLayoutPanel1.TabIndex = 76
+        Me.ButtonTableLayout.AutoSize = True
+        Me.ButtonTableLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.ButtonTableLayout.ColumnCount = 2
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.Controls.Add(Me.OkDialogButton, 0, 0)
+        Me.ButtonTableLayout.Controls.Add(Me.CancelDialogButton, 1, 0)
+        Me.ButtonTableLayout.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ButtonTableLayout.Location = New System.Drawing.Point(9, 84)
+        Me.ButtonTableLayout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ButtonTableLayout.Name = "ButtonTableLayout"
+        Me.ButtonTableLayout.Padding = New System.Windows.Forms.Padding(0, 9, 0, 5)
+        Me.ButtonTableLayout.RowCount = 1
+        Me.ButtonTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.ButtonTableLayout.Size = New System.Drawing.Size(380, 56)
+        Me.ButtonTableLayout.TabIndex = 76
         '
-        'btnOK
+        'OkDialogButton
         '
-        Me.btnOK.AutoSize = True
-        Me.btnOK.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOK.Location = New System.Drawing.Point(3, 12)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Padding = New System.Windows.Forms.Padding(3)
-        Me.btnOK.Size = New System.Drawing.Size(184, 36)
-        Me.btnOK.TabIndex = 1
-        Me.btnOK.Text = "OK"
-        Me.btnOK.UseVisualStyleBackColor = True
+        Me.OkDialogButton.AutoSize = True
+        Me.OkDialogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.OkDialogButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.OkDialogButton.Location = New System.Drawing.Point(3, 12)
+        Me.OkDialogButton.Name = "OkDialogButton"
+        Me.OkDialogButton.Padding = New System.Windows.Forms.Padding(3)
+        Me.OkDialogButton.Size = New System.Drawing.Size(184, 36)
+        Me.OkDialogButton.TabIndex = 1
+        Me.OkDialogButton.Text = "OK"
+        Me.OkDialogButton.UseVisualStyleBackColor = True
         '
-        'btnCancel
+        'CancelDialogButton
         '
-        Me.btnCancel.AutoSize = True
-        Me.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCancel.Location = New System.Drawing.Point(193, 12)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Padding = New System.Windows.Forms.Padding(3)
-        Me.btnCancel.Size = New System.Drawing.Size(184, 36)
-        Me.btnCancel.TabIndex = 0
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.CancelDialogButton.AutoSize = True
+        Me.CancelDialogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.CancelDialogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.CancelDialogButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CancelDialogButton.Location = New System.Drawing.Point(193, 12)
+        Me.CancelDialogButton.Name = "CancelDialogButton"
+        Me.CancelDialogButton.Padding = New System.Windows.Forms.Padding(3)
+        Me.CancelDialogButton.Size = New System.Drawing.Size(184, 36)
+        Me.CancelDialogButton.TabIndex = 0
+        Me.CancelDialogButton.Text = "Cancel"
+        Me.CancelDialogButton.UseVisualStyleBackColor = True
         '
-        'dlgCustomZoom
+        'CustomZoomDialog
         '
-        Me.AcceptButton = Me.btnOK
+        Me.AcceptButton = Me.OkDialogButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(398, 145)
-        Me.Controls.Add(Me.nudZoom)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.ZoomNud)
+        Me.Controls.Add(Me.ButtonTableLayout)
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "dlgCustomZoom"
+        Me.Name = "CustomZoomDialog"
         Me.Padding = New System.Windows.Forms.Padding(9, 5, 9, 5)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Custom Zoom"
-        CType(Me.nudZoom, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
+        CType(Me.ZoomNud, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ButtonTableLayout.ResumeLayout(False)
+        Me.ButtonTableLayout.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents nudZoom As System.Windows.Forms.NumericUpDown
+    Friend WithEvents ZoomNud As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents btnOK As Button
-    Friend WithEvents btnCancel As Button
+    Friend WithEvents ButtonTableLayout As TableLayoutPanel
+    Friend WithEvents OkDialogButton As Button
+    Friend WithEvents CancelDialogButton As Button
 End Class

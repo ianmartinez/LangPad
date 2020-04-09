@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ExportHTMLDialog
+Partial Class ExportHtmlDialog
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,218 +22,213 @@ Partial Class ExportHTMLDialog
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.OK_Button = New System.Windows.Forms.Button()
-        Me.Cancel_Button = New System.Windows.Forms.Button()
+        Me.ButtonTableLayout = New System.Windows.Forms.TableLayoutPanel()
+        Me.OkDialogButton = New System.Windows.Forms.Button()
+        Me.CancelDialogButton = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.cbPronunciation = New System.Windows.Forms.CheckBox()
-        Me.cbDefinition = New System.Windows.Forms.CheckBox()
-        Me.cbNotes = New System.Windows.Forms.CheckBox()
-        Me.cbWord = New System.Windows.Forms.CheckBox()
+        Me.PronunciationColCheck = New System.Windows.Forms.CheckBox()
+        Me.DefinitionColCheck = New System.Windows.Forms.CheckBox()
+        Me.NotesColCheck = New System.Windows.Forms.CheckBox()
+        Me.WordColCheck = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtTitle = New System.Windows.Forms.TextBox()
-        Me.txtDescription = New System.Windows.Forms.TextBox()
+        Me.TitleTextBox = New System.Windows.Forms.TextBox()
+        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.cbPElement = New System.Windows.Forms.CheckBox()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.PElementCheck = New System.Windows.Forms.CheckBox()
+        Me.ButtonTableLayout.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TableLayoutPanel1
+        'ButtonTableLayout
         '
-        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(308, 315)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(146, 29)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.ButtonTableLayout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonTableLayout.ColumnCount = 2
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.Controls.Add(Me.OkDialogButton, 0, 0)
+        Me.ButtonTableLayout.Controls.Add(Me.CancelDialogButton, 1, 0)
+        Me.ButtonTableLayout.Location = New System.Drawing.Point(462, 485)
+        Me.ButtonTableLayout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ButtonTableLayout.Name = "ButtonTableLayout"
+        Me.ButtonTableLayout.RowCount = 1
+        Me.ButtonTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.Size = New System.Drawing.Size(219, 45)
+        Me.ButtonTableLayout.TabIndex = 0
         '
-        'OK_Button
+        'OkDialogButton
         '
-        Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.OK_Button.BackColor = System.Drawing.Color.Transparent
-        Me.OK_Button.Location = New System.Drawing.Point(3, 3)
-        Me.OK_Button.Name = "OK_Button"
-        Me.OK_Button.Size = New System.Drawing.Size(67, 23)
-        Me.OK_Button.TabIndex = 0
-        Me.OK_Button.Text = "OK"
-        Me.OK_Button.UseVisualStyleBackColor = False
+        Me.OkDialogButton.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.OkDialogButton.BackColor = System.Drawing.Color.Transparent
+        Me.OkDialogButton.Location = New System.Drawing.Point(4, 5)
+        Me.OkDialogButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.OkDialogButton.Name = "OkDialogButton"
+        Me.OkDialogButton.Size = New System.Drawing.Size(100, 35)
+        Me.OkDialogButton.TabIndex = 0
+        Me.OkDialogButton.Text = "OK"
+        Me.OkDialogButton.UseVisualStyleBackColor = False
         '
-        'Cancel_Button
+        'CancelDialogButton
         '
-        Me.Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Cancel_Button.BackColor = System.Drawing.Color.Transparent
-        Me.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel_Button.Location = New System.Drawing.Point(76, 3)
-        Me.Cancel_Button.Name = "Cancel_Button"
-        Me.Cancel_Button.Size = New System.Drawing.Size(67, 23)
-        Me.Cancel_Button.TabIndex = 1
-        Me.Cancel_Button.Text = "Cancel"
-        Me.Cancel_Button.UseVisualStyleBackColor = False
+        Me.CancelDialogButton.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.CancelDialogButton.BackColor = System.Drawing.Color.Transparent
+        Me.CancelDialogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.CancelDialogButton.Location = New System.Drawing.Point(114, 5)
+        Me.CancelDialogButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CancelDialogButton.Name = "CancelDialogButton"
+        Me.CancelDialogButton.Size = New System.Drawing.Size(100, 35)
+        Me.CancelDialogButton.TabIndex = 1
+        Me.CancelDialogButton.Text = "Cancel"
+        Me.CancelDialogButton.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.cbPronunciation)
-        Me.GroupBox2.Controls.Add(Me.cbDefinition)
-        Me.GroupBox2.Controls.Add(Me.cbNotes)
-        Me.GroupBox2.Controls.Add(Me.cbWord)
-        Me.GroupBox2.Location = New System.Drawing.Point(8, 214)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Controls.Add(Me.PronunciationColCheck)
+        Me.GroupBox2.Controls.Add(Me.DefinitionColCheck)
+        Me.GroupBox2.Controls.Add(Me.NotesColCheck)
+        Me.GroupBox2.Controls.Add(Me.WordColCheck)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 329)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GroupBox2.Size = New System.Drawing.Size(446, 96)
+        Me.GroupBox2.Size = New System.Drawing.Size(669, 148)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Columns"
         '
-        'cbPronunciation
+        'PronunciationColCheck
         '
-        Me.cbPronunciation.AutoSize = True
-        Me.cbPronunciation.Checked = True
-        Me.cbPronunciation.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbPronunciation.Location = New System.Drawing.Point(6, 34)
-        Me.cbPronunciation.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.cbPronunciation.Name = "cbPronunciation"
-        Me.cbPronunciation.Size = New System.Drawing.Size(91, 17)
-        Me.cbPronunciation.TabIndex = 6
-        Me.cbPronunciation.Text = "Pronunciation"
-        Me.cbPronunciation.UseVisualStyleBackColor = True
+        Me.PronunciationColCheck.AutoSize = True
+        Me.PronunciationColCheck.Checked = True
+        Me.PronunciationColCheck.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.PronunciationColCheck.Location = New System.Drawing.Point(9, 52)
+        Me.PronunciationColCheck.Name = "PronunciationColCheck"
+        Me.PronunciationColCheck.Size = New System.Drawing.Size(132, 24)
+        Me.PronunciationColCheck.TabIndex = 6
+        Me.PronunciationColCheck.Text = "Pronunciation"
+        Me.PronunciationColCheck.UseVisualStyleBackColor = True
         '
-        'cbDefinition
+        'DefinitionColCheck
         '
-        Me.cbDefinition.AutoSize = True
-        Me.cbDefinition.Checked = True
-        Me.cbDefinition.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbDefinition.Location = New System.Drawing.Point(6, 52)
-        Me.cbDefinition.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.cbDefinition.Name = "cbDefinition"
-        Me.cbDefinition.Size = New System.Drawing.Size(70, 17)
-        Me.cbDefinition.TabIndex = 7
-        Me.cbDefinition.Text = "Definition"
-        Me.cbDefinition.UseVisualStyleBackColor = True
+        Me.DefinitionColCheck.AutoSize = True
+        Me.DefinitionColCheck.Checked = True
+        Me.DefinitionColCheck.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.DefinitionColCheck.Location = New System.Drawing.Point(9, 80)
+        Me.DefinitionColCheck.Name = "DefinitionColCheck"
+        Me.DefinitionColCheck.Size = New System.Drawing.Size(102, 24)
+        Me.DefinitionColCheck.TabIndex = 7
+        Me.DefinitionColCheck.Text = "Definition"
+        Me.DefinitionColCheck.UseVisualStyleBackColor = True
         '
-        'cbNotes
+        'NotesColCheck
         '
-        Me.cbNotes.AutoSize = True
-        Me.cbNotes.Checked = True
-        Me.cbNotes.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbNotes.Location = New System.Drawing.Point(6, 70)
-        Me.cbNotes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.cbNotes.Name = "cbNotes"
-        Me.cbNotes.Size = New System.Drawing.Size(54, 17)
-        Me.cbNotes.TabIndex = 8
-        Me.cbNotes.Text = "Notes"
-        Me.cbNotes.UseVisualStyleBackColor = True
+        Me.NotesColCheck.AutoSize = True
+        Me.NotesColCheck.Checked = True
+        Me.NotesColCheck.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.NotesColCheck.Location = New System.Drawing.Point(9, 108)
+        Me.NotesColCheck.Name = "NotesColCheck"
+        Me.NotesColCheck.Size = New System.Drawing.Size(77, 24)
+        Me.NotesColCheck.TabIndex = 8
+        Me.NotesColCheck.Text = "Notes"
+        Me.NotesColCheck.UseVisualStyleBackColor = True
         '
-        'cbWord
+        'WordColCheck
         '
-        Me.cbWord.AutoSize = True
-        Me.cbWord.Checked = True
-        Me.cbWord.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbWord.Location = New System.Drawing.Point(6, 16)
-        Me.cbWord.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.cbWord.Name = "cbWord"
-        Me.cbWord.Size = New System.Drawing.Size(52, 17)
-        Me.cbWord.TabIndex = 5
-        Me.cbWord.Text = "Word"
-        Me.cbWord.UseVisualStyleBackColor = True
+        Me.WordColCheck.AutoSize = True
+        Me.WordColCheck.Checked = True
+        Me.WordColCheck.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.WordColCheck.Location = New System.Drawing.Point(9, 25)
+        Me.WordColCheck.Name = "WordColCheck"
+        Me.WordColCheck.Size = New System.Drawing.Size(73, 24)
+        Me.WordColCheck.TabIndex = 5
+        Me.WordColCheck.Text = "Word"
+        Me.WordColCheck.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 7)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Label1.Location = New System.Drawing.Point(9, 11)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(30, 13)
+        Me.Label1.Size = New System.Drawing.Size(42, 20)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Title:"
         '
-        'txtTitle
+        'TitleTextBox
         '
-        Me.txtTitle.Location = New System.Drawing.Point(9, 24)
-        Me.txtTitle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(448, 20)
-        Me.txtTitle.TabIndex = 2
-        Me.txtTitle.Text = "Dictionary"
+        Me.TitleTextBox.Location = New System.Drawing.Point(14, 37)
+        Me.TitleTextBox.Name = "TitleTextBox"
+        Me.TitleTextBox.Size = New System.Drawing.Size(670, 26)
+        Me.TitleTextBox.TabIndex = 2
+        Me.TitleTextBox.Text = "Dictionary"
         '
-        'txtDescription
+        'DescriptionTextBox
         '
-        Me.txtDescription.Location = New System.Drawing.Point(9, 65)
-        Me.txtDescription.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.txtDescription.Multiline = True
-        Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(448, 124)
-        Me.txtDescription.TabIndex = 3
+        Me.DescriptionTextBox.Location = New System.Drawing.Point(14, 100)
+        Me.DescriptionTextBox.Multiline = True
+        Me.DescriptionTextBox.Name = "DescriptionTextBox"
+        Me.DescriptionTextBox.Size = New System.Drawing.Size(670, 189)
+        Me.DescriptionTextBox.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 48)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Label2.Location = New System.Drawing.Point(9, 74)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(3)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 13)
+        Me.Label2.Size = New System.Drawing.Size(93, 20)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Description:"
         '
-        'cbPElement
+        'PElementCheck
         '
-        Me.cbPElement.AutoSize = True
-        Me.cbPElement.Checked = True
-        Me.cbPElement.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbPElement.Location = New System.Drawing.Point(9, 193)
-        Me.cbPElement.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.cbPElement.Name = "cbPElement"
-        Me.cbPElement.Size = New System.Drawing.Size(205, 17)
-        Me.cbPElement.TabIndex = 4
-        Me.cbPElement.Text = "Make <p> element with each new line"
-        Me.cbPElement.UseVisualStyleBackColor = True
+        Me.PElementCheck.AutoSize = True
+        Me.PElementCheck.Checked = True
+        Me.PElementCheck.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.PElementCheck.Location = New System.Drawing.Point(14, 297)
+        Me.PElementCheck.Name = "PElementCheck"
+        Me.PElementCheck.Size = New System.Drawing.Size(298, 24)
+        Me.PElementCheck.TabIndex = 4
+        Me.PElementCheck.Text = "Make <p> element with each new line"
+        Me.PElementCheck.UseVisualStyleBackColor = True
         '
-        'dlgHtml
+        'ExportHtmlDialog
         '
-        Me.AcceptButton = Me.OK_Button
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AcceptButton = Me.OkDialogButton
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(466, 356)
-        Me.Controls.Add(Me.cbPElement)
-        Me.Controls.Add(Me.txtDescription)
+        Me.CancelButton = Me.CancelDialogButton
+        Me.ClientSize = New System.Drawing.Size(699, 548)
+        Me.Controls.Add(Me.PElementCheck)
+        Me.Controls.Add(Me.DescriptionTextBox)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtTitle)
+        Me.Controls.Add(Me.TitleTextBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.ButtonTableLayout)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "dlgHtml"
+        Me.Name = "ExportHtmlDialog"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Export To HTML"
-        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.ButtonTableLayout.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents OK_Button As System.Windows.Forms.Button
-    Friend WithEvents Cancel_Button As System.Windows.Forms.Button
+    Friend WithEvents ButtonTableLayout As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents OkDialogButton As System.Windows.Forms.Button
+    Friend WithEvents CancelDialogButton As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents cbPronunciation As CheckBox
-    Friend WithEvents cbDefinition As CheckBox
-    Friend WithEvents cbNotes As CheckBox
-    Friend WithEvents cbWord As CheckBox
+    Friend WithEvents PronunciationColCheck As CheckBox
+    Friend WithEvents DefinitionColCheck As CheckBox
+    Friend WithEvents NotesColCheck As CheckBox
+    Friend WithEvents WordColCheck As CheckBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtTitle As TextBox
-    Friend WithEvents txtDescription As TextBox
+    Friend WithEvents TitleTextBox As TextBox
+    Friend WithEvents DescriptionTextBox As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents cbPElement As CheckBox
+    Friend WithEvents PElementCheck As CheckBox
 End Class

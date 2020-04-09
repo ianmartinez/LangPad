@@ -6,11 +6,27 @@ Public Class CharacterEditor
     Public GetCurrentTexbox As Func(Of TextBoxBase)
     Public CharSearch As New CharacterSearch()
     Public Property Character As String
-    Private AccentsList As List(Of String) = New List(Of String)
+    Private ReadOnly AccentsList As List(Of String) = New List(Of String)
     Private AccentsString As String = ""
     Public Color1 As Color
     Public Color2 As Color
     Public VerticalMenuGradient As Boolean = False
+
+    Private Sub CharacterEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SetIcons()
+
+        If Character = "" Then Character = "a"
+        CharacterTextBox.Text = Character
+
+        SmartReplaceCheck.Visible = My.Settings.SmartReplace
+        AccentsList.Clear()
+        AccentsString = ""
+        UpdateResult()
+
+        If SearchModeDropDown.SelectedIndex = -1 Then
+            SearchModeDropDown.SelectedIndex = 0
+        End If
+    End Sub
 
     Public Sub SetTheme(Theme As Theme)
         Color1 = Theme.PanelBack
@@ -19,67 +35,66 @@ Public Class CharacterEditor
         FileToolStrip.Renderer = Theme.GetToolStripRenderer()
         LocalToolStrip.Renderer = Theme.GetToolStripRenderer()
         SearchToolStrip.Renderer = Theme.GetToolStripRenderer()
-        menuCharButton.Renderer = Theme.GetMenuRenderer()
+        CharButtonMenu.Renderer = Theme.GetMenuRenderer()
 
         Refresh()
     End Sub
 
     Public Sub SetIcons()
-        Dim res As IconResolution = GetIconResolution()
+        Dim Res As IconResolution = GetIconResolution()
 
         ' Local
-        ImportLocalToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, res)
-        ExportLocalToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, res)
-        ClearLocalToolStripButton.Image = IconManager.Get("edit-clear", IconSize.Small, res)
+        ImportLocalToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, Res)
+        ExportLocalToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, Res)
+        ClearLocalToolStripButton.Image = IconManager.Get("edit-clear", IconSize.Small, Res)
 
         ' File
-        ImportFileToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, res)
-        ExportFileToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, res)
-        ClearFileToolStripButton.Image = IconManager.Get("edit-clear", IconSize.Small, res)
+        ImportFileToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, Res)
+        ExportFileToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, Res)
+        ClearFileToolStripButton.Image = IconManager.Get("edit-clear", IconSize.Small, Res)
 
         ' Search
-        SearchToolStripButton.Image = IconManager.Get("edit-find", IconSize.Small, res)
-
+        SearchToolStripButton.Image = IconManager.Get("edit-find", IconSize.Small, Res)
+        Refresh()
     End Sub
 
     Private Sub UpdateResult()
-        If txtCharacter.Text = "" Then
-            btnCharacter.Text = ""
-            pnlSmartReplace.BackColor = Color.DimGray
+        If CharacterTextBox.Text = "" Then
+            CharacterButton.Text = ""
+            SmartReplaceIndicator.BackColor = Color.DimGray
             Exit Sub
         End If
 
-        If cbSmartReplace.Checked Then
-            Dim result As String = txtCharacter.Text & AccentsString
-            pnlSmartReplace.BackColor = Color.DimGray
+        If SmartReplaceCheck.Checked Then
+            Dim SmartReplacedText As String = CharacterTextBox.Text & AccentsString
+            SmartReplaceIndicator.BackColor = Color.DimGray
 
-            For Each pair As KeyValuePair(Of String, String) In SmartReplaceList
-                result = result.Replace(pair.Key, pair.Value)
+            For Each SmartReplacePair As KeyValuePair(Of String, String) In SmartReplaceList
+                SmartReplacedText = SmartReplacedText.Replace(SmartReplacePair.Key, SmartReplacePair.Value)
 
-                If result.Contains(pair.Value) Then
-                    pnlSmartReplace.BackColor = Color.LimeGreen
+                If SmartReplacedText.Contains(SmartReplacePair.Value) Then
+                    SmartReplaceIndicator.BackColor = Color.LimeGreen
                 End If
             Next
 
-            btnCharacter.Text = result
+            CharacterButton.Text = SmartReplacedText
         Else
-            btnCharacter.Text = txtCharacter.Text & AccentsString
+            CharacterButton.Text = CharacterTextBox.Text & AccentsString
         End If
     End Sub
 
-
     Private Sub ToggleAccent(sender As Object, e As EventArgs)
-        Dim button As AccentCheckButton = CType(sender, AccentCheckButton)
+        Dim AccentButton As AccentCheckButton = CType(sender, AccentCheckButton)
 
-        If (button.Checked) Then
-            AccentsList.Add(button.Text.Replace("◌", ""))
+        If (AccentButton.Checked) Then
+            AccentsList.Add(AccentButton.Text.Replace("◌", ""))
         Else
-            AccentsList.Remove(button.Text.Replace("◌", ""))
+            AccentsList.Remove(AccentButton.Text.Replace("◌", ""))
         End If
 
         AccentsString = ""
-        For Each accent As String In AccentsList
-            AccentsString += accent
+        For Each Accent As String In AccentsList
+            AccentsString += Accent
         Next
 
         UpdateResult()
@@ -94,11 +109,11 @@ Public Class CharacterEditor
     End Sub
 
     Public Sub RefreshLocal()
-        LocalCharPanel.Controls.Clear()
+        LocalPanel.Controls.Clear()
 
         Dim LocalCharacters As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
         For Each LocalCharacter As String In LocalCharacters
-            InsertCharacterButton(LocalCharacter, LocalCharPanel)
+            InsertCharacterButton(LocalCharacter, LocalPanel)
         Next
     End Sub
 
@@ -122,11 +137,12 @@ Public Class CharacterEditor
 
     Public Sub InsertCharacterButton(Text As String, Panel As FlowLayoutPanel, Optional CharName As String = "", Optional MultiLine As Boolean = True,
                                      Optional InSearch As Boolean = False, Optional CharType As CharacterType = CharacterType.All)
-        Dim CharacterButton As New CharacterButton(CharName, MultiLine)
-        CharacterButton.Text = Text
-        AddHandler CharacterButton.MouseClick, AddressOf CharacterButtonClick
-        CharacterButton.ContextMenuStrip = menuCharButton
-        Panel.Controls.Add(CharacterButton)
+        Dim CharButton As New CharacterButton(CharName, MultiLine) With {
+            .Text = Text
+        }
+        AddHandler CharButton.MouseClick, AddressOf CharacterButtonClick
+        CharButton.ContextMenuStrip = CharButtonMenu
+        Panel.Controls.Add(CharButton)
 
         If InSearch Then
             CharSearch.Add(Text, CharName, CharType, MultiLine)
@@ -142,19 +158,19 @@ Public Class CharacterEditor
             .MinimumSize = New Size(45, 45)
         }
         AddHandler AccentButton.Click, AddressOf ToggleAccent
-        AccentsLayoutPanel.Controls.Add(AccentButton)
+        AccentsPanel.Controls.Add(AccentButton)
     End Sub
 
-    Public Sub CharacterButtonClick(sender As Object, e As EventArgs) Handles btnCharacter.Click
-        Dim Button As Button = CType(sender, Button)
+    Public Sub CharacterButtonClick(sender As Object, e As EventArgs) Handles CharacterButton.Click
+        Dim CharButton As Button = CType(sender, Button)
 
         If My.Computer.Keyboard.AltKeyDown Then
-            txtCharacter.Text += Button.Text.Replace("◌", "")
+            CharacterTextBox.Text += CharButton.Text.Replace("◌", "")
         ElseIf My.Computer.Keyboard.CtrlKeyDown Then
-            AddToLocal(Button.Text)
+            AddToLocal(CharButton.Text)
         Else
             Dim CurrentTextBox = GetCurrentTexbox()
-            Dim ButtonText = Button.Text.Replace("◌", "")
+            Dim ButtonText = CharButton.Text.Replace("◌", "")
 
             If CurrentTextBox IsNot Nothing Then
                 If My.Computer.Keyboard.ShiftKeyDown Then
@@ -171,8 +187,8 @@ Public Class CharacterEditor
         Dim CurrentPos As Integer = TextBox.SelectionStart
 
         If (IsRTF) Then
-            Dim rtf As RichTextBox = CType(TextBox, RichTextBox)
-            rtf.SelectedText = Text
+            Dim Rtb As RichTextBox = CType(TextBox, RichTextBox)
+            Rtb.SelectedText = Text
         Else
             TextBox.Text = TextBox.Text.Insert(CurrentPos, Text)
         End If
@@ -184,45 +200,30 @@ Public Class CharacterEditor
         Show()
     End Sub
 
-    Private Sub CharacterEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SetIcons()
-
-        If Character = "" Then Character = "a"
-        txtCharacter.Text = Character
-
-        cbSmartReplace.Visible = My.Settings.SmartReplace
-        AccentsList.Clear()
-        AccentsString = ""
-        UpdateResult()
-
-        If SearchModeDropDown.SelectedIndex = -1 Then
-            SearchModeDropDown.SelectedIndex = 0
-        End If
-    End Sub
-
     Public Sub RefreshPanels()
-        For Each control In Controls
-            If TypeOf (control) Is FlowLayoutPanel Then
-                Dim panel = CType(control, FlowLayoutPanel)
-                panel.SetAutoScrollMargin(10, 10)
-                panel.PerformLayout()
-                panel.Refresh()
+        For Each Control In Controls
+            If TypeOf (Control) Is FlowLayoutPanel Then
+                Dim Panel = CType(Control, FlowLayoutPanel)
+                Panel.SetAutoScrollMargin(10, 10)
+                Panel.PerformLayout()
+                Panel.Refresh()
             End If
         Next
 
         Refresh()
     End Sub
+
     Private Function GetButtonText(sender As Object) As String
         Return CType(sender, Button).Text
     End Function
 
     Private Function GetButtonTextFromMenu(sender As Object) As String
-        Dim currentItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
-        Dim cms As ContextMenuStrip = CType(currentItem.Owner, ContextMenuStrip)
-        Return GetButtonText(cms.SourceControl).Replace("◌", "")
+        Dim CurrentItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
+        Dim CurrentContextMenu As ContextMenuStrip = CType(CurrentItem.Owner, ContextMenuStrip)
+        Return GetButtonText(CurrentContextMenu.SourceControl).Replace("◌", "")
     End Function
 
-    Private Sub TxtCharacter_TextChanged(sender As Object, e As EventArgs) Handles txtCharacter.TextChanged
+    Private Sub CharacterTextBox_TextChanged(sender As Object, e As EventArgs) Handles CharacterTextBox.TextChanged
         UpdateResult()
     End Sub
 
@@ -231,55 +232,55 @@ Public Class CharacterEditor
     End Sub
 
     Private Sub CopyToEditorMenuItem_Click(sender As Object, e As EventArgs) Handles ReplaceEditorCharacterMenuItem.Click
-        txtCharacter.Text = GetButtonTextFromMenu(sender)
+        CharacterTextBox.Text = GetButtonTextFromMenu(sender)
     End Sub
 
-    Private Sub BtnCopyToClipboard_Click(sender As Object, e As EventArgs) Handles btnCopyToClipboard.Click
-        Clipboard.SetText(btnCharacter.Text)
+    Private Sub CopyToClipboardButton_Click(sender As Object, e As EventArgs) Handles CopyToClipboardButton.Click
+        Clipboard.SetText(CharacterButton.Text)
     End Sub
 
-    Private Sub BtnUppercase_Click(sender As Object, e As EventArgs) Handles btnUppercase.Click
-        txtCharacter.Text = txtCharacter.Text.ToUpper()
+    Private Sub UppercaseButton_Click(sender As Object, e As EventArgs) Handles UppercaseButton.Click
+        CharacterTextBox.Text = CharacterTextBox.Text.ToUpper()
     End Sub
 
-    Private Sub BtnLowercase_Click(sender As Object, e As EventArgs) Handles btnLowercase.Click
-        txtCharacter.Text = txtCharacter.Text.ToLower()
+    Private Sub LowercaseButton_Click(sender As Object, e As EventArgs) Handles LowercaseButton.Click
+        CharacterTextBox.Text = CharacterTextBox.Text.ToLower()
     End Sub
 
-    Private Sub BtnAffricate_Click(sender As Object, e As EventArgs) Handles btnAffricate.Click
-        Dim affricateChar As String = "◌͡◌".Replace("◌", "")
+    Private Sub AffricateButton_Click(sender As Object, e As EventArgs) Handles AffricateButton.Click
+        Dim Affricate As String = "◌͡◌".Replace("◌", "")
 
-        If txtCharacter.Text.Contains(affricateChar) Then
-            txtCharacter.Text = txtCharacter.Text.Replace(affricateChar, "")
+        If CharacterTextBox.Text.Contains(Affricate) Then
+            CharacterTextBox.Text = CharacterTextBox.Text.Replace(Affricate, "")
         Else
-            txtCharacter.Text = txtCharacter.Text.Insert(Math.Max(txtCharacter.Text.Length - 1, 0), affricateChar)
+            CharacterTextBox.Text = CharacterTextBox.Text.Insert(Math.Max(CharacterTextBox.Text.Length - 1, 0), Affricate)
         End If
     End Sub
 
     Private Sub AddToEditorCharacterMenuItem_Click(sender As Object, e As EventArgs) Handles AddToEditorCharacterMenuItem.Click
-        txtCharacter.Text &= GetButtonTextFromMenu(sender)
+        CharacterTextBox.Text &= GetButtonTextFromMenu(sender)
     End Sub
 
-    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        For Each control As Control In AccentsLayoutPanel.Controls
-            If TypeOf control Is AccentCheckButton Then
-                Dim button As AccentCheckButton = CType(control, AccentCheckButton)
-                button.Checked = False
+    Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
+        For Each Control As Control In AccentsPanel.Controls
+            If TypeOf Control Is AccentCheckButton Then
+                Dim AccentCheckButton As AccentCheckButton = CType(Control, AccentCheckButton)
+                AccentCheckButton.Checked = False
             End If
         Next
 
         AccentsList.Clear()
         AccentsString = ""
-        txtCharacter.Text = ""
+        CharacterTextBox.Text = ""
         UpdateResult()
     End Sub
 
-    Private Sub BtnAddToFile_Click(sender As Object, e As EventArgs) Handles btnAddToFile.Click
-        AddToFile(btnCharacter.Text)
+    Private Sub AddToFileButton_Click(sender As Object, e As EventArgs) Handles AddToFileButton.Click
+        AddToFile(CharacterButton.Text)
     End Sub
 
-    Private Sub BtnAddToLocal_Click(sender As Object, e As EventArgs) Handles btnAddToLocal.Click
-        AddToLocal(btnCharacter.Text)
+    Private Sub AddToLocalButton_Click(sender As Object, e As EventArgs) Handles AddToLocalButton.Click
+        AddToLocal(CharacterButton.Text)
     End Sub
 
     Private Sub CopyToFileMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToFileMenuItem.Click
@@ -291,53 +292,53 @@ Public Class CharacterEditor
     End Sub
 
     Private Sub RemoveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveToolStripMenuItem.Click
-        Dim currentItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
-        Dim cms As ContextMenuStrip = CType(currentItem.Owner, ContextMenuStrip)
-        Dim button = CType(cms.SourceControl, CharacterButton)
+        Dim CurrentItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
+        Dim CurrentMenu As ContextMenuStrip = CType(CurrentItem.Owner, ContextMenuStrip)
+        Dim CurrentButton = CType(CurrentMenu.SourceControl, CharacterButton)
 
-        If button.Parent Is FilePanel Then
+        If CurrentButton.Parent Is FilePanel Then
             Dim FileChars As List(Of String) = CurrentDocument.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries).ToList()
-            If FileChars.Contains(button.Text) Then
-                FileChars.Remove(button.Text)
+            If FileChars.Contains(CurrentButton.Text) Then
+                FileChars.Remove(CurrentButton.Text)
                 CurrentDocument.CustomSymbols = String.Join(Environment.NewLine, FileChars.ToArray())
                 RefreshFile()
             End If
-        ElseIf button.Parent Is LocalCharPanel Then
+        ElseIf CurrentButton.Parent Is LocalPanel Then
             Dim LocalChars As List(Of String) = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries).ToList()
-            If LocalChars.Contains(button.Text) Then
-                LocalChars.Remove(button.Text)
+            If LocalChars.Contains(CurrentButton.Text) Then
+                LocalChars.Remove(CurrentButton.Text)
                 My.Settings.CustomSymbols = String.Join(Environment.NewLine, LocalChars.ToArray())
                 RefreshLocal()
             End If
         End If
     End Sub
 
-    Private Sub MenuCharButton_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles menuCharButton.Opening
-        Dim cms As ContextMenuStrip = CType(sender, ContextMenuStrip)
-        Dim button = CType(cms.SourceControl, CharacterButton)
+    Private Sub CharButtonMenu_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles CharButtonMenu.Opening
+        Dim CurrentMenu As ContextMenuStrip = CType(sender, ContextMenuStrip)
+        Dim CurrentButton = CType(CurrentMenu.SourceControl, CharacterButton)
 
         RemoveCharSplitter.Visible = False
         RemoveToolStripMenuItem.Visible = False
 
-        If button.Parent Is FilePanel Or button.Parent Is LocalCharPanel Then
+        If CurrentButton.Parent Is FilePanel Or CurrentButton.Parent Is LocalPanel Then
             RemoveCharSplitter.Visible = True
             RemoveToolStripMenuItem.Visible = True
         End If
     End Sub
 
-    Private Function ClearConfirm() As DialogResult
+    Private Function ConfirmClear() As DialogResult
         Return MessageBox.Show("Are you sure you want to clear all characters? This cannot be undone.", "", MessageBoxButtons.YesNoCancel)
     End Function
 
     Private Sub ClearLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ClearLocalToolStripButton.Click
-        If ClearConfirm() = DialogResult.Yes Then
+        If ConfirmClear() = DialogResult.Yes Then
             My.Settings.CustomSymbols = ""
             RefreshLocal()
         End If
     End Sub
 
     Private Sub ClearFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ClearFileToolStripButton.Click
-        If ClearConfirm() = DialogResult.Yes Then
+        If ConfirmClear() = DialogResult.Yes Then
             CurrentDocument.CustomSymbols = ""
             CurrentDocument.Modified = True
             RefreshFile()
@@ -359,28 +360,28 @@ Public Class CharacterEditor
     End Sub
 
     Private Sub ImportLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportLocalToolStripButton.Click
-        If dlgOpen.ShowDialog = Windows.Forms.DialogResult.OK Then
-            ImportFile(dlgOpen.FileName, My.Settings.CustomSymbols)
+        If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+            ImportFile(OpenDialog.FileName, My.Settings.CustomSymbols)
             RefreshLocal()
         End If
     End Sub
 
     Private Sub ImportFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportFileToolStripButton.Click
-        If dlgOpen.ShowDialog = Windows.Forms.DialogResult.OK Then
-            ImportFile(dlgOpen.FileName, CurrentDocument.CustomSymbols)
+        If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+            ImportFile(OpenDialog.FileName, CurrentDocument.CustomSymbols)
             RefreshFile()
         End If
     End Sub
 
     Private Sub ExportLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportLocalToolStripButton.Click
-        If dlgSave.ShowDialog = Windows.Forms.DialogResult.OK Then
-            File.WriteAllText(dlgSave.FileName, My.Settings.CustomSymbols)
+        If SaveDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+            File.WriteAllText(SaveDialog.FileName, My.Settings.CustomSymbols)
         End If
     End Sub
 
     Private Sub ExportFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportFileToolStripButton.Click
-        If dlgSave.ShowDialog = Windows.Forms.DialogResult.OK Then
-            File.WriteAllText(dlgSave.FileName, CurrentDocument.CustomSymbols)
+        If SaveDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+            File.WriteAllText(SaveDialog.FileName, CurrentDocument.CustomSymbols)
         End If
     End Sub
 
@@ -415,16 +416,15 @@ Public Class CharacterEditor
                 SearchMode = CharacterType.IPASuprasegmental
         End Select
 
-        SearchCharactersPanel.Controls.Clear()
-
-        SearchCharactersPanel.SuspendLayout()
+        SearchCharPanel.Controls.Clear()
+        SearchCharPanel.SuspendLayout()
 
         Dim Matches = CharSearch.Search(SearchQueryTextBox.Text, SearchMode)
         For Each Character As CharacterInfo In Matches
-            InsertCharacterButton(Character.Character, SearchCharactersPanel, Character.Description, Character.MultiLine)
+            InsertCharacterButton(Character.Character, SearchCharPanel, Character.Description, Character.MultiLine)
         Next
 
-        SearchCharactersPanel.ResumeLayout()
+        SearchCharPanel.ResumeLayout()
     End Sub
 
     Private Sub SearchQueryTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SearchQueryTextBox.KeyPress
@@ -438,8 +438,8 @@ Public Class CharacterEditor
     Private Sub CharacterEditor_VisibleChanged(sender As Object, e As EventArgs) Handles MyBase.VisibleChanged
         ' Force WinForms to refresh the autoscroll dimensions because it calculates
         ' it wrong the first time.
-        AccentsLayoutPanel.AutoScroll = False
+        AccentsPanel.AutoScroll = False
         Refresh()
-        AccentsLayoutPanel.AutoScroll = True
+        AccentsPanel.AutoScroll = True
     End Sub
 End Class

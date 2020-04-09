@@ -1,9 +1,5 @@
 ﻿Public Class AboutDialog
-    Private Sub btnGitHub_Click(sender As Object, e As EventArgs)
-        Process.Start("https://github.com/ianmartinez/Language-Pad")
-    End Sub
-
-    Private Sub dlgAbout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblVersion.Text = "Version " + SplashVersion
+    Private Sub AboutDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        VersionLabel.Text = "Version " + GetVersionString()
     End Sub
 End Class

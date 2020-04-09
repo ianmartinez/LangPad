@@ -24,22 +24,22 @@ Partial Class DictionaryForm
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DictionaryForm))
-        Me.dgvDictionary = New System.Windows.Forms.DataGridView()
+        Me.DictionaryGrid = New System.Windows.Forms.DataGridView()
         Me.Word = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Pronunciation = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Definition = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Notes = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dlgOpen = New System.Windows.Forms.OpenFileDialog()
-        Me.dlgSave = New System.Windows.Forms.SaveFileDialog()
-        Me.dlgFont = New System.Windows.Forms.FontDialog()
-        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
-        Me.pnlFindReplace = New TundraLib.DoubleBufferedPanel()
-        Me.cbStartsWith = New System.Windows.Forms.CheckBox()
-        Me.rbDefinition = New System.Windows.Forms.RadioButton()
-        Me.rbWord = New System.Windows.Forms.RadioButton()
-        Me.txtFind = New System.Windows.Forms.TextBox()
+        Me.OpenDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.SaveDialog = New System.Windows.Forms.SaveFileDialog()
+        Me.FontPicker = New System.Windows.Forms.FontDialog()
+        Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
+        Me.FindReplaceDialog = New TundraLib.DoubleBufferedPanel()
+        Me.StartsWithCheck = New System.Windows.Forms.CheckBox()
+        Me.DefinitionRadio = New System.Windows.Forms.RadioButton()
+        Me.WordRadio = New System.Windows.Forms.RadioButton()
+        Me.FindTextBox = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.btnFind = New System.Windows.Forms.Button()
+        Me.FindButton = New System.Windows.Forms.Button()
         Me.MainToolStrip = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -55,25 +55,25 @@ Partial Class DictionaryForm
         Me.ResetFontToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.FindToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.dlgSaveHtml = New System.Windows.Forms.SaveFileDialog()
-        CType(Me.dgvDictionary, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ToolStripContainer1.ContentPanel.SuspendLayout()
-        Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
-        Me.ToolStripContainer1.SuspendLayout()
-        Me.pnlFindReplace.SuspendLayout()
+        Me.SaveHtmlDialog = New System.Windows.Forms.SaveFileDialog()
+        CType(Me.DictionaryGrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MainToolStripContainer.ContentPanel.SuspendLayout()
+        Me.MainToolStripContainer.TopToolStripPanel.SuspendLayout()
+        Me.MainToolStripContainer.SuspendLayout()
+        Me.FindReplaceDialog.SuspendLayout()
         Me.MainToolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
-        'dgvDictionary
+        'DictionaryGrid
         '
-        Me.dgvDictionary.AllowUserToAddRows = False
-        Me.dgvDictionary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.dgvDictionary.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.dgvDictionary.BackgroundColor = System.Drawing.Color.White
-        Me.dgvDictionary.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgvDictionary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgvDictionary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDictionary.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Word, Me.Pronunciation, Me.Definition, Me.Notes})
+        Me.DictionaryGrid.AllowUserToAddRows = False
+        Me.DictionaryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DictionaryGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DictionaryGrid.BackgroundColor = System.Drawing.Color.White
+        Me.DictionaryGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DictionaryGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DictionaryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DictionaryGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Word, Me.Pronunciation, Me.Definition, Me.Notes})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -81,16 +81,16 @@ Partial Class DictionaryForm
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvDictionary.DefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvDictionary.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvDictionary.GridColor = System.Drawing.Color.Gainsboro
-        Me.dgvDictionary.Location = New System.Drawing.Point(0, 54)
-        Me.dgvDictionary.Name = "dgvDictionary"
-        Me.dgvDictionary.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgvDictionary.RowHeadersWidth = 62
-        Me.dgvDictionary.RowTemplate.Height = 24
-        Me.dgvDictionary.Size = New System.Drawing.Size(1332, 754)
-        Me.dgvDictionary.TabIndex = 3
+        Me.DictionaryGrid.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DictionaryGrid.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DictionaryGrid.GridColor = System.Drawing.Color.Gainsboro
+        Me.DictionaryGrid.Location = New System.Drawing.Point(0, 54)
+        Me.DictionaryGrid.Name = "DictionaryGrid"
+        Me.DictionaryGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DictionaryGrid.RowHeadersWidth = 62
+        Me.DictionaryGrid.RowTemplate.Height = 24
+        Me.DictionaryGrid.Size = New System.Drawing.Size(1332, 754)
+        Me.DictionaryGrid.TabIndex = 3
         '
         'Word
         '
@@ -120,102 +120,102 @@ Partial Class DictionaryForm
         Me.Notes.Name = "Notes"
         Me.Notes.Width = 87
         '
-        'dlgOpen
+        'OpenDialog
         '
-        Me.dlgOpen.Filter = "Dictionary file (*.dict)|*.dict|CSV file (*.csv)|*.csv|Text files (*.txt)|*.txt|A" &
+        Me.OpenDialog.Filter = "Dictionary file (*.dict)|*.dict|CSV file (*.csv)|*.csv|Text files (*.txt)|*.txt|A" &
     "ll files (*.*)|*.*"
         '
-        'dlgSave
+        'SaveDialog
         '
-        Me.dlgSave.Filter = "Dictionary file (*.dict)|*.dict|CSV file (*.csv)|*.csv|Text files (*.txt)|*.txt|A" &
+        Me.SaveDialog.Filter = "Dictionary file (*.dict)|*.dict|CSV file (*.csv)|*.csv|Text files (*.txt)|*.txt|A" &
     "ll files (*.*)|*.*"
         '
-        'dlgFont
+        'FontPicker
         '
-        Me.dlgFont.ShowColor = True
+        Me.FontPicker.ShowColor = True
         '
-        'ToolStripContainer1
-        '
-        '
-        'ToolStripContainer1.BottomToolStripPanel
+        'MainToolStripContainer
         '
         '
-        'ToolStripContainer1.ContentPanel
+        'MainToolStripContainer.BottomToolStripPanel
         '
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.dgvDictionary)
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.pnlFindReplace)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1332, 808)
-        Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         '
-        'ToolStripContainer1.LeftToolStripPanel
+        'MainToolStripContainer.ContentPanel
         '
-        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.DictionaryGrid)
+        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.FindReplaceDialog)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1332, 808)
+        Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
-        'ToolStripContainer1.RightToolStripPanel
+        'MainToolStripContainer.LeftToolStripPanel
         '
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(1332, 849)
-        Me.ToolStripContainer1.TabIndex = 75
-        Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 0)
+        Me.MainToolStripContainer.Name = "MainToolStripContainer"
         '
-        'ToolStripContainer1.TopToolStripPanel
+        'MainToolStripContainer.RightToolStripPanel
         '
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.MainToolStrip)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(1332, 849)
+        Me.MainToolStripContainer.TabIndex = 75
+        Me.MainToolStripContainer.Text = "MainToolStripContainer"
         '
-        'pnlFindReplace
+        'MainToolStripContainer.TopToolStripPanel
         '
-        Me.pnlFindReplace.BackColor = System.Drawing.Color.Transparent
-        Me.pnlFindReplace.Controls.Add(Me.cbStartsWith)
-        Me.pnlFindReplace.Controls.Add(Me.rbDefinition)
-        Me.pnlFindReplace.Controls.Add(Me.rbWord)
-        Me.pnlFindReplace.Controls.Add(Me.txtFind)
-        Me.pnlFindReplace.Controls.Add(Me.Label17)
-        Me.pnlFindReplace.Controls.Add(Me.btnFind)
-        Me.pnlFindReplace.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlFindReplace.Location = New System.Drawing.Point(0, 0)
-        Me.pnlFindReplace.Name = "pnlFindReplace"
-        Me.pnlFindReplace.Size = New System.Drawing.Size(1332, 54)
-        Me.pnlFindReplace.TabIndex = 75
-        Me.pnlFindReplace.Visible = False
+        Me.MainToolStripContainer.TopToolStripPanel.Controls.Add(Me.MainToolStrip)
         '
-        'cbStartsWith
+        'FindReplaceDialog
         '
-        Me.cbStartsWith.AutoSize = True
-        Me.cbStartsWith.Location = New System.Drawing.Point(468, 15)
-        Me.cbStartsWith.Name = "cbStartsWith"
-        Me.cbStartsWith.Size = New System.Drawing.Size(114, 24)
-        Me.cbStartsWith.TabIndex = 69
-        Me.cbStartsWith.Text = "Starts With"
-        Me.cbStartsWith.UseVisualStyleBackColor = True
+        Me.FindReplaceDialog.BackColor = System.Drawing.Color.Transparent
+        Me.FindReplaceDialog.Controls.Add(Me.StartsWithCheck)
+        Me.FindReplaceDialog.Controls.Add(Me.DefinitionRadio)
+        Me.FindReplaceDialog.Controls.Add(Me.WordRadio)
+        Me.FindReplaceDialog.Controls.Add(Me.FindTextBox)
+        Me.FindReplaceDialog.Controls.Add(Me.Label17)
+        Me.FindReplaceDialog.Controls.Add(Me.FindButton)
+        Me.FindReplaceDialog.Dock = System.Windows.Forms.DockStyle.Top
+        Me.FindReplaceDialog.Location = New System.Drawing.Point(0, 0)
+        Me.FindReplaceDialog.Name = "FindReplaceDialog"
+        Me.FindReplaceDialog.Size = New System.Drawing.Size(1332, 54)
+        Me.FindReplaceDialog.TabIndex = 75
+        Me.FindReplaceDialog.Visible = False
         '
-        'rbDefinition
+        'StartsWithCheck
         '
-        Me.rbDefinition.AutoSize = True
-        Me.rbDefinition.Checked = True
-        Me.rbDefinition.Location = New System.Drawing.Point(674, 14)
-        Me.rbDefinition.Name = "rbDefinition"
-        Me.rbDefinition.Size = New System.Drawing.Size(101, 24)
-        Me.rbDefinition.TabIndex = 71
-        Me.rbDefinition.TabStop = True
-        Me.rbDefinition.Text = "Definition"
-        Me.rbDefinition.UseVisualStyleBackColor = True
+        Me.StartsWithCheck.AutoSize = True
+        Me.StartsWithCheck.Location = New System.Drawing.Point(468, 15)
+        Me.StartsWithCheck.Name = "StartsWithCheck"
+        Me.StartsWithCheck.Size = New System.Drawing.Size(114, 24)
+        Me.StartsWithCheck.TabIndex = 69
+        Me.StartsWithCheck.Text = "Starts With"
+        Me.StartsWithCheck.UseVisualStyleBackColor = True
         '
-        'rbWord
+        'DefinitionRadio
         '
-        Me.rbWord.AutoSize = True
-        Me.rbWord.Location = New System.Drawing.Point(591, 14)
-        Me.rbWord.Name = "rbWord"
-        Me.rbWord.Size = New System.Drawing.Size(72, 24)
-        Me.rbWord.TabIndex = 70
-        Me.rbWord.Text = "Word"
-        Me.rbWord.UseVisualStyleBackColor = True
+        Me.DefinitionRadio.AutoSize = True
+        Me.DefinitionRadio.Checked = True
+        Me.DefinitionRadio.Location = New System.Drawing.Point(674, 14)
+        Me.DefinitionRadio.Name = "DefinitionRadio"
+        Me.DefinitionRadio.Size = New System.Drawing.Size(101, 24)
+        Me.DefinitionRadio.TabIndex = 71
+        Me.DefinitionRadio.TabStop = True
+        Me.DefinitionRadio.Text = "Definition"
+        Me.DefinitionRadio.UseVisualStyleBackColor = True
         '
-        'txtFind
+        'WordRadio
         '
-        Me.txtFind.Location = New System.Drawing.Point(60, 14)
-        Me.txtFind.Name = "txtFind"
-        Me.txtFind.Size = New System.Drawing.Size(400, 26)
-        Me.txtFind.TabIndex = 66
+        Me.WordRadio.AutoSize = True
+        Me.WordRadio.Location = New System.Drawing.Point(591, 14)
+        Me.WordRadio.Name = "WordRadio"
+        Me.WordRadio.Size = New System.Drawing.Size(72, 24)
+        Me.WordRadio.TabIndex = 70
+        Me.WordRadio.Text = "Word"
+        Me.WordRadio.UseVisualStyleBackColor = True
+        '
+        'FindTextBox
+        '
+        Me.FindTextBox.Location = New System.Drawing.Point(60, 14)
+        Me.FindTextBox.Name = "FindTextBox"
+        Me.FindTextBox.Size = New System.Drawing.Size(400, 26)
+        Me.FindTextBox.TabIndex = 66
         '
         'Label17
         '
@@ -227,18 +227,18 @@ Partial Class DictionaryForm
         Me.Label17.TabIndex = 83
         Me.Label17.Text = "Find:"
         '
-        'btnFind
+        'FindButton
         '
-        Me.btnFind.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnFind.FlatAppearance.BorderSize = 0
-        Me.btnFind.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnFind.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnFind.Location = New System.Drawing.Point(783, 8)
-        Me.btnFind.Name = "btnFind"
-        Me.btnFind.Size = New System.Drawing.Size(117, 37)
-        Me.btnFind.TabIndex = 67
-        Me.btnFind.Text = "Find"
+        Me.FindButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.FindButton.FlatAppearance.BorderSize = 0
+        Me.FindButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.FindButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.FindButton.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.FindButton.Location = New System.Drawing.Point(783, 8)
+        Me.FindButton.Name = "FindButton"
+        Me.FindButton.Size = New System.Drawing.Size(117, 37)
+        Me.FindButton.TabIndex = 67
+        Me.FindButton.Text = "Find"
         '
         'MainToolStrip
         '
@@ -372,38 +372,38 @@ Partial Class DictionaryForm
         Me.FindToolStripButton.Size = New System.Drawing.Size(36, 36)
         Me.FindToolStripButton.Text = "Find"
         '
-        'dlgSaveHtml
+        'SaveHtmlDialog
         '
-        Me.dlgSaveHtml.Filter = "HTML Page (*.html)|*.html|Text files (*.txt)|*.txt|All files (*.*)|*.*"
+        Me.SaveHtmlDialog.Filter = "HTML Page (*.html)|*.html|Text files (*.txt)|*.txt|All files (*.*)|*.*"
         '
-        'frmDictionary
+        'DictionaryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1332, 849)
-        Me.Controls.Add(Me.ToolStripContainer1)
+        Me.Controls.Add(Me.MainToolStripContainer)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Name = "frmDictionary"
+        Me.Name = "DictionaryForm"
         Me.Text = "Dictionary"
-        CType(Me.dgvDictionary, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ToolStripContainer1.ContentPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.TopToolStripPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.TopToolStripPanel.PerformLayout()
-        Me.ToolStripContainer1.ResumeLayout(False)
-        Me.ToolStripContainer1.PerformLayout()
-        Me.pnlFindReplace.ResumeLayout(False)
-        Me.pnlFindReplace.PerformLayout()
+        CType(Me.DictionaryGrid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MainToolStripContainer.ContentPanel.ResumeLayout(False)
+        Me.MainToolStripContainer.TopToolStripPanel.ResumeLayout(False)
+        Me.MainToolStripContainer.TopToolStripPanel.PerformLayout()
+        Me.MainToolStripContainer.ResumeLayout(False)
+        Me.MainToolStripContainer.PerformLayout()
+        Me.FindReplaceDialog.ResumeLayout(False)
+        Me.FindReplaceDialog.PerformLayout()
         Me.MainToolStrip.ResumeLayout(False)
         Me.MainToolStrip.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents dgvDictionary As DataGridView
-    Friend WithEvents dlgOpen As OpenFileDialog
-    Friend WithEvents dlgSave As SaveFileDialog
-    Friend WithEvents dlgFont As FontDialog
-    Friend WithEvents ToolStripContainer1 As ToolStripContainer
+    Friend WithEvents DictionaryGrid As DataGridView
+    Friend WithEvents OpenDialog As OpenFileDialog
+    Friend WithEvents SaveDialog As SaveFileDialog
+    Friend WithEvents FontPicker As FontDialog
+    Friend WithEvents MainToolStripContainer As ToolStripContainer
     Friend WithEvents MainToolStrip As ToolStrip
     Friend WithEvents NewToolStripButton As ToolStripButton
     Friend WithEvents OpenToolStripButton As ToolStripButton
@@ -419,16 +419,16 @@ Partial Class DictionaryForm
     Friend WithEvents Definition As DataGridViewTextBoxColumn
     Friend WithEvents Notes As DataGridViewTextBoxColumn
     Friend WithEvents ExportHtmlToolStripButton As ToolStripButton
-    Friend WithEvents dlgSaveHtml As SaveFileDialog
-    Friend WithEvents pnlFindReplace As TundraLib.DoubleBufferedPanel
-    Friend WithEvents txtFind As TextBox
+    Friend WithEvents SaveHtmlDialog As SaveFileDialog
+    Friend WithEvents FindReplaceDialog As TundraLib.DoubleBufferedPanel
+    Friend WithEvents FindTextBox As TextBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents btnFind As Button
+    Friend WithEvents FindButton As Button
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents FindToolStripButton As ToolStripButton
-    Friend WithEvents cbStartsWith As CheckBox
-    Friend WithEvents rbDefinition As RadioButton
-    Friend WithEvents rbWord As RadioButton
+    Friend WithEvents StartsWithCheck As CheckBox
+    Friend WithEvents DefinitionRadio As RadioButton
+    Friend WithEvents WordRadio As RadioButton
     Friend WithEvents FontToolStripButton As ToolStripButton
     Friend WithEvents ResetFontToolStripButton As ToolStripButton
 End Class

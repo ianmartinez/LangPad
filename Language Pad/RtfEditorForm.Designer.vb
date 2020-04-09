@@ -23,8 +23,8 @@ Partial Class RtfEditorForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RtfEditorForm))
-        Me.txtRTF = New System.Windows.Forms.RichTextBox()
-        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.RtfCodeTextBox = New System.Windows.Forms.RichTextBox()
+        Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.MainToolStrip = New System.Windows.Forms.ToolStrip()
         Me.UndoToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.RedoToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -34,52 +34,52 @@ Partial Class RtfEditorForm
         Me.PasteToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.RefreshToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripContainer1.ContentPanel.SuspendLayout()
-        Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
-        Me.ToolStripContainer1.SuspendLayout()
+        Me.MainToolStripContainer.ContentPanel.SuspendLayout()
+        Me.MainToolStripContainer.TopToolStripPanel.SuspendLayout()
+        Me.MainToolStripContainer.SuspendLayout()
         Me.MainToolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
-        'txtRTF
+        'RtfCodeTextBox
         '
-        Me.txtRTF.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtRTF.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtRTF.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRTF.ForeColor = System.Drawing.Color.Black
-        Me.txtRTF.Location = New System.Drawing.Point(0, 1)
-        Me.txtRTF.Name = "txtRTF"
-        Me.txtRTF.Size = New System.Drawing.Size(1020, 735)
-        Me.txtRTF.TabIndex = 1
-        Me.txtRTF.Text = ""
+        Me.RtfCodeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RtfCodeTextBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RtfCodeTextBox.Font = New System.Drawing.Font("Consolas", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RtfCodeTextBox.ForeColor = System.Drawing.Color.Black
+        Me.RtfCodeTextBox.Location = New System.Drawing.Point(0, 1)
+        Me.RtfCodeTextBox.Name = "RtfCodeTextBox"
+        Me.RtfCodeTextBox.Size = New System.Drawing.Size(1020, 735)
+        Me.RtfCodeTextBox.TabIndex = 1
+        Me.RtfCodeTextBox.Text = ""
         '
-        'ToolStripContainer1
-        '
-        '
-        'ToolStripContainer1.BottomToolStripPanel
+        'MainToolStripContainer
         '
         '
-        'ToolStripContainer1.ContentPanel
+        'MainToolStripContainer.BottomToolStripPanel
         '
-        Me.ToolStripContainer1.ContentPanel.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.txtRTF)
-        Me.ToolStripContainer1.ContentPanel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1020, 736)
-        Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         '
-        'ToolStripContainer1.LeftToolStripPanel
+        'MainToolStripContainer.ContentPanel
         '
-        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        Me.MainToolStripContainer.ContentPanel.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.RtfCodeTextBox)
+        Me.MainToolStripContainer.ContentPanel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1020, 736)
+        Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
-        'ToolStripContainer1.RightToolStripPanel
+        'MainToolStripContainer.LeftToolStripPanel
         '
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(1020, 777)
-        Me.ToolStripContainer1.TabIndex = 2
-        Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 0)
+        Me.MainToolStripContainer.Name = "MainToolStripContainer"
         '
-        'ToolStripContainer1.TopToolStripPanel
+        'MainToolStripContainer.RightToolStripPanel
         '
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.MainToolStrip)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(1020, 777)
+        Me.MainToolStripContainer.TabIndex = 2
+        Me.MainToolStripContainer.Text = "MainToolStripContainer"
+        '
+        'MainToolStripContainer.TopToolStripPanel
+        '
+        Me.MainToolStripContainer.TopToolStripPanel.Controls.Add(Me.MainToolStrip)
         '
         'MainToolStrip
         '
@@ -163,28 +163,28 @@ Partial Class RtfEditorForm
         Me.RefreshToolStripButton.Size = New System.Drawing.Size(36, 36)
         Me.RefreshToolStripButton.Text = "Refresh"
         '
-        'frmRTF
+        'RtfEditorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1020, 777)
-        Me.Controls.Add(Me.ToolStripContainer1)
+        Me.Controls.Add(Me.MainToolStripContainer)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmRTF"
+        Me.Name = "RtfEditorForm"
         Me.ShowIcon = False
         Me.Text = "RTF Editor"
-        Me.ToolStripContainer1.ContentPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.TopToolStripPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.TopToolStripPanel.PerformLayout()
-        Me.ToolStripContainer1.ResumeLayout(False)
-        Me.ToolStripContainer1.PerformLayout()
+        Me.MainToolStripContainer.ContentPanel.ResumeLayout(False)
+        Me.MainToolStripContainer.TopToolStripPanel.ResumeLayout(False)
+        Me.MainToolStripContainer.TopToolStripPanel.PerformLayout()
+        Me.MainToolStripContainer.ResumeLayout(False)
+        Me.MainToolStripContainer.PerformLayout()
         Me.MainToolStrip.ResumeLayout(False)
         Me.MainToolStrip.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents txtRTF As System.Windows.Forms.RichTextBox
-    Friend WithEvents ToolStripContainer1 As ToolStripContainer
+    Friend WithEvents RtfCodeTextBox As System.Windows.Forms.RichTextBox
+    Friend WithEvents MainToolStripContainer As ToolStripContainer
     Friend WithEvents MainToolStrip As ToolStrip
     Friend WithEvents UndoToolStripButton As ToolStripButton
     Friend WithEvents RedoToolStripButton As ToolStripButton

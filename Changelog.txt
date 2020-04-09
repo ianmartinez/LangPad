@@ -7,8 +7,9 @@ Version 10.1 (TBD)
    **• Pressing CTRL+S on character editor and dictionary now saves the notebook
    **• Add options to wrap selected text in brackets [] and // 
    **• Zoom in increments of 0.1
-   • Major code cleanup
+   • Major refactoring to have a more consistent naming scheme and remove old junk code
    • Bug Fix: Word count wouldn't update automatically when opening a new file
+   • Bug Fix: Pages with the same name couldn't be imported without changing the name
 
 ﻿Version 10.0 (April 8, 2020)
    • Full HiDPI support

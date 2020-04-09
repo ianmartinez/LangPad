@@ -10,16 +10,7 @@ End Class
 
 <Serializable()>
 Public Class NotebookFile
-    Private _Modified As Boolean = False
-
-    Public Property Modified As Boolean
-        Get
-            Return _Modified
-        End Get
-        Set(value As Boolean)
-            _Modified = value
-        End Set
-    End Property
+    Public Property Modified As Boolean = False
 
     Public DocumentPath As String = ""
     Public ProgramVersion As String = ProgramVersion
@@ -71,15 +62,14 @@ Module NotebookFileAccess
 
         DictionaryForm.SaveDictionary()
 
-        Dim guid As Guid = Guid.NewGuid
-        Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString
-        If Directory.Exists(tmp) Then
-            Directory.Delete(tmp, True)
+        Dim TempGuid As Guid = Guid.NewGuid
+        Dim TempPath As String = Application.LocalUserAppDataPath & "\zip-" & TempGuid.ToString
+        If Directory.Exists(TempPath) Then
+            Directory.Delete(TempPath, True)
         End If
 
-        Directory.CreateDirectory(tmp)
-
-        PagesFolder = tmp & "\pages\"
+        Directory.CreateDirectory(TempPath)
+        PagesFolder = TempPath & "\pages\"
         Directory.CreateDirectory(PagesFolder)
 
         Dim DataFile As New List(Of ZiaLine) From {
@@ -89,7 +79,7 @@ Module NotebookFileAccess
             New ZiaLine(LineType.KeyValue, "Author", Notebook.Author),
             New ZiaLine(LineType.KeyValue, "Website", Notebook.Website),
             New ZiaLine(LineType.KeyValue, "NTVersion", NTVersion),
-            New ZiaLine(LineType.KeyValue, "LangPadVersion", LangPadVersion),
+            New ZiaLine(LineType.KeyValue, "LangPadVersion", "Language Pad " & GetVersionString()),
             New ZiaLine(LineType.Blank),
             New ZiaLine(LineType.Comment, "Pages")
         }
@@ -98,37 +88,36 @@ Module NotebookFileAccess
             Dim Page = Notebook.Pages.Item(i)
             DataFile.Add(New ZiaLine(LineType.KeyValue, "Page" & i, ToCompatibleString(Page.Title)))
 
-            Dim txtWriter As StreamWriter
-            txtWriter = New StreamWriter(PagesFolder & i & ".rtf")
-            txtWriter.Write(Page.RTF)
-            txtWriter.Close()
+            Dim Writer As StreamWriter
+            Writer = New StreamWriter(PagesFolder & i & ".rtf")
+            Writer.Write(Page.RTF)
+            Writer.Close()
         Next
 
         'Write to disk
-        File.WriteAllText(tmp & "\data.txt", Write(DataFile))
-        File.WriteAllText(tmp & "\info.txt", Notebook.Info)
-        File.WriteAllText(tmp & "\custom_symbols.txt", Notebook.CustomSymbols)
-        Notebook.WordDictionary.Save(tmp & "\dictionary.txt")
+        File.WriteAllText(TempPath & "\data.txt", Write(DataFile))
+        File.WriteAllText(TempPath & "\info.txt", Notebook.Info)
+        File.WriteAllText(TempPath & "\custom_symbols.txt", Notebook.CustomSymbols)
+        Notebook.WordDictionary.Save(TempPath & "\dictionary.txt")
         Notebook.DocumentPath = FilePath
 
-        ZipFile.CreateFromDirectory(tmp, FilePath, CompressionLevel.Optimal, False)
+        ZipFile.CreateFromDirectory(TempPath, FilePath, CompressionLevel.Optimal, False)
     End Sub
 
     Public Function Open(ByVal FilePath As String) As NotebookFile
         Dim NewNotebook As New NotebookFile
-        Dim guid As Guid = Guid.NewGuid
-        Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString
+        Dim TempGuid As Guid = Guid.NewGuid
+        Dim TempPath As String = Application.LocalUserAppDataPath & "\zip-" & TempGuid.ToString
 
-        If (Directory.Exists(tmp)) Then
-            Directory.Delete(tmp, True)
+        If (Directory.Exists(TempPath)) Then
+            Directory.Delete(TempPath, True)
         End If
 
-        Directory.CreateDirectory(tmp)
+        Directory.CreateDirectory(TempPath)
+        ZipFile.ExtractToDirectory(FilePath, TempPath)
+        PagesFolder = TempPath & "\pages\"
 
-        ZipFile.ExtractToDirectory(FilePath, tmp)
-        PagesFolder = tmp & "\pages\"
-
-        Dim LineList = Read(File.ReadAllText(tmp & "\data.txt"))
+        Dim LineList = Read(File.ReadAllText(TempPath & "\data.txt"))
         NewNotebook.NTSpecificationVersion = Search(LineList, "NTVersion")
         Dim CompatMode As Boolean = (NewNotebook.NTSpecificationVersion < 2)
 
@@ -162,16 +151,16 @@ Module NotebookFileAccess
         NewNotebook.Author = Search(LineList, "Author")
         NewNotebook.Website = Search(LineList, "Website")
         NewNotebook.ProgramVersion = Search(LineList, "LangPadVersion")
-        NewNotebook.CustomSymbols = File.ReadAllText(tmp & "\custom_symbols.txt")
-        NewNotebook.Info = File.ReadAllText(tmp & "\info.txt")
-        NewNotebook.WordDictionary.Open(tmp & "\dictionary.txt")
+        NewNotebook.CustomSymbols = File.ReadAllText(TempPath & "\custom_symbols.txt")
+        NewNotebook.Info = File.ReadAllText(TempPath & "\info.txt")
+        NewNotebook.WordDictionary.Open(TempPath & "\dictionary.txt")
 
         If NewNotebook.CustomSymbols <> "" Then
-            CharEditor.charEdit.FilePanel.Controls.Clear()
+            CharEditor.CharEdit.FilePanel.Controls.Clear()
 
             Dim FileChars As String() = NewNotebook.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
             For Each FileChar As String In FileChars
-                CharEditor.charEdit.InsertCharacterButton(FileChar, CharEditor.charEdit.FilePanel)
+                CharEditor.CharEdit.InsertCharacterButton(FileChar, CharEditor.CharEdit.FilePanel)
             Next
         End If
 

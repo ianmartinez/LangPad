@@ -22,119 +22,119 @@ Partial Class SettingsDialog
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.cbUpdates = New System.Windows.Forms.CheckBox()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnOK = New System.Windows.Forms.Button()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.cbHidpi = New System.Windows.Forms.CheckBox()
-        Me.cbShowCharacterEditor = New System.Windows.Forms.CheckBox()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.UpdatesOnStartupCheck = New System.Windows.Forms.CheckBox()
+        Me.ButtonTableLayout = New System.Windows.Forms.TableLayoutPanel()
+        Me.OkDialogButton = New System.Windows.Forms.Button()
+        Me.CancelDialogButton = New System.Windows.Forms.Button()
+        Me.LargeIconsCheck = New System.Windows.Forms.CheckBox()
+        Me.ShowCharEditCheck = New System.Windows.Forms.CheckBox()
+        Me.ButtonTableLayout.SuspendLayout()
         Me.SuspendLayout()
         '
-        'cbUpdates
+        'UpdatesOnStartupCheck
         '
-        Me.cbUpdates.AutoSize = True
-        Me.cbUpdates.Checked = True
-        Me.cbUpdates.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbUpdates.Location = New System.Drawing.Point(46, 46)
-        Me.cbUpdates.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.cbUpdates.Name = "cbUpdates"
-        Me.cbUpdates.Size = New System.Drawing.Size(241, 24)
-        Me.cbUpdates.TabIndex = 8
-        Me.cbUpdates.Text = "Check for updates on startup"
-        Me.cbUpdates.UseVisualStyleBackColor = True
+        Me.UpdatesOnStartupCheck.AutoSize = True
+        Me.UpdatesOnStartupCheck.Checked = True
+        Me.UpdatesOnStartupCheck.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.UpdatesOnStartupCheck.Location = New System.Drawing.Point(46, 46)
+        Me.UpdatesOnStartupCheck.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.UpdatesOnStartupCheck.Name = "UpdatesOnStartupCheck"
+        Me.UpdatesOnStartupCheck.Size = New System.Drawing.Size(241, 24)
+        Me.UpdatesOnStartupCheck.TabIndex = 8
+        Me.UpdatesOnStartupCheck.Text = "Check for updates on startup"
+        Me.UpdatesOnStartupCheck.UseVisualStyleBackColor = True
         '
-        'TableLayoutPanel1
+        'ButtonTableLayout
         '
-        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.btnOK, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnCancel, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(135, 190)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(219, 45)
-        Me.TableLayoutPanel1.TabIndex = 75
+        Me.ButtonTableLayout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonTableLayout.ColumnCount = 2
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.Controls.Add(Me.OkDialogButton, 0, 0)
+        Me.ButtonTableLayout.Controls.Add(Me.CancelDialogButton, 1, 0)
+        Me.ButtonTableLayout.Location = New System.Drawing.Point(135, 190)
+        Me.ButtonTableLayout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ButtonTableLayout.Name = "ButtonTableLayout"
+        Me.ButtonTableLayout.RowCount = 1
+        Me.ButtonTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.ButtonTableLayout.Size = New System.Drawing.Size(219, 45)
+        Me.ButtonTableLayout.TabIndex = 75
         '
-        'btnOK
+        'OkDialogButton
         '
-        Me.btnOK.BackColor = System.Drawing.Color.Transparent
-        Me.btnOK.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnOK.Location = New System.Drawing.Point(3, 3)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(103, 39)
-        Me.btnOK.TabIndex = 1
-        Me.btnOK.Text = "OK"
-        Me.btnOK.UseVisualStyleBackColor = False
+        Me.OkDialogButton.BackColor = System.Drawing.Color.Transparent
+        Me.OkDialogButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.OkDialogButton.Location = New System.Drawing.Point(3, 3)
+        Me.OkDialogButton.Name = "OkDialogButton"
+        Me.OkDialogButton.Size = New System.Drawing.Size(103, 39)
+        Me.OkDialogButton.TabIndex = 1
+        Me.OkDialogButton.Text = "OK"
+        Me.OkDialogButton.UseVisualStyleBackColor = False
         '
-        'btnCancel
+        'CancelDialogButton
         '
-        Me.btnCancel.BackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCancel.Location = New System.Drawing.Point(112, 3)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(104, 39)
-        Me.btnCancel.TabIndex = 0
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = False
+        Me.CancelDialogButton.BackColor = System.Drawing.Color.Transparent
+        Me.CancelDialogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.CancelDialogButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CancelDialogButton.Location = New System.Drawing.Point(112, 3)
+        Me.CancelDialogButton.Name = "CancelDialogButton"
+        Me.CancelDialogButton.Size = New System.Drawing.Size(104, 39)
+        Me.CancelDialogButton.TabIndex = 0
+        Me.CancelDialogButton.Text = "Cancel"
+        Me.CancelDialogButton.UseVisualStyleBackColor = False
         '
-        'cbHidpi
+        'LargeIconsCheck
         '
-        Me.cbHidpi.AutoSize = True
-        Me.cbHidpi.Location = New System.Drawing.Point(46, 114)
-        Me.cbHidpi.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.cbHidpi.Name = "cbHidpi"
-        Me.cbHidpi.Size = New System.Drawing.Size(200, 24)
-        Me.cbHidpi.TabIndex = 76
-        Me.cbHidpi.Text = "Use large icons (HiDPI)"
-        Me.cbHidpi.UseVisualStyleBackColor = True
+        Me.LargeIconsCheck.AutoSize = True
+        Me.LargeIconsCheck.Location = New System.Drawing.Point(46, 114)
+        Me.LargeIconsCheck.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.LargeIconsCheck.Name = "LargeIconsCheck"
+        Me.LargeIconsCheck.Size = New System.Drawing.Size(200, 24)
+        Me.LargeIconsCheck.TabIndex = 76
+        Me.LargeIconsCheck.Text = "Use large icons (HiDPI)"
+        Me.LargeIconsCheck.UseVisualStyleBackColor = True
         '
-        'cbShowCharacterEditor
+        'ShowCharEditCheck
         '
-        Me.cbShowCharacterEditor.AutoSize = True
-        Me.cbShowCharacterEditor.Checked = True
-        Me.cbShowCharacterEditor.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cbShowCharacterEditor.Location = New System.Drawing.Point(46, 80)
-        Me.cbShowCharacterEditor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.cbShowCharacterEditor.Name = "cbShowCharacterEditor"
-        Me.cbShowCharacterEditor.Size = New System.Drawing.Size(266, 24)
-        Me.cbShowCharacterEditor.TabIndex = 77
-        Me.cbShowCharacterEditor.Text = "Show character editor on startup"
-        Me.cbShowCharacterEditor.UseVisualStyleBackColor = True
+        Me.ShowCharEditCheck.AutoSize = True
+        Me.ShowCharEditCheck.Checked = True
+        Me.ShowCharEditCheck.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ShowCharEditCheck.Location = New System.Drawing.Point(46, 80)
+        Me.ShowCharEditCheck.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ShowCharEditCheck.Name = "ShowCharEditCheck"
+        Me.ShowCharEditCheck.Size = New System.Drawing.Size(266, 24)
+        Me.ShowCharEditCheck.TabIndex = 77
+        Me.ShowCharEditCheck.Text = "Show character editor on startup"
+        Me.ShowCharEditCheck.UseVisualStyleBackColor = True
         '
-        'dlgSettings
+        'SettingsDialog
         '
-        Me.AcceptButton = Me.btnOK
+        Me.AcceptButton = Me.OkDialogButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.btnCancel
+        Me.CancelButton = Me.CancelDialogButton
         Me.ClientSize = New System.Drawing.Size(365, 247)
-        Me.Controls.Add(Me.cbShowCharacterEditor)
-        Me.Controls.Add(Me.cbHidpi)
-        Me.Controls.Add(Me.cbUpdates)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.ShowCharEditCheck)
+        Me.Controls.Add(Me.LargeIconsCheck)
+        Me.Controls.Add(Me.UpdatesOnStartupCheck)
+        Me.Controls.Add(Me.ButtonTableLayout)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "dlgSettings"
+        Me.Name = "SettingsDialog"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Settings"
-        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.ButtonTableLayout.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents cbUpdates As CheckBox
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents btnOK As Button
-    Friend WithEvents btnCancel As Button
-    Friend WithEvents cbHidpi As CheckBox
-    Friend WithEvents cbShowCharacterEditor As CheckBox
+    Friend WithEvents UpdatesOnStartupCheck As CheckBox
+    Friend WithEvents ButtonTableLayout As TableLayoutPanel
+    Friend WithEvents OkDialogButton As Button
+    Friend WithEvents CancelDialogButton As Button
+    Friend WithEvents LargeIconsCheck As CheckBox
+    Friend WithEvents ShowCharEditCheck As CheckBox
 End Class

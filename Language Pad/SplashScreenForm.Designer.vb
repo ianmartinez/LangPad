@@ -23,93 +23,93 @@ Partial Class SplashScreenForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SplashScreenForm))
-        Me.pbLoading = New System.Windows.Forms.ProgressBar()
-        Me.lblVersion = New System.Windows.Forms.Label()
-        Me.lblLanguagePad = New System.Windows.Forms.Label()
-        Me.lblLoading = New System.Windows.Forms.Label()
-        Me.pnlTop = New TundraLib.DoubleBufferedPanel()
-        Me.pnlTop.SuspendLayout
+        Me.LoadingProgressBar = New System.Windows.Forms.ProgressBar()
+        Me.VersionLabel = New System.Windows.Forms.Label()
+        Me.LanguagePadLabel = New System.Windows.Forms.Label()
+        Me.LoadingLabel = New System.Windows.Forms.Label()
+        Me.TopPanel = New TundraLib.DoubleBufferedPanel()
+        Me.TopPanel.SuspendLayout
         Me.SuspendLayout
         '
-        'pbLoading
+        'LoadingProgressBar
         '
-        Me.pbLoading.Location = New System.Drawing.Point(9, 236)
-        Me.pbLoading.Name = "pbLoading"
-        Me.pbLoading.Size = New System.Drawing.Size(601, 32)
-        Me.pbLoading.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.pbLoading.TabIndex = 81
+        Me.LoadingProgressBar.Location = New System.Drawing.Point(9, 236)
+        Me.LoadingProgressBar.Name = "LoadingProgressBar"
+        Me.LoadingProgressBar.Size = New System.Drawing.Size(601, 32)
+        Me.LoadingProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.LoadingProgressBar.TabIndex = 81
         '
-        'lblVersion
+        'VersionLabel
         '
-        Me.lblVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblVersion.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.lblVersion.ForeColor = System.Drawing.Color.White
-        Me.lblVersion.Location = New System.Drawing.Point(0, 138)
-        Me.lblVersion.Margin = New System.Windows.Forms.Padding(3)
-        Me.lblVersion.Name = "lblVersion"
-        Me.lblVersion.Size = New System.Drawing.Size(622, 52)
-        Me.lblVersion.TabIndex = 74
-        Me.lblVersion.Text = "Version 1.0"
-        Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.VersionLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.VersionLabel.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.VersionLabel.ForeColor = System.Drawing.Color.White
+        Me.VersionLabel.Location = New System.Drawing.Point(0, 138)
+        Me.VersionLabel.Margin = New System.Windows.Forms.Padding(3)
+        Me.VersionLabel.Name = "VersionLabel"
+        Me.VersionLabel.Size = New System.Drawing.Size(622, 52)
+        Me.VersionLabel.TabIndex = 74
+        Me.VersionLabel.Text = "Version 1.0"
+        Me.VersionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblLanguagePad
+        'LanguagePadLabel
         '
-        Me.lblLanguagePad.BackColor = System.Drawing.Color.Transparent
-        Me.lblLanguagePad.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblLanguagePad.Font = New System.Drawing.Font("Tahoma", 22.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLanguagePad.ForeColor = System.Drawing.Color.White
-        Me.lblLanguagePad.Location = New System.Drawing.Point(0, 0)
-        Me.lblLanguagePad.Name = "lblLanguagePad"
-        Me.lblLanguagePad.Size = New System.Drawing.Size(622, 138)
-        Me.lblLanguagePad.TabIndex = 12
-        Me.lblLanguagePad.Text = "Language Pad"
-        Me.lblLanguagePad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LanguagePadLabel.BackColor = System.Drawing.Color.Transparent
+        Me.LanguagePadLabel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LanguagePadLabel.Font = New System.Drawing.Font("Tahoma", 22.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LanguagePadLabel.ForeColor = System.Drawing.Color.White
+        Me.LanguagePadLabel.Location = New System.Drawing.Point(0, 0)
+        Me.LanguagePadLabel.Name = "LanguagePadLabel"
+        Me.LanguagePadLabel.Size = New System.Drawing.Size(622, 138)
+        Me.LanguagePadLabel.TabIndex = 12
+        Me.LanguagePadLabel.Text = "Language Pad"
+        Me.LanguagePadLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblLoading
+        'LoadingLabel
         '
-        Me.lblLoading.AutoSize = True
-        Me.lblLoading.Location = New System.Drawing.Point(12, 206)
-        Me.lblLoading.Name = "lblLoading"
-        Me.lblLoading.Size = New System.Drawing.Size(78, 20)
-        Me.lblLoading.TabIndex = 82
-        Me.lblLoading.Text = "Loading..."
+        Me.LoadingLabel.AutoSize = True
+        Me.LoadingLabel.Location = New System.Drawing.Point(12, 206)
+        Me.LoadingLabel.Name = "LoadingLabel"
+        Me.LoadingLabel.Size = New System.Drawing.Size(78, 20)
+        Me.LoadingLabel.TabIndex = 82
+        Me.LoadingLabel.Text = "Loading..."
         '
-        'pnlTop
+        'TopPanel
         '
-        Me.pnlTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.pnlTop.BackgroundImage = CType(resources.GetObject("pnlTop.BackgroundImage"), System.Drawing.Image)
-        Me.pnlTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pnlTop.Controls.Add(Me.lblLanguagePad)
-        Me.pnlTop.Controls.Add(Me.lblVersion)
-        Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlTop.Location = New System.Drawing.Point(0, 0)
-        Me.pnlTop.Margin = New System.Windows.Forms.Padding(9)
-        Me.pnlTop.Name = "pnlTop"
-        Me.pnlTop.Size = New System.Drawing.Size(622, 190)
-        Me.pnlTop.TabIndex = 83
+        Me.TopPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TopPanel.BackgroundImage = CType(resources.GetObject("TopPanel.BackgroundImage"), System.Drawing.Image)
+        Me.TopPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TopPanel.Controls.Add(Me.LanguagePadLabel)
+        Me.TopPanel.Controls.Add(Me.VersionLabel)
+        Me.TopPanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TopPanel.Location = New System.Drawing.Point(0, 0)
+        Me.TopPanel.Margin = New System.Windows.Forms.Padding(9)
+        Me.TopPanel.Name = "TopPanel"
+        Me.TopPanel.Size = New System.Drawing.Size(622, 190)
+        Me.TopPanel.TabIndex = 83
         '
-        'ssLoading
+        'SplashScreenForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(622, 284)
-        Me.Controls.Add(Me.pnlTop)
-        Me.Controls.Add(Me.lblLoading)
-        Me.Controls.Add(Me.pbLoading)
+        Me.Controls.Add(Me.TopPanel)
+        Me.Controls.Add(Me.LoadingLabel)
+        Me.Controls.Add(Me.LoadingProgressBar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "ssLoading"
+        Me.Name = "SplashScreenForm"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.pnlTop.ResumeLayout(False)
+        Me.TopPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents pbLoading As ProgressBar
-    Friend WithEvents lblVersion As Label
-    Friend WithEvents lblLanguagePad As Label
-    Friend WithEvents lblLoading As Label
-    Friend WithEvents pnlTop As TundraLib.DoubleBufferedPanel
+    Friend WithEvents LoadingProgressBar As ProgressBar
+    Friend WithEvents VersionLabel As Label
+    Friend WithEvents LanguagePadLabel As Label
+    Friend WithEvents LoadingLabel As Label
+    Friend WithEvents TopPanel As TundraLib.DoubleBufferedPanel
 End Class

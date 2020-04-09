@@ -1,7 +1,9 @@
 ﻿Public Class CharacterButton
     Inherits Button
-    Private components As System.ComponentModel.IContainer
-    Private ttIPa As New IPAToolTip
+
+    Private ReadOnly components As System.ComponentModel.IContainer
+    Private ReadOnly CharButtonTooltip As New IPAToolTip()
+
     Public Sub New(Optional CharName = "", Optional MultiLine = True)
         Dim IPAFont = New Font("Calibri", 11, FontStyle.Bold)
         Dim IPAPadding = New Padding(0)
@@ -15,11 +17,11 @@
         Margin = IPAMargin
         AutoSizeMode = AutoSizeMode.GrowAndShrink
         UseCompatibleTextRendering = True
-        ttIPa.CharName = If(MultiLine, CharName.Replace("/", vbCrLf), CharName)
+        CharButtonTooltip.CharName = If(MultiLine, CharName.Replace("/", vbCrLf), CharName)
     End Sub
 
     Private Sub SymbolButton_TextChanged(sender As Object, e As EventArgs) Handles Me.TextChanged
-        ttIPa.SetToolTip(Me, Text)
+        CharButtonTooltip.SetToolTip(Me, Text)
     End Sub
 
     Private Sub InitializeComponent()
@@ -30,13 +32,17 @@ End Class
 
 Public Class IPAToolTip
     Inherits ToolTip
+
     Public CharName As String = ""
+    Private ReadOnly CharNameFont = New Font("Calibri", 12, FontStyle.Regular)
+    Private ReadOnly TextFont = New Font("Calibri", 42, FontStyle.Bold)
 
     Sub New()
         MyBase.New()
         OwnerDraw = True
         AddHandler Draw, AddressOf OnDraw
     End Sub
+
     Public Sub New(ByVal Cont As System.ComponentModel.IContainer)
         MyBase.New(Cont)
         OwnerDraw = True
@@ -48,8 +54,6 @@ Public Class IPAToolTip
         AddHandler Draw, AddressOf OnDraw
     End Sub
 
-    Private CharNameFont = New Font("Calibri", 12, FontStyle.Regular)
-    Private TextFont = New Font("Calibri", 42, FontStyle.Bold)
     Private Sub IPAToolTip_Popup(sender As Object, e As PopupEventArgs) Handles Me.Popup
         Dim CharacterTextSize As Size = TextRenderer.MeasureText(GetToolTip(e.AssociatedControl), TextFont)
         Dim NameTextSize As Size = TextRenderer.MeasureText(CharName, CharNameFont)
@@ -89,7 +93,8 @@ End Class
 
 Public Class AccentCheckButton
     Inherits CheckBox
-    Private ttIPa As New IPAToolTip
+
+    Private ReadOnly CharButtonTooltip As New IPAToolTip()
 
     Public Sub New(Optional CharName = "", Optional MultiLine = True)
         Dim IPAFont = New Font("Calibri", 14, FontStyle.Regular)
@@ -105,7 +110,7 @@ Public Class AccentCheckButton
         Appearance = Appearance.Button
         TextAlign = ContentAlignment.MiddleCenter
         UseCompatibleTextRendering = True
-        ttIPa.CharName = If(MultiLine, CharName.Replace("/", vbCrLf), CharName)
+        CharButtonTooltip.CharName = If(MultiLine, CharName.Replace("/", vbCrLf), CharName)
     End Sub
 
     Private Sub InitializeComponent()
@@ -114,6 +119,6 @@ Public Class AccentCheckButton
     End Sub
 
     Private Sub SymbolButton_TextChanged(sender As Object, e As EventArgs) Handles Me.TextChanged
-        ttIPa.SetToolTip(Me, Text)
+        CharButtonTooltip.SetToolTip(Me, Text)
     End Sub
 End Class

@@ -46,7 +46,7 @@ Module DictionaryFileAccess
     Sub Save(ByVal FilePath As String, ByVal Dictionary As DictionaryFile)
         Dim DictionaryString As New List(Of ZiaLine) From {
             New ZiaLine(LineType.Comment, "Dictionary"),
-            New ZiaLine(LineType.Comment, "Language Pad Version:" & LangPadVersion)
+            New ZiaLine(LineType.Comment, "Language Pad Version:" & "Language Pad " & GetVersionString())
         }
 
         For i = 0 To Dictionary.Words.Count - 1

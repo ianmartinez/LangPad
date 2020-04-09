@@ -11,80 +11,86 @@ Public Class DictionaryForm
     Public Color2 As Color
     Public VerticalMenuGradient As Boolean = False
 
+    Private Sub DictionaryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SetIcons()
+        LoadDictionary()
+        SetDisplayFont()
+        Loaded = True
+    End Sub
+
     Public Sub SetTheme(Theme As Theme)
         Color1 = Theme.PanelBack
         Color2 = Theme.PanelBack
         VerticalMenuGradient = Theme.VerticalMenuGradient
         BackColor = Theme.PanelBack
-        dgvDictionary.BackgroundColor = Theme.PanelBack
+        DictionaryGrid.BackgroundColor = Theme.PanelBack
 
         MainToolStrip.Renderer = Theme.GetToolStripRenderer()
 
         ' Center buttons relative to text boxes
         ' Because Windows' scaling throws them off
-        btnFind.Top = txtFind.Top - (btnFind.Height / 2 - txtFind.Height / 2)
+        FindButton.Top = FindTextBox.Top - (FindButton.Height / 2 - FindTextBox.Height / 2)
 
         Refresh()
     End Sub
 
     Public Sub SetIcons()
-        Dim res As IconResolution = GetIconResolution()
+        Dim Res As IconResolution = GetIconResolution()
 
-        NewToolStripButton.Image = IconManager.Get("document-new", IconSize.Large, res)
-        OpenToolStripButton.Image = IconManager.Get("document-open", IconSize.Large, res)
-        SaveToolStripButton.Image = IconManager.Get("document-save", IconSize.Large, res)
-        ExportHtmlToolStripButton.Image = IconManager.Get("filetype-html", IconSize.Large, res)
-        CharacterEditorToolStripButton.Image = IconManager.Get("language", IconSize.Large, res)
-        AddToolStripButton.Image = IconManager.Get("list-add", IconSize.Large, res)
-        RemoveToolStripButton.Image = IconManager.Get("list-remove", IconSize.Large, res)
-        FontToolStripButton.Image = IconManager.Get("font", IconSize.Large, res)
-        ResetFontToolStripButton.Image = IconManager.Get("restart", IconSize.Large, res)
-        FindToolStripButton.Image = IconManager.Get("edit-find", IconSize.Large, res)
+        NewToolStripButton.Image = IconManager.Get("document-new", IconSize.Large, Res)
+        OpenToolStripButton.Image = IconManager.Get("document-open", IconSize.Large, Res)
+        SaveToolStripButton.Image = IconManager.Get("document-save", IconSize.Large, Res)
+        ExportHtmlToolStripButton.Image = IconManager.Get("filetype-html", IconSize.Large, Res)
+        CharacterEditorToolStripButton.Image = IconManager.Get("language", IconSize.Large, Res)
+        AddToolStripButton.Image = IconManager.Get("list-add", IconSize.Large, Res)
+        RemoveToolStripButton.Image = IconManager.Get("list-remove", IconSize.Large, Res)
+        FontToolStripButton.Image = IconManager.Get("font", IconSize.Large, Res)
+        ResetFontToolStripButton.Image = IconManager.Get("restart", IconSize.Large, Res)
+        FindToolStripButton.Image = IconManager.Get("edit-find", IconSize.Large, Res)
     End Sub
 
-    Private Sub ToolStripContainer1_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles ToolStripContainer1.TopToolStripPanel.Paint,
-        ToolStripContainer1.BottomToolStripPanel.Paint, ToolStripContainer1.LeftToolStripPanel.Paint, ToolStripContainer1.RightToolStripPanel.Paint
-        Dim g As Graphics = e.Graphics
-        Dim rect As New Rectangle(0, 0, ToolStripContainer1.Width, Height)
-        Dim b As New LinearGradientBrush(rect, Color1, Color2, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
-        g.FillRectangle(b, rect)
+    Private Sub MainToolStripContainer_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles MainToolStripContainer.TopToolStripPanel.Paint,
+        MainToolStripContainer.BottomToolStripPanel.Paint, MainToolStripContainer.LeftToolStripPanel.Paint, MainToolStripContainer.RightToolStripPanel.Paint
+        Dim Rect As New Rectangle(0, 0, MainToolStripContainer.Width, Height)
+        Dim FillBrush As New LinearGradientBrush(Rect, Color1, Color2, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
+        e.Graphics.FillRectangle(FillBrush, Rect)
     End Sub
 
-    Private Sub ToolStripContainer1_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ToolStripContainer1.TopToolStripPanel.SizeChanged,
-        ToolStripContainer1.BottomToolStripPanel.SizeChanged, ToolStripContainer1.LeftToolStripPanel.SizeChanged, ToolStripContainer1.RightToolStripPanel.SizeChanged
-        ToolStripContainer1.Invalidate()
+    Private Sub MainToolStripContainer_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles MainToolStripContainer.TopToolStripPanel.SizeChanged,
+        MainToolStripContainer.BottomToolStripPanel.SizeChanged, MainToolStripContainer.LeftToolStripPanel.SizeChanged, MainToolStripContainer.RightToolStripPanel.SizeChanged
+        MainToolStripContainer.Invalidate()
     End Sub
 
     Public Sub SetDisplayFont()
-        dgvDictionary.DefaultCellStyle.Font = My.Settings.DictionaryFont
-        dgvDictionary.DefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
+        DictionaryGrid.DefaultCellStyle.Font = My.Settings.DictionaryFont
+        DictionaryGrid.DefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
     End Sub
 
     Public Sub LoadDictionary()
-        dgvDictionary.Rows.Clear()
-        Dim words = CurrentDocument.WordDictionary.Words
-        For Each w As DictionaryWord In CurrentDocument.WordDictionary.Words
-            Dim r As New DataGridViewRow
-            r.CreateCells(dgvDictionary)
-            r.Cells.Item(0).Value = w.Word
-            r.Cells.Item(1).Value = w.Pronunciation
-            r.Cells.Item(2).Value = w.Definition
-            r.Cells.Item(3).Value = w.Notes
+        DictionaryGrid.Rows.Clear()
+        Dim Words = CurrentDocument.WordDictionary.Words
+        For Each Word As DictionaryWord In CurrentDocument.WordDictionary.Words
+            Dim Row As New DataGridViewRow
+            Row.CreateCells(DictionaryGrid)
+            Row.Cells.Item(0).Value = Word.Word
+            Row.Cells.Item(1).Value = Word.Pronunciation
+            Row.Cells.Item(2).Value = Word.Definition
+            Row.Cells.Item(3).Value = Word.Notes
 
-            dgvDictionary.Rows.Add(r)
+            DictionaryGrid.Rows.Add(Row)
         Next
 
-        dgvDictionary.Refresh()
+        DictionaryGrid.Refresh()
     End Sub
 
     Public Sub SaveDictionary()
         CurrentDocument.WordDictionary.Words.Clear()
-        For i = 0 To dgvDictionary.RowCount - 1
+        For i = 0 To DictionaryGrid.RowCount - 1
             Dim NewWord As New DictionaryWord With {
-                .Word = dgvDictionary.Rows.Item(i).Cells.Item(0).Value,
-                .Pronunciation = dgvDictionary.Rows.Item(i).Cells.Item(1).Value,
-                .Definition = dgvDictionary.Rows.Item(i).Cells.Item(2).Value,
-                .Notes = dgvDictionary.Rows.Item(i).Cells.Item(3).Value
+                .Word = DictionaryGrid.Rows.Item(i).Cells.Item(0).Value,
+                .Pronunciation = DictionaryGrid.Rows.Item(i).Cells.Item(1).Value,
+                .Definition = DictionaryGrid.Rows.Item(i).Cells.Item(2).Value,
+                .Notes = DictionaryGrid.Rows.Item(i).Cells.Item(3).Value
             }
 
             If NewWord.Word = Nothing Then NewWord.Word = ""
@@ -96,43 +102,36 @@ Public Class DictionaryForm
         Next
     End Sub
 
-    Private Sub frmDictionary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SetIcons()
-        LoadDictionary()
-        SetDisplayFont()
-        Loaded = True
-    End Sub
-
-    Private Sub dgvDictionary_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles dgvDictionary.EditingControlShowing
+    Private Sub DictionaryGrid_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles DictionaryGrid.EditingControlShowing
         CurrentTextbox = e.Control
     End Sub
 
-    Private Sub dgvDictionary_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles dgvDictionary.RowPostPaint
-        Dim grid As DataGridView = CType(sender, DataGridView)
-        Dim rowIdx As String = (e.RowIndex + 1).ToString()
-        Dim rowFont As Font = Font
+    Private Sub DictionaryGrid_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles DictionaryGrid.RowPostPaint
+        Dim Grid As DataGridView = CType(sender, DataGridView)
+        Dim RowIndex As String = (e.RowIndex + 1).ToString()
+        Dim RowFont As Font = Font
 
-        Dim centerFormat = New StringFormat With {
+        Dim CenterFormat = New StringFormat With {
             .Alignment = StringAlignment.Center,
             .LineAlignment = StringAlignment.Center
         }
 
-        Dim headerBounds As Rectangle = New Rectangle(e.RowBounds.Left, e.RowBounds.Top, grid.RowHeadersWidth, e.RowBounds.Height)
-        e.Graphics.DrawString(rowIdx, rowFont, SystemBrushes.ControlText, headerBounds, centerFormat)
+        Dim headerBounds As Rectangle = New Rectangle(e.RowBounds.Left, e.RowBounds.Top, Grid.RowHeadersWidth, e.RowBounds.Height)
+        e.Graphics.DrawString(RowIndex, RowFont, SystemBrushes.ControlText, headerBounds, CenterFormat)
     End Sub
 
     Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
         If MessageBox.Show("This cannot be undone. Are you sure you want to continue? ", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes Then
-            dgvDictionary.Rows.Clear()
+            DictionaryGrid.Rows.Clear()
         End If
     End Sub
 
     Private Sub OpenToolStripButton_Click(sender As Object, e As EventArgs) Handles OpenToolStripButton.Click
-        If dlgOpen.ShowDialog = DialogResult.OK Then
-            If Path.GetExtension(dlgOpen.FileName).ToLower() = ".csv" Then
-                CurrentDocument.WordDictionary.OpenCSV(dlgOpen.FileName)
+        If OpenDialog.ShowDialog = DialogResult.OK Then
+            If Path.GetExtension(OpenDialog.FileName).ToLower() = ".csv" Then
+                CurrentDocument.WordDictionary.OpenCSV(OpenDialog.FileName)
             Else
-                CurrentDocument.WordDictionary.Open(dlgOpen.FileName)
+                CurrentDocument.WordDictionary.Open(OpenDialog.FileName)
             End If
 
             LoadDictionary()
@@ -141,105 +140,108 @@ Public Class DictionaryForm
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
         SaveDictionary()
-        If dlgSave.ShowDialog = DialogResult.OK Then
-            If Path.GetExtension(dlgSave.FileName).ToLower() = ".csv" Then
-                Dim cols As Integer
-                Dim wr As New StreamWriter(New FileStream(dlgSave.FileName, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
-                cols = dgvDictionary.Columns.Count
-                For i As Integer = 0 To cols - 1
-                    wr.Write(dgvDictionary.Columns(i).Name.ToString().ToUpper() + ",")
+        If SaveDialog.ShowDialog = DialogResult.OK Then
+            If Path.GetExtension(SaveDialog.FileName).ToLower() = ".csv" Then
+                Dim Writer As New StreamWriter(New FileStream(SaveDialog.FileName, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
+                Dim ColCount As Integer = DictionaryGrid.Columns.Count
+
+                For i As Integer = 0 To ColCount - 1
+                    Writer.Write(DictionaryGrid.Columns(i).Name.ToString().ToUpper() + ",")
                 Next
-                wr.WriteLine()
+                Writer.WriteLine()
 
                 ' Write rows to CSV
-                For i As Integer = 0 To dgvDictionary.Rows.Count - 1
-                    For j As Integer = 0 To cols - 1
-                        If dgvDictionary.Rows(i).Cells(j).Value IsNot Nothing Then
-                            wr.Write(dgvDictionary.Rows(i).Cells(j).Value + ",")
+                For i As Integer = 0 To DictionaryGrid.Rows.Count - 1
+                    For j As Integer = 0 To ColCount - 1
+                        If DictionaryGrid.Rows(i).Cells(j).Value IsNot Nothing Then
+                            Writer.Write(DictionaryGrid.Rows(i).Cells(j).Value + ",")
                         Else
-                            wr.Write(",")
+                            Writer.Write(",")
                         End If
                     Next
 
-                    wr.WriteLine()
+                    Writer.WriteLine()
                 Next
-                wr.Close()
+                Writer.Close()
             Else
-                CurrentDocument.WordDictionary.Save(dlgSave.FileName)
+                CurrentDocument.WordDictionary.Save(SaveDialog.FileName)
             End If
         End If
     End Sub
 
     Private Sub AddToolStripButton_Click(sender As Object, e As EventArgs) Handles AddToolStripButton.Click
-        dgvDictionary.Rows.Add(1)
+        DictionaryGrid.Rows.Add(1)
         CurrentDocument.Modified = True
     End Sub
 
     Private Sub RemoveToolStripButton_Click(sender As Object, e As EventArgs) Handles RemoveToolStripButton.Click
-        If dgvDictionary.CurrentCell IsNot Nothing Then
-            dgvDictionary.Rows.RemoveAt(dgvDictionary.CurrentCell.RowIndex)
+        If DictionaryGrid.CurrentCell IsNot Nothing Then
+            DictionaryGrid.Rows.RemoveAt(DictionaryGrid.CurrentCell.RowIndex)
             CurrentDocument.Modified = True
         End If
     End Sub
 
     Private Sub FontToolStripButton_Click(sender As Object, e As EventArgs) Handles FontToolStripButton.Click
-        dlgFont.Color = dgvDictionary.DefaultCellStyle.ForeColor
-        dlgFont.Font = dgvDictionary.DefaultCellStyle.Font
-        If dlgFont.ShowDialog = DialogResult.OK Then
-            My.Settings.DictionaryFont = dlgFont.Font
-            My.Settings.DictionaryFontColor = dlgFont.Color
+        FontPicker.Color = DictionaryGrid.DefaultCellStyle.ForeColor
+        FontPicker.Font = DictionaryGrid.DefaultCellStyle.Font
+
+        If FontPicker.ShowDialog = DialogResult.OK Then
+            My.Settings.DictionaryFont = FontPicker.Font
+            My.Settings.DictionaryFontColor = FontPicker.Color
             My.Settings.Save()
             SetDisplayFont()
         End If
     End Sub
 
-    Private Sub frmDictionary_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+    Private Sub DictionaryForm_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
         LoadDictionary()
     End Sub
 
-    Private Sub dgvDictionary_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDictionary.CellEndEdit
+    Private Sub DictionaryGrid_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles DictionaryGrid.CellEndEdit
         SaveDictionary()
         CurrentDocument.Modified = True
     End Sub
 
     Private Sub ExportHtmlToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportHtmlToolStripButton.Click
         SaveDictionary()
-        If dlgSaveHtml.ShowDialog = DialogResult.OK Then
-            ExportHTMLDialog.FilePath = dlgSaveHtml.FileName
-            ExportHTMLDialog.ShowDialog()
+        If SaveHtmlDialog.ShowDialog = DialogResult.OK Then
+            ExportHtmlDialog.FilePath = SaveHtmlDialog.FileName
+            ExportHtmlDialog.ShowDialog()
         End If
     End Sub
 
     Private Sub FindToolStripButton_Click(sender As Object, e As EventArgs) Handles FindToolStripButton.Click
-        pnlFindReplace.Visible = pnlFindReplace.Visible Xor True
-        If pnlFindReplace.Visible = True Then txtFind.Focus()
+        FindReplaceDialog.Visible = FindReplaceDialog.Visible Xor True
+        If FindReplaceDialog.Visible = True Then FindTextBox.Focus()
     End Sub
 
-    Private Sub btnFind_Click(sender As Object, e As EventArgs) Handles btnFind.Click
+    Private Sub FindButton_Click(sender As Object, e As EventArgs) Handles FindButton.Click
         SaveDictionary()
-        dgvDictionary.ClearSelection()
+        DictionaryGrid.ClearSelection()
 
-        Dim matches As Boolean
-        Dim selectedPosition As Integer = 0
+        Dim Matches As Boolean
+        Dim CurrentPos As Integer = 0
+        Dim NormalizedFindText As String = FindTextBox.Text.ToLower()
 
-        If rbWord.Checked Then
-            For Each w As DictionaryWord In CurrentDocument.WordDictionary.Words
-                matches = If(cbStartsWith.Checked, w.Word.ToLower().StartsWith(txtFind.Text.ToLower()), w.Word.ToLower().Equals(txtFind.Text.ToLower()))
-                If matches Then Exit For
-                selectedPosition += 1
+        If WordRadio.Checked Then
+            For Each Word As DictionaryWord In CurrentDocument.WordDictionary.Words
+                Matches = If(StartsWithCheck.Checked, Word.Word.ToLower().StartsWith(NormalizedFindText), Word.Word.ToLower().Equals(NormalizedFindText))
+                If Matches Then Exit For
+                CurrentPos += 1
             Next
         Else
-            For Each w As DictionaryWord In CurrentDocument.WordDictionary.Words
-                matches = If(cbStartsWith.Checked, w.Definition.ToLower().StartsWith(txtFind.Text.ToLower()), w.Definition.ToLower().Equals(txtFind.Text.ToLower()))
-                If matches Then Exit For
-                selectedPosition += 1
+            For Each Word As DictionaryWord In CurrentDocument.WordDictionary.Words
+                Matches = If(StartsWithCheck.Checked, Word.Definition.ToLower().StartsWith(NormalizedFindText), Word.Definition.ToLower().Equals(NormalizedFindText))
+                If Matches Then Exit For
+                CurrentPos += 1
             Next
         End If
-        If matches Then
-            dgvDictionary.Rows(selectedPosition).Selected = True
-            dgvDictionary.FirstDisplayedScrollingRowIndex = dgvDictionary.SelectedRows(0).Index
+
+        If Matches Then
+            DictionaryGrid.Rows(CurrentPos).Selected = True
+            DictionaryGrid.FirstDisplayedScrollingRowIndex = DictionaryGrid.SelectedRows(0).Index
         Else
-            MessageBox.Show("""" + txtFind.Text + """ was not found " + "")
+            MessageBox.Show("""" + FindTextBox.Text + """ was not found " + "")
         End If
     End Sub
 
@@ -247,16 +249,16 @@ Public Class DictionaryForm
         CharEditor.Show()
     End Sub
 
-    Private Sub frmDictionary_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+    Private Sub DictionaryForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         CharEditor.TargetForm = Me
         CharEditor.GetCurrentTexbox = Function()
-                                        If dgvDictionary.CurrentCell IsNot Nothing Then
-                                            dgvDictionary.Focus()
-                                            dgvDictionary.BeginEdit(False)
-                                        End If
+                                          If DictionaryGrid.CurrentCell IsNot Nothing Then
+                                              DictionaryGrid.Focus()
+                                              DictionaryGrid.BeginEdit(False)
+                                          End If
 
-                                        Return CurrentTextbox
-                                    End Function
+                                          Return CurrentTextbox
+                                      End Function
     End Sub
 
     Private Sub ResetFontToolStripButton_Click(sender As Object, e As EventArgs) Handles ResetFontToolStripButton.Click
@@ -266,7 +268,7 @@ Public Class DictionaryForm
         SetDisplayFont()
     End Sub
 
-    Private Sub frmDictionary_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub DictionaryForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         e.Cancel = True
         If MainForm IsNot Nothing Then
             CharEditor.TargetForm = MainForm

@@ -1,5 +1,12 @@
 ﻿Public Class CharacterEditorToolWindow
     Private _GetCurrentTexbox As Func(Of TextBoxBase)
+
+    Private Sub CharacterEditorToolWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CharEdit.GetCurrentTexbox = GetCurrentTexbox()
+        MinimumSize = New Size(CharEdit.MinimumSize.Width + 10, CharEdit.MinimumSize.Height + 10)
+        SetIcons()
+    End Sub
+
     Public Property GetCurrentTexbox As Func(Of TextBoxBase)
         Get
             Return _GetCurrentTexbox
@@ -11,7 +18,7 @@
                                     Return value()
                                 End Function
 
-            charEdit.GetCurrentTexbox = _GetCurrentTexbox
+            CharEdit.GetCurrentTexbox = _GetCurrentTexbox
         End Set
     End Property
 
@@ -26,13 +33,7 @@
     End Property
 
     Public Sub SetIcons()
-        charEdit.SetIcons()
-    End Sub
-
-    Private Sub CharacterEditorToolWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        charEdit.GetCurrentTexbox = GetCurrentTexbox()
-        MinimumSize = New Size(charEdit.MinimumSize.Width + 10, charEdit.MinimumSize.Height + 10)
-        SetIcons()
+        CharEdit.SetIcons()
     End Sub
 
     Private Sub CharacterEditorToolWindow_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

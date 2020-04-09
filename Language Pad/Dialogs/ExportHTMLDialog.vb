@@ -1,60 +1,64 @@
 ﻿Imports System.IO
 Imports System.Text
 
-Public Class ExportHTMLDialog
+Public Class ExportHtmlDialog
     Public FilePath As String = ""
-    Private Sub OK_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OK_Button.Click
-        Dim wr As New StreamWriter(New FileStream(FilePath, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
-        Dim SortedWordList As List(Of DictionaryWord) = New List(Of DictionaryWord)
 
-        For Each word As DictionaryWord In CurrentDocument.WordDictionary.Words
+    Private Sub ExportHtmlDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TitleTextBox.Text = CurrentDocument.Language
+        DescriptionTextBox.Text = CurrentDocument.Info
+    End Sub
 
-            SortedWordList.Add(word)
+    Private Sub OkDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OkDialogButton.Click
+        Dim Writer As New StreamWriter(New FileStream(FilePath, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
+        Dim SortedWords As List(Of DictionaryWord) = New List(Of DictionaryWord)
+
+        For Each Word As DictionaryWord In CurrentDocument.WordDictionary.Words
+            SortedWords.Add(Word)
         Next
 
-        SortedWordList.Sort()
+        SortedWords.Sort()
 
-        Dim descriptionIndent As String = ControlChars.Tab + ControlChars.Tab + ControlChars.Tab
-        Dim description As String = descriptionIndent + txtDescription.Text
+        Dim DescriptionIndent As String = ControlChars.Tab + ControlChars.Tab + ControlChars.Tab
+        Dim Description As String = DescriptionIndent + DescriptionTextBox.Text
 
-        If cbPElement.Checked Then
-            description = ""
-            Dim Lines As String() = txtDescription.Text.Split(New String() {Environment.NewLine, vbCrLf, vbCr, vbLf}, StringSplitOptions.RemoveEmptyEntries)
+        If PElementCheck.Checked Then
+            Description = ""
+            Dim Lines As String() = DescriptionTextBox.Text.Split(New String() {Environment.NewLine, vbCrLf, vbCr, vbLf}, StringSplitOptions.RemoveEmptyEntries)
 
             For Each Line As String In Lines
-                description += descriptionIndent + "<p>" + Environment.NewLine
-                description += descriptionIndent + ControlChars.Tab + Line + Environment.NewLine
-                description += descriptionIndent + "</p>" + Environment.NewLine
+                Description += DescriptionIndent + "<p>" + Environment.NewLine
+                Description += DescriptionIndent + ControlChars.Tab + Line + Environment.NewLine
+                Description += DescriptionIndent + "</p>" + Environment.NewLine
             Next
         End If
 
-        Dim rowList As String = ""
-        Dim rowIndent As String = ControlChars.Tab + ControlChars.Tab + ControlChars.Tab
-        Dim rowDataIndent As String = ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + ControlChars.Tab
+        Dim RowList As String = ""
+        Dim RowIndent As String = ControlChars.Tab + ControlChars.Tab + ControlChars.Tab
+        Dim RowDataIndent As String = ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + ControlChars.Tab
 
-        If cbWord.Checked Or cbPronunciation.Checked Or cbDefinition.Checked Or cbNotes.Checked Then
-            rowList += rowIndent + "<tr>" + Environment.NewLine
-            rowList += If(cbWord.Checked, rowDataIndent + "<th>Word</th>" + Environment.NewLine, "")
-            rowList += If(cbPronunciation.Checked, rowDataIndent + "<th>Pronunciation</th>" + Environment.NewLine, "")
-            rowList += If(cbDefinition.Checked, rowDataIndent + "<th>Definition</th>" + Environment.NewLine, "")
-            rowList += If(cbNotes.Checked, rowDataIndent + "<th>Notes</th>" + Environment.NewLine, "")
-            rowList += rowIndent + "</tr>" + Environment.NewLine
+        If WordColCheck.Checked Or PronunciationColCheck.Checked Or DefinitionColCheck.Checked Or NotesColCheck.Checked Then
+            RowList += RowIndent + "<tr>" + Environment.NewLine
+            RowList += If(WordColCheck.Checked, RowDataIndent + "<th>Word</th>" + Environment.NewLine, "")
+            RowList += If(PronunciationColCheck.Checked, RowDataIndent + "<th>Pronunciation</th>" + Environment.NewLine, "")
+            RowList += If(DefinitionColCheck.Checked, RowDataIndent + "<th>Definition</th>" + Environment.NewLine, "")
+            RowList += If(NotesColCheck.Checked, RowDataIndent + "<th>Notes</th>" + Environment.NewLine, "")
+            RowList += RowIndent + "</tr>" + Environment.NewLine
         End If
 
-        For i As Integer = 0 To SortedWordList.Count - 1
-            Dim word As DictionaryWord = SortedWordList(i)
-            rowList += rowIndent + "<tr>" + Environment.NewLine
-            rowList += If(cbWord.Checked, rowDataIndent + String.Format("<td>{0}</td>", word.Word) + Environment.NewLine, "")
-            rowList += If(cbPronunciation.Checked, rowDataIndent + String.Format("<td>{0}</td>", word.Pronunciation) + Environment.NewLine, "")
-            rowList += If(cbDefinition.Checked, rowDataIndent + String.Format("<td>{0}</td>", word.Definition) + Environment.NewLine, "")
-            rowList += If(cbNotes.Checked, rowDataIndent + String.Format("<td>{0}</td>", word.Notes) + Environment.NewLine, "")
-            rowList += rowIndent + "</tr>" + Environment.NewLine
+        For i As Integer = 0 To SortedWords.Count - 1
+            Dim word As DictionaryWord = SortedWords(i)
+            RowList += RowIndent + "<tr>" + Environment.NewLine
+            RowList += If(WordColCheck.Checked, RowDataIndent + String.Format("<td>{0}</td>", word.Word) + Environment.NewLine, "")
+            RowList += If(PronunciationColCheck.Checked, RowDataIndent + String.Format("<td>{0}</td>", word.Pronunciation) + Environment.NewLine, "")
+            RowList += If(DefinitionColCheck.Checked, RowDataIndent + String.Format("<td>{0}</td>", word.Definition) + Environment.NewLine, "")
+            RowList += If(NotesColCheck.Checked, RowDataIndent + String.Format("<td>{0}</td>", word.Notes) + Environment.NewLine, "")
+            RowList += RowIndent + "</tr>" + Environment.NewLine
         Next
 
-        Dim htmlBody As String = String.Format(My.Resources.TableTemplate, rowList)
-
-        wr.Write(String.Format(My.Resources.HtmlTemplate, txtTitle.Text, description, My.Resources.HtmlStyle, htmlBody))
-        wr.Close()
+        Dim HtmlBody As String = String.Format(My.Resources.TableTemplate, RowList)
+        Writer.Write(String.Format(My.Resources.HtmlTemplate, TitleTextBox.Text, Description, My.Resources.HtmlStyle, HtmlBody))
+        Writer.Close()
 
         Process.Start(FilePath)
 
@@ -62,13 +66,8 @@ Public Class ExportHTMLDialog
         Close()
     End Sub
 
-    Private Sub Cancel_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Cancel_Button.Click
+    Private Sub CancelDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CancelDialogButton.Click
         DialogResult = DialogResult.Cancel
         Close()
-    End Sub
-
-    Private Sub dlgHtml_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtTitle.Text = CurrentDocument.Language
-        txtDescription.Text = CurrentDocument.Info
     End Sub
 End Class
