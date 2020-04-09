@@ -17,66 +17,66 @@ Namespace My
 
             CharEditor = New CharacterEditorToolWindow
 
-            ssLoading.pbLoading.Value = 0
-            ssLoading.lblLoading.Text = "Loading..."
+            SplashScreenForm.pbLoading.Value = 0
+            SplashScreenForm.lblLoading.Text = "Loading..."
 
-            ssLoading.lblLoading.Text = "Loading Accent Marks..."
+            SplashScreenForm.lblLoading.Text = "Loading Accent Marks..."
             For Each AccentMark As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Accents)
                 CharEditor.charEdit.InsertAccentButton(AccentMark.Value, AccentMark.Key)
             Next
 
-            ssLoading.pbLoading.Value = 10
-            ssLoading.Refresh()
+            SplashScreenForm.pbLoading.Value = 10
+            SplashScreenForm.Refresh()
 
-            ssLoading.lblLoading.Text = "Loading IPA Affricates..."
+            SplashScreenForm.lblLoading.Text = "Loading IPA Affricates..."
             For Each Affricate As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Affricates)
                 CharEditor.charEdit.InsertCharacterButton(Affricate.Value, CharEditor.charEdit.AffricatesLayoutPanel, Affricate.Key, True, True, CharacterType.IPAAffricate)
             Next
 
-            ssLoading.pbLoading.Value = 20
-            ssLoading.Refresh()
+            SplashScreenForm.pbLoading.Value = 20
+            SplashScreenForm.Refresh()
 
-            ssLoading.lblLoading.Text = "Loading IPA Consonants..."
+            SplashScreenForm.lblLoading.Text = "Loading IPA Consonants..."
             For Each Consonant As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Consonants)
                 CharEditor.charEdit.InsertCharacterButton(Consonant.Value, CharEditor.charEdit.ConsonantsLayoutPanel, Consonant.Key, True, True, CharacterType.IPAConsonant)
             Next
 
-            ssLoading.pbLoading.Value = 30
-            ssLoading.Refresh()
+            SplashScreenForm.pbLoading.Value = 30
+            SplashScreenForm.Refresh()
 
-            ssLoading.lblLoading.Text = "Loading IPA Tones..."
+            SplashScreenForm.lblLoading.Text = "Loading IPA Tones..."
             For Each Tone As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.ToneIntonation)
                 CharEditor.charEdit.InsertCharacterButton(Tone.Value, CharEditor.charEdit.ToneIntonationLayoutPanel, Tone.Key, True, True, CharacterType.IPATone)
             Next
 
-            ssLoading.pbLoading.Value = 40
-            ssLoading.Refresh()
+            SplashScreenForm.pbLoading.Value = 40
+            SplashScreenForm.Refresh()
 
-            ssLoading.lblLoading.Text = "Loading IPA Vowels..."
+            SplashScreenForm.lblLoading.Text = "Loading IPA Vowels..."
             For Each Vowel As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Vowels)
                 CharEditor.charEdit.InsertCharacterButton(Vowel.Value, CharEditor.charEdit.VowelsLayoutPanel, Vowel.Key, True, True, CharacterType.IPAVowel)
             Next
 
-            ssLoading.pbLoading.Value = 50
-            ssLoading.Refresh()
+            SplashScreenForm.pbLoading.Value = 50
+            SplashScreenForm.Refresh()
 
-            ssLoading.lblLoading.Text = "Loading IPA Diacritics..."
+            SplashScreenForm.lblLoading.Text = "Loading IPA Diacritics..."
             For Each Diacritic As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Diacritics)
                 CharEditor.charEdit.InsertCharacterButton(Diacritic.Value, CharEditor.charEdit.DiacriticsLayoutPanel, Diacritic.Key, True, True, CharacterType.IPADiacritic)
             Next
 
-            ssLoading.pbLoading.Value = 50
-            ssLoading.Refresh()
+            SplashScreenForm.pbLoading.Value = 50
+            SplashScreenForm.Refresh()
 
-            ssLoading.lblLoading.Text = "Loading IPA Suprasegmentals..."
+            SplashScreenForm.lblLoading.Text = "Loading IPA Suprasegmentals..."
             For Each Suprasegmental As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Suprasegmentals)
                 CharEditor.charEdit.InsertCharacterButton(Suprasegmental.Value, CharEditor.charEdit.SuprasegmentalsLayoutPanel, Suprasegmental.Key, True, True, CharacterType.IPASuprasegmental)
             Next
 
-            ssLoading.pbLoading.Value = 60
-            ssLoading.Refresh()
+            SplashScreenForm.pbLoading.Value = 60
+            SplashScreenForm.Refresh()
 
-            ssLoading.lblLoading.Text = "Loading Extended Characters..."
+            SplashScreenForm.lblLoading.Text = "Loading Extended Characters..."
             For Each LatinExtended As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.Common)
                 CharEditor.charEdit.InsertCharacterButton(LatinExtended.Value, CharEditor.charEdit.LatinExtendedLayoutPanel, LatinExtended.Key, False, True, CharacterType.ExtendedLatin)
             Next
@@ -89,35 +89,35 @@ Namespace My
                 CharEditor.charEdit.InsertCharacterButton(GreekExtended.Value, CharEditor.charEdit.GreekExtendedPanel, GreekExtended.Key, False, True, CharacterType.ExtendedGreek)
             Next
 
-            ssLoading.pbLoading.Value = 70
-            ssLoading.Refresh()
+            SplashScreenForm.pbLoading.Value = 70
+            SplashScreenForm.Refresh()
 
-            ssLoading.lblLoading.Text = "Loading Local Custom Characters..."
+            SplashScreenForm.lblLoading.Text = "Loading Local Custom Characters..."
             Dim LocalCharacters As String() = Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
             For Each LocalCharacter As String In LocalCharacters
                 CharEditor.charEdit.InsertCharacterButton(LocalCharacter, CharEditor.charEdit.LocalCharPanel)
             Next
 
-            ssLoading.pbLoading.Value = 80
-            ssLoading.Refresh()
+            SplashScreenForm.pbLoading.Value = 80
+            SplashScreenForm.Refresh()
 
             If Settings.SmartReplace = True Then
-                ssLoading.lblLoading.Text = "Loading Smart Replace..."
+                SplashScreenForm.lblLoading.Text = "Loading Smart Replace..."
                 For Each pair As KeyValuePair(Of String, String) In ZiaFile.Read(Resources.SmartReplace)
                     SmartReplaceList.Add(pair.Key, pair.Value)
                 Next
             End If
-            ssLoading.pbLoading.Value = 90
-            ssLoading.Refresh()
+            SplashScreenForm.pbLoading.Value = 90
+            SplashScreenForm.Refresh()
 
             If Settings.Updates = True Then
-                ssLoading.lblLoading.Text = "Checking for updates..."
-                dlgUpdate.FetchUpdateData()
+                SplashScreenForm.lblLoading.Text = "Checking for updates..."
+                UpdateDialog.FetchUpdateData()
             End If
 
-            dlgUpdate.StartupCheck = False
-            ssLoading.pbLoading.Value = 100
-            ssLoading.Refresh()
+            UpdateDialog.StartupCheck = False
+            SplashScreenForm.pbLoading.Value = 100
+            SplashScreenForm.Refresh()
             CharEditor.charEdit.RefreshPanels()
         End Sub
     End Class

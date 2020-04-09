@@ -1,34 +1,34 @@
-﻿Public Class dlgAddPage
+﻿Public Class NamePageDialog
     Public AddPage As Boolean = False
     Public DuplicatePage As Boolean = False
     Public CurrentPos As Integer = 0
 
     Private Sub OK_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnOK.Click
-        frmMain.SaveTabs()
-        Dim CurrentPage As Integer = frmMain.tcNotebook.SelectedIndex
+        MainForm.SaveTabs()
+        Dim CurrentPage As Integer = MainForm.tcNotebook.SelectedIndex
 
         If AddPage = True Then
             Dim p As New NotebookPage With {
                 .Title = txtName.Text
             }
             CurrentDocument.Pages.Add(p)
-            frmMain.UpdateTabs()
+            MainForm.UpdateTabs()
         ElseIf DuplicatePage = True Then
             Dim p As New NotebookPage With {
                 .Title = txtName.Text,
                 .RTF = CurrentDocument.Pages(CurrentPage).RTF
             }
             CurrentDocument.Pages.Add(p)
-            frmMain.UpdateTabs()
+            MainForm.UpdateTabs()
         Else
-            CurrentDocument.Pages.Item(frmMain.tcNotebook.SelectedIndex).Title = txtName.Text
-            frmMain.UpdateTabs()
+            CurrentDocument.Pages.Item(MainForm.tcNotebook.SelectedIndex).Title = txtName.Text
+            MainForm.UpdateTabs()
         End If
 
         If CurrentPage = -1 Then
-            frmMain.tcNotebook.SelectedIndex = 0
+            MainForm.tcNotebook.SelectedIndex = 0
         Else
-            frmMain.tcNotebook.SelectedIndex = CurrentPage
+            MainForm.tcNotebook.SelectedIndex = CurrentPage
         End If
 
         CurrentDocument.Modified = True

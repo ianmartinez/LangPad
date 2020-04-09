@@ -1,4 +1,4 @@
-﻿Public Class dlgSettings
+﻿Public Class SettingsDialog
 
     Private Sub dlgSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cbUpdates.Checked = My.Settings.Updates
@@ -13,10 +13,10 @@
         My.Settings.Save()
 
         ' Refresh icons to DPI setting
-        frmMain.SetIcons()
-        frmRTF.SetIcons()
-        frmDictionary.SetIcons()
-        dlgStyle.SetIcons()
+        MainForm.SetIcons()
+        RtfEditorForm.SetIcons()
+        DictionaryForm.SetIcons()
+        StyleDialog.SetIcons()
         CharacterEditorToolWindow.SetIcons()
 
         Close()

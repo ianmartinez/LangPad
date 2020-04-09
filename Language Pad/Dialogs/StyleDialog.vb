@@ -2,7 +2,7 @@
 Imports TundraLib
 Imports TundraLib.ZiaFile
 
-Public Class dlgStyle
+Public Class StyleDialog
     Public StyleFont As Font = New Font("Calibri", 11)
     Public StyleAlignment As New HorizontalAlignment
     Public StyleColor As Color = Color.Black

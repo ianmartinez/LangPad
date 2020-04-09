@@ -151,20 +151,9 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\TundraLib.dl
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\TundraLib.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbprojAssemblyReference.cache
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.CharacterEditorToolWindow.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAbout.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgAddPage.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgCustomZoom.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgSettings.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgStyle.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgUpdate.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.frmDictionary.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.dlgHtml.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.frmMain.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.frmRTF.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.Resources.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.CharacterEditor.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.PropertiesEditor.resources
-C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.ssLoading.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.CharacterButton.resources
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbproj.GenerateResource.cache
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LanguagePad.vbproj.CoreCompileInputs.cache
@@ -174,3 +163,15 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LanguagePad.
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.exe
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.xml
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language Pad.pdb
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.AboutDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.NamePageDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.CustomZoomDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.SettingsDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.StyleDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.UpdateDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.ImportImageDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.DictionaryForm.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.ExportHTMLDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.MainForm.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.RtfEditorForm.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\Language_Pad.SplashScreenForm.resources

@@ -1,6 +1,6 @@
 ﻿Imports System.Net
 Imports TundraLib.ZiaFile
-Public Class dlgUpdate
+Public Class UpdateDialog
     Public UpdateFileText As String
     Public StartupCheck As Boolean = True
     Public NewestVersion As Decimal

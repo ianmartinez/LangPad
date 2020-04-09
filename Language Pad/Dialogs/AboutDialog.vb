@@ -1,4 +1,4 @@
-﻿Public Class dlgAbout
+﻿Public Class AboutDialog
     Private Sub btnGitHub_Click(sender As Object, e As EventArgs)
         Process.Start("https://github.com/ianmartinez/Language-Pad")
     End Sub

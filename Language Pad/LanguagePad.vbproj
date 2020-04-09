@@ -24,8 +24,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <ApplicationRevision>8</ApplicationRevision>
-    <ApplicationVersion>10.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>10.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -118,47 +118,53 @@
     <Compile Include="CharacterEditorToolWindow.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\dlgHtml.Designer.vb">
-      <DependentUpon>dlgHtml.vb</DependentUpon>
+    <Compile Include="Dialogs\ExportHTMLDialog.Designer.vb">
+      <DependentUpon>ExportHTMLDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\dlgHtml.vb">
+    <Compile Include="Dialogs\ExportHTMLDialog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Dialogs\dlgAbout.Designer.vb">
-      <DependentUpon>dlgAbout.vb</DependentUpon>
+    <Compile Include="Dialogs\AboutDialog.Designer.vb">
+      <DependentUpon>AboutDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\dlgAbout.vb">
+    <Compile Include="Dialogs\AboutDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\dlgAddPage.Designer.vb">
-      <DependentUpon>dlgAddPage.vb</DependentUpon>
+    <Compile Include="Dialogs\NamePageDialog.Designer.vb">
+      <DependentUpon>NamePageDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\dlgAddPage.vb">
+    <Compile Include="Dialogs\NamePageDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\dlgCustomZoom.Designer.vb">
-      <DependentUpon>dlgCustomZoom.vb</DependentUpon>
+    <Compile Include="Dialogs\CustomZoomDialog.Designer.vb">
+      <DependentUpon>CustomZoomDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\dlgCustomZoom.vb">
+    <Compile Include="Dialogs\CustomZoomDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\dlgSettings.Designer.vb">
-      <DependentUpon>dlgSettings.vb</DependentUpon>
+    <Compile Include="Dialogs\SettingsDialog.Designer.vb">
+      <DependentUpon>SettingsDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\dlgSettings.vb">
+    <Compile Include="Dialogs\SettingsDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\dlgStyle.Designer.vb">
-      <DependentUpon>dlgStyle.vb</DependentUpon>
+    <Compile Include="Dialogs\StyleDialog.Designer.vb">
+      <DependentUpon>StyleDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\dlgStyle.vb">
+    <Compile Include="Dialogs\StyleDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\dlgUpdate.Designer.vb">
-      <DependentUpon>dlgUpdate.vb</DependentUpon>
+    <Compile Include="Dialogs\UpdateDialog.Designer.vb">
+      <DependentUpon>UpdateDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\dlgUpdate.vb">
+    <Compile Include="Dialogs\UpdateDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ImportImageDialog.Designer.vb">
+      <DependentUpon>ImportImageDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ImportImageDialog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Notebook\CharacterEditor.Designer.vb">
@@ -168,23 +174,23 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Notebook\DictionaryFile.vb" />
-    <Compile Include="frmDictionary.Designer.vb">
-      <DependentUpon>frmDictionary.vb</DependentUpon>
+    <Compile Include="DictionaryForm.Designer.vb">
+      <DependentUpon>DictionaryForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmDictionary.vb">
+    <Compile Include="DictionaryForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.vb">
+    <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.vb">
-      <DependentUpon>frmMain.vb</DependentUpon>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRTF.Designer.vb">
-      <DependentUpon>frmRTF.vb</DependentUpon>
+    <Compile Include="RtfEditorForm.Designer.vb">
+      <DependentUpon>RtfEditorForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmRTF.vb">
+    <Compile Include="RtfEditorForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LanguagePadCommon.vb" />
@@ -211,10 +217,10 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Notebook\NotebookFile.vb" />
-    <Compile Include="ssLoading.Designer.vb">
-      <DependentUpon>ssLoading.vb</DependentUpon>
+    <Compile Include="SplashScreenForm.Designer.vb">
+      <DependentUpon>SplashScreenForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="ssLoading.vb">
+    <Compile Include="SplashScreenForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CharacterButton.vb">
@@ -225,35 +231,38 @@
     <EmbeddedResource Include="CharacterEditorToolWindow.resx">
       <DependentUpon>CharacterEditorToolWindow.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgAbout.resx">
-      <DependentUpon>dlgAbout.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\AboutDialog.resx">
+      <DependentUpon>AboutDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgAddPage.resx">
-      <DependentUpon>dlgAddPage.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\NamePageDialog.resx">
+      <DependentUpon>NamePageDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgCustomZoom.resx">
-      <DependentUpon>dlgCustomZoom.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\CustomZoomDialog.resx">
+      <DependentUpon>CustomZoomDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgSettings.resx">
-      <DependentUpon>dlgSettings.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\SettingsDialog.resx">
+      <DependentUpon>SettingsDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgStyle.resx">
-      <DependentUpon>dlgStyle.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\StyleDialog.resx">
+      <DependentUpon>StyleDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgUpdate.resx">
-      <DependentUpon>dlgUpdate.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\UpdateDialog.resx">
+      <DependentUpon>UpdateDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDictionary.resx">
-      <DependentUpon>frmDictionary.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\ImportImageDialog.resx">
+      <DependentUpon>ImportImageDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\dlgHtml.resx">
-      <DependentUpon>dlgHtml.vb</DependentUpon>
+    <EmbeddedResource Include="DictionaryForm.resx">
+      <DependentUpon>DictionaryForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\ExportHTMLDialog.resx">
+      <DependentUpon>ExportHTMLDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRTF.resx">
-      <DependentUpon>frmRTF.vb</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RtfEditorForm.resx">
+      <DependentUpon>RtfEditorForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -267,8 +276,8 @@
     <EmbeddedResource Include="Notebook\PropertiesEditor.resx">
       <DependentUpon>PropertiesEditor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ssLoading.resx">
-      <DependentUpon>ssLoading.vb</DependentUpon>
+    <EmbeddedResource Include="SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CharacterButton.resx">
       <DependentUpon>CharacterButton.vb</DependentUpon>

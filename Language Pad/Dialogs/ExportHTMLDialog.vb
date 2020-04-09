@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 Imports System.Text
 
-Public Class dlgHtml
+Public Class ExportHTMLDialog
     Public FilePath As String = ""
     Private Sub OK_Button_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OK_Button.Click
         Dim wr As New StreamWriter(New FileStream(FilePath, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)

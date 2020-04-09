@@ -39,8 +39,8 @@
         If e.CloseReason = CloseReason.UserClosing Then
             e.Cancel = True
             Visible = False
-        ElseIf e.CloseReason = CloseReason.FormOwnerClosing AndAlso Owner Is frmDictionary AndAlso frmMain IsNot Nothing Then
-            Owner = frmMain
+        ElseIf e.CloseReason = CloseReason.FormOwnerClosing AndAlso Owner Is DictionaryForm AndAlso MainForm IsNot Nothing Then
+            Owner = MainForm
             e.Cancel = True
         End If
     End Sub

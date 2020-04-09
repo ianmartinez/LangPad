@@ -3,7 +3,7 @@ Imports System.IO
 Imports TundraLib
 Imports TundraLib.Themes
 
-Public Class frmMain
+Public Class MainForm
     Private ReadOnly ColorPicker As New ColorDialog
     Private CurrentFilePath As String
     Private LastPrintedCharPos As Integer
@@ -255,7 +255,7 @@ Public Class frmMain
 
     Private Sub SelectedDocument_TextChanged(sender As Object, e As EventArgs) Handles SelectedDocument.TextChanged
         UpdateWordCount()
-        frmRTF.txtRTF.Text = SelectedDocument.Rtf
+        RtfEditorForm.txtRTF.Text = SelectedDocument.Rtf
     End Sub
 
     Private Sub BulletToolStripButton_ButtonClick(sender As Object, e As EventArgs)
@@ -281,7 +281,7 @@ Public Class frmMain
         End If
 
         CharEditor.Close()
-        If frmDictionary IsNot Nothing Then frmDictionary.Close()
+        If DictionaryForm IsNot Nothing Then DictionaryForm.Close()
         My.Settings.Theme = ThemeCombo.SelectedItem
         My.Settings.Save()
     End Sub
@@ -349,8 +349,8 @@ Public Class frmMain
         MainToolStrip.Renderer = Theme.GetToolStripRenderer()
         DataToolStrip.Renderer = Theme.GetToolStripRenderer()
         cmsMain.Renderer = Theme.GetMenuRenderer()
-        frmRTF.SetTheme(Theme)
-        frmDictionary.SetTheme(Theme)
+        RtfEditorForm.SetTheme(Theme)
+        DictionaryForm.SetTheme(Theme)
         BackColor = Theme.PanelBack
         pnlColor.ForeColor = Theme.PanelText
         pnlFindReplace.BackColor = Theme.PanelBack
@@ -365,13 +365,13 @@ Public Class frmMain
 
         pnlDocumentProperties.SetTheme(Theme)
         CharEditor.charEdit.SetTheme(Theme)
-        dlgAbout.BackColor = Theme.DialogBack
-        dlgAddPage.BackColor = Theme.DialogBack
-        dlgCustomZoom.BackColor = Theme.DialogBack
-        dlgHtml.BackColor = Theme.DialogBack
-        dlgSettings.BackColor = Theme.DialogBack
-        dlgStyle.BackColor = Theme.DialogBack
-        dlgUpdate.BackColor = Theme.DialogBack
+        AboutDialog.BackColor = Theme.DialogBack
+        NamePageDialog.BackColor = Theme.DialogBack
+        CustomZoomDialog.BackColor = Theme.DialogBack
+        ExportHTMLDialog.BackColor = Theme.DialogBack
+        SettingsDialog.BackColor = Theme.DialogBack
+        StyleDialog.BackColor = Theme.DialogBack
+        UpdateDialog.BackColor = Theme.DialogBack
 
         Refresh()
     End Sub
@@ -447,11 +447,11 @@ Public Class frmMain
         SplitLayoutPanel.Panel2Collapsed = False
         SelectedDocument_TextChanged(Me, e)
 
-        If dlgUpdate.NewestVersion > CurrentVersion Then
-            dlgUpdate.SkipFetch = True
-            dlgUpdate.TopMost = True
-            dlgUpdate.Show()
-            dlgUpdate.BringToFront()
+        If UpdateDialog.NewestVersion > CurrentVersion Then
+            UpdateDialog.SkipFetch = True
+            UpdateDialog.TopMost = True
+            UpdateDialog.Show()
+            UpdateDialog.BringToFront()
         End If
 
         CurrentDocument.Modified = False
@@ -598,7 +598,7 @@ Public Class frmMain
             SaveTabs()
             SelectedDocument = RtbList.Item(tcNotebook.SelectedIndex)
             pnlDocumentProperties.lbPages.SelectedIndex = tcNotebook.SelectedIndex
-            frmRTF.txtRTF.Text = SelectedDocument.Rtf
+            RtfEditorForm.txtRTF.Text = SelectedDocument.Rtf
             WordWrapToolStripMenuItem.Checked = SelectedDocument.WordWrap
             SelectedDocument_TextChanged(Me, e)
         End If
@@ -695,7 +695,7 @@ Public Class frmMain
         CurrentDocument.WordDictionary = New DictionaryFile()
         UpdateTabs()
 
-        frmDictionary.LoadDictionary() ' Reset dictionary form
+        DictionaryForm.LoadDictionary() ' Reset dictionary form
         CharEditor.charEdit.FilePanel.Controls.Clear() ' Reset character editor file tab
 
         CurrentFilePath = ""
@@ -736,7 +736,7 @@ Public Class frmMain
 
             CurrentDocument = OpenFile
             UpdateTabs()
-            frmDictionary.LoadDictionary()
+            DictionaryForm.LoadDictionary()
             CurrentFilePath = dlgOpen.FileName
             CurrentDocument.Modified = False
         End If
@@ -852,7 +852,7 @@ Public Class frmMain
     End Sub
 
     Private Sub RTFEditorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RTFEditorToolStripMenuItem.Click
-        frmRTF.Show()
+        RtfEditorForm.Show()
     End Sub
 
     Private Sub UndoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UndoToolStripMenuItem.Click
@@ -914,7 +914,7 @@ Public Class frmMain
     End Sub
 
     Private Sub EditZoomToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditZoomToolStripMenuItem.Click
-        dlgCustomZoom.ShowDialog()
+        CustomZoomDialog.ShowDialog()
     End Sub
 
     Private Sub WordWrapToolStripMenuItem_CheckedChanged(sender As Object, e As EventArgs) Handles WordWrapToolStripMenuItem.CheckedChanged
@@ -976,7 +976,7 @@ Public Class frmMain
     End Sub
 
     Private Sub EditStyleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditStyleToolStripMenuItem.Click
-        dlgStyle.ShowDialog()
+        StyleDialog.ShowDialog()
     End Sub
 
     Private Sub ApplyStyleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplyStyleToolStripMenuItem.Click
@@ -987,12 +987,12 @@ Public Class frmMain
             .Rtf = SelectedDocument.Rtf,
             .SelectionStart = SelectedDocument.SelectionStart,
             .SelectionLength = SelectedDocument.SelectionLength,
-            .SelectionFont = dlgStyle.StyleFont,
-            .SelectionColor = dlgStyle.StyleColor,
-            .SelectionBackColor = dlgStyle.StyleHighlight,
-            .SelectionAlignment = dlgStyle.StyleAlignment,
-            .SelectionIndent = dlgStyle.StyleIndent,
-            .SelectionCharOffset = dlgStyle.StyleCharOffset
+            .SelectionFont = StyleDialog.StyleFont,
+            .SelectionColor = StyleDialog.StyleColor,
+            .SelectionBackColor = StyleDialog.StyleHighlight,
+            .SelectionAlignment = StyleDialog.StyleAlignment,
+            .SelectionIndent = StyleDialog.StyleIndent,
+            .SelectionCharOffset = StyleDialog.StyleCharOffset
         }
 
         Dim CurrentPos As Integer = SelectedDocument.SelectionStart
@@ -1011,7 +1011,7 @@ Public Class frmMain
         TempRTF.Dispose()
         ResumeLayout()
 
-        SelectedDocument.SelectionAlignment = dlgStyle.StyleAlignment
+        SelectedDocument.SelectionAlignment = StyleDialog.StyleAlignment
     End Sub
 
     Private Sub SubscriptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubscriptToolStripMenuItem.Click
@@ -1042,9 +1042,9 @@ Public Class frmMain
 
     Public Sub AddPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddPageToolStripMenuItem.Click
         SaveTabs()
-        dlgAddPage.AddPage = True
-        dlgAddPage.DuplicatePage = False
-        dlgAddPage.ShowDialog()
+        NamePageDialog.AddPage = True
+        NamePageDialog.DuplicatePage = False
+        NamePageDialog.ShowDialog()
     End Sub
 
     Public Sub RemovePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemovePageToolStripMenuItem.Click
@@ -1062,10 +1062,10 @@ Public Class frmMain
         Dim CurrentPage = tcNotebook.SelectedIndex
         If Not CurrentPage = -1 Then
             SaveTabs()
-            dlgAddPage.txtName.Text = CurrentDocument.Pages(CurrentPage).Title
-            dlgAddPage.DuplicatePage = True
-            dlgAddPage.AddPage = False
-            dlgAddPage.ShowDialog()
+            NamePageDialog.txtName.Text = CurrentDocument.Pages(CurrentPage).Title
+            NamePageDialog.DuplicatePage = True
+            NamePageDialog.AddPage = False
+            NamePageDialog.ShowDialog()
         End If
     End Sub
 
@@ -1108,8 +1108,8 @@ Public Class frmMain
                         pn += 1
                     Else
                         MessageBox.Show("A page already exists with that name.", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        dlgAddPage.AddPage = False
-                        dlgAddPage.ShowDialog()
+                        NamePageDialog.AddPage = False
+                        NamePageDialog.ShowDialog()
                         pn += 1
                     End If
                 End If
@@ -1149,25 +1149,25 @@ Public Class frmMain
 
     Public Sub RenamePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenamePageToolStripMenuItem.Click
         SaveTabs()
-        dlgAddPage.AddPage = False
-        dlgAddPage.DuplicatePage = False
-        dlgAddPage.txtName.Text = CurrentDocument.Pages.Item(tcNotebook.SelectedIndex).Title
-        dlgAddPage.CurrentPos = tcNotebook.SelectedIndex
-        dlgAddPage.ShowDialog()
+        NamePageDialog.AddPage = False
+        NamePageDialog.DuplicatePage = False
+        NamePageDialog.txtName.Text = CurrentDocument.Pages.Item(tcNotebook.SelectedIndex).Title
+        NamePageDialog.CurrentPos = tcNotebook.SelectedIndex
+        NamePageDialog.ShowDialog()
     End Sub
 
     Private Sub UpdateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateToolStripMenuItem.Click
-        dlgUpdate.SkipFetch = False
-        dlgUpdate.TopMost = False
-        dlgUpdate.ShowDialog()
+        UpdateDialog.SkipFetch = False
+        UpdateDialog.TopMost = False
+        UpdateDialog.ShowDialog()
     End Sub
 
     Private Sub SettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem.Click
-        dlgSettings.ShowDialog()
+        SettingsDialog.ShowDialog()
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
-        dlgAbout.ShowDialog()
+        AboutDialog.ShowDialog()
     End Sub
 
     Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
@@ -1313,8 +1313,8 @@ Public Class frmMain
     End Sub
 
     Public Sub DictionaryMenuItem_Click(sender As Object, e As EventArgs) Handles DictionaryMenuItem.Click
-        frmDictionary.Show()
-        frmDictionary.Activate()
+        DictionaryForm.Show()
+        DictionaryForm.Activate()
     End Sub
 
     Public Sub frmMain_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated

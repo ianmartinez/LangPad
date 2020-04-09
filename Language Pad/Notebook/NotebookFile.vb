@@ -63,13 +63,13 @@ End Class
 Module NotebookFileAccess
     Dim PagesFolder As String
     Sub Save(ByVal FilePath As String, ByVal Notebook As NotebookFile)
-        frmMain.SaveTabs()
+        MainForm.SaveTabs()
 
-        If frmDictionary.Loaded = False Then
-            frmDictionary.LoadDictionary()
+        If DictionaryForm.Loaded = False Then
+            DictionaryForm.LoadDictionary()
         End If
 
-        frmDictionary.SaveDictionary()
+        DictionaryForm.SaveDictionary()
 
         Dim guid As Guid = Guid.NewGuid
         Dim tmp As String = Application.LocalUserAppDataPath & "\zip-" & guid.ToString

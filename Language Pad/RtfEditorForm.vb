@@ -2,7 +2,7 @@
 Imports TundraLib
 Imports TundraLib.Themes
 
-Public Class frmRTF
+Public Class RtfEditorForm
     Public Color1 As Color
     Public Color2 As Color
     Public VerticalMenuGradient As Boolean = False
@@ -43,7 +43,7 @@ Public Class frmRTF
     End Sub
 
     Private Sub frmRTF_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtRTF.Text = frmMain.SelectedDocument.Rtf
+        txtRTF.Text = MainForm.SelectedDocument.Rtf
         SetIcons()
     End Sub
 
@@ -73,7 +73,7 @@ Public Class frmRTF
     Private Sub RefreshToolStripButton_Click(sender As Object, e As EventArgs) Handles RefreshToolStripButton.Click
         On Error Resume Next
 
-        frmMain.SelectedDocument.Rtf = txtRTF.Text
-        txtRTF.Text = frmMain.SelectedDocument.Rtf
+        MainForm.SelectedDocument.Rtf = txtRTF.Text
+        txtRTF.Text = MainForm.SelectedDocument.Rtf
     End Sub
 End Class

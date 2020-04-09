@@ -4,7 +4,7 @@ Imports System.Text
 Imports TundraLib
 Imports TundraLib.Themes
 
-Public Class frmDictionary
+Public Class DictionaryForm
     Dim CurrentTextbox As TextBox
     Public Loaded As Boolean = False
     Public Color1 As Color
@@ -205,8 +205,8 @@ Public Class frmDictionary
     Private Sub ExportHtmlToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportHtmlToolStripButton.Click
         SaveDictionary()
         If dlgSaveHtml.ShowDialog = DialogResult.OK Then
-            dlgHtml.FilePath = dlgSaveHtml.FileName
-            dlgHtml.ShowDialog()
+            ExportHTMLDialog.FilePath = dlgSaveHtml.FileName
+            ExportHTMLDialog.ShowDialog()
         End If
     End Sub
 
@@ -268,9 +268,9 @@ Public Class frmDictionary
 
     Private Sub frmDictionary_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         e.Cancel = True
-        If frmMain IsNot Nothing Then
-            CharEditor.TargetForm = frmMain
-            frmMain.Activate()
+        If MainForm IsNot Nothing Then
+            CharEditor.TargetForm = MainForm
+            MainForm.Activate()
         End If
         SaveDictionary()
         Hide()
