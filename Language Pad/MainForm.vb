@@ -800,6 +800,18 @@ Public Class MainForm
     Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
         If Clipboard.ContainsImage Then
             InsertImage(Clipboard.GetImage())
+        ElseIf Clipboard.ContainsFileDropList() Then
+            Dim DataObject As IDataObject = Clipboard.GetDataObject()
+
+            If DataObject.GetDataPresent(DataFormats.FileDrop) Then
+                Dim ClipboardFiles As String() = DataObject.GetData(DataFormats.FileDrop)
+
+                Try
+                    Dim ClipboardImage As Image = Image.FromFile(ClipboardFiles(0))
+                    InsertImage(ClipboardImage)
+                Catch ex As Exception ' Not a valid image
+                End Try
+            End If
         Else
             SelectedDocument.Paste()
         End If
