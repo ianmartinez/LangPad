@@ -223,10 +223,10 @@ Partial Class MainForm
         Me.ToolStripSeparator23 = New System.Windows.Forms.ToolStripSeparator()
         Me.IncreaseHangingIndentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DecreaseHangingIndentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PropertiesPanel = New Language_Pad.PropertiesEditor()
         Me.ResetIndentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetBulletIndentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetHangingIndentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PropertiesPanel = New Language_Pad.PropertiesEditor()
         Me.MainContextMenu.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
@@ -1958,14 +1958,6 @@ Partial Class MainForm
         Me.DecreaseHangingIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.DecreaseHangingIndentToolStripMenuItem.Text = "Decrease Hanging Indent"
         '
-        'PropertiesPanel
-        '
-        Me.PropertiesPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PropertiesPanel.Location = New System.Drawing.Point(0, 0)
-        Me.PropertiesPanel.Name = "PropertiesPanel"
-        Me.PropertiesPanel.Size = New System.Drawing.Size(352, 962)
-        Me.PropertiesPanel.TabIndex = 0
-        '
         'ResetIndentToolStripMenuItem
         '
         Me.ResetIndentToolStripMenuItem.Name = "ResetIndentToolStripMenuItem"
@@ -1983,6 +1975,14 @@ Partial Class MainForm
         Me.ResetHangingIndentToolStripMenuItem.Name = "ResetHangingIndentToolStripMenuItem"
         Me.ResetHangingIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.ResetHangingIndentToolStripMenuItem.Text = "Reset Hanging Indent"
+        '
+        'PropertiesPanel
+        '
+        Me.PropertiesPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PropertiesPanel.Location = New System.Drawing.Point(0, 0)
+        Me.PropertiesPanel.Name = "PropertiesPanel"
+        Me.PropertiesPanel.Size = New System.Drawing.Size(352, 962)
+        Me.PropertiesPanel.TabIndex = 0
         '
         'MainForm
         '

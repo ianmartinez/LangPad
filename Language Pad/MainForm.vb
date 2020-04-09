@@ -99,7 +99,7 @@ Public Class MainForm
         SplitLayoutPanel.SplitterDistance = (SplitLayoutPanel.Width - PropertiesPanel.MinimumSize.Width) - 50
 
         ' Add indent options
-        For i As Integer = 0 To 50
+        For i As Integer = 0 To 100
             IndentToolStripComboBox.Items.Add(i)
         Next
         IndentToolStripComboBox.SelectedItem = 1
@@ -880,6 +880,8 @@ Public Class MainForm
             .SelectionBackColor = Color.White,
             .SelectionAlignment = HorizontalAlignment.Left,
             .SelectionIndent = 0,
+            .SelectionHangingIndent = 0,
+            .BulletIndent = 0,
             .SelectionCharOffset = 0
         }
 
@@ -920,6 +922,8 @@ Public Class MainForm
             .SelectionBackColor = StyleDialog.StyleHighlight,
             .SelectionAlignment = StyleDialog.StyleAlignment,
             .SelectionIndent = StyleDialog.StyleIndent,
+            .SelectionHangingIndent = StyleDialog.StyleHangingIndent,
+            .BulletIndent = StyleDialog.StyleBulletIndent,
             .SelectionCharOffset = StyleDialog.StyleCharOffset
         }
 
