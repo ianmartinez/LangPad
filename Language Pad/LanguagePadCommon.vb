@@ -34,32 +34,31 @@ Module LanguagePadCommon
     End Function
 
     Public Function ResizeImage(ByVal sourceImage As Image, ByVal newSize As Size, Optional ByVal preserveAspect As Boolean = True) As Image
-        Dim adjustedSize = GetAdjustedSize(sourceImage.Size, newSize, preserveAspect)
+        Dim AdjustedWidth = AdjustWidth(sourceImage.Size, newSize, preserveAspect)
+        Dim AdjustedHeight = AdjustHeight(sourceImage.Size, newSize, preserveAspect)
 
-        Dim NewImage As Image = New Bitmap(adjustedSize.Width, adjustedSize.Height)
+        Dim NewImage As Image = New Bitmap(AdjustedWidth, AdjustedHeight)
         Using ImageGraphics As Graphics = Graphics.FromImage(NewImage)
             ImageGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic
-            ImageGraphics.DrawImage(sourceImage, 0, 0, adjustedSize.Width, adjustedSize.Height)
+            ImageGraphics.DrawImage(sourceImage, 0, 0, AdjustedWidth, AdjustedHeight)
         End Using
 
         Return NewImage
     End Function
 
-    Public Function GetAdjustedSize(ByVal oldSize As Size, ByVal newSize As Size, ByVal preserveAspect As Boolean) As Size
-        Dim NewWidth As Integer
-        Dim NewHeight As Integer
-
+    Public Function AdjustWidth(ByVal oldSize As Size, ByVal newSize As Size, ByVal preserveAspect As Boolean) As Integer
         If preserveAspect Then
-            Dim PercentWidth As Single = newSize.Width / CSng(oldSize.Width)
-            Dim PercentHeight As Single = newSize.Height / CSng(oldSize.Height)
-            Dim Percent As Single = If(PercentHeight < PercentWidth, PercentHeight, PercentWidth)
-            NewWidth = CInt(oldSize.Width * Percent)
-            NewHeight = CInt(oldSize.Height * Percent)
+            Return CDec(oldSize.Width) * newSize.Height / oldSize.Height
         Else
-            NewWidth = newSize.Width
-            NewHeight = newSize.Height
+            Return newSize.Width
         End If
+    End Function
 
-        Return New Size(NewWidth, NewHeight)
+    Public Function AdjustHeight(ByVal oldSize As Size, ByVal newSize As Size, ByVal preserveAspect As Boolean) As Integer
+        If preserveAspect Then
+            Return CDec(oldSize.Height) * newSize.Height / oldSize.Width
+        Else
+            Return newSize.Height
+        End If
     End Function
 End Module

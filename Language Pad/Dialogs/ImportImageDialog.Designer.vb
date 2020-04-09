@@ -31,7 +31,8 @@ Partial Class ImportImageDialog
         Me.HeightNud = New System.Windows.Forms.NumericUpDown()
         Me.HeightLabel = New System.Windows.Forms.Label()
         Me.LockAspectCheckBox = New System.Windows.Forms.CheckBox()
-        Me.RefreshButton = New System.Windows.Forms.Button()
+        Me.RefreshPreviewButton = New System.Windows.Forms.Button()
+        Me.ResetSizeButton = New System.Windows.Forms.Button()
         Me.ButtonTableLayout.SuspendLayout()
         CType(Me.PreviewPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.WidthNud, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,7 +47,7 @@ Partial Class ImportImageDialog
         Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.ButtonTableLayout.Controls.Add(Me.OkDialogButton, 0, 0)
         Me.ButtonTableLayout.Controls.Add(Me.CancelDialogButton, 1, 0)
-        Me.ButtonTableLayout.Location = New System.Drawing.Point(742, 681)
+        Me.ButtonTableLayout.Location = New System.Drawing.Point(742, 695)
         Me.ButtonTableLayout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ButtonTableLayout.Name = "ButtonTableLayout"
         Me.ButtonTableLayout.RowCount = 1
@@ -99,7 +100,7 @@ Partial Class ImportImageDialog
         'WidthNud
         '
         Me.WidthNud.Location = New System.Drawing.Point(73, 641)
-        Me.WidthNud.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.WidthNud.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.WidthNud.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.WidthNud.Name = "WidthNud"
         Me.WidthNud.Size = New System.Drawing.Size(120, 26)
@@ -109,7 +110,7 @@ Partial Class ImportImageDialog
         'HeightNud
         '
         Me.HeightNud.Location = New System.Drawing.Point(270, 641)
-        Me.HeightNud.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.HeightNud.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.HeightNud.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.HeightNud.Name = "HeightNud"
         Me.HeightNud.Size = New System.Drawing.Size(120, 26)
@@ -137,15 +138,25 @@ Partial Class ImportImageDialog
         Me.LockAspectCheckBox.Text = "Lock Aspect Ratio"
         Me.LockAspectCheckBox.UseVisualStyleBackColor = True
         '
-        'RefreshButton
+        'RefreshPreviewButton
         '
-        Me.RefreshButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RefreshButton.Location = New System.Drawing.Point(865, 636)
-        Me.RefreshButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.RefreshButton.Name = "RefreshButton"
-        Me.RefreshButton.Size = New System.Drawing.Size(100, 35)
-        Me.RefreshButton.TabIndex = 6
-        Me.RefreshButton.Text = "Refresh"
+        Me.RefreshPreviewButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RefreshPreviewButton.Location = New System.Drawing.Point(816, 636)
+        Me.RefreshPreviewButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.RefreshPreviewButton.Name = "RefreshPreviewButton"
+        Me.RefreshPreviewButton.Size = New System.Drawing.Size(140, 35)
+        Me.RefreshPreviewButton.TabIndex = 6
+        Me.RefreshPreviewButton.Text = "Refresh Preview"
+        '
+        'ResetSizeButton
+        '
+        Me.ResetSizeButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ResetSizeButton.Location = New System.Drawing.Point(668, 636)
+        Me.ResetSizeButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ResetSizeButton.Name = "ResetSizeButton"
+        Me.ResetSizeButton.Size = New System.Drawing.Size(140, 35)
+        Me.ResetSizeButton.TabIndex = 5
+        Me.ResetSizeButton.Text = "Reset Size"
         '
         'ImportImageDialog
         '
@@ -153,8 +164,9 @@ Partial Class ImportImageDialog
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.CancelDialogButton
-        Me.ClientSize = New System.Drawing.Size(978, 744)
-        Me.Controls.Add(Me.RefreshButton)
+        Me.ClientSize = New System.Drawing.Size(978, 758)
+        Me.Controls.Add(Me.ResetSizeButton)
+        Me.Controls.Add(Me.RefreshPreviewButton)
         Me.Controls.Add(Me.LockAspectCheckBox)
         Me.Controls.Add(Me.HeightNud)
         Me.Controls.Add(Me.HeightLabel)
@@ -188,5 +200,6 @@ Partial Class ImportImageDialog
     Friend WithEvents HeightLabel As Label
     Friend WithEvents LockAspectCheckBox As CheckBox
     Friend WithEvents PreviewPictureBox As PictureBox
-    Friend WithEvents RefreshButton As Button
+    Friend WithEvents RefreshPreviewButton As Button
+    Friend WithEvents ResetSizeButton As Button
 End Class

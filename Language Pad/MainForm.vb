@@ -765,18 +765,18 @@ Public Class MainForm
 
     Private Sub UndoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UndoToolStripMenuItem.Click
         If SelectedDocument.CanUndo Then
-            Dim OldStart = SelectedDocument.SelectionStart
+            Dim OldStart = Math.Max(0, SelectedDocument.SelectionStart)
             SelectedDocument.Undo()
-            SelectedDocument.SelectionStart = Math.Min(OldStart, SelectedDocument.TextLength - 1)
+            SelectedDocument.SelectionStart = Math.Max(0, Math.Min(OldStart, SelectedDocument.TextLength - 1))
             SelectedDocument.SelectionLength = 0
         End If
     End Sub
 
     Private Sub RedoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RedoToolStripMenuItem.Click
         If SelectedDocument.CanRedo Then
-            Dim OldStart = SelectedDocument.SelectionStart
+            Dim OldStart = Math.Max(0, SelectedDocument.SelectionStart)
             SelectedDocument.Redo()
-            SelectedDocument.SelectionStart = Math.Min(OldStart, SelectedDocument.TextLength - 1)
+            SelectedDocument.SelectionStart = Math.Max(0, Math.Min(OldStart, SelectedDocument.TextLength - 1))
             SelectedDocument.SelectionLength = 0
         End If
     End Sub
