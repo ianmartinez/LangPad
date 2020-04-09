@@ -306,6 +306,8 @@ namespace TundraLib
         ///     ''' </summary>
         public ExtendedRichTextBox() : base()
         {
+            AcceptsTab = true;
+
             // Initialize default text and background colors
             m_textColor = RtfColor.Black;
             highlightColor = RtfColor.White;

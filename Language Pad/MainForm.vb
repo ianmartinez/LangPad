@@ -9,7 +9,7 @@ Public Class MainForm
     Private LastPrintedCharPos As Integer
     Public Title As String
     Public RtbList As New List(Of ExtendedRichTextBox)
-    Public WithEvents SelectedDocument As New ExtendedRichTextBox
+    Public WithEvents SelectedDocument As New ExtendedRichTextBox()
     Public Moving As Boolean = False
     Public DisableFontChange As Boolean
     Public IsLoading As Boolean = False
@@ -17,7 +17,6 @@ Public Class MainForm
     Public Color1 As Color
     Public Color2 As Color
     Public VerticalMenuGradient As Boolean = False
-
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Text = "Language Pad " & GetVersionString()
@@ -170,6 +169,7 @@ Public Class MainForm
 
         ' File Menu
         NewToolStripMenuItem.Image = IconManager.Get("document-new", IconSize.Small, Res)
+        NewWindowToolStripMenuItem.Image = IconManager.Get("windows", IconSize.Small, Res)
         OpenToolStripMenuItem.Image = IconManager.Get("document-open", IconSize.Small, Res)
         SaveToolStripMenuItem.Image = IconManager.Get("document-save", IconSize.Small, Res)
         SaveAsToolStripMenuItem.Image = IconManager.Get("document-save-as", IconSize.Small, Res)
@@ -202,25 +202,39 @@ Public Class MainForm
         ImportPageToolStripMenuItem.Image = IconManager.Get("document-import", IconSize.Small, Res)
         ExportPageToolStripMenuItem.Image = IconManager.Get("document-export", IconSize.Small, Res)
         RenamePageToolStripMenuItem.Image = IconManager.Get("edit", IconSize.Small, Res)
+        PreviousPageToolStripMenuItem.Image = IconManager.Get("go-previous", IconSize.Small, Res)
+        NextPageToolStripMenuItem.Image = IconManager.Get("go-next", IconSize.Small, Res)
         DictionaryMenuItem.Image = IconManager.Get("dictionary", IconSize.Small, Res)
 
-        ' Insert
+        ' Insert Menu
         ImageToolStripMenuItem.Image = IconManager.Get("filetype-image", IconSize.Small, Res)
+        InsertBulletsToolStripMenuItem.Image = IconManager.Get("list-add", IconSize.Small, Res)
+        RemoveBulletsToolStripMenuItem.Image = IconManager.Get("list-remove", IconSize.Small, Res)
 
-        ' Style
+        ' Style Menu
         ColorPanelToolStripMenuItem.Image = IconManager.Get("color-picker", IconSize.Small, Res)
         TextColorToolStripMenuItem.Image = IconManager.Get("fill-color", IconSize.Small, Res)
         HighlightToolStripMenuItem.Image = IconManager.Get("format-text-highlight", IconSize.Small, Res)
-        InsertBulletsToolStripMenuItem.Image = IconManager.Get("list-add", IconSize.Small, Res)
-        RemoveBulletsToolStripMenuItem.Image = IconManager.Get("list-remove", IconSize.Small, Res)
         EditStyleToolStripMenuItem.Image = IconManager.Get("template", IconSize.Small, Res)
 
-        ' Tools
+        ' Text Menu
+        FontToolStripMenuItem.Image = IconManager.Get("font", IconSize.Small, Res)
+        BoldToolStripMenuItem.Image = IconManager.Get("format-text-bold", IconSize.Small, Res)
+        ItalicToolStripMenuItem.Image = IconManager.Get("format-text-italic", IconSize.Small, Res)
+        UnderlineToolStripMenuItem.Image = IconManager.Get("format-text-underline", IconSize.Small, Res)
+        StrikeToolStripMenuItem.Image = IconManager.Get("format-text-strikethrough", IconSize.Small, Res)
+        AlignLeftToolStripMenuItem.Image = IconManager.Get("format-justify-left", IconSize.Small, Res)
+        AlignCenterToolStripMenuItem.Image = IconManager.Get("format-justify-center", IconSize.Small, Res)
+        AlignRightToolStripMenuItem.Image = IconManager.Get("format-justify-right", IconSize.Small, Res)
+        IncreaseIndentToolStripMenuItem.Image = IconManager.Get("format-indent-more", IconSize.Small, Res)
+        DecreaseIndentToolStripMenuItem.Image = IconManager.Get("format-indent-less", IconSize.Small, Res)
+
+        ' Tools Menu
         CharacterEditorToolStripMenuItem.Image = IconManager.Get("language", IconSize.Small, Res)
         UpdateToolStripMenuItem.Image = IconManager.Get("update", IconSize.Small, Res)
         SettingsToolStripMenuItem.Image = IconManager.Get("config", IconSize.Small, Res)
 
-        ' Help
+        ' Help Menu
         AboutToolStripMenuItem.Image = IconManager.Get("help", IconSize.Small, Res)
 
         ' Context Menu
@@ -392,11 +406,6 @@ Public Class MainForm
         RtfEditorForm.RtfCodeTextBox.Text = SelectedDocument.Rtf
     End Sub
 
-    Private Sub BulletToolStripButton_ButtonClick(sender As Object, e As EventArgs)
-        SelectedDocument.BulletIndent = 10
-        SelectedDocument.SelectionBullet = True
-    End Sub
-
     Private Sub MainForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Dim HasSaved As Boolean = False
 
@@ -562,54 +571,6 @@ Public Class MainForm
         CurrentDocument.Modified = OldModified
     End Sub
 
-    Private Sub MainForm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-        If e.Control And e.KeyCode.ToString = "N" Then
-            NewToolStripMenuItem_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "O" Then
-            OpenToolStripMenuItem_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "S" Then
-            SaveToolStripMenuItem_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "F" Then
-            FindToolStripMenuItem_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "B" Then
-            BoldToolStripButton_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "U" Then
-            UnderlineToolStripButton_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "I" Then
-            ItalicToolStripButton_Click(Me, Nothing)
-
-            'The richtextbox wants to insert a tab here, so:
-            e.Handled = True
-            e.SuppressKeyPress = True
-        ElseIf e.Control And e.KeyCode.ToString = "M" Then
-            StrikeToolStripButton_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "F" Then
-            FindToolStripMenuItem_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "L" Then
-            AlignLeftToolStripButton_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "E" Then
-            AlignCenterToolStripButton_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "R" Then
-            AlignRightToolStripButton_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "P" Then
-            PrintToolStripMenuItem_Click(Me, Nothing)
-
-            'Language Pad specific key combos
-        ElseIf e.Control And e.KeyCode.ToString = "T" Then
-            AddPageToolStripMenuItem_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "W" Then
-            RemovePageToolStripMenuItem_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "D" Then
-            DefaultStyleToolStripMenuItem_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "G" Then
-            ApplyStyleToolStripMenuItem_Click(Me, Nothing)
-        ElseIf e.Control And e.KeyCode.ToString = "J" Then
-            If Not NotebookTabs.SelectedIndex = 0 Then NotebookTabs.SelectedIndex -= 1
-        ElseIf e.Control And e.KeyCode.ToString = "K" Then
-            If Not NotebookTabs.SelectedIndex = NotebookTabs.TabPages.Count - 1 Then NotebookTabs.SelectedIndex += 1
-        End If
-    End Sub
-
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         Dim HasSaved As Boolean = False
 
@@ -638,6 +599,7 @@ Public Class MainForm
             .Title = "Untitled",
             .RTF = ""
         }
+
         CurrentDocument.Pages.Add(NewPage)
         CurrentDocument.WordDictionary = New DictionaryFile()
         UpdateTabs()
@@ -843,7 +805,7 @@ Public Class MainForm
     End Sub
 
     Private Sub ZoomInToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomInToolStripMenuItem.Click
-        Dim NewZoom = SelectedDocument.ZoomFactor + 0.25
+        Dim NewZoom = SelectedDocument.ZoomFactor + 0.2
 
         If NewZoom >= 64 Then
             SelectedDocument.ZoomFactor = 63
@@ -853,7 +815,7 @@ Public Class MainForm
     End Sub
 
     Private Sub ZoomOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomOutToolStripMenuItem.Click
-        Dim NewZoom = SelectedDocument.ZoomFactor - 0.25
+        Dim NewZoom = SelectedDocument.ZoomFactor - 0.2
 
         If NewZoom <= 0.015625 Then
             SelectedDocument.ZoomFactor = 0.015626
@@ -913,8 +875,8 @@ Public Class MainForm
 
         Dim CurrentPos As Integer = SelectedDocument.SelectionStart
         Dim CurrentLength As Integer = SelectedDocument.SelectionLength
-
         Dim OldClip As Object = Clipboard.GetDataObject()
+
         SelectedDocument.SelectAll()
         TempRTF.SelectAll()
         TempRTF.Copy()
@@ -938,6 +900,7 @@ Public Class MainForm
         If SelectedDocument.SelectionLength = 0 Then Exit Sub
 
         SuspendLayout()
+
         Dim TempRTF As New ExtendedRichTextBox With {
             .Rtf = SelectedDocument.Rtf,
             .SelectionStart = SelectedDocument.SelectionStart,
@@ -952,8 +915,8 @@ Public Class MainForm
 
         Dim CurrentPos As Integer = SelectedDocument.SelectionStart
         Dim CurrentLength As Integer = SelectedDocument.SelectionLength
-
         Dim OldClip As Object = Clipboard.GetDataObject
+
         SelectedDocument.SelectAll()
         TempRTF.SelectAll()
         TempRTF.Copy()
@@ -967,18 +930,6 @@ Public Class MainForm
         ResumeLayout()
 
         SelectedDocument.SelectionAlignment = StyleDialog.StyleAlignment
-    End Sub
-
-    Private Sub SubscriptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubscriptToolStripMenuItem.Click
-        SelectedDocument.SelectionCharOffset = -10
-    End Sub
-
-    Private Sub SuperscriptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SuperscriptToolStripMenuItem.Click
-        SelectedDocument.SelectionCharOffset = 10
-    End Sub
-
-    Private Sub BaselineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BaselineToolStripMenuItem.Click
-        SelectedDocument.SelectionCharOffset = 0
     End Sub
 
     Private Sub TextColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TextColorToolStripMenuItem.Click
@@ -1141,34 +1092,19 @@ Public Class MainForm
     End Sub
 
     Private Sub FontToolStripButton_Click(sender As Object, e As EventArgs) Handles FontToolStripButton.Click
-        DisableFontChange = True
-
-        Dim FontPicker As New FontDialog With {
-            .AllowSimulations = True,
-            .ShowColor = True,
-            .ShowEffects = True,
-            .Color = SelectedDocument.SelectionColor,
-            .Font = SelectedDocument.SelectionFont
-        }
-
-        If FontPicker.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            SelectedDocument.SelectionColor = FontPicker.Color
-            SelectedDocument.SelectionFont = FontPicker.Font
-        End If
-
-        DisableFontChange = False
+        FontToolStripMenuItem_Click(Me, e)
     End Sub
 
-    Private Sub AlignLeftToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignRightToolStripButton.Click
-        SelectedDocument.SelectionAlignment = HorizontalAlignment.Left
+    Private Sub AlignLeftToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignLeftToolStripButton.Click
+        AlignLeftToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub AlignCenterToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignCenterToolStripButton.Click
-        SelectedDocument.SelectionAlignment = HorizontalAlignment.Center
+        AlignCenterToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub AlignRightToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignRightToolStripButton.Click
-        SelectedDocument.SelectionAlignment = HorizontalAlignment.Right
+        AlignRightToolStripButton_Click(Me, e)
     End Sub
 
     Private Sub IndentToolStripButton_Click(sender As Object, e As EventArgs) Handles IndentToolStripButton.Click
@@ -1176,19 +1112,19 @@ Public Class MainForm
     End Sub
 
     Private Sub BoldToolStripButton_Click(sender As Object, e As EventArgs) Handles BoldToolStripButton.Click
-        ApplyStyle(SelectedDocument, FontStyle.Bold)
+        BoldToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub ItalicToolStripButton_Click(sender As Object, e As EventArgs) Handles ItalicToolStripButton.Click
-        ApplyStyle(SelectedDocument, FontStyle.Italic)
+        ItalicToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub UnderlineToolStripButton_Click(sender As Object, e As EventArgs) Handles UnderlineToolStripButton.Click
-        ApplyStyle(SelectedDocument, FontStyle.Underline)
+        UnderlineToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub StrikeToolStripButton_Click(sender As Object, e As EventArgs) Handles StrikeToolStripButton.Click
-        ApplyStyle(SelectedDocument, FontStyle.Strikeout)
+        StrikeToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub ThemeCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ThemeCombo.SelectedIndexChanged
@@ -1241,7 +1177,7 @@ Public Class MainForm
         MainToolStripContainer.RightToolStripPanelVisible = False
     End Sub
 
-    Private Sub BtnTransparentColor_Click(sender As Object, e As EventArgs) Handles TransparentColorButton.Click
+    Private Sub TransparentColorButton_Click(sender As Object, e As EventArgs) Handles TransparentColorButton.Click
         If TextColorRadio.Checked Then
             SelectedDocument.SelectionColor = Color.Transparent
         Else
@@ -1287,5 +1223,113 @@ Public Class MainForm
 
     Private Sub SelectedDocument_GotFocus(sender As Object, e As EventArgs) Handles SelectedDocument.GotFocus
         LastFocused = SelectedDocument
+    End Sub
+
+    Private Sub NewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewWindowToolStripMenuItem.Click
+        Process.Start(New ProcessStartInfo(Application.ExecutablePath))
+    End Sub
+
+    Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
+        DisableFontChange = True
+
+        Dim FontPicker As New FontDialog With {
+            .AllowSimulations = True,
+            .ShowColor = True,
+            .ShowEffects = True,
+            .Color = SelectedDocument.SelectionColor,
+            .Font = SelectedDocument.SelectionFont
+        }
+
+        If FontPicker.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            SelectedDocument.SelectionColor = FontPicker.Color
+            SelectedDocument.SelectionFont = FontPicker.Font
+        End If
+
+        DisableFontChange = False
+    End Sub
+
+    Private Sub SubscriptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubscriptToolStripMenuItem.Click
+        SelectedDocument.SelectionCharOffset = -10
+    End Sub
+
+    Private Sub SuperscriptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SuperscriptToolStripMenuItem.Click
+        SelectedDocument.SelectionCharOffset = 10
+    End Sub
+
+    Private Sub BaselineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BaselineToolStripMenuItem.Click
+        SelectedDocument.SelectionCharOffset = 0
+    End Sub
+
+    Private Sub BoldToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BoldToolStripMenuItem.Click
+        ApplyStyle(SelectedDocument, FontStyle.Bold)
+    End Sub
+
+    Private Sub ItalicToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ItalicToolStripMenuItem.Click
+        ApplyStyle(SelectedDocument, FontStyle.Italic)
+    End Sub
+
+    Private Sub UnderlineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnderlineToolStripMenuItem.Click
+        ApplyStyle(SelectedDocument, FontStyle.Underline)
+    End Sub
+
+    Private Sub StrikeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StrikeToolStripMenuItem.Click
+        ApplyStyle(SelectedDocument, FontStyle.Strikeout)
+    End Sub
+
+    Private Sub AlignLeftToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlignLeftToolStripMenuItem.Click
+        SelectedDocument.SelectionAlignment = HorizontalAlignment.Left
+    End Sub
+
+    Private Sub AlignCenterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlignCenterToolStripMenuItem.Click
+        SelectedDocument.SelectionAlignment = HorizontalAlignment.Center
+    End Sub
+
+    Private Sub AlignRightToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlignRightToolStripMenuItem.Click
+        SelectedDocument.SelectionAlignment = HorizontalAlignment.Right
+    End Sub
+
+    Private Sub PreviousPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PreviousPageToolStripMenuItem.Click
+        If Not NotebookTabs.SelectedIndex = 0 Then NotebookTabs.SelectedIndex -= 1
+    End Sub
+
+    Private Sub NextPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NextPageToolStripMenuItem.Click
+        If Not NotebookTabs.SelectedIndex = NotebookTabs.TabPages.Count - 1 Then NotebookTabs.SelectedIndex += 1
+    End Sub
+
+    Private Sub IncreaseIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IncreaseIndentToolStripMenuItem.Click
+        Dim NewIndent = SelectedDocument.SelectionIndent + 30
+        SelectedDocument.SelectionIndent = NewIndent
+    End Sub
+
+    Private Sub DecreaseIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DecreaseIndentToolStripMenuItem.Click
+        Dim NewIndent = SelectedDocument.SelectionIndent - 30
+        SelectedDocument.SelectionIndent = Math.Max(0, NewIndent)
+    End Sub
+
+    Private Sub SelectedDocument_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SelectedDocument.KeyPress
+        ' Suppress tab character insertion
+        If e.KeyChar = Chr(9) Then ' Tab
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub SelectedDocument_KeyUp(sender As Object, e As KeyEventArgs) Handles SelectedDocument.KeyUp
+        If Not e.Control Then ' CTRL + TAB/ CTRL + SHIFT + TAB handle bullet indent
+            If e.KeyCode = Keys.Tab AndAlso Not e.Modifiers = Keys.Shift Then
+                IncreaseIndentToolStripMenuItem_Click(Me, e)
+            ElseIf e.Modifiers = Keys.Shift AndAlso e.KeyCode = Keys.Tab Then
+                DecreaseIndentToolStripMenuItem_Click(Me, e)
+            End If
+        End If
+    End Sub
+
+    Private Sub IncreaseBulletIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IncreaseBulletIndentToolStripMenuItem.Click
+        Dim NewIndent = SelectedDocument.BulletIndent + 30
+        SelectedDocument.BulletIndent = NewIndent
+    End Sub
+
+    Private Sub DecreaseBulletIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DecreaseBulletIndentToolStripMenuItem.Click
+        Dim NewIndent = SelectedDocument.BulletIndent - 30
+        SelectedDocument.BulletIndent = Math.Max(0, NewIndent)
     End Sub
 End Class
