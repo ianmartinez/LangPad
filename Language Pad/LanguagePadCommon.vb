@@ -33,29 +33,33 @@ Module LanguagePadCommon
         Return AppVersion.Major & If(AppVersion.Minor = 0, "", "." & AppVersion.Minor)
     End Function
 
-    Public Function ResizeImage(ByVal sourceImage As Image, ByVal imageSize As Size, Optional ByVal preserveAspect As Boolean = True) As Image
+    Public Function ResizeImage(ByVal sourceImage As Image, ByVal newSize As Size, Optional ByVal preserveAspect As Boolean = True) As Image
+        Dim adjustedSize = GetAdjustedSize(sourceImage.Size, newSize, preserveAspect)
+
+        Dim NewImage As Image = New Bitmap(adjustedSize.Width, adjustedSize.Height)
+        Using ImageGraphics As Graphics = Graphics.FromImage(NewImage)
+            ImageGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic
+            ImageGraphics.DrawImage(sourceImage, 0, 0, adjustedSize.Width, adjustedSize.Height)
+        End Using
+
+        Return NewImage
+    End Function
+
+    Public Function GetAdjustedSize(ByVal oldSize As Size, ByVal newSize As Size, ByVal preserveAspect As Boolean) As Size
         Dim NewWidth As Integer
         Dim NewHeight As Integer
 
         If preserveAspect Then
-            Dim OriginalWidth As Integer = sourceImage.Width
-            Dim OriginalHeight As Integer = sourceImage.Height
-            Dim PercentWidth As Single = imageSize.Width / CSng(OriginalWidth)
-            Dim PercentHeight As Single = imageSize.Height / CSng(OriginalHeight)
+            Dim PercentWidth As Single = newSize.Width / CSng(oldSize.Width)
+            Dim PercentHeight As Single = newSize.Height / CSng(oldSize.Height)
             Dim Percent As Single = If(PercentHeight < PercentWidth, PercentHeight, PercentWidth)
-            NewWidth = CInt(OriginalWidth * Percent)
-            NewHeight = CInt(OriginalHeight * Percent)
+            NewWidth = CInt(oldSize.Width * Percent)
+            NewHeight = CInt(oldSize.Height * Percent)
         Else
-            NewWidth = imageSize.Width
-            NewHeight = imageSize.Height
+            NewWidth = newSize.Width
+            NewHeight = newSize.Height
         End If
 
-        Dim NewImage As Image = New Bitmap(NewWidth, NewHeight)
-        Using ImageGraphics As Graphics = Graphics.FromImage(NewImage)
-            ImageGraphics.InterpolationMode = InterpolationMode.HighQualityBicubic
-            ImageGraphics.DrawImage(sourceImage, 0, 0, NewWidth, NewHeight)
-        End Using
-
-        Return NewImage
+        Return New Size(NewWidth, NewHeight)
     End Function
 End Module

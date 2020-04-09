@@ -429,10 +429,6 @@ Public Class MainForm
         My.Settings.Save()
     End Sub
 
-    Private Sub InsertImage(sender As Object, e As EventArgs)
-        SelectedDocument.InsertImage(CType(sender, Button).Image)
-    End Sub
-
     Private Sub ApplyStyle(ByVal rtb As ExtendedRichTextBox, ByVal fontStyle As FontStyle)
         If rtb.SelectionLength = 0 Then
             rtb.SelectionFont = New Font(rtb.SelectionFont, rtb.SelectionFont.Style Xor fontStyle)
@@ -793,9 +789,17 @@ Public Class MainForm
         SelectedDocument.Copy()
     End Sub
 
+    Public Sub InsertImage(img As Image)
+        ImportImageDialog.SelectedImage = img
+
+        If ImportImageDialog.ShowDialog() = DialogResult.OK Then
+            SelectedDocument.InsertImage(ImportImageDialog.SelectedImage)
+        End If
+    End Sub
+
     Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
         If Clipboard.ContainsImage Then
-            SelectedDocument.InsertImage(Clipboard.GetImage)
+            InsertImage(Clipboard.GetImage())
         Else
             SelectedDocument.Paste()
         End If
@@ -849,12 +853,7 @@ Public Class MainForm
     Private Sub ImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImageToolStripMenuItem.Click
         If OpenImageDialog.ShowDialog() = DialogResult.OK Then
             Dim Img As Image = Image.FromFile(OpenImageDialog.FileName)
-
-            If Img.Width * Img.Height >= My.Computer.Screen.Bounds.Width * My.Computer.Screen.Bounds.Height Then
-                Img = ResizeImage(Img, New Size(My.Computer.Screen.Bounds.Width, My.Computer.Screen.Bounds.Height), True)
-            End If
-
-            SelectedDocument.InsertImage(Img)
+            InsertImage(Img)
         End If
     End Sub
 

@@ -31,6 +31,7 @@ Partial Class ImportImageDialog
         Me.HeightNud = New System.Windows.Forms.NumericUpDown()
         Me.HeightLabel = New System.Windows.Forms.Label()
         Me.LockAspectCheckBox = New System.Windows.Forms.CheckBox()
+        Me.RefreshButton = New System.Windows.Forms.Button()
         Me.ButtonTableLayout.SuspendLayout()
         CType(Me.PreviewPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.WidthNud, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,7 +46,7 @@ Partial Class ImportImageDialog
         Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.ButtonTableLayout.Controls.Add(Me.OkDialogButton, 0, 0)
         Me.ButtonTableLayout.Controls.Add(Me.CancelDialogButton, 1, 0)
-        Me.ButtonTableLayout.Location = New System.Drawing.Point(493, 554)
+        Me.ButtonTableLayout.Location = New System.Drawing.Point(742, 681)
         Me.ButtonTableLayout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ButtonTableLayout.Name = "ButtonTableLayout"
         Me.ButtonTableLayout.RowCount = 1
@@ -77,18 +78,19 @@ Partial Class ImportImageDialog
         'PreviewPictureBox
         '
         Me.PreviewPictureBox.BackColor = System.Drawing.Color.Black
+        Me.PreviewPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PreviewPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PreviewPictureBox.Dock = System.Windows.Forms.DockStyle.Top
         Me.PreviewPictureBox.Location = New System.Drawing.Point(0, 0)
         Me.PreviewPictureBox.Name = "PreviewPictureBox"
-        Me.PreviewPictureBox.Size = New System.Drawing.Size(729, 470)
+        Me.PreviewPictureBox.Size = New System.Drawing.Size(978, 613)
         Me.PreviewPictureBox.TabIndex = 1
         Me.PreviewPictureBox.TabStop = False
         '
         'WidthLabel
         '
         Me.WidthLabel.AutoSize = True
-        Me.WidthLabel.Location = New System.Drawing.Point(13, 502)
+        Me.WidthLabel.Location = New System.Drawing.Point(13, 643)
         Me.WidthLabel.Name = "WidthLabel"
         Me.WidthLabel.Size = New System.Drawing.Size(54, 20)
         Me.WidthLabel.TabIndex = 2
@@ -96,7 +98,7 @@ Partial Class ImportImageDialog
         '
         'WidthNud
         '
-        Me.WidthNud.Location = New System.Drawing.Point(73, 500)
+        Me.WidthNud.Location = New System.Drawing.Point(73, 641)
         Me.WidthNud.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.WidthNud.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.WidthNud.Name = "WidthNud"
@@ -106,7 +108,7 @@ Partial Class ImportImageDialog
         '
         'HeightNud
         '
-        Me.HeightNud.Location = New System.Drawing.Point(270, 500)
+        Me.HeightNud.Location = New System.Drawing.Point(270, 641)
         Me.HeightNud.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.HeightNud.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.HeightNud.Name = "HeightNud"
@@ -117,7 +119,7 @@ Partial Class ImportImageDialog
         'HeightLabel
         '
         Me.HeightLabel.AutoSize = True
-        Me.HeightLabel.Location = New System.Drawing.Point(204, 502)
+        Me.HeightLabel.Location = New System.Drawing.Point(204, 643)
         Me.HeightLabel.Name = "HeightLabel"
         Me.HeightLabel.Size = New System.Drawing.Size(60, 20)
         Me.HeightLabel.TabIndex = 4
@@ -128,12 +130,22 @@ Partial Class ImportImageDialog
         Me.LockAspectCheckBox.AutoSize = True
         Me.LockAspectCheckBox.Checked = True
         Me.LockAspectCheckBox.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.LockAspectCheckBox.Location = New System.Drawing.Point(542, 501)
+        Me.LockAspectCheckBox.Location = New System.Drawing.Point(406, 642)
         Me.LockAspectCheckBox.Name = "LockAspectCheckBox"
         Me.LockAspectCheckBox.Size = New System.Drawing.Size(165, 24)
-        Me.LockAspectCheckBox.TabIndex = 5
+        Me.LockAspectCheckBox.TabIndex = 4
         Me.LockAspectCheckBox.Text = "Lock Aspect Ratio"
         Me.LockAspectCheckBox.UseVisualStyleBackColor = True
+        '
+        'RefreshButton
+        '
+        Me.RefreshButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RefreshButton.Location = New System.Drawing.Point(865, 636)
+        Me.RefreshButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.RefreshButton.Name = "RefreshButton"
+        Me.RefreshButton.Size = New System.Drawing.Size(100, 35)
+        Me.RefreshButton.TabIndex = 6
+        Me.RefreshButton.Text = "Refresh"
         '
         'ImportImageDialog
         '
@@ -141,7 +153,8 @@ Partial Class ImportImageDialog
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.CancelDialogButton
-        Me.ClientSize = New System.Drawing.Size(729, 617)
+        Me.ClientSize = New System.Drawing.Size(978, 744)
+        Me.Controls.Add(Me.RefreshButton)
         Me.Controls.Add(Me.LockAspectCheckBox)
         Me.Controls.Add(Me.HeightNud)
         Me.Controls.Add(Me.HeightLabel)
@@ -154,6 +167,7 @@ Partial Class ImportImageDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "ImportImageDialog"
+        Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Import Image"
@@ -174,4 +188,5 @@ Partial Class ImportImageDialog
     Friend WithEvents HeightLabel As Label
     Friend WithEvents LockAspectCheckBox As CheckBox
     Friend WithEvents PreviewPictureBox As PictureBox
+    Friend WithEvents RefreshButton As Button
 End Class

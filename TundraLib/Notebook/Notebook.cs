@@ -10,7 +10,7 @@ namespace ThornWriter.NotebookFile
     public class Notebook
     {
         public const double CurrentSpec = 3.0;
-
+        
         public double SpecVersion { get; set; } = CurrentSpec;
 
         public string Title { get; set; } = "";
