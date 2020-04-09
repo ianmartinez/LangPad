@@ -768,11 +768,21 @@ Public Class MainForm
     End Sub
 
     Private Sub UndoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UndoToolStripMenuItem.Click
-        If SelectedDocument.CanUndo Then SelectedDocument.Undo()
+        If SelectedDocument.CanUndo Then
+            Dim OldStart = SelectedDocument.SelectionStart
+            SelectedDocument.Undo()
+            SelectedDocument.SelectionStart = Math.Min(OldStart, SelectedDocument.TextLength - 1)
+            SelectedDocument.SelectionLength = 0
+        End If
     End Sub
 
     Private Sub RedoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RedoToolStripMenuItem.Click
-        If SelectedDocument.CanRedo Then SelectedDocument.Redo()
+        If SelectedDocument.CanRedo Then
+            Dim OldStart = SelectedDocument.SelectionStart
+            SelectedDocument.Redo()
+            SelectedDocument.SelectionStart = Math.Min(OldStart, SelectedDocument.TextLength - 1)
+            SelectedDocument.SelectionLength = 0
+        End If
     End Sub
 
     Private Sub CutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutToolStripMenuItem.Click
@@ -1303,7 +1313,7 @@ Public Class MainForm
 
     Private Sub DecreaseIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DecreaseIndentToolStripMenuItem.Click
         Dim NewIndent = SelectedDocument.SelectionIndent - 30
-        SelectedDocument.SelectionIndent = Math.Max(0, NewIndent)
+        SelectedDocument.SelectionIndent = NewIndent
     End Sub
 
     Private Sub SelectedDocument_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SelectedDocument.KeyPress
@@ -1330,6 +1340,28 @@ Public Class MainForm
 
     Private Sub DecreaseBulletIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DecreaseBulletIndentToolStripMenuItem.Click
         Dim NewIndent = SelectedDocument.BulletIndent - 30
-        SelectedDocument.BulletIndent = Math.Max(0, NewIndent)
+        SelectedDocument.BulletIndent = NewIndent
+    End Sub
+
+    Private Sub IncreaseHangingIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IncreaseHangingIndentToolStripMenuItem.Click
+        Dim NewIndent = SelectedDocument.SelectionHangingIndent + 30
+        SelectedDocument.SelectionHangingIndent = NewIndent
+    End Sub
+
+    Private Sub DecreaseHangingIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DecreaseHangingIndentToolStripMenuItem.Click
+        Dim NewIndent = SelectedDocument.SelectionHangingIndent - 30
+        SelectedDocument.SelectionHangingIndent = NewIndent
+    End Sub
+
+    Private Sub ResetIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetIndentToolStripMenuItem.Click
+        SelectedDocument.SelectionIndent = 0
+    End Sub
+
+    Private Sub ResetBulletIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetBulletIndentToolStripMenuItem.Click
+        SelectedDocument.BulletIndent = 0
+    End Sub
+
+    Private Sub ResetHangingIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetHangingIndentToolStripMenuItem.Click
+        SelectedDocument.SelectionHangingIndent = 0
     End Sub
 End Class

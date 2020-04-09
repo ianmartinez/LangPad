@@ -78,7 +78,6 @@ Partial Class MainForm
         Me.rbHighlight = New System.Windows.Forms.RadioButton()
         Me.TextColorRadio = New System.Windows.Forms.RadioButton()
         Me.PropertiesContainerPanel = New TundraLib.DoubleBufferedPanel()
-        Me.PropertiesPanel = New Language_Pad.PropertiesEditor()
         Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.DataToolStrip = New System.Windows.Forms.ToolStrip()
         Me.CharCountToolStripLabel = New System.Windows.Forms.ToolStripLabel()
@@ -221,6 +220,13 @@ Partial Class MainForm
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator23 = New System.Windows.Forms.ToolStripSeparator()
+        Me.IncreaseHangingIndentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DecreaseHangingIndentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PropertiesPanel = New Language_Pad.PropertiesEditor()
+        Me.ResetIndentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetBulletIndentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetHangingIndentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainContextMenu.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
@@ -871,14 +877,6 @@ Partial Class MainForm
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
         Me.PropertiesContainerPanel.Size = New System.Drawing.Size(352, 962)
         Me.PropertiesContainerPanel.TabIndex = 13
-        '
-        'PropertiesPanel
-        '
-        Me.PropertiesPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PropertiesPanel.Location = New System.Drawing.Point(0, 0)
-        Me.PropertiesPanel.Name = "PropertiesPanel"
-        Me.PropertiesPanel.Size = New System.Drawing.Size(352, 962)
-        Me.PropertiesPanel.TabIndex = 0
         '
         'MainToolStripContainer
         '
@@ -1744,7 +1742,7 @@ Partial Class MainForm
         '
         'FormatToolStripMenuItem
         '
-        Me.FormatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.ToolStripSeparator18, Me.AlignLeftToolStripMenuItem, Me.AlignCenterToolStripMenuItem, Me.AlignRightToolStripMenuItem, Me.ToolStripSeparator19, Me.BoldToolStripMenuItem, Me.ItalicToolStripMenuItem, Me.UnderlineToolStripMenuItem, Me.StrikeToolStripMenuItem, Me.ToolStripSeparator20, Me.IncreaseIndentToolStripMenuItem, Me.DecreaseIndentToolStripMenuItem, Me.ToolStripSeparator22, Me.IncreaseBulletIndentToolStripMenuItem, Me.DecreaseBulletIndentToolStripMenuItem, Me.ToolStripSeparator17, Me.SubscriptToolStripMenuItem, Me.SuperscriptToolStripMenuItem, Me.BaselineToolStripMenuItem})
+        Me.FormatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.ToolStripSeparator18, Me.AlignLeftToolStripMenuItem, Me.AlignCenterToolStripMenuItem, Me.AlignRightToolStripMenuItem, Me.ToolStripSeparator19, Me.BoldToolStripMenuItem, Me.ItalicToolStripMenuItem, Me.UnderlineToolStripMenuItem, Me.StrikeToolStripMenuItem, Me.ToolStripSeparator20, Me.IncreaseIndentToolStripMenuItem, Me.DecreaseIndentToolStripMenuItem, Me.ResetIndentToolStripMenuItem, Me.ToolStripSeparator22, Me.IncreaseBulletIndentToolStripMenuItem, Me.DecreaseBulletIndentToolStripMenuItem, Me.ResetBulletIndentToolStripMenuItem, Me.ToolStripSeparator23, Me.IncreaseHangingIndentToolStripMenuItem, Me.DecreaseHangingIndentToolStripMenuItem, Me.ResetHangingIndentToolStripMenuItem, Me.ToolStripSeparator17, Me.SubscriptToolStripMenuItem, Me.SuperscriptToolStripMenuItem, Me.BaselineToolStripMenuItem})
         Me.FormatToolStripMenuItem.Name = "FormatToolStripMenuItem"
         Me.FormatToolStripMenuItem.Size = New System.Drawing.Size(58, 29)
         Me.FormatToolStripMenuItem.Text = "Text"
@@ -1754,96 +1752,96 @@ Partial Class MainForm
         Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
         Me.FontToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
-        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.FontToolStripMenuItem.Text = "Font..."
         '
         'ToolStripSeparator18
         '
         Me.ToolStripSeparator18.Name = "ToolStripSeparator18"
-        Me.ToolStripSeparator18.Size = New System.Drawing.Size(412, 6)
+        Me.ToolStripSeparator18.Size = New System.Drawing.Size(424, 6)
         '
         'AlignLeftToolStripMenuItem
         '
         Me.AlignLeftToolStripMenuItem.Name = "AlignLeftToolStripMenuItem"
         Me.AlignLeftToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.AlignLeftToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.AlignLeftToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.AlignLeftToolStripMenuItem.Text = "Align Left"
         '
         'AlignCenterToolStripMenuItem
         '
         Me.AlignCenterToolStripMenuItem.Name = "AlignCenterToolStripMenuItem"
         Me.AlignCenterToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
-        Me.AlignCenterToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.AlignCenterToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.AlignCenterToolStripMenuItem.Text = "Align Center"
         '
         'AlignRightToolStripMenuItem
         '
         Me.AlignRightToolStripMenuItem.Name = "AlignRightToolStripMenuItem"
         Me.AlignRightToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.AlignRightToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.AlignRightToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.AlignRightToolStripMenuItem.Text = "Align Right"
         '
         'ToolStripSeparator19
         '
         Me.ToolStripSeparator19.Name = "ToolStripSeparator19"
-        Me.ToolStripSeparator19.Size = New System.Drawing.Size(412, 6)
+        Me.ToolStripSeparator19.Size = New System.Drawing.Size(424, 6)
         '
         'BoldToolStripMenuItem
         '
         Me.BoldToolStripMenuItem.Name = "BoldToolStripMenuItem"
         Me.BoldToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
-        Me.BoldToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.BoldToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.BoldToolStripMenuItem.Text = "Bold"
         '
         'ItalicToolStripMenuItem
         '
         Me.ItalicToolStripMenuItem.Name = "ItalicToolStripMenuItem"
         Me.ItalicToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.I), System.Windows.Forms.Keys)
-        Me.ItalicToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.ItalicToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.ItalicToolStripMenuItem.Text = "Italic"
         '
         'UnderlineToolStripMenuItem
         '
         Me.UnderlineToolStripMenuItem.Name = "UnderlineToolStripMenuItem"
         Me.UnderlineToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.U), System.Windows.Forms.Keys)
-        Me.UnderlineToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.UnderlineToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.UnderlineToolStripMenuItem.Text = "Underline"
         '
         'StrikeToolStripMenuItem
         '
         Me.StrikeToolStripMenuItem.Name = "StrikeToolStripMenuItem"
         Me.StrikeToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
-        Me.StrikeToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.StrikeToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.StrikeToolStripMenuItem.Text = "Strike"
         '
         'ToolStripSeparator20
         '
         Me.ToolStripSeparator20.Name = "ToolStripSeparator20"
-        Me.ToolStripSeparator20.Size = New System.Drawing.Size(412, 6)
+        Me.ToolStripSeparator20.Size = New System.Drawing.Size(424, 6)
         '
         'IncreaseIndentToolStripMenuItem
         '
         Me.IncreaseIndentToolStripMenuItem.Name = "IncreaseIndentToolStripMenuItem"
-        Me.IncreaseIndentToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.IncreaseIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.IncreaseIndentToolStripMenuItem.Text = "Increase Indent"
         '
         'DecreaseIndentToolStripMenuItem
         '
         Me.DecreaseIndentToolStripMenuItem.Name = "DecreaseIndentToolStripMenuItem"
-        Me.DecreaseIndentToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.DecreaseIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.DecreaseIndentToolStripMenuItem.Text = "Decrease Indent"
         Me.DecreaseIndentToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'ToolStripSeparator22
         '
         Me.ToolStripSeparator22.Name = "ToolStripSeparator22"
-        Me.ToolStripSeparator22.Size = New System.Drawing.Size(412, 6)
+        Me.ToolStripSeparator22.Size = New System.Drawing.Size(424, 6)
         '
         'IncreaseBulletIndentToolStripMenuItem
         '
         Me.IncreaseBulletIndentToolStripMenuItem.Name = "IncreaseBulletIndentToolStripMenuItem"
         Me.IncreaseBulletIndentToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Tab), System.Windows.Forms.Keys)
-        Me.IncreaseBulletIndentToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.IncreaseBulletIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.IncreaseBulletIndentToolStripMenuItem.Text = "Increase Bullet Indent"
         '
         'DecreaseBulletIndentToolStripMenuItem
@@ -1851,14 +1849,14 @@ Partial Class MainForm
         Me.DecreaseBulletIndentToolStripMenuItem.Name = "DecreaseBulletIndentToolStripMenuItem"
         Me.DecreaseBulletIndentToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.Tab), System.Windows.Forms.Keys)
-        Me.DecreaseBulletIndentToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.DecreaseBulletIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.DecreaseBulletIndentToolStripMenuItem.Text = "Decrease Bullet Indent"
         Me.DecreaseBulletIndentToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'ToolStripSeparator17
         '
         Me.ToolStripSeparator17.Name = "ToolStripSeparator17"
-        Me.ToolStripSeparator17.Size = New System.Drawing.Size(412, 6)
+        Me.ToolStripSeparator17.Size = New System.Drawing.Size(424, 6)
         '
         'SubscriptToolStripMenuItem
         '
@@ -1866,7 +1864,7 @@ Partial Class MainForm
         Me.SubscriptToolStripMenuItem.Name = "SubscriptToolStripMenuItem"
         Me.SubscriptToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.Down), System.Windows.Forms.Keys)
-        Me.SubscriptToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.SubscriptToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.SubscriptToolStripMenuItem.Text = "Subscript"
         '
         'SuperscriptToolStripMenuItem
@@ -1875,7 +1873,7 @@ Partial Class MainForm
         Me.SuperscriptToolStripMenuItem.Name = "SuperscriptToolStripMenuItem"
         Me.SuperscriptToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.Up), System.Windows.Forms.Keys)
-        Me.SuperscriptToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.SuperscriptToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.SuperscriptToolStripMenuItem.Text = "Superscript"
         '
         'BaselineToolStripMenuItem
@@ -1884,7 +1882,7 @@ Partial Class MainForm
         Me.BaselineToolStripMenuItem.Name = "BaselineToolStripMenuItem"
         Me.BaselineToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.Right), System.Windows.Forms.Keys)
-        Me.BaselineToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.BaselineToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.BaselineToolStripMenuItem.Text = "Baseline"
         '
         'ToolsToolStripMenuItem
@@ -1939,6 +1937,52 @@ Partial Class MainForm
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(176, 34)
         Me.AboutToolStripMenuItem.Text = "About..."
+        '
+        'ToolStripSeparator23
+        '
+        Me.ToolStripSeparator23.Name = "ToolStripSeparator23"
+        Me.ToolStripSeparator23.Size = New System.Drawing.Size(424, 6)
+        '
+        'IncreaseHangingIndentToolStripMenuItem
+        '
+        Me.IncreaseHangingIndentToolStripMenuItem.Name = "IncreaseHangingIndentToolStripMenuItem"
+        Me.IncreaseHangingIndentToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
+        Me.IncreaseHangingIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
+        Me.IncreaseHangingIndentToolStripMenuItem.Text = "Increase Hanging Indent"
+        '
+        'DecreaseHangingIndentToolStripMenuItem
+        '
+        Me.DecreaseHangingIndentToolStripMenuItem.Name = "DecreaseHangingIndentToolStripMenuItem"
+        Me.DecreaseHangingIndentToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
+        Me.DecreaseHangingIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
+        Me.DecreaseHangingIndentToolStripMenuItem.Text = "Decrease Hanging Indent"
+        '
+        'PropertiesPanel
+        '
+        Me.PropertiesPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PropertiesPanel.Location = New System.Drawing.Point(0, 0)
+        Me.PropertiesPanel.Name = "PropertiesPanel"
+        Me.PropertiesPanel.Size = New System.Drawing.Size(352, 962)
+        Me.PropertiesPanel.TabIndex = 0
+        '
+        'ResetIndentToolStripMenuItem
+        '
+        Me.ResetIndentToolStripMenuItem.Name = "ResetIndentToolStripMenuItem"
+        Me.ResetIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
+        Me.ResetIndentToolStripMenuItem.Text = "Reset Indent"
+        '
+        'ResetBulletIndentToolStripMenuItem
+        '
+        Me.ResetBulletIndentToolStripMenuItem.Name = "ResetBulletIndentToolStripMenuItem"
+        Me.ResetBulletIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
+        Me.ResetBulletIndentToolStripMenuItem.Text = "Reset Bullet Indent"
+        '
+        'ResetHangingIndentToolStripMenuItem
+        '
+        Me.ResetHangingIndentToolStripMenuItem.Name = "ResetHangingIndentToolStripMenuItem"
+        Me.ResetHangingIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
+        Me.ResetHangingIndentToolStripMenuItem.Text = "Reset Hanging Indent"
         '
         'MainForm
         '
@@ -2177,4 +2221,10 @@ Partial Class MainForm
     Friend WithEvents ToolStripSeparator22 As ToolStripSeparator
     Friend WithEvents IncreaseBulletIndentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DecreaseBulletIndentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator23 As ToolStripSeparator
+    Friend WithEvents IncreaseHangingIndentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DecreaseHangingIndentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResetIndentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResetBulletIndentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResetHangingIndentToolStripMenuItem As ToolStripMenuItem
 End Class
