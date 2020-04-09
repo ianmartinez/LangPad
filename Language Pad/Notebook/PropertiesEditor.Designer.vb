@@ -26,6 +26,8 @@ Partial Class PropertiesEditor
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PropertiesEditor))
         Me.ttMain = New System.Windows.Forms.ToolTip(Me.components)
         Me.DocumentToolStripContainer = New System.Windows.Forms.ToolStripContainer()
+        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
+        Me.lbPages = New System.Windows.Forms.ListBox()
         Me.DocumentToolStrip = New System.Windows.Forms.ToolStrip()
         Me.PageUpToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PageDownToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -54,11 +56,10 @@ Partial Class PropertiesEditor
         Me.PropertiesTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MainSplitContainer = New System.Windows.Forms.SplitContainer()
-        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
-        Me.lbPages = New System.Windows.Forms.ListBox()
         Me.DocumentToolStripContainer.ContentPanel.SuspendLayout()
         Me.DocumentToolStripContainer.TopToolStripPanel.SuspendLayout()
         Me.DocumentToolStripContainer.SuspendLayout()
+        Me.StylizedPanel1.SuspendLayout()
         Me.DocumentToolStrip.SuspendLayout()
         Me.PropertiesTableLayoutPanel.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -66,7 +67,6 @@ Partial Class PropertiesEditor
         Me.MainSplitContainer.Panel1.SuspendLayout()
         Me.MainSplitContainer.Panel2.SuspendLayout()
         Me.MainSplitContainer.SuspendLayout()
-        Me.StylizedPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DocumentToolStripContainer
@@ -78,7 +78,7 @@ Partial Class PropertiesEditor
         'DocumentToolStripContainer.ContentPanel
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.StylizedPanel1)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(370, 524)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(370, 509)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'DocumentToolStripContainer.LeftToolStripPanel
@@ -88,13 +88,38 @@ Partial Class PropertiesEditor
         '
         'DocumentToolStripContainer.RightToolStripPanel
         '
-        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(370, 565)
+        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(370, 550)
         Me.DocumentToolStripContainer.TabIndex = 81
         Me.DocumentToolStripContainer.Text = "ToolStripContainer1"
         '
         'DocumentToolStripContainer.TopToolStripPanel
         '
         Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.DocumentToolStrip)
+        '
+        'StylizedPanel1
+        '
+        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.StylizedPanel1.Controls.Add(Me.lbPages)
+        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
+        Me.StylizedPanel1.Name = "StylizedPanel1"
+        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.StylizedPanel1.Size = New System.Drawing.Size(370, 509)
+        Me.StylizedPanel1.TabIndex = 80
+        '
+        'lbPages
+        '
+        Me.lbPages.BackColor = System.Drawing.Color.White
+        Me.lbPages.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lbPages.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbPages.ForeColor = System.Drawing.Color.Black
+        Me.lbPages.IntegralHeight = False
+        Me.lbPages.ItemHeight = 20
+        Me.lbPages.Location = New System.Drawing.Point(2, 0)
+        Me.lbPages.Name = "lbPages"
+        Me.lbPages.Size = New System.Drawing.Size(368, 509)
+        Me.lbPages.TabIndex = 15
         '
         'DocumentToolStrip
         '
@@ -237,7 +262,7 @@ Partial Class PropertiesEditor
         Me.txtInfo.Multiline = True
         Me.txtInfo.Name = "txtInfo"
         Me.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo.Size = New System.Drawing.Size(324, 79)
+        Me.txtInfo.Size = New System.Drawing.Size(324, 94)
         Me.txtInfo.TabIndex = 5
         '
         'Label3
@@ -365,7 +390,7 @@ Partial Class PropertiesEditor
         Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.PropertiesTableLayoutPanel.Size = New System.Drawing.Size(370, 425)
+        Me.PropertiesTableLayoutPanel.Size = New System.Drawing.Size(370, 440)
         Me.PropertiesTableLayoutPanel.TabIndex = 82
         '
         'Panel1
@@ -394,33 +419,8 @@ Partial Class PropertiesEditor
         '
         Me.MainSplitContainer.Panel2.Controls.Add(Me.DocumentToolStripContainer)
         Me.MainSplitContainer.Size = New System.Drawing.Size(370, 994)
-        Me.MainSplitContainer.SplitterDistance = 425
+        Me.MainSplitContainer.SplitterDistance = 440
         Me.MainSplitContainer.TabIndex = 83
-        '
-        'StylizedPanel1
-        '
-        Me.StylizedPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedPanel1.Controls.Add(Me.lbPages)
-        Me.StylizedPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.StylizedPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.StylizedPanel1.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
-        Me.StylizedPanel1.Name = "StylizedPanel1"
-        Me.StylizedPanel1.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.StylizedPanel1.Size = New System.Drawing.Size(370, 524)
-        Me.StylizedPanel1.TabIndex = 80
-        '
-        'lbPages
-        '
-        Me.lbPages.BackColor = System.Drawing.Color.White
-        Me.lbPages.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.lbPages.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbPages.ForeColor = System.Drawing.Color.Black
-        Me.lbPages.IntegralHeight = False
-        Me.lbPages.ItemHeight = 20
-        Me.lbPages.Location = New System.Drawing.Point(2, 0)
-        Me.lbPages.Name = "lbPages"
-        Me.lbPages.Size = New System.Drawing.Size(368, 524)
-        Me.lbPages.TabIndex = 15
         '
         'PropertiesEditor
         '
@@ -435,6 +435,7 @@ Partial Class PropertiesEditor
         Me.DocumentToolStripContainer.TopToolStripPanel.PerformLayout()
         Me.DocumentToolStripContainer.ResumeLayout(False)
         Me.DocumentToolStripContainer.PerformLayout()
+        Me.StylizedPanel1.ResumeLayout(False)
         Me.DocumentToolStrip.ResumeLayout(False)
         Me.DocumentToolStrip.PerformLayout()
         Me.PropertiesTableLayoutPanel.ResumeLayout(False)
@@ -444,7 +445,6 @@ Partial Class PropertiesEditor
         Me.MainSplitContainer.Panel2.ResumeLayout(False)
         CType(Me.MainSplitContainer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MainSplitContainer.ResumeLayout(False)
-        Me.StylizedPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
