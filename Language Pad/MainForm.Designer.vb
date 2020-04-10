@@ -226,9 +226,9 @@ Partial Class MainForm
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PropertiesPanel = New Language_Pad.PropertiesEditor()
         Me.ToolStripSeparator24 = New System.Windows.Forms.ToolStripSeparator()
         Me.InsertTabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PropertiesPanel = New Language_Pad.PropertiesEditor()
         Me.MainContextMenu.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
@@ -1978,14 +1978,6 @@ Partial Class MainForm
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(176, 34)
         Me.AboutToolStripMenuItem.Text = "About..."
         '
-        'PropertiesPanel
-        '
-        Me.PropertiesPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PropertiesPanel.Location = New System.Drawing.Point(0, 0)
-        Me.PropertiesPanel.Name = "PropertiesPanel"
-        Me.PropertiesPanel.Size = New System.Drawing.Size(351, 962)
-        Me.PropertiesPanel.TabIndex = 0
-        '
         'ToolStripSeparator24
         '
         Me.ToolStripSeparator24.Name = "ToolStripSeparator24"
@@ -1997,6 +1989,14 @@ Partial Class MainForm
         Me.InsertTabToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D1), System.Windows.Forms.Keys)
         Me.InsertTabToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.InsertTabToolStripMenuItem.Text = "Insert Tab"
+        '
+        'PropertiesPanel
+        '
+        Me.PropertiesPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PropertiesPanel.Location = New System.Drawing.Point(0, 0)
+        Me.PropertiesPanel.Name = "PropertiesPanel"
+        Me.PropertiesPanel.Size = New System.Drawing.Size(351, 962)
+        Me.PropertiesPanel.TabIndex = 0
         '
         'MainForm
         '

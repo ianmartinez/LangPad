@@ -132,6 +132,8 @@ Public Class MainForm
 
         ColorPicker.FullOpen = True
         SetIcons()
+        ZoomInToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl++"
+        ZoomOutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+-"
     End Sub
 
     Public Sub SetIcons()
