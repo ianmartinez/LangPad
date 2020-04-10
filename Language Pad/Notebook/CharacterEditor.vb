@@ -265,7 +265,7 @@ Public Class CharacterEditor
     End Sub
 
     Public Sub RemoveBracketSet(ByVal TextBox As TextBoxBase, ByVal BracketStart As String, ByVal BracketEnd As String)
-        If TextBox.Text.Length >= 2 Then
+        If TextBox.Text.Length >= 2 AndAlso TextBox.SelectionLength = 0 Then ' Infer what the user wants selected
             ' Get the current state of the selection in the text box
             Dim OldSelLength = TextBox.SelectionLength
             Dim OldSelStart = TextBox.SelectionStart
@@ -316,6 +316,19 @@ Public Class CharacterEditor
                 TextBox.Select(Math.Max(0, OldSelStart - 1), OldSelLength)
             Else ' Nothing to remove
                 TextBox.Select(OldSelStart, OldSelLength)
+            End If
+        Else ' The user has already selected the text to search
+            Dim BracketStartPos = TextBox.Text.IndexOf(BracketStart) ' Outermost start bracket
+            Dim BracketEndPos = TextBox.Text.LastIndexOf(BracketEnd) ' Outermost end bracket
+
+            If BracketStartPos <> -1 AndAlso BracketEndPos <> -1 Then
+                ' Remove start bracket
+                TextBox.Select(BracketStartPos, 1)
+                TextBox.SelectedText = ""
+
+                ' Remove end bracket
+                TextBox.Select(BracketEndPos - 1, 1)
+                TextBox.SelectedText = ""
             End If
         End If
     End Sub
