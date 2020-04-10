@@ -14,12 +14,13 @@
             ImportedImage = value
             WidthNud.Value = ImportedImage.Width
             HeightNud.Value = ImportedImage.Height
-            AdjustPreview()
+            RenderAdjustedImage(True)
             Updating = False
         End Set
     End Property
 
     Private Sub OkDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OkDialogButton.Click
+        RenderAdjustedImage()
         DialogResult = DialogResult.OK
         Close()
     End Sub
@@ -29,10 +30,11 @@
         Close()
     End Sub
 
-    Private Sub AdjustPreview()
+    Private Sub RenderAdjustedImage(Optional updatePreview As Boolean = False)
         If (ImportedImage IsNot Nothing) Then
+            ' Force the width And height to update to match
+            ' scaling, if needed.
             Dim OldUpdating = Updating
-
             If LastFocused Is WidthNud Then
                 Updating = False
                 WidthNud_ValueChanged(Me, Nothing)
@@ -41,18 +43,24 @@
                 HeightNud_ValueChanged(Me, Nothing)
             End If
             LastFocused = Nothing
-
             Updating = OldUpdating
 
+            ' Resize image
             AdjustedImage = ResizeImage(ImportedImage, New Size(WidthNud.Value, HeightNud.Value), False)
 
-            If AdjustedImage.Width > PreviewPictureBox.Width OrElse AdjustedImage.Height > PreviewPictureBox.Height Then
-                PreviewPictureBox.BackgroundImageLayout = ImageLayout.Zoom
-            Else
-                PreviewPictureBox.BackgroundImageLayout = ImageLayout.Center
-            End If
+            ' Update preview image
+            If updatePreview Then
+                ' Adjust display to best preview image
+                If AdjustedImage.Width > PreviewPictureBox.Width OrElse AdjustedImage.Height > PreviewPictureBox.Height Then
+                    PreviewPictureBox.BackgroundImageLayout = ImageLayout.Zoom
+                Else
+                    PreviewPictureBox.BackgroundImageLayout = ImageLayout.Center
+                End If
 
-            PreviewPictureBox.BackgroundImage = AdjustedImage
+                PreviewPictureBox.BackgroundImage = AdjustedImage
+            End If
+        Else
+            PreviewPictureBox.BackgroundImage = Nothing
         End If
     End Sub
 
@@ -77,7 +85,7 @@
     End Sub
 
     Private Sub RefreshPreviewButton_Click(sender As Object, e As EventArgs) Handles RefreshPreviewButton.Click
-        AdjustPreview()
+        RenderAdjustedImage(True)
     End Sub
 
     Private Sub LockAspectCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles LockAspectCheckBox.CheckedChanged
