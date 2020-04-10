@@ -300,19 +300,25 @@ Public Class CharacterEditor
                 TextBox.SelectionStart = Math.Min(TextBox.Text.Length - 1, OldStart + 1)
             End If
 
-            ' Select the word bounded by the brackets
+            ' Try to select the word bounded by the brackets
             SelectWord(TextBox, BracketStart, BracketEnd)
             Dim StartPos = Math.Max(0, TextBox.SelectionStart - 1)
             Dim StartChar = TextBox.Text.Chars(StartPos)
             Dim EndPos = Math.Min(TextBox.Text.Length - 1, TextBox.SelectionStart + TextBox.SelectionLength)
             Dim EndChar = TextBox.Text.Chars(EndPos)
-            Dim AnySelected = StartPos <> EndPos
+            Dim AnySelected = StartPos <> EndPos ' The start isn't the same as the end
 
+            ' If the text is actually inside the brackets
             If StartChar = BracketStart AndAlso EndChar = BracketEnd AndAlso AnySelected Then
+                ' Remove the start bracket
                 TextBox.Select(StartPos, 1)
                 TextBox.SelectedText = ""
+
+                ' Remove the end bracket
                 TextBox.Select(EndPos - 1, 1)
                 TextBox.SelectedText = ""
+
+                ' Reset the selection
                 TextBox.Select(Math.Max(0, OldSelStart - 1), OldSelLength)
             Else ' Nothing to remove
                 TextBox.Select(OldSelStart, OldSelLength)
