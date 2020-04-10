@@ -1379,4 +1379,8 @@ Public Class MainForm
     Private Sub ResetHangingIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetHangingIndentToolStripMenuItem.Click
         SelectedDocument.SelectionHangingIndent = 0
     End Sub
+
+    Private Sub InsertTabToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InsertTabToolStripMenuItem.Click
+        CharEditor.CharEdit.InsertText(SelectedDocument, vbTab)
+    End Sub
 End Class

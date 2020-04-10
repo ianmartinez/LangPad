@@ -78,7 +78,6 @@ Partial Class MainForm
         Me.rbHighlight = New System.Windows.Forms.RadioButton()
         Me.TextColorRadio = New System.Windows.Forms.RadioButton()
         Me.PropertiesContainerPanel = New TundraLib.DoubleBufferedPanel()
-        Me.PropertiesPanel = New Language_Pad.PropertiesEditor()
         Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.DataToolStrip = New System.Windows.Forms.ToolStrip()
         Me.CharCountToolStripLabel = New System.Windows.Forms.ToolStripLabel()
@@ -227,6 +226,9 @@ Partial Class MainForm
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PropertiesPanel = New Language_Pad.PropertiesEditor()
+        Me.ToolStripSeparator24 = New System.Windows.Forms.ToolStripSeparator()
+        Me.InsertTabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainContextMenu.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
@@ -877,14 +879,6 @@ Partial Class MainForm
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
         Me.PropertiesContainerPanel.Size = New System.Drawing.Size(351, 962)
         Me.PropertiesContainerPanel.TabIndex = 13
-        '
-        'PropertiesPanel
-        '
-        Me.PropertiesPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PropertiesPanel.Location = New System.Drawing.Point(0, 0)
-        Me.PropertiesPanel.Name = "PropertiesPanel"
-        Me.PropertiesPanel.Size = New System.Drawing.Size(351, 962)
-        Me.PropertiesPanel.TabIndex = 0
         '
         'MainToolStripContainer
         '
@@ -1750,7 +1744,7 @@ Partial Class MainForm
         '
         'FormatToolStripMenuItem
         '
-        Me.FormatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.ToolStripSeparator18, Me.AlignLeftToolStripMenuItem, Me.AlignCenterToolStripMenuItem, Me.AlignRightToolStripMenuItem, Me.ToolStripSeparator19, Me.BoldToolStripMenuItem, Me.ItalicToolStripMenuItem, Me.UnderlineToolStripMenuItem, Me.StrikeToolStripMenuItem, Me.ToolStripSeparator20, Me.IncreaseIndentToolStripMenuItem, Me.DecreaseIndentToolStripMenuItem, Me.ResetIndentToolStripMenuItem, Me.ToolStripSeparator22, Me.IncreaseBulletIndentToolStripMenuItem, Me.DecreaseBulletIndentToolStripMenuItem, Me.ResetBulletIndentToolStripMenuItem, Me.ToolStripSeparator23, Me.IncreaseHangingIndentToolStripMenuItem, Me.DecreaseHangingIndentToolStripMenuItem, Me.ResetHangingIndentToolStripMenuItem, Me.ToolStripSeparator17, Me.SubscriptToolStripMenuItem, Me.SuperscriptToolStripMenuItem, Me.BaselineToolStripMenuItem})
+        Me.FormatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.ToolStripSeparator18, Me.AlignLeftToolStripMenuItem, Me.AlignCenterToolStripMenuItem, Me.AlignRightToolStripMenuItem, Me.ToolStripSeparator19, Me.BoldToolStripMenuItem, Me.ItalicToolStripMenuItem, Me.UnderlineToolStripMenuItem, Me.StrikeToolStripMenuItem, Me.ToolStripSeparator20, Me.IncreaseIndentToolStripMenuItem, Me.DecreaseIndentToolStripMenuItem, Me.ResetIndentToolStripMenuItem, Me.ToolStripSeparator22, Me.IncreaseBulletIndentToolStripMenuItem, Me.DecreaseBulletIndentToolStripMenuItem, Me.ResetBulletIndentToolStripMenuItem, Me.ToolStripSeparator23, Me.IncreaseHangingIndentToolStripMenuItem, Me.DecreaseHangingIndentToolStripMenuItem, Me.ResetHangingIndentToolStripMenuItem, Me.ToolStripSeparator17, Me.SubscriptToolStripMenuItem, Me.SuperscriptToolStripMenuItem, Me.BaselineToolStripMenuItem, Me.ToolStripSeparator24, Me.InsertTabToolStripMenuItem})
         Me.FormatToolStripMenuItem.Name = "FormatToolStripMenuItem"
         Me.FormatToolStripMenuItem.Size = New System.Drawing.Size(58, 29)
         Me.FormatToolStripMenuItem.Text = "Text"
@@ -1983,6 +1977,26 @@ Partial Class MainForm
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(176, 34)
         Me.AboutToolStripMenuItem.Text = "About..."
+        '
+        'PropertiesPanel
+        '
+        Me.PropertiesPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PropertiesPanel.Location = New System.Drawing.Point(0, 0)
+        Me.PropertiesPanel.Name = "PropertiesPanel"
+        Me.PropertiesPanel.Size = New System.Drawing.Size(351, 962)
+        Me.PropertiesPanel.TabIndex = 0
+        '
+        'ToolStripSeparator24
+        '
+        Me.ToolStripSeparator24.Name = "ToolStripSeparator24"
+        Me.ToolStripSeparator24.Size = New System.Drawing.Size(424, 6)
+        '
+        'InsertTabToolStripMenuItem
+        '
+        Me.InsertTabToolStripMenuItem.Name = "InsertTabToolStripMenuItem"
+        Me.InsertTabToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D1), System.Windows.Forms.Keys)
+        Me.InsertTabToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
+        Me.InsertTabToolStripMenuItem.Text = "Insert Tab"
         '
         'MainForm
         '
@@ -2227,4 +2241,6 @@ Partial Class MainForm
     Friend WithEvents ResetIndentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ResetBulletIndentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ResetHangingIndentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator24 As ToolStripSeparator
+    Friend WithEvents InsertTabToolStripMenuItem As ToolStripMenuItem
 End Class

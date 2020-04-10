@@ -55,6 +55,5 @@ Partial Class CharacterEditorToolWindow
 
     End Sub
 
-    Friend WithEvents CharacterEditor1 As CharacterEditor
     Friend WithEvents CharEdit As CharacterEditor
 End Class
