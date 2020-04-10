@@ -56,7 +56,7 @@ Module LanguagePadCommon
 
     Public Function AdjustHeight(ByVal oldSize As Size, ByVal newSize As Size, ByVal preserveAspect As Boolean) As Integer
         If preserveAspect Then
-            Return CDec(oldSize.Height) * newSize.Height / oldSize.Width
+            Return CDec(oldSize.Height) * newSize.Width / oldSize.Width
         Else
             Return newSize.Height
         End If

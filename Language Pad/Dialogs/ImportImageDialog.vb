@@ -2,6 +2,7 @@
     Private ImportedImage As Image
     Private AdjustedImage As Image
     Private Updating As Boolean = False
+    Private LastFocused As NumericUpDown
 
     Public Property SelectedImage As Image
         Get
@@ -29,17 +30,26 @@
     End Sub
 
     Private Sub AdjustPreview()
-        If WidthNud.Focused Or HeightNud.Focused Then
-            RefreshPreviewButton.Focus()
-        End If
-
         If (ImportedImage IsNot Nothing) Then
+            Dim OldUpdating = Updating
+
+            If LastFocused Is WidthNud Then
+                Updating = False
+                WidthNud_ValueChanged(Me, Nothing)
+            ElseIf LastFocused Is HeightNud Then
+                Updating = False
+                HeightNud_ValueChanged(Me, Nothing)
+            End If
+            LastFocused = Nothing
+
+            Updating = OldUpdating
+
             AdjustedImage = ResizeImage(ImportedImage, New Size(WidthNud.Value, HeightNud.Value), False)
 
-            If AdjustedImage.Width < PreviewPictureBox.Width OrElse AdjustedImage.Height < PreviewPictureBox.Height Then
-                PreviewPictureBox.BackgroundImageLayout = ImageLayout.Center
-            Else
+            If AdjustedImage.Width > PreviewPictureBox.Width OrElse AdjustedImage.Height > PreviewPictureBox.Height Then
                 PreviewPictureBox.BackgroundImageLayout = ImageLayout.Zoom
+            Else
+                PreviewPictureBox.BackgroundImageLayout = ImageLayout.Center
             End If
 
             PreviewPictureBox.BackgroundImage = AdjustedImage
@@ -84,5 +94,13 @@
         HeightNud.Value = ImportedImage.Height
         WidthNud.Value = ImportedImage.Width
         Updating = False
+    End Sub
+
+    Private Sub WidthNud_Enter(sender As Object, e As EventArgs) Handles WidthNud.Enter
+        LastFocused = WidthNud
+    End Sub
+
+    Private Sub HeightNud_Enter(sender As Object, e As EventArgs) Handles HeightNud.Enter
+        LastFocused = HeightNud
     End Sub
 End Class
