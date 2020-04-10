@@ -41,7 +41,7 @@ Partial Class CharacterEditor
         Me.ExportFileToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ClearFileToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ExtendedCharTab = New System.Windows.Forms.TabPage()
+        Me.ExtendedTab = New System.Windows.Forms.TabPage()
         Me.ExtendedCharTabControl = New System.Windows.Forms.TabControl()
         Me.LatinTab = New System.Windows.Forms.TabPage()
         Me.LatinPanel = New System.Windows.Forms.FlowLayoutPanel()
@@ -63,7 +63,7 @@ Partial Class CharacterEditor
         Me.DiacriticsPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.SuprasegmentalsTab = New System.Windows.Forms.TabPage()
         Me.SuprasegmentalsPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.SearchCharTab = New System.Windows.Forms.TabPage()
+        Me.SearchTab = New System.Windows.Forms.TabPage()
         Me.SearchToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.SearchCharPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.SearchToolStrip = New System.Windows.Forms.ToolStrip()
@@ -100,53 +100,57 @@ Partial Class CharacterEditor
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SaveDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenDialog = New System.Windows.Forms.OpenFileDialog()
-        Me.CharCategoriesTab.SuspendLayout
-        Me.LocalTab.SuspendLayout
-        Me.LocalToolStripContainer.ContentPanel.SuspendLayout
-        Me.LocalToolStripContainer.TopToolStripPanel.SuspendLayout
-        Me.LocalToolStripContainer.SuspendLayout
-        Me.LocalToolStrip.SuspendLayout
-        Me.FileTab.SuspendLayout
-        Me.FileToolStripContainer.ContentPanel.SuspendLayout
-        Me.FileToolStripContainer.TopToolStripPanel.SuspendLayout
-        Me.FileToolStripContainer.SuspendLayout
-        Me.FileToolStrip.SuspendLayout
-        Me.ExtendedCharTab.SuspendLayout
-        Me.ExtendedCharTabControl.SuspendLayout
-        Me.LatinTab.SuspendLayout
-        Me.CyrillicTab.SuspendLayout
-        Me.GreekTab.SuspendLayout
-        Me.IpaTab.SuspendLayout
-        Me.IpaTabControl.SuspendLayout
-        Me.ConsonantsTabPage.SuspendLayout
-        Me.AffricatesTab.SuspendLayout
-        Me.VowelsTab.SuspendLayout
-        Me.ToneIntonationTab.SuspendLayout
-        Me.DiacriticsTab.SuspendLayout
-        Me.SuprasegmentalsTab.SuspendLayout
-        Me.SearchCharTab.SuspendLayout
-        Me.SearchToolStripContainer.ContentPanel.SuspendLayout
-        Me.SearchToolStripContainer.TopToolStripPanel.SuspendLayout
-        Me.SearchToolStripContainer.SuspendLayout
-        Me.SearchToolStrip.SuspendLayout
-        Me.ModifyCharPanel.SuspendLayout
-        Me.AccentGroupBox.SuspendLayout
-        Me.ModifyCharGroupBox.SuspendLayout
-        Me.TopPanel.SuspendLayout
-        Me.CharButtonMenu.SuspendLayout
+        Me.BracketsTab = New System.Windows.Forms.TabPage()
+        Me.BracketsPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.CharCategoriesTab.SuspendLayout()
+        Me.LocalTab.SuspendLayout()
+        Me.LocalToolStripContainer.ContentPanel.SuspendLayout()
+        Me.LocalToolStripContainer.TopToolStripPanel.SuspendLayout()
+        Me.LocalToolStripContainer.SuspendLayout()
+        Me.LocalToolStrip.SuspendLayout()
+        Me.FileTab.SuspendLayout()
+        Me.FileToolStripContainer.ContentPanel.SuspendLayout()
+        Me.FileToolStripContainer.TopToolStripPanel.SuspendLayout()
+        Me.FileToolStripContainer.SuspendLayout()
+        Me.FileToolStrip.SuspendLayout()
+        Me.ExtendedTab.SuspendLayout()
+        Me.ExtendedCharTabControl.SuspendLayout()
+        Me.LatinTab.SuspendLayout()
+        Me.CyrillicTab.SuspendLayout()
+        Me.GreekTab.SuspendLayout()
+        Me.IpaTab.SuspendLayout()
+        Me.IpaTabControl.SuspendLayout()
+        Me.ConsonantsTabPage.SuspendLayout()
+        Me.AffricatesTab.SuspendLayout()
+        Me.VowelsTab.SuspendLayout()
+        Me.ToneIntonationTab.SuspendLayout()
+        Me.DiacriticsTab.SuspendLayout()
+        Me.SuprasegmentalsTab.SuspendLayout()
+        Me.SearchTab.SuspendLayout()
+        Me.SearchToolStripContainer.ContentPanel.SuspendLayout()
+        Me.SearchToolStripContainer.TopToolStripPanel.SuspendLayout()
+        Me.SearchToolStripContainer.SuspendLayout()
+        Me.SearchToolStrip.SuspendLayout()
+        Me.ModifyCharPanel.SuspendLayout()
+        Me.AccentGroupBox.SuspendLayout()
+        Me.ModifyCharGroupBox.SuspendLayout()
+        Me.TopPanel.SuspendLayout()
+        Me.CharButtonMenu.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.BracketsTab.SuspendLayout()
         Me.SuspendLayout()
         '
         'CharCategoriesTab
         '
         Me.CharCategoriesTab.Controls.Add(Me.LocalTab)
         Me.CharCategoriesTab.Controls.Add(Me.FileTab)
-        Me.CharCategoriesTab.Controls.Add(Me.ExtendedCharTab)
+        Me.CharCategoriesTab.Controls.Add(Me.ExtendedTab)
         Me.CharCategoriesTab.Controls.Add(Me.IpaTab)
-        Me.CharCategoriesTab.Controls.Add(Me.SearchCharTab)
+        Me.CharCategoriesTab.Controls.Add(Me.BracketsTab)
+        Me.CharCategoriesTab.Controls.Add(Me.SearchTab)
         Me.CharCategoriesTab.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CharCategoriesTab.Location = New System.Drawing.Point(0, 0)
         Me.CharCategoriesTab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -163,7 +167,7 @@ Partial Class CharacterEditor
         Me.LocalTab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LocalTab.Name = "LocalTab"
         Me.LocalTab.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.LocalTab.Size = New System.Drawing.Size(502, 249)
+        Me.LocalTab.Size = New System.Drawing.Size(534, 249)
         Me.LocalTab.TabIndex = 1
         Me.LocalTab.Text = "Local"
         Me.LocalTab.UseVisualStyleBackColor = True
@@ -174,11 +178,11 @@ Partial Class CharacterEditor
         'LocalToolStripContainer.ContentPanel
         '
         Me.LocalToolStripContainer.ContentPanel.Controls.Add(Me.LocalPanel)
-        Me.LocalToolStripContainer.ContentPanel.Size = New System.Drawing.Size(494, 198)
+        Me.LocalToolStripContainer.ContentPanel.Size = New System.Drawing.Size(526, 198)
         Me.LocalToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LocalToolStripContainer.Location = New System.Drawing.Point(4, 5)
         Me.LocalToolStripContainer.Name = "LocalToolStripContainer"
-        Me.LocalToolStripContainer.Size = New System.Drawing.Size(494, 239)
+        Me.LocalToolStripContainer.Size = New System.Drawing.Size(526, 239)
         Me.LocalToolStripContainer.TabIndex = 83
         '
         'LocalToolStripContainer.TopToolStripPanel
@@ -194,7 +198,7 @@ Partial Class CharacterEditor
         Me.LocalPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.LocalPanel.Name = "LocalPanel"
         Me.LocalPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.LocalPanel.Size = New System.Drawing.Size(494, 198)
+        Me.LocalPanel.Size = New System.Drawing.Size(526, 198)
         Me.LocalPanel.TabIndex = 10
         '
         'LocalToolStrip
@@ -205,7 +209,7 @@ Partial Class CharacterEditor
         Me.LocalToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportLocalToolStripButton, Me.ExportLocalToolStripButton, Me.ToolStripSeparator2, Me.ClearLocalToolStripButton})
         Me.LocalToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.LocalToolStrip.Name = "LocalToolStrip"
-        Me.LocalToolStrip.Size = New System.Drawing.Size(494, 41)
+        Me.LocalToolStrip.Size = New System.Drawing.Size(526, 41)
         Me.LocalToolStrip.Stretch = True
         Me.LocalToolStrip.TabIndex = 0
         '
@@ -251,7 +255,7 @@ Partial Class CharacterEditor
         Me.FileTab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.FileTab.Name = "FileTab"
         Me.FileTab.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.FileTab.Size = New System.Drawing.Size(502, 249)
+        Me.FileTab.Size = New System.Drawing.Size(534, 249)
         Me.FileTab.TabIndex = 0
         Me.FileTab.Text = "File"
         Me.FileTab.UseVisualStyleBackColor = True
@@ -262,11 +266,11 @@ Partial Class CharacterEditor
         'FileToolStripContainer.ContentPanel
         '
         Me.FileToolStripContainer.ContentPanel.Controls.Add(Me.FilePanel)
-        Me.FileToolStripContainer.ContentPanel.Size = New System.Drawing.Size(494, 198)
+        Me.FileToolStripContainer.ContentPanel.Size = New System.Drawing.Size(526, 198)
         Me.FileToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FileToolStripContainer.Location = New System.Drawing.Point(4, 5)
         Me.FileToolStripContainer.Name = "FileToolStripContainer"
-        Me.FileToolStripContainer.Size = New System.Drawing.Size(494, 239)
+        Me.FileToolStripContainer.Size = New System.Drawing.Size(526, 239)
         Me.FileToolStripContainer.TabIndex = 82
         '
         'FileToolStripContainer.TopToolStripPanel
@@ -282,7 +286,7 @@ Partial Class CharacterEditor
         Me.FilePanel.Margin = New System.Windows.Forms.Padding(6)
         Me.FilePanel.Name = "FilePanel"
         Me.FilePanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.FilePanel.Size = New System.Drawing.Size(494, 198)
+        Me.FilePanel.Size = New System.Drawing.Size(526, 198)
         Me.FilePanel.TabIndex = 10
         '
         'FileToolStrip
@@ -293,7 +297,7 @@ Partial Class CharacterEditor
         Me.FileToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportFileToolStripButton, Me.ExportFileToolStripButton, Me.ToolStripSeparator5, Me.ClearFileToolStripButton})
         Me.FileToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.FileToolStrip.Name = "FileToolStrip"
-        Me.FileToolStrip.Size = New System.Drawing.Size(494, 41)
+        Me.FileToolStrip.Size = New System.Drawing.Size(526, 41)
         Me.FileToolStrip.Stretch = True
         Me.FileToolStrip.TabIndex = 0
         '
@@ -332,17 +336,17 @@ Partial Class CharacterEditor
         Me.ClearFileToolStripButton.Size = New System.Drawing.Size(36, 36)
         Me.ClearFileToolStripButton.Text = "Clear"
         '
-        'ExtendedCharTab
+        'ExtendedTab
         '
-        Me.ExtendedCharTab.Controls.Add(Me.ExtendedCharTabControl)
-        Me.ExtendedCharTab.Location = New System.Drawing.Point(4, 29)
-        Me.ExtendedCharTab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.ExtendedCharTab.Name = "ExtendedCharTab"
-        Me.ExtendedCharTab.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.ExtendedCharTab.Size = New System.Drawing.Size(502, 249)
-        Me.ExtendedCharTab.TabIndex = 2
-        Me.ExtendedCharTab.Text = "Extended"
-        Me.ExtendedCharTab.UseVisualStyleBackColor = True
+        Me.ExtendedTab.Controls.Add(Me.ExtendedCharTabControl)
+        Me.ExtendedTab.Location = New System.Drawing.Point(4, 29)
+        Me.ExtendedTab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ExtendedTab.Name = "ExtendedTab"
+        Me.ExtendedTab.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ExtendedTab.Size = New System.Drawing.Size(534, 249)
+        Me.ExtendedTab.TabIndex = 2
+        Me.ExtendedTab.Text = "Extended"
+        Me.ExtendedTab.UseVisualStyleBackColor = True
         '
         'ExtendedCharTabControl
         '
@@ -354,7 +358,7 @@ Partial Class CharacterEditor
         Me.ExtendedCharTabControl.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ExtendedCharTabControl.Name = "ExtendedCharTabControl"
         Me.ExtendedCharTabControl.SelectedIndex = 0
-        Me.ExtendedCharTabControl.Size = New System.Drawing.Size(494, 239)
+        Me.ExtendedCharTabControl.Size = New System.Drawing.Size(526, 239)
         Me.ExtendedCharTabControl.TabIndex = 73
         '
         'LatinTab
@@ -362,7 +366,7 @@ Partial Class CharacterEditor
         Me.LatinTab.Controls.Add(Me.LatinPanel)
         Me.LatinTab.Location = New System.Drawing.Point(4, 29)
         Me.LatinTab.Name = "LatinTab"
-        Me.LatinTab.Size = New System.Drawing.Size(486, 206)
+        Me.LatinTab.Size = New System.Drawing.Size(518, 206)
         Me.LatinTab.TabIndex = 0
         Me.LatinTab.Text = "Latin"
         Me.LatinTab.UseVisualStyleBackColor = True
@@ -377,7 +381,7 @@ Partial Class CharacterEditor
         Me.LatinPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.LatinPanel.Name = "LatinPanel"
         Me.LatinPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.LatinPanel.Size = New System.Drawing.Size(486, 206)
+        Me.LatinPanel.Size = New System.Drawing.Size(518, 206)
         Me.LatinPanel.TabIndex = 9
         '
         'CyrillicTab
@@ -457,7 +461,7 @@ Partial Class CharacterEditor
         Me.ConsonantsTabPage.Controls.Add(Me.ConsonantsLayoutPanel)
         Me.ConsonantsTabPage.Location = New System.Drawing.Point(4, 29)
         Me.ConsonantsTabPage.Name = "ConsonantsTabPage"
-        Me.ConsonantsTabPage.Size = New System.Drawing.Size(486, 206)
+        Me.ConsonantsTabPage.Size = New System.Drawing.Size(518, 206)
         Me.ConsonantsTabPage.TabIndex = 0
         Me.ConsonantsTabPage.Text = "Consonants"
         Me.ConsonantsTabPage.UseVisualStyleBackColor = True
@@ -472,7 +476,7 @@ Partial Class CharacterEditor
         Me.ConsonantsLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.ConsonantsLayoutPanel.Name = "ConsonantsLayoutPanel"
         Me.ConsonantsLayoutPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(486, 206)
+        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(518, 206)
         Me.ConsonantsLayoutPanel.TabIndex = 7
         '
         'AffricatesTab
@@ -480,7 +484,7 @@ Partial Class CharacterEditor
         Me.AffricatesTab.Controls.Add(Me.AffricatesPanel)
         Me.AffricatesTab.Location = New System.Drawing.Point(4, 29)
         Me.AffricatesTab.Name = "AffricatesTab"
-        Me.AffricatesTab.Size = New System.Drawing.Size(486, 206)
+        Me.AffricatesTab.Size = New System.Drawing.Size(518, 206)
         Me.AffricatesTab.TabIndex = 5
         Me.AffricatesTab.Text = "Affricates"
         Me.AffricatesTab.UseVisualStyleBackColor = True
@@ -494,7 +498,7 @@ Partial Class CharacterEditor
         Me.AffricatesPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.AffricatesPanel.Name = "AffricatesPanel"
         Me.AffricatesPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.AffricatesPanel.Size = New System.Drawing.Size(486, 206)
+        Me.AffricatesPanel.Size = New System.Drawing.Size(518, 206)
         Me.AffricatesPanel.TabIndex = 8
         '
         'VowelsTab
@@ -502,7 +506,7 @@ Partial Class CharacterEditor
         Me.VowelsTab.Controls.Add(Me.VowelPanel)
         Me.VowelsTab.Location = New System.Drawing.Point(4, 29)
         Me.VowelsTab.Name = "VowelsTab"
-        Me.VowelsTab.Size = New System.Drawing.Size(486, 206)
+        Me.VowelsTab.Size = New System.Drawing.Size(518, 206)
         Me.VowelsTab.TabIndex = 1
         Me.VowelsTab.Text = "Vowels"
         Me.VowelsTab.UseVisualStyleBackColor = True
@@ -516,7 +520,7 @@ Partial Class CharacterEditor
         Me.VowelPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.VowelPanel.Name = "VowelPanel"
         Me.VowelPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.VowelPanel.Size = New System.Drawing.Size(486, 206)
+        Me.VowelPanel.Size = New System.Drawing.Size(518, 206)
         Me.VowelPanel.TabIndex = 8
         '
         'ToneIntonationTab
@@ -524,7 +528,7 @@ Partial Class CharacterEditor
         Me.ToneIntonationTab.Controls.Add(Me.ToneIntonationPanel)
         Me.ToneIntonationTab.Location = New System.Drawing.Point(4, 29)
         Me.ToneIntonationTab.Name = "ToneIntonationTab"
-        Me.ToneIntonationTab.Size = New System.Drawing.Size(486, 206)
+        Me.ToneIntonationTab.Size = New System.Drawing.Size(518, 206)
         Me.ToneIntonationTab.TabIndex = 4
         Me.ToneIntonationTab.Text = "Tones"
         Me.ToneIntonationTab.UseVisualStyleBackColor = True
@@ -538,7 +542,7 @@ Partial Class CharacterEditor
         Me.ToneIntonationPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.ToneIntonationPanel.Name = "ToneIntonationPanel"
         Me.ToneIntonationPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.ToneIntonationPanel.Size = New System.Drawing.Size(486, 206)
+        Me.ToneIntonationPanel.Size = New System.Drawing.Size(518, 206)
         Me.ToneIntonationPanel.TabIndex = 10
         '
         'DiacriticsTab
@@ -546,7 +550,7 @@ Partial Class CharacterEditor
         Me.DiacriticsTab.Controls.Add(Me.DiacriticsPanel)
         Me.DiacriticsTab.Location = New System.Drawing.Point(4, 29)
         Me.DiacriticsTab.Name = "DiacriticsTab"
-        Me.DiacriticsTab.Size = New System.Drawing.Size(486, 206)
+        Me.DiacriticsTab.Size = New System.Drawing.Size(518, 206)
         Me.DiacriticsTab.TabIndex = 2
         Me.DiacriticsTab.Text = "Diacritics"
         Me.DiacriticsTab.UseVisualStyleBackColor = True
@@ -560,7 +564,7 @@ Partial Class CharacterEditor
         Me.DiacriticsPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.DiacriticsPanel.Name = "DiacriticsPanel"
         Me.DiacriticsPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.DiacriticsPanel.Size = New System.Drawing.Size(486, 206)
+        Me.DiacriticsPanel.Size = New System.Drawing.Size(518, 206)
         Me.DiacriticsPanel.TabIndex = 8
         '
         'SuprasegmentalsTab
@@ -587,17 +591,17 @@ Partial Class CharacterEditor
         Me.SuprasegmentalsPanel.Size = New System.Drawing.Size(510, 196)
         Me.SuprasegmentalsPanel.TabIndex = 9
         '
-        'SearchCharTab
+        'SearchTab
         '
-        Me.SearchCharTab.Controls.Add(Me.SearchToolStripContainer)
-        Me.SearchCharTab.Location = New System.Drawing.Point(4, 29)
-        Me.SearchCharTab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.SearchCharTab.Name = "SearchCharTab"
-        Me.SearchCharTab.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.SearchCharTab.Size = New System.Drawing.Size(502, 249)
-        Me.SearchCharTab.TabIndex = 4
-        Me.SearchCharTab.Text = "Search"
-        Me.SearchCharTab.UseVisualStyleBackColor = True
+        Me.SearchTab.Controls.Add(Me.SearchToolStripContainer)
+        Me.SearchTab.Location = New System.Drawing.Point(4, 29)
+        Me.SearchTab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.SearchTab.Name = "SearchTab"
+        Me.SearchTab.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.SearchTab.Size = New System.Drawing.Size(534, 249)
+        Me.SearchTab.TabIndex = 4
+        Me.SearchTab.Text = "Search"
+        Me.SearchTab.UseVisualStyleBackColor = True
         '
         'SearchToolStripContainer
         '
@@ -605,11 +609,11 @@ Partial Class CharacterEditor
         'SearchToolStripContainer.ContentPanel
         '
         Me.SearchToolStripContainer.ContentPanel.Controls.Add(Me.SearchCharPanel)
-        Me.SearchToolStripContainer.ContentPanel.Size = New System.Drawing.Size(494, 198)
+        Me.SearchToolStripContainer.ContentPanel.Size = New System.Drawing.Size(526, 198)
         Me.SearchToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SearchToolStripContainer.Location = New System.Drawing.Point(4, 5)
         Me.SearchToolStripContainer.Name = "SearchToolStripContainer"
-        Me.SearchToolStripContainer.Size = New System.Drawing.Size(494, 239)
+        Me.SearchToolStripContainer.Size = New System.Drawing.Size(526, 239)
         Me.SearchToolStripContainer.TabIndex = 84
         '
         'SearchToolStripContainer.TopToolStripPanel
@@ -626,7 +630,7 @@ Partial Class CharacterEditor
         Me.SearchCharPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.SearchCharPanel.Name = "SearchCharPanel"
         Me.SearchCharPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.SearchCharPanel.Size = New System.Drawing.Size(494, 198)
+        Me.SearchCharPanel.Size = New System.Drawing.Size(526, 198)
         Me.SearchCharPanel.TabIndex = 8
         '
         'SearchToolStrip
@@ -637,7 +641,7 @@ Partial Class CharacterEditor
         Me.SearchToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SearchQueryTextBox, Me.CharSearchInLabel, Me.SearchModeDropDown, Me.SearchToolStripButton})
         Me.SearchToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.SearchToolStrip.Name = "SearchToolStrip"
-        Me.SearchToolStrip.Size = New System.Drawing.Size(494, 41)
+        Me.SearchToolStrip.Size = New System.Drawing.Size(526, 41)
         Me.SearchToolStrip.Stretch = True
         Me.SearchToolStrip.TabIndex = 0
         '
@@ -942,6 +946,30 @@ Partial Class CharacterEditor
         '
         Me.OpenDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
         '
+        'BracketsTab
+        '
+        Me.BracketsTab.Controls.Add(Me.BracketsPanel)
+        Me.BracketsTab.Location = New System.Drawing.Point(4, 29)
+        Me.BracketsTab.Name = "BracketsTab"
+        Me.BracketsTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.BracketsTab.Size = New System.Drawing.Size(534, 249)
+        Me.BracketsTab.TabIndex = 5
+        Me.BracketsTab.Text = "Brackets"
+        Me.BracketsTab.UseVisualStyleBackColor = True
+        '
+        'BracketsPanel
+        '
+        Me.BracketsPanel.AutoScroll = True
+        Me.BracketsPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
+        Me.BracketsPanel.AutoSize = True
+        Me.BracketsPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BracketsPanel.Location = New System.Drawing.Point(3, 3)
+        Me.BracketsPanel.Margin = New System.Windows.Forms.Padding(6)
+        Me.BracketsPanel.Name = "BracketsPanel"
+        Me.BracketsPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
+        Me.BracketsPanel.Size = New System.Drawing.Size(528, 243)
+        Me.BracketsPanel.TabIndex = 8
+        '
         'CharacterEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -969,7 +997,7 @@ Partial Class CharacterEditor
         Me.FileToolStripContainer.PerformLayout()
         Me.FileToolStrip.ResumeLayout(False)
         Me.FileToolStrip.PerformLayout()
-        Me.ExtendedCharTab.ResumeLayout(False)
+        Me.ExtendedTab.ResumeLayout(False)
         Me.ExtendedCharTabControl.ResumeLayout(False)
         Me.LatinTab.ResumeLayout(False)
         Me.LatinTab.PerformLayout()
@@ -984,7 +1012,7 @@ Partial Class CharacterEditor
         Me.ToneIntonationTab.ResumeLayout(False)
         Me.DiacriticsTab.ResumeLayout(False)
         Me.SuprasegmentalsTab.ResumeLayout(False)
-        Me.SearchCharTab.ResumeLayout(False)
+        Me.SearchTab.ResumeLayout(False)
         Me.SearchToolStripContainer.ContentPanel.ResumeLayout(False)
         Me.SearchToolStripContainer.ContentPanel.PerformLayout()
         Me.SearchToolStripContainer.TopToolStripPanel.ResumeLayout(False)
@@ -1003,6 +1031,8 @@ Partial Class CharacterEditor
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.BracketsTab.ResumeLayout(False)
+        Me.BracketsTab.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1010,7 +1040,7 @@ Partial Class CharacterEditor
     Friend WithEvents CharCategoriesTab As TabControl
     Friend WithEvents FileTab As TabPage
     Friend WithEvents LocalTab As TabPage
-    Friend WithEvents ExtendedCharTab As TabPage
+    Friend WithEvents ExtendedTab As TabPage
     Friend WithEvents LatinPanel As FlowLayoutPanel
     Friend WithEvents IpaTab As TabPage
     Friend WithEvents IpaTabControl As TabControl
@@ -1047,7 +1077,7 @@ Partial Class CharacterEditor
     Friend WithEvents AddToEditorCharacterMenuItem As ToolStripMenuItem
     Friend WithEvents ModifyCharGroupBox As GroupBox
     Friend WithEvents AffricateButton As Button
-    Friend WithEvents SearchCharTab As TabPage
+    Friend WithEvents SearchTab As TabPage
     Friend WithEvents SearchCharPanel As FlowLayoutPanel
     Friend WithEvents ExtendedCharTabControl As TabControl
     Friend WithEvents LatinTab As TabPage
@@ -1083,4 +1113,6 @@ Partial Class CharacterEditor
     Friend WithEvents SearchModeDropDown As ToolStripComboBox
     Friend WithEvents SearchToolStripButton As ToolStripButton
     Friend WithEvents MainTooltip As ToolTip
+    Friend WithEvents BracketsTab As TabPage
+    Friend WithEvents BracketsPanel As FlowLayoutPanel
 End Class

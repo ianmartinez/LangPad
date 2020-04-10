@@ -30,7 +30,7 @@
         Close()
     End Sub
 
-    Private Sub RenderAdjustedImage(Optional updatePreview As Boolean = False)
+    Private Sub RenderAdjustedImage(Optional UpdatePreview As Boolean = False)
         If (ImportedImage IsNot Nothing) Then
             ' Force the width And height to update to match
             ' scaling, if needed.
@@ -49,7 +49,7 @@
             AdjustedImage = ResizeImage(ImportedImage, New Size(WidthNud.Value, HeightNud.Value), False)
 
             ' Update preview image
-            If updatePreview Then
+            If UpdatePreview Then
                 ' Adjust display to best preview image
                 If AdjustedImage.Width > PreviewPictureBox.Width OrElse AdjustedImage.Height > PreviewPictureBox.Height Then
                     PreviewPictureBox.BackgroundImageLayout = ImageLayout.Zoom
@@ -110,5 +110,9 @@
 
     Private Sub HeightNud_Enter(sender As Object, e As EventArgs) Handles HeightNud.Enter
         LastFocused = HeightNud
+    End Sub
+
+    Private Sub ImportImageDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

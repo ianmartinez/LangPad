@@ -4,6 +4,12 @@
     Private ReadOnly components As System.ComponentModel.IContainer
     Private ReadOnly CharButtonTooltip As New IPAToolTip()
 
+    ''' <summary>
+    ''' Create a new button representing a character.
+    ''' </summary>
+    ''' 
+    ''' <param name="CharName">The name of the character.</param>
+    ''' <param name="MultiLine">If the description is multiple lines.</param>
     Public Sub New(Optional CharName = "", Optional MultiLine = True)
         Dim IPAFont = New Font("Calibri", 11, FontStyle.Bold)
         Dim IPAPadding = New Padding(0)

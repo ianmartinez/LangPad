@@ -421,5 +421,22 @@ Close back rounded vowel/High back rounded vowel=u
 Close back compressed vowel/High back compressed  [rest of string was truncated]&quot;;.
 </summary>
 </member>
+<member name="M:Language_Pad.CharacterEditor.SelectWord(System.Windows.Forms.TextBoxBase,System.Char,System.Char)">
+ <summary>
+ Select a string in a textbox between two characters. 
+ </summary>
+ 
+ <param name="TextBox">The TextBox</param>
+ <param name="StartChar">The character before the word.</param>
+ <param name="EndChar">The character after the word.</param>
+</member>
+<member name="M:Language_Pad.CharacterButton.#ctor(System.Object,System.Object)">
+ <summary>
+ Create a new button representing a character.
+ </summary>
+ 
+ <param name="CharName">The name of the character.</param>
+ <param name="MultiLine">If the description is multiple lines.</param>
+</member>
 </members>
 </doc>

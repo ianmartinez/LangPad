@@ -48,7 +48,8 @@ namespace TundraLib
         IPAVowel,
         IPATone,
         IPADiacritic,
-        IPASuprasegmental
+        IPASuprasegmental,
+        Bracket
     }
 
     public class CharacterSearch
