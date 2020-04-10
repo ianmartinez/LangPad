@@ -8,7 +8,7 @@ Public Class RtfEditorForm
     Public VerticalMenuGradient As Boolean = False
 
     Private Sub RtfEditorForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        RtfCodeTextBox.Text = MainForm.SelectedDocument.Rtf
+        RtfCodeTextBox.Text = MainForm.CurrentRtb.Rtf
         SetIcons()
     End Sub
 
@@ -71,7 +71,7 @@ Public Class RtfEditorForm
     Private Sub RefreshToolStripButton_Click(sender As Object, e As EventArgs) Handles RefreshToolStripButton.Click
         On Error Resume Next
 
-        MainForm.SelectedDocument.Rtf = RtfCodeTextBox.Text
-        RtfCodeTextBox.Text = MainForm.SelectedDocument.Rtf
+        MainForm.CurrentRtb.Rtf = RtfCodeTextBox.Text
+        RtfCodeTextBox.Text = MainForm.CurrentRtb.Rtf
     End Sub
 End Class

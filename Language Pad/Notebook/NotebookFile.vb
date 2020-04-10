@@ -156,11 +156,11 @@ Module NotebookFileAccess
         NewNotebook.WordDictionary.Open(TempPath & "\dictionary.txt")
 
         If NewNotebook.CustomSymbols <> "" Then
-            CharEditor.CharEdit.FilePanel.Controls.Clear()
+            CharEditWindow.CharEdit.FilePanel.Controls.Clear()
 
             Dim FileChars As String() = NewNotebook.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
             For Each FileChar As String In FileChars
-                CharEditor.CharEdit.InsertCharacterButton(FileChar, CharEditor.CharEdit.FilePanel)
+                CharEditWindow.CharEdit.InsertCharacterButton(FileChar, CharEditWindow.CharEdit.FilePanel)
             Next
         End If
 

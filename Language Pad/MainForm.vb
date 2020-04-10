@@ -9,7 +9,7 @@ Public Class MainForm
     Private LastPrintedCharPos As Integer
     Public Title As String
     Public RtbList As New List(Of ExtendedRichTextBox)
-    Public WithEvents SelectedDocument As New ExtendedRichTextBox()
+    Public WithEvents CurrentRtb As New ExtendedRichTextBox()
     Public Moving As Boolean = False
     Public DisableFontChange As Boolean
     Public IsLoading As Boolean = False
@@ -122,13 +122,13 @@ Public Class MainForm
 
         ' Show character editor to the right of this form
         If My.Settings.ShowCharacterEditorOnStartup Then
-            CharEditor.Show()
+            CharEditWindow.Show()
         End If
-        CharEditor.TargetForm = Me
+        CharEditWindow.TargetForm = Me
         Dim ScreenWidth As Integer = My.Computer.Screen.Bounds.Width
-        Dim ScreenX As Integer = ScreenWidth - 20 - CharEditor.Width
+        Dim ScreenX As Integer = ScreenWidth - 20 - CharEditWindow.Width
         Dim CharToolX = Math.Min(ScreenX, Location.X + Width + 20)
-        CharEditor.Location = New Point(CharToolX, Location.Y)
+        CharEditWindow.Location = New Point(CharToolX, Location.Y)
 
         ColorPicker.FullOpen = True
         SetIcons()
@@ -210,10 +210,11 @@ Public Class MainForm
         NextPageToolStripMenuItem.Image = IconManager.Get("go-next", IconSize.Small, Res)
         DictionaryMenuItem.Image = IconManager.Get("dictionary", IconSize.Small, Res)
 
+        ' Linguistics
+        CharacterEditorToolStripMenuItem.Image = IconManager.Get("language", IconSize.Small, Res)
+
         ' Insert Menu
         ImageToolStripMenuItem.Image = IconManager.Get("filetype-image", IconSize.Small, Res)
-        InsertBulletsToolStripMenuItem.Image = IconManager.Get("list-add", IconSize.Small, Res)
-        RemoveBulletsToolStripMenuItem.Image = IconManager.Get("list-remove", IconSize.Small, Res)
 
         ' Style Menu
         ColorPanelToolStripMenuItem.Image = IconManager.Get("color-picker", IconSize.Small, Res)
@@ -234,7 +235,6 @@ Public Class MainForm
         DecreaseIndentToolStripMenuItem.Image = IconManager.Get("format-indent-less", IconSize.Small, Res)
 
         ' Tools Menu
-        CharacterEditorToolStripMenuItem.Image = IconManager.Get("language", IconSize.Small, Res)
         UpdateToolStripMenuItem.Image = IconManager.Get("update", IconSize.Small, Res)
         SettingsToolStripMenuItem.Image = IconManager.Get("config", IconSize.Small, Res)
 
@@ -273,7 +273,7 @@ Public Class MainForm
         ReplaceAllButton.Top = FindTextBox.Top - (ReplaceAllButton.Height / 2 - FindTextBox.Height / 2)
 
         PropertiesPanel.SetTheme(Theme)
-        CharEditor.CharEdit.SetTheme(Theme)
+        CharEditWindow.CharEdit.SetTheme(Theme)
         AboutDialog.BackColor = Theme.DialogBack
         NamePageDialog.BackColor = Theme.DialogBack
         CustomZoomDialog.BackColor = Theme.DialogBack
@@ -347,7 +347,7 @@ Public Class MainForm
 
         NotebookTabs.SelectedIndex = 0
         If RtbList.Count > 0 Then
-            SelectedDocument = RtbList.Item(0)
+            CurrentRtb = RtbList.Item(0)
         End If
         ResumeLayout()
         PropertiesPanel.ResumeLayout()
@@ -365,7 +365,7 @@ Public Class MainForm
         FirstTabUpdate = True
 
         lblPageCount.Text = "Page Count: " & CurrentDocument.Pages.Count
-        WordWrapToolStripMenuItem.Checked = SelectedDocument.WordWrap
+        WordWrapToolStripMenuItem.Checked = CurrentRtb.WordWrap
     End Sub
 
     Public Sub ModifiedHandler(sender As Object, e As EventArgs)
@@ -381,9 +381,9 @@ Public Class MainForm
     End Sub
 
     Private Sub PagePrintDocument_PrintPage(ByVal sender As Object, ByVal e As Printing.PrintPageEventArgs) Handles PagePrintDocument.PrintPage
-        LastPrintedCharPos = SelectedDocument.Print(LastPrintedCharPos, SelectedDocument.TextLength, e)
+        LastPrintedCharPos = CurrentRtb.Print(LastPrintedCharPos, CurrentRtb.TextLength, e)
 
-        If LastPrintedCharPos < SelectedDocument.TextLength Then
+        If LastPrintedCharPos < CurrentRtb.TextLength Then
             e.HasMorePages = True
         Else
             e.HasMorePages = False
@@ -394,20 +394,20 @@ Public Class MainForm
         Return text.Split(New Char() {" "c}, StringSplitOptions.RemoveEmptyEntries).Length
     End Function
 
-    Private Sub SelectedDocument_LinkClicked(sender As Object, e As LinkClickedEventArgs) Handles SelectedDocument.LinkClicked
+    Private Sub SelectedDocument_LinkClicked(sender As Object, e As LinkClickedEventArgs) Handles CurrentRtb.LinkClicked
         Dim Link As String = e.LinkText
         If Not (Link.StartsWith("http://") Or Link.StartsWith("https://")) Then Link = "https://" & Link
         Process.Start(Link)
     End Sub
 
     Public Sub UpdateWordCount()
-        CharCountToolStripLabel.Text = "Character Count: " & SelectedDocument.TextLength
-        WordCountToolStripLabel.Text = "Word Count: " & WordCount(SelectedDocument.Text)
+        CharCountToolStripLabel.Text = "Character Count: " & CurrentRtb.TextLength
+        WordCountToolStripLabel.Text = "Word Count: " & WordCount(CurrentRtb.Text)
     End Sub
 
-    Private Sub SelectedDocument_TextChanged(sender As Object, e As EventArgs) Handles SelectedDocument.TextChanged
+    Private Sub SelectedDocument_TextChanged(sender As Object, e As EventArgs) Handles CurrentRtb.TextChanged
         UpdateWordCount()
-        RtfEditorForm.RtfCodeTextBox.Text = SelectedDocument.Rtf
+        RtfEditorForm.RtfCodeTextBox.Text = CurrentRtb.Rtf
     End Sub
 
     Private Sub MainForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -427,7 +427,7 @@ Public Class MainForm
             End If
         End If
 
-        CharEditor.Close()
+        CharEditWindow.Close()
         If DictionaryForm IsNot Nothing Then DictionaryForm.Close()
         My.Settings.Theme = ThemeCombo.SelectedItem
         My.Settings.Save()
@@ -482,56 +482,56 @@ Public Class MainForm
 
     Private Sub FindButton_Click(sender As Object, e As EventArgs) Handles FindButton.Click
         Dim SearchType As CompareMethod = CompareMethod.Text
-        Dim StartPosition As Integer = InStr(1, SelectedDocument.Text, FindTextBox.Text, SearchType)
+        Dim StartPosition As Integer = InStr(1, CurrentRtb.Text, FindTextBox.Text, SearchType)
 
         If StartPosition = 0 Then
             MessageBox.Show("String: '" & FindTextBox.Text.ToString() & "' not found", "No Matches", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             Exit Sub
         End If
 
-        SelectedDocument.Select(StartPosition - 1, FindTextBox.Text.Length)
-        SelectedDocument.ScrollToCaret()
+        CurrentRtb.Select(StartPosition - 1, FindTextBox.Text.Length)
+        CurrentRtb.ScrollToCaret()
 
     End Sub
 
     Private Sub FindNextButton_Click(sender As Object, e As EventArgs) Handles FindNextButton.Click
         Dim SearchType As CompareMethod = CompareMethod.Text
-        Dim StartPosition As Integer = InStr(StartPosition, SelectedDocument.Text, FindTextBox.Text, SearchType)
+        Dim StartPosition As Integer = InStr(StartPosition, CurrentRtb.Text, FindTextBox.Text, SearchType)
 
         If StartPosition = 0 Then
             MessageBox.Show("String: '" & FindTextBox.Text.ToString() & "' not found", "No Matches", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             Exit Sub
         End If
 
-        SelectedDocument.Select(StartPosition - 1, FindTextBox.Text.Length)
-        SelectedDocument.ScrollToCaret()
+        CurrentRtb.Select(StartPosition - 1, FindTextBox.Text.Length)
+        CurrentRtb.ScrollToCaret()
     End Sub
 
     Private Sub ReplaceButton_Click(sender As Object, e As EventArgs) Handles ReplaceButton.Click
-        If SelectedDocument.SelectedText.Length <> 0 Then
-            SelectedDocument.SelectedText = ReplaceTextBox.Text
+        If CurrentRtb.SelectedText.Length <> 0 Then
+            CurrentRtb.SelectedText = ReplaceTextBox.Text
         End If
 
         Dim SearchType As CompareMethod = CompareMethod.Text
-        Dim StartPosition As Integer = InStr(StartPosition, SelectedDocument.Text, FindTextBox.Text, SearchType)
+        Dim StartPosition As Integer = InStr(StartPosition, CurrentRtb.Text, FindTextBox.Text, SearchType)
 
         If StartPosition = 0 Then
             MessageBox.Show("String: '" & FindTextBox.Text.ToString() & "' not found", "No Matches", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
             Exit Sub
         End If
 
-        SelectedDocument.Select(StartPosition - 1, FindTextBox.Text.Length)
-        SelectedDocument.ScrollToCaret()
+        CurrentRtb.Select(StartPosition - 1, FindTextBox.Text.Length)
+        CurrentRtb.ScrollToCaret()
 
     End Sub
 
     Private Sub ReplaceAllButton_Click(sender As Object, e As EventArgs) Handles ReplaceAllButton.Click
-        Dim CurrentStart As Integer = SelectedDocument.SelectionStart
-        Dim CurrentLength As Integer = SelectedDocument.SelectionLength
+        Dim CurrentStart As Integer = CurrentRtb.SelectionStart
+        Dim CurrentLength As Integer = CurrentRtb.SelectionLength
 
-        SelectedDocument.Rtf = Replace(SelectedDocument.Rtf, Trim(FindTextBox.Text), Trim(ReplaceTextBox.Text))
-        SelectedDocument.SelectionStart = CurrentStart
-        SelectedDocument.SelectionLength = CurrentLength
+        CurrentRtb.Rtf = Replace(CurrentRtb.Rtf, Trim(FindTextBox.Text), Trim(ReplaceTextBox.Text))
+        CurrentRtb.SelectionStart = CurrentStart
+        CurrentRtb.SelectionLength = CurrentLength
     End Sub
 
     Private Sub CopyContextMenuItem_Click(sender As Object, e As EventArgs) Handles CopyContextMenuItem.Click
@@ -551,7 +551,7 @@ Public Class MainForm
     End Sub
 
     Private Sub DeselectAllContextMenuItem_Click(sender As Object, e As EventArgs) Handles DeselectAllContextMenuItem.Click
-        SelectedDocument.DeselectAll()
+        CurrentRtb.DeselectAll()
     End Sub
 
     Private Sub NotebookTabs_SelectedIndexChanged(sender As Object, e As EventArgs) Handles NotebookTabs.SelectedIndexChanged
@@ -561,10 +561,10 @@ Public Class MainForm
 
         If Moving = False Then
             SaveTabs()
-            SelectedDocument = RtbList.Item(NotebookTabs.SelectedIndex)
+            CurrentRtb = RtbList.Item(NotebookTabs.SelectedIndex)
             PropertiesPanel.PagesListBox.SelectedIndex = NotebookTabs.SelectedIndex
-            RtfEditorForm.RtfCodeTextBox.Text = SelectedDocument.Rtf
-            WordWrapToolStripMenuItem.Checked = SelectedDocument.WordWrap
+            RtfEditorForm.RtfCodeTextBox.Text = CurrentRtb.Rtf
+            WordWrapToolStripMenuItem.Checked = CurrentRtb.WordWrap
             SelectedDocument_TextChanged(Me, e)
         End If
 
@@ -605,7 +605,7 @@ Public Class MainForm
         UpdateTabs()
 
         DictionaryForm.LoadDictionary() ' Reset dictionary form
-        CharEditor.CharEdit.FilePanel.Controls.Clear() ' Reset character editor file tab
+        CharEditWindow.CharEdit.FilePanel.Controls.Clear() ' Reset character editor file tab
 
         CurrentFilePath = ""
         SetTitle()
@@ -718,14 +718,14 @@ Public Class MainForm
             Dim Ext As String = Path.GetExtension(CurrentFilePath).ToUpper()
 
             If Ext = "RTF" Then
-                SelectedDocument.SaveFile(CurrentFilePath)
+                CurrentRtb.SaveFile(CurrentFilePath)
             ElseIf Ext = "TXT" Then
                 Dim Writer As StreamWriter
                 Writer = New StreamWriter(CurrentFilePath)
-                Writer.Write(SelectedDocument.Text)
+                Writer.Write(CurrentRtb.Text)
                 Writer.Close()
-                SelectedDocument.SelectionStart = 0
-                SelectedDocument.SelectionLength = 0
+                CurrentRtb.SelectionStart = 0
+                CurrentRtb.SelectionLength = 0
             Else
                 CurrentDocument.Save(CurrentFilePath)
                 CurrentDocument.Modified = False
@@ -768,36 +768,36 @@ Public Class MainForm
     End Sub
 
     Private Sub UndoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UndoToolStripMenuItem.Click
-        If SelectedDocument.CanUndo Then
-            Dim OldStart = Math.Max(0, SelectedDocument.SelectionStart)
-            SelectedDocument.Undo()
-            SelectedDocument.SelectionStart = Math.Max(0, Math.Min(OldStart, SelectedDocument.TextLength - 1))
-            SelectedDocument.SelectionLength = 0
+        If CurrentRtb.CanUndo Then
+            Dim OldStart = Math.Max(0, CurrentRtb.SelectionStart)
+            CurrentRtb.Undo()
+            CurrentRtb.SelectionStart = Math.Max(0, Math.Min(OldStart, CurrentRtb.TextLength - 1))
+            CurrentRtb.SelectionLength = 0
         End If
     End Sub
 
     Private Sub RedoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RedoToolStripMenuItem.Click
-        If SelectedDocument.CanRedo Then
-            Dim OldStart = Math.Max(0, SelectedDocument.SelectionStart)
-            SelectedDocument.Redo()
-            SelectedDocument.SelectionStart = Math.Max(0, Math.Min(OldStart, SelectedDocument.TextLength - 1))
-            SelectedDocument.SelectionLength = 0
+        If CurrentRtb.CanRedo Then
+            Dim OldStart = Math.Max(0, CurrentRtb.SelectionStart)
+            CurrentRtb.Redo()
+            CurrentRtb.SelectionStart = Math.Max(0, Math.Min(OldStart, CurrentRtb.TextLength - 1))
+            CurrentRtb.SelectionLength = 0
         End If
     End Sub
 
     Private Sub CutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutToolStripMenuItem.Click
-        SelectedDocument.Cut()
+        CurrentRtb.Cut()
     End Sub
 
     Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
-        SelectedDocument.Copy()
+        CurrentRtb.Copy()
     End Sub
 
     Public Sub InsertImage(img As Image)
         ImportImageDialog.SelectedImage = img
 
         If ImportImageDialog.ShowDialog() = DialogResult.OK Then
-            SelectedDocument.InsertImage(ImportImageDialog.SelectedImage)
+            CurrentRtb.InsertImage(ImportImageDialog.SelectedImage)
         End If
     End Sub
 
@@ -817,12 +817,12 @@ Public Class MainForm
                 End Try
             End If
         Else
-            SelectedDocument.Paste()
+            CurrentRtb.Paste()
         End If
     End Sub
 
     Private Sub PastePlainToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PastePlainToolStripMenuItem.Click
-        SelectedDocument.Paste(DataFormats.GetFormat(DataFormats.UnicodeText))
+        CurrentRtb.Paste(DataFormats.GetFormat(DataFormats.UnicodeText))
     End Sub
 
     Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindToolStripMenuItem.Click
@@ -831,31 +831,31 @@ Public Class MainForm
     End Sub
 
     Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
-        SelectedDocument.SelectAll()
+        CurrentRtb.SelectAll()
     End Sub
 
     Private Sub ZoomInToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomInToolStripMenuItem.Click
-        Dim NewZoom = SelectedDocument.ZoomFactor + 0.2
+        Dim NewZoom = CurrentRtb.ZoomFactor + 0.2
 
         If NewZoom >= 64 Then
-            SelectedDocument.ZoomFactor = 63
+            CurrentRtb.ZoomFactor = 63
         Else
-            SelectedDocument.ZoomFactor = NewZoom
+            CurrentRtb.ZoomFactor = NewZoom
         End If
     End Sub
 
     Private Sub ZoomOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomOutToolStripMenuItem.Click
-        Dim NewZoom = SelectedDocument.ZoomFactor - 0.2
+        Dim NewZoom = CurrentRtb.ZoomFactor - 0.2
 
         If NewZoom <= 0.015625 Then
-            SelectedDocument.ZoomFactor = 0.015626
+            CurrentRtb.ZoomFactor = 0.015626
         Else
-            SelectedDocument.ZoomFactor = NewZoom
+            CurrentRtb.ZoomFactor = NewZoom
         End If
     End Sub
 
     Private Sub ZoomToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomToolStripMenuItem.Click
-        SelectedDocument.ZoomFactor = 1.0F
+        CurrentRtb.ZoomFactor = 1.0F
     End Sub
 
     Private Sub EditZoomToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditZoomToolStripMenuItem.Click
@@ -863,7 +863,7 @@ Public Class MainForm
     End Sub
 
     Private Sub WordWrapToolStripMenuItem_CheckedChanged(sender As Object, e As EventArgs) Handles WordWrapToolStripMenuItem.CheckedChanged
-        SelectedDocument.WordWrap = WordWrapToolStripMenuItem.Checked
+        CurrentRtb.WordWrap = WordWrapToolStripMenuItem.Checked
     End Sub
 
     Private Sub ImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImageToolStripMenuItem.Click
@@ -874,22 +874,22 @@ Public Class MainForm
     End Sub
 
     Private Sub InsertBulletsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InsertBulletsToolStripMenuItem.Click
-        SelectedDocument.SelectionBullet = True
+        CurrentRtb.SelectionBullet = True
     End Sub
 
     Private Sub RemoveBulletsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveBulletsToolStripMenuItem.Click
-        SelectedDocument.SelectionBullet = False
+        CurrentRtb.SelectionBullet = False
     End Sub
 
     Private Sub DefaultStyleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DefaultStyleToolStripMenuItem.Click
-        If SelectedDocument.SelectionLength = 0 Then Exit Sub
+        If CurrentRtb.SelectionLength = 0 Then Exit Sub
 
         SuspendLayout()
 
         Dim TempRTF As New ExtendedRichTextBox With {
-            .Rtf = SelectedDocument.Rtf,
-            .SelectionStart = SelectedDocument.SelectionStart,
-            .SelectionLength = SelectedDocument.SelectionLength,
+            .Rtf = CurrentRtb.Rtf,
+            .SelectionStart = CurrentRtb.SelectionStart,
+            .SelectionLength = CurrentRtb.SelectionLength,
             .SelectionFont = New Font("Calibri", 11),
             .SelectionColor = Color.Black,
             .SelectionBackColor = Color.White,
@@ -900,23 +900,23 @@ Public Class MainForm
             .SelectionCharOffset = 0
         }
 
-        Dim CurrentPos As Integer = SelectedDocument.SelectionStart
-        Dim CurrentLength As Integer = SelectedDocument.SelectionLength
+        Dim CurrentPos As Integer = CurrentRtb.SelectionStart
+        Dim CurrentLength As Integer = CurrentRtb.SelectionLength
         Dim OldClip As Object = Clipboard.GetDataObject()
 
-        SelectedDocument.SelectAll()
+        CurrentRtb.SelectAll()
         TempRTF.SelectAll()
         TempRTF.Copy()
-        SelectedDocument.Paste()
+        CurrentRtb.Paste()
         Clipboard.SetDataObject(OldClip)
 
-        SelectedDocument.SelectionStart = CurrentPos
-        SelectedDocument.SelectionLength = CurrentLength
+        CurrentRtb.SelectionStart = CurrentPos
+        CurrentRtb.SelectionLength = CurrentLength
 
         TempRTF.Dispose()
         ResumeLayout()
 
-        SelectedDocument.SelectionAlignment = HorizontalAlignment.Left
+        CurrentRtb.SelectionAlignment = HorizontalAlignment.Left
     End Sub
 
     Private Sub EditStyleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditStyleToolStripMenuItem.Click
@@ -924,14 +924,14 @@ Public Class MainForm
     End Sub
 
     Private Sub ApplyStyleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplyStyleToolStripMenuItem.Click
-        If SelectedDocument.SelectionLength = 0 Then Exit Sub
+        If CurrentRtb.SelectionLength = 0 Then Exit Sub
 
         SuspendLayout()
 
         Dim TempRTF As New ExtendedRichTextBox With {
-            .Rtf = SelectedDocument.Rtf,
-            .SelectionStart = SelectedDocument.SelectionStart,
-            .SelectionLength = SelectedDocument.SelectionLength,
+            .Rtf = CurrentRtb.Rtf,
+            .SelectionStart = CurrentRtb.SelectionStart,
+            .SelectionLength = CurrentRtb.SelectionLength,
             .SelectionFont = StyleDialog.StyleFont,
             .SelectionColor = StyleDialog.StyleColor,
             .SelectionBackColor = StyleDialog.StyleHighlight,
@@ -942,37 +942,37 @@ Public Class MainForm
             .SelectionCharOffset = StyleDialog.StyleCharOffset
         }
 
-        Dim CurrentPos As Integer = SelectedDocument.SelectionStart
-        Dim CurrentLength As Integer = SelectedDocument.SelectionLength
+        Dim CurrentPos As Integer = CurrentRtb.SelectionStart
+        Dim CurrentLength As Integer = CurrentRtb.SelectionLength
         Dim OldClip As Object = Clipboard.GetDataObject
 
-        SelectedDocument.SelectAll()
+        CurrentRtb.SelectAll()
         TempRTF.SelectAll()
         TempRTF.Copy()
-        SelectedDocument.Paste()
+        CurrentRtb.Paste()
         Clipboard.SetDataObject(OldClip)
 
-        SelectedDocument.SelectionStart = CurrentPos
-        SelectedDocument.SelectionLength = CurrentLength
+        CurrentRtb.SelectionStart = CurrentPos
+        CurrentRtb.SelectionLength = CurrentLength
 
         TempRTF.Dispose()
         ResumeLayout()
 
-        SelectedDocument.SelectionAlignment = StyleDialog.StyleAlignment
+        CurrentRtb.SelectionAlignment = StyleDialog.StyleAlignment
     End Sub
 
     Private Sub TextColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TextColorToolStripMenuItem.Click
-        ColorPicker.Color = SelectedDocument.SelectionColor
+        ColorPicker.Color = CurrentRtb.SelectionColor
         If ColorPicker.ShowDialog = DialogResult.OK Then
-            SelectedDocument.SelectionColor = ColorPicker.Color
+            CurrentRtb.SelectionColor = ColorPicker.Color
         End If
     End Sub
 
     Private Sub HighlightToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HighlightToolStripMenuItem.Click
-        ColorPicker.Color = SelectedDocument.SelectionBackColor
+        ColorPicker.Color = CurrentRtb.SelectionBackColor
 
         If ColorPicker.ShowDialog = DialogResult.OK Then
-            SelectedDocument.SelectionBackColor = ColorPicker.Color
+            CurrentRtb.SelectionBackColor = ColorPicker.Color
         End If
     End Sub
 
@@ -1045,18 +1045,18 @@ Public Class MainForm
             Select Case ExportExt
                 Case ".RTF"
                     Dim Writer = New StreamWriter(SavePageDialog.FileName)
-                    Writer.Write(SelectedDocument.Rtf)
+                    Writer.Write(CurrentRtb.Rtf)
                     Writer.Close()
-                    SelectedDocument.SelectionStart = 0
-                    SelectedDocument.SelectionLength = 0
+                    CurrentRtb.SelectionStart = 0
+                    CurrentRtb.SelectionLength = 0
                 Case ".HTML"
-                    File.WriteAllText(SavePageDialog.FileName, RtfPipe.Rtf.ToHtml(SelectedDocument.Rtf).ToString())
+                    File.WriteAllText(SavePageDialog.FileName, RtfPipe.Rtf.ToHtml(CurrentRtb.Rtf).ToString())
                 Case Else
                     Dim Writer = New StreamWriter(SavePageDialog.FileName)
-                    Writer.Write(SelectedDocument.Text)
+                    Writer.Write(CurrentRtb.Text)
                     Writer.Close()
-                    SelectedDocument.SelectionStart = 0
-                    SelectedDocument.SelectionLength = 0
+                    CurrentRtb.SelectionStart = 0
+                    CurrentRtb.SelectionLength = 0
             End Select
         End If
     End Sub
@@ -1137,7 +1137,7 @@ Public Class MainForm
     End Sub
 
     Private Sub IndentToolStripButton_Click(sender As Object, e As EventArgs) Handles IndentToolStripButton.Click
-        SelectedDocument.SelectionIndent = IndentToolStripComboBox.SelectedItem
+        CurrentRtb.SelectionIndent = IndentToolStripComboBox.SelectedItem
     End Sub
 
     Private Sub BoldToolStripButton_Click(sender As Object, e As EventArgs) Handles BoldToolStripButton.Click
@@ -1172,9 +1172,9 @@ Public Class MainForm
         Dim ColorButton As StylizedColorButton = CType(sender, StylizedColorButton)
 
         If TextColorRadio.Checked Then ' Text Color
-            SelectedDocument.SelectionColor = ColorButton.Color
+            CurrentRtb.SelectionColor = ColorButton.Color
         Else ' Highlight Color
-            SelectedDocument.SelectionBackColor = ColorButton.Color
+            CurrentRtb.SelectionBackColor = ColorButton.Color
         End If
     End Sub
 
@@ -1208,9 +1208,9 @@ Public Class MainForm
 
     Private Sub TransparentColorButton_Click(sender As Object, e As EventArgs) Handles TransparentColorButton.Click
         If TextColorRadio.Checked Then
-            SelectedDocument.SelectionColor = Color.Transparent
+            CurrentRtb.SelectionColor = Color.Transparent
         Else
-            SelectedDocument.SelectionBackColor = Color.Transparent
+            CurrentRtb.SelectionBackColor = Color.Transparent
         End If
     End Sub
 
@@ -1220,14 +1220,14 @@ Public Class MainForm
     End Sub
 
     Public Sub MainForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-        CharEditor.TargetForm = Me
-        CharEditor.GetCurrentTexbox = Function()
-                                          If LastFocused Is Nothing Then
-                                              LastFocused = SelectedDocument
-                                          End If
+        CharEditWindow.TargetForm = Me
+        CharEditWindow.GetCurrentTexbox = Function()
+                                              If LastFocused Is Nothing Then
+                                                  LastFocused = CurrentRtb
+                                              End If
 
-                                          Return LastFocused
-                                      End Function
+                                              Return LastFocused
+                                          End Function
     End Sub
 
     Private Sub CharacterEditorToolStripButton_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripButton.Click
@@ -1235,7 +1235,7 @@ Public Class MainForm
     End Sub
 
     Private Sub CharacterEditorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripMenuItem.Click
-        CharEditor.Show()
+        CharEditWindow.Show()
     End Sub
 
     Private Sub QuitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuitToolStripMenuItem.Click
@@ -1250,8 +1250,8 @@ Public Class MainForm
         PastePlainToolStripMenuItem_Click(Me, e)
     End Sub
 
-    Private Sub SelectedDocument_GotFocus(sender As Object, e As EventArgs) Handles SelectedDocument.GotFocus
-        LastFocused = SelectedDocument
+    Private Sub SelectedDocument_GotFocus(sender As Object, e As EventArgs) Handles CurrentRtb.GotFocus
+        LastFocused = CurrentRtb
     End Sub
 
     Private Sub NewWindowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewWindowToolStripMenuItem.Click
@@ -1265,56 +1265,56 @@ Public Class MainForm
             .AllowSimulations = True,
             .ShowColor = True,
             .ShowEffects = True,
-            .Color = SelectedDocument.SelectionColor,
-            .Font = SelectedDocument.SelectionFont
+            .Color = CurrentRtb.SelectionColor,
+            .Font = CurrentRtb.SelectionFont
         }
 
         If FontPicker.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            SelectedDocument.SelectionColor = FontPicker.Color
-            SelectedDocument.SelectionFont = FontPicker.Font
+            CurrentRtb.SelectionColor = FontPicker.Color
+            CurrentRtb.SelectionFont = FontPicker.Font
         End If
 
         DisableFontChange = False
     End Sub
 
     Private Sub SubscriptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubscriptToolStripMenuItem.Click
-        SelectedDocument.SelectionCharOffset = -10
+        CurrentRtb.SelectionCharOffset = -10
     End Sub
 
     Private Sub SuperscriptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SuperscriptToolStripMenuItem.Click
-        SelectedDocument.SelectionCharOffset = 10
+        CurrentRtb.SelectionCharOffset = 10
     End Sub
 
     Private Sub BaselineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BaselineToolStripMenuItem.Click
-        SelectedDocument.SelectionCharOffset = 0
+        CurrentRtb.SelectionCharOffset = 0
     End Sub
 
     Private Sub BoldToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BoldToolStripMenuItem.Click
-        ApplyStyle(SelectedDocument, FontStyle.Bold)
+        ApplyStyle(CurrentRtb, FontStyle.Bold)
     End Sub
 
     Private Sub ItalicToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ItalicToolStripMenuItem.Click
-        ApplyStyle(SelectedDocument, FontStyle.Italic)
+        ApplyStyle(CurrentRtb, FontStyle.Italic)
     End Sub
 
     Private Sub UnderlineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnderlineToolStripMenuItem.Click
-        ApplyStyle(SelectedDocument, FontStyle.Underline)
+        ApplyStyle(CurrentRtb, FontStyle.Underline)
     End Sub
 
     Private Sub StrikeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StrikeToolStripMenuItem.Click
-        ApplyStyle(SelectedDocument, FontStyle.Strikeout)
+        ApplyStyle(CurrentRtb, FontStyle.Strikeout)
     End Sub
 
     Private Sub AlignLeftToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlignLeftToolStripMenuItem.Click
-        SelectedDocument.SelectionAlignment = HorizontalAlignment.Left
+        CurrentRtb.SelectionAlignment = HorizontalAlignment.Left
     End Sub
 
     Private Sub AlignCenterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlignCenterToolStripMenuItem.Click
-        SelectedDocument.SelectionAlignment = HorizontalAlignment.Center
+        CurrentRtb.SelectionAlignment = HorizontalAlignment.Center
     End Sub
 
     Private Sub AlignRightToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlignRightToolStripMenuItem.Click
-        SelectedDocument.SelectionAlignment = HorizontalAlignment.Right
+        CurrentRtb.SelectionAlignment = HorizontalAlignment.Right
     End Sub
 
     Private Sub PreviousPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PreviousPageToolStripMenuItem.Click
@@ -1326,23 +1326,23 @@ Public Class MainForm
     End Sub
 
     Private Sub IncreaseIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IncreaseIndentToolStripMenuItem.Click
-        Dim NewIndent = SelectedDocument.SelectionIndent + 30
-        SelectedDocument.SelectionIndent = NewIndent
+        Dim NewIndent = CurrentRtb.SelectionIndent + 30
+        CurrentRtb.SelectionIndent = NewIndent
     End Sub
 
     Private Sub DecreaseIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DecreaseIndentToolStripMenuItem.Click
-        Dim NewIndent = SelectedDocument.SelectionIndent - 30
-        SelectedDocument.SelectionIndent = NewIndent
+        Dim NewIndent = CurrentRtb.SelectionIndent - 30
+        CurrentRtb.SelectionIndent = NewIndent
     End Sub
 
-    Private Sub SelectedDocument_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SelectedDocument.KeyPress
+    Private Sub SelectedDocument_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CurrentRtb.KeyPress
         ' Suppress tab character insertion
         If e.KeyChar = Chr(9) Then ' Tab
             e.Handled = True
         End If
     End Sub
 
-    Private Sub SelectedDocument_KeyUp(sender As Object, e As KeyEventArgs) Handles SelectedDocument.KeyUp
+    Private Sub SelectedDocument_KeyUp(sender As Object, e As KeyEventArgs) Handles CurrentRtb.KeyUp
         If Not e.Control Then ' CTRL + TAB/ CTRL + SHIFT + TAB handle bullet indent
             If e.KeyCode = Keys.Tab AndAlso Not e.Modifiers = Keys.Shift Then
                 IncreaseIndentToolStripMenuItem_Click(Me, e)
@@ -1353,38 +1353,50 @@ Public Class MainForm
     End Sub
 
     Private Sub IncreaseBulletIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IncreaseBulletIndentToolStripMenuItem.Click
-        Dim NewIndent = SelectedDocument.BulletIndent + 30
-        SelectedDocument.BulletIndent = NewIndent
+        Dim NewIndent = CurrentRtb.BulletIndent + 30
+        CurrentRtb.BulletIndent = NewIndent
     End Sub
 
     Private Sub DecreaseBulletIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DecreaseBulletIndentToolStripMenuItem.Click
-        Dim NewIndent = SelectedDocument.BulletIndent - 30
-        SelectedDocument.BulletIndent = NewIndent
+        Dim NewIndent = CurrentRtb.BulletIndent - 30
+        CurrentRtb.BulletIndent = NewIndent
     End Sub
 
     Private Sub IncreaseHangingIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IncreaseHangingIndentToolStripMenuItem.Click
-        Dim NewIndent = SelectedDocument.SelectionHangingIndent + 30
-        SelectedDocument.SelectionHangingIndent = NewIndent
+        Dim NewIndent = CurrentRtb.SelectionHangingIndent + 30
+        CurrentRtb.SelectionHangingIndent = NewIndent
     End Sub
 
     Private Sub DecreaseHangingIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DecreaseHangingIndentToolStripMenuItem.Click
-        Dim NewIndent = SelectedDocument.SelectionHangingIndent - 30
-        SelectedDocument.SelectionHangingIndent = NewIndent
+        Dim NewIndent = CurrentRtb.SelectionHangingIndent - 30
+        CurrentRtb.SelectionHangingIndent = NewIndent
     End Sub
 
     Private Sub ResetIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetIndentToolStripMenuItem.Click
-        SelectedDocument.SelectionIndent = 0
+        CurrentRtb.SelectionIndent = 0
     End Sub
 
     Private Sub ResetBulletIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetBulletIndentToolStripMenuItem.Click
-        SelectedDocument.BulletIndent = 0
+        CurrentRtb.BulletIndent = 0
     End Sub
 
     Private Sub ResetHangingIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetHangingIndentToolStripMenuItem.Click
-        SelectedDocument.SelectionHangingIndent = 0
+        CurrentRtb.SelectionHangingIndent = 0
     End Sub
 
     Private Sub InsertTabToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InsertTabToolStripMenuItem.Click
-        CharEditor.CharEdit.InsertText(SelectedDocument, vbTab)
+        CharEditWindow.CharEdit.InsertText(CurrentRtb, vbTab)
+    End Sub
+
+    Private Sub BroadTranscriptionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BroadTranscriptionToolStripMenuItem.Click
+        CharEditWindow.CharEdit.InsertBracket(CurrentRtb, "/", "/")
+    End Sub
+
+    Private Sub NarrowTranscriptionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NarrowTranscriptionToolStripMenuItem.Click
+        CharEditWindow.CharEdit.InsertBracket(CurrentRtb, "[", "]")
+    End Sub
+
+    Private Sub RemoveBracketsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveBracketsToolStripMenuItem.Click
+        CharEditWindow.CharEdit.RemoveBrackets(CurrentRtb)
     End Sub
 End Class

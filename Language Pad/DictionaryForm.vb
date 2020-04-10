@@ -246,12 +246,12 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub CharacterEditorToolStripButton_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripButton.Click
-        CharEditor.Show()
+        CharEditWindow.Show()
     End Sub
 
     Private Sub DictionaryForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-        CharEditor.TargetForm = Me
-        CharEditor.GetCurrentTexbox = Function()
+        CharEditWindow.TargetForm = Me
+        CharEditWindow.GetCurrentTexbox = Function()
                                           If DictionaryGrid.CurrentCell IsNot Nothing Then
                                               DictionaryGrid.Focus()
                                               DictionaryGrid.BeginEdit(False)
@@ -271,7 +271,7 @@ Public Class DictionaryForm
     Private Sub DictionaryForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         e.Cancel = True
         If MainForm IsNot Nothing Then
-            CharEditor.TargetForm = MainForm
+            CharEditWindow.TargetForm = MainForm
             MainForm.Activate()
         End If
         SaveDictionary()
