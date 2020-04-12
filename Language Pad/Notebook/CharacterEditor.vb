@@ -240,6 +240,11 @@ Public Class CharacterEditor
     End Sub
 
     Public Sub InsertBracket(ByVal TextBox As TextBoxBase, ByVal BracketOpen As String, ByVal BracketClose As String)
+        Dim IsRtb = TypeOf TextBox Is RichTextBox
+        Dim SelectionFont = If(IsRtb, CType(TextBox, RichTextBox).SelectionFont, Nothing)
+        Dim SelectionColor = If(IsRtb, CType(TextBox, RichTextBox).SelectionColor, Nothing)
+        Dim SelectionBackColor = If(IsRtb, CType(TextBox, RichTextBox).SelectionBackColor, Nothing)
+
         ' If nothing is selected, select the word the caret is in
         If TextBox.SelectionLength = 0 Then
             SelectWord(TextBox)
@@ -250,6 +255,15 @@ Public Class CharacterEditor
 
         ' Insert a bracket before
         TextBox.SelectionLength = 0
+
+        ' If it's an RTB, copy the style of the start of the selection
+        If IsRtb Then
+            Dim Rtf = CType(TextBox, RichTextBox)
+            Rtf.SelectionFont = SelectionFont
+            Rtf.SelectionColor = SelectionColor
+            Rtf.SelectionBackColor = SelectionBackColor
+        End If
+
         InsertText(TextBox, BracketOpen)
 
         ' Insert a bracket after
@@ -348,10 +362,10 @@ Public Class CharacterEditor
     End Sub
 
     Public Sub InsertText(ByVal TextBox As TextBoxBase, ByVal Text As String)
-        Dim IsRTF = TypeOf TextBox Is RichTextBox
+        Dim IsRtb = TypeOf TextBox Is RichTextBox
         Dim CurrentPos As Integer = TextBox.SelectionStart
 
-        If IsRTF Then
+        If IsRtb Then
             Dim Rtb As RichTextBox = CType(TextBox, RichTextBox)
             Rtb.SelectedText = Text
         Else
