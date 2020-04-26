@@ -258,6 +258,20 @@ Sho /ʃ/=ϸ.
 &lt;/html&gt;.
 </summary>
 </member>
+<member name="P:Language_Pad.My.Resources.Resources.PageExportHtml">
+<summary>
+  Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+	&lt;head&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;{0}&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		{1}
+	&lt;/body&gt;
+&lt;/html&gt;.
+</summary>
+</member>
 <member name="P:Language_Pad.My.Resources.Resources.SmartReplace">
 <summary>
   Looks up a localized string similar to Á=Á

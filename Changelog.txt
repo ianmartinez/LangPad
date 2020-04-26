@@ -3,8 +3,9 @@ Version 10.2 (TBD)
    **• Export dictionary to Markdown
    **• Copy text as Markdown
    **• Now has a dedicated installer
+   **• Frequently used characters tab
 
-Version 10.1 (April 12)
+Version 10.1 (May 16)
    • Easier resizing of images before insertion
    **• Pressing CTRL+S on character editor and dictionary now saves the notebook
    • Display shortcut keys on menus
@@ -17,12 +18,14 @@ Version 10.1 (April 12)
    • Paste images directly from File Explorer
    • Add options to wrap selected text in brackets [] and // or remove brackets
    • Add shortcut keys to wrap text in brackets
-   • Zoom in increments of 0.2 (a less drastic jump)
+   • Zoom in increments of 0.2 (a less drastic jump)   
+   • The page title of HTML documents now matches their name in Language Pad
    • Major refactoring to have a more consistent naming scheme and remove old junk code
    • Bug Fix: Word count wouldn't update automatically when opening a new file
    • Bug Fix: Pages with the same name couldn't be imported without changing the name
    • Bug Fix: Undo/redo would sometimes leave text selected incorrectly
    • Bug Fix: The bar above on affricate buttons in the character editor could sometimes be clipped off
+   • Bug Fix: Encoding on exported HTML pages wasn't UTF-8 by default in some browsers
 
 ﻿Version 10.0 (April 8, 2020)
    • Full HiDPI support

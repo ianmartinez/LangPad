@@ -1037,7 +1037,21 @@ Public Class MainForm
         End If
     End Sub
 
+    Private Function RtfToHtml(Rtf As String, Title As String) As String
+        Dim Body = RtfPipe.Rtf.ToHtml(Rtf).ToString()
+        Dim Base = My.Resources.PageExportHtml
+        Return String.Format(Base, Title, Body)
+    End Function
+
     Public Sub ExportPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportPageToolStripMenuItem.Click
+        If CurrentDocument.Pages.Count = 0 Or NotebookTabs.SelectedIndex < 0 Then Exit Sub
+        Dim PageTitle = CurrentDocument.Pages(NotebookTabs.SelectedIndex).Title
+        Dim PageFileName = PageTitle
+        For Each InvalidChar In Path.GetInvalidFileNameChars
+            PageFileName = PageFileName.Replace(InvalidChar, "")
+        Next
+
+        SavePageDialog.FileName = PageFileName
         If SavePageDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
             If SavePageDialog.FileName = "" Then Exit Sub
 
@@ -1050,7 +1064,7 @@ Public Class MainForm
                     CurrentRtb.SelectionStart = 0
                     CurrentRtb.SelectionLength = 0
                 Case ".HTML"
-                    File.WriteAllText(SavePageDialog.FileName, RtfPipe.Rtf.ToHtml(CurrentRtb.Rtf).ToString())
+                    File.WriteAllText(SavePageDialog.FileName, RtfToHtml(CurrentRtb.Rtf, PageTitle))
                 Case Else
                     Dim Writer = New StreamWriter(SavePageDialog.FileName)
                     Writer.Write(CurrentRtb.Text)

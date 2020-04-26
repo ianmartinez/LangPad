@@ -368,6 +368,7 @@
     <None Include="Resources\Suprasegmentals.txt" />
     <None Include="Resources\Cyrillic.txt" />
     <None Include="Resources\Greek.txt" />
+    <None Include="Resources\PageExportHtml.txt" />
     <Content Include="Version10Icon.ico" />
     <Content Include="Version9Icon.ico" />
   </ItemGroup>

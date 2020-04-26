@@ -333,6 +333,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+        '''&lt;html lang=&quot;en&quot;&gt;
+        '''	&lt;head&gt;
+        '''		&lt;meta charset=&quot;utf-8&quot;&gt;
+        '''		&lt;title&gt;{0}&lt;/title&gt;
+        '''	&lt;/head&gt;
+        '''	&lt;body&gt;
+        '''		{1}
+        '''	&lt;/body&gt;
+        '''&lt;/html&gt;.
+        '''</summary>
+        Friend ReadOnly Property PageExportHtml() As String
+            Get
+                Return ResourceManager.GetString("PageExportHtml", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Á=Á
         '''á=á
         '''Ǽ=Ǽ
