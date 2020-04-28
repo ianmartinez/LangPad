@@ -78,6 +78,7 @@ namespace LangPadSupport
                     }
                 }
             }
+
             switch (type)
             {
                 case CharacterType.All:

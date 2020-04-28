@@ -8,17 +8,13 @@ namespace ThornWriter.NotebookFile
     public class Notebook
     {
         public const double CurrentSpec = 3.0;
-        
         public double SpecVersion { get; set; } = CurrentSpec;
-
         public string Title { get; set; } = "";
         public string Language { get; set; } = "";
         public string Author { get; set; } = "";
         public string Website { get; set; } = "";
         public string Info { get; set; } = "";
-
         public string Stylesheet { get; set; } = "";
-
         public List<string> Characters { get; set; } = new List<string>();
         public List<Page> Pages { get; set; } = new List<Page>();
         public Dictionary NotebookDictionary { get; set; } = new Dictionary();

@@ -32,19 +32,6 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.vbpr
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.exe
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.xml
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.pdb
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe.config
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe.manifest
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.application
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.pdb
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.xml
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.dll
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadSupport.dll
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\RtfPipe.dll
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadSupport.pdb
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.pdb
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.xml
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbprojAssemblyReference.cache
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CharacterEditorToolWindow.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.AboutDialog.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.NamePageDialog.resources
@@ -63,6 +50,19 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.SplashScre
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CharacterButton.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.GenerateResource.cache
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.CoreCompileInputs.cache
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe.config
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe.manifest
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.application
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.xml
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadSupport.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\RtfPipe.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadSupport.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.xml
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbprojAssemblyReference.cache
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.exe.manifest
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.application
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.CopyComplete

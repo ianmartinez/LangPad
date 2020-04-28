@@ -348,12 +348,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TundraLib\LangPadSupport.csproj">
-      <Project>{8bd8a7f1-c880-41cc-8485-b132ddad924a}</Project>
-      <Name>LangPadSupport</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Suprasegmentals.txt" />
     <None Include="Resources\Cyrillic.txt" />
     <None Include="Resources\Greek.txt" />
@@ -372,6 +366,12 @@
       <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LangPadSupport\LangPadSupport.csproj">
+      <Project>{8bd8a7f1-c880-41cc-8485-b132ddad924a}</Project>
+      <Name>LangPadSupport</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

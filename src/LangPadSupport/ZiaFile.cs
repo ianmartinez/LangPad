@@ -65,9 +65,7 @@ namespace LangPadSupport
                     else
                         RString = RString.Insert(RString.Length, string.Format("{0}={1}", Line.Key, Line.Value));
                 }
-                else
-                {
-                }
+
                 RString = RString.Insert(RString.Length, Environment.NewLine);
             }
             return RString;

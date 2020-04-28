@@ -367,7 +367,6 @@ namespace LangPadSupport
             SelectedRtf = _rtf;
         }
 
-
         public void AppendTextAsRtf(string _text)
         {
             AppendTextAsRtf(_text, Font);
