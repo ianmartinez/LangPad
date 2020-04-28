@@ -26,7 +26,7 @@ Version 10.1 (May 16)
    • Bug Fix: The bar above on affricate buttons in the character editor could sometimes be clipped off
    • Bug Fix: Encoding on exported HTML pages wasn't UTF-8 by default in some browsers
    **• Now has a dedicated installer
-   **• Use AutoUpdater.NET instead of custom autoupdater
+   • Use AutoUpdater.NET instead of custom autoupdater
 
 ﻿Version 10.0 (April 8, 2020)
    • Full HiDPI support
