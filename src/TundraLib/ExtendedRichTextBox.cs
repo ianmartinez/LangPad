@@ -7,29 +7,25 @@ using System.Drawing.Printing;
 using System.Drawing.Imaging;
 using System.Collections.Specialized;
 using System.Runtime.InteropServices;
+
 namespace LangPadSupport
 {
+    // Most of this is not my own code:
     // This entire file is made from various projects on CodeProject smashed together along with some of my own code
 
     /// <summary>
-
-    /// ''' The rich text box print control class was developed by Microsoft, information about
-
-    /// ''' this control can be found in your help files at:  
-
-    /// ''' ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.KB.v10.en/enu_kbvbnetkb/vbnetkb/811401.htm
-
-    /// ''' In general, their intent was to create a rich text box control with print capability
-
-    /// ''' embedded into the control.
-
-    /// ''' </summary>
-
-    /// ''' <remarks>This control class replaces the use of the regular RichTextBox control; the
-
-    /// ''' purpose of this extension was specifically to facilitate printing the contents
-
-    /// ''' of a rich text box control.</remarks>
+    /// The rich text box print control class was developed by Microsoft, information about
+    /// this control can be found in your help files at:  
+    /// ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.KB.v10.en/enu_kbvbnetkb/vbnetkb/811401.htm
+    /// In general, their intent was to create a rich text box control with print capability
+    /// embedded into the control.
+    /// </summary>
+    /// 
+    /// <remarks>
+    /// This control class replaces the use of the regular RichTextBox control; the
+    /// purpose of this extension was specifically to facilitate printing the contents
+    /// of a rich text box control.
+    /// </remarks>
 
     public class ExtendedRichTextBox : RichTextBox
     {
@@ -300,10 +296,10 @@ namespace LangPadSupport
         }
 
         /// <summary>
-        ///     ''' Initializes the text colors, creates dictionaries for RTF colors and
-        ///     ''' font families, and stores the horizontal and vertical resolution of
-        ///     ''' the RichTextBox's graphics context.
-        ///     ''' </summary>
+        /// Initializes the text colors, creates dictionaries for RTF colors and
+        /// font families, and stores the horizontal and vertical resolution of
+        /// the RichTextBox's graphics context.
+        /// </summary>
         public ExtendedRichTextBox() : base()
         {
             AcceptsTab = true;

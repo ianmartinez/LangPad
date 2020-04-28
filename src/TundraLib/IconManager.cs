@@ -1,21 +1,38 @@
 ﻿using System.Drawing;
-using System.Linq;
 using System.Reflection;
 
 namespace LangPadSupport
 {
+    /// <summary>
+    /// The size of the icon.
+    /// </summary>
     public enum IconSize
     {
         Small, Large
     }
 
+    /// <summary>
+    /// The resolution of the display.
+    /// </summary>
     public enum IconResolution
     {
         Normal, HiDPI
     }
 
-    public class IconManager
+    /// <summary>
+    /// Get icons from the resources of this library.
+    /// </summary>
+    public static class IconManager
     {
+        /// <summary>
+        /// Get an icon with a given name and size from the icons stored as resources
+        /// in this library.
+        /// </summary>
+        /// 
+        /// <param name="name">The name of the icon.</param>
+        /// <param name="iconSize">The size of the icon.</param>
+        /// <param name="iconResolution">The screen resolution to match the icons with.</param>
+        /// <returns></returns>
         public static Bitmap Get(string name, IconSize iconSize, IconResolution iconResolution)
         {
             string folder;

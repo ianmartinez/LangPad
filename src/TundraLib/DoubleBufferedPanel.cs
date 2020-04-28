@@ -12,5 +12,4 @@ namespace LangPadSupport
             SetStyle(ControlStyles.ResizeRedraw, true);
         }
     }
-
 }
