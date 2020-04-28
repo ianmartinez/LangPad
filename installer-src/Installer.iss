@@ -1,31 +1,53 @@
 ; -- Example1.iss --
 ; Installer for LangPad
 
+#define AppName "LangPad"
+#define FileIcon "FileIcon.ico"
+ 
+; Versioning
+#define AppVersion "11.0"   
+#define AppMajorVersion "11"   
+#define AppReleaseFolder "..\release\11.0 Beta"
+
 [Setup]
-AppName=LangPad
-AppVersion=11.0
+AppId={{F5A132A7-7583-4EBE-8E45-B90D8BC79B19}
+AppName={#AppName}
+AppVersion={#AppVersion}
 WizardStyle=modern
-DefaultDirName={autopf}\LangPad
-DefaultGroupName=LangPad
+DefaultDirName={autopf}\{#AppName}
+DisableProgramGroupPage=yes
 Compression=lzma2
 SolidCompression=yes
-ChangesAssociations = yes
+ChangesAssociations=yes
+OutputBaseFilename={#AppName}{#AppMajorVersion}Setup
+LicenseFile=..\License
+DisableWelcomePage=no
+
+; Set custom messages on welcome screen
+[Messages]
+WelcomeLabel1=Welcome to the {#AppName} {#AppVersion} Setup Wizard.
+WelcomeLabel2={#AppName} is a free and open-source word processor for linguistics.
 
 [Files]                            
-Source: "..\release\11.0 Beta\AutoUpdater.NET.dll"; DestDir: "{app}";   
-Source: "..\release\11.0 Beta\FileIcon.ico"; DestDir: "{app}";
-Source: "..\release\11.0 Beta\LangPad.exe"; DestDir: "{app}";       
-Source: "..\release\11.0 Beta\LangPad.exe.config"; DestDir: "{app}"; 
-Source: "..\release\11.0 Beta\LangPad.exe.manifest"; DestDir: "{app}"; 
-Source: "..\release\11.0 Beta\LangPadSupport.dll"; DestDir: "{app}"; 
-Source: "..\release\11.0 Beta\RtfPipe.dll"; DestDir: "{app}";   
+Source: "{#AppReleaseFolder}\AutoUpdater.NET.dll"; DestDir: "{app}";   
+Source: "{#AppReleaseFolder}\{#FileIcon}"; DestDir: "{app}";
+Source: "{#AppReleaseFolder}\{#AppName}.exe"; DestDir: "{app}";       
+Source: "{#AppReleaseFolder}\{#AppName}.exe.config"; DestDir: "{app}"; 
+Source: "{#AppReleaseFolder}\{#AppName}.exe.manifest"; DestDir: "{app}"; 
+Source: "{#AppReleaseFolder}\LangPadSupport.dll"; DestDir: "{app}"; 
+Source: "{#AppReleaseFolder}\RtfPipe.dll"; DestDir: "{app}";   
 
 [Icons]
-Name: "{group}\LangPad"; Filename: "{app}\LangPad.exe"
+Name: "{autoprograms}\{#AppName}"; Filename: "{app}\{#AppName}.exe"   
 
+; Assosiate the *.nt file extension with LangPad and give it a custom icon
 [Registry]
+Root: HKCR; Subkey: ".nt"; ValueData: "{#AppName}"; Flags: uninsdeletevalue; ValueType: string; ValueName: ""
+Root: HKCR; Subkey: "{#AppName}"; ValueData: "Program {#AppName}";  Flags: uninsdeletekey; ValueType: string; ValueName: ""
+Root: HKCR; Subkey: "{#AppName}\DefaultIcon"; ValueData: "{app}\{#FileIcon},0"; ValueType: string; ValueName: ""
+Root: HKCR; Subkey: "{#AppName}\shell\open\command"; ValueData: """{app}\{#AppName}.exe"" ""%1"""; ValueType: string; ValueName: ""
 
-Root: HKCR; Subkey: ".mpl"; ValueData: "{#LangPad}"; Flags: uninsdeletevalue; ValueType: string; ValueName: ""
-Root: HKCR; Subkey: "{#LangPad}"; ValueData: "Program {#LangPad}";  Flags: uninsdeletekey; ValueType: string; ValueName: ""
-Root: HKCR; Subkey: "{#LangPad}\DefaultIcon"; ValueData: "{app}\{#LangPad.exe},0"; ValueType: string; ValueName: ""
-Root: HKCR; Subkey: "{#LangPad}\shell\open\command"; ValueData: """{app}\{#LangPad.exe}"" ""%1"""; ValueType: string; ValueName: ""
+; Allow the user to run the program after setup is complete
+[Run]
+Filename: "{app}\{#AppName}.exe"; Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
+
