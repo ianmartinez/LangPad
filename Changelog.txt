@@ -2,7 +2,6 @@ Version 10.2 (TBD)
    **• Export pages to Markdown
    **• Export dictionary to Markdown
    **• Copy text as Markdown
-   **• Now has a dedicated installer
    **• Frequently used characters tab
 
 Version 10.1 (May 16)
@@ -26,6 +25,8 @@ Version 10.1 (May 16)
    • Bug Fix: Undo/redo would sometimes leave text selected incorrectly
    • Bug Fix: The bar above on affricate buttons in the character editor could sometimes be clipped off
    • Bug Fix: Encoding on exported HTML pages wasn't UTF-8 by default in some browsers
+   **• Now has a dedicated installer
+   **• Use WinSparkle for auto-updater instead of custom solution
 
 ﻿Version 10.0 (April 8, 2020)
    • Full HiDPI support
