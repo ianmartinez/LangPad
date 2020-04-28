@@ -1,21 +1,18 @@
 ; -- Example1.iss --
-; Demonstrates copying 3 files and creating an icon.
-
-; SEE THE DOCUMENTATION FOR DETAILS ON CREATING .ISS SCRIPT FILES!
+; Installer for LangPad
 
 [Setup]
-AppName=Language Pad
-AppVersion=10.0
+AppName=LangPad
+AppVersion=10.1
 WizardStyle=modern
 DefaultDirName={autopf}\My Program
-DefaultGroupName=LanguagePad
+DefaultGroupName=LangPad
 Compression=lzma2
 SolidCompression=yes
 
 [Files]
-Source: "LanaugagePad.exe"; DestDir: "{app}"
-Source: "MyProg.chm"; DestDir: "{app}"
-Source: "Readme.txt"; DestDir: "{app}"; Flags: isreadme
+
+Source: "LangPad.exe"; DestDir: "{app}";
 
 [Icons]
 Name: "{group}\Language Page"; Filename: "{app}\MyProg.exe"

@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>10.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -83,9 +83,12 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoUpdater.NET, Version=1.6.0.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autoupdater.NET.Official.1.6.0\lib\net40\AutoUpdater.NET.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
-    <Reference Include="RtfPipe, Version=1.0.7092.25824, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RtfPipe.1.0.7092.25824\lib\net45\RtfPipe.dll</HintPath>
+    <Reference Include="RtfPipe, Version=1.0.7388.1242, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RtfPipe.1.0.7388.1242\lib\net45\RtfPipe.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -112,6 +115,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoUpdate.vb" />
     <Compile Include="CharacterEditorToolWindow.Designer.vb">
       <DependentUpon>CharacterEditorToolWindow.vb</DependentUpon>
     </Compile>

@@ -14,12 +14,3 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\TundraLib\obj\Debug\TundraLib.cspro
 C:\Users\ianma\Documents\GitHub\Language-Pad\TundraLib\obj\Debug\TundraLib.dll
 C:\Users\ianma\Documents\GitHub\Language-Pad\TundraLib\obj\Debug\TundraLib.pdb
 C:\Users\ianma\Documents\GitHub\Language-Pad\TundraLib\obj\Debug\TundraLib.csprojAssemblyReference.cache
-C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\bin\Debug\TundraLib.dll
-C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\bin\Debug\TundraLib.pdb
-C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\TundraLib.csprojAssemblyReference.cache
-C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\TundraLib.Properties.Resources.resources
-C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\TundraLib.StylizedColorButton.resources
-C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\TundraLib.csproj.GenerateResource.cache
-C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\TundraLib.csproj.CoreCompileInputs.cache
-C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\TundraLib.dll
-C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\TundraLib.pdb
