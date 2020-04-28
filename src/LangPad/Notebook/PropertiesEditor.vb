@@ -1,6 +1,6 @@
 ﻿Imports System.Drawing.Drawing2D
-Imports TundraLib
-Imports TundraLib.Themes
+Imports LangPadSupport
+Imports LangPadSupport.Themes
 
 Public Class PropertiesEditor
     Public Color1 As Color

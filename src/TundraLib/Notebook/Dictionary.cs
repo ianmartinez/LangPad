@@ -8,7 +8,7 @@ namespace ThornWriter.NotebookFile
         0.word
         0.pronunciation
         0.definition
-        0.notes=         */
+        0.notes         */
     public class DictionaryWord
     {
         public string Word { get; set; } = "";

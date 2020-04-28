@@ -1,6 +1,6 @@
 ﻿Imports System.IO
-Imports TundraLib
-Imports TundraLib.ZiaFile
+Imports LangPadSupport
+Imports LangPadSupport.ZiaFile
 
 Public Class StyleDialog
     Public StyleFont As Font = New Font("Calibri", 11)

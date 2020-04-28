@@ -33,7 +33,7 @@ Partial Class DictionaryForm
         Me.SaveDialog = New System.Windows.Forms.SaveFileDialog()
         Me.FontPicker = New System.Windows.Forms.FontDialog()
         Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
-        Me.FindReplaceDialog = New TundraLib.DoubleBufferedPanel()
+        Me.FindReplaceDialog = New LangPadSupport.DoubleBufferedPanel()
         Me.StartsWithCheck = New System.Windows.Forms.CheckBox()
         Me.DefinitionRadio = New System.Windows.Forms.RadioButton()
         Me.WordRadio = New System.Windows.Forms.RadioButton()
@@ -420,7 +420,7 @@ Partial Class DictionaryForm
     Friend WithEvents Notes As DataGridViewTextBoxColumn
     Friend WithEvents ExportHtmlToolStripButton As ToolStripButton
     Friend WithEvents SaveHtmlDialog As SaveFileDialog
-    Friend WithEvents FindReplaceDialog As TundraLib.DoubleBufferedPanel
+    Friend WithEvents FindReplaceDialog As LangPadSupport.DoubleBufferedPanel
     Friend WithEvents FindTextBox As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents FindButton As Button

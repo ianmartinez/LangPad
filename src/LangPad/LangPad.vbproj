@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>11.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -65,7 +65,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Version10Icon.ico</ApplicationIcon>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>38E3BF1F3A17B82E7D86BB07415687A38DCBFF85</ManifestCertificateThumbprint>
@@ -348,9 +348,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TundraLib\TundraLib.csproj">
+    <ProjectReference Include="..\TundraLib\LangPadSupport.csproj">
       <Project>{8bd8a7f1-c880-41cc-8485-b132ddad924a}</Project>
-      <Name>TundraLib</Name>
+      <Name>LangPadSupport</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -358,21 +358,11 @@
     <None Include="Resources\Cyrillic.txt" />
     <None Include="Resources\Greek.txt" />
     <None Include="Resources\PageExportHtml.txt" />
-    <Content Include="Version10Icon.ico" />
-    <Content Include="Version9Icon.ico" />
+    <Content Include="FileIcon.ico" />
+    <Content Include="AppIcon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PublishFile Include="Version10Icon.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Version9Icon.ico">
+    <PublishFile Include="AppIcon.ico">
       <Visible>False</Visible>
       <Group>
       </Group>

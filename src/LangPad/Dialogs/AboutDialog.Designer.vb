@@ -31,8 +31,8 @@ Partial Class AboutDialog
         Me.ChangelogTextBox = New System.Windows.Forms.TextBox()
         Me.MainTooltip = New System.Windows.Forms.ToolTip(Me.components)
         Me.MainTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.HeaderBorderPanel = New TundraLib.DoubleBufferedPanel()
-        Me.HeaderPanel = New TundraLib.DoubleBufferedPanel()
+        Me.HeaderBorderPanel = New LangPadSupport.DoubleBufferedPanel()
+        Me.HeaderPanel = New LangPadSupport.DoubleBufferedPanel()
         Me.LangPadLabel = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MainTabControl.SuspendLayout()
@@ -214,8 +214,8 @@ Partial Class AboutDialog
     Friend WithEvents ChangelogTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MainTooltip As ToolTip
     Friend WithEvents MainTableLayoutPanel As TableLayoutPanel
-    Friend WithEvents HeaderBorderPanel As TundraLib.DoubleBufferedPanel
-    Friend WithEvents HeaderPanel As TundraLib.DoubleBufferedPanel
+    Friend WithEvents HeaderBorderPanel As LangPadSupport.DoubleBufferedPanel
+    Friend WithEvents HeaderPanel As LangPadSupport.DoubleBufferedPanel
     Friend WithEvents LangPadLabel As Label
     Friend WithEvents PictureBox1 As PictureBox
 End Class

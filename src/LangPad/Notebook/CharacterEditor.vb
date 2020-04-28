@@ -1,6 +1,6 @@
 ﻿Imports System.IO
-Imports TundraLib.Themes
-Imports TundraLib
+Imports LangPadSupport.Themes
+Imports LangPadSupport
 
 Public Class CharacterEditor
     Public GetCurrentTexbox As Func(Of TextBoxBase)

@@ -1,35 +1,35 @@
-Version 11.1 (TBD)
-   **• Export pages to Markdown
-   **• Export dictionary to Markdown
-   **• Copy text as Markdown
-   **• Frequently used characters tab
-   **• Re-add themes
-
-Version 11 (May 16)
+Version 11.0 (June 30)
    • Easier resizing of images before insertion
    **• Pressing CTRL+S on character editor and dictionary now saves the notebook
-   ** Export all pages wizard
+   **• Export all pages wizard
    • Display shortcut keys on menus
    • Added tons of shortcut keys to make all across the program
-   • TAB to increase indent and SHIFT + TAB to decrease indent
+   **• TAB to increase indent and SHIFT + TAB to decrease indent when at start of line
    • Allow the adjustment of bullet indent
    • Support hanging indent
    • Reset indent menu option
    • Add "New Window" menu item to easily open a new Language Pad instance
    • Paste images directly from File Explorer
-   • Add options to wrap selected text in brackets [] and // or remove brackets
+   **• Add options to wrap selected text in brackets [] and // or remove brackets
    • Add shortcut keys to wrap text in brackets
    • Zoom in increments of 0.2 (a less drastic jump)   
    • The page title of HTML documents now matches their name in Language Pad
+   **• Now has a dedicated installer
+   • Use AutoUpdater.NET instead of custom autoupdater
+   **• Export pages to Markdown
+   **• Export dictionary to Markdown
+   **• Copy text as Markdown
+   **• Frequently used characters tab
+   **• Re-add themes
+   **• Faster loading of documents
+   **• Adding, removing, renaming, and changing the order of pages are all much faster
    • Major refactoring to have a more consistent naming scheme and remove old junk code
    • Bug Fix: Word count wouldn't update automatically when opening a new file
    • Bug Fix: Pages with the same name couldn't be imported without changing the name
    • Bug Fix: Undo/redo would sometimes leave text selected incorrectly
    • Bug Fix: The bar above on affricate buttons in the character editor could sometimes be clipped off
    • Bug Fix: Encoding on exported HTML pages wasn't UTF-8 by default in some browsers
-   **• Now has a dedicated installer
-   • Use AutoUpdater.NET instead of custom autoupdater
-
+   
 ﻿Version 10.0 (April 8, 2020)
    • Full HiDPI support
    • Use Taiga icon pack

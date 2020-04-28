@@ -42,7 +42,7 @@ Partial Class MainForm
         Me.DeselectAllContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitLayoutPanel = New System.Windows.Forms.SplitContainer()
         Me.NotebookTabs = New System.Windows.Forms.TabControl()
-        Me.FindReplaceDialog = New TundraLib.DoubleBufferedPanel()
+        Me.FindReplaceDialog = New LangPadSupport.DoubleBufferedPanel()
         Me.FindNextButton = New System.Windows.Forms.Button()
         Me.ReplaceAllButton = New System.Windows.Forms.Button()
         Me.ReplaceTextBox = New System.Windows.Forms.TextBox()
@@ -51,33 +51,33 @@ Partial Class MainForm
         Me.Label17 = New System.Windows.Forms.Label()
         Me.ReplaceButton = New System.Windows.Forms.Button()
         Me.FindButton = New System.Windows.Forms.Button()
-        Me.ColorPanel = New TundraLib.DoubleBufferedPanel()
+        Me.ColorPanel = New LangPadSupport.DoubleBufferedPanel()
         Me.ColorLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.TransparentColorButton = New System.Windows.Forms.Button()
-        Me.StylizedColorButton1 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton2 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton3 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton4 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton5 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton6 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton7 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton8 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton9 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton10 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton11 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton12 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton20 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton21 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton13 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton14 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton15 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton16 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton17 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton18 = New TundraLib.StylizedColorButton()
-        Me.StylizedColorButton19 = New TundraLib.StylizedColorButton()
+        Me.StylizedColorButton1 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton2 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton3 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton4 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton5 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton6 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton7 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton8 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton9 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton10 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton11 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton12 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton20 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton21 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton13 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton14 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton15 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton16 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton17 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton18 = New LangPadSupport.StylizedColorButton()
+        Me.StylizedColorButton19 = New LangPadSupport.StylizedColorButton()
         Me.rbHighlight = New System.Windows.Forms.RadioButton()
         Me.TextColorRadio = New System.Windows.Forms.RadioButton()
-        Me.PropertiesContainerPanel = New TundraLib.DoubleBufferedPanel()
+        Me.PropertiesContainerPanel = New LangPadSupport.DoubleBufferedPanel()
         Me.PropertiesPanel = New LangPad.PropertiesEditor()
         Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.DataToolStrip = New System.Windows.Forms.ToolStrip()
@@ -2081,7 +2081,7 @@ Partial Class MainForm
     Friend WithEvents OpenPageDialog As System.Windows.Forms.OpenFileDialog
     Friend WithEvents PrintPageSetupDialog As System.Windows.Forms.PageSetupDialog
     Friend WithEvents PagePrintDocument As System.Drawing.Printing.PrintDocument
-    Friend WithEvents FindReplaceDialog As TundraLib.DoubleBufferedPanel
+    Friend WithEvents FindReplaceDialog As LangPadSupport.DoubleBufferedPanel
     Friend WithEvents ReplaceButton As System.Windows.Forms.Button
     Friend WithEvents FindButton As System.Windows.Forms.Button
     Friend WithEvents ReplaceTextBox As System.Windows.Forms.TextBox
@@ -2101,7 +2101,7 @@ Partial Class MainForm
     Friend WithEvents NotebookTabs As System.Windows.Forms.TabControl
     Friend WithEvents OpenDialog As System.Windows.Forms.OpenFileDialog
     Friend WithEvents SaveDialog As System.Windows.Forms.SaveFileDialog
-    Friend WithEvents PropertiesContainerPanel As TundraLib.DoubleBufferedPanel
+    Friend WithEvents PropertiesContainerPanel As LangPadSupport.DoubleBufferedPanel
     Friend WithEvents MainTooltip As System.Windows.Forms.ToolTip
     Friend WithEvents MainToolStripContainer As ToolStripContainer
     Friend WithEvents MainToolStrip As ToolStrip
@@ -2179,31 +2179,31 @@ Partial Class MainForm
     Friend WithEvents ToolStripSeparator12 As ToolStripSeparator
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents ThemeCombo As ToolStripComboBox
-    Friend WithEvents ColorPanel As TundraLib.DoubleBufferedPanel
+    Friend WithEvents ColorPanel As LangPadSupport.DoubleBufferedPanel
     Friend WithEvents ColorLayoutPanel As FlowLayoutPanel
-    Friend WithEvents StylizedColorButton1 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton1 As LangPadSupport.StylizedColorButton
     Friend WithEvents rbHighlight As RadioButton
     Friend WithEvents TextColorRadio As RadioButton
-    Friend WithEvents StylizedColorButton2 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton3 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton4 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton5 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton6 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton7 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton8 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton9 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton10 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton11 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton12 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton13 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton14 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton15 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton16 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton17 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton18 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton19 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton20 As TundraLib.StylizedColorButton
-    Friend WithEvents StylizedColorButton21 As TundraLib.StylizedColorButton
+    Friend WithEvents StylizedColorButton2 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton3 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton4 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton5 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton6 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton7 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton8 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton9 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton10 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton11 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton12 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton13 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton14 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton15 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton16 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton17 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton18 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton19 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton20 As LangPadSupport.StylizedColorButton
+    Friend WithEvents StylizedColorButton21 As LangPadSupport.StylizedColorButton
     Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
     Friend WithEvents ToggleSidebarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToggleToolbarToolStripMenuItem As ToolStripMenuItem

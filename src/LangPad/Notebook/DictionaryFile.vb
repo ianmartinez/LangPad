@@ -1,5 +1,5 @@
 ﻿Imports System.IO
-Imports TundraLib.ZiaFile
+Imports LangPadSupport.ZiaFile
 
 <Serializable()>
 Public Class DictionaryWord

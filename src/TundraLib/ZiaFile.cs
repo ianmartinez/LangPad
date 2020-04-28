@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace TundraLib
+namespace LangPadSupport
 {
     public static class ZiaFile
     {

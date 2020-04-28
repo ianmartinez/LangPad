@@ -3,7 +3,7 @@
 
 [Setup]
 AppName=LangPad
-AppVersion=10.1
+AppVersion=11.0
 WizardStyle=modern
 DefaultDirName={autopf}\LangPad
 DefaultGroupName=LangPad
@@ -12,12 +12,13 @@ SolidCompression=yes
 ChangesAssociations = yes
 
 [Files]                            
-Source: "app\AutoUpdater.NET.dll"; DestDir: "{app}";  
-Source: "app\LangPad.exe"; DestDir: "{app}";       
-Source: "app\LangPad.exe.config"; DestDir: "{app}"; 
-Source: "app\LangPad.exe.manifest"; DestDir: "{app}";  
-Source: "app\RtfPipe.dll"; DestDir: "{app}";   
-Source: "app\TundraLib.dll"; DestDir: "{app}";
+Source: "..\release\11.0 Beta\AutoUpdater.NET.dll"; DestDir: "{app}";   
+Source: "..\release\11.0 Beta\FileIcon.ico"; DestDir: "{app}";
+Source: "..\release\11.0 Beta\LangPad.exe"; DestDir: "{app}";       
+Source: "..\release\11.0 Beta\LangPad.exe.config"; DestDir: "{app}"; 
+Source: "..\release\11.0 Beta\LangPad.exe.manifest"; DestDir: "{app}"; 
+Source: "..\release\11.0 Beta\LangPadSupport.dll"; DestDir: "{app}"; 
+Source: "..\release\11.0 Beta\RtfPipe.dll"; DestDir: "{app}";   
 
 [Icons]
 Name: "{group}\LangPad"; Filename: "{app}\LangPad.exe"

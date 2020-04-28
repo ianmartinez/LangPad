@@ -7,8 +7,8 @@
     <ProjectGuid>{8BD8A7F1-C880-41CC-8485-B132DDAD924A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TundraLib</RootNamespace>
-    <AssemblyName>TundraLib</AssemblyName>
+    <RootNamespace>LangPadSupport</RootNamespace>
+    <AssemblyName>LangPadSupport</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

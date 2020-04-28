@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TundraLib
+namespace LangPadSupport
 {
     public class CharacterInfo
     {

@@ -1,8 +1,8 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports System.Text
-Imports TundraLib
-Imports TundraLib.Themes
+Imports LangPadSupport
+Imports LangPadSupport.Themes
 
 Public Class DictionaryForm
     Dim CurrentTextbox As TextBox

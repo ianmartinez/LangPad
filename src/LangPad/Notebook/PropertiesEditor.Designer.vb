@@ -26,7 +26,7 @@ Partial Class PropertiesEditor
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PropertiesEditor))
         Me.MainTooltip = New System.Windows.Forms.ToolTip(Me.components)
         Me.DocumentToolStripContainer = New System.Windows.Forms.ToolStripContainer()
-        Me.StylizedPanel1 = New TundraLib.DoubleBufferedPanel()
+        Me.StylizedPanel1 = New LangPadSupport.DoubleBufferedPanel()
         Me.PagesListBox = New System.Windows.Forms.ListBox()
         Me.DocumentToolStrip = New System.Windows.Forms.ToolStrip()
         Me.PageUpToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -458,7 +458,7 @@ Partial Class PropertiesEditor
     Friend WithEvents MainTooltip As System.Windows.Forms.ToolTip
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents InfoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents StylizedPanel1 As TundraLib.DoubleBufferedPanel
+    Friend WithEvents StylizedPanel1 As LangPadSupport.DoubleBufferedPanel
     Friend WithEvents PageUpToolStripButton As ToolStripButton
     Friend WithEvents PageDownToolStripButton As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator

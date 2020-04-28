@@ -1,6 +1,6 @@
 ﻿Imports System.Drawing.Drawing2D
-Imports TundraLib
-Imports TundraLib.Themes
+Imports LangPadSupport
+Imports LangPadSupport.Themes
 
 Module LangPadCommon
     Public CurrentDocument As New NotebookFile

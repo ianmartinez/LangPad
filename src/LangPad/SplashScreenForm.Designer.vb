@@ -25,8 +25,8 @@ Partial Class SplashScreenForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SplashScreenForm))
         Me.LoadingProgressBar = New System.Windows.Forms.ProgressBar()
         Me.LoadingLabel = New System.Windows.Forms.Label()
-        Me.HeaderBorderPanel = New TundraLib.DoubleBufferedPanel()
-        Me.HeaderPanel = New TundraLib.DoubleBufferedPanel()
+        Me.HeaderBorderPanel = New LangPadSupport.DoubleBufferedPanel()
+        Me.HeaderPanel = New LangPadSupport.DoubleBufferedPanel()
         Me.LangPadLabel = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.HeaderBorderPanel.SuspendLayout()
@@ -127,8 +127,8 @@ Partial Class SplashScreenForm
     End Sub
     Friend WithEvents LoadingProgressBar As ProgressBar
     Friend WithEvents LoadingLabel As Label
-    Friend WithEvents HeaderBorderPanel As TundraLib.DoubleBufferedPanel
-    Friend WithEvents HeaderPanel As TundraLib.DoubleBufferedPanel
+    Friend WithEvents HeaderBorderPanel As LangPadSupport.DoubleBufferedPanel
+    Friend WithEvents HeaderPanel As LangPadSupport.DoubleBufferedPanel
     Friend WithEvents LangPadLabel As Label
     Friend WithEvents PictureBox1 As PictureBox
 End Class

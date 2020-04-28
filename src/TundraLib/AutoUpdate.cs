@@ -1,4 +1,4 @@
-﻿namespace TundraLib
+﻿namespace LangPadSupport
 {
     public class AutoUpdate
     {

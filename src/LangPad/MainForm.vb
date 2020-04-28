@@ -1,7 +1,7 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports System.IO
-Imports TundraLib
-Imports TundraLib.Themes
+Imports LangPadSupport
+Imports LangPadSupport.Themes
 
 Public Class MainForm
     Private ReadOnly ColorPicker As New ColorDialog

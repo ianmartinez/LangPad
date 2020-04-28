@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace TundraLib
+namespace LangPadSupport
 {
     public class FixedSR : ToolStripSystemRenderer
     {

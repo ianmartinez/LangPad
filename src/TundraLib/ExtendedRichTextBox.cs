@@ -7,7 +7,7 @@ using System.Drawing.Printing;
 using System.Drawing.Imaging;
 using System.Collections.Specialized;
 using System.Runtime.InteropServices;
-namespace TundraLib
+namespace LangPadSupport
 {
     // This entire file is made from various projects on CodeProject smashed together along with some of my own code
 

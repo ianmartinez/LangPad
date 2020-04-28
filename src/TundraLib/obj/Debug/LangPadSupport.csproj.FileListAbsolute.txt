@@ -1,0 +1,9 @@
+C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\bin\Debug\LangPadSupport.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\bin\Debug\LangPadSupport.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\LangPadSupport.Properties.Resources.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\LangPadSupport.StylizedColorButton.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\LangPadSupport.csproj.GenerateResource.cache
+C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\LangPadSupport.csproj.CoreCompileInputs.cache
+C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\LangPadSupport.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\LangPadSupport.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\TundraLib\obj\Debug\LangPadSupport.csprojAssemblyReference.cache
