@@ -1,0 +1,4 @@
+﻿Version=7.0
+DownloadLink=https://github.com/ianmartinez/Language-Pad/blob/master/Conlang%20Notepad/Release/Language%20Pad%207.0.zip?raw:eq:true
+Description=   •Custom font in dictionary:cr:   •Alignment now works on styles:cr:   •Symbol buttons now use Calibri:cr:   •Large tooltips on symbol buttons for easy viewing:cr:   •Export to CSV for dictionaries:cr:   •Pin to custom on symbol buttons (CTRL + Click):cr:   •Improved help system:cr:   •Default font in dictionary is now Calibri:cr:   •Changed close icon on notebook editor:cr:   •Fixed saving issues on dictionaries:cr:   •Fixed saving issues on RTF files
+RedditThread=https://www.reddit.com/r/conlangs/comments/3k1qse/language_pad_70_a_word_processor_for_conlanging/

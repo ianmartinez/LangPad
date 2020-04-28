@@ -3,10 +3,12 @@ Version 10.2 (TBD)
    **• Export dictionary to Markdown
    **• Copy text as Markdown
    **• Frequently used characters tab
+   **• Re-add themes
 
 Version 10.1 (May 16)
    • Easier resizing of images before insertion
    **• Pressing CTRL+S on character editor and dictionary now saves the notebook
+   ** Export all pages wizard
    • Display shortcut keys on menus
    • Added tons of shortcut keys to make all across the program
    • TAB to increase indent and SHIFT + TAB to decrease indent
