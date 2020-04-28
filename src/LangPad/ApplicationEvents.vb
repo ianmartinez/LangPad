@@ -112,6 +112,7 @@ Namespace My
 
             If Settings.Updates = True Then
                 SplashScreenForm.LoadingLabel.Text = "Checking for updates..."
+                CheckForUpdates()
             End If
 
             SplashScreenForm.LoadingProgressBar.Value = 100

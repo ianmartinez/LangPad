@@ -436,6 +436,16 @@ Close back rounded vowel/High back rounded vowel=u
 Close back compressed vowel/High back compressed  [rest of string was truncated]&quot;;.
 </summary>
 </member>
+<member name="T:LangPad.AutoUpdater">
+ <summary>
+ Work with AutoUpdaterDotNET
+ </summary>
+</member>
+<member name="M:LangPad.AutoUpdater.CheckForUpdates">
+ <summary>
+ Check for updates and display a dialog if there are any
+ </summary>
+</member>
 <member name="M:LangPad.CharacterEditor.SelectWord(System.Windows.Forms.TextBoxBase,System.Char,System.Char)">
  <summary>
  Select a string in a textbox between two characters. 

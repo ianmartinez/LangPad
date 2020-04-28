@@ -34,12 +34,14 @@ Partial Class AboutDialog
         Me.HeaderBorderPanel = New TundraLib.DoubleBufferedPanel()
         Me.HeaderPanel = New TundraLib.DoubleBufferedPanel()
         Me.LangPadLabel = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MainTabControl.SuspendLayout()
         Me.LicenseTab.SuspendLayout()
         Me.ChangelogTab.SuspendLayout()
         Me.MainTableLayoutPanel.SuspendLayout()
         Me.HeaderBorderPanel.SuspendLayout()
         Me.HeaderPanel.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MainTabControl
@@ -123,6 +125,7 @@ Partial Class AboutDialog
         Me.MainTableLayoutPanel.RowCount = 2
         Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 160.0!))
         Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.MainTableLayoutPanel.Size = New System.Drawing.Size(882, 732)
         Me.MainTableLayoutPanel.TabIndex = 77
         '
@@ -143,26 +146,40 @@ Partial Class AboutDialog
         '
         Me.HeaderPanel.BackgroundImage = CType(resources.GetObject("HeaderPanel.BackgroundImage"), System.Drawing.Image)
         Me.HeaderPanel.Controls.Add(Me.LangPadLabel)
+        Me.HeaderPanel.Controls.Add(Me.PictureBox1)
         Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.HeaderPanel.Location = New System.Drawing.Point(1, 1)
         Me.HeaderPanel.Name = "HeaderPanel"
+        Me.HeaderPanel.Padding = New System.Windows.Forms.Padding(16, 32, 16, 32)
         Me.HeaderPanel.Size = New System.Drawing.Size(866, 150)
-        Me.HeaderPanel.TabIndex = 76
+        Me.HeaderPanel.TabIndex = 77
         '
         'LangPadLabel
         '
         Me.LangPadLabel.BackColor = System.Drawing.Color.Transparent
         Me.LangPadLabel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LangPadLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LangPadLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LangPadLabel.ForeColor = System.Drawing.Color.White
-        Me.LangPadLabel.Location = New System.Drawing.Point(0, 0)
+        Me.LangPadLabel.Location = New System.Drawing.Point(138, 32)
         Me.LangPadLabel.Margin = New System.Windows.Forms.Padding(9, 5, 4, 5)
         Me.LangPadLabel.Name = "LangPadLabel"
-        Me.LangPadLabel.Padding = New System.Windows.Forms.Padding(10, 2, 0, 0)
-        Me.LangPadLabel.Size = New System.Drawing.Size(866, 150)
+        Me.LangPadLabel.Padding = New System.Windows.Forms.Padding(16, 2, 0, 0)
+        Me.LangPadLabel.Size = New System.Drawing.Size(712, 86)
         Me.LangPadLabel.TabIndex = 12
         Me.LangPadLabel.Text = "LangPad"
         Me.LangPadLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox1.Location = New System.Drawing.Point(16, 32)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(122, 86)
+        Me.PictureBox1.TabIndex = 13
+        Me.PictureBox1.TabStop = False
         '
         'AboutDialog
         '
@@ -187,6 +204,7 @@ Partial Class AboutDialog
         Me.MainTableLayoutPanel.ResumeLayout(False)
         Me.HeaderBorderPanel.ResumeLayout(False)
         Me.HeaderPanel.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -196,8 +214,9 @@ Partial Class AboutDialog
     Friend WithEvents ChangelogTab As System.Windows.Forms.TabPage
     Friend WithEvents ChangelogTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MainTooltip As ToolTip
-    Friend WithEvents LangPadLabel As Label
-    Friend WithEvents HeaderBorderPanel As TundraLib.DoubleBufferedPanel
     Friend WithEvents MainTableLayoutPanel As TableLayoutPanel
+    Friend WithEvents HeaderBorderPanel As TundraLib.DoubleBufferedPanel
     Friend WithEvents HeaderPanel As TundraLib.DoubleBufferedPanel
+    Friend WithEvents LangPadLabel As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

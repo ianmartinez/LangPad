@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPad.exe" size="1000960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPad.exe" size="1453568">
       <assemblyIdentity name="LangPad" version="10.1.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6nFxWbXhgW56PTcd5vohVM/p0f0AhXRtaj0mw7XAM8U=</dsig:DigestValue>
+        <dsig:DigestValue>HtVIPDF1f6QN/NeEPVlaEktMCPORTymoDKhdt8GxCA4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
