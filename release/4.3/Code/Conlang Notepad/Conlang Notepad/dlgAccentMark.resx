@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFwAAAAgCAYAAACfDx/iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC/SURBVGhD7dqxDYMwEEZhb5QRMk+myUbYYpZgwAYGoCFc
+        pFxFif/qFZ90xVWvPF2IMT5SSp+u6w60czYuZ+tnsGEcx2PbNjQ0z7OF34PVv1rA/aw1wYUILubB13WF
+        AMHFCC5GcDEPviwLBAgu5sFrrRAguBjBxQgu5sFLKRAguJgHt1st2iO4GMHFCC7mwadpggDBxQguRnAx
+        D25/KWiP4GIePOcMAYKLEVzsH3wfhuFyAff6BY8xvmxAe33fv7+r/4FeBjh/NQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnCancel.Style" xml:space="preserve">
+    <value>Radius=1
+
+Active Colors=~239|~229
+Active Positions=0|1
+Active Angle=90
+Active Border Color=~190
+Active Text Color=#252b2f
+Active Highlight Color=$0
+
+Hover Colors=#ecf4fc|#dcecfc
+Hover Positions=0|1
+Hover Angle=90
+Hover Border Color=#7eb4ea
+Hover Text Color=#252b2f
+Hover Highlight Color=$0
+
+Pressed Colors=#daecfc|#c4e0fc
+Pressed Positions=0|1
+Pressed Angle=90
+Pressed Border Color=#569de5
+Pressed Text Color=#252b2f
+Pressed Highlight Color=$0
+
+
+</value>
+  </data>
+  <data name="btnOK.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFsAAAAgCAYAAAB90wSbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADASURBVGhD7dq9DYNADIZhNsoImSfTZCMOMUv4O+4YgIbg
+        SHFFib/qLR7Jhau3tNyklB5d133atj0Q4+ybz87PxoZpmo5t2xBkWRaLvjdW/moB97LOxBYhtpDHrrUi
+        GLGFiC1EbCGPXUpBMGILeex1XRGM2ELEFiK2kMfOOSMYsYU8tt1bEYvYQsQWIraQx57nGcGILURsIWIL
+        eWz7G0EsYgt57HEcEYzYQsQW+sfeh2G4XMB9frFTSi8bEKvv+/cXJSUKwA6OygUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnOK.Style" xml:space="preserve">
+    <value>Radius=1
+
+Active Colors=~239|~229
+Active Positions=0|1
+Active Angle=90
+Active Border Color=~190
+Active Text Color=#252b2f
+Active Highlight Color=$0
+
+Hover Colors=#ecf4fc|#dcecfc
+Hover Positions=0|1
+Hover Angle=90
+Hover Border Color=#7eb4ea
+Hover Text Color=#252b2f
+Hover Highlight Color=$0
+
+Pressed Colors=#daecfc|#c4e0fc
+Pressed Positions=0|1
+Pressed Angle=90
+Pressed Border Color=#569de5
+Pressed Text Color=#252b2f
+Pressed Highlight Color=$0
+
+
+</value>
+  </data>
+  <data name="btnAdd.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOAAAAAgCAYAAAALxXRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAzSURBVHhe7cExAQAAAMKg9U9tCF8gAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAA4FQDcCAAATPj8RIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAIcSURBVDhPpZM9aJNhFIVvKzpk8G+QuHQoOAlCyOJe
+        Te2PaCqCETsJorvECg5CxahJQ5KmTdIUpFVQEouL1SGltbXFJqLG0HYQLB10cHLooNvxnHxJTTV08cBN
+        bu695/lu3jcxAP8VzkuDuiPm9d23womQoYOhd35GV9gKvUPmrY1V9Q/g1AMbCYzuxcvV69jYfIjPPxIo
+        fbuJ6bV+3J0+hr74LvRGLFcb3w6gOXd5/DB+YgbFr/1IvTHE5gzx14b0omGy1I7UggfnhwkZspFtgB6u
+        fSHpwvdfU3hSdiNJQ2xBLUdxwjJvDdnl3Qi9cuNszHA6al62HIDvns0+LgYws96FJAcVUZrqUj66bBh7
+        R/D8HlydMPSEbY6tLQCWNoJIlziwRDM3CM3/AShXbZjgDCHBPAGRat8BnCRg9ssVTJb3q7ijUu8NA1OG
+        7nADQNf0vOLHo5WDKu6o1McmAN4AxhePI/3JkOATolwzxHXrUq7a8AeeQ7nZVxi04kD+EFLFAxhbMaQq
+        NBBUl3LVsquGCM/j2kQLOu9YkS0H4AmY38+rGXyxD5lKK7JrfBq3qUu5atowmG+pXqPnovnZcgCUq+OW
+        5frihhvPWhHRvdPwdN1dDeWqyXwuwZ83Z+VpBEhtvttWEF0rBnOE8bsqlKumXs3cJsPfAKn96Bm71Mkz
+        0SHppBXKVVOPM1Wz1AwguRhHGPrnNYZq6m0JgP0G6eEvU19cZSYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnAdd.Style" xml:space="preserve">
+    <value>Radius=1
+
+Active Colors=$0|$0
+Active Positions=0|1
+Active Angle=90
+Active Border Color=$0
+Active Text Color=#252b2f
+Active Highlight Color=$0
+
+Hover Colors=#ecf4fc|#dcecfc
+Hover Positions=0|1
+Hover Angle=90
+Hover Border Color=#7eb4ea
+Hover Text Color=#252b2f
+Hover Highlight Color=$0
+
+Pressed Colors=#daecfc|#c4e0fc
+Pressed Positions=0|1
+Pressed Angle=90
+Pressed Border Color=#569de5
+Pressed Text Color=#252b2f
+Pressed Highlight Color=$0
+
+
+</value>
+  </data>
+</root>

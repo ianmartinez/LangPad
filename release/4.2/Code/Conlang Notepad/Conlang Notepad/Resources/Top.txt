@@ -1,0 +1,6 @@
+Positions=0|0.9|1
+Angle=90
+Radius=0
+Border Color=~171
+Highlight Color$0
+Bottom Only=1

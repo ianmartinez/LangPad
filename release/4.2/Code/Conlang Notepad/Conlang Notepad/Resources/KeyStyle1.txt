@@ -1,0 +1,23 @@
+Radius=0
+
+Active Colors=$0|$0
+Active Positions=0|1
+Active Angle=90
+Active Border Color=$0
+Active Text Color=$0
+Active Highlight Color=$0
+
+Hover Colors=254,254,255|254,254,255
+Hover Positions=0|1
+Hover Angle=90
+Hover Border Color=#c9c9c9
+Hover Text Color=64,64,64
+Hover Highlight Color=230,255,255,255
+
+Pressed Colors=186,188,191|186,188,191|186,188,191
+Pressed Positions=0|0.2|1
+Pressed Angle=90
+Pressed Border Color=#c9c9c9
+Pressed Text Color=94,95,99
+Pressed Highlight Color=0,255,255,255
+

@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96451D96-1492-4D4A-BCA2-C65DE80255D2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Language_Pad.My.MyApplication</StartupObject>
+    <RootNamespace>Language_Pad</RootNamespace>
+    <AssemblyName>Language Pad</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>5.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Language Pad.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Language Pad.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LangPad4.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>38E3BF1F3A17B82E7D86BB07415687A38DCBFF85</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Conlang Notepad_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.BZip2, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Ionic.BZip2.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CenteredComboBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dlgAbout.Designer.vb">
+      <DependentUpon>dlgAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgAccentMark.Designer.vb">
+      <DependentUpon>dlgAccentMark.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgAccentMark.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgAddPage.Designer.vb">
+      <DependentUpon>dlgAddPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgAddPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgAppendReplace.Designer.vb">
+      <DependentUpon>dlgAppendReplace.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgAppendReplace.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgCustomSymbols.Designer.vb">
+      <DependentUpon>dlgCustomSymbols.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgCustomSymbols.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgCustomZoom.Designer.vb">
+      <DependentUpon>dlgCustomZoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgCustomZoom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgSettings.Designer.vb">
+      <DependentUpon>dlgSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgStyle.Designer.vb">
+      <DependentUpon>dlgStyle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgStyle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgTable.Designer.vb">
+      <DependentUpon>dlgTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgTextArt.Designer.vb">
+      <DependentUpon>dlgTextArt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgTextArt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgUpdate.Designer.vb">
+      <DependentUpon>dlgUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgWebcam.Designer.vb">
+      <DependentUpon>dlgWebcam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dlgWebcam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRTF.Designer.vb">
+      <DependentUpon>frmRTF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRTF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LanguagePadCommon.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="NotebookEditor.Designer.vb">
+      <DependentUpon>NotebookEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NotebookEditor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotebookFile.vb" />
+    <Compile Include="ssLoading.Designer.vb">
+      <DependentUpon>ssLoading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ssLoading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebcamFrame.vb">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dlgAbout.resx">
+      <DependentUpon>dlgAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgAccentMark.resx">
+      <DependentUpon>dlgAccentMark.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgAddPage.resx">
+      <DependentUpon>dlgAddPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgAppendReplace.resx">
+      <DependentUpon>dlgAppendReplace.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgCustomSymbols.resx">
+      <DependentUpon>dlgCustomSymbols.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgCustomZoom.resx">
+      <DependentUpon>dlgCustomZoom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgSettings.resx">
+      <DependentUpon>dlgSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgStyle.resx">
+      <DependentUpon>dlgStyle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgTable.resx">
+      <DependentUpon>dlgTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgTextArt.resx">
+      <DependentUpon>dlgTextArt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgUpdate.resx">
+      <DependentUpon>dlgUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgWebcam.resx">
+      <DependentUpon>dlgWebcam.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRTF.resx">
+      <DependentUpon>frmRTF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotebookEditor.resx">
+      <DependentUpon>NotebookEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ssLoading.resx">
+      <DependentUpon>ssLoading.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Conlang Notepad_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Resources\Transparent2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vowels.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accents.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Affricates.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Consonants.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Other.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToneIntonation.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KeyStyle.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Conlang Notepad.ico" />
+    <Content Include="LangPad4.ico" />
+    <None Include="Resources\Top.txt" />
+    <None Include="Resources\KeyStyle1.txt" />
+    <None Include="Resources\Common.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tundra\Tundra.vbproj">
+      <Project>{801224de-bf6a-4196-b80f-8f881dd17fb8}</Project>
+      <Name>Tundra</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

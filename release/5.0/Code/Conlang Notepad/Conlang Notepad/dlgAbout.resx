@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TextBox2.Text" xml:space="preserve">
+    <value>Version 5.0 (August 3, 2015)
+   •Update checker
+   •Smaller icon for file tab
+   •Updated style for Windows 10
+   •Quick startup option to skip loading clipart and checking updates
+   •Fixed some font issues in the UI
+   •Redesigned splash screen
+   •Fixed huge font styling issues when changing font sizes and families
+   •Fixed flickering when switching tabs
+Version 4.3 (July 9, 2015)
+   •Files are now saved in the same format they were opened as 
+   •Tables now insert in place instead of at the end of the file
+   •Row limit now 10,000 instead of 1,000
+   •Switched to Fat Cow icons
+   •Tab font now red
+   •Context menu in editor
+   •UI style redesigned
+   •Reverted to old button style in dialogs
+   •Editor no longer hides selection if it loses focus
+Version 4.2 (July 4, 2015)
+   •Fixed missing functionality on the new button
+   •Fixed RTF editor ribbon colors to match main ribbon
+   •Fixed the symbol tabs' padding
+   •The current page is now saved when moving pages 
+   •Fixed tab order   
+   •Saving on close doesn't cancel the closing process anymore
+   •Changed button style on dialogs
+   •Lighter borders around ribbons
+   •Notebook editor fields now centered
+   •Save notebook button in notebook editor
+   •Duplicate page button notebook in notebook editor
+   •You can now select pages using arrow keys in the notebook editor
+   •Help file included now
+   •Released source code
+Version 4.1 (July 1, 2015)
+   •Fixed bug where the file wouldn't save with only 1 tab
+   •Fixed bug where zip files wouldn't open from File Explorer
+   •Allow embedding custom symbols in saved notebooks
+   •Rename page button now in notebook editor
+   •Inserting an image no longer makes the button white
+   •Splash screen touched up
+   •Webcam dialog resized
+   •Fixed sidebar notebook list borders
+   •Borders removed on tabs
+   •Numerous small UI changes
+Version 4.0 (June 27, 2015)
+   •New icon
+   •Edit RTF window redesigned with ribbon
+   •Improved looks on Windows 10 (Build 10147)
+   •Splash screen colors changed
+   •Insertion point now stays the same after inserting symbol
+   •Redesigned about dialog
+   •Redesigned internal color system
+   •Numerous small tune-ups to the UI
+   •Trimmed unnecessary code in Tundra library
+   •Tabbed pages
+   •"Œ" ligature now in common tab
+   •Default format now a notebook file (*.nt)
+   •Comma and reverse comma above in accent mark dialog
+Version 3.0 (May 16, 2015)
+   •Word wrap toggle
+   •Ribbon redesigned
+   •Emotes and clip art dialogs now sidebars
+   •Webcam dialog changed to match others
+   •Custom zoom dialog
+   •Dialog buttons made consistent
+   •Redesigned about dialog
+Version 2.1 (May 13, 2015)
+   •Ability to add tables
+   •File name now shows in title bar
+   •Icons changed in dialogs
+   •Minor UI changes
+   •Flash button in webcam dialog
+   •Fixed lost formatting when opening from File Explorer
+   •Splash screen redesigned
+Version 2.0 (May 10, 2015)    
+   •Icons changed
+   •Buttons made flatter
+   •Word count &amp; character count now on top bar
+   •Removed status bar
+   •Ability to edit RTF directly
+   •You can now save/open custom symbols from files
+   •Quick color selector when you right click color buttons
+   •Right click menu on text editing area
+   •Insert webcam now closes after failing to start webcam
+   •Webcam dialog redesigned
+   •Changed confirmation dialog style
+   •Accent mark dialog redesigned
+   •Add to custom symbols button in accent mark dialog
+   •Macron Below in accent mark dialog
+   •Fixed distorted images when pasting
+   •Fixed errors when changing certain fonts
+Version 1.1 (May 3, 2015)
+   •You can now open files directly in File Explorer
+   •Splash screen redesigned
+   •Cleaner-looking ribbon
+   •Resizable symbols palette
+   •Resizable emoji palette
+   •Fixed name in about box
+   •Fixed some other UI glitches
+   •You can now control narration speed &amp; sound
+   •Insert webcam now shows an error if there's no webcam
+Version 1.0 (April 24, 2015)
+   •Initial Release</value>
+  </data>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>Copyright (c) 2015, Ian Martinez
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnOK.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEQAAAAZCAYAAACIA4ibAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABgSURBVFhH7dCxCcAwEMVQ77/Lwc2T7lbwAnZ+EQiaQcUD
+        1Vrd/VTVUZ28WImZ0SsvHPLjEHAIOAQcAg4Bh4BDwCHgEHAIOAQcAg4Bh4BDwCHgEHAIOAQcAg6Bb8hO
+        KGpft5+x6NHux+0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnOK.Style" xml:space="preserve">
+    <value>Radius=0
+
+Active Colors=~225|~225
+Active Positions=0|1
+Active Angle=90
+Active Border Color=~173
+Active Text Color=$2
+Active Highlight Color=$0
+
+Hover Colors=#e5f1fb|#e5f1fb
+Hover Positions=0|1
+Hover Angle=90
+Hover Border Color=#0078d7
+Hover Text Color=$2
+Hover Highlight Color=$0
+
+Pressed Colors=#cce4f7|#cce4f7
+Pressed Positions=0|1
+Pressed Angle=90
+Pressed Border Color=#005499
+Pressed Text Color=$2
+Pressed Highlight Color=$0</value>
+  </data>
+  <data name="PictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+</root>
