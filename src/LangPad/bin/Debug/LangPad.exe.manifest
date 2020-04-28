@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="LangPad.exe" version="11.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="LangPad.exe" version="11.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="AppIcon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -55,6 +55,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HtmlAgilityPack.dll" size="165376">
+      <assemblyIdentity name="HtmlAgilityPack" version="1.11.23.0" publicKeyToken="BD319B19EAF3B43A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>HUtdWo1R9NZ7BQDIbleBX5xNRAvmONcs84JbDHLkQdc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPad.exe" size="1084416">
       <assemblyIdentity name="LangPad" version="11.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -62,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>A82dLxr3+Elc/0OWPizFu/arQaL2nEfJkyD/ACC8qus=</dsig:DigestValue>
+        <dsig:DigestValue>C+HC2DQFf2pazINgt1iGYV0pYS9pNFg7NALjcwJGvVQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,6 +87,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>oLGt6++dv5UUY+M0kCBnVhsq8M1CHNw2nuHixSXbJug=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReverseMarkdown.dll" size="23040">
+      <assemblyIdentity name="ReverseMarkdown" version="3.11.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>JYPUS8A8JKSXyQBS1JqtAjI19fp5zTo9wakgmOLHUvA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -108,13 +132,13 @@
       <dsig:DigestValue>rjjoBWEWYYtHDZiJZkniK4TfeX/qznSpMsaXDTfbBmg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LangPad.exe.config" size="2957">
+  <file name="LangPad.exe.config" size="3321">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>UsvDmSUM3DT4Ayk+u5AVjjnmz+cG6Vhy9JpR+yMHnKU=</dsig:DigestValue>
+      <dsig:DigestValue>Z/6GU6zOUsq5WV1LGseTcvvq/aRP1Ldw8VqQvpIUnWo=</dsig:DigestValue>
     </hash>
   </file>
   <asmv3:application xmlns="urn:schemas-microsoft-com:asm.v1">

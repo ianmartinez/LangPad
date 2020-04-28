@@ -28,6 +28,7 @@ DisableWelcomePage=no
 WelcomeLabel1=Welcome to the {#AppName} {#AppVersion} Setup Wizard.
 WelcomeLabel2={#AppName} is a free and open-source word processor for linguistics.
 
+; Files to copy into program files
 [Files]                            
 Source: "{#AppReleaseFolder}\AutoUpdater.NET.dll"; DestDir: "{app}";   
 Source: "{#AppReleaseFolder}\{#FileIcon}"; DestDir: "{app}";
@@ -37,6 +38,7 @@ Source: "{#AppReleaseFolder}\{#AppName}.exe.manifest"; DestDir: "{app}";
 Source: "{#AppReleaseFolder}\LangPadSupport.dll"; DestDir: "{app}"; 
 Source: "{#AppReleaseFolder}\RtfPipe.dll"; DestDir: "{app}";   
 
+; Add to start menu
 [Icons]
 Name: "{autoprograms}\{#AppName}"; Filename: "{app}\{#AppName}.exe"   
 

@@ -69,3 +69,7 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.Cop
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.exe
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.xml
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\ReverseMarkdown.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.xml
