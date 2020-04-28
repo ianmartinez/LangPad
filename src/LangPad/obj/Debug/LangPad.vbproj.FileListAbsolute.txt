@@ -1,0 +1,68 @@
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.vbprojAssemblyReference.cache
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.CharacterEditorToolWindow.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.AboutDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.NamePageDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.CustomZoomDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.SettingsDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.StyleDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.ImportImageDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.DictionaryForm.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.ExportHtmlDialog.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.MainForm.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.RtfEditorForm.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.Resources.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.CharacterEditor.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.PropertiesEditor.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.SplashScreenForm.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.CharacterButton.resources
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.vbproj.GenerateResource.cache
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.vbproj.CoreCompileInputs.cache
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\LangPad.exe.config
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\LangPad.exe.manifest
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\LangPad.application
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\LangPad.exe
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\LangPad.pdb
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\LangPad.xml
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\RtfPipe.dll
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\TundraLib.dll
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\bin\Debug\TundraLib.pdb
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.exe.manifest
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.application
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.vbproj.CopyComplete
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.exe
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.xml
+C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe.config
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe.manifest
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.application
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.xml
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\RtfPipe.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\TundraLib.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\TundraLib.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbprojAssemblyReference.cache
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CharacterEditorToolWindow.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.AboutDialog.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.NamePageDialog.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CustomZoomDialog.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.SettingsDialog.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.StyleDialog.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.ImportImageDialog.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.DictionaryForm.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.ExportHtmlDialog.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.MainForm.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.RtfEditorForm.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.Resources.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CharacterEditor.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.PropertiesEditor.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.SplashScreenForm.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CharacterButton.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.GenerateResource.cache
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.CoreCompileInputs.cache
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.exe.manifest
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.application
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.CopyComplete
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.exe
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.xml
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.pdb
