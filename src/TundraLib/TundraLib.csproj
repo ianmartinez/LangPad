@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NetSparkle, Version=0.19.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetSparkle.New.0.19.2\lib\net45\NetSparkle.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -45,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoUpdate.cs" />
     <Compile Include="Characters.cs" />
     <Compile Include="DoubleBufferedFlowLayoutPanel.cs">
       <SubType>Component</SubType>
@@ -84,7 +88,9 @@
       <DependentUpon>StylizedColorButton.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Icon24\accessibility.png" />
     <EmbeddedResource Include="Resources\Icon24\album.png" />
