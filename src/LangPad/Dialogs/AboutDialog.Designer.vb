@@ -49,11 +49,11 @@ Partial Class AboutDialog
         Me.MainTabControl.Controls.Add(Me.LicenseTab)
         Me.MainTabControl.Controls.Add(Me.ChangelogTab)
         Me.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainTabControl.Location = New System.Drawing.Point(7, 168)
+        Me.MainTabControl.Location = New System.Drawing.Point(7, 188)
         Me.MainTabControl.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MainTabControl.Name = "MainTabControl"
         Me.MainTabControl.SelectedIndex = 0
-        Me.MainTabControl.Size = New System.Drawing.Size(868, 556)
+        Me.MainTabControl.Size = New System.Drawing.Size(868, 536)
         Me.MainTabControl.TabIndex = 9
         '
         'LicenseTab
@@ -63,7 +63,7 @@ Partial Class AboutDialog
         Me.LicenseTab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LicenseTab.Name = "LicenseTab"
         Me.LicenseTab.Padding = New System.Windows.Forms.Padding(9)
-        Me.LicenseTab.Size = New System.Drawing.Size(860, 523)
+        Me.LicenseTab.Size = New System.Drawing.Size(860, 503)
         Me.LicenseTab.TabIndex = 0
         Me.LicenseTab.Text = "License"
         Me.LicenseTab.UseVisualStyleBackColor = True
@@ -80,7 +80,7 @@ Partial Class AboutDialog
         Me.LicenseTextBox.Name = "LicenseTextBox"
         Me.LicenseTextBox.ReadOnly = True
         Me.LicenseTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.LicenseTextBox.Size = New System.Drawing.Size(842, 505)
+        Me.LicenseTextBox.Size = New System.Drawing.Size(842, 485)
         Me.LicenseTextBox.TabIndex = 7
         Me.LicenseTextBox.Text = resources.GetString("LicenseTextBox.Text")
         '
@@ -123,9 +123,8 @@ Partial Class AboutDialog
         Me.MainTableLayoutPanel.Name = "MainTableLayoutPanel"
         Me.MainTableLayoutPanel.Padding = New System.Windows.Forms.Padding(3)
         Me.MainTableLayoutPanel.RowCount = 2
-        Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 160.0!))
+        Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 180.0!))
         Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.MainTableLayoutPanel.Size = New System.Drawing.Size(882, 732)
         Me.MainTableLayoutPanel.TabIndex = 77
         '
@@ -139,7 +138,7 @@ Partial Class AboutDialog
         Me.HeaderBorderPanel.Location = New System.Drawing.Point(6, 6)
         Me.HeaderBorderPanel.Name = "HeaderBorderPanel"
         Me.HeaderBorderPanel.Padding = New System.Windows.Forms.Padding(1)
-        Me.HeaderBorderPanel.Size = New System.Drawing.Size(870, 154)
+        Me.HeaderBorderPanel.Size = New System.Drawing.Size(870, 174)
         Me.HeaderBorderPanel.TabIndex = 76
         '
         'HeaderPanel
@@ -151,20 +150,20 @@ Partial Class AboutDialog
         Me.HeaderPanel.Location = New System.Drawing.Point(1, 1)
         Me.HeaderPanel.Name = "HeaderPanel"
         Me.HeaderPanel.Padding = New System.Windows.Forms.Padding(16, 32, 16, 32)
-        Me.HeaderPanel.Size = New System.Drawing.Size(866, 150)
+        Me.HeaderPanel.Size = New System.Drawing.Size(866, 170)
         Me.HeaderPanel.TabIndex = 77
         '
         'LangPadLabel
         '
         Me.LangPadLabel.BackColor = System.Drawing.Color.Transparent
         Me.LangPadLabel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LangPadLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LangPadLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
         Me.LangPadLabel.ForeColor = System.Drawing.Color.White
         Me.LangPadLabel.Location = New System.Drawing.Point(138, 32)
         Me.LangPadLabel.Margin = New System.Windows.Forms.Padding(9, 5, 4, 5)
         Me.LangPadLabel.Name = "LangPadLabel"
         Me.LangPadLabel.Padding = New System.Windows.Forms.Padding(16, 2, 0, 0)
-        Me.LangPadLabel.Size = New System.Drawing.Size(712, 86)
+        Me.LangPadLabel.Size = New System.Drawing.Size(712, 106)
         Me.LangPadLabel.TabIndex = 12
         Me.LangPadLabel.Text = "LangPad"
         Me.LangPadLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -177,7 +176,7 @@ Partial Class AboutDialog
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
         Me.PictureBox1.Location = New System.Drawing.Point(16, 32)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(122, 86)
+        Me.PictureBox1.Size = New System.Drawing.Size(122, 106)
         Me.PictureBox1.TabIndex = 13
         Me.PictureBox1.TabStop = False
         '

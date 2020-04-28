@@ -7,7 +7,7 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="LangPad.exe.manifest" size="7435">
+    <dependentAssembly dependencyType="install" codebase="Application Files\LangPad_10_1_0_5\LangPad.exe.manifest" size="7435">
       <assemblyIdentity name="LangPad.exe" version="10.1.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
