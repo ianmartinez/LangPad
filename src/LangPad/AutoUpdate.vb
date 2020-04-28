@@ -2,7 +2,6 @@
 
 Module AutoUpdate
     Public Sub Update()
-        AutoUpdater.Start("http://rbsoft.org/updates/AutoUpdaterTest.xml")
+        AutoUpdater.Start("https://raw.githubusercontent.com/ianmartinez/LangPad/master/update/update.xml")
     End Sub
-
 End Module
