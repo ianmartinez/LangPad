@@ -436,6 +436,36 @@ Close back rounded vowel/High back rounded vowel=u
 Close back compressed vowel/High back compressed  [rest of string was truncated]&quot;;.
 </summary>
 </member>
+<member name="T:LangPad.AppNoteboo">
+ <summary>
+ Handles operations on the current notebook used by LangPad.
+ </summary>
+</member>
+<member name="F:LangPad.AppNoteboo.NTVersion">
+ <summary>
+ The internal file version for notebook (*.nt) files
+ created with this version.
+ </summary>
+</member>
+<member name="P:LangPad.AppNoteboo.CurrentNotebook">
+ <summary>
+ The document open in this instance of LangPad.
+ </summary>
+</member>
+<member name="P:LangPad.AppNoteboo.PageIndex">
+ <summary>
+ The index of the currently open page in the
+ notebook.
+ </summary>
+</member>
+<member name="M:LangPad.AppNoteboo.InsertPage(System.Int32,System.String)">
+ <summary>
+ Insert a page to the current notebook.
+ </summary>
+ 
+ <param name="Index">The index to place it at.</param>
+ <param name="Title">The page's title</param>
+</member>
 <member name="T:LangPad.AutoUpdater">
  <summary>
  Work with AutoUpdaterDotNET
@@ -444,6 +474,28 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
 <member name="M:LangPad.AutoUpdater.CheckForUpdates">
  <summary>
  Check for updates and display a dialog if there are any
+ </summary>
+</member>
+<member name="T:LangPad.Html">
+ <summary>
+ Handles conversion to HTML
+ </summary>
+</member>
+<member name="M:LangPad.Html.RtfToHtml(System.String,System.String,System.Boolean)">
+ <summary>
+ Convert RTF to HTML.
+ </summary>
+ 
+ <param name="Rtf">The RTF source.</param>
+ <param name="Title">The title, if not only body.</param>
+ <param name="OnlyBody">If only the contents inside the body tag of the HTML
+ document should be returned.</param>
+ 
+ <returns>The RTF that has been converted to HTML.</returns>
+</member>
+<member name="T:LangPad.Markdown">
+ <summary>
+ Handles the conversion to Markdown
  </summary>
 </member>
 <member name="T:LangPad.ImageResizer">
@@ -499,19 +551,9 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Contains information about the current instance of the application.
  </summary>
 </member>
-<member name="F:LangPad.AppInstance.CurrentDocument">
- <summary>
- The document open in this instance of LangPad.
- </summary>
-</member>
 <member name="F:LangPad.AppInstance.CharEditWindow">
  <summary>
  The character editor tools window used between windows.
- </summary>
-</member>
-<member name="F:LangPad.AppInstance.NTVersion">
- <summary>
- The internal file version for *.nt files.
  </summary>
 </member>
 <member name="F:LangPad.AppInstance.FirstTabUpdate">

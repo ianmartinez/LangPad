@@ -4,12 +4,11 @@ Imports LangPadSupport
 Imports LangPadSupport.Themes
 
 Public Class MainForm
+    Public WithEvents CurrentRtb As New ExtendedRichTextBox()
     Private ReadOnly ColorPicker As New ColorDialog
     Private CurrentFilePath As String
     Private LastPrintedCharPos As Integer
     Public Title As String
-    Public RtbList As New List(Of ExtendedRichTextBox)
-    Public WithEvents CurrentRtb As New ExtendedRichTextBox()
     Public Moving As Boolean = False
     Public DisableFontChange As Boolean
     Public IsLoading As Boolean = False
@@ -319,21 +318,11 @@ Public Class MainForm
                 .Text = Page.Title
             }
 
-            Dim NewRichTextBox As New ExtendedRichTextBox With {
-                .Font = New Font("Calibri", 11, FontStyle.Regular),
-                .Rtf = Page.RTF,
-                .Dock = DockStyle.Fill,
-                .ScrollBars = RichTextBoxScrollBars.Both,
-                .BorderStyle = BorderStyle.None,
-                .ContextMenuStrip = MainContextMenu,
-                .HideSelection = False
-            }
-
-            AddHandler NewRichTextBox.TextChanged, AddressOf ModifiedHandler
+            Dim NewRichTextBox = CreateRichTextBox(Page.RTF)
             Tab.Controls.Add(NewRichTextBox)
+            RtbList.Add(NewRichTextBox)
             NotebookTabs.TabPages.Add(Tab)
             PropertiesPanel.PagesListBox.Items.Add(Page.Title)
-            RtbList.Add(NewRichTextBox)
         Next
 
         NotebookTabs.SelectedIndex = 0
@@ -357,10 +346,6 @@ Public Class MainForm
 
         lblPageCount.Text = "Page Count: " & CurrentNotebook.Pages.Count
         WordWrapToolStripMenuItem.Checked = CurrentRtb.WordWrap
-    End Sub
-
-    Public Sub ModifiedHandler(sender As Object, e As EventArgs)
-        CurrentNotebook.Modified = True
     End Sub
 
     Public Function ModifiedWarning() As DialogResult

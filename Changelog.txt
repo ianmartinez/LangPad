@@ -23,6 +23,7 @@ Version 11.0 (June 30)
    **• Re-add themes
    **• Faster loading of documents
    **• Adding, removing, renaming, and changing the order of pages are all much faster
+   **• Pages are now inserted after the current page, not at the end of the notebook
    • Improved splash screen
    • Major refactoring to have a more consistent naming scheme and remove old junk code
    • Bug Fix: Word count wouldn't update automatically when opening a new file

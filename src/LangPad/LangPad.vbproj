@@ -121,7 +121,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppDocument.vb" />
+    <Compile Include="AppNotebook.vb" />
     <Compile Include="AutoUpdater.vb" />
     <Compile Include="CharacterEditorToolWindow.Designer.vb">
       <DependentUpon>CharacterEditorToolWindow.vb</DependentUpon>

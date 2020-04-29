@@ -17,12 +17,7 @@ Public Class NamePageDialog
         Dim CurrentPage As Integer = MainForm.NotebookTabs.SelectedIndex
 
         If Mode = PageNameMode.Add Then
-            Dim NewPage As New NotebookPage With {
-                .Title = NameTextBox.Text
-            }
-
-            CurrentNotebook.Pages.Add(NewPage)
-            MainForm.UpdateTabs()
+            InsertPage(PageIndex, NameTextBox.Text)
         ElseIf Mode = PageNameMode.Duplicate Then
             Dim NewPage As New NotebookPage With {
                 .Title = NameTextBox.Text,
