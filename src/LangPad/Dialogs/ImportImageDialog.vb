@@ -68,7 +68,7 @@
         If Not Updating Then
             If LockAspectCheckBox.Checked Then
                 Updating = True
-                HeightNud.Value = Math.Min(HeightNud.Maximum, AdjustHeight(ImportedImage.Size, New Size(WidthNud.Value, HeightNud.Value), True))
+                HeightNud.Value = Math.Min(HeightNud.Maximum, WidthAfterHeightAdjust(ImportedImage.Size, New Size(WidthNud.Value, HeightNud.Value), True))
                 Updating = False
             End If
         End If
@@ -78,7 +78,7 @@
         If Not Updating Then
             If LockAspectCheckBox.Checked Then
                 Updating = True
-                WidthNud.Value = Math.Min(WidthNud.Maximum, AdjustWidth(ImportedImage.Size, New Size(WidthNud.Value, HeightNud.Value), True))
+                WidthNud.Value = Math.Min(WidthNud.Maximum, HeightAfterWidthAdjust(ImportedImage.Size, New Size(WidthNud.Value, HeightNud.Value), True))
                 Updating = False
             End If
         End If
@@ -91,8 +91,8 @@
     Private Sub LockAspectCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles LockAspectCheckBox.CheckedChanged
         Updating = True
         If ImportedImage IsNot Nothing Then
-            WidthNud.Value = AdjustWidth(ImportedImage.Size, New Size(WidthNud.Value, HeightNud.Value), LockAspectCheckBox.Checked)
-            HeightNud.Value = AdjustHeight(ImportedImage.Size, New Size(WidthNud.Value, HeightNud.Value), LockAspectCheckBox.Checked)
+            WidthNud.Value = HeightAfterWidthAdjust(ImportedImage.Size, New Size(WidthNud.Value, HeightNud.Value), LockAspectCheckBox.Checked)
+            HeightNud.Value = WidthAfterHeightAdjust(ImportedImage.Size, New Size(WidthNud.Value, HeightNud.Value), LockAspectCheckBox.Checked)
         End If
         Updating = False
     End Sub
@@ -110,9 +110,5 @@
 
     Private Sub HeightNud_Enter(sender As Object, e As EventArgs) Handles HeightNud.Enter
         LastFocused = HeightNud
-    End Sub
-
-    Private Sub ImportImageDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

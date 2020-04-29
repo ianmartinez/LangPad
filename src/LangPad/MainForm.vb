@@ -19,7 +19,7 @@ Public Class MainForm
     Public VerticalMenuGradient As Boolean = False
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Text = "LangPad " & GetVersionString()
+        Text = GetAppDisplayName()
         Title = Text
         MainContextMenu.ImageScalingSize = New Size(16, 16)
 
@@ -80,7 +80,6 @@ Public Class MainForm
         End If
 
         SetTitle()
-        Initialized = True
         UpdateTabs()
         SplitLayoutPanel.Panel2Collapsed = False
         SelectedDocument_TextChanged(Me, e)
@@ -101,8 +100,8 @@ Public Class MainForm
         MainToolStrip.Location = New Point(0, 0)
 
         ' Set theme
-        StartupTheme = New GlacierTheme()
-        SetTheme(StartupTheme)
+        ApplicationTheme = New GlacierTheme()
+        SetTheme(ApplicationTheme)
         ThemeCombo.SelectedItem = My.Settings.Theme
 
         ' Add handlers for the color panel buttons

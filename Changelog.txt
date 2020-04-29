@@ -8,13 +8,13 @@ Version 11.0 (June 30)
    • Allow the adjustment of bullet indent
    • Support hanging indent
    • Reset indent menu option
-   • Add "New Window" menu item to easily open a new Language Pad instance
+   • Add "New Window" menu item to easily open a new LangPad instance
    • Paste images directly from File Explorer
    **• Add options to wrap selected text in brackets [] and // or remove brackets
    • Add shortcut keys to wrap text in brackets
    • Zoom in increments of 0.2 (a less drastic jump)   
-   • The page title of HTML documents now matches their name in Language Pad
-   **• Now has a dedicated installer
+   • The page title of HTML documents now matches their name in LangPad
+   • Now has a dedicated installer
    • Use AutoUpdater.NET instead of custom autoupdater
    **• Export pages to Markdown
    **• Export dictionary to Markdown

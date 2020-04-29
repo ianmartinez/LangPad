@@ -446,6 +446,45 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Check for updates and display a dialog if there are any
  </summary>
 </member>
+<member name="T:LangPad.ImageResizer">
+ <summary>
+ Module handling the resizing of images.
+ </summary>
+</member>
+<member name="M:LangPad.ImageResizer.ResizeImage(System.Drawing.Image,System.Drawing.Size,System.Boolean)">
+ <summary>
+ Resize an image to a new size, with or without preserving its aspect ratio.
+ Does not modify the original image.
+ </summary>
+ 
+ <param name="sourceImage">The image to resize.</param>
+ <param name="newSize">The image's new size.</param>
+ <param name="preserveAspect">If the aspect ratio of the source image should be preserved.</param>
+ 
+ <returns>A copy of the source image, resized to the new size.</returns>
+</member>
+<member name="M:LangPad.ImageResizer.HeightAfterWidthAdjust(System.Drawing.Size,System.Drawing.Size,System.Boolean)">
+ <summary>
+ Get the height value of a rectangle after adjusting its width.
+ </summary>
+ 
+ <param name="oldSize">The old size.</param>
+ <param name="newSize">The new size.</param>
+ <param name="preserveAspect">If the aspect ratio should be preserved</param>
+ 
+ <returns>The height value of the new rectangle.</returns>
+</member>
+<member name="M:LangPad.ImageResizer.WidthAfterHeightAdjust(System.Drawing.Size,System.Drawing.Size,System.Boolean)">
+ <summary>
+ Get the width value of a rectangle after adjusting its height.
+ </summary>
+ 
+ <param name="oldSize">The old size.</param>
+ <param name="newSize">The new size.</param>
+ <param name="preserveAspect">If the aspect ratio should be preserved</param>
+ 
+ <returns>The width value of the new rectangle.</returns>
+</member>
 <member name="M:LangPad.CharacterEditor.SelectWord(System.Windows.Forms.TextBoxBase,System.Char,System.Char)">
  <summary>
  Select a string in a textbox between two characters. 
@@ -454,6 +493,71 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="TextBox">The TextBox</param>
  <param name="StartChar">The character before the word.</param>
  <param name="EndChar">The character after the word.</param>
+</member>
+<member name="T:LangPad.AppInstance">
+ <summary>
+ Contains information about the current instance of the application.
+ </summary>
+</member>
+<member name="F:LangPad.AppInstance.CurrentDocument">
+ <summary>
+ The document open in this instance of LangPad.
+ </summary>
+</member>
+<member name="F:LangPad.AppInstance.CharEditWindow">
+ <summary>
+ The character editor tools window used between windows.
+ </summary>
+</member>
+<member name="F:LangPad.AppInstance.NTVersion">
+ <summary>
+ The internal file version for *.nt files.
+ </summary>
+</member>
+<member name="F:LangPad.AppInstance.FirstTabUpdate">
+ <summary>
+ If the first tab has been updated on the main form.
+ </summary>
+</member>
+<member name="F:LangPad.AppInstance.SmartReplaceList">
+ <summary>
+ A list of accent+base character combinations to replace with
+ a single character.
+ </summary>
+</member>
+<member name="F:LangPad.AppInstance.ApplicationTheme">
+ <summary>
+ The theme of the application's interface.
+ </summary>
+</member>
+<member name="M:LangPad.AppInstance.GetIconResolution">
+ <summary>
+ Get the icon resolution set by the user.
+ </summary>
+ 
+ <returns>The user's icon resolution.</returns>
+</member>
+<member name="M:LangPad.AppInstance.GetCurrentVersion">
+ <summary>
+ Get the current version of the application.
+ </summary>
+ 
+ <returns>The current version.</returns>
+</member>
+<member name="M:LangPad.AppInstance.GetVersionString">
+ <summary>
+ Get the application version, formatted as a string.
+ </summary>
+ 
+ <returns>The application version string.</returns>
+</member>
+<member name="M:LangPad.AppInstance.GetAppDisplayName">
+ <summary>
+ Get the application name, plus its version number as a 
+ string.
+ </summary>
+ 
+ <returns>The display name used throughout the application.</returns>
 </member>
 <member name="M:LangPad.CharacterButton.#ctor(System.Object,System.Object)">
  <summary>

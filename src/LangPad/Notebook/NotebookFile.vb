@@ -79,7 +79,7 @@ Module NotebookFileAccess
             New ZiaLine(LineType.KeyValue, "Author", Notebook.Author),
             New ZiaLine(LineType.KeyValue, "Website", Notebook.Website),
             New ZiaLine(LineType.KeyValue, "NTVersion", NTVersion),
-            New ZiaLine(LineType.KeyValue, "LangPadVersion", "LangPad " & GetVersionString()),
+            New ZiaLine(LineType.KeyValue, "LangPadVersion", GetAppDisplayName()),
             New ZiaLine(LineType.Blank),
             New ZiaLine(LineType.Comment, "Pages")
         }

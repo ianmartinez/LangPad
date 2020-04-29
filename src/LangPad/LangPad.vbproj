@@ -171,7 +171,8 @@
     <Compile Include="Dialogs\ImportImageDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Markdown\Markdown.vb" />
+    <Compile Include="Converters\Markdown.vb" />
+    <Compile Include="ImageResizer.vb" />
     <Compile Include="Notebook\CharacterEditor.Designer.vb">
       <DependentUpon>CharacterEditor.vb</DependentUpon>
     </Compile>
@@ -198,7 +199,7 @@
     <Compile Include="RtfEditorForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LangPadCommon.vb" />
+    <Compile Include="AppInstance.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
