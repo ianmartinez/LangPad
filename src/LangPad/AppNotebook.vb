@@ -66,6 +66,24 @@ Module AppNoteboo
     End Sub
 
     ''' <summary>
+    ''' Signal to the user that an operation is being processed.
+    ''' </summary>
+    Private Sub BeginOperation()
+        MainForm.Cursor = Cursors.WaitCursor
+        MainForm.Enabled = False
+        MainForm.SuspendLayout()
+    End Sub
+
+    ''' <summary>
+    ''' Signal to the user that an operation has completed.
+    ''' </summary>
+    Private Sub EndOperation()
+        MainForm.Cursor = Cursors.Default
+        MainForm.Enabled = True
+        MainForm.ResumeLayout()
+    End Sub
+
+    ''' <summary>
     ''' Check if a page is within range of the current notebook's pages.
     ''' </summary>
     ''' 
@@ -169,15 +187,17 @@ Module AppNoteboo
         End If
     End Sub
 
-    Private Sub MoveItem(Of T)(List As IList, OldIndex As Integer, NewIndex As Integer)
-        Dim Item As T = List(OldIndex)
-        List.RemoveAt(OldIndex)
-        List.Insert(NewIndex, Item)
-    End Sub
-
+    ''' <summary>
+    ''' Move a page from an old index to a new index.
+    ''' </summary>
+    ''' 
+    ''' <param name="OldIndex">The index of the page to move.</param>
+    ''' <param name="NewIndex">The index to move the page to.</param>
     Public Sub MovePage(OldIndex As Integer, NewIndex As Integer)
+        If OldIndex = NewIndex Then Exit Sub ' Nothing to do
+
         If PageInRange(OldIndex) AndAlso PageInRange(NewIndex) Then
-            MainForm.SuspendLayout()
+            BeginOperation()
             MainForm.Moving = True
 
             MoveItem(Of ExtendedRichTextBox)(RtbList, OldIndex, NewIndex)
@@ -186,9 +206,9 @@ Module AppNoteboo
             MoveItem(Of String)(MainForm.NotebookEditorPanel.PagesListBox.Items, OldIndex, NewIndex)
 
             CurrentNotebook.Modified = True
-            MainForm.Moving = False
             GoToPage(NewIndex)
-            MainForm.ResumeLayout()
+            MainForm.Moving = False
+            EndOperation()
         End If
     End Sub
 

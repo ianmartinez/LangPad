@@ -234,6 +234,7 @@
     <Compile Include="CharacterButton.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Util.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CharacterEditorToolWindow.resx">

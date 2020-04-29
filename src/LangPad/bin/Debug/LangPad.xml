@@ -458,6 +458,16 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  notebook.
  </summary>
 </member>
+<member name="M:LangPad.AppNoteboo.BeginOperation">
+ <summary>
+ Signal to the user that an operation is being processed.
+ </summary>
+</member>
+<member name="M:LangPad.AppNoteboo.EndOperation">
+ <summary>
+ Signal to the user that an operation has completed.
+ </summary>
+</member>
 <member name="M:LangPad.AppNoteboo.PageInRange(System.Int32)">
  <summary>
  Check if a page is within range of the current notebook's pages.
@@ -502,6 +512,14 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  
  <param name="Index">The index of the page to rename.</param>
  <param name="NewTitle">The page's new title.</param>
+</member>
+<member name="M:LangPad.AppNoteboo.MovePage(System.Int32,System.Int32)">
+ <summary>
+ Move a page from an old index to a new index.
+ </summary>
+ 
+ <param name="OldIndex">The index of the page to move.</param>
+ <param name="NewIndex">The index to move the page to.</param>
 </member>
 <member name="T:LangPad.AutoUpdater">
  <summary>
@@ -645,6 +663,22 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  
  <param name="CharName">The name of the character.</param>
  <param name="MultiLine">If the description is multiple lines.</param>
+</member>
+<member name="T:LangPad.Util">
+ <summary>
+ Module containing various utility methods.
+ </summary>
+</member>
+<member name="M:LangPad.Util.MoveItem``1(System.Collections.IList,System.Int32,System.Int32)">
+ <summary>
+ Move an item of type T in a list from and old index to a new index.
+ </summary>
+ 
+ <typeparam name="T">The type of item in the list.</typeparam>
+ 
+ <param name="List">The list to modify.</param>
+ <param name="OldIndex">The old index.</param>
+ <param name="NewIndex">The new index.</param>
 </member>
 </members>
 </doc>
