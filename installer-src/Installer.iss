@@ -45,7 +45,7 @@ Name: "{autoprograms}\{#AppName}"; Filename: "{app}\{#AppName}.exe"
 ; Assosiate the *.nt file extension with LangPad and give it a custom icon
 [Registry]
 Root: HKCR; Subkey: ".nt"; ValueData: "{#AppName}"; Flags: uninsdeletevalue; ValueType: string; ValueName: ""
-Root: HKCR; Subkey: "{#AppName}"; ValueData: "Program {#AppName}";  Flags: uninsdeletekey; ValueType: string; ValueName: ""
+Root: HKCR; Subkey: "{#AppName}"; ValueData: "{#AppName} Notebook";  Flags: uninsdeletekey; ValueType: string; ValueName: ""
 Root: HKCR; Subkey: "{#AppName}\DefaultIcon"; ValueData: "{app}\{#FileIcon},0"; ValueType: string; ValueName: ""
 Root: HKCR; Subkey: "{#AppName}\shell\open\command"; ValueData: """{app}\{#AppName}.exe"" ""%1"""; ValueType: string; ValueName: ""
 
