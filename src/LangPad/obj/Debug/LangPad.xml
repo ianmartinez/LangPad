@@ -476,6 +476,23 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="Title">The page's title.</param>
  <param name="Rtf">The page's RTF data.</param>
 </member>
+<member name="M:LangPad.AppNoteboo.DuplicatePage(System.Int32,System.String)">
+ <summary>
+ Duplicate a page at an index, and optionally change its 
+ title.
+ </summary>
+ 
+ <param name="SourceIndex">The page index to duplicate.</param>
+ <param name="NewTitle">The duplicated page's title, by default the same as the old page</param>
+</member>
+<member name="M:LangPad.AppNoteboo.RenamePage(System.Int32,System.String)">
+ <summary>
+ Give a page a new title.
+ </summary>
+ 
+ <param name="Index">The index of the page to rename.</param>
+ <param name="NewTitle">The page's new title.</param>
+</member>
 <member name="T:LangPad.AutoUpdater">
  <summary>
  Work with AutoUpdaterDotNET

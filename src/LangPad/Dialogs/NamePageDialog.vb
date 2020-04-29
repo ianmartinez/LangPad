@@ -13,6 +13,8 @@ Public Class NamePageDialog
     End Sub
 
     Private Sub OkDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OkDialogButton.Click
+        Enabled = False
+        Cursor.Current = Cursors.WaitCursor
         MainForm.SaveTabs()
 
         If Mode = PageNameMode.Add Then
@@ -20,8 +22,7 @@ Public Class NamePageDialog
         ElseIf Mode = PageNameMode.Duplicate Then
             DuplicatePage(PageIndex, NameTextBox.Text)
         ElseIf Mode = PageNameMode.Rename Then
-            CurrentNotebook.Pages.Item(MainForm.NotebookTabs.SelectedIndex).Title = NameTextBox.Text
-            MainForm.UpdateTabs()
+            RenamePage(PageIndex, NameTextBox.Text)
         End If
 
         If PageIndex = -1 Then
@@ -30,7 +31,8 @@ Public Class NamePageDialog
             MainForm.NotebookTabs.SelectedIndex = PageIndex
         End If
 
-        CurrentNotebook.Modified = True
+        Enabled = True
+        Cursor.Current = Cursors.Default
         DialogResult = DialogResult.OK
         Close()
     End Sub

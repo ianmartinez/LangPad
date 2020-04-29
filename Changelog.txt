@@ -22,7 +22,7 @@ Version 11.0 (June 30)
    **• Frequently used characters tab
    **• Re-add themes
    **• Faster loading of documents
-   **• Adding, removing, renaming, and changing the order of pages are all much faster
+   **• Adding, removing, renaming, and changing the order of pages are all *much* faster
    **• Pages are now inserted after the current page, not at the end of the notebook
    • Smaller sidebar that has been split into two tabs: pages and properties
    • Improved splash screen

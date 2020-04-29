@@ -111,16 +111,35 @@ Module AppNoteboo
 
     End Sub
 
-    Public Sub DuplicatePage(SourceIndex As Integer, NewTitle As String)
+    ''' <summary>
+    ''' Duplicate a page at an index, and optionally change its 
+    ''' title.
+    ''' </summary>
+    ''' 
+    ''' <param name="SourceIndex">The page index to duplicate.</param>
+    ''' <param name="NewTitle">The duplicated page's title, by default the same as the old page</param>
+    Public Sub DuplicatePage(SourceIndex As Integer, Optional NewTitle As String = Nothing)
         If PageExists(SourceIndex) Then
             Dim SourcePage = CurrentNotebook.Pages(SourceIndex)
+            If NewTitle Is Nothing Then NewTitle = SourcePage.Title
             InsertPage(SourceIndex + 1, NewTitle, SourcePage.RTF)
             CurrentNotebook.Modified = True
         End If
     End Sub
 
+    ''' <summary>
+    ''' Give a page a new title.
+    ''' </summary>
+    ''' 
+    ''' <param name="Index">The index of the page to rename.</param>
+    ''' <param name="NewTitle">The page's new title.</param>
     Public Sub RenamePage(Index As Integer, NewTitle As String)
-
+        If PageExists(Index) Then
+            CurrentNotebook.Pages(Index).Title = NewTitle
+            MainForm.NotebookTabs.TabPages(Index).Text = NewTitle
+            MainForm.NotebookEditorPanel.PagesListBox.Items(Index) = NewTitle
+            CurrentNotebook.Modified = True
+        End If
     End Sub
 
     Private Sub ModifiedHandler()
