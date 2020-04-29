@@ -436,53 +436,53 @@ Close back rounded vowel/High back rounded vowel=u
 Close back compressed vowel/High back compressed  [rest of string was truncated]&quot;;.
 </summary>
 </member>
-<member name="T:LangPad.AppNoteboo">
+<member name="T:LangPad.AppNotebook">
  <summary>
  Handles operations on the current notebook used by LangPad.
  </summary>
 </member>
-<member name="F:LangPad.AppNoteboo.NTVersion">
+<member name="F:LangPad.AppNotebook.NTVersion">
  <summary>
  The internal file version for notebook (*.nt) files
  created with this version.
  </summary>
 </member>
-<member name="F:LangPad.AppNoteboo.FirstTabUpdate">
+<member name="F:LangPad.AppNotebook.FirstTabUpdate">
  <summary>
  If the first tab has been updated on the main form.
  </summary>
 </member>
-<member name="P:LangPad.AppNoteboo.CurrentNotebook">
+<member name="P:LangPad.AppNotebook.CurrentNotebook">
  <summary>
  The document open in this instance of LangPad.
  </summary>
 </member>
-<member name="P:LangPad.AppNoteboo.CurrentPageIndex">
+<member name="P:LangPad.AppNotebook.CurrentPageIndex">
  <summary>
  The index of the currently open page in the
  notebook.
  </summary>
 </member>
-<member name="P:LangPad.AppNoteboo.CurrentNotebookCharacters">
+<member name="P:LangPad.AppNotebook.CurrentNotebookCharacters">
  <summary>
  The file characters as a string array.
  </summary>
 </member>
-<member name="M:LangPad.AppNoteboo.BeginOperation(System.Windows.Forms.Form)">
+<member name="M:LangPad.AppNotebook.BeginOperation(System.Windows.Forms.Form)">
  <summary>
  Signal to the user that an operation is being processed.
  
  <param name="TargetForm">The form that is the target of the operation.</param>
  </summary>
 </member>
-<member name="M:LangPad.AppNoteboo.EndOperation(System.Windows.Forms.Form)">
+<member name="M:LangPad.AppNotebook.EndOperation(System.Windows.Forms.Form)">
  <summary>
  Signal to the user that an operation has completed.
  
  <param name="TargetForm">The form that is the target of the operation.</param>
  </summary>
 </member>
-<member name="M:LangPad.AppNoteboo.PageInRange(System.Int32)">
+<member name="M:LangPad.AppNotebook.PageInRange(System.Int32)">
  <summary>
  Check if a page is within range of the current notebook's pages.
  </summary>
@@ -491,7 +491,7 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  
  <returns>If a page exists at that index.</returns>
 </member>
-<member name="M:LangPad.AppNoteboo.InsertPage(System.Int32,System.String,System.String)">
+<member name="M:LangPad.AppNotebook.InsertPage(System.Int32,System.String,System.String)">
  <summary>
  Insert a page to the current notebook.
  </summary>
@@ -500,7 +500,7 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="Title">The page's title.</param>
  <param name="Rtf">The page's RTF data.</param>
 </member>
-<member name="M:LangPad.AppNoteboo.ImportPage(System.Int32,System.String)">
+<member name="M:LangPad.AppNotebook.ImportPage(System.Int32,System.String)">
  <summary>
  Import a file into the notebook at a specific index.
  </summary>
@@ -508,7 +508,7 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="Index">The index to import the file to.</param>
  <param name="FileName">The file's path.</param>
 </member>
-<member name="M:LangPad.AppNoteboo.RemovePage(System.Int32,System.Boolean)">
+<member name="M:LangPad.AppNotebook.RemovePage(System.Int32,System.Boolean)">
  <summary>
  Remove a page at an index. If it's the current page, navigate back 
  one page.
@@ -518,7 +518,7 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="NavigateBack">If the UI should navigate to the previous page after 
  deletion, if the page deleted was the current page.</param>
 </member>
-<member name="M:LangPad.AppNoteboo.DuplicatePage(System.Int32,System.String)">
+<member name="M:LangPad.AppNotebook.DuplicatePage(System.Int32,System.String)">
  <summary>
  Duplicate a page at an index, and optionally change its 
  title. Navigates to new page after duplicating.
@@ -527,7 +527,7 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="SourceIndex">The page index to duplicate.</param>
  <param name="NewTitle">The duplicated page's title, by default the same as the old page</param>
 </member>
-<member name="M:LangPad.AppNoteboo.RenamePage(System.Int32,System.String)">
+<member name="M:LangPad.AppNotebook.RenamePage(System.Int32,System.String)">
  <summary>
  Give a page a new title.
  </summary>
@@ -535,7 +535,7 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="Index">The index of the page to rename.</param>
  <param name="NewTitle">The page's new title.</param>
 </member>
-<member name="M:LangPad.AppNoteboo.MovePage(System.Int32,System.Int32)">
+<member name="M:LangPad.AppNotebook.MovePage(System.Int32,System.Int32)">
  <summary>
  Move a page from an old index to a new index.
  </summary>

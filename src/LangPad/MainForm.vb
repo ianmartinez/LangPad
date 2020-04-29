@@ -25,36 +25,15 @@ Public Class MainForm
         ' Load the file that the program was sent, if any
         If My.Application.CommandLineArgs.Count > 0 Then
             If File.Exists(My.Application.CommandLineArgs(0)) Then
-                Dim FileName As String = My.Application.CommandLineArgs(0).Split("\").GetValue(My.Application.CommandLineArgs(0).Split("\").Count - 1)
-                Dim FileEXT As String = FileName.Split(".").GetValue(1).ToString.ToLower
-                CurrentNotebook.Pages.Clear()
+                Dim FileName As String = My.Application.CommandLineArgs(0)
+                Dim FileExt As String = Path.GetExtension(FileName).ToLower()
 
-                If FileEXT = "rtf" Then
-                    Dim NewPage As New NotebookPage With {
-                        .Title = "Untitled"
-                    }
-                    Dim Reader As StreamReader
-                    Reader = New StreamReader(My.Application.CommandLineArgs(0))
-                    NewPage.RTF = Reader.ReadToEnd
-                    Reader.Close()
-
-                    CurrentNotebook.Pages.Add(NewPage)
-                    CurrentFilePath = My.Application.CommandLineArgs(0)
-                ElseIf FileEXT = "txt" Then
-                    Dim NewPage As New NotebookPage With {
-                        .Title = "Untitled"
-                    }
-                    Dim Reader As StreamReader
-                    Reader = New StreamReader(My.Application.CommandLineArgs(0))
-                    NewPage.RTF = Reader.ReadToEnd
-                    Reader.Close()
-
-                    CurrentNotebook.Pages.Add(NewPage)
-                    CurrentFilePath = My.Application.CommandLineArgs(0)
+                If FileExt = ".rtf" OrElse FileName = ".txt" Then
+                    ImportPage(0, FileName)
                 Else
                     Dim AllowOpen As Boolean = True
                     Dim OpenFile As New NotebookFile()
-                    OpenFile.Open(My.Application.CommandLineArgs(0))
+                    OpenFile.Open(FileName)
                     If OpenFile.NTSpecificationVersion > NTVersion Then
                         If Not MessageBox.Show("The notebook file you are trying to open is from LangPad " + OpenFile.ProgramVersion.ToString() + ", which is newer than the version you are currently using. " +
                             " This can lead to unexpected results. Are you sure you want to continue?", "File from LangPad " + OpenFile.ProgramVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
@@ -64,18 +43,16 @@ Public Class MainForm
 
                     If AllowOpen Then
                         CurrentNotebook = OpenFile
-                        CurrentFilePath = My.Application.CommandLineArgs(0)
+                        CurrentFilePath = FileName
                     End If
                 End If
             End If
         End If
 
         ' If no file was loaded, create an empty notebook
+        ' with an untitled page
         If CurrentNotebook.Pages.Count = 0 Then
-            Dim NewPage As New NotebookPage With {
-                .Title = "Untitled"
-            }
-            CurrentNotebook.Pages.Add(NewPage)
+            InsertPage(0, "Untitled")
         End If
 
         SetTitle()
@@ -486,6 +463,7 @@ Public Class MainForm
             NotebookEditorPanel.PagesListBox.SelectedIndex = NotebookTabs.SelectedIndex
             RtfEditorForm.RtfCodeTextBox.Text = CurrentRtb.Rtf
             WordWrapToolStripMenuItem.Checked = CurrentRtb.WordWrap
+            UpdateLineNumber()
             SelectedDocument_TextChanged(Me, e)
         End If
 

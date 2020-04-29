@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports LangPadSupport
+
 ''' <summary>
 ''' Handles operations on the current notebook used by LangPad.
 ''' </summary>
@@ -11,13 +12,13 @@ Module AppNotebook
     Public Const NTVersion As Decimal = 2.1
 
 
-    Private _Notebook As New NotebookFile
     Public RtbList As New List(Of ExtendedRichTextBox)
     ''' <summary>
     ''' If the first tab has been updated on the main form.
     ''' </summary>
     Public FirstTabUpdate As Boolean = False
 
+    Private _Notebook As New NotebookFile
     ''' <summary>
     ''' The document open in this instance of LangPad.
     ''' </summary>
