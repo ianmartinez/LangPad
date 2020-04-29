@@ -146,11 +146,8 @@ Module AppNoteboo
         MainForm.NotebookEditorPanel.PagesListBox.Items.Insert(Index, NewPage.Title)
         CurrentNotebook.Modified = True
 
-        ' If there isn't a valid page selected (i.e. the notebook had no pages 
-        ' before this one), select the new page
-        If Not PageInRange(PageIndex) Then
-            GoToPage(Index)
-        End If
+        ' Go to the newly created page
+        GoToPage(Index)
     End Sub
 
     ''' <summary>
