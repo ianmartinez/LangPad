@@ -28,23 +28,28 @@ Public Class MainForm
                 Dim FileName As String = My.Application.CommandLineArgs(0)
                 Dim FileExt As String = Path.GetExtension(FileName).ToLower()
 
-                If FileExt = ".rtf" OrElse FileName = ".txt" Then
+                If FileExt = ".rtf" OrElse FileExt = ".txt" Then
                     ImportPage(0, FileName)
                 Else
-                    Dim AllowOpen As Boolean = True
-                    Dim OpenFile As New NotebookFile()
-                    OpenFile.Open(FileName)
-                    If OpenFile.NTSpecificationVersion > NTVersion Then
-                        If Not MessageBox.Show("The notebook file you are trying to open is from LangPad " + OpenFile.ProgramVersion.ToString() + ", which is newer than the version you are currently using. " +
-                            " This can lead to unexpected results. Are you sure you want to continue?", "File from LangPad " + OpenFile.ProgramVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
-                            AllowOpen = False
+                    Try
+                        Dim AllowOpen As Boolean = True
+                        Dim OpenFile As New NotebookFile()
+                        OpenFile.Open(FileName)
+                        If OpenFile.NTSpecificationVersion > NTVersion Then
+                            If Not MessageBox.Show("The notebook file you are trying to open is from LangPad " + OpenFile.ProgramVersion.ToString() + ", which is newer than the version you are currently using. " +
+                                " This can lead to unexpected results. Are you sure you want to continue?", "File from LangPad " + OpenFile.ProgramVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
+                                AllowOpen = False
+                            End If
                         End If
-                    End If
 
-                    If AllowOpen Then
-                        CurrentNotebook = OpenFile
-                        CurrentFilePath = FileName
-                    End If
+                        If AllowOpen Then
+                            CurrentNotebook = OpenFile
+                            CurrentFilePath = FileName
+                        End If
+                    Catch ex As Exception
+                        CurrentNotebook = New NotebookFile()
+                        MessageBox.Show("Cannot open " + FileName + ". It is not supported by LangPad.")
+                    End Try
                 End If
             End If
         End If
@@ -101,6 +106,9 @@ Public Class MainForm
         ' Set shortcut key display text
         ZoomInToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl++"
         ZoomOutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+-"
+
+        ' The file hasn't been modified yet
+        CurrentNotebook.Modified = False
     End Sub
 
     Public Sub SetIcons()
@@ -526,13 +534,17 @@ Public Class MainForm
         End If
 
         If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            If OpenDialog.FileName = "" Then Exit Sub
+            If Not File.Exists(OpenDialog.FileName) OrElse Path.GetExtension(OpenDialog.FileName).ToLower() Then
+                MessageBox.Show("Please select a valid LangPad Notebook (*.nt)")
+                Exit Sub
+            End If
+
             Dim OpenFile As New NotebookFile()
             OpenFile.Open(OpenDialog.FileName)
 
             If OpenFile.NTSpecificationVersion > NTVersion Then
                 If Not MessageBox.Show("The notebook file you are trying to open is from LangPad " + OpenFile.ProgramVersion.ToString() + ", which is newer than the version you are currently using. " +
-                " This can lead to unexpected results. Are you sure you want to continue?", "File from LangPad " + OpenFile.ProgramVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
+            " This can lead to unexpected results. Are you sure you want to continue?", "File from LangPad " + OpenFile.ProgramVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
                     Exit Sub
                 End If
             End If
