@@ -217,6 +217,8 @@ Module AppNotebook
     ''' <param name="Title">The page's title.</param>
     ''' <param name="Rtf">The page's RTF data.</param>
     Public Sub InsertPage(Index As Integer, Title As String, Optional Rtf As String = "")
+        BeginOperation(MainForm)
+
         ' Insert after the current index, and if not at 
         ' a valid index, then insert at the end
         If Not PageInRange(CurrentPageIndex) Then Index = _Notebook.Pages.Count
@@ -245,6 +247,8 @@ Module AppNotebook
 
         ' Go to the newly created page
         GoToPage(Index)
+
+        EndOperation(MainForm)
     End Sub
 
     ''' <summary>
@@ -285,6 +289,8 @@ Module AppNotebook
     ''' <param name="NavigateBack">If the UI should navigate to the previous page after 
     ''' deletion, if the page deleted was the current page.</param>
     Public Sub RemovePage(Index As Integer, Optional NavigateBack As Boolean = True)
+        BeginOperation(MainForm)
+
         If PageInRange(Index) Then
             Dim WasCurrent = CurrentPageIndex = Index
 
@@ -300,6 +306,8 @@ Module AppNotebook
 
             CurrentNotebook.Modified = True
         End If
+
+        EndOperation(MainForm)
     End Sub
 
     ''' <summary>
