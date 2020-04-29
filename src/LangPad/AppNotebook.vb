@@ -3,7 +3,7 @@ Imports LangPadSupport
 ''' <summary>
 ''' Handles operations on the current notebook used by LangPad.
 ''' </summary>
-Module AppNoteboo
+Module AppNotebook
     ''' <summary>
     ''' The internal file version for notebook (*.nt) files
     ''' created with this version.
