@@ -189,7 +189,6 @@ Module AppNoteboo
             Dim NewPageIndex = SourceIndex + 1
             If NewTitle Is Nothing Then NewTitle = SourcePage.Title
             InsertPage(NewPageIndex, NewTitle, SourcePage.RTF)
-            GoToPage(NewPageIndex)
             CurrentNotebook.Modified = True
         End If
     End Sub
