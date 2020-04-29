@@ -63,18 +63,31 @@ Module AppNoteboo
     End Sub
 
     ''' <summary>
+    ''' Check if a page is within range of the current notebook's pages.
+    ''' </summary>
+    ''' 
+    ''' <param name="Index">The index of the page.</param>
+    ''' 
+    ''' <returns>If a page exists at that index.</returns>
+    Public Function PageExists(Index As Integer) As Boolean
+        Return Index >= 0 And Index < CurrentNotebook.Pages.Count
+    End Function
+
+    ''' <summary>
     ''' Insert a page to the current notebook.
     ''' </summary>
     ''' 
     ''' <param name="Index">The index to place it at.</param>
     ''' <param name="Title">The page's title.</param>
-    Public Sub InsertPage(Index As Integer, Title As String)
+    ''' <param name="Rtf">The page's RTF data.</param>
+    Public Sub InsertPage(Index As Integer, Title As String, Optional Rtf As String = "")
         ' Insert after the current index
         If Index = -1 Then Index = _Notebook.Pages.Count
 
         ' Create a new page
         Dim NewPage As New NotebookPage With {
-            .Title = Title
+            .Title = Title,
+            .RTF = Rtf
         }
         _Notebook.Pages.Insert(Index, NewPage)
 
@@ -91,17 +104,22 @@ Module AppNoteboo
 
         ' Add new list item in properties panel
         MainForm.NotebookEditorPanel.PagesListBox.Items.Insert(Index, NewPage.Title)
+        CurrentNotebook.Modified = True
     End Sub
 
     Public Sub RemovePage(Index As Integer)
 
     End Sub
 
-    Public Sub RenamePage(Index As Integer, NewTitle As String)
-
+    Public Sub DuplicatePage(SourceIndex As Integer, NewTitle As String)
+        If PageExists(SourceIndex) Then
+            Dim SourcePage = CurrentNotebook.Pages(SourceIndex)
+            InsertPage(SourceIndex + 1, NewTitle, SourcePage.RTF)
+            CurrentNotebook.Modified = True
+        End If
     End Sub
 
-    Public Sub DuplicatePage(Index As Integer)
+    Public Sub RenamePage(Index As Integer, NewTitle As String)
 
     End Sub
 

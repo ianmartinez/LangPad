@@ -458,13 +458,23 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  notebook.
  </summary>
 </member>
-<member name="M:LangPad.AppNoteboo.InsertPage(System.Int32,System.String)">
+<member name="M:LangPad.AppNoteboo.PageExists(System.Int32)">
+ <summary>
+ Check if a page is within range of the current notebook's pages.
+ </summary>
+ 
+ <param name="Index">The index of the page.</param>
+ 
+ <returns>If a page exists at that index.</returns>
+</member>
+<member name="M:LangPad.AppNoteboo.InsertPage(System.Int32,System.String,System.String)">
  <summary>
  Insert a page to the current notebook.
  </summary>
  
  <param name="Index">The index to place it at.</param>
  <param name="Title">The page's title.</param>
+ <param name="Rtf">The page's RTF data.</param>
 </member>
 <member name="T:LangPad.AutoUpdater">
  <summary>
