@@ -28,7 +28,7 @@ Public Class MainForm
             If File.Exists(My.Application.CommandLineArgs(0)) Then
                 Dim FileName As String = My.Application.CommandLineArgs(0).Split("\").GetValue(My.Application.CommandLineArgs(0).Split("\").Count - 1)
                 Dim FileEXT As String = FileName.Split(".").GetValue(1).ToString.ToLower
-                CurrentDocument.Pages.Clear()
+                CurrentNotebook.Pages.Clear()
 
                 If FileEXT = "rtf" Then
                     Dim NewPage As New NotebookPage With {
@@ -39,7 +39,7 @@ Public Class MainForm
                     NewPage.RTF = Reader.ReadToEnd
                     Reader.Close()
 
-                    CurrentDocument.Pages.Add(NewPage)
+                    CurrentNotebook.Pages.Add(NewPage)
                     CurrentFilePath = My.Application.CommandLineArgs(0)
                 ElseIf FileEXT = "txt" Then
                     Dim NewPage As New NotebookPage With {
@@ -50,7 +50,7 @@ Public Class MainForm
                     NewPage.RTF = Reader.ReadToEnd
                     Reader.Close()
 
-                    CurrentDocument.Pages.Add(NewPage)
+                    CurrentNotebook.Pages.Add(NewPage)
                     CurrentFilePath = My.Application.CommandLineArgs(0)
                 Else
                     Dim AllowOpen As Boolean = True
@@ -64,7 +64,7 @@ Public Class MainForm
                     End If
 
                     If AllowOpen Then
-                        CurrentDocument = OpenFile
+                        CurrentNotebook = OpenFile
                         CurrentFilePath = My.Application.CommandLineArgs(0)
                     End If
                 End If
@@ -72,11 +72,11 @@ Public Class MainForm
         End If
 
         ' If no file was loaded, create an empty notebook
-        If CurrentDocument.Pages.Count = 0 Then
+        If CurrentNotebook.Pages.Count = 0 Then
             Dim NewPage As New NotebookPage With {
                 .Title = "Untitled"
             }
-            CurrentDocument.Pages.Add(NewPage)
+            CurrentNotebook.Pages.Add(NewPage)
         End If
 
         SetTitle()
@@ -84,7 +84,7 @@ Public Class MainForm
         SplitLayoutPanel.Panel2Collapsed = False
         SelectedDocument_TextChanged(Me, e)
 
-        CurrentDocument.Modified = False
+        CurrentNotebook.Modified = False
         KeyPreview = True
 
         'SplitLayoutPanel.Panel2MinSize = 275
@@ -299,10 +299,10 @@ Public Class MainForm
     End Sub
 
     Public Sub SaveTabs()
-        If Not CurrentDocument.Pages.Count = RtbList.Count Then Exit Sub ' Opening document
+        If Not CurrentNotebook.Pages.Count = RtbList.Count Then Exit Sub ' Opening document
 
         For i = 0 To NotebookTabs.TabPages.Count - 1
-            CurrentDocument.Pages.Item(i).RTF = RtbList.Item(i).Rtf
+            CurrentNotebook.Pages.Item(i).RTF = RtbList.Item(i).Rtf
         Next
     End Sub
 
@@ -314,7 +314,7 @@ Public Class MainForm
         PropertiesPanel.SuspendLayout()
         PropertiesPanel.PagesListBox.Items.Clear()
 
-        For Each Page As NotebookPage In CurrentDocument.Pages
+        For Each Page As NotebookPage In CurrentNotebook.Pages
             Dim Tab As New TabPage With {
                 .Text = Page.Title
             }
@@ -343,11 +343,11 @@ Public Class MainForm
         ResumeLayout()
         PropertiesPanel.ResumeLayout()
 
-        PropertiesPanel.TitleTextBox.Text = CurrentDocument.Title
-        PropertiesPanel.LanguageTextBox.Text = CurrentDocument.Language
-        PropertiesPanel.AuthorTextBox.Text = CurrentDocument.Author
-        PropertiesPanel.WebsiteTextBox.Text = CurrentDocument.Website
-        PropertiesPanel.InfoTextBox.Text = CurrentDocument.Info
+        PropertiesPanel.TitleTextBox.Text = CurrentNotebook.Title
+        PropertiesPanel.LanguageTextBox.Text = CurrentNotebook.Language
+        PropertiesPanel.AuthorTextBox.Text = CurrentNotebook.Author
+        PropertiesPanel.WebsiteTextBox.Text = CurrentNotebook.Website
+        PropertiesPanel.InfoTextBox.Text = CurrentNotebook.Info
 
         If PropertiesPanel.PagesListBox.Items.Count > 0 Then
             PropertiesPanel.PagesListBox.SelectedIndex = 0
@@ -355,12 +355,12 @@ Public Class MainForm
 
         FirstTabUpdate = True
 
-        lblPageCount.Text = "Page Count: " & CurrentDocument.Pages.Count
+        lblPageCount.Text = "Page Count: " & CurrentNotebook.Pages.Count
         WordWrapToolStripMenuItem.Checked = CurrentRtb.WordWrap
     End Sub
 
     Public Sub ModifiedHandler(sender As Object, e As EventArgs)
-        CurrentDocument.Modified = True
+        CurrentNotebook.Modified = True
     End Sub
 
     Public Function ModifiedWarning() As DialogResult
@@ -404,7 +404,7 @@ Public Class MainForm
     Private Sub MainForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Dim HasSaved As Boolean = False
 
-        If CurrentDocument.Modified Then
+        If CurrentNotebook.Modified Then
             Dim Mode = ModifiedWarning()
 
             If Mode = DialogResult.Yes Then
@@ -548,7 +548,7 @@ Public Class MainForm
     Private Sub NotebookTabs_SelectedIndexChanged(sender As Object, e As EventArgs) Handles NotebookTabs.SelectedIndexChanged
         If NotebookTabs.SelectedIndex = -1 Or IsLoading Then Exit Sub
 
-        Dim OldModified = CurrentDocument.Modified
+        Dim OldModified = CurrentNotebook.Modified
 
         If Moving = False Then
             SaveTabs()
@@ -559,13 +559,13 @@ Public Class MainForm
             SelectedDocument_TextChanged(Me, e)
         End If
 
-        CurrentDocument.Modified = OldModified
+        CurrentNotebook.Modified = OldModified
     End Sub
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         Dim HasSaved As Boolean = False
 
-        If CurrentDocument.Modified Then
+        If CurrentNotebook.Modified Then
             Dim Mode = ModifiedWarning()
 
             If Mode = DialogResult.Yes Then
@@ -579,7 +579,7 @@ Public Class MainForm
             End If
         End If
 
-        CurrentDocument = New NotebookFile With {
+        CurrentNotebook = New NotebookFile With {
             .Pages = New List(Of NotebookPage)
         }
 
@@ -591,8 +591,8 @@ Public Class MainForm
             .RTF = ""
         }
 
-        CurrentDocument.Pages.Add(NewPage)
-        CurrentDocument.WordDictionary = New DictionaryFile()
+        CurrentNotebook.Pages.Add(NewPage)
+        CurrentNotebook.WordDictionary = New DictionaryFile()
         UpdateTabs()
 
         DictionaryForm.LoadDictionary() ' Reset dictionary form
@@ -601,14 +601,14 @@ Public Class MainForm
         CurrentFilePath = ""
         SetTitle()
 
-        CurrentDocument.Modified = False
+        CurrentNotebook.Modified = False
         UpdateWordCount()
     End Sub
 
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
         Dim HasSaved As Boolean = False
 
-        If CurrentDocument.Modified Then
+        If CurrentNotebook.Modified Then
             Dim Mode = ModifiedWarning()
 
             If Mode = DialogResult.Yes Then
@@ -634,11 +634,11 @@ Public Class MainForm
                 End If
             End If
 
-            CurrentDocument = OpenFile
+            CurrentNotebook = OpenFile
             UpdateTabs()
             DictionaryForm.LoadDictionary()
             CurrentFilePath = OpenDialog.FileName
-            CurrentDocument.Modified = False
+            CurrentNotebook.Modified = False
         End If
 
         SetTitle()
@@ -657,16 +657,16 @@ Public Class MainForm
                 MessageBox.Show("This file is being exported to the new Thorn Writer format. This is not compatible with LangPad.")
 
                 Dim ThornNotebook = New ThornWriter.NotebookFile.Notebook With {
-                    .Title = CurrentDocument.Title,
-                    .Language = CurrentDocument.Language,
-                    .Author = CurrentDocument.Author,
-                    .Website = CurrentDocument.Website,
-                    .Info = CurrentDocument.Info,
+                    .Title = CurrentNotebook.Title,
+                    .Language = CurrentNotebook.Language,
+                    .Author = CurrentNotebook.Author,
+                    .Website = CurrentNotebook.Website,
+                    .Info = CurrentNotebook.Info,
                     .Stylesheet = "",
-                    .Characters = ThornWriter.NotebookFile.KeyValue.ToLines(CurrentDocument.CustomSymbols).ToList()
+                    .Characters = ThornWriter.NotebookFile.KeyValue.ToLines(CurrentNotebook.CustomSymbols).ToList()
                 }
 
-                For Each Page In CurrentDocument.Pages
+                For Each Page In CurrentNotebook.Pages
                     Dim ThornPage As New ThornWriter.NotebookFile.Page With {
                         .Title = Page.Title,
                         .Content = RtfPipe.Rtf.ToHtml(Page.RTF).ToString()
@@ -675,7 +675,7 @@ Public Class MainForm
                     ThornNotebook.Pages.Add(ThornPage)
                 Next
 
-                For Each Word In CurrentDocument.WordDictionary.Words
+                For Each Word In CurrentNotebook.WordDictionary.Words
                     Dim ThornWord As New ThornWriter.NotebookFile.DictionaryWord With {
                         .Definition = Word.Definition,
                         .Notes = Word.Notes,
@@ -688,9 +688,9 @@ Public Class MainForm
 
                 ThornNotebook.Save(SaveDialog.FileName)
             Else
-                CurrentDocument.Save(SaveDialog.FileName)
+                CurrentNotebook.Save(SaveDialog.FileName)
                 CurrentFilePath = SaveDialog.FileName
-                CurrentDocument.Modified = False
+                CurrentNotebook.Modified = False
                 SetTitle()
             End If
 
@@ -718,8 +718,8 @@ Public Class MainForm
                 CurrentRtb.SelectionStart = 0
                 CurrentRtb.SelectionLength = 0
             Else
-                CurrentDocument.Save(CurrentFilePath)
-                CurrentDocument.Modified = False
+                CurrentNotebook.Save(CurrentFilePath)
+                CurrentNotebook.Modified = False
                 SetTitle()
             End If
         End If
@@ -969,18 +969,17 @@ Public Class MainForm
 
     Public Sub AddPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddPageToolStripMenuItem.Click
         SaveTabs()
-        NamePageDialog.AddPage = True
-        NamePageDialog.DuplicatePage = False
+        NamePageDialog.Mode = PageNameMode.Add
         NamePageDialog.ShowDialog()
     End Sub
 
     Public Sub RemovePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemovePageToolStripMenuItem.Click
-        If CurrentDocument.Pages.Count = 0 Or NotebookTabs.SelectedIndex < 0 Then Exit Sub
+        If CurrentNotebook.Pages.Count = 0 Or NotebookTabs.SelectedIndex < 0 Then Exit Sub
 
         SaveTabs()
         If MessageBox.Show("Are you sure you want to delete this page? This cannot be undone.", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = Windows.Forms.DialogResult.Yes Then
-            CurrentDocument.Pages.RemoveAt(NotebookTabs.SelectedIndex)
-            CurrentDocument.Modified = True
+            CurrentNotebook.Pages.RemoveAt(NotebookTabs.SelectedIndex)
+            CurrentNotebook.Modified = True
             UpdateTabs()
         End If
     End Sub
@@ -990,9 +989,8 @@ Public Class MainForm
 
         If Not CurrentPage = -1 Then
             SaveTabs()
-            NamePageDialog.NameTextBox.Text = CurrentDocument.Pages(CurrentPage).Title
-            NamePageDialog.DuplicatePage = True
-            NamePageDialog.AddPage = False
+            NamePageDialog.NameTextBox.Text = CurrentNotebook.Pages(CurrentPage).Title
+            NamePageDialog.Mode = PageNameMode.Duplicate
             NamePageDialog.ShowDialog()
         End If
     End Sub
@@ -1022,15 +1020,15 @@ Public Class MainForm
                     Reader.Close()
             End Select
 
-            CurrentDocument.Pages.Add(NewPage)
+            CurrentNotebook.Pages.Add(NewPage)
             UpdateTabs()
-            NotebookTabs.SelectedIndex = CurrentDocument.Pages.Count - 1
+            NotebookTabs.SelectedIndex = CurrentNotebook.Pages.Count - 1
         End If
     End Sub
 
     Public Sub ExportPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportPageToolStripMenuItem.Click
-        If CurrentDocument.Pages.Count = 0 Or NotebookTabs.SelectedIndex < 0 Then Exit Sub
-        Dim PageTitle = CurrentDocument.Pages(NotebookTabs.SelectedIndex).Title
+        If CurrentNotebook.Pages.Count = 0 Or NotebookTabs.SelectedIndex < 0 Then Exit Sub
+        Dim PageTitle = CurrentNotebook.Pages(NotebookTabs.SelectedIndex).Title
         Dim PageFileName = PageTitle
         For Each InvalidChar In Path.GetInvalidFileNameChars
             PageFileName = PageFileName.Replace(InvalidChar, "")
@@ -1062,9 +1060,8 @@ Public Class MainForm
 
     Public Sub RenamePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenamePageToolStripMenuItem.Click
         SaveTabs()
-        NamePageDialog.AddPage = False
-        NamePageDialog.DuplicatePage = False
-        NamePageDialog.NameTextBox.Text = CurrentDocument.Pages.Item(NotebookTabs.SelectedIndex).Title
+        NamePageDialog.Mode = PageNameMode.Rename
+        NamePageDialog.NameTextBox.Text = CurrentNotebook.Pages.Item(NotebookTabs.SelectedIndex).Title
         NamePageDialog.CurrentPos = NotebookTabs.SelectedIndex
         NamePageDialog.ShowDialog()
     End Sub

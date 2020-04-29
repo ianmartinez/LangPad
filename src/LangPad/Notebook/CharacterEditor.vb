@@ -123,18 +123,18 @@ Public Class CharacterEditor
     End Sub
 
     Public Sub AddToFile(Character As String)
-        Dim OriginalFileChars As String() = CurrentDocument.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+        Dim OriginalFileChars As String() = CurrentNotebook.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
         If OriginalFileChars.Contains(Character) Then Exit Sub
 
-        CurrentDocument.CustomSymbols = CurrentDocument.CustomSymbols & Environment.NewLine & Character
+        CurrentNotebook.CustomSymbols = CurrentNotebook.CustomSymbols & Environment.NewLine & Character
         RefreshFile()
-        CurrentDocument.Modified = True
+        CurrentNotebook.Modified = True
     End Sub
 
     Public Sub RefreshFile()
         FilePanel.Controls.Clear()
 
-        Dim FileChars As String() = CurrentDocument.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+        Dim FileChars As String() = CurrentNotebook.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
         For Each FileChar As String In FileChars
             InsertCharacterButton(FileChar, FilePanel)
         Next
@@ -476,10 +476,10 @@ Public Class CharacterEditor
         Dim CurrentButton = CType(CurrentMenu.SourceControl, CharacterButton)
 
         If CurrentButton.Parent Is FilePanel Then
-            Dim FileChars As List(Of String) = CurrentDocument.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries).ToList()
+            Dim FileChars As List(Of String) = CurrentNotebook.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries).ToList()
             If FileChars.Contains(CurrentButton.Text) Then
                 FileChars.Remove(CurrentButton.Text)
-                CurrentDocument.CustomSymbols = String.Join(Environment.NewLine, FileChars.ToArray())
+                CurrentNotebook.CustomSymbols = String.Join(Environment.NewLine, FileChars.ToArray())
                 RefreshFile()
             End If
         ElseIf CurrentButton.Parent Is LocalPanel Then
@@ -518,8 +518,8 @@ Public Class CharacterEditor
 
     Private Sub ClearFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ClearFileToolStripButton.Click
         If ConfirmClear() = DialogResult.Yes Then
-            CurrentDocument.CustomSymbols = ""
-            CurrentDocument.Modified = True
+            CurrentNotebook.CustomSymbols = ""
+            CurrentNotebook.Modified = True
             RefreshFile()
         End If
     End Sub
@@ -547,7 +547,7 @@ Public Class CharacterEditor
 
     Private Sub ImportFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportFileToolStripButton.Click
         If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            ImportFile(OpenDialog.FileName, CurrentDocument.CustomSymbols)
+            ImportFile(OpenDialog.FileName, CurrentNotebook.CustomSymbols)
             RefreshFile()
         End If
     End Sub
@@ -560,7 +560,7 @@ Public Class CharacterEditor
 
     Private Sub ExportFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportFileToolStripButton.Click
         If SaveDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            File.WriteAllText(SaveDialog.FileName, CurrentDocument.CustomSymbols)
+            File.WriteAllText(SaveDialog.FileName, CurrentNotebook.CustomSymbols)
         End If
     End Sub
 

@@ -6,19 +6,9 @@ Imports LangPadSupport.Themes
 ''' </summary>
 Module AppInstance
     ''' <summary>
-    ''' The document open in this instance of LangPad.
-    ''' </summary>
-    Public CurrentDocument As New NotebookFile
-
-    ''' <summary>
     ''' The character editor tools window used between windows.
     ''' </summary>
     Public CharEditWindow As CharacterEditorToolWindow
-
-    ''' <summary>
-    ''' The internal file version for *.nt files.
-    ''' </summary>
-    Public Const NTVersion As Decimal = 2.1
 
     ''' <summary>
     ''' If the first tab has been updated on the main form.

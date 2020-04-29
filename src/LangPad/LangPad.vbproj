@@ -121,6 +121,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppDocument.vb" />
     <Compile Include="AutoUpdater.vb" />
     <Compile Include="CharacterEditorToolWindow.Designer.vb">
       <DependentUpon>CharacterEditorToolWindow.vb</DependentUpon>
@@ -128,6 +129,7 @@
     <Compile Include="CharacterEditorToolWindow.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Converters\Html.vb" />
     <Compile Include="Dialogs\ExportHtmlDialog.Designer.vb">
       <DependentUpon>ExportHtmlDialog.vb</DependentUpon>
     </Compile>

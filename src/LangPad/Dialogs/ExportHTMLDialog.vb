@@ -5,15 +5,15 @@ Public Class ExportHtmlDialog
     Public FilePath As String = ""
 
     Private Sub ExportHtmlDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TitleTextBox.Text = CurrentDocument.Language
-        DescriptionTextBox.Text = CurrentDocument.Info
+        TitleTextBox.Text = CurrentNotebook.Language
+        DescriptionTextBox.Text = CurrentNotebook.Info
     End Sub
 
     Private Sub OkDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OkDialogButton.Click
         Dim Writer As New StreamWriter(New FileStream(FilePath, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
         Dim SortedWords As List(Of DictionaryWord) = New List(Of DictionaryWord)
 
-        For Each Word As DictionaryWord In CurrentDocument.WordDictionary.Words
+        For Each Word As DictionaryWord In CurrentNotebook.WordDictionary.Words
             SortedWords.Add(Word)
         Next
 

@@ -1,6 +1,11 @@
-﻿Public Class NamePageDialog
-    Public AddPage As Boolean = False
-    Public DuplicatePage As Boolean = False
+﻿Public Enum PageNameMode
+    Add
+    Duplicate
+    Rename
+End Enum
+
+Public Class NamePageDialog
+    Public Mode As PageNameMode = PageNameMode.Rename
     Public CurrentPos As Integer = 0
 
     Private Sub NamePageDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -11,23 +16,23 @@
         MainForm.SaveTabs()
         Dim CurrentPage As Integer = MainForm.NotebookTabs.SelectedIndex
 
-        If AddPage = True Then
+        If Mode = PageNameMode.Add Then
             Dim NewPage As New NotebookPage With {
                 .Title = NameTextBox.Text
             }
 
-            CurrentDocument.Pages.Add(NewPage)
+            CurrentNotebook.Pages.Add(NewPage)
             MainForm.UpdateTabs()
-        ElseIf DuplicatePage = True Then
+        ElseIf Mode = PageNameMode.Duplicate Then
             Dim NewPage As New NotebookPage With {
                 .Title = NameTextBox.Text,
-                .RTF = CurrentDocument.Pages(CurrentPage).RTF
+                .RTF = CurrentNotebook.Pages(CurrentPage).RTF
             }
 
-            CurrentDocument.Pages.Add(NewPage)
+            CurrentNotebook.Pages.Add(NewPage)
             MainForm.UpdateTabs()
-        Else
-            CurrentDocument.Pages.Item(MainForm.NotebookTabs.SelectedIndex).Title = NameTextBox.Text
+        ElseIf Mode = PageNameMode.Rename Then
+            CurrentNotebook.Pages.Item(MainForm.NotebookTabs.SelectedIndex).Title = NameTextBox.Text
             MainForm.UpdateTabs()
         End If
 
@@ -37,7 +42,7 @@
             MainForm.NotebookTabs.SelectedIndex = CurrentPage
         End If
 
-        CurrentDocument.Modified = True
+        CurrentNotebook.Modified = True
         DialogResult = DialogResult.OK
         Close()
     End Sub

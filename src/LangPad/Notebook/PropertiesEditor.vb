@@ -38,23 +38,23 @@ Public Class PropertiesEditor
 
     Private Sub TitleTextBox_TextChanged(sender As Object, e As EventArgs) Handles TitleTextBox.TextChanged
         If FirstTabUpdate Then
-            CurrentDocument.Title = TitleTextBox.Text
-            CurrentDocument.Modified = True
+            CurrentNotebook.Title = TitleTextBox.Text
+            CurrentNotebook.Modified = True
         End If
         DictionaryForm.Text = If(TitleTextBox.Text = "", "Dictionary", "Dictionary - " + TitleTextBox.Text)
     End Sub
 
     Private Sub AuthorTextBox_TextChanged(sender As Object, e As EventArgs) Handles AuthorTextBox.TextChanged
         If FirstTabUpdate Then
-            CurrentDocument.Author = AuthorTextBox.Text
-            CurrentDocument.Modified = True
+            CurrentNotebook.Author = AuthorTextBox.Text
+            CurrentNotebook.Modified = True
         End If
     End Sub
 
     Private Sub WebsiteTextBox_TextChanged(sender As Object, e As EventArgs) Handles WebsiteTextBox.TextChanged
         If FirstTabUpdate Then
-            CurrentDocument.Website = WebsiteTextBox.Text
-            CurrentDocument.Modified = True
+            CurrentNotebook.Website = WebsiteTextBox.Text
+            CurrentNotebook.Modified = True
         End If
     End Sub
 
@@ -64,7 +64,7 @@ Public Class PropertiesEditor
         If MainForm.Moving = False Then
             MainForm.NotebookTabs.SelectedIndex = PagesListBox.SelectedIndex
         Else
-            CurrentDocument.Modified = True
+            CurrentNotebook.Modified = True
         End If
 
         PagesListBox.Focus()
@@ -72,8 +72,8 @@ Public Class PropertiesEditor
 
     Private Sub InfoTextBox_TextChanged(sender As Object, e As EventArgs) Handles InfoTextBox.TextChanged
         If FirstTabUpdate Then
-            CurrentDocument.Info = InfoTextBox.Text
-            CurrentDocument.Modified = True
+            CurrentNotebook.Info = InfoTextBox.Text
+            CurrentNotebook.Modified = True
         End If
     End Sub
 
@@ -84,8 +84,8 @@ Public Class PropertiesEditor
             MainForm.Moving = True
             MainForm.SuspendLayout()
             Dim I = PagesListBox.SelectedIndex - 1
-            CurrentDocument.Pages.Insert(I, CurrentDocument.Pages.Item(PagesListBox.SelectedIndex))
-            CurrentDocument.Pages.RemoveAt(PagesListBox.SelectedIndex + 1)
+            CurrentNotebook.Pages.Insert(I, CurrentNotebook.Pages.Item(PagesListBox.SelectedIndex))
+            CurrentNotebook.Pages.RemoveAt(PagesListBox.SelectedIndex + 1)
             MainForm.UpdateTabs()
             MainForm.Moving = False
             MainForm.ResumeLayout()
@@ -96,12 +96,12 @@ Public Class PropertiesEditor
     Private Sub PageDownToolStripButton_Click(sender As Object, e As EventArgs) Handles PageDownToolStripButton.Click
         MainForm.SaveTabs()
 
-        If PagesListBox.SelectedIndex < CurrentDocument.Pages.Count - 1 Then
+        If PagesListBox.SelectedIndex < CurrentNotebook.Pages.Count - 1 Then
             MainForm.SuspendLayout()
             MainForm.Moving = True
             Dim I = PagesListBox.SelectedIndex + 2
-            CurrentDocument.Pages.Insert(I, CurrentDocument.Pages.Item(PagesListBox.SelectedIndex))
-            CurrentDocument.Pages.RemoveAt(PagesListBox.SelectedIndex)
+            CurrentNotebook.Pages.Insert(I, CurrentNotebook.Pages.Item(PagesListBox.SelectedIndex))
+            CurrentNotebook.Pages.RemoveAt(PagesListBox.SelectedIndex)
             MainForm.UpdateTabs()
             MainForm.Moving = False
             MainForm.ResumeLayout()
@@ -163,8 +163,8 @@ Public Class PropertiesEditor
 
     Private Sub LanguageTextBox_TextChanged(sender As Object, e As EventArgs) Handles LanguageTextBox.TextChanged
         If FirstTabUpdate Then
-            CurrentDocument.Language = LanguageTextBox.Text
-            CurrentDocument.Modified = True
+            CurrentNotebook.Language = LanguageTextBox.Text
+            CurrentNotebook.Modified = True
         End If
     End Sub
 

@@ -68,8 +68,8 @@ Public Class DictionaryForm
 
     Public Sub LoadDictionary()
         DictionaryGrid.Rows.Clear()
-        Dim Words = CurrentDocument.WordDictionary.Words
-        For Each Word As DictionaryWord In CurrentDocument.WordDictionary.Words
+        Dim Words = CurrentNotebook.WordDictionary.Words
+        For Each Word As DictionaryWord In CurrentNotebook.WordDictionary.Words
             Dim Row As New DataGridViewRow
             Row.CreateCells(DictionaryGrid)
             Row.Cells.Item(0).Value = Word.Word
@@ -84,7 +84,7 @@ Public Class DictionaryForm
     End Sub
 
     Public Sub SaveDictionary()
-        CurrentDocument.WordDictionary.Words.Clear()
+        CurrentNotebook.WordDictionary.Words.Clear()
         For i = 0 To DictionaryGrid.RowCount - 1
             Dim NewWord As New DictionaryWord With {
                 .Word = DictionaryGrid.Rows.Item(i).Cells.Item(0).Value,
@@ -98,7 +98,7 @@ Public Class DictionaryForm
             If NewWord.Definition = Nothing Then NewWord.Definition = ""
             If NewWord.Notes = Nothing Then NewWord.Notes = ""
 
-            CurrentDocument.WordDictionary.Words.Add(NewWord)
+            CurrentNotebook.WordDictionary.Words.Add(NewWord)
         Next
     End Sub
 
@@ -129,9 +129,9 @@ Public Class DictionaryForm
     Private Sub OpenToolStripButton_Click(sender As Object, e As EventArgs) Handles OpenToolStripButton.Click
         If OpenDialog.ShowDialog = DialogResult.OK Then
             If Path.GetExtension(OpenDialog.FileName).ToLower() = ".csv" Then
-                CurrentDocument.WordDictionary.OpenCSV(OpenDialog.FileName)
+                CurrentNotebook.WordDictionary.OpenCSV(OpenDialog.FileName)
             Else
-                CurrentDocument.WordDictionary.Open(OpenDialog.FileName)
+                CurrentNotebook.WordDictionary.Open(OpenDialog.FileName)
             End If
 
             LoadDictionary()
@@ -164,20 +164,20 @@ Public Class DictionaryForm
                 Next
                 Writer.Close()
             Else
-                CurrentDocument.WordDictionary.Save(SaveDialog.FileName)
+                CurrentNotebook.WordDictionary.Save(SaveDialog.FileName)
             End If
         End If
     End Sub
 
     Private Sub AddToolStripButton_Click(sender As Object, e As EventArgs) Handles AddToolStripButton.Click
         DictionaryGrid.Rows.Add(1)
-        CurrentDocument.Modified = True
+        CurrentNotebook.Modified = True
     End Sub
 
     Private Sub RemoveToolStripButton_Click(sender As Object, e As EventArgs) Handles RemoveToolStripButton.Click
         If DictionaryGrid.CurrentCell IsNot Nothing Then
             DictionaryGrid.Rows.RemoveAt(DictionaryGrid.CurrentCell.RowIndex)
-            CurrentDocument.Modified = True
+            CurrentNotebook.Modified = True
         End If
     End Sub
 
@@ -199,7 +199,7 @@ Public Class DictionaryForm
 
     Private Sub DictionaryGrid_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles DictionaryGrid.CellEndEdit
         SaveDictionary()
-        CurrentDocument.Modified = True
+        CurrentNotebook.Modified = True
     End Sub
 
     Private Sub ExportHtmlToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportHtmlToolStripButton.Click
@@ -224,13 +224,13 @@ Public Class DictionaryForm
         Dim NormalizedFindText As String = FindTextBox.Text.ToLower()
 
         If WordRadio.Checked Then
-            For Each Word As DictionaryWord In CurrentDocument.WordDictionary.Words
+            For Each Word As DictionaryWord In CurrentNotebook.WordDictionary.Words
                 Matches = If(StartsWithCheck.Checked, Word.Word.ToLower().StartsWith(NormalizedFindText), Word.Word.ToLower().Equals(NormalizedFindText))
                 If Matches Then Exit For
                 CurrentPos += 1
             Next
         Else
-            For Each Word As DictionaryWord In CurrentDocument.WordDictionary.Words
+            For Each Word As DictionaryWord In CurrentNotebook.WordDictionary.Words
                 Matches = If(StartsWithCheck.Checked, Word.Definition.ToLower().StartsWith(NormalizedFindText), Word.Definition.ToLower().Equals(NormalizedFindText))
                 If Matches Then Exit For
                 CurrentPos += 1
