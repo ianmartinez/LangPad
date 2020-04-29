@@ -48,7 +48,7 @@ Public Class MainForm
                         End If
                     Catch ex As Exception
                         CurrentNotebook = New NotebookFile()
-                        MessageBox.Show("Cannot open " + FileName + ". It is not supported by LangPad.")
+                        ShowNotSupportedFileError(FileName)
                     End Try
                 End If
             End If
@@ -285,6 +285,10 @@ Public Class MainForm
         For i = 0 To NotebookTabs.TabPages.Count - 1
             CurrentNotebook.Pages.Item(i).RTF = RtbList.Item(i).Rtf
         Next
+    End Sub
+
+    Public Sub ShowNotSupportedFileError(FileName As String)
+        MessageBox.Show("Cannot open '" + FileName + "'. It is not supported by LangPad.", "Invalid File", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 
     Public Function ModifiedWarning() As DialogResult
@@ -534,28 +538,34 @@ Public Class MainForm
         End If
 
         If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            If Not File.Exists(OpenDialog.FileName) OrElse Path.GetExtension(OpenDialog.FileName).ToLower() Then
-                MessageBox.Show("Please select a valid LangPad Notebook (*.nt)")
+            If Not File.Exists(OpenDialog.FileName) Then
+                MessageBox.Show("Please select a valid file")
                 Exit Sub
             End If
 
-            Dim OpenFile As New NotebookFile()
-            OpenFile.Open(OpenDialog.FileName)
+            Try
+                Dim OpenFile As New NotebookFile()
+                OpenFile.Open(OpenDialog.FileName)
 
-            If OpenFile.NTSpecificationVersion > NTVersion Then
-                If Not MessageBox.Show("The notebook file you are trying to open is from LangPad " + OpenFile.ProgramVersion.ToString() + ", which is newer than the version you are currently using. " +
-            " This can lead to unexpected results. Are you sure you want to continue?", "File from LangPad " + OpenFile.ProgramVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
-                    Exit Sub
+                If OpenFile.NTSpecificationVersion > NTVersion Then
+                    If Not MessageBox.Show("The notebook file you are trying to open is from LangPad " + OpenFile.ProgramVersion.ToString() + ", which is newer than the version you are currently using. " +
+                " This can lead to unexpected results. Are you sure you want to continue?", "File from LangPad " + OpenFile.ProgramVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
+                        Exit Sub
+                    End If
                 End If
-            End If
 
-            CurrentNotebook = OpenFile
-            CurrentFilePath = OpenDialog.FileName
+                CurrentNotebook = OpenFile
+                CurrentFilePath = OpenDialog.FileName
+
+                SetTitle()
+                UpdateWordCount()
+                IsLoading = False
+            Catch ex As Exception
+                CurrentNotebook = New NotebookFile()
+                ShowNotSupportedFileError(OpenDialog.FileName)
+            End Try
         End If
 
-        SetTitle()
-        UpdateWordCount()
-        IsLoading = False
     End Sub
 
     Public Function FileSaveAs() As Boolean
