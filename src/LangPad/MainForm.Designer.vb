@@ -78,7 +78,7 @@ Partial Class MainForm
         Me.rbHighlight = New System.Windows.Forms.RadioButton()
         Me.TextColorRadio = New System.Windows.Forms.RadioButton()
         Me.PropertiesContainerPanel = New LangPadSupport.DoubleBufferedPanel()
-        Me.PropertiesPanel = New LangPad.PropertiesEditor()
+        Me.NotebookEditorPanel = New LangPad.NotebookEditor()
         Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.DataToolStrip = New System.Windows.Forms.ToolStrip()
         Me.CharCountToolStripLabel = New System.Windows.Forms.ToolStripLabel()
@@ -362,9 +362,9 @@ Partial Class MainForm
         'SplitLayoutPanel.Panel2
         '
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.PropertiesContainerPanel)
-        Me.SplitLayoutPanel.Panel2MinSize = 350
+        Me.SplitLayoutPanel.Panel2MinSize = 340
         Me.SplitLayoutPanel.Size = New System.Drawing.Size(1731, 962)
-        Me.SplitLayoutPanel.SplitterDistance = 1337
+        Me.SplitLayoutPanel.SplitterDistance = 1388
         Me.SplitLayoutPanel.SplitterWidth = 3
         Me.SplitLayoutPanel.TabIndex = 1
         '
@@ -374,7 +374,7 @@ Partial Class MainForm
         Me.NotebookTabs.Location = New System.Drawing.Point(0, 172)
         Me.NotebookTabs.Name = "NotebookTabs"
         Me.NotebookTabs.SelectedIndex = 0
-        Me.NotebookTabs.Size = New System.Drawing.Size(1337, 790)
+        Me.NotebookTabs.Size = New System.Drawing.Size(1388, 790)
         Me.NotebookTabs.TabIndex = 73
         '
         'FindReplaceDialog
@@ -391,7 +391,7 @@ Partial Class MainForm
         Me.FindReplaceDialog.Dock = System.Windows.Forms.DockStyle.Top
         Me.FindReplaceDialog.Location = New System.Drawing.Point(0, 118)
         Me.FindReplaceDialog.Name = "FindReplaceDialog"
-        Me.FindReplaceDialog.Size = New System.Drawing.Size(1337, 54)
+        Me.FindReplaceDialog.Size = New System.Drawing.Size(1388, 54)
         Me.FindReplaceDialog.TabIndex = 72
         Me.FindReplaceDialog.Visible = False
         '
@@ -479,7 +479,7 @@ Partial Class MainForm
         Me.ColorPanel.Location = New System.Drawing.Point(0, 0)
         Me.ColorPanel.Name = "ColorPanel"
         Me.ColorPanel.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.ColorPanel.Size = New System.Drawing.Size(1337, 118)
+        Me.ColorPanel.Size = New System.Drawing.Size(1388, 118)
         Me.ColorPanel.TabIndex = 74
         Me.ColorPanel.Visible = False
         '
@@ -515,7 +515,7 @@ Partial Class MainForm
         Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.ColorLayoutPanel.Name = "ColorLayoutPanel"
         Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(6)
-        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1337, 68)
+        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1388, 68)
         Me.ColorLayoutPanel.TabIndex = 70
         '
         'TransparentColorButton
@@ -898,20 +898,21 @@ Partial Class MainForm
         '
         Me.PropertiesContainerPanel.AutoScroll = True
         Me.PropertiesContainerPanel.BackColor = System.Drawing.Color.Transparent
-        Me.PropertiesContainerPanel.Controls.Add(Me.PropertiesPanel)
+        Me.PropertiesContainerPanel.Controls.Add(Me.NotebookEditorPanel)
         Me.PropertiesContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PropertiesContainerPanel.Location = New System.Drawing.Point(0, 0)
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
-        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(391, 962)
+        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(340, 962)
         Me.PropertiesContainerPanel.TabIndex = 13
         '
-        'PropertiesPanel
+        'NotebookEditorPanel
         '
-        Me.PropertiesPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PropertiesPanel.Location = New System.Drawing.Point(0, 0)
-        Me.PropertiesPanel.Name = "PropertiesPanel"
-        Me.PropertiesPanel.Size = New System.Drawing.Size(391, 962)
-        Me.PropertiesPanel.TabIndex = 0
+        Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
+        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
+        Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
+        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 962)
+        Me.NotebookEditorPanel.TabIndex = 0
         '
         'MainToolStripContainer
         '
@@ -2235,7 +2236,7 @@ Partial Class MainForm
     Friend WithEvents TransparentColorButton As Button
     Friend WithEvents ToolStripMenuItem3 As ToolStripSeparator
     Friend WithEvents DictionaryMenuItem As ToolStripMenuItem
-    Friend WithEvents PropertiesPanel As PropertiesEditor
+    Friend WithEvents NotebookEditorPanel As NotebookEditor
     Friend WithEvents ToolStripSeparator14 As ToolStripSeparator
     Friend WithEvents CharacterEditorToolStripButton As ToolStripButton
     Friend WithEvents ToolStripSeparator9 As ToolStripSeparator

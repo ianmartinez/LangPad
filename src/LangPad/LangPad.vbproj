@@ -218,10 +218,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Notebook\PropertiesEditor.Designer.vb">
-      <DependentUpon>PropertiesEditor.vb</DependentUpon>
+    <Compile Include="Notebook\NotebookEditor.Designer.vb">
+      <DependentUpon>NotebookEditor.vb</DependentUpon>
     </Compile>
-    <Compile Include="Notebook\PropertiesEditor.vb">
+    <Compile Include="Notebook\NotebookEditor.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Notebook\NotebookFile.vb" />
@@ -278,8 +278,8 @@
     <EmbeddedResource Include="Notebook\CharacterEditor.resx">
       <DependentUpon>CharacterEditor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Notebook\PropertiesEditor.resx">
-      <DependentUpon>PropertiesEditor.vb</DependentUpon>
+    <EmbeddedResource Include="Notebook\NotebookEditor.resx">
+      <DependentUpon>NotebookEditor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreenForm.resx">
       <DependentUpon>SplashScreenForm.vb</DependentUpon>

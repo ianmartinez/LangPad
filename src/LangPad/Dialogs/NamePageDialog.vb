@@ -14,14 +14,13 @@ Public Class NamePageDialog
 
     Private Sub OkDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OkDialogButton.Click
         MainForm.SaveTabs()
-        Dim CurrentPage As Integer = MainForm.NotebookTabs.SelectedIndex
 
         If Mode = PageNameMode.Add Then
-            InsertPage(PageIndex, NameTextBox.Text)
+            InsertPage(PageIndex + 1, NameTextBox.Text)
         ElseIf Mode = PageNameMode.Duplicate Then
             Dim NewPage As New NotebookPage With {
                 .Title = NameTextBox.Text,
-                .RTF = CurrentNotebook.Pages(CurrentPage).RTF
+                .RTF = CurrentNotebook.Pages(PageIndex).RTF
             }
 
             CurrentNotebook.Pages.Add(NewPage)
@@ -31,10 +30,10 @@ Public Class NamePageDialog
             MainForm.UpdateTabs()
         End If
 
-        If CurrentPage = -1 Then
+        If PageIndex = -1 Then
             MainForm.NotebookTabs.SelectedIndex = 0
         Else
-            MainForm.NotebookTabs.SelectedIndex = CurrentPage
+            MainForm.NotebookTabs.SelectedIndex = PageIndex
         End If
 
         CurrentNotebook.Modified = True

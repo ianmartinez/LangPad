@@ -87,7 +87,7 @@ Public Class MainForm
         KeyPreview = True
 
         'SplitLayoutPanel.Panel2MinSize = 275
-        SplitLayoutPanel.SplitterDistance = (SplitLayoutPanel.Width - PropertiesPanel.MinimumSize.Width) - 50
+        SplitLayoutPanel.SplitterDistance = (SplitLayoutPanel.Width - NotebookEditorPanel.MinimumSize.Width) - 50
 
         ' Add indent options
         For i As Integer = 0 To 100
@@ -131,7 +131,7 @@ Public Class MainForm
 
     Public Sub SetIcons()
         Dim Res As IconResolution = GetIconResolution()
-        PropertiesPanel.SetIcons()
+        NotebookEditorPanel.SetIcons()
 
         ' Toolstrip
         NewToolStripButton.Image = IconManager.Get("document-new", IconSize.Large, Res)
@@ -263,7 +263,7 @@ Public Class MainForm
         ReplaceButton.Top = FindTextBox.Top - (ReplaceButton.Height / 2 - FindTextBox.Height / 2)
         ReplaceAllButton.Top = FindTextBox.Top - (ReplaceAllButton.Height / 2 - FindTextBox.Height / 2)
 
-        PropertiesPanel.SetTheme(Theme)
+        NotebookEditorPanel.SetTheme(Theme)
         CharEditWindow.CharEdit.SetTheme(Theme)
         AboutDialog.BackColor = Theme.DialogBack
         NamePageDialog.BackColor = Theme.DialogBack
@@ -310,8 +310,8 @@ Public Class MainForm
 
         NotebookTabs.TabPages.Clear()
         RtbList.Clear()
-        PropertiesPanel.SuspendLayout()
-        PropertiesPanel.PagesListBox.Items.Clear()
+        NotebookEditorPanel.SuspendLayout()
+        NotebookEditorPanel.PagesListBox.Items.Clear()
 
         For Each Page As NotebookPage In CurrentNotebook.Pages
             Dim Tab As New TabPage With {
@@ -322,7 +322,7 @@ Public Class MainForm
             Tab.Controls.Add(NewRichTextBox)
             RtbList.Add(NewRichTextBox)
             NotebookTabs.TabPages.Add(Tab)
-            PropertiesPanel.PagesListBox.Items.Add(Page.Title)
+            NotebookEditorPanel.PagesListBox.Items.Add(Page.Title)
         Next
 
         NotebookTabs.SelectedIndex = 0
@@ -330,16 +330,16 @@ Public Class MainForm
             CurrentRtb = RtbList.Item(0)
         End If
         ResumeLayout()
-        PropertiesPanel.ResumeLayout()
+        NotebookEditorPanel.ResumeLayout()
 
-        PropertiesPanel.TitleTextBox.Text = CurrentNotebook.Title
-        PropertiesPanel.LanguageTextBox.Text = CurrentNotebook.Language
-        PropertiesPanel.AuthorTextBox.Text = CurrentNotebook.Author
-        PropertiesPanel.WebsiteTextBox.Text = CurrentNotebook.Website
-        PropertiesPanel.InfoTextBox.Text = CurrentNotebook.Info
+        NotebookEditorPanel.TitleTextBox.Text = CurrentNotebook.Title
+        NotebookEditorPanel.LanguageTextBox.Text = CurrentNotebook.Language
+        NotebookEditorPanel.AuthorTextBox.Text = CurrentNotebook.Author
+        NotebookEditorPanel.WebsiteTextBox.Text = CurrentNotebook.Website
+        NotebookEditorPanel.InfoTextBox.Text = CurrentNotebook.Info
 
-        If PropertiesPanel.PagesListBox.Items.Count > 0 Then
-            PropertiesPanel.PagesListBox.SelectedIndex = 0
+        If NotebookEditorPanel.PagesListBox.Items.Count > 0 Then
+            NotebookEditorPanel.PagesListBox.SelectedIndex = 0
         End If
 
         FirstTabUpdate = True
@@ -538,7 +538,7 @@ Public Class MainForm
         If Moving = False Then
             SaveTabs()
             CurrentRtb = RtbList.Item(NotebookTabs.SelectedIndex)
-            PropertiesPanel.PagesListBox.SelectedIndex = NotebookTabs.SelectedIndex
+            NotebookEditorPanel.PagesListBox.SelectedIndex = NotebookTabs.SelectedIndex
             RtfEditorForm.RtfCodeTextBox.Text = CurrentRtb.Rtf
             WordWrapToolStripMenuItem.Checked = CurrentRtb.WordWrap
             SelectedDocument_TextChanged(Me, e)
@@ -569,7 +569,7 @@ Public Class MainForm
         }
 
         NotebookTabs.TabPages.Clear()
-        PropertiesPanel.PagesListBox.Items.Clear()
+        NotebookEditorPanel.PagesListBox.Items.Clear()
 
         Dim NewPage As NotebookPage = New NotebookPage With {
             .Title = "Untitled",

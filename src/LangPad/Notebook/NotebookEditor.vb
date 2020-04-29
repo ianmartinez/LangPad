@@ -2,7 +2,7 @@
 Imports LangPadSupport
 Imports LangPadSupport.Themes
 
-Public Class PropertiesEditor
+Public Class NotebookEditor
     Public Color1 As Color
     Public Color2 As Color
     Public VerticalMenuGradient As Boolean = False
@@ -33,7 +33,6 @@ Public Class PropertiesEditor
         RenameToolStripButton.Image = IconManager.Get("edit", IconSize.Small, Res)
         ImportToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, Res)
         ExportToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, Res)
-        DictionaryToolStripButton.Image = IconManager.Get("dictionary", IconSize.Small, Res)
     End Sub
 
     Private Sub TitleTextBox_TextChanged(sender As Object, e As EventArgs) Handles TitleTextBox.TextChanged
@@ -145,10 +144,6 @@ Public Class PropertiesEditor
             DocumentToolStripContainer.BottomToolStripPanel.SizeChanged, DocumentToolStripContainer.LeftToolStripPanel.SizeChanged, DocumentToolStripContainer.RightToolStripPanel.SizeChanged
 
         DocumentToolStripContainer.Invalidate()
-    End Sub
-
-    Private Sub DictionaryToolStripButton_Click(sender As Object, e As EventArgs) Handles DictionaryToolStripButton.Click
-        MainForm.DictionaryMenuItem_Click(Me, e)
     End Sub
 
     Private Sub GoButton_Click(sender As Object, e As EventArgs) Handles GoButton.Click

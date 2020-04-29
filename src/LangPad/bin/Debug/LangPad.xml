@@ -464,7 +464,7 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  </summary>
  
  <param name="Index">The index to place it at.</param>
- <param name="Title">The page's title</param>
+ <param name="Title">The page's title.</param>
 </member>
 <member name="T:LangPad.AutoUpdater">
  <summary>

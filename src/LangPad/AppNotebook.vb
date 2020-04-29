@@ -10,7 +10,6 @@ Module AppNoteboo
     Public Const NTVersion As Decimal = 2.1
 
     Private _Notebook As New NotebookFile
-    Private _PageIndex As Integer = -1
     Public RtbList As New List(Of ExtendedRichTextBox)
 
     ''' <summary>
@@ -36,7 +35,7 @@ Module AppNoteboo
             If _Notebook.Pages.Count = 0 Then
                 Return -1
             Else
-                Return _PageIndex
+                Return MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex
             End If
         End Get
 
@@ -52,10 +51,10 @@ Module AppNoteboo
     Private Sub GoToPage(Index As Integer)
         If Index = -1 Then
             MainForm.NotebookTabs.SelectedIndex = 0
-            MainForm.PropertiesPanel.PagesListBox.SelectedIndex = 0
+            MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = 0
         Else
             MainForm.NotebookTabs.SelectedIndex = Index
-            MainForm.PropertiesPanel.PagesListBox.SelectedIndex = Index
+            MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = Index
         End If
     End Sub
 
@@ -68,7 +67,7 @@ Module AppNoteboo
     ''' </summary>
     ''' 
     ''' <param name="Index">The index to place it at.</param>
-    ''' <param name="Title">The page's title</param>
+    ''' <param name="Title">The page's title.</param>
     Public Sub InsertPage(Index As Integer, Title As String)
         ' Insert after the current index
         If Index = -1 Then Index = _Notebook.Pages.Count
@@ -91,7 +90,7 @@ Module AppNoteboo
         MainForm.NotebookTabs.TabPages.Insert(Index, NewTab)
 
         ' Add new list item in properties panel
-        MainForm.PropertiesPanel.PagesListBox.Items.Add(NewPage.Title)
+        MainForm.NotebookEditorPanel.PagesListBox.Items.Insert(Index, NewPage.Title)
     End Sub
 
     Public Sub RemovePage(Index As Integer)

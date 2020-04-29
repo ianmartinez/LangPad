@@ -45,7 +45,6 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.MainForm.r
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.RtfEditorForm.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.Resources.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CharacterEditor.resources
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.PropertiesEditor.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.SplashScreenForm.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CharacterButton.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.GenerateResource.cache
@@ -73,3 +72,4 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.dl
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\ReverseMarkdown.dll
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.xml
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.NotebookEditor.resources
