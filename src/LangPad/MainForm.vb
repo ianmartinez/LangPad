@@ -974,6 +974,15 @@ Public Class MainForm
 
         If Not CurrentPage = -1 Then
             SaveTabs()
+            DuplicatePage(PageIndex)
+        End If
+    End Sub
+
+    Private Sub DuplicateAndNameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DuplicateAndNameToolStripMenuItem.Click
+        Dim CurrentPage = NotebookTabs.SelectedIndex
+
+        If Not CurrentPage = -1 Then
+            SaveTabs()
             NamePageDialog.NameTextBox.Text = CurrentNotebook.Pages(CurrentPage).Title
             NamePageDialog.Mode = PageNameMode.Duplicate
             NamePageDialog.ShowDialog()

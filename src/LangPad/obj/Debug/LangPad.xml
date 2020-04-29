@@ -479,7 +479,7 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
 <member name="M:LangPad.AppNoteboo.DuplicatePage(System.Int32,System.String)">
  <summary>
  Duplicate a page at an index, and optionally change its 
- title.
+ title. Navigates to new page after duplicating.
  </summary>
  
  <param name="SourceIndex">The page index to duplicate.</param>

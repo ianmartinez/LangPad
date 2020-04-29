@@ -113,7 +113,7 @@ Module AppNoteboo
 
     ''' <summary>
     ''' Duplicate a page at an index, and optionally change its 
-    ''' title.
+    ''' title. Navigates to new page after duplicating.
     ''' </summary>
     ''' 
     ''' <param name="SourceIndex">The page index to duplicate.</param>
@@ -121,8 +121,10 @@ Module AppNoteboo
     Public Sub DuplicatePage(SourceIndex As Integer, Optional NewTitle As String = Nothing)
         If PageExists(SourceIndex) Then
             Dim SourcePage = CurrentNotebook.Pages(SourceIndex)
+            Dim NewPageIndex = SourceIndex + 1
             If NewTitle Is Nothing Then NewTitle = SourcePage.Title
-            InsertPage(SourceIndex + 1, NewTitle, SourcePage.RTF)
+            InsertPage(NewPageIndex, NewTitle, SourcePage.RTF)
+            GoToPage(NewPageIndex)
             CurrentNotebook.Modified = True
         End If
     End Sub
