@@ -49,7 +49,10 @@ Module AppNoteboo
     End Sub
 
     Private Sub GoToPage(Index As Integer)
-        If Index = -1 Then
+        If Not PageExists(Index) Then
+            MainForm.NotebookTabs.SelectedIndex = -1
+            MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = -1
+        ElseIf Index = -1 Then
             MainForm.NotebookTabs.SelectedIndex = 0
             MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = 0
         Else
@@ -107,8 +110,27 @@ Module AppNoteboo
         CurrentNotebook.Modified = True
     End Sub
 
+    ''' <summary>
+    ''' Remove a page at an index. If it's the current page, navigate back 
+    ''' one page.
+    ''' </summary>
+    ''' 
+    ''' <param name="Index">The index of the page to remove.</param>
     Public Sub RemovePage(Index As Integer)
+        If PageExists(Index) Then
+            Dim WasCurrent = PageIndex = Index
 
+            CurrentNotebook.Pages.RemoveAt(Index)
+            MainForm.NotebookTabs.TabPages.RemoveAt(Index)
+            MainForm.NotebookEditorPanel.PagesListBox.Items.RemoveAt(Index)
+
+            ' If the page deleted was the current page, go back one page
+            If WasCurrent Then
+                GoToPage(Math.Max(0, Index - 1))
+            End If
+
+            CurrentNotebook.Modified = True
+        End If
     End Sub
 
     ''' <summary>

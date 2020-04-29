@@ -962,10 +962,9 @@ Public Class MainForm
         If CurrentNotebook.Pages.Count = 0 Or NotebookTabs.SelectedIndex < 0 Then Exit Sub
 
         SaveTabs()
-        If MessageBox.Show("Are you sure you want to delete this page? This cannot be undone.", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = Windows.Forms.DialogResult.Yes Then
-            CurrentNotebook.Pages.RemoveAt(NotebookTabs.SelectedIndex)
-            CurrentNotebook.Modified = True
-            UpdateTabs()
+        Dim ConfirmDelete = MessageBox.Show("Are you sure you want to delete this page? This cannot be undone.", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning)
+        If ConfirmDelete = DialogResult.Yes Then
+            RemovePage(PageIndex)
         End If
     End Sub
 
