@@ -10,6 +10,7 @@ Version 11.0 (June 30)
    • Reset indent menu option
    • Add "New Window" menu item to easily open a new LangPad instance
    • Paste images directly from File Explorer
+   • Show current line in status bar
    **• Add options to wrap selected text in brackets [] and // or remove brackets
    • Add shortcut keys to wrap text in brackets
    • Zoom in increments of 0.2 (a less drastic jump)   

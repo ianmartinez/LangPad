@@ -49,16 +49,18 @@ Module AppNoteboo
     End Sub
 
     Private Sub GoToPage(Index As Integer)
-        If Not PageInRange(Index) Then
+        Index = If(PageInRange(Index), Index, 0)
+
+        If CurrentNotebook.Pages.Count = 0 Then ' If no pages
             MainForm.NotebookTabs.SelectedIndex = -1
             MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = -1
-        ElseIf Index = -1 Then
-            MainForm.NotebookTabs.SelectedIndex = 0
-            MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = 0
-        Else
+        ElseIf PageInRange(Index) Then ' If there are pages
             MainForm.NotebookTabs.SelectedIndex = Index
             MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = Index
+            MainForm.CurrentRtb = RtbList(Index)
         End If
+
+        UpdatePageStats()
     End Sub
 
     Private Sub GoToCurrent()
@@ -81,6 +83,22 @@ Module AppNoteboo
         MainForm.Cursor = Cursors.Default
         MainForm.Enabled = True
         MainForm.ResumeLayout()
+    End Sub
+
+    Public Sub UpdatePageStats()
+        MainForm.PageCountLabel.Text = "Page Count: " & CurrentNotebook.Pages.Count
+        MainForm.WordWrapToolStripMenuItem.Checked = MainForm.CurrentRtb.WordWrap
+        UpdateLineNumber()
+        UpdateWordCount()
+    End Sub
+
+    Public Sub UpdateWordCount()
+        MainForm.CharCountToolStripLabel.Text = "Character Count: " & MainForm.CurrentRtb.TextLength
+        MainForm.WordCountToolStripLabel.Text = "Word Count: " & WordCount(MainForm.CurrentRtb.Text)
+    End Sub
+
+    Public Sub UpdateLineNumber()
+        MainForm.CurrentLineToolStripLabel.Text = "Line: " & (MainForm.CurrentRtb.GetLineFromCharIndex(MainForm.CurrentRtb.SelectionStart) + 1)
     End Sub
 
     ''' <summary>

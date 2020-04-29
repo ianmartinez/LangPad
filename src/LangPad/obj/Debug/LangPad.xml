@@ -680,5 +680,14 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="OldIndex">The old index.</param>
  <param name="NewIndex">The new index.</param>
 </member>
+<member name="M:LangPad.Util.WordCount(System.String)">
+ <summary>
+ Get the number of words in a text.
+ </summary>
+ 
+ <param name="Text">The text to look through.</param>
+ 
+ <returns>The number of words.</returns>
+</member>
 </members>
 </doc>

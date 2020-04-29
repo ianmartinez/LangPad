@@ -344,7 +344,7 @@ Public Class MainForm
 
         FirstTabUpdate = True
 
-        lblPageCount.Text = "Page Count: " & CurrentNotebook.Pages.Count
+        PageCountLabel.Text = "Page Count: " & CurrentNotebook.Pages.Count
         WordWrapToolStripMenuItem.Checked = CurrentRtb.WordWrap
     End Sub
 
@@ -366,19 +366,10 @@ Public Class MainForm
         End If
     End Sub
 
-    Public Shared Function WordCount(text As String) As Integer
-        Return text.Split(New Char() {" "c}, StringSplitOptions.RemoveEmptyEntries).Length
-    End Function
-
     Private Sub SelectedDocument_LinkClicked(sender As Object, e As LinkClickedEventArgs) Handles CurrentRtb.LinkClicked
         Dim Link As String = e.LinkText
         If Not (Link.StartsWith("http://") Or Link.StartsWith("https://")) Then Link = "https://" & Link
         Process.Start(Link)
-    End Sub
-
-    Public Sub UpdateWordCount()
-        CharCountToolStripLabel.Text = "Character Count: " & CurrentRtb.TextLength
-        WordCountToolStripLabel.Text = "Word Count: " & WordCount(CurrentRtb.Text)
     End Sub
 
     Private Sub SelectedDocument_TextChanged(sender As Object, e As EventArgs) Handles CurrentRtb.TextChanged
@@ -1387,5 +1378,9 @@ Public Class MainForm
 
     Private Sub RemoveBracketsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveBracketsToolStripMenuItem.Click
         CharEditWindow.CharEdit.RemoveBrackets(CurrentRtb)
+    End Sub
+
+    Private Sub CurrentRtb_SelectionChanged(sender As Object, e As EventArgs) Handles CurrentRtb.SelectionChanged
+        UpdateLineNumber()
     End Sub
 End Class
