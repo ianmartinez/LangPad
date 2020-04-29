@@ -49,7 +49,7 @@ Module AppNoteboo
     End Sub
 
     Private Sub GoToPage(Index As Integer)
-        If Not PageExists(Index) Then
+        If Not PageInRange(Index) Then
             MainForm.NotebookTabs.SelectedIndex = -1
             MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = -1
         ElseIf Index = -1 Then
@@ -72,7 +72,7 @@ Module AppNoteboo
     ''' <param name="Index">The index of the page.</param>
     ''' 
     ''' <returns>If a page exists at that index.</returns>
-    Public Function PageExists(Index As Integer) As Boolean
+    Public Function PageInRange(Index As Integer) As Boolean
         Return Index >= 0 And Index < CurrentNotebook.Pages.Count
     End Function
 
@@ -95,7 +95,7 @@ Module AppNoteboo
         _Notebook.Pages.Insert(Index, NewPage)
 
         ' Create an RTB with the page's RTF
-        Dim NewRtb = CreateRichTextBox(NewPage.RTF)
+        Dim NewRtb = CreateNotebookRtb(NewPage.RTF)
         RtbList.Insert(Index, NewRtb)
 
         ' Create a new tab with the RTB inside
@@ -116,16 +116,19 @@ Module AppNoteboo
     ''' </summary>
     ''' 
     ''' <param name="Index">The index of the page to remove.</param>
-    Public Sub RemovePage(Index As Integer)
-        If PageExists(Index) Then
+    ''' <param name="NavigateBack">If the UI should navigate to the previous page after 
+    ''' deletion, if the page deleted was the current page.</param>
+    Public Sub RemovePage(Index As Integer, Optional NavigateBack As Boolean = True)
+        If PageInRange(Index) Then
             Dim WasCurrent = PageIndex = Index
 
             CurrentNotebook.Pages.RemoveAt(Index)
+            RtbList.RemoveAt(Index)
             MainForm.NotebookTabs.TabPages.RemoveAt(Index)
             MainForm.NotebookEditorPanel.PagesListBox.Items.RemoveAt(Index)
 
             ' If the page deleted was the current page, go back one page
-            If WasCurrent Then
+            If WasCurrent AndAlso NavigateBack Then
                 GoToPage(Math.Max(0, Index - 1))
             End If
 
@@ -141,7 +144,7 @@ Module AppNoteboo
     ''' <param name="SourceIndex">The page index to duplicate.</param>
     ''' <param name="NewTitle">The duplicated page's title, by default the same as the old page</param>
     Public Sub DuplicatePage(SourceIndex As Integer, Optional NewTitle As String = Nothing)
-        If PageExists(SourceIndex) Then
+        If PageInRange(SourceIndex) Then
             Dim SourcePage = CurrentNotebook.Pages(SourceIndex)
             Dim NewPageIndex = SourceIndex + 1
             If NewTitle Is Nothing Then NewTitle = SourcePage.Title
@@ -158,7 +161,7 @@ Module AppNoteboo
     ''' <param name="Index">The index of the page to rename.</param>
     ''' <param name="NewTitle">The page's new title.</param>
     Public Sub RenamePage(Index As Integer, NewTitle As String)
-        If PageExists(Index) Then
+        If PageInRange(Index) Then
             CurrentNotebook.Pages(Index).Title = NewTitle
             MainForm.NotebookTabs.TabPages(Index).Text = NewTitle
             MainForm.NotebookEditorPanel.PagesListBox.Items(Index) = NewTitle
@@ -166,11 +169,34 @@ Module AppNoteboo
         End If
     End Sub
 
+    Private Sub MoveItem(Of T)(List As IList, OldIndex As Integer, NewIndex As Integer)
+        Dim Item As T = List(OldIndex)
+        List.RemoveAt(OldIndex)
+        List.Insert(NewIndex, Item)
+    End Sub
+
+    Public Sub MovePage(OldIndex As Integer, NewIndex As Integer)
+        If PageInRange(OldIndex) AndAlso PageInRange(NewIndex) Then
+            MainForm.SuspendLayout()
+            MainForm.Moving = True
+
+            MoveItem(Of ExtendedRichTextBox)(RtbList, OldIndex, NewIndex)
+            MoveItem(Of NotebookPage)(CurrentNotebook.Pages, OldIndex, NewIndex)
+            MoveItem(Of TabPage)(MainForm.NotebookTabs.TabPages, OldIndex, NewIndex)
+            MoveItem(Of String)(MainForm.NotebookEditorPanel.PagesListBox.Items, OldIndex, NewIndex)
+
+            CurrentNotebook.Modified = True
+            MainForm.Moving = False
+            GoToPage(NewIndex)
+            MainForm.ResumeLayout()
+        End If
+    End Sub
+
     Private Sub ModifiedHandler()
         CurrentNotebook.Modified = True
     End Sub
 
-    Public Function CreateRichTextBox(Rtf As String) As ExtendedRichTextBox
+    Public Function CreateNotebookRtb(Rtf As String) As ExtendedRichTextBox
         Dim NewRichTextBox As New ExtendedRichTextBox With {
             .Font = New Font("Calibri", 11, FontStyle.Regular),
             .Rtf = Rtf,

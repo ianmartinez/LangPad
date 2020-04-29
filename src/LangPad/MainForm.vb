@@ -318,7 +318,7 @@ Public Class MainForm
                 .Text = Page.Title
             }
 
-            Dim NewRichTextBox = CreateRichTextBox(Page.RTF)
+            Dim NewRichTextBox = CreateNotebookRtb(Page.RTF)
             Tab.Controls.Add(NewRichTextBox)
             RtbList.Add(NewRichTextBox)
             NotebookTabs.TabPages.Add(Tab)

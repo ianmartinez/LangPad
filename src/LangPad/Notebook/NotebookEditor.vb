@@ -80,15 +80,7 @@ Public Class NotebookEditor
         MainForm.SaveTabs()
 
         If PagesListBox.SelectedIndex > 0 Then
-            MainForm.Moving = True
-            MainForm.SuspendLayout()
-            Dim I = PagesListBox.SelectedIndex - 1
-            CurrentNotebook.Pages.Insert(I, CurrentNotebook.Pages.Item(PagesListBox.SelectedIndex))
-            CurrentNotebook.Pages.RemoveAt(PagesListBox.SelectedIndex + 1)
-            MainForm.UpdateTabs()
-            MainForm.Moving = False
-            MainForm.ResumeLayout()
-            PagesListBox.SelectedIndex = I
+            MovePage(PageIndex, PageIndex - 1)
         End If
     End Sub
 
@@ -96,15 +88,7 @@ Public Class NotebookEditor
         MainForm.SaveTabs()
 
         If PagesListBox.SelectedIndex < CurrentNotebook.Pages.Count - 1 Then
-            MainForm.SuspendLayout()
-            MainForm.Moving = True
-            Dim I = PagesListBox.SelectedIndex + 2
-            CurrentNotebook.Pages.Insert(I, CurrentNotebook.Pages.Item(PagesListBox.SelectedIndex))
-            CurrentNotebook.Pages.RemoveAt(PagesListBox.SelectedIndex)
-            MainForm.UpdateTabs()
-            MainForm.Moving = False
-            MainForm.ResumeLayout()
-            PagesListBox.SelectedIndex = I - 1
+            MovePage(PageIndex, PageIndex + 1)
         End If
     End Sub
 

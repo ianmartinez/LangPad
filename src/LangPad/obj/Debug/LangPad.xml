@@ -458,7 +458,7 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  notebook.
  </summary>
 </member>
-<member name="M:LangPad.AppNoteboo.PageExists(System.Int32)">
+<member name="M:LangPad.AppNoteboo.PageInRange(System.Int32)">
  <summary>
  Check if a page is within range of the current notebook's pages.
  </summary>
@@ -476,13 +476,15 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="Title">The page's title.</param>
  <param name="Rtf">The page's RTF data.</param>
 </member>
-<member name="M:LangPad.AppNoteboo.RemovePage(System.Int32)">
+<member name="M:LangPad.AppNoteboo.RemovePage(System.Int32,System.Boolean)">
  <summary>
  Remove a page at an index. If it's the current page, navigate back 
  one page.
  </summary>
  
  <param name="Index">The index of the page to remove.</param>
+ <param name="NavigateBack">If the UI should navigate to the previous page after 
+ deletion, if the page deleted was the current page.</param>
 </member>
 <member name="M:LangPad.AppNoteboo.DuplicatePage(System.Int32,System.String)">
  <summary>
