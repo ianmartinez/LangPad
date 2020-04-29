@@ -18,17 +18,17 @@ Public Class NamePageDialog
         MainForm.SaveTabs()
 
         If Mode = PageNameMode.Add Then
-            InsertPage(PageIndex + 1, NameTextBox.Text)
+            InsertPage(CurrentPageIndex + 1, NameTextBox.Text)
         ElseIf Mode = PageNameMode.Duplicate Then
-            DuplicatePage(PageIndex, NameTextBox.Text)
+            DuplicatePage(CurrentPageIndex, NameTextBox.Text)
         ElseIf Mode = PageNameMode.Rename Then
-            RenamePage(PageIndex, NameTextBox.Text)
+            RenamePage(CurrentPageIndex, NameTextBox.Text)
         End If
 
-        If PageIndex = -1 Then
+        If CurrentPageIndex = -1 Then
             MainForm.NotebookTabs.SelectedIndex = 0
         Else
-            MainForm.NotebookTabs.SelectedIndex = PageIndex
+            MainForm.NotebookTabs.SelectedIndex = CurrentPageIndex
         End If
 
         Enabled = True

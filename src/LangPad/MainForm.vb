@@ -79,11 +79,8 @@ Public Class MainForm
         End If
 
         SetTitle()
-        UpdateTabs()
         SplitLayoutPanel.Panel2Collapsed = False
         SelectedDocument_TextChanged(Me, e)
-
-        CurrentNotebook.Modified = False
         KeyPreview = True
 
         'SplitLayoutPanel.Panel2MinSize = 275
@@ -305,49 +302,6 @@ Public Class MainForm
         Next
     End Sub
 
-    Public Sub UpdateTabs()
-        SuspendLayout()
-
-        NotebookTabs.TabPages.Clear()
-        RtbList.Clear()
-        NotebookEditorPanel.SuspendLayout()
-        NotebookEditorPanel.PagesListBox.Items.Clear()
-
-        For Each Page As NotebookPage In CurrentNotebook.Pages
-            Dim Tab As New TabPage With {
-                .Text = Page.Title
-            }
-
-            Dim NewRichTextBox = CreateNotebookRtb(Page.RTF)
-            Tab.Controls.Add(NewRichTextBox)
-            RtbList.Add(NewRichTextBox)
-            NotebookTabs.TabPages.Add(Tab)
-            NotebookEditorPanel.PagesListBox.Items.Add(Page.Title)
-        Next
-
-        NotebookTabs.SelectedIndex = 0
-        If RtbList.Count > 0 Then
-            CurrentRtb = RtbList.Item(0)
-        End If
-        ResumeLayout()
-        NotebookEditorPanel.ResumeLayout()
-
-        NotebookEditorPanel.TitleTextBox.Text = CurrentNotebook.Title
-        NotebookEditorPanel.LanguageTextBox.Text = CurrentNotebook.Language
-        NotebookEditorPanel.AuthorTextBox.Text = CurrentNotebook.Author
-        NotebookEditorPanel.WebsiteTextBox.Text = CurrentNotebook.Website
-        NotebookEditorPanel.InfoTextBox.Text = CurrentNotebook.Info
-
-        If NotebookEditorPanel.PagesListBox.Items.Count > 0 Then
-            NotebookEditorPanel.PagesListBox.SelectedIndex = 0
-        End If
-
-        FirstTabUpdate = True
-
-        PageCountLabel.Text = "Page Count: " & CurrentNotebook.Pages.Count
-        WordWrapToolStripMenuItem.Checked = CurrentRtb.WordWrap
-    End Sub
-
     Public Function ModifiedWarning() As DialogResult
         Return MessageBox.Show("Would you like to save the current document?", "Unsaved Document", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning)
     End Function
@@ -555,7 +509,7 @@ Public Class MainForm
             End If
         End If
 
-        CurrentNotebook = New NotebookFile With {
+        Dim NewNotebook = New NotebookFile With {
             .Pages = New List(Of NotebookPage)
         }
 
@@ -567,18 +521,13 @@ Public Class MainForm
             .RTF = ""
         }
 
-        CurrentNotebook.Pages.Add(NewPage)
-        CurrentNotebook.WordDictionary = New DictionaryFile()
-        UpdateTabs()
-
-        DictionaryForm.LoadDictionary() ' Reset dictionary form
+        NewNotebook.Pages.Add(NewPage)
+        NewNotebook.WordDictionary = New DictionaryFile()
         CharEditWindow.CharEdit.FilePanel.Controls.Clear() ' Reset character editor file tab
 
         CurrentFilePath = ""
+        CurrentNotebook = NewNotebook
         SetTitle()
-
-        CurrentNotebook.Modified = False
-        UpdateWordCount()
     End Sub
 
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
@@ -611,10 +560,7 @@ Public Class MainForm
             End If
 
             CurrentNotebook = OpenFile
-            UpdateTabs()
-            DictionaryForm.LoadDictionary()
             CurrentFilePath = OpenDialog.FileName
-            CurrentNotebook.Modified = False
         End If
 
         SetTitle()
@@ -955,7 +901,7 @@ Public Class MainForm
         SaveTabs()
         Dim ConfirmDelete = MessageBox.Show("Are you sure you want to delete this page? This cannot be undone.", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning)
         If ConfirmDelete = DialogResult.Yes Then
-            RemovePage(PageIndex)
+            RemovePage(CurrentPageIndex)
         End If
     End Sub
 
@@ -964,7 +910,7 @@ Public Class MainForm
 
         If Not CurrentPage = -1 Then
             SaveTabs()
-            DuplicatePage(PageIndex)
+            DuplicatePage(CurrentPageIndex)
         End If
     End Sub
 
@@ -980,33 +926,9 @@ Public Class MainForm
     End Sub
 
     Public Sub ImportPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportPageToolStripMenuItem.Click
-        If OpenPageDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If OpenPageDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
             SaveTabs()
-
-            If OpenPageDialog.FileName = "" Then Exit Sub
-
-            Dim NewPage As New NotebookPage With {
-                .Title = OpenPageDialog.FileName.Split("\").GetValue(OpenPageDialog.FileName.Split("\").Count - 1).ToString.Split(".").GetValue(0)
-            }
-
-            Dim ImportedExt = Path.GetExtension(OpenPageDialog.FileName).ToUpper()
-            Select Case ImportedExt
-                Case ".RTF"
-                    Dim Reader = New StreamReader(OpenPageDialog.FileName)
-                    NewPage.RTF = Reader.ReadToEnd
-                    Reader.Close()
-                Case Else
-                    Dim Reader = New StreamReader(OpenPageDialog.FileName)
-                    Dim TempRichTextBox As New ExtendedRichTextBox With {
-                        .Text = Reader.ReadToEnd
-                    }
-                    NewPage.RTF = TempRichTextBox.Rtf
-                    Reader.Close()
-            End Select
-
-            CurrentNotebook.Pages.Add(NewPage)
-            UpdateTabs()
-            NotebookTabs.SelectedIndex = CurrentNotebook.Pages.Count - 1
+            ImportPage(CurrentPageIndex, OpenPageDialog.FileName)
         End If
     End Sub
 
@@ -1044,7 +966,7 @@ Public Class MainForm
 
     Public Sub RenamePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenamePageToolStripMenuItem.Click
         SaveTabs()
-        If PageInRange(PageIndex) Then
+        If PageInRange(CurrentPageIndex) Then
             NamePageDialog.Mode = PageNameMode.Rename
             NamePageDialog.NameTextBox.Text = CurrentNotebook.Pages.Item(NotebookTabs.SelectedIndex).Title
             NamePageDialog.CurrentPos = NotebookTabs.SelectedIndex

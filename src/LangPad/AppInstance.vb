@@ -11,11 +11,6 @@ Module AppInstance
     Public CharEditWindow As CharacterEditorToolWindow
 
     ''' <summary>
-    ''' If the first tab has been updated on the main form.
-    ''' </summary>
-    Public FirstTabUpdate As Boolean = False
-
-    ''' <summary>
     ''' A list of accent+base character combinations to replace with
     ''' a single character.
     ''' </summary>
@@ -25,6 +20,15 @@ Module AppInstance
     ''' The theme of the application's interface.
     ''' </summary>
     Public ApplicationTheme As Theme
+
+    ''' <summary>
+    ''' The local characters as a string array.
+    ''' </summary>
+    Public ReadOnly Property AppLocalCharacters As String()
+        Get
+            Return My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+        End Get
+    End Property
 
     ''' <summary>
     ''' Get the icon resolution set by the user.

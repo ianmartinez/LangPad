@@ -106,8 +106,7 @@ Public Class CharacterEditor
     End Sub
 
     Public Sub AddToLocal(Character As String)
-        Dim OriginalLocalCharacters As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-        If OriginalLocalCharacters.Contains(Character) Then Exit Sub
+        If AppLocalCharacters.Contains(Character) Then Exit Sub
 
         My.Settings.CustomSymbols = My.Settings.CustomSymbols & Environment.NewLine & Character
         RefreshLocal()
@@ -115,16 +114,13 @@ Public Class CharacterEditor
 
     Public Sub RefreshLocal()
         LocalPanel.Controls.Clear()
-
-        Dim LocalCharacters As String() = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-        For Each LocalCharacter As String In LocalCharacters
+        For Each LocalCharacter As String In AppLocalCharacters
             InsertCharacterButton(LocalCharacter, LocalPanel)
         Next
     End Sub
 
     Public Sub AddToFile(Character As String)
-        Dim OriginalFileChars As String() = CurrentNotebook.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-        If OriginalFileChars.Contains(Character) Then Exit Sub
+        If CurrentNotebookCharacters.Contains(Character) Then Exit Sub
 
         CurrentNotebook.CustomSymbols = CurrentNotebook.CustomSymbols & Environment.NewLine & Character
         RefreshFile()
@@ -134,8 +130,7 @@ Public Class CharacterEditor
     Public Sub RefreshFile()
         FilePanel.Controls.Clear()
 
-        Dim FileChars As String() = CurrentNotebook.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-        For Each FileChar As String In FileChars
+        For Each FileChar As String In CurrentNotebookCharacters
             InsertCharacterButton(FileChar, FilePanel)
         Next
     End Sub
@@ -476,14 +471,14 @@ Public Class CharacterEditor
         Dim CurrentButton = CType(CurrentMenu.SourceControl, CharacterButton)
 
         If CurrentButton.Parent Is FilePanel Then
-            Dim FileChars As List(Of String) = CurrentNotebook.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries).ToList()
+            Dim FileChars As List(Of String) = CurrentNotebookCharacters.ToList()
             If FileChars.Contains(CurrentButton.Text) Then
                 FileChars.Remove(CurrentButton.Text)
                 CurrentNotebook.CustomSymbols = String.Join(Environment.NewLine, FileChars.ToArray())
                 RefreshFile()
             End If
         ElseIf CurrentButton.Parent Is LocalPanel Then
-            Dim LocalChars As List(Of String) = My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries).ToList()
+            Dim LocalChars As List(Of String) = AppLocalCharacters.ToList()
             If LocalChars.Contains(CurrentButton.Text) Then
                 LocalChars.Remove(CurrentButton.Text)
                 My.Settings.CustomSymbols = String.Join(Environment.NewLine, LocalChars.ToArray())

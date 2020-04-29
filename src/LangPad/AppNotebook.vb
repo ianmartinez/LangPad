@@ -1,4 +1,5 @@
-﻿Imports LangPadSupport
+﻿Imports System.IO
+Imports LangPadSupport
 ''' <summary>
 ''' Handles operations on the current notebook used by LangPad.
 ''' </summary>
@@ -9,8 +10,13 @@ Module AppNoteboo
     ''' </summary>
     Public Const NTVersion As Decimal = 2.1
 
+
     Private _Notebook As New NotebookFile
     Public RtbList As New List(Of ExtendedRichTextBox)
+    ''' <summary>
+    ''' If the first tab has been updated on the main form.
+    ''' </summary>
+    Public FirstTabUpdate As Boolean = False
 
     ''' <summary>
     ''' The document open in this instance of LangPad.
@@ -30,7 +36,7 @@ Module AppNoteboo
     ''' The index of the currently open page in the
     ''' notebook.
     ''' </summary>
-    Public Property PageIndex As Integer
+    Public Property CurrentPageIndex As Integer
         Get
             If _Notebook.Pages.Count = 0 Then
                 Return -1
@@ -44,8 +50,94 @@ Module AppNoteboo
         End Set
     End Property
 
-    Private Sub LoadNotebook(Notebook As NotebookFile)
+    ''' <summary>
+    ''' The file characters as a string array.
+    ''' </summary>
+    Public ReadOnly Property CurrentNotebookCharacters As String()
+        Get
+            Return CurrentNotebook.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+        End Get
+    End Property
 
+
+    Private Sub LoadNotebook(Notebook As NotebookFile)
+        BeginOperation(MainForm)
+
+        ' Clear controls
+        MainForm.NotebookTabs.TabPages.Clear()
+        RtbList.Clear()
+        MainForm.NotebookEditorPanel.PagesListBox.Items.Clear()
+
+        ' Process each page into the UI
+        For Each Page As NotebookPage In Notebook.Pages
+            Dim PageTab As New TabPage With {
+                .Text = Page.Title
+            }
+
+            Dim PageRtb = CreateNotebookRtb(Page.RTF)
+            PageTab.Controls.Add(PageRtb)
+            RtbList.Add(PageRtb)
+            MainForm.NotebookTabs.TabPages.Add(PageTab)
+            MainForm.NotebookEditorPanel.PagesListBox.Items.Add(Page.Title)
+        Next
+
+        ' Go to the first page, if it exists
+        If Notebook.Pages.Count > 0 Then
+            GoToPage(0)
+        End If
+
+        ' Update notebook properties forms
+        MainForm.NotebookEditorPanel.TitleTextBox.Text = CurrentNotebook.Title
+        MainForm.NotebookEditorPanel.LanguageTextBox.Text = CurrentNotebook.Language
+        MainForm.NotebookEditorPanel.AuthorTextBox.Text = CurrentNotebook.Author
+        MainForm.NotebookEditorPanel.WebsiteTextBox.Text = CurrentNotebook.Website
+        MainForm.NotebookEditorPanel.InfoTextBox.Text = CurrentNotebook.Info
+
+        ' Load dictionary
+        RefreshDictionary()
+
+        ' Load file characters
+        RefreshFileCharacters()
+
+        ' A newly loaded document isn't modfied
+        CurrentNotebook.Modified = False
+        FirstTabUpdate = True
+        UpdatePageStats()
+
+        EndOperation(MainForm)
+    End Sub
+
+    Public Sub RefreshDictionary()
+        BeginOperation(DictionaryForm)
+
+        DictionaryForm.DictionaryGrid.Rows.Clear()
+        For Each Word As DictionaryWord In CurrentNotebook.WordDictionary.Words
+            Dim Row As New DataGridViewRow
+            Row.CreateCells(DictionaryForm.DictionaryGrid)
+            Row.Cells.Item(0).Value = Word.Word
+            Row.Cells.Item(1).Value = Word.Pronunciation
+            Row.Cells.Item(2).Value = Word.Definition
+            Row.Cells.Item(3).Value = Word.Notes
+
+            DictionaryForm.DictionaryGrid.Rows.Add(Row)
+        Next
+        DictionaryForm.DictionaryGrid.Refresh()
+
+        EndOperation(DictionaryForm)
+    End Sub
+
+    Public Sub RefreshFileCharacters()
+        BeginOperation(CharEditWindow)
+
+        ' Clear controls
+        CharEditWindow.CharEdit.FilePanel.Controls.Clear()
+
+        ' Add each character
+        For Each FileCharacter In CurrentNotebookCharacters
+            CharEditWindow.CharEdit.InsertCharacterButton(FileCharacter, CharEditWindow.CharEdit.FilePanel)
+        Next
+
+        EndOperation(CharEditWindow)
     End Sub
 
     Private Sub GoToPage(Index As Integer)
@@ -64,25 +156,29 @@ Module AppNoteboo
     End Sub
 
     Private Sub GoToCurrent()
-        GoToPage(PageIndex)
+        GoToPage(CurrentPageIndex)
     End Sub
 
     ''' <summary>
     ''' Signal to the user that an operation is being processed.
+    ''' 
+    ''' <param name="TargetForm">The form that is the target of the operation.</param>
     ''' </summary>
-    Private Sub BeginOperation()
-        MainForm.Cursor = Cursors.WaitCursor
-        MainForm.Enabled = False
-        MainForm.SuspendLayout()
+    Private Sub BeginOperation(TargetForm As Form)
+        TargetForm.Cursor = Cursors.WaitCursor
+        TargetForm.Enabled = False
+        TargetForm.SuspendLayout()
     End Sub
 
     ''' <summary>
     ''' Signal to the user that an operation has completed.
+    ''' 
+    ''' <param name="TargetForm">The form that is the target of the operation.</param>
     ''' </summary>
-    Private Sub EndOperation()
-        MainForm.Cursor = Cursors.Default
-        MainForm.Enabled = True
-        MainForm.ResumeLayout()
+    Private Sub EndOperation(TargetForm As Form)
+        TargetForm.Cursor = Cursors.Default
+        TargetForm.Enabled = True
+        TargetForm.ResumeLayout()
     End Sub
 
     Public Sub UpdatePageStats()
@@ -122,7 +218,7 @@ Module AppNoteboo
     Public Sub InsertPage(Index As Integer, Title As String, Optional Rtf As String = "")
         ' Insert after the current index, and if not at 
         ' a valid index, then insert at the end
-        If Not PageInRange(PageIndex) Then Index = _Notebook.Pages.Count
+        If Not PageInRange(CurrentPageIndex) Then Index = _Notebook.Pages.Count
 
         ' Create a new page
         Dim NewPage As New NotebookPage With {
@@ -151,6 +247,35 @@ Module AppNoteboo
     End Sub
 
     ''' <summary>
+    ''' Import a file into the notebook at a specific index.
+    ''' </summary>
+    ''' 
+    ''' <param name="Index">The index to import the file to.</param>
+    ''' <param name="FileName">The file's path.</param>
+    Public Sub ImportPage(Index As Integer, FileName As String)
+        If File.Exists(FileName) Then
+            Dim PageTitle = Path.GetFileNameWithoutExtension(FileName)
+            Dim ImportedExt = Path.GetExtension(FileName).ToUpper()
+
+            ' Read the text file
+            Dim Reader = New StreamReader(FileName)
+            Dim FileContent = Reader.ReadToEnd()
+            Reader.Close()
+
+            ' Import the text file's data
+            Select Case ImportedExt
+                Case ".RTF" ' If RTF, import directly
+                    InsertPage(Index, PageTitle, FileContent)
+                Case Else ' If not, create a temp RTB to get it in the proper RTF format
+                    Dim TempRichTextBox As New ExtendedRichTextBox With {
+                        .Text = FileContent
+                    }
+                    InsertPage(Index, PageTitle, TempRichTextBox.Rtf)
+            End Select
+        End If
+    End Sub
+
+    ''' <summary>
     ''' Remove a page at an index. If it's the current page, navigate back 
     ''' one page.
     ''' </summary>
@@ -160,7 +285,7 @@ Module AppNoteboo
     ''' deletion, if the page deleted was the current page.</param>
     Public Sub RemovePage(Index As Integer, Optional NavigateBack As Boolean = True)
         If PageInRange(Index) Then
-            Dim WasCurrent = PageIndex = Index
+            Dim WasCurrent = CurrentPageIndex = Index
 
             CurrentNotebook.Pages.RemoveAt(Index)
             RtbList.RemoveAt(Index)
@@ -218,7 +343,7 @@ Module AppNoteboo
         If OldIndex = NewIndex Then Exit Sub ' Nothing to do
 
         If PageInRange(OldIndex) AndAlso PageInRange(NewIndex) Then
-            BeginOperation()
+            BeginOperation(MainForm)
             MainForm.Moving = True
 
             MoveItem(Of ExtendedRichTextBox)(RtbList, OldIndex, NewIndex)
@@ -229,7 +354,7 @@ Module AppNoteboo
             CurrentNotebook.Modified = True
             GoToPage(NewIndex)
             MainForm.Moving = False
-            EndOperation()
+            EndOperation(MainForm)
         End If
     End Sub
 

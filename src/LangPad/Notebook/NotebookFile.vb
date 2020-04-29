@@ -57,7 +57,7 @@ Module NotebookFileAccess
         MainForm.SaveTabs()
 
         If DictionaryForm.Loaded = False Then
-            DictionaryForm.LoadDictionary()
+            RefreshDictionary()
         End If
 
         DictionaryForm.SaveDictionary()
@@ -158,8 +158,7 @@ Module NotebookFileAccess
         If NewNotebook.CustomSymbols <> "" Then
             CharEditWindow.CharEdit.FilePanel.Controls.Clear()
 
-            Dim FileChars As String() = NewNotebook.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-            For Each FileChar As String In FileChars
+            For Each FileChar As String In CurrentNotebookCharacters
                 CharEditWindow.CharEdit.InsertCharacterButton(FileChar, CharEditWindow.CharEdit.FilePanel)
             Next
         End If

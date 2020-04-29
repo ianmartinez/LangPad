@@ -13,7 +13,7 @@ Public Class DictionaryForm
 
     Private Sub DictionaryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetIcons()
-        LoadDictionary()
+        RefreshDictionary()
         SetDisplayFont()
         Loaded = True
     End Sub
@@ -64,23 +64,6 @@ Public Class DictionaryForm
     Public Sub SetDisplayFont()
         DictionaryGrid.DefaultCellStyle.Font = My.Settings.DictionaryFont
         DictionaryGrid.DefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
-    End Sub
-
-    Public Sub LoadDictionary()
-        DictionaryGrid.Rows.Clear()
-        Dim Words = CurrentNotebook.WordDictionary.Words
-        For Each Word As DictionaryWord In CurrentNotebook.WordDictionary.Words
-            Dim Row As New DataGridViewRow
-            Row.CreateCells(DictionaryGrid)
-            Row.Cells.Item(0).Value = Word.Word
-            Row.Cells.Item(1).Value = Word.Pronunciation
-            Row.Cells.Item(2).Value = Word.Definition
-            Row.Cells.Item(3).Value = Word.Notes
-
-            DictionaryGrid.Rows.Add(Row)
-        Next
-
-        DictionaryGrid.Refresh()
     End Sub
 
     Public Sub SaveDictionary()
@@ -134,7 +117,7 @@ Public Class DictionaryForm
                 CurrentNotebook.WordDictionary.Open(OpenDialog.FileName)
             End If
 
-            LoadDictionary()
+            RefreshDictionary()
         End If
     End Sub
 
@@ -194,7 +177,7 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub DictionaryForm_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
-        LoadDictionary()
+        RefreshDictionary()
     End Sub
 
     Private Sub DictionaryGrid_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles DictionaryGrid.CellEndEdit

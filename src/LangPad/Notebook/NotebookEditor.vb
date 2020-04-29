@@ -80,7 +80,7 @@ Public Class NotebookEditor
         MainForm.SaveTabs()
 
         If PagesListBox.SelectedIndex > 0 Then
-            MovePage(PageIndex, PageIndex - 1)
+            MovePage(CurrentPageIndex, CurrentPageIndex - 1)
         End If
     End Sub
 
@@ -88,7 +88,7 @@ Public Class NotebookEditor
         MainForm.SaveTabs()
 
         If PagesListBox.SelectedIndex < CurrentNotebook.Pages.Count - 1 Then
-            MovePage(PageIndex, PageIndex + 1)
+            MovePage(CurrentPageIndex, CurrentPageIndex + 1)
         End If
     End Sub
 

@@ -447,25 +447,39 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  created with this version.
  </summary>
 </member>
+<member name="F:LangPad.AppNoteboo.FirstTabUpdate">
+ <summary>
+ If the first tab has been updated on the main form.
+ </summary>
+</member>
 <member name="P:LangPad.AppNoteboo.CurrentNotebook">
  <summary>
  The document open in this instance of LangPad.
  </summary>
 </member>
-<member name="P:LangPad.AppNoteboo.PageIndex">
+<member name="P:LangPad.AppNoteboo.CurrentPageIndex">
  <summary>
  The index of the currently open page in the
  notebook.
  </summary>
 </member>
-<member name="M:LangPad.AppNoteboo.BeginOperation">
+<member name="P:LangPad.AppNoteboo.CurrentNotebookCharacters">
  <summary>
- Signal to the user that an operation is being processed.
+ The file characters as a string array.
  </summary>
 </member>
-<member name="M:LangPad.AppNoteboo.EndOperation">
+<member name="M:LangPad.AppNoteboo.BeginOperation(System.Windows.Forms.Form)">
+ <summary>
+ Signal to the user that an operation is being processed.
+ 
+ <param name="TargetForm">The form that is the target of the operation.</param>
+ </summary>
+</member>
+<member name="M:LangPad.AppNoteboo.EndOperation(System.Windows.Forms.Form)">
  <summary>
  Signal to the user that an operation has completed.
+ 
+ <param name="TargetForm">The form that is the target of the operation.</param>
  </summary>
 </member>
 <member name="M:LangPad.AppNoteboo.PageInRange(System.Int32)">
@@ -485,6 +499,14 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="Index">The index to place it at.</param>
  <param name="Title">The page's title.</param>
  <param name="Rtf">The page's RTF data.</param>
+</member>
+<member name="M:LangPad.AppNoteboo.ImportPage(System.Int32,System.String)">
+ <summary>
+ Import a file into the notebook at a specific index.
+ </summary>
+ 
+ <param name="Index">The index to import the file to.</param>
+ <param name="FileName">The file's path.</param>
 </member>
 <member name="M:LangPad.AppNoteboo.RemovePage(System.Int32,System.Boolean)">
  <summary>
@@ -611,11 +633,6 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  The character editor tools window used between windows.
  </summary>
 </member>
-<member name="F:LangPad.AppInstance.FirstTabUpdate">
- <summary>
- If the first tab has been updated on the main form.
- </summary>
-</member>
 <member name="F:LangPad.AppInstance.SmartReplaceList">
  <summary>
  A list of accent+base character combinations to replace with
@@ -625,6 +642,11 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
 <member name="F:LangPad.AppInstance.ApplicationTheme">
  <summary>
  The theme of the application's interface.
+ </summary>
+</member>
+<member name="P:LangPad.AppInstance.AppLocalCharacters">
+ <summary>
+ The local characters as a string array.
  </summary>
 </member>
 <member name="M:LangPad.AppInstance.GetIconResolution">
