@@ -1028,12 +1028,6 @@ Public Class MainForm
         End If
     End Sub
 
-    Private Function RtfToHtml(Rtf As String, Title As String) As String
-        Dim Body = RtfPipe.Rtf.ToHtml(Rtf).ToString()
-        Dim Base = My.Resources.PageExportHtml
-        Return String.Format(Base, Title, Body)
-    End Function
-
     Public Sub ExportPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportPageToolStripMenuItem.Click
         If CurrentDocument.Pages.Count = 0 Or NotebookTabs.SelectedIndex < 0 Then Exit Sub
         Dim PageTitle = CurrentDocument.Pages(NotebookTabs.SelectedIndex).Title
