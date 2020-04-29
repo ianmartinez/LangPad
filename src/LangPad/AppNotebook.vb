@@ -102,8 +102,9 @@ Module AppNoteboo
     ''' <param name="Title">The page's title.</param>
     ''' <param name="Rtf">The page's RTF data.</param>
     Public Sub InsertPage(Index As Integer, Title As String, Optional Rtf As String = "")
-        ' Insert after the current index
-        If Index = -1 Then Index = _Notebook.Pages.Count
+        ' Insert after the current index, and if not at 
+        ' a valid index, then insert at the end
+        If Not PageInRange(PageIndex) Then Index = _Notebook.Pages.Count
 
         ' Create a new page
         Dim NewPage As New NotebookPage With {
@@ -126,6 +127,12 @@ Module AppNoteboo
         ' Add new list item in properties panel
         MainForm.NotebookEditorPanel.PagesListBox.Items.Insert(Index, NewPage.Title)
         CurrentNotebook.Modified = True
+
+        ' If there isn't a valid page selected (i.e. the notebook had no pages 
+        ' before this one), select the new page
+        If Not PageInRange(PageIndex) Then
+            GoToPage(Index)
+        End If
     End Sub
 
     ''' <summary>

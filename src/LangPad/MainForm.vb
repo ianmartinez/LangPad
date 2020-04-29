@@ -1053,10 +1053,12 @@ Public Class MainForm
 
     Public Sub RenamePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenamePageToolStripMenuItem.Click
         SaveTabs()
-        NamePageDialog.Mode = PageNameMode.Rename
-        NamePageDialog.NameTextBox.Text = CurrentNotebook.Pages.Item(NotebookTabs.SelectedIndex).Title
-        NamePageDialog.CurrentPos = NotebookTabs.SelectedIndex
-        NamePageDialog.ShowDialog()
+        If PageInRange(PageIndex) Then
+            NamePageDialog.Mode = PageNameMode.Rename
+            NamePageDialog.NameTextBox.Text = CurrentNotebook.Pages.Item(NotebookTabs.SelectedIndex).Title
+            NamePageDialog.CurrentPos = NotebookTabs.SelectedIndex
+            NamePageDialog.ShowDialog()
+        End If
     End Sub
 
     Private Sub UpdateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateToolStripMenuItem.Click
