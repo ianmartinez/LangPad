@@ -9,7 +9,6 @@ Public Class MainForm
     Private CurrentFilePath As String
     Private LastPrintedCharPos As Integer
     Public Title As String
-    Public Moving As Boolean = False
     Public DisableFontChange As Boolean
     Public IsLoading As Boolean = False
     Public LastFocused As TextBoxBase
@@ -281,14 +280,6 @@ Public Class MainForm
         End If
     End Sub
 
-    Public Sub SaveTabs()
-        If Not CurrentNotebook.Pages.Count = RtbList.Count Then Exit Sub ' Opening document
-
-        For i = 0 To NotebookTabs.TabPages.Count - 1
-            CurrentNotebook.Pages.Item(i).RTF = RtbList.Item(i).Rtf
-        Next
-    End Sub
-
     Public Sub ShowNotSupportedFileError(FileName As String)
         MessageBox.Show("Cannot open '" + FileName + "'. It is not supported by LangPad.", "Invalid File", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
@@ -317,7 +308,7 @@ Public Class MainForm
         Process.Start(Link)
     End Sub
 
-    Private Sub SelectedDocument_TextChanged(sender As Object, e As EventArgs) Handles CurrentRtb.TextChanged
+    Public Sub SelectedDocument_TextChanged(sender As Object, e As EventArgs) Handles CurrentRtb.TextChanged
         UpdateWordCount()
         RtfEditorForm.RtfCodeTextBox.Text = CurrentRtb.Rtf
     End Sub
@@ -466,24 +457,6 @@ Public Class MainForm
         CurrentRtb.DeselectAll()
     End Sub
 
-    Private Sub NotebookTabs_SelectedIndexChanged(sender As Object, e As EventArgs) Handles NotebookTabs.SelectedIndexChanged
-        If NotebookTabs.SelectedIndex = -1 Or IsLoading Then Exit Sub
-
-        Dim OldModified = CurrentNotebook.Modified
-
-        If Moving = False Then
-            SaveTabs()
-            CurrentRtb = RtbList.Item(NotebookTabs.SelectedIndex)
-            NotebookEditorPanel.PagesListBox.SelectedIndex = NotebookTabs.SelectedIndex
-            RtfEditorForm.RtfCodeTextBox.Text = CurrentRtb.Rtf
-            WordWrapToolStripMenuItem.Checked = CurrentRtb.WordWrap
-            UpdateLineNumber()
-            SelectedDocument_TextChanged(Me, e)
-        End If
-
-        CurrentNotebook.Modified = OldModified
-    End Sub
-
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         Dim HasSaved As Boolean = False
 
@@ -505,7 +478,7 @@ Public Class MainForm
             .Pages = New List(Of NotebookPage)
         }
 
-        NotebookTabs.TabPages.Clear()
+        RtbList.Clear()
         NotebookEditorPanel.PagesListBox.Items.Clear()
 
         Dim NewPage As NotebookPage = New NotebookPage With {
@@ -892,15 +865,15 @@ Public Class MainForm
     End Sub
 
     Public Sub AddPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddPageToolStripMenuItem.Click
-        SaveTabs()
+        SavePages()
         PageNameDialog.Mode = PageNameMode.Add
         PageNameDialog.ShowDialog()
     End Sub
 
     Public Sub RemovePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemovePageToolStripMenuItem.Click
-        If CurrentNotebook.Pages.Count = 0 Or NotebookTabs.SelectedIndex < 0 Then Exit Sub
+        If CurrentNotebook.Pages.Count = 0 Or CurrentPageIndex < 0 Then Exit Sub
 
-        SaveTabs()
+        SavePages()
         Dim ConfirmDelete = MessageBox.Show("Are you sure you want to delete this page? This cannot be undone.", "", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning)
         If ConfirmDelete = DialogResult.Yes Then
             RemovePage(CurrentPageIndex)
@@ -908,20 +881,16 @@ Public Class MainForm
     End Sub
 
     Public Sub DuplicatePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DuplicatePageToolStripMenuItem.Click
-        Dim CurrentPage = NotebookTabs.SelectedIndex
-
-        If Not CurrentPage = -1 Then
-            SaveTabs()
+        If PageInRange(CurrentPageIndex) Then
+            SavePages()
             DuplicatePage(CurrentPageIndex)
         End If
     End Sub
 
     Private Sub DuplicateAndNameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DuplicateAndNameToolStripMenuItem.Click
-        Dim CurrentPage = NotebookTabs.SelectedIndex
-
-        If Not CurrentPage = -1 Then
-            SaveTabs()
-            PageNameDialog.NameTextBox.Text = CurrentNotebook.Pages(CurrentPage).Title
+        If PageInRange(CurrentPageIndex) Then
+            SavePages()
+            PageNameDialog.NameTextBox.Text = CurrentNotebook.Pages(CurrentPageIndex).Title
             PageNameDialog.Mode = PageNameMode.Duplicate
             PageNameDialog.ShowDialog()
         End If
@@ -929,14 +898,14 @@ Public Class MainForm
 
     Public Sub ImportPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportPageToolStripMenuItem.Click
         If OpenPageDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            SaveTabs()
+            SavePages()
             ImportPage(CurrentPageIndex, OpenPageDialog.FileName)
         End If
     End Sub
 
     Public Sub ExportPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportPageToolStripMenuItem.Click
-        If CurrentNotebook.Pages.Count = 0 Or NotebookTabs.SelectedIndex < 0 Then Exit Sub
-        Dim PageTitle = CurrentNotebook.Pages(NotebookTabs.SelectedIndex).Title
+        If CurrentNotebook.Pages.Count = 0 OrElse Not PageInRange(CurrentPageIndex) Then Exit Sub
+        Dim PageTitle = CurrentNotebook.Pages(CurrentPageIndex).Title
         Dim PageFileName = PageTitle
         For Each InvalidChar In Path.GetInvalidFileNameChars
             PageFileName = PageFileName.Replace(InvalidChar, "")
@@ -967,11 +936,11 @@ Public Class MainForm
     End Sub
 
     Public Sub RenamePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenamePageToolStripMenuItem.Click
-        SaveTabs()
+        SavePages()
         If PageInRange(CurrentPageIndex) Then
             PageNameDialog.Mode = PageNameMode.Rename
-            PageNameDialog.NameTextBox.Text = CurrentNotebook.Pages.Item(NotebookTabs.SelectedIndex).Title
-            PageNameDialog.CurrentPos = NotebookTabs.SelectedIndex
+            PageNameDialog.NameTextBox.Text = CurrentNotebook.Pages.Item(CurrentPageIndex).Title
+            PageNameDialog.CurrentPos = CurrentPageIndex
             PageNameDialog.ShowDialog()
         End If
     End Sub
@@ -1222,11 +1191,11 @@ Public Class MainForm
     End Sub
 
     Private Sub PreviousPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PreviousPageToolStripMenuItem.Click
-        If Not NotebookTabs.SelectedIndex = 0 Then NotebookTabs.SelectedIndex -= 1
+        If Not CurrentPageIndex = 0 Then CurrentPageIndex -= 1
     End Sub
 
     Private Sub NextPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NextPageToolStripMenuItem.Click
-        If Not NotebookTabs.SelectedIndex = NotebookTabs.TabPages.Count - 1 Then NotebookTabs.SelectedIndex += 1
+        If Not CurrentPageIndex = CurrentNotebook.Pages.Count - 1 Then CurrentPageIndex += 1
     End Sub
 
     Private Sub IncreaseIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IncreaseIndentToolStripMenuItem.Click

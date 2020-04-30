@@ -15,7 +15,7 @@ Public Class PageNameDialog
     Private Sub OkDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OkDialogButton.Click
         Enabled = False
         Cursor.Current = Cursors.WaitCursor
-        MainForm.SaveTabs()
+        SavePages()
 
         If Mode = PageNameMode.Add Then
             InsertPage(CurrentPageIndex + 1, NameTextBox.Text)
@@ -23,12 +23,6 @@ Public Class PageNameDialog
             DuplicatePage(CurrentPageIndex, NameTextBox.Text)
         ElseIf Mode = PageNameMode.Rename Then
             RenamePage(CurrentPageIndex, NameTextBox.Text)
-        End If
-
-        If CurrentPageIndex = -1 Then
-            MainForm.NotebookTabs.SelectedIndex = 0
-        Else
-            MainForm.NotebookTabs.SelectedIndex = CurrentPageIndex
         End If
 
         Enabled = True

@@ -54,7 +54,7 @@ End Class
 Module NotebookFileAccess
     Dim PagesFolder As String
     Sub Save(ByVal FilePath As String, ByVal Notebook As NotebookFile)
-        MainForm.SaveTabs()
+        SavePages()
 
         If DictionaryForm.Loaded = False Then
             RefreshDictionary()

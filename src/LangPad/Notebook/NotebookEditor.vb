@@ -58,15 +58,14 @@ Public Class NotebookEditor
     End Sub
 
     Private Sub PagesListBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles PagesListBox.SelectedIndexChanged
-        On Error Resume Next
-
-        If MainForm.Moving = False Then
-            MainForm.NotebookTabs.SelectedIndex = PagesListBox.SelectedIndex
+        UserPageSwitch = True
+        If Not MovingPage Then
+            CurrentPageIndex = PagesListBox.SelectedIndex
         Else
             CurrentNotebook.Modified = True
         End If
-
         PagesListBox.Focus()
+        UserPageSwitch = False
     End Sub
 
     Private Sub InfoTextBox_TextChanged(sender As Object, e As EventArgs) Handles InfoTextBox.TextChanged
@@ -77,7 +76,7 @@ Public Class NotebookEditor
     End Sub
 
     Private Sub PageUpToolStripButton_Click(sender As Object, e As EventArgs) Handles PageUpToolStripButton.Click
-        MainForm.SaveTabs()
+        SavePages()
 
         If PagesListBox.SelectedIndex > 0 Then
             MovePage(CurrentPageIndex, CurrentPageIndex - 1)
@@ -85,7 +84,7 @@ Public Class NotebookEditor
     End Sub
 
     Private Sub PageDownToolStripButton_Click(sender As Object, e As EventArgs) Handles PageDownToolStripButton.Click
-        MainForm.SaveTabs()
+        SavePages()
 
         If PagesListBox.SelectedIndex < CurrentNotebook.Pages.Count - 1 Then
             MovePage(CurrentPageIndex, CurrentPageIndex + 1)

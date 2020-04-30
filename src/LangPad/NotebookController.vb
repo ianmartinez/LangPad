@@ -11,12 +11,21 @@ Module NotebookController
     ''' </summary>
     Public Const NTVersion As Decimal = 2.1
 
-
     Public RtbList As New List(Of ExtendedRichTextBox)
     ''' <summary>
     ''' If the first tab has been updated on the main form.
     ''' </summary>
     Public FirstTabUpdate As Boolean = False
+
+    ''' <summary>
+    ''' If the page is currently being switched by the user.
+    ''' </summary>
+    Public UserPageSwitch As Boolean = False
+
+    ''' <summary>
+    ''' If the page is in the process of moving.
+    ''' </summary>
+    Public MovingPage As Boolean = False
 
     Private _Notebook As New NotebookFile
     ''' <summary>
@@ -65,7 +74,7 @@ Module NotebookController
         BeginOperation(MainForm)
 
         ' Clear controls
-        MainForm.NotebookTabs.TabPages.Clear()
+        MainForm.CurrentPageContainer.Controls.Clear()
         RtbList.Clear()
         MainForm.NotebookEditorPanel.PagesListBox.Items.Clear()
 
@@ -78,7 +87,6 @@ Module NotebookController
             Dim PageRtb = CreateNotebookRtb(Page.RTF)
             PageTab.Controls.Add(PageRtb)
             RtbList.Add(PageRtb)
-            MainForm.NotebookTabs.TabPages.Add(PageTab)
             MainForm.NotebookEditorPanel.PagesListBox.Items.Add(Page.Title)
         Next
 
@@ -145,12 +153,27 @@ Module NotebookController
         Index = If(PageInRange(Index), Index, 0)
 
         If CurrentNotebook.Pages.Count = 0 Then ' If no pages
-            MainForm.NotebookTabs.SelectedIndex = -1
+            MainForm.CurrentPageContainer.Controls.Clear()
             MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = -1
         ElseIf PageInRange(Index) Then ' If there are pages
-            MainForm.NotebookTabs.SelectedIndex = Index
-            MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = Index
+            MainForm.CurrentPageContainer.Controls.Clear()
+
+            If Not UserPageSwitch Then
+                MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = Index
+            End If
+
+            If Not MovingPage Then
+                Dim OldModified = CurrentNotebook.Modified
+                SavePages()
+                UpdateLineNumber()
+                MainForm.SelectedDocument_TextChanged(Nothing, Nothing)
+                CurrentNotebook.Modified = OldModified
+            End If
+
             MainForm.CurrentRtb = RtbList(Index)
+            MainForm.CurrentPageContainer.Controls.Add(MainForm.CurrentRtb)
+            ' Draw focus to current RTB
+            MainForm.CurrentRtb.Select()
         End If
 
         UpdatePageStats()
@@ -209,6 +232,14 @@ Module NotebookController
         Return Index >= 0 And Index < CurrentNotebook.Pages.Count
     End Function
 
+    Public Sub SavePages()
+        If Not CurrentNotebook.Pages.Count = RtbList.Count Then Exit Sub ' Opening document
+
+        For i = 0 To RtbList.Count - 1
+            CurrentNotebook.Pages.Item(i).RTF = RtbList.Item(i).Rtf
+        Next
+    End Sub
+
     ''' <summary>
     ''' Insert a page to the current notebook.
     ''' </summary>
@@ -233,13 +264,6 @@ Module NotebookController
         ' Create an RTB with the page's RTF
         Dim NewRtb = CreateNotebookRtb(NewPage.RTF)
         RtbList.Insert(Index, NewRtb)
-
-        ' Create a new tab with the RTB inside
-        Dim NewTab As New TabPage With {
-            .Text = Title
-        }
-        NewTab.Controls.Add(NewRtb)
-        MainForm.NotebookTabs.TabPages.Insert(Index, NewTab)
 
         ' Add new list item in properties panel
         MainForm.NotebookEditorPanel.PagesListBox.Items.Insert(Index, NewPage.Title)
@@ -296,7 +320,6 @@ Module NotebookController
 
             CurrentNotebook.Pages.RemoveAt(Index)
             RtbList.RemoveAt(Index)
-            MainForm.NotebookTabs.TabPages.RemoveAt(Index)
             MainForm.NotebookEditorPanel.PagesListBox.Items.RemoveAt(Index)
 
             ' If the page deleted was the current page, go back one page
@@ -336,7 +359,6 @@ Module NotebookController
     Public Sub RenamePage(Index As Integer, NewTitle As String)
         If PageInRange(Index) Then
             CurrentNotebook.Pages(Index).Title = NewTitle
-            MainForm.NotebookTabs.TabPages(Index).Text = NewTitle
             MainForm.NotebookEditorPanel.PagesListBox.Items(Index) = NewTitle
             CurrentNotebook.Modified = True
         End If
@@ -353,16 +375,15 @@ Module NotebookController
 
         If PageInRange(OldIndex) AndAlso PageInRange(NewIndex) Then
             BeginOperation(MainForm)
-            MainForm.Moving = True
+            MovingPage = True
 
             MoveItem(Of ExtendedRichTextBox)(RtbList, OldIndex, NewIndex)
             MoveItem(Of NotebookPage)(CurrentNotebook.Pages, OldIndex, NewIndex)
-            MoveItem(Of TabPage)(MainForm.NotebookTabs.TabPages, OldIndex, NewIndex)
             MoveItem(Of String)(MainForm.NotebookEditorPanel.PagesListBox.Items, OldIndex, NewIndex)
 
             CurrentNotebook.Modified = True
             GoToPage(NewIndex)
-            MainForm.Moving = False
+            MovingPage = False
             EndOperation(MainForm)
         End If
     End Sub

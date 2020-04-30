@@ -452,6 +452,16 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  If the first tab has been updated on the main form.
  </summary>
 </member>
+<member name="F:LangPad.NotebookController.UserPageSwitch">
+ <summary>
+ If the page is currently being switched by the user.
+ </summary>
+</member>
+<member name="F:LangPad.NotebookController.MovingPage">
+ <summary>
+ If the page is in the process of moving.
+ </summary>
+</member>
 <member name="P:LangPad.NotebookController.CurrentNotebook">
  <summary>
  The document open in this instance of LangPad.
