@@ -478,6 +478,28 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  The file characters as a string array.
  </summary>
 </member>
+<member name="M:LangPad.NotebookController.LoadNotebook">
+ <summary>
+ Update the UI to reflect the current notebook.
+ </summary>
+</member>
+<member name="M:LangPad.NotebookController.GoToPage(System.Int32)">
+ <summary>
+ Navigate to page in the notebook.
+ </summary>
+ 
+ <param name="Index">The index of the page.</param>
+</member>
+<member name="M:LangPad.NotebookController.RefreshDictionary">
+ <summary>
+ Refresh the dictionary to reflect the current notebook.
+ </summary>
+</member>
+<member name="M:LangPad.NotebookController.RefreshFileCharacters">
+ <summary>
+ Refresh the file characters to reflect the current notebook.
+ </summary>
+</member>
 <member name="M:LangPad.NotebookController.BeginOperation(System.Windows.Forms.Form)">
  <summary>
  Signal to the user that an operation is being processed.
@@ -492,6 +514,21 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="TargetForm">The form that is the target of the operation.</param>
  </summary>
 </member>
+<member name="M:LangPad.NotebookController.UpdatePageStats">
+ <summary>
+ Update all stats for a page.
+ </summary>
+</member>
+<member name="M:LangPad.NotebookController.UpdateWordCount">
+ <summary>
+ Updates the UI to reflect the character and word count of the current page.
+ </summary>
+</member>
+<member name="M:LangPad.NotebookController.UpdateLineNumber">
+ <summary>
+ Updates the UI to reflect the line number of the current page.
+ </summary>
+</member>
 <member name="M:LangPad.NotebookController.PageInRange(System.Int32)">
  <summary>
  Check if a page is within range of the current notebook's pages.
@@ -500,6 +537,11 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="Index">The index of the page.</param>
  
  <returns>If a page exists at that index.</returns>
+</member>
+<member name="M:LangPad.NotebookController.SavePages">
+ <summary>
+ Save the pages in the current notebook.
+ </summary>
 </member>
 <member name="M:LangPad.NotebookController.InsertPage(System.Int32,System.String,System.String)">
  <summary>
@@ -552,6 +594,16 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  
  <param name="OldIndex">The index of the page to move.</param>
  <param name="NewIndex">The index to move the page to.</param>
+</member>
+<member name="M:LangPad.NotebookController.CreateNotebookRtb(System.String)">
+ <summary>
+ Create an ExtendedRichTextBox with the right settings for
+ a LangPad page.
+ </summary>
+ 
+ <param name="Rtf">The page's Rtf data.</param>
+ 
+ <returns>The created ExtendedRichTextBox.</returns>
 </member>
 <member name="T:LangPad.AutoUpdater">
  <summary>

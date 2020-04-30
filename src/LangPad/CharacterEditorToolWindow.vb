@@ -4,6 +4,7 @@
     Private Sub CharacterEditorToolWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CharEdit.GetCurrentTexbox = GetCurrentTexbox()
         MinimumSize = New Size(CharEdit.MinimumSize.Width + 10, CharEdit.MinimumSize.Height + 10)
+        KeyPreview = True
         SetIcons()
     End Sub
 
@@ -43,6 +44,12 @@
         ElseIf e.CloseReason = CloseReason.FormOwnerClosing AndAlso Owner Is DictionaryForm AndAlso MainForm IsNot Nothing Then
             Owner = MainForm
             e.Cancel = True
+        End If
+    End Sub
+
+    Private Sub CharacterEditorToolWindow_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown, CharEdit.KeyDown
+        If (e.KeyCode = Keys.S AndAlso e.Modifiers = Keys.Control) Then
+            MainForm.FileSave()
         End If
     End Sub
 End Class

@@ -16,6 +16,7 @@ Public Class DictionaryForm
         RefreshDictionary()
         SetDisplayFont()
         Loaded = True
+        KeyPreview = True
     End Sub
 
     Public Sub SetTheme(Theme As Theme)
@@ -259,5 +260,11 @@ Public Class DictionaryForm
         End If
         SaveDictionary()
         Hide()
+    End Sub
+
+    Private Sub DictionaryForm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown, DictionaryGrid.KeyDown
+        If (e.KeyCode = Keys.S AndAlso e.Modifiers = Keys.Control) Then
+            MainForm.FileSave()
+        End If
     End Sub
 End Class

@@ -149,6 +149,9 @@ Module NotebookController
         UpdatePageStats()
     End Sub
 
+    ''' <summary>
+    ''' Refresh the dictionary to reflect the current notebook.
+    ''' </summary>
     Public Sub RefreshDictionary()
         BeginOperation(DictionaryForm)
 
@@ -168,6 +171,9 @@ Module NotebookController
         EndOperation(DictionaryForm)
     End Sub
 
+    ''' <summary>
+    ''' Refresh the file characters to reflect the current notebook.
+    ''' </summary>
     Public Sub RefreshFileCharacters()
         BeginOperation(CharEditWindow)
 
