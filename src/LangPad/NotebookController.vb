@@ -4,7 +4,7 @@ Imports LangPadSupport
 ''' <summary>
 ''' Handles operations on the current notebook used by LangPad.
 ''' </summary>
-Module AppNotebook
+Module NotebookController
     ''' <summary>
     ''' The internal file version for notebook (*.nt) files
     ''' created with this version.

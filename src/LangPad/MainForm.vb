@@ -99,6 +99,7 @@ Public Class MainForm
         Dim ScreenX As Integer = ScreenWidth - 20 - CharEditWindow.Width
         Dim CharToolX = Math.Min(ScreenX, Location.X + Width + 20)
         CharEditWindow.Location = New Point(CharToolX, Location.Y)
+        CharEditWindow.Height = Height
 
         ColorPicker.FullOpen = True
         SetIcons()
