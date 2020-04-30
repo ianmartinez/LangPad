@@ -305,7 +305,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Resources\Transparent2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vowels.txt" />
@@ -326,15 +325,10 @@
     <None Include="Resources\ToneIntonation.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\KeyStyle.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\SmartReplace.txt" />
     <None Include="Resources\HtmlStyle.txt" />
     <None Include="Resources\TableTemplate.txt" />
     <None Include="Resources\HtmlTemplate.txt" />
-    <None Include="Resources\Top.txt" />
-    <None Include="Resources\KeyStyle1.txt" />
     <None Include="Resources\Common.txt" />
   </ItemGroup>
   <ItemGroup>

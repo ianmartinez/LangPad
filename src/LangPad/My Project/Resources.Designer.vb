@@ -503,30 +503,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Positions=0|0.9|1
-        '''Angle=90
-        '''Radius=0
-        '''Border Color=~171
-        '''Highlight Color$0
-        '''Bottom Only=1.
-        '''</summary>
-        Friend ReadOnly Property Top() As String
-            Get
-                Return ResourceManager.GetString("Top", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property Transparent2() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Transparent2", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to Close front unrounded vowel/High front unrounded vowel=i
         '''Close front rounded vowel/High front rounded vowel=y
         '''Close front protruded vowel/High front protruded vowel=y̫

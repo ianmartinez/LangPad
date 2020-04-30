@@ -17,7 +17,10 @@ Public Class MainForm
     Public VerticalMenuGradient As Boolean = False
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Load all of the characters and other resources and check for updates,
+        ' while showing progress on the splash screen.
         LoadApplication()
+
         Text = GetAppDisplayName()
         Title = Text
         MainContextMenu.ImageScalingSize = New Size(16, 16)
