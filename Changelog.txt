@@ -33,7 +33,8 @@ Version 11.0 (June 30)
    **• Pages are now inserted after the current page, not at the end of the notebook
    • Smaller sidebar that has been split into two tabs: pages and properties
    • Improved splash screen
-   • Major refactoring to have a more consistent naming scheme and remove old junk c
+   • Major refactoring to have a more consistent naming scheme and remove old junk
+   • Bug Fix: Old Language Pad 4.x-5.x files could not be opened
    • Bug Fix: Fix bad performance when changing font styles on a page that has large images 
    • Bug Fix: Word count wouldn't update automatically when opening a new file
    • Bug Fix: Pages with the same name couldn't be imported without changing the name

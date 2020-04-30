@@ -85,7 +85,10 @@ namespace LangPadSupport
 
         public static string Search(Dictionary<string, string> Data, string Lookup)
         {
-            return Data[Lookup];
+            if (Data.ContainsKey(Lookup))
+                return Data[Lookup];
+            else
+                return "";
         }
 
         public static string GetValue(string Data, string Lookup)

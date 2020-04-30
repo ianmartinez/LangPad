@@ -118,10 +118,20 @@ Module NotebookFileAccess
         PagesFolder = TempPath & "\pages\"
 
         Dim LineList = Read(File.ReadAllText(TempPath & "\data.txt"))
-        NewNotebook.NTSpecificationVersion = Search(LineList, "NTVersion")
-        Dim CompatMode As Boolean = (NewNotebook.NTSpecificationVersion < 2)
 
-        If CompatMode Then ' Use the legacy method of storing pages
+        ' Check the version of the notebook format so that we can adjust 
+        ' the loading to support older formats
+        Dim NTVersionString = Search(LineList, "NTVersion")
+
+        ' Versions prior to NT 1.2 didn't actually declare their spec version,
+        ' so a lookup will fail
+        If String.IsNullOrEmpty(NTVersionString) Then
+            NewNotebook.NTSpecificationVersion = 1
+        Else
+            NewNotebook.NTSpecificationVersion = NTVersionString
+        End If
+
+        If NewNotebook.NTSpecificationVersion < 2 Then ' Use the legacy method of storing pages
             Dim PageOrder = Search(LineList, "Page Order").Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
             For Each PageTitle As String In PageOrder
                 Dim Page As New NotebookPage With {
@@ -151,9 +161,29 @@ Module NotebookFileAccess
         NewNotebook.Author = Search(LineList, "Author")
         NewNotebook.Website = Search(LineList, "Website")
         NewNotebook.ProgramVersion = Search(LineList, "LangPadVersion")
-        NewNotebook.CustomSymbols = File.ReadAllText(TempPath & "\custom_symbols.txt")
-        NewNotebook.Info = File.ReadAllText(TempPath & "\info.txt")
-        NewNotebook.WordDictionary.Open(TempPath & "\dictionary.txt")
+
+        ' The first release of the notebook format lacked embedded
+        ' custom symbols, so check if they exist before trying to
+        ' load them
+        Dim CustomSymbolsFile = TempPath & "\custom_symbols.txt"
+        If File.Exists(CustomSymbolsFile) Then
+            NewNotebook.CustomSymbols = File.ReadAllText(CustomSymbolsFile)
+        End If
+
+        ' The first release also lacked an info file, so check if it exists
+        Dim InfoFile = TempPath & "\info.txt"
+        If File.Exists(InfoFile) Then
+            NewNotebook.Info = File.ReadAllText(TempPath & "\info.txt")
+        Else
+            NewNotebook.Info = String.Empty
+        End If
+
+        ' Some older versions (4.0-5.3) lacked a dictionary, so check 
+        ' if it exists before trying to load it
+        Dim DictionaryFile = TempPath & "\dictionary.txt"
+        If File.Exists(DictionaryFile) Then
+            NewNotebook.WordDictionary.Open(DictionaryFile)
+        End If
 
         If NewNotebook.CustomSymbols <> "" Then
             CharEditWindow.CharEdit.FilePanel.Controls.Clear()
