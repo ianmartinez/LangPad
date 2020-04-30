@@ -35,6 +35,10 @@ Partial Class AboutDialog
         Me.HeaderPanel = New LangPadSupport.DoubleBufferedPanel()
         Me.LangPadLabel = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ButtonTableLayout = New System.Windows.Forms.TableLayoutPanel()
+        Me.GitHubButton = New System.Windows.Forms.Button()
+        Me.PatreonButton = New System.Windows.Forms.Button()
+        Me.WebsiteButton = New System.Windows.Forms.Button()
         Me.MainTabControl.SuspendLayout()
         Me.LicenseTab.SuspendLayout()
         Me.ChangelogTab.SuspendLayout()
@@ -42,6 +46,7 @@ Partial Class AboutDialog
         Me.HeaderBorderPanel.SuspendLayout()
         Me.HeaderPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ButtonTableLayout.SuspendLayout()
         Me.SuspendLayout()
         '
         'MainTabControl
@@ -49,11 +54,11 @@ Partial Class AboutDialog
         Me.MainTabControl.Controls.Add(Me.LicenseTab)
         Me.MainTabControl.Controls.Add(Me.ChangelogTab)
         Me.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainTabControl.Location = New System.Drawing.Point(7, 188)
+        Me.MainTabControl.Location = New System.Drawing.Point(7, 292)
         Me.MainTabControl.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MainTabControl.Name = "MainTabControl"
         Me.MainTabControl.SelectedIndex = 0
-        Me.MainTabControl.Size = New System.Drawing.Size(868, 536)
+        Me.MainTabControl.Size = New System.Drawing.Size(868, 605)
         Me.MainTabControl.TabIndex = 9
         '
         'LicenseTab
@@ -63,7 +68,7 @@ Partial Class AboutDialog
         Me.LicenseTab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LicenseTab.Name = "LicenseTab"
         Me.LicenseTab.Padding = New System.Windows.Forms.Padding(9)
-        Me.LicenseTab.Size = New System.Drawing.Size(860, 503)
+        Me.LicenseTab.Size = New System.Drawing.Size(860, 572)
         Me.LicenseTab.TabIndex = 0
         Me.LicenseTab.Text = "License"
         Me.LicenseTab.UseVisualStyleBackColor = True
@@ -80,7 +85,7 @@ Partial Class AboutDialog
         Me.LicenseTextBox.Name = "LicenseTextBox"
         Me.LicenseTextBox.ReadOnly = True
         Me.LicenseTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.LicenseTextBox.Size = New System.Drawing.Size(842, 485)
+        Me.LicenseTextBox.Size = New System.Drawing.Size(842, 554)
         Me.LicenseTextBox.TabIndex = 7
         Me.LicenseTextBox.Text = resources.GetString("LicenseTextBox.Text")
         '
@@ -91,7 +96,7 @@ Partial Class AboutDialog
         Me.ChangelogTab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ChangelogTab.Name = "ChangelogTab"
         Me.ChangelogTab.Padding = New System.Windows.Forms.Padding(9)
-        Me.ChangelogTab.Size = New System.Drawing.Size(860, 523)
+        Me.ChangelogTab.Size = New System.Drawing.Size(860, 632)
         Me.ChangelogTab.TabIndex = 1
         Me.ChangelogTab.Text = "Changelog"
         Me.ChangelogTab.UseVisualStyleBackColor = True
@@ -108,7 +113,7 @@ Partial Class AboutDialog
         Me.ChangelogTextBox.Name = "ChangelogTextBox"
         Me.ChangelogTextBox.ReadOnly = True
         Me.ChangelogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.ChangelogTextBox.Size = New System.Drawing.Size(842, 505)
+        Me.ChangelogTextBox.Size = New System.Drawing.Size(842, 614)
         Me.ChangelogTextBox.TabIndex = 8
         Me.ChangelogTextBox.Text = resources.GetString("ChangelogTextBox.Text")
         '
@@ -117,15 +122,17 @@ Partial Class AboutDialog
         Me.MainTableLayoutPanel.ColumnCount = 1
         Me.MainTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.MainTableLayoutPanel.Controls.Add(Me.HeaderBorderPanel, 0, 0)
-        Me.MainTableLayoutPanel.Controls.Add(Me.MainTabControl, 0, 1)
+        Me.MainTableLayoutPanel.Controls.Add(Me.ButtonTableLayout, 0, 1)
+        Me.MainTableLayoutPanel.Controls.Add(Me.MainTabControl, 0, 2)
         Me.MainTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainTableLayoutPanel.Location = New System.Drawing.Point(6, 6)
         Me.MainTableLayoutPanel.Name = "MainTableLayoutPanel"
         Me.MainTableLayoutPanel.Padding = New System.Windows.Forms.Padding(3)
-        Me.MainTableLayoutPanel.RowCount = 2
+        Me.MainTableLayoutPanel.RowCount = 3
         Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 180.0!))
-        Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.MainTableLayoutPanel.Size = New System.Drawing.Size(882, 732)
+        Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.MainTableLayoutPanel.Size = New System.Drawing.Size(882, 905)
         Me.MainTableLayoutPanel.TabIndex = 77
         '
         'HeaderBorderPanel
@@ -180,18 +187,84 @@ Partial Class AboutDialog
         Me.PictureBox1.TabIndex = 13
         Me.PictureBox1.TabStop = False
         '
+        'ButtonTableLayout
+        '
+        Me.ButtonTableLayout.AutoSize = True
+        Me.ButtonTableLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.ButtonTableLayout.ColumnCount = 3
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.ButtonTableLayout.Controls.Add(Me.GitHubButton, 0, 0)
+        Me.ButtonTableLayout.Controls.Add(Me.PatreonButton, 0, 0)
+        Me.ButtonTableLayout.Controls.Add(Me.WebsiteButton, 1, 0)
+        Me.ButtonTableLayout.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ButtonTableLayout.Location = New System.Drawing.Point(7, 188)
+        Me.ButtonTableLayout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ButtonTableLayout.Name = "ButtonTableLayout"
+        Me.ButtonTableLayout.Padding = New System.Windows.Forms.Padding(0, 9, 0, 5)
+        Me.ButtonTableLayout.RowCount = 1
+        Me.ButtonTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.ButtonTableLayout.Size = New System.Drawing.Size(868, 94)
+        Me.ButtonTableLayout.TabIndex = 78
+        '
+        'GitHubButton
+        '
+        Me.GitHubButton.AutoSize = True
+        Me.GitHubButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.GitHubButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GitHubButton.Image = CType(resources.GetObject("GitHubButton.Image"), System.Drawing.Image)
+        Me.GitHubButton.Location = New System.Drawing.Point(292, 12)
+        Me.GitHubButton.Name = "GitHubButton"
+        Me.GitHubButton.Padding = New System.Windows.Forms.Padding(6)
+        Me.GitHubButton.Size = New System.Drawing.Size(283, 74)
+        Me.GitHubButton.TabIndex = 2
+        Me.GitHubButton.Text = "GitHub"
+        Me.GitHubButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.GitHubButton.UseVisualStyleBackColor = True
+        '
+        'PatreonButton
+        '
+        Me.PatreonButton.AutoSize = True
+        Me.PatreonButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.PatreonButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PatreonButton.Image = CType(resources.GetObject("PatreonButton.Image"), System.Drawing.Image)
+        Me.PatreonButton.Location = New System.Drawing.Point(3, 12)
+        Me.PatreonButton.Name = "PatreonButton"
+        Me.PatreonButton.Padding = New System.Windows.Forms.Padding(6)
+        Me.PatreonButton.Size = New System.Drawing.Size(283, 74)
+        Me.PatreonButton.TabIndex = 1
+        Me.PatreonButton.Text = "Support on Patreon"
+        Me.PatreonButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.PatreonButton.UseVisualStyleBackColor = True
+        '
+        'WebsiteButton
+        '
+        Me.WebsiteButton.AutoSize = True
+        Me.WebsiteButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.WebsiteButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.WebsiteButton.Image = CType(resources.GetObject("WebsiteButton.Image"), System.Drawing.Image)
+        Me.WebsiteButton.Location = New System.Drawing.Point(581, 12)
+        Me.WebsiteButton.Name = "WebsiteButton"
+        Me.WebsiteButton.Padding = New System.Windows.Forms.Padding(6)
+        Me.WebsiteButton.Size = New System.Drawing.Size(284, 74)
+        Me.WebsiteButton.TabIndex = 3
+        Me.WebsiteButton.Text = "Website"
+        Me.WebsiteButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.WebsiteButton.UseVisualStyleBackColor = True
+        '
         'AboutDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(894, 744)
+        Me.ClientSize = New System.Drawing.Size(894, 921)
         Me.Controls.Add(Me.MainTableLayoutPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "AboutDialog"
-        Me.Padding = New System.Windows.Forms.Padding(6)
+        Me.Padding = New System.Windows.Forms.Padding(6, 6, 6, 10)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "About"
@@ -201,9 +274,12 @@ Partial Class AboutDialog
         Me.ChangelogTab.ResumeLayout(False)
         Me.ChangelogTab.PerformLayout()
         Me.MainTableLayoutPanel.ResumeLayout(False)
+        Me.MainTableLayoutPanel.PerformLayout()
         Me.HeaderBorderPanel.ResumeLayout(False)
         Me.HeaderPanel.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ButtonTableLayout.ResumeLayout(False)
+        Me.ButtonTableLayout.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -218,4 +294,8 @@ Partial Class AboutDialog
     Friend WithEvents HeaderPanel As LangPadSupport.DoubleBufferedPanel
     Friend WithEvents LangPadLabel As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ButtonTableLayout As TableLayoutPanel
+    Friend WithEvents GitHubButton As Button
+    Friend WithEvents PatreonButton As Button
+    Friend WithEvents WebsiteButton As Button
 End Class

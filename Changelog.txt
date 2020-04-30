@@ -19,6 +19,7 @@ Version 11.0 (June 30)
    • Use AutoUpdater.NET instead of custom autoupdater
    • PageNameDialog title changes depending on the mode (add/duplicate/rename page)
    • PageNameDialog text box is now automatically focused when opened
+   • Add Patreon, GitHub, and website links to about box
    **• Export pages to Markdown
    **• Export dictionary to Markdown
    **• Copy text as Markdown

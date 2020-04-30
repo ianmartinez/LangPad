@@ -213,6 +213,7 @@ Public Class MainForm
         SettingsToolStripMenuItem.Image = IconManager.Get("config", IconSize.Small, Res)
 
         ' Help Menu
+        PatreonToolStripMenuItem.Image = IconManager.Get("patreon", IconSize.Small, Res)
         AboutToolStripMenuItem.Image = IconManager.Get("help", IconSize.Small, Res)
 
         ' Context Menu
@@ -1305,5 +1306,9 @@ Public Class MainForm
 
     Private Sub CurrentRtb_SelectionChanged(sender As Object, e As EventArgs) Handles CurrentRtb.SelectionChanged
         UpdateLineNumber()
+    End Sub
+
+    Private Sub PatreonToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PatreonToolStripMenuItem.Click
+        GoToPatreon()
     End Sub
 End Class

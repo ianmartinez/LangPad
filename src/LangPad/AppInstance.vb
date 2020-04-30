@@ -71,4 +71,27 @@ Module AppInstance
     Public Function GetAppDisplayName() As String
         Return "LangPad " + GetVersionString()
     End Function
+
+    ''' <summary>
+    ''' Opens the Patreon link.
+    ''' </summary>
+    Public Sub GoToPatreon()
+        Process.Start("https://www.patreon.com/ianmartinez")
+    End Sub
+
+
+    ''' <summary>
+    ''' Opens the GitHub link.
+    ''' </summary>
+    Public Sub GoToGitHub()
+        Process.Start("https://github.com/ianmartinez/LangPad")
+    End Sub
+
+
+    ''' <summary>
+    ''' Opens the website link.
+    ''' </summary>
+    Public Sub GoToWebsite()
+        Process.Start("http://www.ianmtz.com/LangPad")
+    End Sub
 End Module

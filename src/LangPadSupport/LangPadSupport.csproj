@@ -1212,5 +1212,13 @@
     <EmbeddedResource Include="Resources\Icon48\zoom-out.png" />
     <EmbeddedResource Include="Resources\Icon48\zoom.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Icon48\github.png" />
+    <EmbeddedResource Include="Resources\Icon32\github.png" />
+    <EmbeddedResource Include="Resources\Icon24\github.png" />
+    <EmbeddedResource Include="Resources\Icon24\patreon.png" />
+    <EmbeddedResource Include="Resources\Icon32\patreon.png" />
+    <EmbeddedResource Include="Resources\Icon48\patreon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

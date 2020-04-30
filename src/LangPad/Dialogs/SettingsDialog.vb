@@ -17,6 +17,7 @@
         DictionaryForm.SetIcons()
         StyleDialog.SetIcons()
         CharacterEditorToolWindow.SetIcons()
+        AboutDialog.SetIcons()
 
         Close()
     End Sub

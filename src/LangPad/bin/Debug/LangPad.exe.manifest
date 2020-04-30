@@ -67,26 +67,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPad.exe" size="1087488">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPad.exe" size="1098240">
       <assemblyIdentity name="LangPad" version="11.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v5r6TrnWcsChH8t26XrLauk8smIakOH68DBkbQ62pfE=</dsig:DigestValue>
+        <dsig:DigestValue>Wik2WQ/irfKNYlQv3eKFuX4fullULa55sHSczdy8FGg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPadSupport.dll" size="1620480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPadSupport.dll" size="1635328">
       <assemblyIdentity name="LangPadSupport" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>oLGt6++dv5UUY+M0kCBnVhsq8M1CHNw2nuHixSXbJug=</dsig:DigestValue>
+        <dsig:DigestValue>oyBGgLIiGg8FKwGeyoBpaa/l0iFW9nh9timgadqPIr8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
