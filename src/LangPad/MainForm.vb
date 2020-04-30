@@ -336,48 +336,6 @@ Public Class MainForm
         My.Settings.Save()
     End Sub
 
-    Private Sub ApplyStyle(ByVal Rtb As ExtendedRichTextBox, ByVal FontStyle As FontStyle)
-        If Rtb.SelectionLength = 0 Then
-            Rtb.SelectionFont = New Font(Rtb.SelectionFont, Rtb.SelectionFont.Style Xor FontStyle)
-            Exit Sub
-        End If
-
-        SuspendLayout()
-        Dim TempRTF As New ExtendedRichTextBox With {
-            .Rtf = Rtb.SelectedRtf
-        }
-        TempRTF.SelectAll()
-
-        If TempRTF.SelectionLength > 0 Then
-            Dim Start As Integer = TempRTF.SelectionStart
-            Dim Ending As Integer = TempRTF.SelectionLength + Start - 1
-
-            For i = Start To Ending
-                TempRTF.SelectionStart = i
-                TempRTF.SelectionLength = 1
-                TempRTF.SelectionFont = New Font(TempRTF.SelectionFont, TempRTF.SelectionFont.Style Xor FontStyle)
-            Next
-
-            TempRTF.SelectionStart = Start
-            TempRTF.SelectionLength = Ending - Start + 1
-        Else
-            TempRTF.SelectionFont = New Font(TempRTF.SelectionFont, TempRTF.SelectionFont.Style Xor FontStyle)
-        End If
-
-        ' Store old selection
-        Dim OldStart = Rtb.SelectionStart
-        Dim OldLength = Rtb.SelectionLength
-        Dim OldClip As Object = Clipboard.GetDataObject()
-        TempRTF.SelectAll()
-        TempRTF.Copy()
-        Rtb.Paste()
-        ' Restore old selection
-        Rtb.Select(OldStart, OldLength)
-        Clipboard.SetDataObject(OldClip)
-        TempRTF.Dispose()
-        ResumeLayout()
-    End Sub
-
     Private Sub FindButton_Click(sender As Object, e As EventArgs) Handles FindButton.Click
         Dim SearchType As CompareMethod = CompareMethod.Text
         Dim StartPosition As Integer = InStr(1, CurrentRtb.Text, FindTextBox.Text, SearchType)
@@ -1158,19 +1116,19 @@ Public Class MainForm
     End Sub
 
     Private Sub BoldToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BoldToolStripMenuItem.Click
-        ApplyStyle(CurrentRtb, FontStyle.Bold)
+        CurrentRtb.ApplyFontStyle(FontStyle.Bold)
     End Sub
 
     Private Sub ItalicToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ItalicToolStripMenuItem.Click
-        ApplyStyle(CurrentRtb, FontStyle.Italic)
+        CurrentRtb.ApplyFontStyle(FontStyle.Italic)
     End Sub
 
     Private Sub UnderlineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnderlineToolStripMenuItem.Click
-        ApplyStyle(CurrentRtb, FontStyle.Underline)
+        CurrentRtb.ApplyFontStyle(FontStyle.Underline)
     End Sub
 
     Private Sub StrikeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StrikeToolStripMenuItem.Click
-        ApplyStyle(CurrentRtb, FontStyle.Strikeout)
+        CurrentRtb.ApplyFontStyle(FontStyle.Strikeout)
     End Sub
 
     Private Sub AlignLeftToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AlignLeftToolStripMenuItem.Click

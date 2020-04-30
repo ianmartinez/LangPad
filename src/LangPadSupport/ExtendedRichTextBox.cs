@@ -608,5 +608,71 @@ namespace LangPadSupport
             // Return last + 1 character printer
             return res.ToInt32();
         }
+
+        /// <summary>
+        /// Toggle a font style on a font.
+        /// </summary>
+        /// 
+        /// <param name="originalFont">The source font.</param>
+        /// <param name="newStyle">The new font style.</param>
+        /// 
+        /// <returns>A new font with the font style toggled with the new style.</returns>
+        public static Font ToggleFontStyle(Font originalFont, FontStyle newStyle)
+        {
+            return new Font(originalFont, originalFont.Style ^ newStyle);
+        }
+
+        /// <summary>
+        /// Apply a font style to a range of text, toggling it on or off character-by-character.
+        /// </summary>
+        /// 
+        /// <param name="fontStyle">The font style to apply.</param>
+        public void ApplyFontStyle(FontStyle fontStyle)
+        {
+            SuspendLayout();
+
+            // Use basic style application if just one character
+            if (SelectionLength == 0)
+            {
+                SelectionFont = ToggleFontStyle(SelectionFont, fontStyle);
+                return;
+            }
+
+            // Create temp RTB for more complex character operations,
+            // with the selected text as its content
+            var tempRtb = new ExtendedRichTextBox
+            {
+                Rtf = SelectedRtf
+            };
+            tempRtb.SelectAll();
+
+            // Loop through each character of temp RTB and
+            // swap the value of the font style
+            var tempStart = tempRtb.SelectionStart;
+            var tempEnd = tempRtb.SelectionStart + tempRtb.SelectionLength;
+            for (var i = tempStart; i < tempEnd; i++)
+            {
+                tempRtb.SelectionStart = i;
+                tempRtb.SelectionLength = 1;
+                tempRtb.SelectionFont = ToggleFontStyle(tempRtb.SelectionFont, fontStyle);
+            }
+
+            // Use the clipboard to move the styled text from the temp RTB to the new RTB
+            // Store old values
+            var oldClip = Clipboard.GetDataObject();
+            var oldStartPos = SelectionStart;
+            var oldStartLength = SelectionLength;
+            // Paste styled text
+            tempRtb.SelectAll();
+            tempRtb.Copy();
+            Paste();
+            // Restore old values
+            Clipboard.SetDataObject(oldClip);
+            Select(oldStartPos, oldStartLength);
+            // Dispose of temp RTB
+            tempRtb.Dispose();
+
+            ResumeLayout();
+        }
     }
 }
