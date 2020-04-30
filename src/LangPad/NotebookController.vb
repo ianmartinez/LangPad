@@ -38,7 +38,7 @@ Module NotebookController
 
         Set(value As NotebookFile)
             _Notebook = value
-            LoadNotebook(_Notebook)
+            LoadNotebook()
         End Set
     End Property
 
@@ -69,8 +69,10 @@ Module NotebookController
         End Get
     End Property
 
-
-    Private Sub LoadNotebook(Notebook As NotebookFile)
+    ''' <summary>
+    ''' Update the UI to reflect the current notebook.
+    ''' </summary>
+    Private Sub LoadNotebook()
         BeginOperation(MainForm)
 
         ' Clear controls
@@ -79,14 +81,14 @@ Module NotebookController
         MainForm.NotebookEditorPanel.PagesListBox.Items.Clear()
 
         ' Process each page into the UI
-        For Each Page As NotebookPage In Notebook.Pages
+        For Each Page As NotebookPage In CurrentNotebook.Pages
             Dim PageRtb = CreateNotebookRtb(Page.RTF)
             RtbList.Add(PageRtb)
             MainForm.NotebookEditorPanel.PagesListBox.Items.Add(Page.Title)
         Next
 
         ' Go to the first page, if it exists
-        If Notebook.Pages.Count > 0 Then
+        If CurrentNotebook.Pages.Count > 0 Then
             GoToPage(0)
         End If
 
@@ -109,6 +111,42 @@ Module NotebookController
         UpdatePageStats()
 
         EndOperation(MainForm)
+    End Sub
+
+
+    ''' <summary>
+    ''' Navigate to page in the notebook.
+    ''' </summary>
+    ''' 
+    ''' <param name="Index">The index of the page.</param>
+    Private Sub GoToPage(Index As Integer)
+        Index = If(PageInRange(Index), Index, 0)
+
+        If CurrentNotebook.Pages.Count = 0 Then ' If no pages
+            MainForm.CurrentPageContainer.Controls.Clear()
+            MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = -1
+        ElseIf PageInRange(Index) Then ' If there are pages
+            MainForm.CurrentPageContainer.Controls.Clear()
+
+            If Not UserPageSwitch Then
+                MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = Index
+            End If
+
+            If Not MovingPage Then
+                Dim OldModified = CurrentNotebook.Modified
+                SavePages()
+                UpdateLineNumber()
+                MainForm.SelectedDocument_TextChanged(Nothing, Nothing)
+                CurrentNotebook.Modified = OldModified
+            End If
+
+            MainForm.CurrentRtb = RtbList(Index)
+            MainForm.CurrentPageContainer.Controls.Add(MainForm.CurrentRtb)
+            ' Draw focus to current RTB
+            MainForm.CurrentRtb.Select()
+        End If
+
+        UpdatePageStats()
     End Sub
 
     Public Sub RefreshDictionary()
@@ -144,40 +182,6 @@ Module NotebookController
         EndOperation(CharEditWindow)
     End Sub
 
-    Private Sub GoToPage(Index As Integer)
-        Index = If(PageInRange(Index), Index, 0)
-
-        If CurrentNotebook.Pages.Count = 0 Then ' If no pages
-            MainForm.CurrentPageContainer.Controls.Clear()
-            MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = -1
-        ElseIf PageInRange(Index) Then ' If there are pages
-            MainForm.CurrentPageContainer.Controls.Clear()
-
-            If Not UserPageSwitch Then
-                MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = Index
-            End If
-
-            If Not MovingPage Then
-                Dim OldModified = CurrentNotebook.Modified
-                SavePages()
-                UpdateLineNumber()
-                MainForm.SelectedDocument_TextChanged(Nothing, Nothing)
-                CurrentNotebook.Modified = OldModified
-            End If
-
-            MainForm.CurrentRtb = RtbList(Index)
-            MainForm.CurrentPageContainer.Controls.Add(MainForm.CurrentRtb)
-            ' Draw focus to current RTB
-            MainForm.CurrentRtb.Select()
-        End If
-
-        UpdatePageStats()
-    End Sub
-
-    Private Sub GoToCurrent()
-        GoToPage(CurrentPageIndex)
-    End Sub
-
     ''' <summary>
     ''' Signal to the user that an operation is being processed.
     ''' 
@@ -200,6 +204,9 @@ Module NotebookController
         TargetForm.ResumeLayout()
     End Sub
 
+    ''' <summary>
+    ''' Update all stats for a page.
+    ''' </summary>
     Public Sub UpdatePageStats()
         MainForm.PageCountLabel.Text = "Page Count: " & CurrentNotebook.Pages.Count
         MainForm.WordWrapToolStripMenuItem.Checked = MainForm.CurrentRtb.WordWrap
@@ -207,11 +214,17 @@ Module NotebookController
         UpdateWordCount()
     End Sub
 
+    ''' <summary>
+    ''' Updates the UI to reflect the character and word count of the current page.
+    ''' </summary>
     Public Sub UpdateWordCount()
         MainForm.CharCountToolStripLabel.Text = "Character Count: " & MainForm.CurrentRtb.TextLength
         MainForm.WordCountToolStripLabel.Text = "Word Count: " & WordCount(MainForm.CurrentRtb.Text)
     End Sub
 
+    ''' <summary>
+    ''' Updates the UI to reflect the line number of the current page.
+    ''' </summary>
     Public Sub UpdateLineNumber()
         MainForm.CurrentLineToolStripLabel.Text = "Line: " & (MainForm.CurrentRtb.GetLineFromCharIndex(MainForm.CurrentRtb.SelectionStart) + 1)
     End Sub
@@ -227,6 +240,9 @@ Module NotebookController
         Return Index >= 0 And Index < CurrentNotebook.Pages.Count
     End Function
 
+    ''' <summary>
+    ''' Save the pages in the current notebook.
+    ''' </summary>
     Public Sub SavePages()
         If Not CurrentNotebook.Pages.Count = RtbList.Count Then Exit Sub ' Opening document
 
@@ -383,10 +399,14 @@ Module NotebookController
         End If
     End Sub
 
-    Private Sub ModifiedHandler()
-        CurrentNotebook.Modified = True
-    End Sub
-
+    ''' <summary>
+    ''' Create an ExtendedRichTextBox with the right settings for
+    ''' a LangPad page.
+    ''' </summary>
+    ''' 
+    ''' <param name="Rtf">The page's Rtf data.</param>
+    ''' 
+    ''' <returns>The created ExtendedRichTextBox.</returns>
     Public Function CreateNotebookRtb(Rtf As String) As ExtendedRichTextBox
         Dim NewRichTextBox As New ExtendedRichTextBox With {
             .Font = New Font("Calibri", 11, FontStyle.Regular),
@@ -398,7 +418,9 @@ Module NotebookController
             .HideSelection = False
         }
 
-        AddHandler NewRichTextBox.TextChanged, AddressOf ModifiedHandler
+        AddHandler NewRichTextBox.TextChanged, Sub()
+                                                   CurrentNotebook.Modified = True
+                                               End Sub
 
         Return NewRichTextBox
     End Function
