@@ -88,5 +88,6 @@ Module AppLoad
 
         EndOperation(MainForm)
         EndOperation(CharEditWindow)
+        SplashScreenForm.Close()
     End Sub
 End Module
