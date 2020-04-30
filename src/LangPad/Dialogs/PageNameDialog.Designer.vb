@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class NamePageDialog
+Partial Class PageNameDialog
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -95,7 +95,7 @@ Partial Class NamePageDialog
         Me.CancelDialogButton.Text = "Cancel"
         Me.CancelDialogButton.UseVisualStyleBackColor = True
         '
-        'NamePageDialog
+        'PageNameDialog
         '
         Me.AcceptButton = Me.OkDialogButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -108,7 +108,7 @@ Partial Class NamePageDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "NamePageDialog"
+        Me.Name = "PageNameDialog"
         Me.Padding = New System.Windows.Forms.Padding(9, 5, 9, 5)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent

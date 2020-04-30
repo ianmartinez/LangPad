@@ -34,7 +34,6 @@ C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.xml
 C:\Users\ianma\Documents\GitHub\Language-Pad\Language Pad\obj\Debug\LangPad.pdb
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CharacterEditorToolWindow.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.AboutDialog.resources
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.NamePageDialog.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CustomZoomDialog.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.SettingsDialog.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.StyleDialog.resources
@@ -73,3 +72,4 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\ReverseMarkdown.dl
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.xml
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.NotebookEditor.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.PageNameDialog.resources

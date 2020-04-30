@@ -248,7 +248,7 @@ Public Class MainForm
         NotebookEditorPanel.SetTheme(Theme)
         CharEditWindow.CharEdit.SetTheme(Theme)
         AboutDialog.BackColor = Theme.DialogBack
-        NamePageDialog.BackColor = Theme.DialogBack
+        PageNameDialog.BackColor = Theme.DialogBack
         CustomZoomDialog.BackColor = Theme.DialogBack
         ExportHtmlDialog.BackColor = Theme.DialogBack
         SettingsDialog.BackColor = Theme.DialogBack
@@ -891,8 +891,8 @@ Public Class MainForm
 
     Public Sub AddPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddPageToolStripMenuItem.Click
         SaveTabs()
-        NamePageDialog.Mode = PageNameMode.Add
-        NamePageDialog.ShowDialog()
+        PageNameDialog.Mode = PageNameMode.Add
+        PageNameDialog.ShowDialog()
     End Sub
 
     Public Sub RemovePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemovePageToolStripMenuItem.Click
@@ -919,9 +919,9 @@ Public Class MainForm
 
         If Not CurrentPage = -1 Then
             SaveTabs()
-            NamePageDialog.NameTextBox.Text = CurrentNotebook.Pages(CurrentPage).Title
-            NamePageDialog.Mode = PageNameMode.Duplicate
-            NamePageDialog.ShowDialog()
+            PageNameDialog.NameTextBox.Text = CurrentNotebook.Pages(CurrentPage).Title
+            PageNameDialog.Mode = PageNameMode.Duplicate
+            PageNameDialog.ShowDialog()
         End If
     End Sub
 
@@ -967,10 +967,10 @@ Public Class MainForm
     Public Sub RenamePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenamePageToolStripMenuItem.Click
         SaveTabs()
         If PageInRange(CurrentPageIndex) Then
-            NamePageDialog.Mode = PageNameMode.Rename
-            NamePageDialog.NameTextBox.Text = CurrentNotebook.Pages.Item(NotebookTabs.SelectedIndex).Title
-            NamePageDialog.CurrentPos = NotebookTabs.SelectedIndex
-            NamePageDialog.ShowDialog()
+            PageNameDialog.Mode = PageNameMode.Rename
+            PageNameDialog.NameTextBox.Text = CurrentNotebook.Pages.Item(NotebookTabs.SelectedIndex).Title
+            PageNameDialog.CurrentPos = NotebookTabs.SelectedIndex
+            PageNameDialog.ShowDialog()
         End If
     End Sub
 

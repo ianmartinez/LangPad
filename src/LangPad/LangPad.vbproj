@@ -143,10 +143,10 @@
     <Compile Include="Dialogs\AboutDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\NamePageDialog.Designer.vb">
-      <DependentUpon>NamePageDialog.vb</DependentUpon>
+    <Compile Include="Dialogs\PageNameDialog.Designer.vb">
+      <DependentUpon>PageNameDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\NamePageDialog.vb">
+    <Compile Include="Dialogs\PageNameDialog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\CustomZoomDialog.Designer.vb">
@@ -243,8 +243,8 @@
     <EmbeddedResource Include="Dialogs\AboutDialog.resx">
       <DependentUpon>AboutDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\NamePageDialog.resx">
-      <DependentUpon>NamePageDialog.vb</DependentUpon>
+    <EmbeddedResource Include="Dialogs\PageNameDialog.resx">
+      <DependentUpon>PageNameDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\CustomZoomDialog.resx">
       <DependentUpon>CustomZoomDialog.vb</DependentUpon>
