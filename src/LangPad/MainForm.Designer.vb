@@ -41,6 +41,7 @@ Partial Class MainForm
         Me.SelectAllContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeselectAllContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitLayoutPanel = New System.Windows.Forms.SplitContainer()
+        Me.PropertiesContainerPanel = New LangPadSupport.DoubleBufferedPanel()
         Me.CurrentPageContainerBorder = New LangPadSupport.DoubleBufferedPanel()
         Me.CurrentPageContainer = New LangPadSupport.DoubleBufferedPanel()
         Me.FindReplaceDialog = New LangPadSupport.DoubleBufferedPanel()
@@ -78,8 +79,6 @@ Partial Class MainForm
         Me.StylizedColorButton19 = New LangPadSupport.StylizedColorButton()
         Me.rbHighlight = New System.Windows.Forms.RadioButton()
         Me.TextColorRadio = New System.Windows.Forms.RadioButton()
-        Me.PropertiesContainerPanel = New LangPadSupport.DoubleBufferedPanel()
-        Me.NotebookEditorPanel = New LangPad.NotebookEditor()
         Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.DataToolStrip = New System.Windows.Forms.ToolStrip()
         Me.CharCountToolStripLabel = New System.Windows.Forms.ToolStripLabel()
@@ -146,6 +145,7 @@ Partial Class MainForm
         Me.toolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyAsMarkdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PastePlainToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem25 = New System.Windows.Forms.ToolStripSeparator()
@@ -239,17 +239,17 @@ Partial Class MainForm
         Me.PatreonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator27 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CopyAsMarkdownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotebookEditorPanel = New LangPad.NotebookEditor()
         Me.MainContextMenu.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
         Me.SplitLayoutPanel.Panel2.SuspendLayout()
         Me.SplitLayoutPanel.SuspendLayout()
+        Me.PropertiesContainerPanel.SuspendLayout()
         Me.CurrentPageContainerBorder.SuspendLayout()
         Me.FindReplaceDialog.SuspendLayout()
         Me.ColorPanel.SuspendLayout()
         Me.ColorLayoutPanel.SuspendLayout()
-        Me.PropertiesContainerPanel.SuspendLayout()
         Me.MainToolStripContainer.BottomToolStripPanel.SuspendLayout()
         Me.MainToolStripContainer.ContentPanel.SuspendLayout()
         Me.MainToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -357,24 +357,35 @@ Partial Class MainForm
         'SplitLayoutPanel
         '
         Me.SplitLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitLayoutPanel.FixedPanel = System.Windows.Forms.FixedPanel.Panel2
+        Me.SplitLayoutPanel.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.SplitLayoutPanel.Location = New System.Drawing.Point(0, 0)
         Me.SplitLayoutPanel.Name = "SplitLayoutPanel"
         '
         'SplitLayoutPanel.Panel1
         '
-        Me.SplitLayoutPanel.Panel1.Controls.Add(Me.CurrentPageContainerBorder)
-        Me.SplitLayoutPanel.Panel1.Controls.Add(Me.FindReplaceDialog)
-        Me.SplitLayoutPanel.Panel1.Controls.Add(Me.ColorPanel)
+        Me.SplitLayoutPanel.Panel1.Controls.Add(Me.PropertiesContainerPanel)
+        Me.SplitLayoutPanel.Panel1MinSize = 340
         '
         'SplitLayoutPanel.Panel2
         '
-        Me.SplitLayoutPanel.Panel2.Controls.Add(Me.PropertiesContainerPanel)
-        Me.SplitLayoutPanel.Panel2MinSize = 340
-        Me.SplitLayoutPanel.Size = New System.Drawing.Size(1731, 962)
-        Me.SplitLayoutPanel.SplitterDistance = 1355
+        Me.SplitLayoutPanel.Panel2.Controls.Add(Me.CurrentPageContainerBorder)
+        Me.SplitLayoutPanel.Panel2.Controls.Add(Me.FindReplaceDialog)
+        Me.SplitLayoutPanel.Panel2.Controls.Add(Me.ColorPanel)
+        Me.SplitLayoutPanel.Size = New System.Drawing.Size(1356, 840)
+        Me.SplitLayoutPanel.SplitterDistance = 340
         Me.SplitLayoutPanel.SplitterWidth = 3
         Me.SplitLayoutPanel.TabIndex = 1
+        '
+        'PropertiesContainerPanel
+        '
+        Me.PropertiesContainerPanel.AutoScroll = True
+        Me.PropertiesContainerPanel.BackColor = System.Drawing.Color.Transparent
+        Me.PropertiesContainerPanel.Controls.Add(Me.NotebookEditorPanel)
+        Me.PropertiesContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PropertiesContainerPanel.Location = New System.Drawing.Point(0, 0)
+        Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
+        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(340, 840)
+        Me.PropertiesContainerPanel.TabIndex = 13
         '
         'CurrentPageContainerBorder
         '
@@ -384,7 +395,7 @@ Partial Class MainForm
         Me.CurrentPageContainerBorder.Location = New System.Drawing.Point(0, 172)
         Me.CurrentPageContainerBorder.Name = "CurrentPageContainerBorder"
         Me.CurrentPageContainerBorder.Padding = New System.Windows.Forms.Padding(1)
-        Me.CurrentPageContainerBorder.Size = New System.Drawing.Size(1355, 790)
+        Me.CurrentPageContainerBorder.Size = New System.Drawing.Size(1013, 668)
         Me.CurrentPageContainerBorder.TabIndex = 76
         '
         'CurrentPageContainer
@@ -394,7 +405,7 @@ Partial Class MainForm
         Me.CurrentPageContainer.Location = New System.Drawing.Point(1, 1)
         Me.CurrentPageContainer.Name = "CurrentPageContainer"
         Me.CurrentPageContainer.Padding = New System.Windows.Forms.Padding(3)
-        Me.CurrentPageContainer.Size = New System.Drawing.Size(1353, 788)
+        Me.CurrentPageContainer.Size = New System.Drawing.Size(1011, 666)
         Me.CurrentPageContainer.TabIndex = 75
         '
         'FindReplaceDialog
@@ -411,7 +422,7 @@ Partial Class MainForm
         Me.FindReplaceDialog.Dock = System.Windows.Forms.DockStyle.Top
         Me.FindReplaceDialog.Location = New System.Drawing.Point(0, 118)
         Me.FindReplaceDialog.Name = "FindReplaceDialog"
-        Me.FindReplaceDialog.Size = New System.Drawing.Size(1355, 54)
+        Me.FindReplaceDialog.Size = New System.Drawing.Size(1013, 54)
         Me.FindReplaceDialog.TabIndex = 72
         Me.FindReplaceDialog.Visible = False
         '
@@ -499,7 +510,7 @@ Partial Class MainForm
         Me.ColorPanel.Location = New System.Drawing.Point(0, 0)
         Me.ColorPanel.Name = "ColorPanel"
         Me.ColorPanel.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.ColorPanel.Size = New System.Drawing.Size(1355, 118)
+        Me.ColorPanel.Size = New System.Drawing.Size(1013, 118)
         Me.ColorPanel.TabIndex = 74
         Me.ColorPanel.Visible = False
         '
@@ -535,7 +546,7 @@ Partial Class MainForm
         Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.ColorLayoutPanel.Name = "ColorLayoutPanel"
         Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(6)
-        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1355, 68)
+        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1013, 68)
         Me.ColorLayoutPanel.TabIndex = 70
         '
         'TransparentColorButton
@@ -914,26 +925,6 @@ Partial Class MainForm
         Me.TextColorRadio.Text = "Text"
         Me.TextColorRadio.UseVisualStyleBackColor = False
         '
-        'PropertiesContainerPanel
-        '
-        Me.PropertiesContainerPanel.AutoScroll = True
-        Me.PropertiesContainerPanel.BackColor = System.Drawing.Color.Transparent
-        Me.PropertiesContainerPanel.Controls.Add(Me.NotebookEditorPanel)
-        Me.PropertiesContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PropertiesContainerPanel.Location = New System.Drawing.Point(0, 0)
-        Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
-        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(373, 962)
-        Me.PropertiesContainerPanel.TabIndex = 13
-        '
-        'NotebookEditorPanel
-        '
-        Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
-        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
-        Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
-        Me.NotebookEditorPanel.Size = New System.Drawing.Size(373, 962)
-        Me.NotebookEditorPanel.TabIndex = 0
-        '
         'MainToolStripContainer
         '
         '
@@ -944,7 +935,7 @@ Partial Class MainForm
         'MainToolStripContainer.ContentPanel
         '
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.SplitLayoutPanel)
-        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1731, 962)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1356, 840)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'MainToolStripContainer.LeftToolStripPanel
@@ -954,7 +945,7 @@ Partial Class MainForm
         '
         'MainToolStripContainer.RightToolStripPanel
         '
-        Me.MainToolStripContainer.Size = New System.Drawing.Size(1731, 1033)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(1356, 911)
         Me.MainToolStripContainer.TabIndex = 74
         '
         'MainToolStripContainer.TopToolStripPanel
@@ -969,7 +960,7 @@ Partial Class MainForm
         Me.DataToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel, Me.ToolStripSeparator26, Me.CurrentLineToolStripLabel, Me.ToolStripSeparator11, Me.PageCountLabel, Me.ToolStripSeparator12, Me.ToolStripLabel1, Me.ThemeCombo})
         Me.DataToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DataToolStrip.Name = "DataToolStrip"
-        Me.DataToolStrip.Size = New System.Drawing.Size(1731, 30)
+        Me.DataToolStrip.Size = New System.Drawing.Size(1356, 30)
         Me.DataToolStrip.Stretch = True
         Me.DataToolStrip.TabIndex = 2
         '
@@ -1043,7 +1034,7 @@ Partial Class MainForm
         Me.MainToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.MainToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.MainToolStrip.Name = "MainToolStrip"
-        Me.MainToolStrip.Size = New System.Drawing.Size(1731, 41)
+        Me.MainToolStrip.Size = New System.Drawing.Size(1356, 41)
         Me.MainToolStrip.Stretch = True
         Me.MainToolStrip.TabIndex = 0
         '
@@ -1305,7 +1296,7 @@ Partial Class MainForm
         Me.MainMenu.Location = New System.Drawing.Point(0, 0)
         Me.MainMenu.Name = "MainMenu"
         Me.MainMenu.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MainMenu.Size = New System.Drawing.Size(1731, 33)
+        Me.MainMenu.Size = New System.Drawing.Size(1356, 33)
         Me.MainMenu.TabIndex = 75
         Me.MainMenu.Text = "MenuStrip1"
         '
@@ -1465,6 +1456,16 @@ Partial Class MainForm
         Me.CopyToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
         Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(378, 34)
         Me.CopyToolStripMenuItem.Text = "Copy"
+        '
+        'CopyAsMarkdownToolStripMenuItem
+        '
+        Me.CopyAsMarkdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.CopyAsMarkdownToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.CopyAsMarkdownToolStripMenuItem.Name = "CopyAsMarkdownToolStripMenuItem"
+        Me.CopyAsMarkdownToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.CopyAsMarkdownToolStripMenuItem.Size = New System.Drawing.Size(378, 34)
+        Me.CopyAsMarkdownToolStripMenuItem.Text = "Copy as Markdown"
         '
         'PasteToolStripMenuItem
         '
@@ -2133,21 +2134,20 @@ Partial Class MainForm
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(282, 34)
         Me.AboutToolStripMenuItem.Text = "About..."
         '
-        'CopyAsMarkdownToolStripMenuItem
+        'NotebookEditorPanel
         '
-        Me.CopyAsMarkdownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.CopyAsMarkdownToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.CopyAsMarkdownToolStripMenuItem.Name = "CopyAsMarkdownToolStripMenuItem"
-        Me.CopyAsMarkdownToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopyAsMarkdownToolStripMenuItem.Size = New System.Drawing.Size(378, 34)
-        Me.CopyAsMarkdownToolStripMenuItem.Text = "Copy as Markdown"
+        Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
+        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
+        Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
+        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 840)
+        Me.NotebookEditorPanel.TabIndex = 0
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1731, 1066)
+        Me.ClientSize = New System.Drawing.Size(1356, 944)
         Me.Controls.Add(Me.MainToolStripContainer)
         Me.Controls.Add(Me.MainMenu)
         Me.DoubleBuffered = True
@@ -2160,13 +2160,13 @@ Partial Class MainForm
         Me.SplitLayoutPanel.Panel2.ResumeLayout(False)
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitLayoutPanel.ResumeLayout(False)
+        Me.PropertiesContainerPanel.ResumeLayout(False)
         Me.CurrentPageContainerBorder.ResumeLayout(False)
         Me.FindReplaceDialog.ResumeLayout(False)
         Me.FindReplaceDialog.PerformLayout()
         Me.ColorPanel.ResumeLayout(False)
         Me.ColorPanel.PerformLayout()
         Me.ColorLayoutPanel.ResumeLayout(False)
-        Me.PropertiesContainerPanel.ResumeLayout(False)
         Me.MainToolStripContainer.BottomToolStripPanel.ResumeLayout(False)
         Me.MainToolStripContainer.BottomToolStripPanel.PerformLayout()
         Me.MainToolStripContainer.ContentPanel.ResumeLayout(False)

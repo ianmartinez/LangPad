@@ -64,12 +64,11 @@ Public Class MainForm
         End If
 
         SetTitle()
-        SplitLayoutPanel.Panel2Collapsed = False
+        SplitLayoutPanel.Panel1Collapsed = False
         SelectedDocument_TextChanged(Me, e)
         KeyPreview = True
 
-        'SplitLayoutPanel.Panel2MinSize = 275
-        SplitLayoutPanel.SplitterDistance = (SplitLayoutPanel.Width - NotebookEditorPanel.MinimumSize.Width) - 50
+        SplitLayoutPanel.SplitterDistance = NotebookEditorPanel.MinimumSize.Width
 
         ' Add indent options
         For i As Integer = 0 To 100
@@ -1009,7 +1008,7 @@ Public Class MainForm
     End Sub
 
     Private Sub ToggleSidebarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleSidebarToolStripMenuItem.Click
-        SplitLayoutPanel.Panel2Collapsed = SplitLayoutPanel.Panel2Collapsed Xor True
+        SplitLayoutPanel.Panel1Collapsed = SplitLayoutPanel.Panel1Collapsed Xor True
     End Sub
 
     Private Sub ToggleToolbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleToolbarToolStripMenuItem.Click
@@ -1021,7 +1020,7 @@ Public Class MainForm
     End Sub
 
     Private Sub FullModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FullModeToolStripMenuItem.Click
-        SplitLayoutPanel.Panel2Collapsed = False
+        SplitLayoutPanel.Panel1Collapsed = False
         MainToolStripContainer.TopToolStripPanelVisible = True
         MainToolStripContainer.BottomToolStripPanelVisible = True
         MainToolStripContainer.LeftToolStripPanelVisible = True
@@ -1029,7 +1028,7 @@ Public Class MainForm
     End Sub
 
     Private Sub MinimalModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimalModeToolStripMenuItem.Click
-        SplitLayoutPanel.Panel2Collapsed = True
+        SplitLayoutPanel.Panel1Collapsed = True
         MainToolStripContainer.TopToolStripPanelVisible = False
         MainToolStripContainer.BottomToolStripPanelVisible = False
         MainToolStripContainer.LeftToolStripPanelVisible = False
