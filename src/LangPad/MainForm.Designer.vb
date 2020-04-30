@@ -369,7 +369,7 @@ Partial Class MainForm
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.PropertiesContainerPanel)
         Me.SplitLayoutPanel.Panel2MinSize = 340
         Me.SplitLayoutPanel.Size = New System.Drawing.Size(1731, 962)
-        Me.SplitLayoutPanel.SplitterDistance = 1348
+        Me.SplitLayoutPanel.SplitterDistance = 1349
         Me.SplitLayoutPanel.SplitterWidth = 3
         Me.SplitLayoutPanel.TabIndex = 1
         '
@@ -379,7 +379,7 @@ Partial Class MainForm
         Me.NotebookTabs.Location = New System.Drawing.Point(0, 172)
         Me.NotebookTabs.Name = "NotebookTabs"
         Me.NotebookTabs.SelectedIndex = 0
-        Me.NotebookTabs.Size = New System.Drawing.Size(1348, 790)
+        Me.NotebookTabs.Size = New System.Drawing.Size(1349, 790)
         Me.NotebookTabs.TabIndex = 73
         '
         'FindReplaceDialog
@@ -396,7 +396,7 @@ Partial Class MainForm
         Me.FindReplaceDialog.Dock = System.Windows.Forms.DockStyle.Top
         Me.FindReplaceDialog.Location = New System.Drawing.Point(0, 118)
         Me.FindReplaceDialog.Name = "FindReplaceDialog"
-        Me.FindReplaceDialog.Size = New System.Drawing.Size(1348, 54)
+        Me.FindReplaceDialog.Size = New System.Drawing.Size(1349, 54)
         Me.FindReplaceDialog.TabIndex = 72
         Me.FindReplaceDialog.Visible = False
         '
@@ -484,7 +484,7 @@ Partial Class MainForm
         Me.ColorPanel.Location = New System.Drawing.Point(0, 0)
         Me.ColorPanel.Name = "ColorPanel"
         Me.ColorPanel.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.ColorPanel.Size = New System.Drawing.Size(1348, 118)
+        Me.ColorPanel.Size = New System.Drawing.Size(1349, 118)
         Me.ColorPanel.TabIndex = 74
         Me.ColorPanel.Visible = False
         '
@@ -520,7 +520,7 @@ Partial Class MainForm
         Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.ColorLayoutPanel.Name = "ColorLayoutPanel"
         Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(6)
-        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1348, 68)
+        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1349, 68)
         Me.ColorLayoutPanel.TabIndex = 70
         '
         'TransparentColorButton
@@ -907,7 +907,7 @@ Partial Class MainForm
         Me.PropertiesContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PropertiesContainerPanel.Location = New System.Drawing.Point(0, 0)
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
-        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(380, 962)
+        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(379, 962)
         Me.PropertiesContainerPanel.TabIndex = 13
         '
         'NotebookEditorPanel
@@ -916,7 +916,7 @@ Partial Class MainForm
         Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
         Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
         Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
-        Me.NotebookEditorPanel.Size = New System.Drawing.Size(380, 962)
+        Me.NotebookEditorPanel.Size = New System.Drawing.Size(379, 962)
         Me.NotebookEditorPanel.TabIndex = 0
         '
         'MainToolStripContainer
@@ -1399,6 +1399,7 @@ Partial Class MainForm
         '
         'QuitToolStripMenuItem
         '
+        Me.QuitToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem"
         Me.QuitToolStripMenuItem.Size = New System.Drawing.Size(332, 34)
         Me.QuitToolStripMenuItem.Text = "Quit"
@@ -1556,12 +1557,14 @@ Partial Class MainForm
         '
         'FullModeToolStripMenuItem
         '
+        Me.FullModeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.FullModeToolStripMenuItem.Name = "FullModeToolStripMenuItem"
         Me.FullModeToolStripMenuItem.Size = New System.Drawing.Size(335, 34)
         Me.FullModeToolStripMenuItem.Text = "Full Mode"
         '
         'MinimalModeToolStripMenuItem
         '
+        Me.MinimalModeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.MinimalModeToolStripMenuItem.Name = "MinimalModeToolStripMenuItem"
         Me.MinimalModeToolStripMenuItem.Size = New System.Drawing.Size(335, 34)
         Me.MinimalModeToolStripMenuItem.Text = "Minimal Mode"
@@ -1625,6 +1628,7 @@ Partial Class MainForm
         '
         'DuplicateAndNameToolStripMenuItem
         '
+        Me.DuplicateAndNameToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.DuplicateAndNameToolStripMenuItem.Name = "DuplicateAndNameToolStripMenuItem"
         Me.DuplicateAndNameToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
@@ -1674,6 +1678,7 @@ Partial Class MainForm
         '
         'PreviousPageToolStripMenuItem
         '
+        Me.PreviousPageToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PreviousPageToolStripMenuItem.Name = "PreviousPageToolStripMenuItem"
         Me.PreviousPageToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.J), System.Windows.Forms.Keys)
         Me.PreviousPageToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
@@ -1681,6 +1686,7 @@ Partial Class MainForm
         '
         'NextPageToolStripMenuItem
         '
+        Me.NextPageToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.NextPageToolStripMenuItem.Name = "NextPageToolStripMenuItem"
         Me.NextPageToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.K), System.Windows.Forms.Keys)
         Me.NextPageToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
@@ -1721,6 +1727,7 @@ Partial Class MainForm
         '
         'BroadTranscriptionToolStripMenuItem
         '
+        Me.BroadTranscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.BroadTranscriptionToolStripMenuItem.Name = "BroadTranscriptionToolStripMenuItem"
         Me.BroadTranscriptionToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
@@ -1729,6 +1736,7 @@ Partial Class MainForm
         '
         'NarrowTranscriptionToolStripMenuItem
         '
+        Me.NarrowTranscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.NarrowTranscriptionToolStripMenuItem.Name = "NarrowTranscriptionToolStripMenuItem"
         Me.NarrowTranscriptionToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
@@ -1737,6 +1745,7 @@ Partial Class MainForm
         '
         'RemoveBracketsToolStripMenuItem
         '
+        Me.RemoveBracketsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RemoveBracketsToolStripMenuItem.Name = "RemoveBracketsToolStripMenuItem"
         Me.RemoveBracketsToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
@@ -1852,6 +1861,7 @@ Partial Class MainForm
         '
         'FontToolStripMenuItem
         '
+        Me.FontToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
         Me.FontToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
@@ -1865,6 +1875,7 @@ Partial Class MainForm
         '
         'AlignLeftToolStripMenuItem
         '
+        Me.AlignLeftToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.AlignLeftToolStripMenuItem.Name = "AlignLeftToolStripMenuItem"
         Me.AlignLeftToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
         Me.AlignLeftToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
@@ -1872,6 +1883,7 @@ Partial Class MainForm
         '
         'AlignCenterToolStripMenuItem
         '
+        Me.AlignCenterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.AlignCenterToolStripMenuItem.Name = "AlignCenterToolStripMenuItem"
         Me.AlignCenterToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
         Me.AlignCenterToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
@@ -1879,6 +1891,7 @@ Partial Class MainForm
         '
         'AlignRightToolStripMenuItem
         '
+        Me.AlignRightToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.AlignRightToolStripMenuItem.Name = "AlignRightToolStripMenuItem"
         Me.AlignRightToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
         Me.AlignRightToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
@@ -1891,6 +1904,7 @@ Partial Class MainForm
         '
         'BoldToolStripMenuItem
         '
+        Me.BoldToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.BoldToolStripMenuItem.Name = "BoldToolStripMenuItem"
         Me.BoldToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
         Me.BoldToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
@@ -1898,6 +1912,7 @@ Partial Class MainForm
         '
         'ItalicToolStripMenuItem
         '
+        Me.ItalicToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ItalicToolStripMenuItem.Name = "ItalicToolStripMenuItem"
         Me.ItalicToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.I), System.Windows.Forms.Keys)
         Me.ItalicToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
@@ -1905,6 +1920,7 @@ Partial Class MainForm
         '
         'UnderlineToolStripMenuItem
         '
+        Me.UnderlineToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.UnderlineToolStripMenuItem.Name = "UnderlineToolStripMenuItem"
         Me.UnderlineToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.U), System.Windows.Forms.Keys)
         Me.UnderlineToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
@@ -1912,6 +1928,7 @@ Partial Class MainForm
         '
         'StrikeToolStripMenuItem
         '
+        Me.StrikeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.StrikeToolStripMenuItem.Name = "StrikeToolStripMenuItem"
         Me.StrikeToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
         Me.StrikeToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
@@ -1924,12 +1941,14 @@ Partial Class MainForm
         '
         'IncreaseIndentToolStripMenuItem
         '
+        Me.IncreaseIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.IncreaseIndentToolStripMenuItem.Name = "IncreaseIndentToolStripMenuItem"
         Me.IncreaseIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.IncreaseIndentToolStripMenuItem.Text = "Increase Indent"
         '
         'DecreaseIndentToolStripMenuItem
         '
+        Me.DecreaseIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.DecreaseIndentToolStripMenuItem.Name = "DecreaseIndentToolStripMenuItem"
         Me.DecreaseIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.DecreaseIndentToolStripMenuItem.Text = "Decrease Indent"
@@ -1937,6 +1956,7 @@ Partial Class MainForm
         '
         'ResetIndentToolStripMenuItem
         '
+        Me.ResetIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ResetIndentToolStripMenuItem.Name = "ResetIndentToolStripMenuItem"
         Me.ResetIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.ResetIndentToolStripMenuItem.Text = "Reset Indent"
@@ -1948,6 +1968,7 @@ Partial Class MainForm
         '
         'IncreaseBulletIndentToolStripMenuItem
         '
+        Me.IncreaseBulletIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.IncreaseBulletIndentToolStripMenuItem.Name = "IncreaseBulletIndentToolStripMenuItem"
         Me.IncreaseBulletIndentToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Tab), System.Windows.Forms.Keys)
         Me.IncreaseBulletIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
@@ -1955,6 +1976,7 @@ Partial Class MainForm
         '
         'DecreaseBulletIndentToolStripMenuItem
         '
+        Me.DecreaseBulletIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.DecreaseBulletIndentToolStripMenuItem.Name = "DecreaseBulletIndentToolStripMenuItem"
         Me.DecreaseBulletIndentToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.Tab), System.Windows.Forms.Keys)
@@ -1964,6 +1986,7 @@ Partial Class MainForm
         '
         'ResetBulletIndentToolStripMenuItem
         '
+        Me.ResetBulletIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ResetBulletIndentToolStripMenuItem.Name = "ResetBulletIndentToolStripMenuItem"
         Me.ResetBulletIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.ResetBulletIndentToolStripMenuItem.Text = "Reset Bullet Indent"
@@ -1975,6 +1998,7 @@ Partial Class MainForm
         '
         'IncreaseHangingIndentToolStripMenuItem
         '
+        Me.IncreaseHangingIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.IncreaseHangingIndentToolStripMenuItem.Name = "IncreaseHangingIndentToolStripMenuItem"
         Me.IncreaseHangingIndentToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
         Me.IncreaseHangingIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
@@ -1982,6 +2006,7 @@ Partial Class MainForm
         '
         'DecreaseHangingIndentToolStripMenuItem
         '
+        Me.DecreaseHangingIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.DecreaseHangingIndentToolStripMenuItem.Name = "DecreaseHangingIndentToolStripMenuItem"
         Me.DecreaseHangingIndentToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
@@ -1990,6 +2015,7 @@ Partial Class MainForm
         '
         'ResetHangingIndentToolStripMenuItem
         '
+        Me.ResetHangingIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ResetHangingIndentToolStripMenuItem.Name = "ResetHangingIndentToolStripMenuItem"
         Me.ResetHangingIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.ResetHangingIndentToolStripMenuItem.Text = "Reset Hanging Indent"
@@ -2033,6 +2059,7 @@ Partial Class MainForm
         '
         'InsertTabToolStripMenuItem
         '
+        Me.InsertTabToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.InsertTabToolStripMenuItem.Name = "InsertTabToolStripMenuItem"
         Me.InsertTabToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D1), System.Windows.Forms.Keys)
         Me.InsertTabToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
@@ -2049,19 +2076,19 @@ Partial Class MainForm
         '
         Me.UpdateToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
-        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(190, 34)
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
         Me.UpdateToolStripMenuItem.Text = "Update..."
         '
         'ToolStripMenuItem23
         '
         Me.ToolStripMenuItem23.Name = "ToolStripMenuItem23"
-        Me.ToolStripMenuItem23.Size = New System.Drawing.Size(187, 6)
+        Me.ToolStripMenuItem23.Size = New System.Drawing.Size(267, 6)
         '
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(190, 34)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
         Me.SettingsToolStripMenuItem.Text = "Settings..."
         '
         'HelpToolStripMenuItem
@@ -2073,6 +2100,7 @@ Partial Class MainForm
         '
         'PatreonToolStripMenuItem
         '
+        Me.PatreonToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PatreonToolStripMenuItem.Name = "PatreonToolStripMenuItem"
         Me.PatreonToolStripMenuItem.Size = New System.Drawing.Size(282, 34)
         Me.PatreonToolStripMenuItem.Text = "Support on Patreon..."
