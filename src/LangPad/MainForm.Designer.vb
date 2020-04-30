@@ -392,7 +392,7 @@ Partial Class MainForm
         Me.CurrentPageContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CurrentPageContainer.Location = New System.Drawing.Point(1, 1)
         Me.CurrentPageContainer.Name = "CurrentPageContainer"
-        Me.CurrentPageContainer.Padding = New System.Windows.Forms.Padding(2)
+        Me.CurrentPageContainer.Padding = New System.Windows.Forms.Padding(3)
         Me.CurrentPageContainer.Size = New System.Drawing.Size(1353, 788)
         Me.CurrentPageContainer.TabIndex = 75
         '
