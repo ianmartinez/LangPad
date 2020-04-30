@@ -51,8 +51,8 @@ Module DictionaryFileAccess
 
         For i = 0 To Dictionary.Words.Count - 1
             Dim CurrentWord As DictionaryWord = Dictionary.Words.Item(i)
-            Dim Value As String = String.Format("{0}|{1}|{2}|{3}", ToCompatibleString(CurrentWord.Word), ToCompatibleString(CurrentWord.Pronunciation),
-                                                ToCompatibleString(CurrentWord.Definition), ToCompatibleString(CurrentWord.Notes))
+            Dim Value As String = String.Format("{0}|{1}|{2}|{3}", ToCompatibleStr(CurrentWord.Word), ToCompatibleStr(CurrentWord.Pronunciation),
+                                                ToCompatibleStr(CurrentWord.Definition), ToCompatibleStr(CurrentWord.Notes))
             DictionaryString.Add(New ZiaLine(LineType.KeyValue, "Word " & i, Value))
         Next
 
@@ -66,10 +66,10 @@ Module DictionaryFileAccess
         For Each CurrentLine As KeyValuePair(Of String, String) In LineList
             If Not CurrentLine.Key.StartsWith("Word") Or CurrentLine.Value.Split("|").Count <> 4 Then Continue For
             Dim NewWord As New DictionaryWord With {
-                .Word = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(0)),
-                .Pronunciation = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(1)),
-                .Definition = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(2)),
-                .Notes = FromCompatibleString(CurrentLine.Value.Split("|").GetValue(3))
+                .Word = FromCompatibleStr(CurrentLine.Value.Split("|").GetValue(0)),
+                .Pronunciation = FromCompatibleStr(CurrentLine.Value.Split("|").GetValue(1)),
+                .Definition = FromCompatibleStr(CurrentLine.Value.Split("|").GetValue(2)),
+                .Notes = FromCompatibleStr(CurrentLine.Value.Split("|").GetValue(3))
             }
 
             NewDictionary.Words.Add(NewWord)

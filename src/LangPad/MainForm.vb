@@ -17,6 +17,7 @@ Public Class MainForm
     Public VerticalMenuGradient As Boolean = False
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadApplication()
         Text = GetAppDisplayName()
         Title = Text
         MainContextMenu.ImageScalingSize = New Size(16, 16)

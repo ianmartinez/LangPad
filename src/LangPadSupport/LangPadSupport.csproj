@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoUpdate.cs" />
     <Compile Include="Characters.cs" />
     <Compile Include="DoubleBufferedFlowLayoutPanel.cs">
       <SubType>Component</SubType>

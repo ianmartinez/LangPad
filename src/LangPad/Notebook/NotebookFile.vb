@@ -86,7 +86,7 @@ Module NotebookFileAccess
 
         For i = 0 To Notebook.Pages.Count - 1
             Dim Page = Notebook.Pages.Item(i)
-            DataFile.Add(New ZiaLine(LineType.KeyValue, "Page" & i, ToCompatibleString(Page.Title)))
+            DataFile.Add(New ZiaLine(LineType.KeyValue, "Page" & i, ToCompatibleStr(Page.Title)))
 
             Dim Writer As StreamWriter
             Writer = New StreamWriter(PagesFolder & i & ".rtf")

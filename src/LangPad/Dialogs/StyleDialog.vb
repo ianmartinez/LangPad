@@ -64,15 +64,16 @@ Public Class StyleDialog
     Private Sub OpenButton_Click(sender As Object, e As EventArgs) Handles OpenButton.Click
         If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
             Dim FileData As String = File.ReadAllText(OpenDialog.FileName)
+            Dim FileResults = Read(FileData)
 
-            StyleFont = FromCompatibleFont(GetValue(FileData, "Font"))
-            StyleColor = FromCompatibleColor(GetValue(FileData, "Color"))
-            StyleHighlight = FromCompatibleColor(GetValue(FileData, "Highlight"))
-            StyleCharOffset = GetValue(FileData, "CharOffset")
-            StyleAlignment = CType([Enum].Parse(GetType(HorizontalAlignment), GetValue(FileData, "Align")), HorizontalAlignment)
-            StyleIndent = GetValue(FileData, "Indent")
-            StyleHangingIndent = GetValue(FileData, "HangingIndent")
-            StyleBulletIndent = GetValue(FileData, "BulletIndentIndent")
+            StyleFont = FromCompatibleFont(Search(FileResults, "Font"))
+            StyleColor = FromCompatibleColor(Search(FileResults, "Color"))
+            StyleHighlight = FromCompatibleColor(Search(FileResults, "Highlight"))
+            StyleCharOffset = Search(FileResults, "CharOffset")
+            StyleAlignment = CType([Enum].Parse(GetType(HorizontalAlignment), Search(FileResults, "Align")), HorizontalAlignment)
+            StyleIndent = Search(FileResults, "Indent")
+            StyleHangingIndent = Search(FileResults, "HangingIndent")
+            StyleBulletIndent = Search(FileResults, "BulletIndentIndent")
 
             ColorButton.Color = StyleColor
             HighlightButton.Color = StyleHighlight

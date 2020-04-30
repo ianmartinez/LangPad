@@ -8,7 +8,7 @@ Module AppInstance
     ''' <summary>
     ''' The character editor tools window used between windows.
     ''' </summary>
-    Public CharEditWindow As CharacterEditorToolWindow
+    Public CharEditWindow As CharacterEditorToolWindow = New CharacterEditorToolWindow()
 
     ''' <summary>
     ''' A list of accent+base character combinations to replace with
