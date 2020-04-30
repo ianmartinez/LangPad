@@ -125,8 +125,10 @@ Module NotebookController
         If CurrentNotebook.Pages.Count = 0 Then ' If no pages
             MainForm.CurrentPageContainer.Controls.Clear()
             MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = -1
+            MainForm.CurrentPageContainer.BackColor = SystemColors.Control
         ElseIf PageInRange(Index) Then ' If there are pages
             MainForm.CurrentPageContainer.Controls.Clear()
+            MainForm.CurrentPageContainer.BackColor = SystemColors.Window
 
             If Not UserPageSwitch Then
                 MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = Index
