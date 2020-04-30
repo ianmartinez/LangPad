@@ -364,10 +364,15 @@ Public Class MainForm
             TempRTF.SelectionFont = New Font(TempRTF.SelectionFont, TempRTF.SelectionFont.Style Xor FontStyle)
         End If
 
+        ' Store old selection
+        Dim OldStart = Rtb.SelectionStart
+        Dim OldLength = Rtb.SelectionLength
         Dim OldClip As Object = Clipboard.GetDataObject()
         TempRTF.SelectAll()
         TempRTF.Copy()
         Rtb.Paste()
+        ' Restore old selection
+        Rtb.Select(OldStart, OldLength)
         Clipboard.SetDataObject(OldClip)
         TempRTF.Dispose()
         ResumeLayout()
