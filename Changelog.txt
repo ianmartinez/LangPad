@@ -17,6 +17,8 @@ Version 11.0 (June 30)
    • The page title of HTML documents now matches their name in LangPad
    • Now has a dedicated installer
    • Use AutoUpdater.NET instead of custom autoupdater
+   • PageNameDialog title changes depending on the mode (add/duplicate/rename page)
+   • PageNameDialog text box is now automatically focused when opened
    **• Export pages to Markdown
    **• Export dictionary to Markdown
    **• Copy text as Markdown

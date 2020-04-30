@@ -43,6 +43,8 @@ Public Class PageNameDialog
     End Sub
 
     Private Sub PageNameDialog_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+        NameTextBox.Select()
+
         Select Case Mode
             Case PageNameMode.Add
                 Text = "Add Page"
