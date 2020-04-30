@@ -80,12 +80,7 @@ Module NotebookController
 
         ' Process each page into the UI
         For Each Page As NotebookPage In Notebook.Pages
-            Dim PageTab As New TabPage With {
-                .Text = Page.Title
-            }
-
             Dim PageRtb = CreateNotebookRtb(Page.RTF)
-            PageTab.Controls.Add(PageRtb)
             RtbList.Add(PageRtb)
             MainForm.NotebookEditorPanel.PagesListBox.Items.Add(Page.Title)
         Next

@@ -32,11 +32,35 @@ namespace LangPadSupport
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, IntPtr lParam);
 
-        private Rectangle contentRectangle;
+        [DllImport("USER32")]
+        private static extern IntPtr SendMessage(IntPtr hWnd, int msg, IntPtr wp, IntPtr lp);
+
+        [DllImport("gdiplus.dll", SetLastError = true)]
+        private static extern uint GdipEmfToWmfBits(IntPtr hEmf, uint uBufferSize, byte[] bBuffer, int iMappingMode, EmfToWmfBitsFlags flags);
+
+
         // Convert the unit that is used by the .NET framework (1/100 inch) 
         // and the unit that is used by Win32 API calls (twips 1/1440 inch)
         private const double AnInch = 14.4;
         private const int WM_USER = 0x400;
+        // Allows the x-coordinates and y-coordinates of the metafile to be adjusted
+        // independently
+        private const int MM_ANISOTROPIC = 8;
+        // Represents an unknown font family
+        private const string FF_UNKNOWN = "UNKNOWN";
+        // The number of hundredths of millimeters (0.01 mm) in an inch
+        // For more information, see GetImagePrefix() method.
+        private const int HMM_PER_INCH = 2540;
+        // The number of twips in an inch
+        // For more information, see GetImagePrefix() method.
+        private const int TWIPS_PER_INCH = 1440;
+        // RTF document elements
+        private const string RTF_HEADER = @"{\rtf1\ansi\ansicpg1252\deff0\deflang1033";
+        private const string RTF_DOCUMENT_PRE = @"\viewkind4\uc1\pard\cf1\f0\fs20";
+        private const string RTF_DOCUMENT_POST = @"\cf0\fs17}";
+        private const string RTF_IMAGE_POST = "}";
+
+        private const int EM_FORMATRANGE = WM_USER + 57;
 
         [StructLayout(LayoutKind.Sequential)]
         private struct RECT
@@ -64,72 +88,9 @@ namespace LangPadSupport
             public CHARRANGE chrg;         // Range of text to draw (see above declaration)
         }
 
-        private const int EM_FORMATRANGE = WM_USER + 57;
-        public Rectangle GetContentSize()
-        {
-            return contentRectangle;
-        }
-
-        [DllImport("USER32")]
-        private static extern IntPtr SendMessage(IntPtr hWnd, int msg, IntPtr wp, IntPtr lp);
-
-        // Render the contents of the RichTextBox for printing
-        // Return the last character printed + 1 (printing start from this point for next page)
-        public int Print(int charFrom, int charTo, PrintPageEventArgs e)
-        {
-
-            // Mark starting and ending character 
-            CHARRANGE cRange;
-            cRange.cpMin = charFrom;
-            cRange.cpMax = charTo;
-
-            // Calculate the area to render and print
-            RECT rectToPrint;
-            rectToPrint.Top = (int)(e.MarginBounds.Top * AnInch);
-            rectToPrint.Bottom = (int)(e.MarginBounds.Bottom * AnInch);
-            rectToPrint.Left = (int)(e.MarginBounds.Left * AnInch);
-            rectToPrint.Right = (int)(e.MarginBounds.Right * AnInch);
-
-            // Calculate the size of the page
-            RECT rectPage;
-            rectPage.Top = (int)(e.PageBounds.Top * AnInch);
-            rectPage.Bottom = (int)(e.PageBounds.Bottom * AnInch);
-            rectPage.Left = (int)(e.PageBounds.Left * AnInch);
-            rectPage.Right = (int)(e.PageBounds.Right * AnInch);
-
-            IntPtr hdc = e.Graphics.GetHdc();
-
-            FORMATRANGE fmtRange;
-            fmtRange.chrg = cRange;                 // Indicate character from to character to 
-            fmtRange.hdc = hdc;                     // Use the same DC for measuring and rendering
-            fmtRange.hdcTarget = hdc;               // Point at printer hDC
-            fmtRange.rc = rectToPrint;              // Indicate the area on page to print
-            fmtRange.rcPage = rectPage;             // Indicate whole size of page
-
-            IntPtr res = IntPtr.Zero;
-
-            IntPtr wparam = IntPtr.Zero;
-            wparam = new IntPtr(1);
-
-            // Move the pointer to the FORMATRANGE structure in memory
-            IntPtr lparam = IntPtr.Zero;
-            lparam = Marshal.AllocCoTaskMem(Marshal.SizeOf(fmtRange));
-            Marshal.StructureToPtr(fmtRange, lparam, false);
-
-            // Send the rendered data for printing 
-            res = SendMessage(Handle, EM_FORMATRANGE, wparam, lparam);
-
-            // Free the block of memory allocated
-            Marshal.FreeCoTaskMem(lparam);
-
-            // Release the device context handle obtained by a previous call
-            e.Graphics.ReleaseHdc(hdc);
-
-            // Return last + 1 character printer
-            return res.ToInt32();
-        }
-
-        // Enum for possible RTF colors
+        /// <summary>
+        /// Enum for possible RTF colors.
+        /// </summary>
         public enum RtfColor
         {
             Black,
@@ -154,7 +115,6 @@ namespace LangPadSupport
         // Metafile.EmfToWmfBits().
         private enum EmfToWmfBitsFlags
         {
-
             // Use the default conversion
             EmfToWmfBitsFlagsDefault = 0x0,
 
@@ -170,8 +130,9 @@ namespace LangPadSupport
             EmfToWmfBitsFlagsNoXORClip = 0x4
         }
 
-
-        // Definitions for colors in an RTF document
+        /// <summary>
+        /// Definitions for colors in an RTF document.
+        /// </summary>
         private struct RtfColorDef
         {
             public const string Black = @"\red0\green0\blue0";
@@ -192,7 +153,9 @@ namespace LangPadSupport
             public const string White = @"\red255\green255\blue255";
         }
 
-        // Control words for RTF font families
+        /// <summary>
+        /// Control words for RTF font families.
+        /// </summary>
         private struct RtfFontFamilyDef
         {
             public const string Unknown = @"\fnil";
@@ -204,33 +167,6 @@ namespace LangPadSupport
             public const string Technical = @"\ftech";
             public const string BiDirect = @"\fbidi";
         }
-
-        // Not used in this application.  Descriptions can be found with documentation
-        // of Windows GDI function SetMapMode
-        private const int MM_TEXT = 1;
-        private const int MM_LOMETRIC = 2;
-        private const int MM_HIMETRIC = 3;
-        private const int MM_LOENGLISH = 4;
-        private const int MM_HIENGLISH = 5;
-        private const int MM_TWIPS = 6;
-
-        // Ensures that the metafile maintains a 1:1 aspect ratio
-        private const int MM_ISOTROPIC = 7;
-
-        // Allows the x-coordinates and y-coordinates of the metafile to be adjusted
-        // independently
-        private const int MM_ANISOTROPIC = 8;
-
-        // Represents an unknown font family
-        private const string FF_UNKNOWN = "UNKNOWN";
-
-        // The number of hundredths of millimeters (0.01 mm) in an inch
-        // For more information, see GetImagePrefix() method.
-        private const int HMM_PER_INCH = 2540;
-
-        // The number of twips in an inch
-        // For more information, see GetImagePrefix() method.
-        private const int TWIPS_PER_INCH = 1440;
 
         // The default text color
         private RtfColor m_textColor;
@@ -250,13 +186,6 @@ namespace LangPadSupport
         // The vertical resolution at which the control is being displayed
         private float yDpi;
 
-
-        private const string RTF_HEADER = @"{\rtf1\ansi\ansicpg1252\deff0\deflang1033";
-
-
-        private const string RTF_DOCUMENT_PRE = @"\viewkind4\uc1\pard\cf1\f0\fs20";
-        private const string RTF_DOCUMENT_POST = @"\cf0\fs17}";
-        private string RTF_IMAGE_POST = "}";
         public new string Rtf
         {
             get
@@ -266,32 +195,6 @@ namespace LangPadSupport
             set
             {
                 base.Rtf = value;
-            }
-        }
-
-        // The color of the text
-        public RtfColor TextColor
-        {
-            get
-            {
-                return m_textColor;
-            }
-            set
-            {
-                m_textColor = value;
-            }
-        }
-
-        // The color of the highlight
-        public RtfColor HiglightColor
-        {
-            get
-            {
-                return highlightColor;
-            }
-            set
-            {
-                highlightColor = value;
             }
         }
 
@@ -340,20 +243,8 @@ namespace LangPadSupport
             }
         }
 
-        public ExtendedRichTextBox(RtfColor _textColor) : this()
-        {
-            m_textColor = _textColor;
-        }
-
-        public ExtendedRichTextBox(RtfColor _textColor, RtfColor _highlightColor) : this()
-        {
-            m_textColor = _textColor;
-            highlightColor = _highlightColor;
-        }
-
         public void AppendRtf(string _rtf)
         {
-
             // Move caret to the end of the text
             Select(TextLength, 0);
 
@@ -365,30 +256,6 @@ namespace LangPadSupport
         public void InsertRtf(string _rtf)
         {
             SelectedRtf = _rtf;
-        }
-
-        public void AppendTextAsRtf(string _text)
-        {
-            AppendTextAsRtf(_text, Font);
-        }
-
-        /// <param name="_font"></param>
-        public void AppendTextAsRtf(string _text, Font _font)
-        {
-            AppendTextAsRtf(_text, _font, m_textColor);
-        }
-
-        public void AppendTextAsRtf(string _text, Font _font, RtfColor _textColor)
-        {
-            AppendTextAsRtf(_text, _font, _textColor, highlightColor);
-        }
-
-        public void AppendTextAsRtf(string _text, Font _font, RtfColor _textColor, RtfColor _backColor)
-        {
-            // Move carret to the end of the text
-            Select(TextLength, 0);
-
-            InsertTextAsRtf(_text, _font, _textColor, _backColor);
         }
 
         public void InsertTextAsRtf(string _text)
@@ -563,9 +430,6 @@ namespace LangPadSupport
             return _rtf.ToString();
         }
 
-        [DllImport("gdiplus.dll", SetLastError = true)]
-        static extern uint GdipEmfToWmfBits(IntPtr hEmf, uint uBufferSize, byte[] bBuffer, int iMappingMode, EmfToWmfBitsFlags flags);
-
         private string GetRtfImage(Image _image)
         {
             StringBuilder _rtf = null;
@@ -689,9 +553,60 @@ namespace LangPadSupport
             return _originalRtf.Replace("\0", "");
         }
 
-        private void ExtendedRichTextBox_ContentsResized(object sender, ContentsResizedEventArgs e)
+        // Render the contents of the RichTextBox for printing
+        // Return the last character printed + 1 (printing start from this point for next page)
+        public int Print(int charFrom, int charTo, PrintPageEventArgs e)
         {
-            contentRectangle = e.NewRectangle;
+
+            // Mark starting and ending character 
+            CHARRANGE cRange;
+            cRange.cpMin = charFrom;
+            cRange.cpMax = charTo;
+
+            // Calculate the area to render and print
+            RECT rectToPrint;
+            rectToPrint.Top = (int)(e.MarginBounds.Top * AnInch);
+            rectToPrint.Bottom = (int)(e.MarginBounds.Bottom * AnInch);
+            rectToPrint.Left = (int)(e.MarginBounds.Left * AnInch);
+            rectToPrint.Right = (int)(e.MarginBounds.Right * AnInch);
+
+            // Calculate the size of the page
+            RECT rectPage;
+            rectPage.Top = (int)(e.PageBounds.Top * AnInch);
+            rectPage.Bottom = (int)(e.PageBounds.Bottom * AnInch);
+            rectPage.Left = (int)(e.PageBounds.Left * AnInch);
+            rectPage.Right = (int)(e.PageBounds.Right * AnInch);
+
+            IntPtr hdc = e.Graphics.GetHdc();
+
+            FORMATRANGE fmtRange;
+            fmtRange.chrg = cRange;                 // Indicate character from to character to 
+            fmtRange.hdc = hdc;                     // Use the same DC for measuring and rendering
+            fmtRange.hdcTarget = hdc;               // Point at printer hDC
+            fmtRange.rc = rectToPrint;              // Indicate the area on page to print
+            fmtRange.rcPage = rectPage;             // Indicate whole size of page
+
+            IntPtr res = IntPtr.Zero;
+
+            IntPtr wparam = IntPtr.Zero;
+            wparam = new IntPtr(1);
+
+            // Move the pointer to the FORMATRANGE structure in memory
+            IntPtr lparam = IntPtr.Zero;
+            lparam = Marshal.AllocCoTaskMem(Marshal.SizeOf(fmtRange));
+            Marshal.StructureToPtr(fmtRange, lparam, false);
+
+            // Send the rendered data for printing 
+            res = SendMessage(Handle, EM_FORMATRANGE, wparam, lparam);
+
+            // Free the block of memory allocated
+            Marshal.FreeCoTaskMem(lparam);
+
+            // Release the device context handle obtained by a previous call
+            e.Graphics.ReleaseHdc(hdc);
+
+            // Return last + 1 character printer
+            return res.ToInt32();
         }
     }
 }

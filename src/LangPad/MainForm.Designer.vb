@@ -41,6 +41,7 @@ Partial Class MainForm
         Me.SelectAllContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeselectAllContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitLayoutPanel = New System.Windows.Forms.SplitContainer()
+        Me.CurrentPageContainerBorder = New LangPadSupport.DoubleBufferedPanel()
         Me.CurrentPageContainer = New LangPadSupport.DoubleBufferedPanel()
         Me.FindReplaceDialog = New LangPadSupport.DoubleBufferedPanel()
         Me.FindNextButton = New System.Windows.Forms.Button()
@@ -238,12 +239,12 @@ Partial Class MainForm
         Me.PatreonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator27 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CurrentPageContainerBorder = New LangPadSupport.DoubleBufferedPanel()
         Me.MainContextMenu.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
         Me.SplitLayoutPanel.Panel2.SuspendLayout()
         Me.SplitLayoutPanel.SuspendLayout()
+        Me.CurrentPageContainerBorder.SuspendLayout()
         Me.FindReplaceDialog.SuspendLayout()
         Me.ColorPanel.SuspendLayout()
         Me.ColorLayoutPanel.SuspendLayout()
@@ -255,7 +256,6 @@ Partial Class MainForm
         Me.DataToolStrip.SuspendLayout()
         Me.MainToolStrip.SuspendLayout()
         Me.MainMenu.SuspendLayout()
-        Me.CurrentPageContainerBorder.SuspendLayout()
         Me.SuspendLayout()
         '
         'OpenImageDialog
@@ -371,9 +371,20 @@ Partial Class MainForm
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.PropertiesContainerPanel)
         Me.SplitLayoutPanel.Panel2MinSize = 340
         Me.SplitLayoutPanel.Size = New System.Drawing.Size(1731, 962)
-        Me.SplitLayoutPanel.SplitterDistance = 1352
+        Me.SplitLayoutPanel.SplitterDistance = 1353
         Me.SplitLayoutPanel.SplitterWidth = 3
         Me.SplitLayoutPanel.TabIndex = 1
+        '
+        'CurrentPageContainerBorder
+        '
+        Me.CurrentPageContainerBorder.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.CurrentPageContainerBorder.Controls.Add(Me.CurrentPageContainer)
+        Me.CurrentPageContainerBorder.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CurrentPageContainerBorder.Location = New System.Drawing.Point(0, 172)
+        Me.CurrentPageContainerBorder.Name = "CurrentPageContainerBorder"
+        Me.CurrentPageContainerBorder.Padding = New System.Windows.Forms.Padding(1)
+        Me.CurrentPageContainerBorder.Size = New System.Drawing.Size(1353, 790)
+        Me.CurrentPageContainerBorder.TabIndex = 76
         '
         'CurrentPageContainer
         '
@@ -381,7 +392,7 @@ Partial Class MainForm
         Me.CurrentPageContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CurrentPageContainer.Location = New System.Drawing.Point(1, 1)
         Me.CurrentPageContainer.Name = "CurrentPageContainer"
-        Me.CurrentPageContainer.Size = New System.Drawing.Size(1350, 788)
+        Me.CurrentPageContainer.Size = New System.Drawing.Size(1351, 788)
         Me.CurrentPageContainer.TabIndex = 75
         '
         'FindReplaceDialog
@@ -398,7 +409,7 @@ Partial Class MainForm
         Me.FindReplaceDialog.Dock = System.Windows.Forms.DockStyle.Top
         Me.FindReplaceDialog.Location = New System.Drawing.Point(0, 118)
         Me.FindReplaceDialog.Name = "FindReplaceDialog"
-        Me.FindReplaceDialog.Size = New System.Drawing.Size(1352, 54)
+        Me.FindReplaceDialog.Size = New System.Drawing.Size(1353, 54)
         Me.FindReplaceDialog.TabIndex = 72
         Me.FindReplaceDialog.Visible = False
         '
@@ -486,7 +497,7 @@ Partial Class MainForm
         Me.ColorPanel.Location = New System.Drawing.Point(0, 0)
         Me.ColorPanel.Name = "ColorPanel"
         Me.ColorPanel.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.ColorPanel.Size = New System.Drawing.Size(1352, 118)
+        Me.ColorPanel.Size = New System.Drawing.Size(1353, 118)
         Me.ColorPanel.TabIndex = 74
         Me.ColorPanel.Visible = False
         '
@@ -522,7 +533,7 @@ Partial Class MainForm
         Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.ColorLayoutPanel.Name = "ColorLayoutPanel"
         Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(6)
-        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1352, 68)
+        Me.ColorLayoutPanel.Size = New System.Drawing.Size(1353, 68)
         Me.ColorLayoutPanel.TabIndex = 70
         '
         'TransparentColorButton
@@ -909,7 +920,7 @@ Partial Class MainForm
         Me.PropertiesContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PropertiesContainerPanel.Location = New System.Drawing.Point(0, 0)
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
-        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(376, 962)
+        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(375, 962)
         Me.PropertiesContainerPanel.TabIndex = 13
         '
         'NotebookEditorPanel
@@ -918,7 +929,7 @@ Partial Class MainForm
         Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
         Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
         Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
-        Me.NotebookEditorPanel.Size = New System.Drawing.Size(376, 962)
+        Me.NotebookEditorPanel.Size = New System.Drawing.Size(375, 962)
         Me.NotebookEditorPanel.TabIndex = 0
         '
         'MainToolStripContainer
@@ -1286,6 +1297,7 @@ Partial Class MainForm
         '
         'MainMenu
         '
+        Me.MainMenu.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MainMenu.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.MainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.PageToolStripMenuItem, Me.LinguisticsToolStripMenuItem, Me.InsertToolStripMenuItem, Me.StyleToolStripMenuItem, Me.FormatToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MainMenu.Location = New System.Drawing.Point(0, 0)
@@ -2119,17 +2131,6 @@ Partial Class MainForm
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(282, 34)
         Me.AboutToolStripMenuItem.Text = "About..."
         '
-        'CurrentPageContainerBorder
-        '
-        Me.CurrentPageContainerBorder.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.CurrentPageContainerBorder.Controls.Add(Me.CurrentPageContainer)
-        Me.CurrentPageContainerBorder.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CurrentPageContainerBorder.Location = New System.Drawing.Point(0, 172)
-        Me.CurrentPageContainerBorder.Name = "CurrentPageContainerBorder"
-        Me.CurrentPageContainerBorder.Padding = New System.Windows.Forms.Padding(1)
-        Me.CurrentPageContainerBorder.Size = New System.Drawing.Size(1352, 790)
-        Me.CurrentPageContainerBorder.TabIndex = 76
-        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -2147,6 +2148,7 @@ Partial Class MainForm
         Me.SplitLayoutPanel.Panel2.ResumeLayout(False)
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitLayoutPanel.ResumeLayout(False)
+        Me.CurrentPageContainerBorder.ResumeLayout(False)
         Me.FindReplaceDialog.ResumeLayout(False)
         Me.FindReplaceDialog.PerformLayout()
         Me.ColorPanel.ResumeLayout(False)
@@ -2166,7 +2168,6 @@ Partial Class MainForm
         Me.MainToolStrip.PerformLayout()
         Me.MainMenu.ResumeLayout(False)
         Me.MainMenu.PerformLayout()
-        Me.CurrentPageContainerBorder.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
