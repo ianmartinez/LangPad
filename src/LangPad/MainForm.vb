@@ -336,19 +336,17 @@ Public Class MainForm
         My.Settings.Save()
     End Sub
 
-    Private Sub ApplyStyle(ByVal rtb As ExtendedRichTextBox, ByVal fontStyle As FontStyle)
-        If rtb.SelectionLength = 0 Then
-            rtb.SelectionFont = New Font(rtb.SelectionFont, rtb.SelectionFont.Style Xor fontStyle)
+    Private Sub ApplyStyle(ByVal Rtb As ExtendedRichTextBox, ByVal FontStyle As FontStyle)
+        If Rtb.SelectionLength = 0 Then
+            Rtb.SelectionFont = New Font(Rtb.SelectionFont, Rtb.SelectionFont.Style Xor FontStyle)
             Exit Sub
         End If
 
         SuspendLayout()
         Dim TempRTF As New ExtendedRichTextBox With {
-            .Rtf = rtb.Rtf,
-            .SelectionStart = rtb.SelectionStart,
-            .SelectionLength = rtb.SelectionLength
+            .Rtf = Rtb.SelectedRtf
         }
-
+        TempRTF.SelectAll()
 
         If TempRTF.SelectionLength > 0 Then
             Dim Start As Integer = TempRTF.SelectionStart
@@ -357,28 +355,23 @@ Public Class MainForm
             For i = Start To Ending
                 TempRTF.SelectionStart = i
                 TempRTF.SelectionLength = 1
-                TempRTF.SelectionFont = New Font(TempRTF.SelectionFont, TempRTF.SelectionFont.Style Xor fontStyle)
+                TempRTF.SelectionFont = New Font(TempRTF.SelectionFont, TempRTF.SelectionFont.Style Xor FontStyle)
             Next
 
             TempRTF.SelectionStart = Start
             TempRTF.SelectionLength = Ending - Start + 1
         Else
-            TempRTF.SelectionFont = New Font(TempRTF.SelectionFont, TempRTF.SelectionFont.Style Xor fontStyle)
+            TempRTF.SelectionFont = New Font(TempRTF.SelectionFont, TempRTF.SelectionFont.Style Xor FontStyle)
         End If
 
-        Dim CurrentPos As Integer = rtb.SelectionStart
-        Dim CurrentLength As Integer = rtb.SelectionLength
+        Dim CurrentPos As Integer = Rtb.SelectionStart
+        Dim CurrentLength As Integer = Rtb.SelectionLength
         Dim OldClip As Object = Clipboard.GetDataObject()
 
-        rtb.SelectAll()
         TempRTF.SelectAll()
         TempRTF.Copy()
-        rtb.Paste()
+        Rtb.Paste()
         Clipboard.SetDataObject(OldClip)
-
-        rtb.SelectionStart = CurrentPos
-        rtb.SelectionLength = CurrentLength
-
         TempRTF.Dispose()
         ResumeLayout()
     End Sub
