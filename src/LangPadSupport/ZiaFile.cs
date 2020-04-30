@@ -34,7 +34,7 @@ namespace LangPadSupport
 
             foreach (var line in lines)
             {
-                var isKvLine = (!line.StartsWith("!") || !line.StartsWith("#") || line.Contains("="));
+                var isKvLine = (!line.StartsWith("!") && !line.StartsWith("#") && line.Contains("="));
 
                 if (isKvLine)
                 {
