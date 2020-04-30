@@ -26,6 +26,8 @@ Partial Class NotebookEditor
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NotebookEditor))
         Me.MainTooltip = New System.Windows.Forms.ToolTip(Me.components)
         Me.DocumentToolStripContainer = New System.Windows.Forms.ToolStripContainer()
+        Me.ListBoxContainerPanel = New LangPadSupport.DoubleBufferedPanel()
+        Me.PagesListBox = New System.Windows.Forms.ListBox()
         Me.DocumentToolStrip = New System.Windows.Forms.ToolStrip()
         Me.PageUpToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PageDownToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -54,18 +56,16 @@ Partial Class NotebookEditor
         Me.MainTabControl = New System.Windows.Forms.TabControl()
         Me.PagesTab = New System.Windows.Forms.TabPage()
         Me.PropertiesTab = New System.Windows.Forms.TabPage()
-        Me.ListBoxContainerPanel = New LangPadSupport.DoubleBufferedPanel()
-        Me.PagesListBox = New System.Windows.Forms.ListBox()
         Me.DocumentToolStripContainer.ContentPanel.SuspendLayout()
         Me.DocumentToolStripContainer.TopToolStripPanel.SuspendLayout()
         Me.DocumentToolStripContainer.SuspendLayout()
+        Me.ListBoxContainerPanel.SuspendLayout()
         Me.DocumentToolStrip.SuspendLayout()
         Me.PropertiesTableLayoutPanel.SuspendLayout()
         Me.GoButtonPanel.SuspendLayout()
         Me.MainTabControl.SuspendLayout()
         Me.PagesTab.SuspendLayout()
         Me.PropertiesTab.SuspendLayout()
-        Me.ListBoxContainerPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'DocumentToolStripContainer
@@ -77,23 +77,48 @@ Partial Class NotebookEditor
         'DocumentToolStripContainer.ContentPanel
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.ListBoxContainerPanel)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(326, 390)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(328, 394)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'DocumentToolStripContainer.LeftToolStripPanel
         '
-        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(3, 3)
+        Me.DocumentToolStripContainer.Location = New System.Drawing.Point(1, 1)
         Me.DocumentToolStripContainer.Name = "DocumentToolStripContainer"
         '
         'DocumentToolStripContainer.RightToolStripPanel
         '
-        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(326, 431)
+        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(328, 435)
         Me.DocumentToolStripContainer.TabIndex = 81
         Me.DocumentToolStripContainer.Text = "MainToolStripContainer"
         '
         'DocumentToolStripContainer.TopToolStripPanel
         '
         Me.DocumentToolStripContainer.TopToolStripPanel.Controls.Add(Me.DocumentToolStrip)
+        '
+        'ListBoxContainerPanel
+        '
+        Me.ListBoxContainerPanel.BackColor = System.Drawing.Color.Transparent
+        Me.ListBoxContainerPanel.Controls.Add(Me.PagesListBox)
+        Me.ListBoxContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListBoxContainerPanel.Location = New System.Drawing.Point(0, 0)
+        Me.ListBoxContainerPanel.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
+        Me.ListBoxContainerPanel.Name = "ListBoxContainerPanel"
+        Me.ListBoxContainerPanel.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
+        Me.ListBoxContainerPanel.Size = New System.Drawing.Size(328, 394)
+        Me.ListBoxContainerPanel.TabIndex = 80
+        '
+        'PagesListBox
+        '
+        Me.PagesListBox.BackColor = System.Drawing.Color.White
+        Me.PagesListBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.PagesListBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PagesListBox.ForeColor = System.Drawing.Color.Black
+        Me.PagesListBox.IntegralHeight = False
+        Me.PagesListBox.ItemHeight = 20
+        Me.PagesListBox.Location = New System.Drawing.Point(2, 0)
+        Me.PagesListBox.Name = "PagesListBox"
+        Me.PagesListBox.Size = New System.Drawing.Size(326, 394)
+        Me.PagesListBox.TabIndex = 15
         '
         'DocumentToolStrip
         '
@@ -103,7 +128,8 @@ Partial Class NotebookEditor
         Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton})
         Me.DocumentToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DocumentToolStrip.Name = "DocumentToolStrip"
-        Me.DocumentToolStrip.Size = New System.Drawing.Size(326, 41)
+        Me.DocumentToolStrip.Padding = New System.Windows.Forms.Padding(0)
+        Me.DocumentToolStrip.Size = New System.Drawing.Size(328, 41)
         Me.DocumentToolStrip.Stretch = True
         Me.DocumentToolStrip.TabIndex = 0
         '
@@ -209,7 +235,7 @@ Partial Class NotebookEditor
         Me.Label4.Location = New System.Drawing.Point(23, 307)
         Me.Label4.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(280, 20)
+        Me.Label4.Size = New System.Drawing.Size(282, 20)
         Me.Label4.TabIndex = 78
         Me.Label4.Text = "Notes:"
         '
@@ -221,7 +247,7 @@ Partial Class NotebookEditor
         Me.InfoTextBox.Multiline = True
         Me.InfoTextBox.Name = "InfoTextBox"
         Me.InfoTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.InfoTextBox.Size = New System.Drawing.Size(280, 85)
+        Me.InfoTextBox.Size = New System.Drawing.Size(282, 89)
         Me.InfoTextBox.TabIndex = 5
         '
         'Label3
@@ -231,14 +257,14 @@ Partial Class NotebookEditor
         Me.Label3.Location = New System.Drawing.Point(23, 202)
         Me.Label3.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(280, 20)
+        Me.Label3.Size = New System.Drawing.Size(282, 20)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Website:"
         '
         'GoButton
         '
         Me.GoButton.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GoButton.Location = New System.Drawing.Point(186, 0)
+        Me.GoButton.Location = New System.Drawing.Point(188, 0)
         Me.GoButton.Margin = New System.Windows.Forms.Padding(3, 3, 0, 3)
         Me.GoButton.MinimumSize = New System.Drawing.Size(80, 0)
         Me.GoButton.Name = "GoButton"
@@ -253,7 +279,7 @@ Partial Class NotebookEditor
         Me.WebsiteTextBox.Location = New System.Drawing.Point(23, 231)
         Me.WebsiteTextBox.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.WebsiteTextBox.Name = "WebsiteTextBox"
-        Me.WebsiteTextBox.Size = New System.Drawing.Size(280, 26)
+        Me.WebsiteTextBox.Size = New System.Drawing.Size(282, 26)
         Me.WebsiteTextBox.TabIndex = 3
         '
         'LanguageTextBox
@@ -262,7 +288,7 @@ Partial Class NotebookEditor
         Me.LanguageTextBox.Location = New System.Drawing.Point(23, 103)
         Me.LanguageTextBox.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.LanguageTextBox.Name = "LanguageTextBox"
-        Me.LanguageTextBox.Size = New System.Drawing.Size(280, 26)
+        Me.LanguageTextBox.Size = New System.Drawing.Size(282, 26)
         Me.LanguageTextBox.TabIndex = 80
         '
         'Label5
@@ -272,7 +298,7 @@ Partial Class NotebookEditor
         Me.Label5.Location = New System.Drawing.Point(23, 74)
         Me.Label5.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(280, 20)
+        Me.Label5.Size = New System.Drawing.Size(282, 20)
         Me.Label5.TabIndex = 81
         Me.Label5.Text = "Language:"
         '
@@ -282,7 +308,7 @@ Partial Class NotebookEditor
         Me.AuthorTextBox.Location = New System.Drawing.Point(23, 167)
         Me.AuthorTextBox.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.AuthorTextBox.Name = "AuthorTextBox"
-        Me.AuthorTextBox.Size = New System.Drawing.Size(280, 26)
+        Me.AuthorTextBox.Size = New System.Drawing.Size(282, 26)
         Me.AuthorTextBox.TabIndex = 2
         '
         'TitleTextBox
@@ -291,7 +317,7 @@ Partial Class NotebookEditor
         Me.TitleTextBox.Location = New System.Drawing.Point(23, 39)
         Me.TitleTextBox.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.TitleTextBox.Name = "TitleTextBox"
-        Me.TitleTextBox.Size = New System.Drawing.Size(280, 26)
+        Me.TitleTextBox.Size = New System.Drawing.Size(282, 26)
         Me.TitleTextBox.TabIndex = 1
         '
         'Label2
@@ -301,7 +327,7 @@ Partial Class NotebookEditor
         Me.Label2.Location = New System.Drawing.Point(23, 138)
         Me.Label2.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(280, 20)
+        Me.Label2.Size = New System.Drawing.Size(282, 20)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Author:"
         '
@@ -312,7 +338,7 @@ Partial Class NotebookEditor
         Me.Label1.Location = New System.Drawing.Point(23, 10)
         Me.Label1.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(280, 20)
+        Me.Label1.Size = New System.Drawing.Size(282, 20)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Title:"
         '
@@ -332,7 +358,7 @@ Partial Class NotebookEditor
         Me.PropertiesTableLayoutPanel.Controls.Add(Me.Label2, 0, 5)
         Me.PropertiesTableLayoutPanel.Controls.Add(Me.AuthorTextBox, 0, 6)
         Me.PropertiesTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PropertiesTableLayoutPanel.Location = New System.Drawing.Point(3, 3)
+        Me.PropertiesTableLayoutPanel.Location = New System.Drawing.Point(1, 1)
         Me.PropertiesTableLayoutPanel.Name = "PropertiesTableLayoutPanel"
         Me.PropertiesTableLayoutPanel.Padding = New System.Windows.Forms.Padding(20, 4, 20, 4)
         Me.PropertiesTableLayoutPanel.RowCount = 13
@@ -349,7 +375,7 @@ Partial Class NotebookEditor
         Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.PropertiesTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.PropertiesTableLayoutPanel.Size = New System.Drawing.Size(326, 431)
+        Me.PropertiesTableLayoutPanel.Size = New System.Drawing.Size(328, 435)
         Me.PropertiesTableLayoutPanel.TabIndex = 82
         '
         'GoButtonPanel
@@ -358,7 +384,7 @@ Partial Class NotebookEditor
         Me.GoButtonPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GoButtonPanel.Location = New System.Drawing.Point(23, 263)
         Me.GoButtonPanel.Name = "GoButtonPanel"
-        Me.GoButtonPanel.Size = New System.Drawing.Size(280, 35)
+        Me.GoButtonPanel.Size = New System.Drawing.Size(282, 35)
         Me.GoButtonPanel.TabIndex = 16
         '
         'MainTabControl
@@ -377,7 +403,7 @@ Partial Class NotebookEditor
         Me.PagesTab.Controls.Add(Me.DocumentToolStripContainer)
         Me.PagesTab.Location = New System.Drawing.Point(4, 29)
         Me.PagesTab.Name = "PagesTab"
-        Me.PagesTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.PagesTab.Padding = New System.Windows.Forms.Padding(1, 1, 3, 1)
         Me.PagesTab.Size = New System.Drawing.Size(332, 437)
         Me.PagesTab.TabIndex = 1
         Me.PagesTab.Text = "Pages"
@@ -388,36 +414,11 @@ Partial Class NotebookEditor
         Me.PropertiesTab.Controls.Add(Me.PropertiesTableLayoutPanel)
         Me.PropertiesTab.Location = New System.Drawing.Point(4, 29)
         Me.PropertiesTab.Name = "PropertiesTab"
-        Me.PropertiesTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.PropertiesTab.Padding = New System.Windows.Forms.Padding(1, 1, 3, 1)
         Me.PropertiesTab.Size = New System.Drawing.Size(332, 437)
         Me.PropertiesTab.TabIndex = 0
         Me.PropertiesTab.Text = "Properties"
         Me.PropertiesTab.UseVisualStyleBackColor = True
-        '
-        'ListBoxContainerPanel
-        '
-        Me.ListBoxContainerPanel.BackColor = System.Drawing.Color.Transparent
-        Me.ListBoxContainerPanel.Controls.Add(Me.PagesListBox)
-        Me.ListBoxContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListBoxContainerPanel.Location = New System.Drawing.Point(0, 0)
-        Me.ListBoxContainerPanel.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
-        Me.ListBoxContainerPanel.Name = "ListBoxContainerPanel"
-        Me.ListBoxContainerPanel.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.ListBoxContainerPanel.Size = New System.Drawing.Size(326, 390)
-        Me.ListBoxContainerPanel.TabIndex = 80
-        '
-        'PagesListBox
-        '
-        Me.PagesListBox.BackColor = System.Drawing.Color.White
-        Me.PagesListBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.PagesListBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PagesListBox.ForeColor = System.Drawing.Color.Black
-        Me.PagesListBox.IntegralHeight = False
-        Me.PagesListBox.ItemHeight = 20
-        Me.PagesListBox.Location = New System.Drawing.Point(2, 0)
-        Me.PagesListBox.Name = "PagesListBox"
-        Me.PagesListBox.Size = New System.Drawing.Size(324, 390)
-        Me.PagesListBox.TabIndex = 15
         '
         'NotebookEditor
         '
@@ -433,6 +434,7 @@ Partial Class NotebookEditor
         Me.DocumentToolStripContainer.TopToolStripPanel.PerformLayout()
         Me.DocumentToolStripContainer.ResumeLayout(False)
         Me.DocumentToolStripContainer.PerformLayout()
+        Me.ListBoxContainerPanel.ResumeLayout(False)
         Me.DocumentToolStrip.ResumeLayout(False)
         Me.DocumentToolStrip.PerformLayout()
         Me.PropertiesTableLayoutPanel.ResumeLayout(False)
@@ -441,7 +443,6 @@ Partial Class NotebookEditor
         Me.MainTabControl.ResumeLayout(False)
         Me.PagesTab.ResumeLayout(False)
         Me.PropertiesTab.ResumeLayout(False)
-        Me.ListBoxContainerPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
