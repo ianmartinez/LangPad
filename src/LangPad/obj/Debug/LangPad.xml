@@ -500,20 +500,6 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Refresh the file characters to reflect the current notebook.
  </summary>
 </member>
-<member name="M:LangPad.NotebookController.BeginOperation(System.Windows.Forms.Form)">
- <summary>
- Signal to the user that an operation is being processed.
- 
- <param name="TargetForm">The form that is the target of the operation.</param>
- </summary>
-</member>
-<member name="M:LangPad.NotebookController.EndOperation(System.Windows.Forms.Form)">
- <summary>
- Signal to the user that an operation has completed.
- 
- <param name="TargetForm">The form that is the target of the operation.</param>
- </summary>
-</member>
 <member name="M:LangPad.NotebookController.UpdatePageStats">
  <summary>
  Update all stats for a page.
@@ -787,6 +773,20 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="Text">The text to look through.</param>
  
  <returns>The number of words.</returns>
+</member>
+<member name="M:LangPad.Util.BeginOperation(System.Windows.Forms.Form)">
+ <summary>
+ Signal to the user that an operation is being processed.
+ 
+ <param name="TargetForm">The form that is the target of the operation.</param>
+ </summary>
+</member>
+<member name="M:LangPad.Util.EndOperation(System.Windows.Forms.Form)">
+ <summary>
+ Signal to the user that an operation has completed.
+ 
+ <param name="TargetForm">The form that is the target of the operation.</param>
+ </summary>
 </member>
 </members>
 </doc>

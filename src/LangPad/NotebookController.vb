@@ -189,28 +189,6 @@ Module NotebookController
     End Sub
 
     ''' <summary>
-    ''' Signal to the user that an operation is being processed.
-    ''' 
-    ''' <param name="TargetForm">The form that is the target of the operation.</param>
-    ''' </summary>
-    Private Sub BeginOperation(TargetForm As Form)
-        TargetForm.Cursor = Cursors.WaitCursor
-        TargetForm.Enabled = False
-        TargetForm.SuspendLayout()
-    End Sub
-
-    ''' <summary>
-    ''' Signal to the user that an operation has completed.
-    ''' 
-    ''' <param name="TargetForm">The form that is the target of the operation.</param>
-    ''' </summary>
-    Private Sub EndOperation(TargetForm As Form)
-        TargetForm.Cursor = Cursors.Default
-        TargetForm.Enabled = True
-        TargetForm.ResumeLayout()
-    End Sub
-
-    ''' <summary>
     ''' Update all stats for a page.
     ''' </summary>
     Public Sub UpdatePageStats()

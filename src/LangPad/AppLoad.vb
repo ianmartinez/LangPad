@@ -12,6 +12,9 @@ Module AppLoad
     Public Sub LoadApplication()
         SplashScreenForm.Show()
 
+        BeginOperation(MainForm)
+        BeginOperation(CharEditWindow)
+
         UpdateSplash(0, "Loading Accent Marks...")
         For Each AccentMark As KeyValuePair(Of String, String) In ZiaFile.Read(My.Resources.Accents)
             CharEditWindow.CharEdit.InsertAccentButton(AccentMark.Value, AccentMark.Key)
@@ -82,5 +85,8 @@ Module AppLoad
 
         CharEditWindow.CharEdit.RefreshPanels()
         UpdateSplash(100, "Loading Main Window...")
+
+        EndOperation(MainForm)
+        EndOperation(CharEditWindow)
     End Sub
 End Module
