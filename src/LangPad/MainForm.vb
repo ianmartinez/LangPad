@@ -1237,4 +1237,8 @@ Public Class MainForm
     Private Sub PatreonToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PatreonToolStripMenuItem.Click
         GoToPatreon()
     End Sub
+
+    Private Sub CopyAsMarkdownToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyAsMarkdownToolStripMenuItem.Click
+        Clipboard.SetText(RtfToMarkdown(CurrentRtb.SelectedRtf))
+    End Sub
 End Class
