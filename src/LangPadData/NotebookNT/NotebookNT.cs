@@ -215,6 +215,7 @@ namespace LangPadData.NotebookNT
             // Delete temp directory
             Directory.Delete(tempFolder.RootFolder, true);
 
+            // Reset modified flag now that file has saved
             Modified = false;
         }
     }
