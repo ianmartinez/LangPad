@@ -15,3 +15,4 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.csproj
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.csproj.CoreCompileInputs.cache
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.dll
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.csprojAssemblyReference.cache

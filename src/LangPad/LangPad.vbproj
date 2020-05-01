@@ -121,7 +121,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Appearance\AppearanceManager.vb" />
+    <Compile Include="AppAppearance.vb" />
     <Compile Include="AppLoad.vb" />
     <Compile Include="Converters\KeyValueConverter.vb" />
     <Compile Include="NotebookController.vb" />

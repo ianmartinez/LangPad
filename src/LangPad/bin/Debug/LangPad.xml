@@ -421,6 +421,11 @@ Close back rounded vowel/High back rounded vowel=u
 Close back compressed vowel/High back compressed  [rest of string was truncated]&quot;;.
 </summary>
 </member>
+<member name="T:LangPad.AppAppearance">
+ <summary>
+ Handles the application's theme and icons.
+ </summary>
+</member>
 <member name="T:LangPad.NotebookController">
  <summary>
  Handles operations on the current notebook used by LangPad.
