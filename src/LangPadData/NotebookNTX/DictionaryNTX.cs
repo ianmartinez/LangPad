@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using static LangPadData.KeyValue;
 
-namespace LangPadData.NotebookFile
+namespace LangPadData.NotebookNTX
 {
     /* 
         Serialize as:
@@ -9,7 +9,7 @@ namespace LangPadData.NotebookFile
         0.pronunciation=
         0.definition=
         0.notes=         */
-    public class DictionaryWord
+    public class DictionaryWordNTX
     {
         public string Word { get; set; } = "";
         public string Pronunciation { get; set; } = "";
@@ -17,9 +17,9 @@ namespace LangPadData.NotebookFile
         public string Notes { get; set; } = "";
     }
 
-    public class Dictionary
+    public class DictionaryNTX
     {
-        public List<DictionaryWord> Words { get; set; } = new List<DictionaryWord>();
+        public List<DictionaryWordNTX> Words { get; set; } = new List<DictionaryWordNTX>();
 
         public string Save()
         {

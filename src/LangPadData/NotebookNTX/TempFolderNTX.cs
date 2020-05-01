@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
-namespace LangPadData.NotebookFile
+namespace LangPadData.NotebookNTX
 {
-    public class TempFolder
+    public class TempFolderNTX
     {
-        public static string AppDataFolder =
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-
         public readonly string RootFolder;
         public readonly string PagesFolder;
         public readonly string DataFile;
@@ -19,9 +14,9 @@ namespace LangPadData.NotebookFile
         public readonly string DictionaryFile;
         public readonly string StylesheetFile;
 
-        public TempFolder()
+        public TempFolderNTX()
         {
-            RootFolder = GetNewTempFolderRoot();
+            RootFolder = TempFolder.GetNewTempFolderRoot();
 
             if (Directory.Exists(RootFolder))
                 Directory.Delete(RootFolder, true);
@@ -35,11 +30,6 @@ namespace LangPadData.NotebookFile
             CharactersFile = string.Format("{0}\\characters.txt", RootFolder);
             DictionaryFile = string.Format("{0}\\dictionary.txt", RootFolder);
             StylesheetFile = string.Format("{0}\\style.css", RootFolder);
-        }
-
-        public static string GetNewTempFolderRoot()
-        {
-            return string.Format("{0}\\notebook-{1}", AppDataFolder, Guid.NewGuid().ToString());
         }
 
         public string GetPagePath(int pageIndex)

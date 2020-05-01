@@ -3,6 +3,7 @@ Imports System.IO
 Imports LangPadData
 Imports LangPadUI
 Imports LangPadUI.Themes
+Imports LangPadData.NotebookNT
 
 Public Class MainForm
     Public WithEvents CurrentRtb As New ExtendedRichTextBox()
@@ -39,7 +40,7 @@ Public Class MainForm
                         Dim AllowOpen As Boolean = True
                         Dim OpenFile As New NotebookFile()
                         OpenFile.Open(FileName)
-                        If OpenFile.NTSpecificationVersion > NTVersion Then
+                        If OpenFile.NTSpecificationVersion > NotebookNT.NT_VERSION Then
                             If Not MessageBox.Show("The notebook file you are trying to open is from LangPad " + OpenFile.ProgramVersion.ToString() + ", which is newer than the version you are currently using. " +
                                 " This can lead to unexpected results. Are you sure you want to continue?", "File from LangPad " + OpenFile.ProgramVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
                                 AllowOpen = False
@@ -479,7 +480,7 @@ Public Class MainForm
                 Dim OpenFile As New NotebookFile()
                 OpenFile.Open(OpenDialog.FileName)
 
-                If OpenFile.NTSpecificationVersion > NTVersion Then
+                If OpenFile.NTSpecificationVersion > NotebookNT.NT_VERSION Then
                     If Not MessageBox.Show("The notebook file you are trying to open is from LangPad " + OpenFile.ProgramVersion.ToString() + ", which is newer than the version you are currently using. " +
                 " This can lead to unexpected results. Are you sure you want to continue?", "File from LangPad " + OpenFile.ProgramVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
                         Exit Sub
@@ -510,7 +511,7 @@ Public Class MainForm
             If SaveDialog.FileName.EndsWith(".thw") Then
                 MessageBox.Show("This file is being exported to the new Thorn Writer format. This is not compatible with LangPad.")
 
-                Dim ThornNotebook = New LangPadData.NotebookFile.Notebook With {
+                Dim ThornNotebook = New LangPadData.NotebookNTX.NotebookNTX With {
                     .Title = CurrentNotebook.Title,
                     .Language = CurrentNotebook.Language,
                     .Author = CurrentNotebook.Author,
@@ -521,7 +522,7 @@ Public Class MainForm
                 }
 
                 For Each Page In CurrentNotebook.Pages
-                    Dim ThornPage As New LangPadData.NotebookFile.Page With {
+                    Dim ThornPage As New LangPadData.NotebookNTX.PageNTX With {
                         .Title = Page.Title,
                         .Content = RtfPipe.Rtf.ToHtml(Page.RTF).ToString()
                     }
@@ -530,7 +531,7 @@ Public Class MainForm
                 Next
 
                 For Each Word In CurrentNotebook.WordDictionary.Words
-                    Dim ThornWord As New LangPadData.NotebookFile.DictionaryWord With {
+                    Dim ThornWord As New LangPadData.NotebookNTX.DictionaryWordNTX With {
                         .Definition = Word.Definition,
                         .Notes = Word.Notes,
                         .Pronunciation = Word.Pronunciation,

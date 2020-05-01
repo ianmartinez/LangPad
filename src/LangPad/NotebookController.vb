@@ -5,11 +5,6 @@ Imports LangPadUI
 ''' Handles operations on the current notebook used by LangPad.
 ''' </summary>
 Module NotebookController
-    ''' <summary>
-    ''' The internal file version for notebook (*.nt) files
-    ''' created with this version.
-    ''' </summary>
-    Public Const NTVersion As Decimal = 2.1
 
     Public RtbList As New List(Of ExtendedRichTextBox)
     ''' <summary>

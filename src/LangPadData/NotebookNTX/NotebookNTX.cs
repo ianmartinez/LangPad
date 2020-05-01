@@ -3,9 +3,9 @@ using System.IO;
 using System.IO.Compression;
 using static LangPadData.KeyValue;
 
-namespace LangPadData.NotebookFile
+namespace LangPadData.NotebookNTX
 {
-    public class Notebook
+    public class NotebookNTX
     {
         public const double CurrentSpec = 3.0;
         public double SpecVersion { get; set; } = CurrentSpec;
@@ -16,12 +16,12 @@ namespace LangPadData.NotebookFile
         public string Info { get; set; } = "";
         public string Stylesheet { get; set; } = "";
         public List<string> Characters { get; set; } = new List<string>();
-        public List<Page> Pages { get; set; } = new List<Page>();
-        public Dictionary NotebookDictionary { get; set; } = new Dictionary();
+        public List<PageNTX> Pages { get; set; } = new List<PageNTX>();
+        public DictionaryNTX NotebookDictionary { get; set; } = new DictionaryNTX();
 
         public void Save(string filePath)
         {
-            var temp = new TempFolder();
+            var temp = new TempFolderNTX();
             Directory.CreateDirectory(temp.PagesFolder);
 
             var dataFile = new List<Line>()

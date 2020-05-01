@@ -1,6 +1,6 @@
-﻿namespace LangPadData.NotebookFile
+﻿namespace LangPadData.NotebookNTX
 {
-    public class Page
+    public class PageNTX
     {
         public string Title { get; set; }
         public string Content { get; set; }

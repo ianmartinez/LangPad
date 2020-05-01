@@ -1,5 +1,5 @@
 ﻿Imports System.IO
-Imports LangPadUI.KeyValue
+Imports LangPadData.NotebookNT
 Imports System.IO.Compression
 Imports LangPadData
 
@@ -15,7 +15,7 @@ Public Class NotebookFile
 
     Public DocumentPath As String = ""
     Public ProgramVersion As String = ProgramVersion
-    Public NTSpecificationVersion As Decimal = NTVersion
+    Public NTSpecificationVersion As Decimal = NotebookNT.NT_VERSION
 
     Public Title As String = ""
     Public Language As String = ""
@@ -79,7 +79,7 @@ Module NotebookFileAccess
             New KeyValue.Line(KeyValue.LineType.KeyValue, "Language", Notebook.Language),
             New KeyValue.Line(KeyValue.LineType.KeyValue, "Author", Notebook.Author),
             New KeyValue.Line(KeyValue.LineType.KeyValue, "Website", Notebook.Website),
-            New KeyValue.Line(KeyValue.LineType.KeyValue, "NTVersion", NTVersion),
+            New KeyValue.Line(KeyValue.LineType.KeyValue, "NTVersion", NotebookNT.NT_VERSION),
             New KeyValue.Line(KeyValue.LineType.KeyValue, "LangPadVersion", GetAppDisplayName()),
             New KeyValue.Line(KeyValue.LineType.Blank),
             New KeyValue.Line(KeyValue.LineType.Comment, "Pages")
