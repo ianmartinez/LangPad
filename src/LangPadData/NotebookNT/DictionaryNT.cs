@@ -1,13 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 
 namespace LangPadData.NotebookNT
 {
+    /// <summary>
+    /// Represents a dictionary in the NT 1.x-2.x file
+    /// format (*.nt).
+    /// </summary>
     public class DictionaryNT
     {
+        /// <summary>
+        /// A list of words in the dictionary.
+        /// </summary>
         public List<WordNT> Words { get; set; } = new List<WordNT>();
 
+        /// <summary>
+        /// Replace the words in this dictionary with the words in 
+        /// a dictionary file.
+        /// </summary>
+        /// 
+        /// <param name="filePath">The path of the dictionary file.</param>
         public void Open(string filePath)
         {
             // Reset words
@@ -32,6 +44,11 @@ namespace LangPadData.NotebookNT
             }
         }
 
+        /// <summary>
+        /// Save the dictionary to a text file.
+        /// </summary>
+        /// 
+        /// <param name="filePath">The file to save the dictionary to.</param>
         public void Save(string filePath)
         {
             if (File.Exists(filePath))
@@ -59,6 +76,12 @@ namespace LangPadData.NotebookNT
            KeyValue.WriteFile(filePath, dictionaryLines);
         }
 
+        /// <summary>
+        /// Save the dictionary to a CSV file for use in other
+        /// programs.
+        /// </summary>
+        /// 
+        /// <param name="filePath">The file to save to.</param>
         public void OpenCsv(string filePath)
         {
             // Reset words
