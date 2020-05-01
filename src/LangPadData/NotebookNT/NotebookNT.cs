@@ -204,7 +204,11 @@ namespace LangPadData.NotebookNT
             // Write dictionary to the disk
             Dictionary.Save(tempFolder.DictionaryFile);
 
-            // Create ZIP file containing the temp folder's contents
+            // Delete old file at filePath if we're saving over it
+            if (File.Exists(filePath))
+                File.Delete(filePath);
+
+            // Create ZIP file containing the temp folder's contents at filePath
             ZipFile.CreateFromDirectory(tempFolder.RootFolder, filePath, CompressionLevel.Fastest, false);
 
             // Delete temp directory
