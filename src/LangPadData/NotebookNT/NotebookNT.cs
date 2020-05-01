@@ -18,7 +18,8 @@ namespace LangPadData.NotebookNT
         public const double NT_VERSION = 2.1;
 
         /// <summary>
-        /// If the notebook has been modified.
+        /// If the notebook has been modified since
+        /// last open/saveS.
         /// </summary>
         public bool Modified { get; set; } = false;
 
@@ -213,6 +214,8 @@ namespace LangPadData.NotebookNT
 
             // Delete temp directory
             Directory.Delete(tempFolder.RootFolder, true);
+
+            Modified = false;
         }
     }
 }
