@@ -36,7 +36,7 @@ Version 11.0 (June 30)
    • Major refactoring to have a more consistent naming scheme and remove old junk
    **• Bug Fix: Lag when typing 
    • Bug Fix: Old Language Pad 4.x-5.x files could not be opened
-   **• Bug Fix: Fix bad performance when changing font styles on a page that has large images 
+   • Bug Fix: Fix bad performance when changing font styles on a page that has large images 
    • Bug Fix: Word count wouldn't update automatically when opening a new file
    • Bug Fix: Pages with the same name couldn't be imported without changing the name
    • Bug Fix: Undo/redo would sometimes leave text selected incorrectly

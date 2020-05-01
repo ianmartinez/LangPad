@@ -646,6 +646,14 @@ namespace LangPadSupport
             };
             tempRtb.SelectAll();
 
+            // For some reason, the RTB control doesn't copy over '\n' sometimes,
+            // so if that's the case add it in
+            if(SelectedText.EndsWith("\n") != tempRtb.SelectedText.EndsWith("\n"))
+            {
+                tempRtb.AppendText("\n");
+                tempRtb.SelectAll();
+            }
+
             // Loop through each character of temp RTB and
             // swap the value of the font style
             var tempStart = tempRtb.SelectionStart;
@@ -656,19 +664,18 @@ namespace LangPadSupport
                 tempRtb.SelectionLength = 1;
                 tempRtb.SelectionFont = ToggleFontStyle(tempRtb.SelectionFont, fontStyle);
             }
+            tempRtb.SelectAll();
 
-            // Use the clipboard to move the styled text from the temp RTB to the new RTB
-            // Store old values
-            var oldClip = Clipboard.GetDataObject();
+            // Store old selection positions
             var oldStartPos = SelectionStart;
             var oldStartLength = SelectionLength;
-            // Paste styled text
-            tempRtb.SelectAll();
-            tempRtb.Copy();
-            Paste();
-            // Restore old values
-            Clipboard.SetDataObject(oldClip);
+
+            // Copy over the formatted text from the tempRtb
+            SelectedRtf = tempRtb.SelectedRtf;
+
+            // Restore the old selection 
             Select(oldStartPos, oldStartLength);
+
             // Dispose of temp RTB
             tempRtb.Dispose();
 
