@@ -7,7 +7,6 @@ Imports LangPadUI
 ''' Handles operations on the current notebook used by LangPad.
 ''' </summary>
 Module NotebookController
-
     Public RtbList As New List(Of ExtendedRichTextBox)
     ''' <summary>
     ''' If the first tab has been updated on the main form.
@@ -58,6 +57,16 @@ Module NotebookController
     End Property
 
     ''' <summary>
+    ''' If the editing page area should be enabled.
+    ''' </summary>
+    Public WriteOnly Property PageAreaEnabled
+        Set(value)
+            MainForm.CurrentPageContainer.Enabled = value
+            MainForm.CurrentPageContainer.BackColor = If(value, SystemColors.Window, SystemColors.Control)
+        End Set
+    End Property
+
+    ''' <summary>
     ''' Update the UI to reflect the current notebook.
     ''' </summary>
     Private Sub LoadNotebook()
@@ -78,6 +87,8 @@ Module NotebookController
         ' Go to the first page, if it exists
         If CurrentNotebook.Pages.Count > 0 Then
             GoToPage(0)
+        Else ' If, not disable editing area
+            PageAreaEnabled = False
         End If
 
         ' Update notebook properties forms
@@ -101,7 +112,6 @@ Module NotebookController
         EndOperation(MainForm)
     End Sub
 
-
     ''' <summary>
     ''' Navigate to page in the notebook.
     ''' </summary>
@@ -113,10 +123,10 @@ Module NotebookController
         If CurrentNotebook.Pages.Count = 0 Then ' If no pages
             MainForm.CurrentPageContainer.Controls.Clear()
             MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = -1
-            MainForm.CurrentPageContainer.BackColor = SystemColors.Control
+            PageAreaEnabled = False
         ElseIf PageInRange(Index) Then ' If there are pages
             MainForm.CurrentPageContainer.Controls.Clear()
-            MainForm.CurrentPageContainer.BackColor = SystemColors.Window
+            PageAreaEnabled = True
 
             If Not UserPageSwitch Then
                 MainForm.NotebookEditorPanel.PagesListBox.SelectedIndex = Index
@@ -265,7 +275,7 @@ Module NotebookController
         _Notebook.Pages.Insert(Index, NewPage)
 
         ' Create an RTB with the page's RTF
-        Dim NewRtb = CreateNotebookRtb(NewPage.RTF)
+        Dim NewRtb = CreateNotebookRtb(NewPage.Rtf)
         RtbList.Insert(Index, NewRtb)
 
         ' Add new list item in properties panel

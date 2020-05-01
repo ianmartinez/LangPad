@@ -452,6 +452,11 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  notebook.
  </summary>
 </member>
+<member name="P:LangPad.NotebookController.PageAreaEnabled">
+ <summary>
+ If the editing page area should be enabled.
+ </summary>
+</member>
 <member name="M:LangPad.NotebookController.LoadNotebook">
  <summary>
  Update the UI to reflect the current notebook.
