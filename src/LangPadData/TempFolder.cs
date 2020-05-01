@@ -5,7 +5,7 @@ using System.IO;
 
 namespace LangPadData
 {
-    class TempFolder
+    public class TempFolder
     {
         public static string AppDataFolder =
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -16,6 +16,8 @@ namespace LangPadData
            
             if (Directory.Exists(tempFolder))
                 Directory.Delete(tempFolder);
+
+            Directory.CreateDirectory(tempFolder);
 
             return tempFolder;
         }

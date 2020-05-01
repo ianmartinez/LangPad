@@ -518,7 +518,7 @@ Public Class MainForm
                     .Website = CurrentNotebook.Website,
                     .Info = CurrentNotebook.Info,
                     .Stylesheet = "",
-                    .Characters = KeyValue.ToLines(CurrentNotebook.CustomSymbols).ToList()
+                    .Characters = Lines.Get(CurrentNotebook.CustomSymbols).ToList()
                 }
 
                 For Each Page In CurrentNotebook.Pages

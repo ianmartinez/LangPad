@@ -15,12 +15,8 @@ namespace LangPadData.NotebookNT
         {
             RootFolder = TempFolder.GetNewTempFolderRoot();
 
-            if (Directory.Exists(RootFolder))
-                Directory.Delete(RootFolder, true);
-
-            Directory.CreateDirectory(RootFolder);
-
             PagesFolder = string.Format("{0}\\pages", RootFolder);
+            Directory.CreateDirectory(PagesFolder);
             DataFile = string.Format("{0}\\data.txt", RootFolder);
             InfoFile = string.Format("{0}\\info.txt", RootFolder);
             CustomSymbolsFile = string.Format("{0}\\custom_symbols.txt", RootFolder);

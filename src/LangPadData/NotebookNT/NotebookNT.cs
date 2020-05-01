@@ -26,14 +26,16 @@ namespace LangPadData.NotebookNT
         public List<PageNT> Pages { get; set; } = new List<PageNT>();
 
         // Dictionary
-        public DictionaryNT dictionary = new DictionaryNT();
+        public DictionaryNT Dictionary = new DictionaryNT();
 
-        public void Save(string filePath)
-        {
-
-        }
 
         public void Open(string filePath)
+        {
+            var tempFolder = new TempFolderNT();
+            var dataLines = KeyValue.ReadFile(tempFolder.DataFile);
+        }
+
+        public void Save(string filePath)
         {
 
         }

@@ -73,21 +73,21 @@ Module NotebookFileAccess
         PagesFolder = TempPath & "\pages\"
         Directory.CreateDirectory(PagesFolder)
 
-        Dim DataFile As New List(Of KVLine) From {
-            New KVLine(KVLineType.Comment, "Settings"),
-            New KVLine(KVLineType.KeyValue, "Title", Notebook.Title),
-            New KVLine(KVLineType.KeyValue, "Language", Notebook.Language),
-            New KVLine(KVLineType.KeyValue, "Author", Notebook.Author),
-            New KVLine(KVLineType.KeyValue, "Website", Notebook.Website),
-            New KVLine(KVLineType.KeyValue, "NTVersion", NotebookNT.NT_VERSION),
-            New KVLine(KVLineType.KeyValue, "LangPadVersion", GetAppDisplayName()),
-            New KVLine(KVLineType.Blank),
-            New KVLine(KVLineType.Comment, "Pages")
+        Dim DataFile As New List(Of KvLine) From {
+            New KvLine(KvLineType.Comment, "Settings"),
+            New KvLine(KvLineType.KeyValue, "Title", Notebook.Title),
+            New KvLine(KvLineType.KeyValue, "Language", Notebook.Language),
+            New KvLine(KvLineType.KeyValue, "Author", Notebook.Author),
+            New KvLine(KvLineType.KeyValue, "Website", Notebook.Website),
+            New KvLine(KvLineType.KeyValue, "NTVersion", NotebookNT.NT_VERSION),
+            New KvLine(KvLineType.KeyValue, "LangPadVersion", GetAppDisplayName()),
+            New KvLine(KvLineType.Blank),
+            New KvLine(KvLineType.Comment, "Pages")
         }
 
         For i = 0 To Notebook.Pages.Count - 1
             Dim Page = Notebook.Pages.Item(i)
-            DataFile.Add(New KVLine(KVLineType.KeyValue, "Page" & i, KeyValue.FormatString(Page.Title)))
+            DataFile.Add(New KvLine(KvLineType.KeyValue, "Page" & i, KeyValue.FormatString(Page.Title)))
 
             Dim Writer As StreamWriter
             Writer = New StreamWriter(PagesFolder & i & ".rtf")

@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace LangPadData
 {
 
     public static class KeyValue
     {
-        public static string[] ToLines(string data)
-        {
-            return data.Split(new string[] { Environment.NewLine, "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
-        }
-
         public static Dictionary<string, string> Read(string data)
         {
-            var lines = ToLines(data);
+            var lines = Lines.Get(data);
             var kvList = new Dictionary<string, string>();
 
             foreach (var line in lines)
@@ -28,7 +24,12 @@ namespace LangPadData
             return kvList;
         }
 
-        public static string Write(List<KVLine> lines, bool makeCompatible = true)
+        public static Dictionary<string, string> ReadFile(string filePath)
+        {
+            return Read(File.ReadAllText(filePath));
+        }
+
+        public static string Write(List<KvLine> lines, bool makeCompatible = true)
         {
             var result = "";
 
@@ -36,15 +37,20 @@ namespace LangPadData
             {
                 string formattedValue = (makeCompatible) ? FormatString(line.Value) : line.Value;
 
-                if (line.LineType == KVLineType.Comment)
+                if (line.LineType == KvLineType.Comment)
                     result = result.Insert(result.Length, string.Format("#{0}", line.Key));
-                else if (line.LineType == KVLineType.KeyValue)
+                else if (line.LineType == KvLineType.KeyValue)
                     result = result.Insert(result.Length, string.Format("{0}={1}", line.Key, formattedValue));
 
                 result = result.Insert(result.Length, Environment.NewLine);
             }
 
             return result;
+        }
+
+        public static void WriteFile(string filePath, List<KvLine> lines, bool makeCompatible = true)
+        {
+            File.WriteAllText(filePath, Write(lines, makeCompatible));
         }
 
         public static string Search(Dictionary<string, string> data, string key)
@@ -82,20 +88,20 @@ namespace LangPadData
         }
     }
 
-    public enum KVLineType
+    public enum KvLineType
     {
         Comment,
         KeyValue,
         Blank
     }
 
-    public struct KVLine
+    public struct KvLine
     {
-        public KVLineType LineType;
+        public KvLineType LineType;
         public string Key;
         public string Value;
 
-        public KVLine(KVLineType lineType, string key = "", string value = "")
+        public KvLine(KvLineType lineType, string key = "", string value = "")
         {
             LineType = lineType;
             Key = key;

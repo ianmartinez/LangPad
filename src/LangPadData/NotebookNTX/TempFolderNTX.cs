@@ -18,12 +18,8 @@ namespace LangPadData.NotebookNTX
         {
             RootFolder = TempFolder.GetNewTempFolderRoot();
 
-            if (Directory.Exists(RootFolder))
-                Directory.Delete(RootFolder, true);
-
-            Directory.CreateDirectory(RootFolder);
-
             PagesFolder = string.Format("{0}\\pages", RootFolder);
+            Directory.CreateDirectory(PagesFolder);
             DataFile = string.Format("{0}\\data.txt", RootFolder);
             PagesFile = string.Format("{0}\\pages.txt", RootFolder);
             InfoFile = string.Format("{0}\\info.txt", RootFolder);
