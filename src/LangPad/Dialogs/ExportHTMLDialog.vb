@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Text
+Imports LangPadData.NotebookNT
 
 Public Class ExportHtmlDialog
     Public FilePath As String = ""
@@ -11,9 +12,9 @@ Public Class ExportHtmlDialog
 
     Private Sub OkDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OkDialogButton.Click
         Dim Writer As New StreamWriter(New FileStream(FilePath, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
-        Dim SortedWords As List(Of DictionaryWord) = New List(Of DictionaryWord)
+        Dim SortedWords = New List(Of WordNT)
 
-        For Each Word As DictionaryWord In CurrentNotebook.WordDictionary.Words
+        For Each Word As WordNT In CurrentNotebook.Dictionary.Words
             SortedWords.Add(Word)
         Next
 
@@ -47,7 +48,7 @@ Public Class ExportHtmlDialog
         End If
 
         For i As Integer = 0 To SortedWords.Count - 1
-            Dim word As DictionaryWord = SortedWords(i)
+            Dim word As WordNT = SortedWords(i)
             RowList += RowIndent + "<tr>" + Environment.NewLine
             RowList += If(WordColCheck.Checked, RowDataIndent + String.Format("<td>{0}</td>", word.Word) + Environment.NewLine, "")
             RowList += If(PronunciationColCheck.Checked, RowDataIndent + String.Format("<td>{0}</td>", word.Pronunciation) + Environment.NewLine, "")

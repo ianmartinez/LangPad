@@ -1,4 +1,6 @@
 ﻿Imports System.IO
+Imports LangPadData
+Imports LangPadData.NotebookNT
 Imports LangPadUI
 
 ''' <summary>
@@ -22,16 +24,16 @@ Module NotebookController
     ''' </summary>
     Public MovingPage As Boolean = False
 
-    Private _Notebook As New NotebookFile
+    Private _Notebook As New NotebookNT
     ''' <summary>
     ''' The document open in this instance of LangPad.
     ''' </summary>
-    Public Property CurrentNotebook As NotebookFile
+    Public Property CurrentNotebook As NotebookNT
         Get
             Return _Notebook
         End Get
 
-        Set(value As NotebookFile)
+        Set(value As NotebookNT)
             _Notebook = value
             LoadNotebook()
         End Set
@@ -76,8 +78,8 @@ Module NotebookController
         MainForm.NotebookEditorPanel.PagesListBox.Items.Clear()
 
         ' Process each page into the UI
-        For Each Page As NotebookPage In CurrentNotebook.Pages
-            Dim PageRtb = CreateNotebookRtb(Page.RTF)
+        For Each Page As PageNT In CurrentNotebook.Pages
+            Dim PageRtb = CreateNotebookRtb(Page.Rtf)
             RtbList.Add(PageRtb)
             MainForm.NotebookEditorPanel.PagesListBox.Items.Add(Page.Title)
         Next
@@ -153,7 +155,7 @@ Module NotebookController
         BeginOperation(DictionaryForm)
 
         DictionaryForm.DictionaryGrid.Rows.Clear()
-        For Each Word As DictionaryWord In CurrentNotebook.WordDictionary.Words
+        For Each Word As WordNT In CurrentNotebook.Dictionary.Words
             Dim Row As New DataGridViewRow
             Row.CreateCells(DictionaryForm.DictionaryGrid)
             Row.Cells.Item(0).Value = Word.Word
@@ -228,7 +230,7 @@ Module NotebookController
         If Not CurrentNotebook.Pages.Count = RtbList.Count Then Exit Sub ' Opening document
 
         For i = 0 To RtbList.Count - 1
-            CurrentNotebook.Pages.Item(i).RTF = RtbList.Item(i).Rtf
+            CurrentNotebook.Pages.Item(i).Rtf = RtbList.Item(i).Rtf
         Next
     End Sub
 
@@ -265,9 +267,9 @@ Module NotebookController
         If Not PageInRange(CurrentPageIndex) Then Index = _Notebook.Pages.Count
 
         ' Create a new page
-        Dim NewPage As New NotebookPage With {
+        Dim NewPage As New PageNT With {
             .Title = Title,
-            .RTF = Rtf
+            .Rtf = Rtf
         }
         _Notebook.Pages.Insert(Index, NewPage)
 
@@ -355,7 +357,7 @@ Module NotebookController
             Dim SourcePage = CurrentNotebook.Pages(SourceIndex)
             Dim NewPageIndex = SourceIndex + 1
             If NewTitle Is Nothing Then NewTitle = SourcePage.Title
-            InsertPage(NewPageIndex, NewTitle, SourcePage.RTF)
+            InsertPage(NewPageIndex, NewTitle, SourcePage.Rtf)
             CurrentNotebook.Modified = True
         End If
     End Sub
@@ -388,7 +390,7 @@ Module NotebookController
             MovingPage = True
 
             MoveItem(Of ExtendedRichTextBox)(RtbList, OldIndex, NewIndex)
-            MoveItem(Of NotebookPage)(CurrentNotebook.Pages, OldIndex, NewIndex)
+            MoveItem(Of PageNT)(CurrentNotebook.Pages, OldIndex, NewIndex)
             MoveItem(Of String)(MainForm.NotebookEditorPanel.PagesListBox.Items, OldIndex, NewIndex)
 
             CurrentNotebook.Modified = True

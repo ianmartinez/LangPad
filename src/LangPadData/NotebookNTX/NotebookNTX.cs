@@ -21,7 +21,7 @@ namespace LangPadData.NotebookNTX
 
         public void Save(string filePath)
         {
-            var temp = new TempFolderNTX();
+            var temp = new TempFolderNTX(true);
 
             var dataFile = new List<KvLine>()
             {

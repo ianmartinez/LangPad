@@ -184,7 +184,6 @@
     <Compile Include="Notebook\CharacterEditor.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Notebook\DictionaryFile.vb" />
     <Compile Include="DictionaryForm.Designer.vb">
       <DependentUpon>DictionaryForm.vb</DependentUpon>
     </Compile>
@@ -227,7 +226,6 @@
     <Compile Include="Notebook\NotebookEditor.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Notebook\NotebookFile.vb" />
     <Compile Include="SplashScreenForm.Designer.vb">
       <DependentUpon>SplashScreenForm.vb</DependentUpon>
     </Compile>

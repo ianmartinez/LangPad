@@ -1,6 +1,7 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports System.Text
+Imports LangPadData.NotebookNT
 Imports LangPadUI
 Imports LangPadUI.Themes
 
@@ -68,9 +69,9 @@ Public Class DictionaryForm
     End Sub
 
     Public Sub SaveDictionary()
-        CurrentNotebook.WordDictionary.Words.Clear()
+        CurrentNotebook.Dictionary.Words.Clear()
         For i = 0 To DictionaryGrid.RowCount - 1
-            Dim NewWord As New DictionaryWord With {
+            Dim NewWord As New WordNT With {
                 .Word = DictionaryGrid.Rows.Item(i).Cells.Item(0).Value,
                 .Pronunciation = DictionaryGrid.Rows.Item(i).Cells.Item(1).Value,
                 .Definition = DictionaryGrid.Rows.Item(i).Cells.Item(2).Value,
@@ -82,7 +83,7 @@ Public Class DictionaryForm
             If NewWord.Definition = Nothing Then NewWord.Definition = ""
             If NewWord.Notes = Nothing Then NewWord.Notes = ""
 
-            CurrentNotebook.WordDictionary.Words.Add(NewWord)
+            CurrentNotebook.Dictionary.Words.Add(NewWord)
         Next
     End Sub
 
@@ -113,9 +114,9 @@ Public Class DictionaryForm
     Private Sub OpenToolStripButton_Click(sender As Object, e As EventArgs) Handles OpenToolStripButton.Click
         If OpenDialog.ShowDialog = DialogResult.OK Then
             If Path.GetExtension(OpenDialog.FileName).ToLower() = ".csv" Then
-                CurrentNotebook.WordDictionary.OpenCSV(OpenDialog.FileName)
+                CurrentNotebook.Dictionary.OpenCsv(OpenDialog.FileName)
             Else
-                CurrentNotebook.WordDictionary.Open(OpenDialog.FileName)
+                CurrentNotebook.Dictionary.Open(OpenDialog.FileName)
             End If
 
             RefreshDictionary()
@@ -148,7 +149,7 @@ Public Class DictionaryForm
                 Next
                 Writer.Close()
             Else
-                CurrentNotebook.WordDictionary.Save(SaveDialog.FileName)
+                CurrentNotebook.Dictionary.Save(SaveDialog.FileName)
             End If
         End If
     End Sub
@@ -208,13 +209,13 @@ Public Class DictionaryForm
         Dim NormalizedFindText As String = FindTextBox.Text.ToLower()
 
         If WordRadio.Checked Then
-            For Each Word As DictionaryWord In CurrentNotebook.WordDictionary.Words
+            For Each Word As WordNT In CurrentNotebook.Dictionary.Words
                 Matches = If(StartsWithCheck.Checked, Word.Word.ToLower().StartsWith(NormalizedFindText), Word.Word.ToLower().Equals(NormalizedFindText))
                 If Matches Then Exit For
                 CurrentPos += 1
             Next
         Else
-            For Each Word As DictionaryWord In CurrentNotebook.WordDictionary.Words
+            For Each Word As WordNT In CurrentNotebook.Dictionary.Words
                 Matches = If(StartsWithCheck.Checked, Word.Definition.ToLower().StartsWith(NormalizedFindText), Word.Definition.ToLower().Equals(NormalizedFindText))
                 If Matches Then Exit For
                 CurrentPos += 1
@@ -236,13 +237,13 @@ Public Class DictionaryForm
     Private Sub DictionaryForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         CharEditWindow.TargetForm = Me
         CharEditWindow.GetCurrentTexbox = Function()
-                                          If DictionaryGrid.CurrentCell IsNot Nothing Then
-                                              DictionaryGrid.Focus()
-                                              DictionaryGrid.BeginEdit(False)
-                                          End If
+                                              If DictionaryGrid.CurrentCell IsNot Nothing Then
+                                                  DictionaryGrid.Focus()
+                                                  DictionaryGrid.BeginEdit(False)
+                                              End If
 
-                                          Return CurrentTextbox
-                                      End Function
+                                              Return CurrentTextbox
+                                          End Function
     End Sub
 
     Private Sub ResetFontToolStripButton_Click(sender As Object, e As EventArgs) Handles ResetFontToolStripButton.Click

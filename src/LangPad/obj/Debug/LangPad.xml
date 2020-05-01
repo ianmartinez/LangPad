@@ -508,6 +508,13 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Save the pages in the current notebook.
  </summary>
 </member>
+<member name="M:LangPad.NotebookController.SaveNotebook(System.String)">
+ <summary>
+ Save the current notebook to a path.
+ </summary>
+ 
+ <param name="FilePath">The path to save the current notebook to.</param>
+</member>
 <member name="M:LangPad.NotebookController.InsertPage(System.Int32,System.String,System.String)">
  <summary>
  Insert a page to the current notebook.

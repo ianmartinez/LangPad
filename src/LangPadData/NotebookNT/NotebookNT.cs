@@ -154,8 +154,11 @@ namespace LangPadData.NotebookNT
             // Write dictionary to the disk
             Dictionary.Save(tempFolder.DictionaryFile);
 
-            // Create zip file containing the temp folder's contents
+            // Create ZIP file containing the temp folder's contents
             ZipFile.CreateFromDirectory(tempFolder.RootFolder, filePath, CompressionLevel.Fastest, false);
+
+            // Delete temp directory
+            Directory.Delete(tempFolder.RootFolder, true);
         }
     }
 }
