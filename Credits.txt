@@ -1,0 +1,8 @@
+   • Taiga Icons
+      A fork of the elementary icons for use in applications.
+      https://github.com/ianmartinez/taiga-icons
+      https://github.com/elementary/icons
+	  
+   • Oxygen Icons
+      Used for the file icon.
+      https://github.com/KDE/oxygen-icons
