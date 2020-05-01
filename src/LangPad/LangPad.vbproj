@@ -380,7 +380,7 @@
       <Project>{da608ab5-9ba3-4fa3-b347-eab5e040f9c8}</Project>
       <Name>LangPadData</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LangPadSupport\LangPadUI.csproj">
+    <ProjectReference Include="..\LangPadUI\LangPadUI.csproj">
       <Project>{8bd8a7f1-c880-41cc-8485-b132ddad924a}</Project>
       <Name>LangPadUI</Name>
     </ProjectReference>
