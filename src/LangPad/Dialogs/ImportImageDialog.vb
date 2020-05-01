@@ -14,8 +14,14 @@
             ImportedImage = value
             WidthNud.Value = ImportedImage.Width
             HeightNud.Value = ImportedImage.Height
-            RenderAdjustedImage(True)
             Updating = False
+
+            ' The WinForms RTB control does not handle images, 
+            ' especially larger ones, gracefully. Use images
+            ' larger than 1080p at your own peril.
+            WidthNud.Value = Math.Min(WidthNud.Value, 1920)
+            LockAspectCheckBox.Checked = True
+            RenderAdjustedImage(True)
         End Set
     End Property
 

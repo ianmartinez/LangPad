@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZcgFz/mmxj5mfmOeyxTrzQkejuLsJLLfRqQlwCxc6ks=</dsig:DigestValue>
+        <dsig:DigestValue>V7BQ/zbSqjUgUOyRZfddThpnKVC77OTjU8o1e6g0JVk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -123,13 +123,13 @@
       <dsig:DigestValue>PZTieNIUGwJVMXog2xhtar9WX73vBVwKFdd9JExlosI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="FileIcon.ico" size="148461">
+  <file name="FileIcon.ico" size="155319">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>rjjoBWEWYYtHDZiJZkniK4TfeX/qznSpMsaXDTfbBmg=</dsig:DigestValue>
+      <dsig:DigestValue>Cvm5mG9ym8N0K3DKPyXvFn5066K0S860+fPr91VbHuk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="LangPad.exe.config" size="3321">
