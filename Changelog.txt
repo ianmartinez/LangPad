@@ -8,6 +8,7 @@ Version 11.0 (June 30)
    • Display shortcut keys on menus
    • Added tons of shortcut keys to make all across the program
    **• TAB to increase indent and SHIFT + TAB to decrease indent when at start of line
+   **• Icons are now split into three sizes: Small, Medium, and Large
    • Allow the adjustment of bullet indent
    • Support hanging indent
    • Reset indent menu option
