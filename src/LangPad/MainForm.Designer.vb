@@ -371,7 +371,7 @@ Partial Class MainForm
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.CurrentPageContainerBorder)
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.FindReplaceDialog)
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.ColorPanel)
-        Me.SplitLayoutPanel.Size = New System.Drawing.Size(1356, 840)
+        Me.SplitLayoutPanel.Size = New System.Drawing.Size(1356, 829)
         Me.SplitLayoutPanel.SplitterDistance = 340
         Me.SplitLayoutPanel.SplitterWidth = 3
         Me.SplitLayoutPanel.TabIndex = 1
@@ -384,7 +384,7 @@ Partial Class MainForm
         Me.PropertiesContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PropertiesContainerPanel.Location = New System.Drawing.Point(0, 0)
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
-        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(340, 840)
+        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(340, 829)
         Me.PropertiesContainerPanel.TabIndex = 13
         '
         'CurrentPageContainerBorder
@@ -395,7 +395,7 @@ Partial Class MainForm
         Me.CurrentPageContainerBorder.Location = New System.Drawing.Point(0, 172)
         Me.CurrentPageContainerBorder.Name = "CurrentPageContainerBorder"
         Me.CurrentPageContainerBorder.Padding = New System.Windows.Forms.Padding(1)
-        Me.CurrentPageContainerBorder.Size = New System.Drawing.Size(1013, 668)
+        Me.CurrentPageContainerBorder.Size = New System.Drawing.Size(1013, 657)
         Me.CurrentPageContainerBorder.TabIndex = 76
         '
         'CurrentPageContainer
@@ -405,7 +405,7 @@ Partial Class MainForm
         Me.CurrentPageContainer.Location = New System.Drawing.Point(1, 1)
         Me.CurrentPageContainer.Name = "CurrentPageContainer"
         Me.CurrentPageContainer.Padding = New System.Windows.Forms.Padding(3)
-        Me.CurrentPageContainer.Size = New System.Drawing.Size(1011, 666)
+        Me.CurrentPageContainer.Size = New System.Drawing.Size(1011, 655)
         Me.CurrentPageContainer.TabIndex = 75
         '
         'FindReplaceDialog
@@ -935,17 +935,17 @@ Partial Class MainForm
         'MainToolStripContainer.ContentPanel
         '
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.SplitLayoutPanel)
-        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1356, 840)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1356, 829)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'MainToolStripContainer.LeftToolStripPanel
         '
-        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 33)
+        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 36)
         Me.MainToolStripContainer.Name = "MainToolStripContainer"
         '
         'MainToolStripContainer.RightToolStripPanel
         '
-        Me.MainToolStripContainer.Size = New System.Drawing.Size(1356, 911)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(1356, 908)
         Me.MainToolStripContainer.TabIndex = 74
         '
         'MainToolStripContainer.TopToolStripPanel
@@ -960,7 +960,7 @@ Partial Class MainForm
         Me.DataToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel, Me.ToolStripSeparator26, Me.CurrentLineToolStripLabel, Me.ToolStripSeparator11, Me.PageCountLabel, Me.ToolStripSeparator12, Me.ToolStripLabel1, Me.ThemeCombo})
         Me.DataToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DataToolStrip.Name = "DataToolStrip"
-        Me.DataToolStrip.Size = New System.Drawing.Size(1356, 30)
+        Me.DataToolStrip.Size = New System.Drawing.Size(1356, 38)
         Me.DataToolStrip.Stretch = True
         Me.DataToolStrip.TabIndex = 2
         '
@@ -1296,7 +1296,7 @@ Partial Class MainForm
         Me.MainMenu.Location = New System.Drawing.Point(0, 0)
         Me.MainMenu.Name = "MainMenu"
         Me.MainMenu.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MainMenu.Size = New System.Drawing.Size(1356, 33)
+        Me.MainMenu.Size = New System.Drawing.Size(1356, 36)
         Me.MainMenu.TabIndex = 75
         Me.MainMenu.Text = "MenuStrip1"
         '
@@ -2141,7 +2141,7 @@ Partial Class MainForm
         Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
         Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
         Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
-        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 840)
+        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 829)
         Me.NotebookEditorPanel.TabIndex = 0
         '
         'MainForm
