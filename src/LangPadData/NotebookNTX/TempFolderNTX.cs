@@ -14,23 +14,24 @@ namespace LangPadData.NotebookNTX
         public readonly string DictionaryFile;
         public readonly string StylesheetFile;
 
-        public TempFolderNTX()
+        public TempFolderNTX(bool createSubdirs)
         {
             RootFolder = TempFolder.GetNewTempFolderRoot();
 
-            PagesFolder = string.Format("{0}\\pages", RootFolder);
-            Directory.CreateDirectory(PagesFolder);
-            DataFile = string.Format("{0}\\data.txt", RootFolder);
-            PagesFile = string.Format("{0}\\pages.txt", RootFolder);
-            InfoFile = string.Format("{0}\\info.txt", RootFolder);
-            CharactersFile = string.Format("{0}\\characters.txt", RootFolder);
-            DictionaryFile = string.Format("{0}\\dictionary.txt", RootFolder);
-            StylesheetFile = string.Format("{0}\\style.css", RootFolder);
+            PagesFolder = Path.Combine(RootFolder, "pages");
+            if (createSubdirs)
+                Directory.CreateDirectory(PagesFolder);
+            DataFile = Path.Combine(RootFolder, "data.txt");
+            PagesFile = Path.Combine(RootFolder, "pages.txt");
+            InfoFile = Path.Combine(RootFolder, "info.txt");
+            CharactersFile = Path.Combine(RootFolder, "characters.txt");
+            DictionaryFile = Path.Combine(RootFolder, "dictionary.txt");
+            StylesheetFile = Path.Combine(RootFolder, "style.css");
         }
 
         public string GetPagePath(int pageIndex)
         {
-            return string.Format("{0}\\{1}.html", PagesFolder, pageIndex.ToString());
+            return Path.Combine(PagesFolder, pageIndex.ToString() + ".html");
         }
     }
 }
