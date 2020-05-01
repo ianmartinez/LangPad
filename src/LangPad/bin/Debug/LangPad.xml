@@ -426,12 +426,6 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Handles operations on the current notebook used by LangPad.
  </summary>
 </member>
-<member name="F:LangPad.NotebookController.NTVersion">
- <summary>
- The internal file version for notebook (*.nt) files
- created with this version.
- </summary>
-</member>
 <member name="F:LangPad.NotebookController.FirstTabUpdate">
  <summary>
  If the first tab has been updated on the main form.

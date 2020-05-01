@@ -6,3 +6,4 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.0
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.0\LangPadData.AssemblyInfo.cs
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.0\LangPadData.dll
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.0\LangPadData.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.0\LangPadData.csprojAssemblyReference.cache

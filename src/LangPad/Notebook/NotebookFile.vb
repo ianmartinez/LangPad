@@ -73,21 +73,21 @@ Module NotebookFileAccess
         PagesFolder = TempPath & "\pages\"
         Directory.CreateDirectory(PagesFolder)
 
-        Dim DataFile As New List(Of KeyValue.Line) From {
-            New KeyValue.Line(KeyValue.LineType.Comment, "Settings"),
-            New KeyValue.Line(KeyValue.LineType.KeyValue, "Title", Notebook.Title),
-            New KeyValue.Line(KeyValue.LineType.KeyValue, "Language", Notebook.Language),
-            New KeyValue.Line(KeyValue.LineType.KeyValue, "Author", Notebook.Author),
-            New KeyValue.Line(KeyValue.LineType.KeyValue, "Website", Notebook.Website),
-            New KeyValue.Line(KeyValue.LineType.KeyValue, "NTVersion", NotebookNT.NT_VERSION),
-            New KeyValue.Line(KeyValue.LineType.KeyValue, "LangPadVersion", GetAppDisplayName()),
-            New KeyValue.Line(KeyValue.LineType.Blank),
-            New KeyValue.Line(KeyValue.LineType.Comment, "Pages")
+        Dim DataFile As New List(Of KVLine) From {
+            New KVLine(KVLineType.Comment, "Settings"),
+            New KVLine(KVLineType.KeyValue, "Title", Notebook.Title),
+            New KVLine(KVLineType.KeyValue, "Language", Notebook.Language),
+            New KVLine(KVLineType.KeyValue, "Author", Notebook.Author),
+            New KVLine(KVLineType.KeyValue, "Website", Notebook.Website),
+            New KVLine(KVLineType.KeyValue, "NTVersion", NotebookNT.NT_VERSION),
+            New KVLine(KVLineType.KeyValue, "LangPadVersion", GetAppDisplayName()),
+            New KVLine(KVLineType.Blank),
+            New KVLine(KVLineType.Comment, "Pages")
         }
 
         For i = 0 To Notebook.Pages.Count - 1
             Dim Page = Notebook.Pages.Item(i)
-            DataFile.Add(New KeyValue.Line(KeyValue.LineType.KeyValue, "Page" & i, KeyValue.FormatString(Page.Title)))
+            DataFile.Add(New KVLine(KVLineType.KeyValue, "Page" & i, KeyValue.FormatString(Page.Title)))
 
             Dim Writer As StreamWriter
             Writer = New StreamWriter(PagesFolder & i & ".rtf")

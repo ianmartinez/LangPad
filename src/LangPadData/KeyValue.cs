@@ -3,29 +3,9 @@ using System.Collections.Generic;
 
 namespace LangPadData
 {
+
     public static class KeyValue
     {
-        public enum LineType
-        {
-            Comment,
-            KeyValue,
-            Blank
-        }
-
-        public struct Line
-        {
-            public LineType LineType;
-            public string Key;
-            public string Value;
-
-            public Line(LineType lineType, string key = "", string value = "")
-            {
-                LineType = lineType;
-                Key = key;
-                Value = value;
-            }
-        }
-
         public static string[] ToLines(string data)
         {
             return data.Split(new string[] { Environment.NewLine, "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
@@ -33,10 +13,10 @@ namespace LangPadData
 
         public static Dictionary<string, string> Read(string data)
         {
-            string[] lines = ToLines(data);
-            Dictionary<string, string> kvList = new Dictionary<string, string>();
+            var lines = ToLines(data);
+            var kvList = new Dictionary<string, string>();
 
-            foreach (string line in lines)
+            foreach (var line in lines)
             {
                 // Skip if comment or invalid
                 if (line.StartsWith("!") || line.StartsWith("#") || !line.Contains("="))
@@ -48,16 +28,17 @@ namespace LangPadData
             return kvList;
         }
 
-        public static string Write(List<Line> lines, bool makeCompatible = true)
+        public static string Write(List<KVLine> lines, bool makeCompatible = true)
         {
-            string result = "";
-            foreach (Line line in lines)
+            var result = "";
+
+            foreach (var line in lines)
             {
                 string formattedValue = (makeCompatible) ? FormatString(line.Value) : line.Value;
 
-                if (line.LineType == LineType.Comment)
+                if (line.LineType == KVLineType.Comment)
                     result = result.Insert(result.Length, string.Format("#{0}", line.Key));
-                else if (line.LineType == LineType.KeyValue)
+                else if (line.LineType == KVLineType.KeyValue)
                     result = result.Insert(result.Length, string.Format("{0}={1}", line.Key, formattedValue));
 
                 result = result.Insert(result.Length, Environment.NewLine);
@@ -100,4 +81,26 @@ namespace LangPadData
             return text;
         }
     }
+
+    public enum KVLineType
+    {
+        Comment,
+        KeyValue,
+        Blank
+    }
+
+    public struct KVLine
+    {
+        public KVLineType LineType;
+        public string Key;
+        public string Value;
+
+        public KVLine(KVLineType lineType, string key = "", string value = "")
+        {
+            LineType = lineType;
+            Key = key;
+            Value = value;
+        }
+    }
+
 }

@@ -45,16 +45,16 @@ End Class
 
 Module DictionaryFileAccess
     Sub Save(ByVal FilePath As String, ByVal Dictionary As DictionaryFile)
-        Dim DictionaryString As New List(Of KeyValue.Line) From {
-            New KeyValue.Line(KeyValue.LineType.Comment, "Dictionary"),
-            New KeyValue.Line(KeyValue.LineType.Comment, "LangPad Version:" & GetAppDisplayName())
+        Dim DictionaryString As New List(Of KVLine) From {
+            New KVLine(KVLineType.Comment, "Dictionary"),
+            New KVLine(KVLineType.Comment, "LangPad Version:" & GetAppDisplayName())
         }
 
         For i = 0 To Dictionary.Words.Count - 1
             Dim CurrentWord As DictionaryWord = Dictionary.Words.Item(i)
             Dim Value As String = String.Format("{0}|{1}|{2}|{3}", KeyValue.FormatString(CurrentWord.Word), KeyValue.FormatString(CurrentWord.Pronunciation),
                                                 KeyValue.FormatString(CurrentWord.Definition), KeyValue.FormatString(CurrentWord.Notes))
-            DictionaryString.Add(New KeyValue.Line(KeyValue.LineType.KeyValue, "Word " & i, Value))
+            DictionaryString.Add(New KVLine(KVLineType.KeyValue, "Word " & i, Value))
         Next
 
         File.WriteAllText(FilePath, KeyValue.Write(DictionaryString))

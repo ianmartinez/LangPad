@@ -24,25 +24,25 @@ namespace LangPadData.NotebookNTX
             var temp = new TempFolderNTX();
             Directory.CreateDirectory(temp.PagesFolder);
 
-            var dataFile = new List<Line>()
+            var dataFile = new List<KVLine>()
             {
-                new Line(LineType.KeyValue, "title", Title),
-                new Line(LineType.KeyValue, "language", Language),
-                new Line(LineType.KeyValue, "author", Author),
-                new Line(LineType.KeyValue, "website", Website),
-                new Line(LineType.KeyValue, "specVersion", SpecVersion.ToString())
+                new KVLine(KVLineType.KeyValue, "title", Title),
+                new KVLine(KVLineType.KeyValue, "language", Language),
+                new KVLine(KVLineType.KeyValue, "author", Author),
+                new KVLine(KVLineType.KeyValue, "website", Website),
+                new KVLine(KVLineType.KeyValue, "specVersion", SpecVersion.ToString())
             };
 
-            var pagesFile = new List<Line>();
+            var pagesFile = new List<KVLine>();
             for (var i = 0; i < Pages.Count; i++)
             {
                 var page = Pages[i];
 
                 if (i > 0)
-                    pagesFile.Add(new Line(LineType.Blank));
+                    pagesFile.Add(new KVLine(KVLineType.Blank));
 
-                pagesFile.Add(new Line(LineType.Comment, "Page " + i));
-                pagesFile.Add(new Line(LineType.KeyValue, i + ".title", page.Title));
+                pagesFile.Add(new KVLine(KVLineType.Comment, "Page " + i));
+                pagesFile.Add(new KVLine(KVLineType.KeyValue, i + ".title", page.Title));
                 File.WriteAllText(temp.GetPagePath(i), page.Content);
             }
 
