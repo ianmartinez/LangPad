@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using static ThornWriter.NotebookFile.KeyValue;
+using static LangPadData.KeyValue;
 
-namespace ThornWriter.NotebookFile
+namespace LangPadData.NotebookFile
 {
     /* 
         Serialize as:

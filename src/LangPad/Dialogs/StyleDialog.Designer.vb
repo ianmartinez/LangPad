@@ -25,9 +25,9 @@ Partial Class StyleDialog
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StyleDialog))
         Me.PreviewRtb = New System.Windows.Forms.RichTextBox()
-        Me.PreviewPanel = New LangPadSupport.DoubleBufferedPanel()
+        Me.PreviewPanel = New LangPadUI.DoubleBufferedPanel()
         Me.FontButton = New System.Windows.Forms.Button()
-        Me.ColorButton = New LangPadSupport.StylizedColorButton()
+        Me.ColorButton = New LangPadUI.ColorButton()
         Me.RightButton = New System.Windows.Forms.Button()
         Me.CenterButton = New System.Windows.Forms.Button()
         Me.LeftButton = New System.Windows.Forms.Button()
@@ -38,7 +38,7 @@ Partial Class StyleDialog
         Me.OffsetNud = New System.Windows.Forms.NumericUpDown()
         Me.OffsetButton = New System.Windows.Forms.Button()
         Me.MainToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.HighlightButton = New LangPadSupport.StylizedColorButton()
+        Me.HighlightButton = New LangPadUI.ColorButton()
         Me.HangingIndentButton = New System.Windows.Forms.Button()
         Me.DeleteAllButton = New System.Windows.Forms.Button()
         Me.SaveButton = New System.Windows.Forms.Button()
@@ -346,14 +346,14 @@ Partial Class StyleDialog
 
     End Sub
     Friend WithEvents PreviewRtb As RichTextBox
-    Friend WithEvents PreviewPanel As LangPadSupport.DoubleBufferedPanel
-    Friend WithEvents ColorButton As LangPadSupport.StylizedColorButton
+    Friend WithEvents PreviewPanel As LangPadUI.DoubleBufferedPanel
+    Friend WithEvents ColorButton As LangPadUI.ColorButton
     Friend WithEvents IndentNud As NumericUpDown
     Friend WithEvents OpenDialog As OpenFileDialog
     Friend WithEvents SaveDialog As SaveFileDialog
     Friend WithEvents OffsetNud As NumericUpDown
     Friend WithEvents MainToolTip As ToolTip
-    Friend WithEvents HighlightButton As LangPadSupport.StylizedColorButton
+    Friend WithEvents HighlightButton As LangPadUI.ColorButton
     Friend WithEvents FontButton As Button
     Friend WithEvents RightButton As Button
     Friend WithEvents CenterButton As Button

@@ -1,8 +1,8 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports System.IO
 Imports System.Text
-Imports LangPadSupport
-Imports LangPadSupport.Themes
+Imports LangPadUI
+Imports LangPadUI.Themes
 
 Public Class DictionaryForm
     Dim CurrentTextbox As TextBox

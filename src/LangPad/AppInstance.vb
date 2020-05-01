@@ -1,5 +1,5 @@
-﻿Imports LangPadSupport
-Imports LangPadSupport.Themes
+﻿Imports LangPadUI
+Imports LangPadUI.Themes
 
 ''' <summary>
 ''' Contains information about the current instance of the application.

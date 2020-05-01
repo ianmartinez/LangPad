@@ -1,6 +1,6 @@
 ﻿Imports System.Drawing.Drawing2D
-Imports LangPadSupport
-Imports LangPadSupport.Themes
+Imports LangPadUI
+Imports LangPadUI.Themes
 
 Public Class RtfEditorForm
     Public Color1 As Color

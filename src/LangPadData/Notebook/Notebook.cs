@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
-using static ThornWriter.NotebookFile.KeyValue;
+using static LangPadData.KeyValue;
 
-namespace ThornWriter.NotebookFile
+namespace LangPadData.NotebookFile
 {
     public class Notebook
     {

@@ -8,7 +8,7 @@ using System.Drawing.Imaging;
 using System.Collections.Specialized;
 using System.Runtime.InteropServices;
 
-namespace LangPadSupport
+namespace LangPadUI
 {
     // Most of this is not my own code:
     // This entire file is made from various projects on CodeProject smashed together along with some of my own code

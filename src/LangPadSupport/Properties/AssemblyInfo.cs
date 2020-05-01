@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LangPadSupport")]
+[assembly: AssemblyTitle("LangPadUI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LangPadSupport")]
+[assembly: AssemblyProduct("LangPadUI")]
 [assembly: AssemblyCopyright("Copyright ©  2020 Ian Martinez")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

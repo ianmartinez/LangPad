@@ -1,7 +1,8 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports System.IO
-Imports LangPadSupport
-Imports LangPadSupport.Themes
+Imports LangPadData
+Imports LangPadUI
+Imports LangPadUI.Themes
 
 Public Class MainForm
     Public WithEvents CurrentRtb As New ExtendedRichTextBox()
@@ -86,7 +87,7 @@ Public Class MainForm
 
         ' Add handlers for the color panel buttons
         For Each ColorButton As Button In ColorLayoutPanel.Controls
-            If TypeOf ColorButton Is StylizedColorButton Then
+            If TypeOf ColorButton Is ColorButton Then
                 ColorButton.ImageAlign = ContentAlignment.MiddleCenter
                 AddHandler ColorButton.Click, AddressOf ColorButton_Click
             End If
@@ -509,18 +510,18 @@ Public Class MainForm
             If SaveDialog.FileName.EndsWith(".thw") Then
                 MessageBox.Show("This file is being exported to the new Thorn Writer format. This is not compatible with LangPad.")
 
-                Dim ThornNotebook = New ThornWriter.NotebookFile.Notebook With {
+                Dim ThornNotebook = New LangPadData.NotebookFile.Notebook With {
                     .Title = CurrentNotebook.Title,
                     .Language = CurrentNotebook.Language,
                     .Author = CurrentNotebook.Author,
                     .Website = CurrentNotebook.Website,
                     .Info = CurrentNotebook.Info,
                     .Stylesheet = "",
-                    .Characters = ThornWriter.NotebookFile.KeyValue.ToLines(CurrentNotebook.CustomSymbols).ToList()
+                    .Characters = KeyValue.ToLines(CurrentNotebook.CustomSymbols).ToList()
                 }
 
                 For Each Page In CurrentNotebook.Pages
-                    Dim ThornPage As New ThornWriter.NotebookFile.Page With {
+                    Dim ThornPage As New LangPadData.NotebookFile.Page With {
                         .Title = Page.Title,
                         .Content = RtfPipe.Rtf.ToHtml(Page.RTF).ToString()
                     }
@@ -529,7 +530,7 @@ Public Class MainForm
                 Next
 
                 For Each Word In CurrentNotebook.WordDictionary.Words
-                    Dim ThornWord As New ThornWriter.NotebookFile.DictionaryWord With {
+                    Dim ThornWord As New LangPadData.NotebookFile.DictionaryWord With {
                         .Definition = Word.Definition,
                         .Notes = Word.Notes,
                         .Pronunciation = Word.Pronunciation,
@@ -998,7 +999,7 @@ Public Class MainForm
     End Sub
 
     Private Sub ColorButton_Click(sender As Object, e As EventArgs)
-        Dim ColorButton As StylizedColorButton = CType(sender, StylizedColorButton)
+        Dim ColorButton As ColorButton = CType(sender, ColorButton)
 
         If TextColorRadio.Checked Then ' Text Color
             CurrentRtb.SelectionColor = ColorButton.Color

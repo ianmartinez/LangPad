@@ -3,9 +3,9 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace LangPadSupport
+namespace LangPadUI
 {
-    public class StylizedColorButton : Button
+    public class ColorButton : Button
     {
         private ColorDialog dlgColor;
         public event ColorChangedEventHandler ColorChanged;
@@ -41,7 +41,7 @@ namespace LangPadSupport
             ColorGraphics.DrawRectangle(new Pen(new SolidBrush(Color.FromArgb(100, 0, 0, 0))), ColorRectangle);
         }
 
-        public StylizedColorButton()
+        public ColorButton()
         {
             InitializeComponent();
             TextAlign = ContentAlignment.MiddleRight;
@@ -49,7 +49,7 @@ namespace LangPadSupport
             MinimumSize = new Size(32, 32);
         }
 
-        private void StylizedColorButton_Resize(object sender, EventArgs e)
+        private void ColorButton_Resize(object sender, EventArgs e)
         {
             GenerateColorBitmap();
             Image = ColorBitmap;
@@ -60,10 +60,10 @@ namespace LangPadSupport
             dlgColor = new ColorDialog();
             SuspendLayout();
             dlgColor.FullOpen = true;
-            MouseDown += StylizedColorButton_MouseDown;
+            MouseDown += ColorButton_MouseDown;
         }
 
-        private void StylizedColorButton_MouseDown(object sender, MouseEventArgs e)
+        private void ColorButton_MouseDown(object sender, MouseEventArgs e)
         {
             if (RightClickMode && !(e.Button == MouseButtons.Right))
                 return;

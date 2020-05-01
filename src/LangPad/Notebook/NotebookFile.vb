@@ -1,6 +1,7 @@
 ﻿Imports System.IO
-Imports LangPadSupport.ZiaFile
+Imports LangPadUI.KeyValue
 Imports System.IO.Compression
+Imports LangPadData
 
 <Serializable()>
 Public Class NotebookPage
@@ -72,21 +73,21 @@ Module NotebookFileAccess
         PagesFolder = TempPath & "\pages\"
         Directory.CreateDirectory(PagesFolder)
 
-        Dim DataFile As New List(Of ZiaLine) From {
-            New ZiaLine(LineType.Comment, "Settings"),
-            New ZiaLine(LineType.KeyValue, "Title", Notebook.Title),
-            New ZiaLine(LineType.KeyValue, "Language", Notebook.Language),
-            New ZiaLine(LineType.KeyValue, "Author", Notebook.Author),
-            New ZiaLine(LineType.KeyValue, "Website", Notebook.Website),
-            New ZiaLine(LineType.KeyValue, "NTVersion", NTVersion),
-            New ZiaLine(LineType.KeyValue, "LangPadVersion", GetAppDisplayName()),
-            New ZiaLine(LineType.Blank),
-            New ZiaLine(LineType.Comment, "Pages")
+        Dim DataFile As New List(Of KeyValue.Line) From {
+            New KeyValue.Line(KeyValue.LineType.Comment, "Settings"),
+            New KeyValue.Line(KeyValue.LineType.KeyValue, "Title", Notebook.Title),
+            New KeyValue.Line(KeyValue.LineType.KeyValue, "Language", Notebook.Language),
+            New KeyValue.Line(KeyValue.LineType.KeyValue, "Author", Notebook.Author),
+            New KeyValue.Line(KeyValue.LineType.KeyValue, "Website", Notebook.Website),
+            New KeyValue.Line(KeyValue.LineType.KeyValue, "NTVersion", NTVersion),
+            New KeyValue.Line(KeyValue.LineType.KeyValue, "LangPadVersion", GetAppDisplayName()),
+            New KeyValue.Line(KeyValue.LineType.Blank),
+            New KeyValue.Line(KeyValue.LineType.Comment, "Pages")
         }
 
         For i = 0 To Notebook.Pages.Count - 1
             Dim Page = Notebook.Pages.Item(i)
-            DataFile.Add(New ZiaLine(LineType.KeyValue, "Page" & i, ToCompatibleStr(Page.Title)))
+            DataFile.Add(New KeyValue.Line(KeyValue.LineType.KeyValue, "Page" & i, KeyValue.FormatString(Page.Title)))
 
             Dim Writer As StreamWriter
             Writer = New StreamWriter(PagesFolder & i & ".rtf")
@@ -95,7 +96,7 @@ Module NotebookFileAccess
         Next
 
         'Write to disk
-        File.WriteAllText(TempPath & "\data.txt", Write(DataFile))
+        File.WriteAllText(TempPath & "\data.txt", KeyValue.Write(DataFile))
         File.WriteAllText(TempPath & "\info.txt", Notebook.Info)
         File.WriteAllText(TempPath & "\custom_symbols.txt", Notebook.CustomSymbols)
         Notebook.WordDictionary.Save(TempPath & "\dictionary.txt")
@@ -117,11 +118,11 @@ Module NotebookFileAccess
         ZipFile.ExtractToDirectory(FilePath, TempPath)
         PagesFolder = TempPath & "\pages\"
 
-        Dim LineList = Read(File.ReadAllText(TempPath & "\data.txt"))
+        Dim LineList = KeyValue.Read(File.ReadAllText(TempPath & "\data.txt"))
 
         ' Check the version of the notebook format so that we can adjust 
         ' the loading to support older formats
-        Dim NTVersionString = Search(LineList, "NTVersion")
+        Dim NTVersionString = KeyValue.Search(LineList, "NTVersion")
 
         ' Versions prior to NT 1.2 didn't actually declare their spec version,
         ' so a lookup will fail
@@ -132,7 +133,7 @@ Module NotebookFileAccess
         End If
 
         If NewNotebook.NTSpecificationVersion < 2 Then ' Use the legacy method of storing pages
-            Dim PageOrder = Search(LineList, "Page Order").Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
+            Dim PageOrder = KeyValue.Search(LineList, "Page Order").Split({"|"}, StringSplitOptions.RemoveEmptyEntries)
             For Each PageTitle As String In PageOrder
                 Dim Page As New NotebookPage With {
                     .Title = PageTitle,
@@ -144,7 +145,7 @@ Module NotebookFileAccess
             Dim PageCount As Integer = Directory.EnumerateFiles(PagesFolder).Count
             For i = 0 To PageCount - 1
                 Dim Page As New NotebookPage
-                Dim PageName As String = Search(LineList, "Page" & i)
+                Dim PageName As String = KeyValue.Search(LineList, "Page" & i)
 
                 If PageName Is Nothing Then
                     PageName = i + 1
@@ -156,11 +157,11 @@ Module NotebookFileAccess
             Next
         End If
 
-        NewNotebook.Title = Search(LineList, "Title")
-        NewNotebook.Language = Search(LineList, "Language")
-        NewNotebook.Author = Search(LineList, "Author")
-        NewNotebook.Website = Search(LineList, "Website")
-        NewNotebook.ProgramVersion = Search(LineList, "LangPadVersion")
+        NewNotebook.Title = KeyValue.Search(LineList, "Title")
+        NewNotebook.Language = KeyValue.Search(LineList, "Language")
+        NewNotebook.Author = KeyValue.Search(LineList, "Author")
+        NewNotebook.Website = KeyValue.Search(LineList, "Website")
+        NewNotebook.ProgramVersion = KeyValue.Search(LineList, "LangPadVersion")
 
         ' The first release of the notebook format lacked embedded
         ' custom symbols, so check if they exist before trying to

@@ -1,6 +1,6 @@
 ﻿Imports System.IO
-Imports LangPadSupport
-Imports LangPadSupport.ZiaFile
+Imports LangPadUI
+Imports LangPadData
 
 Public Class StyleDialog
     Public StyleFont As Font = New Font("Calibri", 11)
@@ -64,16 +64,16 @@ Public Class StyleDialog
     Private Sub OpenButton_Click(sender As Object, e As EventArgs) Handles OpenButton.Click
         If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
             Dim FileData As String = File.ReadAllText(OpenDialog.FileName)
-            Dim FileResults = Read(FileData)
+            Dim FileResults = KeyValue.Read(FileData)
 
-            StyleFont = FromCompatibleFont(Search(FileResults, "Font"))
-            StyleColor = FromCompatibleColor(Search(FileResults, "Color"))
-            StyleHighlight = FromCompatibleColor(Search(FileResults, "Highlight"))
-            StyleCharOffset = Search(FileResults, "CharOffset")
-            StyleAlignment = CType([Enum].Parse(GetType(HorizontalAlignment), Search(FileResults, "Align")), HorizontalAlignment)
-            StyleIndent = Search(FileResults, "Indent")
-            StyleHangingIndent = Search(FileResults, "HangingIndent")
-            StyleBulletIndent = Search(FileResults, "BulletIndentIndent")
+            StyleFont = FromCompatibleFont(KeyValue.Search(FileResults, "Font"))
+            StyleColor = FromCompatibleColor(KeyValue.Search(FileResults, "Color"))
+            StyleHighlight = FromCompatibleColor(KeyValue.Search(FileResults, "Highlight"))
+            StyleCharOffset = KeyValue.Search(FileResults, "CharOffset")
+            StyleAlignment = CType([Enum].Parse(GetType(HorizontalAlignment), KeyValue.Search(FileResults, "Align")), HorizontalAlignment)
+            StyleIndent = KeyValue.Search(FileResults, "Indent")
+            StyleHangingIndent = KeyValue.Search(FileResults, "HangingIndent")
+            StyleBulletIndent = KeyValue.Search(FileResults, "BulletIndentIndent")
 
             ColorButton.Color = StyleColor
             HighlightButton.Color = StyleHighlight

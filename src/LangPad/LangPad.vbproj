@@ -121,7 +121,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appearance\AppearanceManager.vb" />
     <Compile Include="AppLoad.vb" />
+    <Compile Include="Converters\KeyValueConverter.vb" />
     <Compile Include="NotebookController.vb" />
     <Compile Include="AutoUpdater.vb" />
     <Compile Include="CharacterEditorToolWindow.Designer.vb">
@@ -130,7 +132,7 @@
     <Compile Include="CharacterEditorToolWindow.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Converters\Html.vb" />
+    <Compile Include="Converters\HtmlConverter.vb" />
     <Compile Include="Dialogs\ExportHtmlDialog.Designer.vb">
       <DependentUpon>ExportHtmlDialog.vb</DependentUpon>
     </Compile>
@@ -174,7 +176,7 @@
     <Compile Include="Dialogs\ImportImageDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Converters\Markdown.vb" />
+    <Compile Include="Converters\MarkdownConverter.vb" />
     <Compile Include="ImageResizer.vb" />
     <Compile Include="Notebook\CharacterEditor.Designer.vb">
       <DependentUpon>CharacterEditor.vb</DependentUpon>
@@ -374,9 +376,13 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LangPadSupport\LangPadSupport.csproj">
+    <ProjectReference Include="..\LangPadData\LangPadData.csproj">
+      <Project>{da608ab5-9ba3-4fa3-b347-eab5e040f9c8}</Project>
+      <Name>LangPadData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LangPadSupport\LangPadUI.csproj">
       <Project>{8bd8a7f1-c880-41cc-8485-b132ddad924a}</Project>
-      <Name>LangPadSupport</Name>
+      <Name>LangPadUI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

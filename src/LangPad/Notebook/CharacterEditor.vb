@@ -1,6 +1,7 @@
 ﻿Imports System.IO
-Imports LangPadSupport.Themes
-Imports LangPadSupport
+Imports LangPadUI.Themes
+Imports LangPadUI
+Imports LangPadData
 
 Public Class CharacterEditor
     Public GetCurrentTexbox As Func(Of TextBoxBase)

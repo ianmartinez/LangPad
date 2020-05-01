@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LangPadSupport
+namespace LangPadData
 {
     public class CharacterInfo
     {

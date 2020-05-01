@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="LangPad.exe.manifest" size="9159">
+    <dependentAssembly dependencyType="install" codebase="LangPad.exe.manifest" size="9789">
       <assemblyIdentity name="LangPad.exe" version="11.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eGdR4ssJH+ksvyHV98EgPqwr4GpGv0lPy92h+77TPCc=</dsig:DigestValue>
+        <dsig:DigestValue>FQq9dZktHCgGAUwYcxUdmuhZ7WY51vZmJQnnQ+fhNmc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

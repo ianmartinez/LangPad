@@ -1,5 +1,5 @@
 ﻿Imports System.IO
-Imports LangPadSupport
+Imports LangPadUI
 
 ''' <summary>
 ''' Handles operations on the current notebook used by LangPad.

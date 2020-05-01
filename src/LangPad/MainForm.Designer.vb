@@ -41,10 +41,11 @@ Partial Class MainForm
         Me.SelectAllContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeselectAllContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitLayoutPanel = New System.Windows.Forms.SplitContainer()
-        Me.PropertiesContainerPanel = New LangPadSupport.DoubleBufferedPanel()
-        Me.CurrentPageContainerBorder = New LangPadSupport.DoubleBufferedPanel()
-        Me.CurrentPageContainer = New LangPadSupport.DoubleBufferedPanel()
-        Me.FindReplaceDialog = New LangPadSupport.DoubleBufferedPanel()
+        Me.PropertiesContainerPanel = New LangPadUI.DoubleBufferedPanel()
+        Me.NotebookEditorPanel = New LangPad.NotebookEditor()
+        Me.CurrentPageContainerBorder = New LangPadUI.DoubleBufferedPanel()
+        Me.CurrentPageContainer = New LangPadUI.DoubleBufferedPanel()
+        Me.FindReplaceDialog = New LangPadUI.DoubleBufferedPanel()
         Me.FindNextButton = New System.Windows.Forms.Button()
         Me.ReplaceAllButton = New System.Windows.Forms.Button()
         Me.ReplaceTextBox = New System.Windows.Forms.TextBox()
@@ -53,30 +54,30 @@ Partial Class MainForm
         Me.Label17 = New System.Windows.Forms.Label()
         Me.ReplaceButton = New System.Windows.Forms.Button()
         Me.FindButton = New System.Windows.Forms.Button()
-        Me.ColorPanel = New LangPadSupport.DoubleBufferedPanel()
+        Me.ColorPanel = New LangPadUI.DoubleBufferedPanel()
         Me.ColorLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.TransparentColorButton = New System.Windows.Forms.Button()
-        Me.StylizedColorButton1 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton2 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton3 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton4 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton5 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton6 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton7 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton8 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton9 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton10 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton11 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton12 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton20 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton21 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton13 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton14 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton15 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton16 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton17 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton18 = New LangPadSupport.StylizedColorButton()
-        Me.StylizedColorButton19 = New LangPadSupport.StylizedColorButton()
+        Me.ColorButton1 = New LangPadUI.ColorButton()
+        Me.ColorButton2 = New LangPadUI.ColorButton()
+        Me.ColorButton3 = New LangPadUI.ColorButton()
+        Me.ColorButton4 = New LangPadUI.ColorButton()
+        Me.ColorButton5 = New LangPadUI.ColorButton()
+        Me.ColorButton6 = New LangPadUI.ColorButton()
+        Me.ColorButton7 = New LangPadUI.ColorButton()
+        Me.ColorButton8 = New LangPadUI.ColorButton()
+        Me.ColorButton9 = New LangPadUI.ColorButton()
+        Me.ColorButton10 = New LangPadUI.ColorButton()
+        Me.ColorButton11 = New LangPadUI.ColorButton()
+        Me.ColorButton12 = New LangPadUI.ColorButton()
+        Me.ColorButton20 = New LangPadUI.ColorButton()
+        Me.ColorButton21 = New LangPadUI.ColorButton()
+        Me.ColorButton13 = New LangPadUI.ColorButton()
+        Me.ColorButton14 = New LangPadUI.ColorButton()
+        Me.ColorButton15 = New LangPadUI.ColorButton()
+        Me.ColorButton16 = New LangPadUI.ColorButton()
+        Me.ColorButton17 = New LangPadUI.ColorButton()
+        Me.ColorButton18 = New LangPadUI.ColorButton()
+        Me.ColorButton19 = New LangPadUI.ColorButton()
         Me.rbHighlight = New System.Windows.Forms.RadioButton()
         Me.TextColorRadio = New System.Windows.Forms.RadioButton()
         Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
@@ -239,7 +240,6 @@ Partial Class MainForm
         Me.PatreonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator27 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NotebookEditorPanel = New LangPad.NotebookEditor()
         Me.MainContextMenu.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
@@ -371,7 +371,7 @@ Partial Class MainForm
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.CurrentPageContainerBorder)
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.FindReplaceDialog)
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.ColorPanel)
-        Me.SplitLayoutPanel.Size = New System.Drawing.Size(1356, 829)
+        Me.SplitLayoutPanel.Size = New System.Drawing.Size(1356, 840)
         Me.SplitLayoutPanel.SplitterDistance = 340
         Me.SplitLayoutPanel.SplitterWidth = 3
         Me.SplitLayoutPanel.TabIndex = 1
@@ -384,8 +384,17 @@ Partial Class MainForm
         Me.PropertiesContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PropertiesContainerPanel.Location = New System.Drawing.Point(0, 0)
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
-        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(340, 829)
+        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(340, 840)
         Me.PropertiesContainerPanel.TabIndex = 13
+        '
+        'NotebookEditorPanel
+        '
+        Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
+        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
+        Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
+        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 840)
+        Me.NotebookEditorPanel.TabIndex = 0
         '
         'CurrentPageContainerBorder
         '
@@ -395,7 +404,7 @@ Partial Class MainForm
         Me.CurrentPageContainerBorder.Location = New System.Drawing.Point(0, 172)
         Me.CurrentPageContainerBorder.Name = "CurrentPageContainerBorder"
         Me.CurrentPageContainerBorder.Padding = New System.Windows.Forms.Padding(1)
-        Me.CurrentPageContainerBorder.Size = New System.Drawing.Size(1013, 657)
+        Me.CurrentPageContainerBorder.Size = New System.Drawing.Size(1013, 668)
         Me.CurrentPageContainerBorder.TabIndex = 76
         '
         'CurrentPageContainer
@@ -405,7 +414,7 @@ Partial Class MainForm
         Me.CurrentPageContainer.Location = New System.Drawing.Point(1, 1)
         Me.CurrentPageContainer.Name = "CurrentPageContainer"
         Me.CurrentPageContainer.Padding = New System.Windows.Forms.Padding(3)
-        Me.CurrentPageContainer.Size = New System.Drawing.Size(1011, 655)
+        Me.CurrentPageContainer.Size = New System.Drawing.Size(1011, 666)
         Me.CurrentPageContainer.TabIndex = 75
         '
         'FindReplaceDialog
@@ -520,27 +529,27 @@ Partial Class MainForm
         Me.ColorLayoutPanel.AutoScrollMargin = New System.Drawing.Size(15, 5)
         Me.ColorLayoutPanel.BackColor = System.Drawing.Color.Transparent
         Me.ColorLayoutPanel.Controls.Add(Me.TransparentColorButton)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton1)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton2)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton3)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton4)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton5)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton6)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton7)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton8)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton9)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton10)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton11)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton12)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton20)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton21)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton13)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton14)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton15)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton16)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton17)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton18)
-        Me.ColorLayoutPanel.Controls.Add(Me.StylizedColorButton19)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton1)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton2)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton3)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton4)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton5)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton6)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton7)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton8)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton9)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton10)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton11)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton12)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton20)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton21)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton13)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton14)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton15)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton16)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton17)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton18)
+        Me.ColorLayoutPanel.Controls.Add(Me.ColorButton19)
         Me.ColorLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ColorLayoutPanel.Location = New System.Drawing.Point(0, 48)
         Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(6)
@@ -565,341 +574,341 @@ Partial Class MainForm
         Me.MainTooltip.SetToolTip(Me.TransparentColorButton, "Transparent")
         Me.TransparentColorButton.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton1
+        'ColorButton1
         '
-        Me.StylizedColorButton1.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton1.Color = System.Drawing.Color.Black
-        Me.StylizedColorButton1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton1.Image = CType(resources.GetObject("StylizedColorButton1.Image"), System.Drawing.Image)
-        Me.StylizedColorButton1.Location = New System.Drawing.Point(53, 9)
-        Me.StylizedColorButton1.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton1.Name = "StylizedColorButton1"
-        Me.StylizedColorButton1.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton1.RightClickMode = True
-        Me.StylizedColorButton1.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton1.TabIndex = 0
-        Me.StylizedColorButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton1.UseVisualStyleBackColor = True
+        Me.ColorButton1.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton1.Color = System.Drawing.Color.Black
+        Me.ColorButton1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton1.Image = CType(resources.GetObject("ColorButton1.Image"), System.Drawing.Image)
+        Me.ColorButton1.Location = New System.Drawing.Point(53, 9)
+        Me.ColorButton1.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton1.Name = "ColorButton1"
+        Me.ColorButton1.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton1.RightClickMode = True
+        Me.ColorButton1.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton1.TabIndex = 0
+        Me.ColorButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton1.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton2
+        'ColorButton2
         '
-        Me.StylizedColorButton2.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton2.Color = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.StylizedColorButton2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton2.Image = CType(resources.GetObject("StylizedColorButton2.Image"), System.Drawing.Image)
-        Me.StylizedColorButton2.Location = New System.Drawing.Point(95, 9)
-        Me.StylizedColorButton2.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton2.Name = "StylizedColorButton2"
-        Me.StylizedColorButton2.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton2.RightClickMode = True
-        Me.StylizedColorButton2.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton2.TabIndex = 1
-        Me.StylizedColorButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton2.UseVisualStyleBackColor = True
+        Me.ColorButton2.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton2.Color = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ColorButton2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton2.Image = CType(resources.GetObject("ColorButton2.Image"), System.Drawing.Image)
+        Me.ColorButton2.Location = New System.Drawing.Point(95, 9)
+        Me.ColorButton2.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton2.Name = "ColorButton2"
+        Me.ColorButton2.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton2.RightClickMode = True
+        Me.ColorButton2.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton2.TabIndex = 1
+        Me.ColorButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton2.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton3
+        'ColorButton3
         '
-        Me.StylizedColorButton3.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton3.Color = System.Drawing.Color.Silver
-        Me.StylizedColorButton3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton3.Image = CType(resources.GetObject("StylizedColorButton3.Image"), System.Drawing.Image)
-        Me.StylizedColorButton3.Location = New System.Drawing.Point(137, 9)
-        Me.StylizedColorButton3.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton3.Name = "StylizedColorButton3"
-        Me.StylizedColorButton3.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton3.RightClickMode = True
-        Me.StylizedColorButton3.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton3.TabIndex = 2
-        Me.StylizedColorButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton3.UseVisualStyleBackColor = True
+        Me.ColorButton3.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton3.Color = System.Drawing.Color.Silver
+        Me.ColorButton3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton3.Image = CType(resources.GetObject("ColorButton3.Image"), System.Drawing.Image)
+        Me.ColorButton3.Location = New System.Drawing.Point(137, 9)
+        Me.ColorButton3.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton3.Name = "ColorButton3"
+        Me.ColorButton3.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton3.RightClickMode = True
+        Me.ColorButton3.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton3.TabIndex = 2
+        Me.ColorButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton3.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton4
+        'ColorButton4
         '
-        Me.StylizedColorButton4.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton4.Color = System.Drawing.Color.Gainsboro
-        Me.StylizedColorButton4.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton4.Image = CType(resources.GetObject("StylizedColorButton4.Image"), System.Drawing.Image)
-        Me.StylizedColorButton4.Location = New System.Drawing.Point(179, 9)
-        Me.StylizedColorButton4.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton4.Name = "StylizedColorButton4"
-        Me.StylizedColorButton4.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton4.RightClickMode = True
-        Me.StylizedColorButton4.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton4.TabIndex = 3
-        Me.StylizedColorButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton4.UseVisualStyleBackColor = True
+        Me.ColorButton4.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton4.Color = System.Drawing.Color.Gainsboro
+        Me.ColorButton4.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton4.Image = CType(resources.GetObject("ColorButton4.Image"), System.Drawing.Image)
+        Me.ColorButton4.Location = New System.Drawing.Point(179, 9)
+        Me.ColorButton4.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton4.Name = "ColorButton4"
+        Me.ColorButton4.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton4.RightClickMode = True
+        Me.ColorButton4.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton4.TabIndex = 3
+        Me.ColorButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton4.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton5
+        'ColorButton5
         '
-        Me.StylizedColorButton5.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton5.Color = System.Drawing.Color.White
-        Me.StylizedColorButton5.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton5.Image = CType(resources.GetObject("StylizedColorButton5.Image"), System.Drawing.Image)
-        Me.StylizedColorButton5.Location = New System.Drawing.Point(221, 9)
-        Me.StylizedColorButton5.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton5.Name = "StylizedColorButton5"
-        Me.StylizedColorButton5.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton5.RightClickMode = True
-        Me.StylizedColorButton5.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton5.TabIndex = 4
-        Me.StylizedColorButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton5.UseVisualStyleBackColor = True
+        Me.ColorButton5.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton5.Color = System.Drawing.Color.White
+        Me.ColorButton5.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton5.Image = CType(resources.GetObject("ColorButton5.Image"), System.Drawing.Image)
+        Me.ColorButton5.Location = New System.Drawing.Point(221, 9)
+        Me.ColorButton5.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton5.Name = "ColorButton5"
+        Me.ColorButton5.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton5.RightClickMode = True
+        Me.ColorButton5.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton5.TabIndex = 4
+        Me.ColorButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton5.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton6
+        'ColorButton6
         '
-        Me.StylizedColorButton6.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton6.Color = System.Drawing.Color.Red
-        Me.StylizedColorButton6.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton6.Image = CType(resources.GetObject("StylizedColorButton6.Image"), System.Drawing.Image)
-        Me.StylizedColorButton6.Location = New System.Drawing.Point(263, 9)
-        Me.StylizedColorButton6.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton6.Name = "StylizedColorButton6"
-        Me.StylizedColorButton6.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton6.RightClickMode = True
-        Me.StylizedColorButton6.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton6.TabIndex = 5
-        Me.StylizedColorButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton6.UseVisualStyleBackColor = True
+        Me.ColorButton6.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton6.Color = System.Drawing.Color.Red
+        Me.ColorButton6.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton6.Image = CType(resources.GetObject("ColorButton6.Image"), System.Drawing.Image)
+        Me.ColorButton6.Location = New System.Drawing.Point(263, 9)
+        Me.ColorButton6.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton6.Name = "ColorButton6"
+        Me.ColorButton6.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton6.RightClickMode = True
+        Me.ColorButton6.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton6.TabIndex = 5
+        Me.ColorButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton6.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton7
+        'ColorButton7
         '
-        Me.StylizedColorButton7.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton7.Color = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedColorButton7.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton7.Image = CType(resources.GetObject("StylizedColorButton7.Image"), System.Drawing.Image)
-        Me.StylizedColorButton7.Location = New System.Drawing.Point(305, 9)
-        Me.StylizedColorButton7.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton7.Name = "StylizedColorButton7"
-        Me.StylizedColorButton7.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton7.RightClickMode = True
-        Me.StylizedColorButton7.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton7.TabIndex = 6
-        Me.StylizedColorButton7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton7.UseVisualStyleBackColor = True
+        Me.ColorButton7.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton7.Color = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ColorButton7.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton7.Image = CType(resources.GetObject("ColorButton7.Image"), System.Drawing.Image)
+        Me.ColorButton7.Location = New System.Drawing.Point(305, 9)
+        Me.ColorButton7.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton7.Name = "ColorButton7"
+        Me.ColorButton7.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton7.RightClickMode = True
+        Me.ColorButton7.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton7.TabIndex = 6
+        Me.ColorButton7.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton7.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton8
+        'ColorButton8
         '
-        Me.StylizedColorButton8.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton8.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.StylizedColorButton8.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton8.Image = CType(resources.GetObject("StylizedColorButton8.Image"), System.Drawing.Image)
-        Me.StylizedColorButton8.Location = New System.Drawing.Point(347, 9)
-        Me.StylizedColorButton8.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton8.Name = "StylizedColorButton8"
-        Me.StylizedColorButton8.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton8.RightClickMode = True
-        Me.StylizedColorButton8.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton8.TabIndex = 7
-        Me.StylizedColorButton8.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton8.UseVisualStyleBackColor = True
+        Me.ColorButton8.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton8.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ColorButton8.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton8.Image = CType(resources.GetObject("ColorButton8.Image"), System.Drawing.Image)
+        Me.ColorButton8.Location = New System.Drawing.Point(347, 9)
+        Me.ColorButton8.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton8.Name = "ColorButton8"
+        Me.ColorButton8.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton8.RightClickMode = True
+        Me.ColorButton8.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton8.TabIndex = 7
+        Me.ColorButton8.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton8.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton9
+        'ColorButton9
         '
-        Me.StylizedColorButton9.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton9.Color = System.Drawing.Color.Goldenrod
-        Me.StylizedColorButton9.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton9.Image = CType(resources.GetObject("StylizedColorButton9.Image"), System.Drawing.Image)
-        Me.StylizedColorButton9.Location = New System.Drawing.Point(389, 9)
-        Me.StylizedColorButton9.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton9.Name = "StylizedColorButton9"
-        Me.StylizedColorButton9.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton9.RightClickMode = True
-        Me.StylizedColorButton9.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton9.TabIndex = 8
-        Me.StylizedColorButton9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton9.UseVisualStyleBackColor = True
+        Me.ColorButton9.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton9.Color = System.Drawing.Color.Goldenrod
+        Me.ColorButton9.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton9.Image = CType(resources.GetObject("ColorButton9.Image"), System.Drawing.Image)
+        Me.ColorButton9.Location = New System.Drawing.Point(389, 9)
+        Me.ColorButton9.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton9.Name = "ColorButton9"
+        Me.ColorButton9.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton9.RightClickMode = True
+        Me.ColorButton9.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton9.TabIndex = 8
+        Me.ColorButton9.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton9.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton10
+        'ColorButton10
         '
-        Me.StylizedColorButton10.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton10.Color = System.Drawing.Color.Yellow
-        Me.StylizedColorButton10.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton10.Image = CType(resources.GetObject("StylizedColorButton10.Image"), System.Drawing.Image)
-        Me.StylizedColorButton10.Location = New System.Drawing.Point(431, 9)
-        Me.StylizedColorButton10.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton10.Name = "StylizedColorButton10"
-        Me.StylizedColorButton10.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton10.RightClickMode = True
-        Me.StylizedColorButton10.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton10.TabIndex = 9
-        Me.StylizedColorButton10.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton10.UseVisualStyleBackColor = True
+        Me.ColorButton10.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton10.Color = System.Drawing.Color.Yellow
+        Me.ColorButton10.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton10.Image = CType(resources.GetObject("ColorButton10.Image"), System.Drawing.Image)
+        Me.ColorButton10.Location = New System.Drawing.Point(431, 9)
+        Me.ColorButton10.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton10.Name = "ColorButton10"
+        Me.ColorButton10.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton10.RightClickMode = True
+        Me.ColorButton10.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton10.TabIndex = 9
+        Me.ColorButton10.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton10.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton11
+        'ColorButton11
         '
-        Me.StylizedColorButton11.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton11.Color = System.Drawing.Color.Lime
-        Me.StylizedColorButton11.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton11.Image = CType(resources.GetObject("StylizedColorButton11.Image"), System.Drawing.Image)
-        Me.StylizedColorButton11.Location = New System.Drawing.Point(473, 9)
-        Me.StylizedColorButton11.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton11.Name = "StylizedColorButton11"
-        Me.StylizedColorButton11.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton11.RightClickMode = True
-        Me.StylizedColorButton11.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton11.TabIndex = 10
-        Me.StylizedColorButton11.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton11.UseVisualStyleBackColor = True
+        Me.ColorButton11.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton11.Color = System.Drawing.Color.Lime
+        Me.ColorButton11.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton11.Image = CType(resources.GetObject("ColorButton11.Image"), System.Drawing.Image)
+        Me.ColorButton11.Location = New System.Drawing.Point(473, 9)
+        Me.ColorButton11.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton11.Name = "ColorButton11"
+        Me.ColorButton11.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton11.RightClickMode = True
+        Me.ColorButton11.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton11.TabIndex = 10
+        Me.ColorButton11.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton11.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton12
+        'ColorButton12
         '
-        Me.StylizedColorButton12.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton12.Color = System.Drawing.Color.OliveDrab
-        Me.StylizedColorButton12.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton12.Image = CType(resources.GetObject("StylizedColorButton12.Image"), System.Drawing.Image)
-        Me.StylizedColorButton12.Location = New System.Drawing.Point(515, 9)
-        Me.StylizedColorButton12.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton12.Name = "StylizedColorButton12"
-        Me.StylizedColorButton12.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton12.RightClickMode = True
-        Me.StylizedColorButton12.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton12.TabIndex = 11
-        Me.StylizedColorButton12.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton12.UseVisualStyleBackColor = True
+        Me.ColorButton12.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton12.Color = System.Drawing.Color.OliveDrab
+        Me.ColorButton12.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton12.Image = CType(resources.GetObject("ColorButton12.Image"), System.Drawing.Image)
+        Me.ColorButton12.Location = New System.Drawing.Point(515, 9)
+        Me.ColorButton12.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton12.Name = "ColorButton12"
+        Me.ColorButton12.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton12.RightClickMode = True
+        Me.ColorButton12.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton12.TabIndex = 11
+        Me.ColorButton12.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton12.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton20
+        'ColorButton20
         '
-        Me.StylizedColorButton20.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton20.Color = System.Drawing.Color.Green
-        Me.StylizedColorButton20.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton20.Image = CType(resources.GetObject("StylizedColorButton20.Image"), System.Drawing.Image)
-        Me.StylizedColorButton20.Location = New System.Drawing.Point(557, 9)
-        Me.StylizedColorButton20.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton20.Name = "StylizedColorButton20"
-        Me.StylizedColorButton20.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton20.RightClickMode = True
-        Me.StylizedColorButton20.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton20.TabIndex = 12
-        Me.StylizedColorButton20.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton20.UseVisualStyleBackColor = True
+        Me.ColorButton20.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton20.Color = System.Drawing.Color.Green
+        Me.ColorButton20.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton20.Image = CType(resources.GetObject("ColorButton20.Image"), System.Drawing.Image)
+        Me.ColorButton20.Location = New System.Drawing.Point(557, 9)
+        Me.ColorButton20.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton20.Name = "ColorButton20"
+        Me.ColorButton20.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton20.RightClickMode = True
+        Me.ColorButton20.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton20.TabIndex = 12
+        Me.ColorButton20.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton20.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton21
+        'ColorButton21
         '
-        Me.StylizedColorButton21.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton21.Color = System.Drawing.Color.DarkGreen
-        Me.StylizedColorButton21.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton21.Image = CType(resources.GetObject("StylizedColorButton21.Image"), System.Drawing.Image)
-        Me.StylizedColorButton21.Location = New System.Drawing.Point(599, 9)
-        Me.StylizedColorButton21.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton21.Name = "StylizedColorButton21"
-        Me.StylizedColorButton21.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton21.RightClickMode = True
-        Me.StylizedColorButton21.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton21.TabIndex = 13
-        Me.StylizedColorButton21.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton21.UseVisualStyleBackColor = True
+        Me.ColorButton21.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton21.Color = System.Drawing.Color.DarkGreen
+        Me.ColorButton21.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton21.Image = CType(resources.GetObject("ColorButton21.Image"), System.Drawing.Image)
+        Me.ColorButton21.Location = New System.Drawing.Point(599, 9)
+        Me.ColorButton21.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton21.Name = "ColorButton21"
+        Me.ColorButton21.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton21.RightClickMode = True
+        Me.ColorButton21.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton21.TabIndex = 13
+        Me.ColorButton21.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton21.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton13
+        'ColorButton13
         '
-        Me.StylizedColorButton13.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton13.Color = System.Drawing.Color.CadetBlue
-        Me.StylizedColorButton13.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton13.Image = CType(resources.GetObject("StylizedColorButton13.Image"), System.Drawing.Image)
-        Me.StylizedColorButton13.Location = New System.Drawing.Point(641, 9)
-        Me.StylizedColorButton13.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton13.Name = "StylizedColorButton13"
-        Me.StylizedColorButton13.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton13.RightClickMode = True
-        Me.StylizedColorButton13.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton13.TabIndex = 14
-        Me.StylizedColorButton13.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton13.UseVisualStyleBackColor = True
+        Me.ColorButton13.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton13.Color = System.Drawing.Color.CadetBlue
+        Me.ColorButton13.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton13.Image = CType(resources.GetObject("ColorButton13.Image"), System.Drawing.Image)
+        Me.ColorButton13.Location = New System.Drawing.Point(641, 9)
+        Me.ColorButton13.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton13.Name = "ColorButton13"
+        Me.ColorButton13.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton13.RightClickMode = True
+        Me.ColorButton13.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton13.TabIndex = 14
+        Me.ColorButton13.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton13.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton14
+        'ColorButton14
         '
-        Me.StylizedColorButton14.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton14.Color = System.Drawing.Color.DeepSkyBlue
-        Me.StylizedColorButton14.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton14.Image = CType(resources.GetObject("StylizedColorButton14.Image"), System.Drawing.Image)
-        Me.StylizedColorButton14.Location = New System.Drawing.Point(683, 9)
-        Me.StylizedColorButton14.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton14.Name = "StylizedColorButton14"
-        Me.StylizedColorButton14.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton14.RightClickMode = True
-        Me.StylizedColorButton14.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton14.TabIndex = 15
-        Me.StylizedColorButton14.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton14.UseVisualStyleBackColor = True
+        Me.ColorButton14.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton14.Color = System.Drawing.Color.DeepSkyBlue
+        Me.ColorButton14.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton14.Image = CType(resources.GetObject("ColorButton14.Image"), System.Drawing.Image)
+        Me.ColorButton14.Location = New System.Drawing.Point(683, 9)
+        Me.ColorButton14.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton14.Name = "ColorButton14"
+        Me.ColorButton14.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton14.RightClickMode = True
+        Me.ColorButton14.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton14.TabIndex = 15
+        Me.ColorButton14.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton14.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton15
+        'ColorButton15
         '
-        Me.StylizedColorButton15.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton15.Color = System.Drawing.Color.Blue
-        Me.StylizedColorButton15.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton15.Image = CType(resources.GetObject("StylizedColorButton15.Image"), System.Drawing.Image)
-        Me.StylizedColorButton15.Location = New System.Drawing.Point(725, 9)
-        Me.StylizedColorButton15.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton15.Name = "StylizedColorButton15"
-        Me.StylizedColorButton15.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton15.RightClickMode = True
-        Me.StylizedColorButton15.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton15.TabIndex = 16
-        Me.StylizedColorButton15.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton15.UseVisualStyleBackColor = True
+        Me.ColorButton15.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton15.Color = System.Drawing.Color.Blue
+        Me.ColorButton15.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton15.Image = CType(resources.GetObject("ColorButton15.Image"), System.Drawing.Image)
+        Me.ColorButton15.Location = New System.Drawing.Point(725, 9)
+        Me.ColorButton15.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton15.Name = "ColorButton15"
+        Me.ColorButton15.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton15.RightClickMode = True
+        Me.ColorButton15.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton15.TabIndex = 16
+        Me.ColorButton15.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton15.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton16
+        'ColorButton16
         '
-        Me.StylizedColorButton16.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton16.Color = System.Drawing.Color.DarkSlateBlue
-        Me.StylizedColorButton16.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton16.Image = CType(resources.GetObject("StylizedColorButton16.Image"), System.Drawing.Image)
-        Me.StylizedColorButton16.Location = New System.Drawing.Point(767, 9)
-        Me.StylizedColorButton16.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton16.Name = "StylizedColorButton16"
-        Me.StylizedColorButton16.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton16.RightClickMode = True
-        Me.StylizedColorButton16.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton16.TabIndex = 17
-        Me.StylizedColorButton16.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton16.UseVisualStyleBackColor = True
+        Me.ColorButton16.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton16.Color = System.Drawing.Color.DarkSlateBlue
+        Me.ColorButton16.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton16.Image = CType(resources.GetObject("ColorButton16.Image"), System.Drawing.Image)
+        Me.ColorButton16.Location = New System.Drawing.Point(767, 9)
+        Me.ColorButton16.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton16.Name = "ColorButton16"
+        Me.ColorButton16.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton16.RightClickMode = True
+        Me.ColorButton16.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton16.TabIndex = 17
+        Me.ColorButton16.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton16.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton17
+        'ColorButton17
         '
-        Me.StylizedColorButton17.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton17.Color = System.Drawing.Color.Purple
-        Me.StylizedColorButton17.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton17.Image = CType(resources.GetObject("StylizedColorButton17.Image"), System.Drawing.Image)
-        Me.StylizedColorButton17.Location = New System.Drawing.Point(809, 9)
-        Me.StylizedColorButton17.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton17.Name = "StylizedColorButton17"
-        Me.StylizedColorButton17.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton17.RightClickMode = True
-        Me.StylizedColorButton17.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton17.TabIndex = 18
-        Me.StylizedColorButton17.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton17.UseVisualStyleBackColor = True
+        Me.ColorButton17.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton17.Color = System.Drawing.Color.Purple
+        Me.ColorButton17.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton17.Image = CType(resources.GetObject("ColorButton17.Image"), System.Drawing.Image)
+        Me.ColorButton17.Location = New System.Drawing.Point(809, 9)
+        Me.ColorButton17.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton17.Name = "ColorButton17"
+        Me.ColorButton17.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton17.RightClickMode = True
+        Me.ColorButton17.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton17.TabIndex = 18
+        Me.ColorButton17.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton17.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton18
+        'ColorButton18
         '
-        Me.StylizedColorButton18.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton18.Color = System.Drawing.Color.DeepPink
-        Me.StylizedColorButton18.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton18.Image = CType(resources.GetObject("StylizedColorButton18.Image"), System.Drawing.Image)
-        Me.StylizedColorButton18.Location = New System.Drawing.Point(851, 9)
-        Me.StylizedColorButton18.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton18.Name = "StylizedColorButton18"
-        Me.StylizedColorButton18.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton18.RightClickMode = True
-        Me.StylizedColorButton18.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton18.TabIndex = 19
-        Me.StylizedColorButton18.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.StylizedColorButton18.UseVisualStyleBackColor = True
+        Me.ColorButton18.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton18.Color = System.Drawing.Color.DeepPink
+        Me.ColorButton18.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton18.Image = CType(resources.GetObject("ColorButton18.Image"), System.Drawing.Image)
+        Me.ColorButton18.Location = New System.Drawing.Point(851, 9)
+        Me.ColorButton18.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton18.Name = "ColorButton18"
+        Me.ColorButton18.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton18.RightClickMode = True
+        Me.ColorButton18.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton18.TabIndex = 19
+        Me.ColorButton18.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ColorButton18.UseVisualStyleBackColor = True
         '
-        'StylizedColorButton19
+        'ColorButton19
         '
-        Me.StylizedColorButton19.BackColor = System.Drawing.Color.Transparent
-        Me.StylizedColorButton19.Color = System.Drawing.Color.Fuchsia
-        Me.StylizedColorButton19.Dock = System.Windows.Forms.DockStyle.Left
-        Me.StylizedColorButton19.Image = CType(resources.GetObject("StylizedColorButton19.Image"), System.Drawing.Image)
-        Me.StylizedColorButton19.Location = New System.Drawing.Point(893, 9)
-        Me.StylizedColorButton19.MinimumSize = New System.Drawing.Size(36, 36)
-        Me.StylizedColorButton19.Name = "StylizedColorButton19"
-        Me.StylizedColorButton19.Padding = New System.Windows.Forms.Padding(2)
-        Me.StylizedColorButton19.RightClickMode = True
-        Me.StylizedColorButton19.Size = New System.Drawing.Size(36, 40)
-        Me.StylizedColorButton19.TabIndex = 20
-        Me.StylizedColorButton19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.StylizedColorButton19.UseVisualStyleBackColor = True
+        Me.ColorButton19.BackColor = System.Drawing.Color.Transparent
+        Me.ColorButton19.Color = System.Drawing.Color.Fuchsia
+        Me.ColorButton19.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ColorButton19.Image = CType(resources.GetObject("ColorButton19.Image"), System.Drawing.Image)
+        Me.ColorButton19.Location = New System.Drawing.Point(893, 9)
+        Me.ColorButton19.MinimumSize = New System.Drawing.Size(36, 36)
+        Me.ColorButton19.Name = "ColorButton19"
+        Me.ColorButton19.Padding = New System.Windows.Forms.Padding(2)
+        Me.ColorButton19.RightClickMode = True
+        Me.ColorButton19.Size = New System.Drawing.Size(36, 40)
+        Me.ColorButton19.TabIndex = 20
+        Me.ColorButton19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ColorButton19.UseVisualStyleBackColor = True
         '
         'rbHighlight
         '
@@ -935,17 +944,17 @@ Partial Class MainForm
         'MainToolStripContainer.ContentPanel
         '
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.SplitLayoutPanel)
-        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1356, 829)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1356, 840)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         '
         'MainToolStripContainer.LeftToolStripPanel
         '
-        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 36)
+        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 33)
         Me.MainToolStripContainer.Name = "MainToolStripContainer"
         '
         'MainToolStripContainer.RightToolStripPanel
         '
-        Me.MainToolStripContainer.Size = New System.Drawing.Size(1356, 908)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(1356, 911)
         Me.MainToolStripContainer.TabIndex = 74
         '
         'MainToolStripContainer.TopToolStripPanel
@@ -960,7 +969,7 @@ Partial Class MainForm
         Me.DataToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel, Me.ToolStripSeparator26, Me.CurrentLineToolStripLabel, Me.ToolStripSeparator11, Me.PageCountLabel, Me.ToolStripSeparator12, Me.ToolStripLabel1, Me.ThemeCombo})
         Me.DataToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DataToolStrip.Name = "DataToolStrip"
-        Me.DataToolStrip.Size = New System.Drawing.Size(1356, 38)
+        Me.DataToolStrip.Size = New System.Drawing.Size(1356, 30)
         Me.DataToolStrip.Stretch = True
         Me.DataToolStrip.TabIndex = 2
         '
@@ -1296,7 +1305,7 @@ Partial Class MainForm
         Me.MainMenu.Location = New System.Drawing.Point(0, 0)
         Me.MainMenu.Name = "MainMenu"
         Me.MainMenu.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MainMenu.Size = New System.Drawing.Size(1356, 36)
+        Me.MainMenu.Size = New System.Drawing.Size(1356, 33)
         Me.MainMenu.TabIndex = 75
         Me.MainMenu.Text = "MenuStrip1"
         '
@@ -2135,15 +2144,6 @@ Partial Class MainForm
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(282, 34)
         Me.AboutToolStripMenuItem.Text = "About..."
         '
-        'NotebookEditorPanel
-        '
-        Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
-        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
-        Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
-        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 829)
-        Me.NotebookEditorPanel.TabIndex = 0
-        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -2193,7 +2193,7 @@ Partial Class MainForm
     Friend WithEvents OpenPageDialog As System.Windows.Forms.OpenFileDialog
     Friend WithEvents PrintPageSetupDialog As System.Windows.Forms.PageSetupDialog
     Friend WithEvents PagePrintDocument As System.Drawing.Printing.PrintDocument
-    Friend WithEvents FindReplaceDialog As LangPadSupport.DoubleBufferedPanel
+    Friend WithEvents FindReplaceDialog As LangPadUI.DoubleBufferedPanel
     Friend WithEvents ReplaceButton As System.Windows.Forms.Button
     Friend WithEvents FindButton As System.Windows.Forms.Button
     Friend WithEvents ReplaceTextBox As System.Windows.Forms.TextBox
@@ -2212,7 +2212,7 @@ Partial Class MainForm
     Friend WithEvents SplitLayoutPanel As System.Windows.Forms.SplitContainer
     Friend WithEvents OpenDialog As System.Windows.Forms.OpenFileDialog
     Friend WithEvents SaveDialog As System.Windows.Forms.SaveFileDialog
-    Friend WithEvents PropertiesContainerPanel As LangPadSupport.DoubleBufferedPanel
+    Friend WithEvents PropertiesContainerPanel As LangPadUI.DoubleBufferedPanel
     Friend WithEvents MainTooltip As System.Windows.Forms.ToolTip
     Friend WithEvents MainToolStripContainer As ToolStripContainer
     Friend WithEvents MainToolStrip As ToolStrip
@@ -2290,31 +2290,31 @@ Partial Class MainForm
     Friend WithEvents ToolStripSeparator12 As ToolStripSeparator
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents ThemeCombo As ToolStripComboBox
-    Friend WithEvents ColorPanel As LangPadSupport.DoubleBufferedPanel
+    Friend WithEvents ColorPanel As LangPadUI.DoubleBufferedPanel
     Friend WithEvents ColorLayoutPanel As FlowLayoutPanel
-    Friend WithEvents StylizedColorButton1 As LangPadSupport.StylizedColorButton
+    Friend WithEvents ColorButton1 As LangPadUI.ColorButton
     Friend WithEvents rbHighlight As RadioButton
     Friend WithEvents TextColorRadio As RadioButton
-    Friend WithEvents StylizedColorButton2 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton3 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton4 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton5 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton6 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton7 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton8 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton9 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton10 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton11 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton12 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton13 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton14 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton15 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton16 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton17 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton18 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton19 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton20 As LangPadSupport.StylizedColorButton
-    Friend WithEvents StylizedColorButton21 As LangPadSupport.StylizedColorButton
+    Friend WithEvents ColorButton2 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton3 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton4 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton5 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton6 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton7 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton8 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton9 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton10 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton11 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton12 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton13 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton14 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton15 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton16 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton17 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton18 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton19 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton20 As LangPadUI.ColorButton
+    Friend WithEvents ColorButton21 As LangPadUI.ColorButton
     Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
     Friend WithEvents ToggleSidebarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToggleToolbarToolStripMenuItem As ToolStripMenuItem
@@ -2398,7 +2398,7 @@ Partial Class MainForm
     Friend WithEvents CurrentLineToolStripLabel As ToolStripLabel
     Friend WithEvents PatreonToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator27 As ToolStripSeparator
-    Friend WithEvents CurrentPageContainer As LangPadSupport.DoubleBufferedPanel
-    Friend WithEvents CurrentPageContainerBorder As LangPadSupport.DoubleBufferedPanel
+    Friend WithEvents CurrentPageContainer As LangPadUI.DoubleBufferedPanel
+    Friend WithEvents CurrentPageContainerBorder As LangPadUI.DoubleBufferedPanel
     Friend WithEvents CopyAsMarkdownToolStripMenuItem As ToolStripMenuItem
 End Class

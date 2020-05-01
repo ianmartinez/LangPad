@@ -31,8 +31,8 @@ Partial Class AboutDialog
         Me.ChangelogTextBox = New System.Windows.Forms.TextBox()
         Me.MainTooltip = New System.Windows.Forms.ToolTip(Me.components)
         Me.MainTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.HeaderBorderPanel = New LangPadSupport.DoubleBufferedPanel()
-        Me.HeaderPanel = New LangPadSupport.DoubleBufferedPanel()
+        Me.HeaderBorderPanel = New LangPadUI.DoubleBufferedPanel()
+        Me.HeaderPanel = New LangPadUI.DoubleBufferedPanel()
         Me.LangPadLabel = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ButtonTableLayout = New System.Windows.Forms.TableLayoutPanel()
@@ -323,8 +323,8 @@ Partial Class AboutDialog
     Friend WithEvents ChangelogTextBox As System.Windows.Forms.TextBox
     Friend WithEvents MainTooltip As ToolTip
     Friend WithEvents MainTableLayoutPanel As TableLayoutPanel
-    Friend WithEvents HeaderBorderPanel As LangPadSupport.DoubleBufferedPanel
-    Friend WithEvents HeaderPanel As LangPadSupport.DoubleBufferedPanel
+    Friend WithEvents HeaderBorderPanel As LangPadUI.DoubleBufferedPanel
+    Friend WithEvents HeaderPanel As LangPadUI.DoubleBufferedPanel
     Friend WithEvents LangPadLabel As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ButtonTableLayout As TableLayoutPanel

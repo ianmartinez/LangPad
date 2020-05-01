@@ -1,7 +1,7 @@
 ﻿''' <summary>
 ''' Handles conversion to HTML
 ''' </summary>
-Module Html
+Module HtmlConverter
     ''' <summary>
     ''' Convert RTF to HTML.
     ''' </summary>

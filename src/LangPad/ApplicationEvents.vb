@@ -1,4 +1,4 @@
-﻿Imports LangPadSupport
+﻿Imports LangPadUI
 
 Namespace My
 

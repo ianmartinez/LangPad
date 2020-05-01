@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Reflection;
 
-namespace LangPadSupport
+namespace LangPadUI
 {
     /// <summary>
     /// The size of the icon.
@@ -42,7 +42,7 @@ namespace LangPadSupport
             else
                 folder = (iconSize == IconSize.Large) ? "Icon48" : "Icon32";
 
-            var resourceName = string.Format("LangPadSupport.Resources.{0}.{1}.png", folder, name);
+            var resourceName = string.Format("LangPadUI.Resources.{0}.{1}.png", folder, name);
             var assembly = Assembly.GetExecutingAssembly();
             // Find what files are available:
             // var names = assembly.GetManifestResourceNames().Where(n => n.Contains(".Icon48.")).ToArray();

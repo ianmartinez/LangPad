@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace LangPadSupport
+namespace LangPadUI
 {
     public class DoubleBufferedPanel : Panel
     {

@@ -55,9 +55,7 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.pdb
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.xml
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.dll
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadSupport.dll
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\RtfPipe.dll
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadSupport.pdb
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.pdb
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.xml
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbprojAssemblyReference.cache
@@ -73,3 +71,7 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.pd
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.xml
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.NotebookEditor.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.PageNameDialog.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadData.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadUI.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadData.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadUI.pdb

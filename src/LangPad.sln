@@ -5,10 +5,13 @@ VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LangPad", "LangPad\LangPad.vbproj", "{96451D96-1492-4D4A-BCA2-C65DE80255D2}"
 	ProjectSection(ProjectDependencies) = postProject
+		{DA608AB5-9BA3-4FA3-B347-EAB5E040F9C8} = {DA608AB5-9BA3-4FA3-B347-EAB5E040F9C8}
 		{8BD8A7F1-C880-41CC-8485-B132DDAD924A} = {8BD8A7F1-C880-41CC-8485-B132DDAD924A}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LangPadSupport", "LangPadSupport\LangPadSupport.csproj", "{8BD8A7F1-C880-41CC-8485-B132DDAD924A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LangPadUI", "LangPadSupport\LangPadUI.csproj", "{8BD8A7F1-C880-41CC-8485-B132DDAD924A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangPadData", "LangPadData\LangPadData.csproj", "{DA608AB5-9BA3-4FA3-B347-EAB5E040F9C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +27,10 @@ Global
 		{8BD8A7F1-C880-41CC-8485-B132DDAD924A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BD8A7F1-C880-41CC-8485-B132DDAD924A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BD8A7F1-C880-41CC-8485-B132DDAD924A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA608AB5-9BA3-4FA3-B347-EAB5E040F9C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA608AB5-9BA3-4FA3-B347-EAB5E040F9C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA608AB5-9BA3-4FA3-B347-EAB5E040F9C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA608AB5-9BA3-4FA3-B347-EAB5E040F9C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

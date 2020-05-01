@@ -85,7 +85,7 @@ Partial Class CharacterEditor
         Me.CharacterTextBox = New System.Windows.Forms.TextBox()
         Me.SmartReplaceCheck = New System.Windows.Forms.CheckBox()
         Me.AddToFileButton = New System.Windows.Forms.Button()
-        Me.SmartReplaceIndicator = New LangPadSupport.DoubleBufferedPanel()
+        Me.SmartReplaceIndicator = New LangPadUI.DoubleBufferedPanel()
         Me.CopyToClipboardButton = New System.Windows.Forms.Button()
         Me.CharButtonMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AddToEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -1063,7 +1063,7 @@ Partial Class CharacterEditor
     Friend WithEvents AddToFileButton As Button
     Friend WithEvents AddToLocalButton As Button
     Friend WithEvents CopyToClipboardButton As Button
-    Friend WithEvents SmartReplaceIndicator As LangPadSupport.DoubleBufferedPanel
+    Friend WithEvents SmartReplaceIndicator As LangPadUI.DoubleBufferedPanel
     Friend WithEvents SmartReplaceCheck As CheckBox
     Friend WithEvents CharacterButton As Button
     Friend WithEvents CharButtonMenu As ContextMenuStrip

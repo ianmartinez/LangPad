@@ -586,12 +586,12 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Check for updates and display a dialog if there are any
  </summary>
 </member>
-<member name="T:LangPad.Html">
+<member name="T:LangPad.HtmlConverter">
  <summary>
  Handles conversion to HTML
  </summary>
 </member>
-<member name="M:LangPad.Html.RtfToHtml(System.String,System.String,System.Boolean)">
+<member name="M:LangPad.HtmlConverter.RtfToHtml(System.String,System.String,System.Boolean)">
  <summary>
  Convert RTF to HTML.
  </summary>
@@ -603,7 +603,7 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  
  <returns>The RTF that has been converted to HTML.</returns>
 </member>
-<member name="T:LangPad.Markdown">
+<member name="T:LangPad.MarkdownConverter">
  <summary>
  Handles the conversion to Markdown
  </summary>

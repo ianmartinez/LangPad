@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ThornWriter.NotebookFile
+namespace LangPadData
 {
     public static class KeyValue
     {

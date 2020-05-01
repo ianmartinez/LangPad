@@ -1,5 +1,6 @@
 ﻿Imports System.IO
-Imports LangPadSupport.ZiaFile
+Imports LangPadData
+Imports LangPadUI.KeyValue
 
 <Serializable()>
 Public Class DictionaryWord
@@ -44,32 +45,32 @@ End Class
 
 Module DictionaryFileAccess
     Sub Save(ByVal FilePath As String, ByVal Dictionary As DictionaryFile)
-        Dim DictionaryString As New List(Of ZiaLine) From {
-            New ZiaLine(LineType.Comment, "Dictionary"),
-            New ZiaLine(LineType.Comment, "LangPad Version:" & GetAppDisplayName())
+        Dim DictionaryString As New List(Of KeyValue.Line) From {
+            New KeyValue.Line(KeyValue.LineType.Comment, "Dictionary"),
+            New KeyValue.Line(KeyValue.LineType.Comment, "LangPad Version:" & GetAppDisplayName())
         }
 
         For i = 0 To Dictionary.Words.Count - 1
             Dim CurrentWord As DictionaryWord = Dictionary.Words.Item(i)
-            Dim Value As String = String.Format("{0}|{1}|{2}|{3}", ToCompatibleStr(CurrentWord.Word), ToCompatibleStr(CurrentWord.Pronunciation),
-                                                ToCompatibleStr(CurrentWord.Definition), ToCompatibleStr(CurrentWord.Notes))
-            DictionaryString.Add(New ZiaLine(LineType.KeyValue, "Word " & i, Value))
+            Dim Value As String = String.Format("{0}|{1}|{2}|{3}", KeyValue.FormatString(CurrentWord.Word), KeyValue.FormatString(CurrentWord.Pronunciation),
+                                                KeyValue.FormatString(CurrentWord.Definition), KeyValue.FormatString(CurrentWord.Notes))
+            DictionaryString.Add(New KeyValue.Line(KeyValue.LineType.KeyValue, "Word " & i, Value))
         Next
 
-        File.WriteAllText(FilePath, Write(DictionaryString))
+        File.WriteAllText(FilePath, KeyValue.Write(DictionaryString))
     End Sub
 
     Public Function Open(ByVal FilePath As String) As DictionaryFile
         Dim NewDictionary As New DictionaryFile
-        Dim LineList As Dictionary(Of String, String) = Read(File.ReadAllText(FilePath))
+        Dim LineList As Dictionary(Of String, String) = KeyValue.Read(File.ReadAllText(FilePath))
 
         For Each CurrentLine As KeyValuePair(Of String, String) In LineList
             If Not CurrentLine.Key.StartsWith("Word") Or CurrentLine.Value.Split("|").Count <> 4 Then Continue For
             Dim NewWord As New DictionaryWord With {
-                .Word = FromCompatibleStr(CurrentLine.Value.Split("|").GetValue(0)),
-                .Pronunciation = FromCompatibleStr(CurrentLine.Value.Split("|").GetValue(1)),
-                .Definition = FromCompatibleStr(CurrentLine.Value.Split("|").GetValue(2)),
-                .Notes = FromCompatibleStr(CurrentLine.Value.Split("|").GetValue(3))
+                .Word = KeyValue.UnformatString(CurrentLine.Value.Split("|").GetValue(0)),
+                .Pronunciation = KeyValue.UnformatString(CurrentLine.Value.Split("|").GetValue(1)),
+                .Definition = KeyValue.UnformatString(CurrentLine.Value.Split("|").GetValue(2)),
+                .Notes = KeyValue.UnformatString(CurrentLine.Value.Split("|").GetValue(3))
             }
 
             NewDictionary.Words.Add(NewWord)

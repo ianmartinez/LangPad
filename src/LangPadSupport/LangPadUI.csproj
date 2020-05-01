@@ -7,8 +7,8 @@
     <ProjectGuid>{8BD8A7F1-C880-41CC-8485-B132DDAD924A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LangPadSupport</RootNamespace>
-    <AssemblyName>LangPadSupport</AssemblyName>
+    <RootNamespace>LangPadUI</RootNamespace>
+    <AssemblyName>LangPadUI</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Characters.cs" />
     <Compile Include="DoubleBufferedFlowLayoutPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -57,31 +56,25 @@
     </Compile>
     <Compile Include="FixedSR.cs" />
     <Compile Include="IconManager.cs" />
-    <Compile Include="Notebook\Dictionary.cs" />
-    <Compile Include="Notebook\KeyValue.cs" />
-    <Compile Include="Notebook\Notebook.cs" />
-    <Compile Include="Notebook\Page.cs" />
-    <Compile Include="Notebook\TempFolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="StylizedColorButton.cs">
+    <Compile Include="ColorButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Themes\GlacierTheme.cs" />
     <Compile Include="Themes\Theme.cs" />
-    <Compile Include="ZiaFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="StylizedColorButton.resx">
-      <DependentUpon>StylizedColorButton.cs</DependentUpon>
+    <EmbeddedResource Include="ColorButton.resx">
+      <DependentUpon>ColorButton.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -67,26 +67,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPad.exe" size="1100288">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPad.exe" size="1094144">
       <assemblyIdentity name="LangPad" version="11.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KmdSjsFTE0ujN/0N8eZAJaVEEzObMlJu9ilSXiq0IIU=</dsig:DigestValue>
+        <dsig:DigestValue>eLWqtwgsh1qWBMmqwW5PkLOR4xhVzm42wPrf8sDGVZ0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPadSupport.dll" size="1632768">
-      <assemblyIdentity name="LangPadSupport" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPadData.dll" size="13824">
+      <assemblyIdentity name="LangPadData" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zbzo4PGJGqtXTTlkWDRwhncyr1rlH9mNL7rF1y1XrsE=</dsig:DigestValue>
+        <dsig:DigestValue>AE9RQIOFbovkJZE5iiARITQGtqlHWdafeXEl36Hqq1Q=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPadUI.dll" size="1614848">
+      <assemblyIdentity name="LangPadUI" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>EAWXBQpe3pMe+89h1RXa9zRcU0dRsBD/VUj0K7pMqFE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

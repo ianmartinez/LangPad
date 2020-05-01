@@ -3,7 +3,7 @@
 ''' <summary>
 ''' Handles the conversion to Markdown
 ''' </summary>
-Module Markdown
+Module MarkdownConverter
     Public Function RtfToMarkdown(Rtf As String) As String
         Dim MdConverter = New Converter()
         Dim Html = RtfToHtml(Rtf, "", True)
