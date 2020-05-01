@@ -7,7 +7,7 @@ using System.Linq;
 namespace LangPadData.NotebookNT
 {
     /// <summary>
-    /// A Notebook in the NT 1.x-2.x file format (*.nt).
+    /// A notebook in the NT 1.x-2.x file format (*.nt).
     /// </summary>
     public class NotebookNT
     {
