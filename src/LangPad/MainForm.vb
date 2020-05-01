@@ -520,7 +520,7 @@ Public Class MainForm
                     .Website = CurrentNotebook.Website,
                     .Info = CurrentNotebook.Info,
                     .Stylesheet = "",
-                    .Characters = Lines.Get(CurrentNotebook.Characters).ToList()
+                    .Characters = CurrentNotebook.Characters
                 }
 
                 For Each Page In CurrentNotebook.Pages

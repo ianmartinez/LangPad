@@ -121,9 +121,9 @@ Public Class CharacterEditor
     End Sub
 
     Public Sub AddToFile(Character As String)
-        If CurrentNotebookCharacters.Contains(Character) Then Exit Sub
+        If CurrentNotebook.Characters.Contains(Character) Then Exit Sub
 
-        CurrentNotebook.Characters = CurrentNotebook.Characters & Environment.NewLine & Character
+        CurrentNotebook.Characters.Add(Character)
         RefreshFile()
         CurrentNotebook.Modified = True
     End Sub
@@ -131,7 +131,7 @@ Public Class CharacterEditor
     Public Sub RefreshFile()
         FilePanel.Controls.Clear()
 
-        For Each FileChar As String In CurrentNotebookCharacters
+        For Each FileChar As String In CurrentNotebook.Characters
             InsertCharacterButton(FileChar, FilePanel)
         Next
     End Sub
@@ -478,10 +478,8 @@ Public Class CharacterEditor
         Dim CurrentButton = CType(CurrentMenu.SourceControl, CharacterButton)
 
         If CurrentButton.Parent Is FilePanel Then
-            Dim FileChars As List(Of String) = CurrentNotebookCharacters.ToList()
-            If FileChars.Contains(CurrentButton.Text) Then
-                FileChars.Remove(CurrentButton.Text)
-                CurrentNotebook.Characters = String.Join(Environment.NewLine, FileChars.ToArray())
+            If CurrentNotebook.Characters.Contains(CurrentButton.Text) Then
+                CurrentNotebook.Characters.Remove(CurrentButton.Text)
                 RefreshFile()
             End If
         ElseIf CurrentButton.Parent Is LocalPanel Then
@@ -520,29 +518,29 @@ Public Class CharacterEditor
 
     Private Sub ClearFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ClearFileToolStripButton.Click
         If ConfirmClear() = DialogResult.Yes Then
-            CurrentNotebook.Characters = ""
+            CurrentNotebook.Characters.Clear()
             CurrentNotebook.Modified = True
             RefreshFile()
         End If
     End Sub
 
-    Private Sub ImportFile(FileName As String, ByRef Symbols As String)
+    Private Sub ImportFile(FileName As String, ByRef Characters As List(Of String))
         Dim Lines As String() = File.ReadAllText(FileName).Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-        Dim Chars As List(Of String) = Symbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries).ToList()
 
         For i = 0 To Lines.Length - 1
             If Lines.GetValue(i) = "" Then Continue For
-            If Chars.Contains(Lines.GetValue(i)) Then Continue For
+            If Characters.Contains(Lines.GetValue(i)) Then Continue For
 
-            Chars.Add(Lines.GetValue(i))
+            Characters.Add(Lines.GetValue(i))
         Next
-
-        Symbols = String.Join(Environment.NewLine, Chars)
     End Sub
 
     Private Sub ImportLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportLocalToolStripButton.Click
         If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            ImportFile(OpenDialog.FileName, My.Settings.CustomSymbols)
+            Dim LocalChars = Lines.Get(My.Settings.CustomSymbols).ToList()
+            ImportFile(OpenDialog.FileName, LocalChars)
+            My.Settings.CustomSymbols = String.Join("\n", LocalChars)
+            My.Settings.Save()
             RefreshLocal()
         End If
     End Sub
@@ -562,7 +560,7 @@ Public Class CharacterEditor
 
     Private Sub ExportFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportFileToolStripButton.Click
         If SaveDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            File.WriteAllText(SaveDialog.FileName, CurrentNotebook.Characters)
+            File.WriteAllText(SaveDialog.FileName, String.Join("\n", CurrentNotebook.Characters))
         End If
     End Sub
 

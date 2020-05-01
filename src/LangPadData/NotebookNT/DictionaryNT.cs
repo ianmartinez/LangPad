@@ -4,8 +4,7 @@ using System.IO;
 namespace LangPadData.NotebookNT
 {
     /// <summary>
-    /// Represents a dictionary in the NT 1.x-2.x file
-    /// format (*.nt).
+    /// A dictionary in the NT 1.x-2.x file format (*.nt).
     /// </summary>
     public class DictionaryNT
     {

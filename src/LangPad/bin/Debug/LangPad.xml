@@ -452,11 +452,6 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  notebook.
  </summary>
 </member>
-<member name="P:LangPad.NotebookController.CurrentNotebookCharacters">
- <summary>
- The file characters as a string array.
- </summary>
-</member>
 <member name="M:LangPad.NotebookController.LoadNotebook">
  <summary>
  Update the UI to reflect the current notebook.

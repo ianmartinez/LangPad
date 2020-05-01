@@ -17,8 +17,6 @@ namespace LangPadData.NotebookNT
         /// </summary>
         public const double NT_VERSION = 2.1;
 
-        // File data
-
         /// <summary>
         /// If the notebook has been modified.
         /// </summary>
@@ -34,8 +32,6 @@ namespace LangPadData.NotebookNT
         /// file was opened as.
         /// </summary>
         public double NtSpecVersion { get; set; } = NT_VERSION;
-
-        // Notebook info
 
         /// <summary>
         /// The title of the notebook.
@@ -59,30 +55,24 @@ namespace LangPadData.NotebookNT
         public string Website { get; set; } = "";
 
         /// <summary>
-        /// The custom characters, stored as string where the
-        /// characters are separated by '\n'.
+        /// A list of custom characters stored in the file.
         /// </summary>
-        public string Characters { get; set; } = "";
+        public List<string> Characters { get; set; } = new List<string>();
 
         /// <summary>
         /// The notebook's info text.
         /// </summary>
         public string Info { get; set; } = "";
 
-        // Pages
-
         /// <summary>
         /// A list of pages in the notebook.
         /// </summary>
         public List<PageNT> Pages { get; set; } = new List<PageNT>();
 
-        // Dictionary
-
         /// <summary>
         /// A list of words in the notebook.
         /// </summary>
         public DictionaryNT Dictionary = new DictionaryNT();
-
 
         /// <summary>
         /// Open a notebook file into this instance of NotebookNT.
@@ -157,7 +147,7 @@ namespace LangPadData.NotebookNT
             // custom symbols, so check if they exist before trying to
             // load them
             if (File.Exists(tempFolder.CustomSymbolsFile))
-                Characters = File.ReadAllText(tempFolder.CustomSymbolsFile);
+                Characters = Lines.Get(File.ReadAllText(tempFolder.CustomSymbolsFile)).ToList();
 
             // Load dictionary
 
@@ -209,7 +199,7 @@ namespace LangPadData.NotebookNT
             // to the disk
             KeyValue.WriteFile(tempFolder.DataFile, dataFileLines);
             File.WriteAllText(tempFolder.InfoFile, Info);
-            File.WriteAllText(tempFolder.CustomSymbolsFile, Characters);
+            File.WriteAllText(tempFolder.CustomSymbolsFile, string.Join("\n", Characters));
 
             // Write dictionary to the disk
             Dictionary.Save(tempFolder.DictionaryFile);

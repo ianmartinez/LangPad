@@ -58,15 +58,6 @@ Module NotebookController
     End Property
 
     ''' <summary>
-    ''' The file characters as a string array.
-    ''' </summary>
-    Public ReadOnly Property CurrentNotebookCharacters As String()
-        Get
-            Return CurrentNotebook.Characters.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-        End Get
-    End Property
-
-    ''' <summary>
     ''' Update the UI to reflect the current notebook.
     ''' </summary>
     Private Sub LoadNotebook()
@@ -180,7 +171,7 @@ Module NotebookController
         CharEditWindow.CharEdit.FilePanel.Controls.Clear()
 
         ' Add each character
-        For Each FileCharacter In CurrentNotebookCharacters
+        For Each FileCharacter In CurrentNotebook.Characters
             CharEditWindow.CharEdit.InsertCharacterButton(FileCharacter, CharEditWindow.CharEdit.FilePanel)
         Next
 
