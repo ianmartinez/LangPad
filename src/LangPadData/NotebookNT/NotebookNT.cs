@@ -6,30 +6,89 @@ using System.Linq;
 
 namespace LangPadData.NotebookNT
 {
+    /// <summary>
+    /// A Notebook in the NT 1.x-2.x file format (*.nt).
+    /// </summary>
     public class NotebookNT
     {
+        /// <summary>
+        /// The version of the NT file format that this
+        /// class saves in.
+        /// </summary>
         public const double NT_VERSION = 2.1;
 
         // File data
+
+        /// <summary>
+        /// If the notebook has been modified.
+        /// </summary>
         public bool Modified { get; set; } = false;
+
+        /// <summary>
+        /// The path to the file on the disk.
+        /// </summary>
         public string DocumentPath { get; set; } = "";
-        public double NtSpecVersion { get; set; }
+
+        /// <summary>
+        /// The version of NT file format that this
+        /// file was opened as.
+        /// </summary>
+        public double NtSpecVersion { get; set; } = NT_VERSION;
 
         // Notebook info
+
+        /// <summary>
+        /// The title of the notebook.
+        /// </summary>
         public string Title { get; set; } = "";
+
+        /// <summary>
+        /// The language the notebook is associated
+        /// with.
+        /// </summary>
         public string Language { get; set; } = "";
+
+        /// <summary>
+        /// The notebook's author.
+        /// </summary>
         public string Author { get; set; } = "";
+
+        /// <summary>
+        /// A website associated with the notebook.
+        /// </summary>
         public string Website { get; set; } = "";
-        public string CustomSymbols { get; set; } = "";
+
+        /// <summary>
+        /// The custom characters, stored as string where the
+        /// characters are separated by '\n'.
+        /// </summary>
+        public string Characters { get; set; } = "";
+
+        /// <summary>
+        /// The notebook's info text.
+        /// </summary>
         public string Info { get; set; } = "";
 
         // Pages
+
+        /// <summary>
+        /// A list of pages in the notebook.
+        /// </summary>
         public List<PageNT> Pages { get; set; } = new List<PageNT>();
 
         // Dictionary
+
+        /// <summary>
+        /// A list of words in the notebook.
+        /// </summary>
         public DictionaryNT Dictionary = new DictionaryNT();
 
 
+        /// <summary>
+        /// Open a notebook file into this instance of NotebookNT.
+        /// </summary>
+        /// 
+        /// <param name="filePath">The path of the notebook file.</param>
         public void Open(string filePath)
         {
             var tempFolder = new TempFolderNT(false);
@@ -47,14 +106,10 @@ namespace LangPadData.NotebookNT
             // Versions prior to NT 1.2 didn't actually declare their spec version,
             // so a lookup will fail
             if (string.IsNullOrEmpty(ntVersionStr))
-            {
                 NtSpecVersion = 1;
-            }
             else
-            {
                 if (double.TryParse(ntVersionStr, out double parsedNtVersion))
                     NtSpecVersion = parsedNtVersion;
-            }
 
             // Reset pages
             Pages = new List<PageNT>();
@@ -102,7 +157,7 @@ namespace LangPadData.NotebookNT
             // custom symbols, so check if they exist before trying to
             // load them
             if (File.Exists(tempFolder.CustomSymbolsFile))
-                CustomSymbols = File.ReadAllText(tempFolder.CustomSymbolsFile);
+                Characters = File.ReadAllText(tempFolder.CustomSymbolsFile);
 
             // Load dictionary
 
@@ -118,6 +173,11 @@ namespace LangPadData.NotebookNT
             DocumentPath = filePath;
         }
 
+        /// <summary>
+        /// Save this notebook to a file.
+        /// </summary>
+        /// 
+        /// <param name="filePath">The file to save the notebook to.</param>
         public void Save(string filePath)
         {
             var tempFolder = new TempFolderNT(true);
@@ -149,7 +209,7 @@ namespace LangPadData.NotebookNT
             // to the disk
             KeyValue.WriteFile(tempFolder.DataFile, dataFileLines);
             File.WriteAllText(tempFolder.InfoFile, Info);
-            File.WriteAllText(tempFolder.CustomSymbolsFile, CustomSymbols);
+            File.WriteAllText(tempFolder.CustomSymbolsFile, Characters);
 
             // Write dictionary to the disk
             Dictionary.Save(tempFolder.DictionaryFile);

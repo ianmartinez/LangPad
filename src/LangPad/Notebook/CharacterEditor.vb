@@ -123,7 +123,7 @@ Public Class CharacterEditor
     Public Sub AddToFile(Character As String)
         If CurrentNotebookCharacters.Contains(Character) Then Exit Sub
 
-        CurrentNotebook.CustomSymbols = CurrentNotebook.CustomSymbols & Environment.NewLine & Character
+        CurrentNotebook.Characters = CurrentNotebook.Characters & Environment.NewLine & Character
         RefreshFile()
         CurrentNotebook.Modified = True
     End Sub
@@ -481,7 +481,7 @@ Public Class CharacterEditor
             Dim FileChars As List(Of String) = CurrentNotebookCharacters.ToList()
             If FileChars.Contains(CurrentButton.Text) Then
                 FileChars.Remove(CurrentButton.Text)
-                CurrentNotebook.CustomSymbols = String.Join(Environment.NewLine, FileChars.ToArray())
+                CurrentNotebook.Characters = String.Join(Environment.NewLine, FileChars.ToArray())
                 RefreshFile()
             End If
         ElseIf CurrentButton.Parent Is LocalPanel Then
@@ -520,7 +520,7 @@ Public Class CharacterEditor
 
     Private Sub ClearFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ClearFileToolStripButton.Click
         If ConfirmClear() = DialogResult.Yes Then
-            CurrentNotebook.CustomSymbols = ""
+            CurrentNotebook.Characters = ""
             CurrentNotebook.Modified = True
             RefreshFile()
         End If
@@ -549,7 +549,7 @@ Public Class CharacterEditor
 
     Private Sub ImportFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportFileToolStripButton.Click
         If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            ImportFile(OpenDialog.FileName, CurrentNotebook.CustomSymbols)
+            ImportFile(OpenDialog.FileName, CurrentNotebook.Characters)
             RefreshFile()
         End If
     End Sub
@@ -562,7 +562,7 @@ Public Class CharacterEditor
 
     Private Sub ExportFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportFileToolStripButton.Click
         If SaveDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            File.WriteAllText(SaveDialog.FileName, CurrentNotebook.CustomSymbols)
+            File.WriteAllText(SaveDialog.FileName, CurrentNotebook.Characters)
         End If
     End Sub
 

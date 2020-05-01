@@ -62,7 +62,7 @@ Module NotebookController
     ''' </summary>
     Public ReadOnly Property CurrentNotebookCharacters As String()
         Get
-            Return CurrentNotebook.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+            Return CurrentNotebook.Characters.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
         End Get
     End Property
 
