@@ -42,7 +42,6 @@ Partial Class MainForm
         Me.DeselectAllContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitLayoutPanel = New System.Windows.Forms.SplitContainer()
         Me.PropertiesContainerPanel = New LangPadSupport.DoubleBufferedPanel()
-        Me.NotebookEditorPanel = New LangPad.NotebookEditor()
         Me.CurrentPageContainerBorder = New LangPadSupport.DoubleBufferedPanel()
         Me.CurrentPageContainer = New LangPadSupport.DoubleBufferedPanel()
         Me.FindReplaceDialog = New LangPadSupport.DoubleBufferedPanel()
@@ -240,6 +239,7 @@ Partial Class MainForm
         Me.PatreonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator27 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotebookEditorPanel = New LangPad.NotebookEditor()
         Me.MainContextMenu.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
@@ -386,15 +386,6 @@ Partial Class MainForm
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
         Me.PropertiesContainerPanel.Size = New System.Drawing.Size(340, 840)
         Me.PropertiesContainerPanel.TabIndex = 13
-        '
-        'NotebookEditorPanel
-        '
-        Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
-        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
-        Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
-        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 840)
-        Me.NotebookEditorPanel.TabIndex = 0
         '
         'CurrentPageContainerBorder
         '
@@ -1475,6 +1466,7 @@ Partial Class MainForm
             Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
         Me.CopyAsMarkdownToolStripMenuItem.Size = New System.Drawing.Size(378, 34)
         Me.CopyAsMarkdownToolStripMenuItem.Text = "Copy as Markdown"
+        Me.CopyAsMarkdownToolStripMenuItem.Visible = False
         '
         'PasteToolStripMenuItem
         '
@@ -2142,6 +2134,15 @@ Partial Class MainForm
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(282, 34)
         Me.AboutToolStripMenuItem.Text = "About..."
+        '
+        'NotebookEditorPanel
+        '
+        Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
+        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
+        Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
+        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 840)
+        Me.NotebookEditorPanel.TabIndex = 0
         '
         'MainForm
         '

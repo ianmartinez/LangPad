@@ -1238,6 +1238,6 @@ Public Class MainForm
     End Sub
 
     Private Sub CopyAsMarkdownToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyAsMarkdownToolStripMenuItem.Click
-        Clipboard.SetText(RtfToMarkdown(CurrentRtb.SelectedRtf))
+        'Clipboard.SetText(RtfToMarkdown(CurrentRtb.SelectedRtf))
     End Sub
 End Class
