@@ -55,14 +55,6 @@ End Class
 Module NotebookFileAccess
     Dim PagesFolder As String
     Sub Save(ByVal FilePath As String, ByVal Notebook As NotebookFile)
-        SavePages()
-
-        If DictionaryForm.Loaded = False Then
-            RefreshDictionary()
-        End If
-
-        DictionaryForm.SaveDictionary()
-
         Dim TempGuid As Guid = Guid.NewGuid
         Dim TempPath As String = Application.LocalUserAppDataPath & "\zip-" & TempGuid.ToString
         If Directory.Exists(TempPath) Then

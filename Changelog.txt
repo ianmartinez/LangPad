@@ -33,6 +33,8 @@ Version 11.0 (June 30)
    • Smaller sidebar that has been split into two tabs: pages and notebook info
    • Move sidebar to the left side
    • Improved splash screen
+   • Complete re-write of file handling code
+   • Notebook files are now optimized for compression speed over compression density
    • Major refactoring to have a more consistent naming scheme and remove old junk
    • Bug Fix: Old Language Pad 4.x-5.x files could not be opened
    • Bug Fix: Fix bad performance when changing font styles on a page that has large images 

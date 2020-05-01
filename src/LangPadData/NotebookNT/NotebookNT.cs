@@ -13,7 +13,6 @@ namespace LangPadData.NotebookNT
         // File data
         public bool Modified { get; set; } = false;
         public string DocumentPath { get; set; } = "";
-        public string ProgramVersion { get; set; } = "";
         public double NtSpecVersion { get; set; }
 
         // Notebook info
@@ -96,7 +95,6 @@ namespace LangPadData.NotebookNT
             Language = KeyValue.Search(dataLines, "Language");
             Author = KeyValue.Search(dataLines, "Author");
             Website = KeyValue.Search(dataLines, "Website");
-            ProgramVersion = KeyValue.Search(dataLines, "ProgramVersion");
 
             // Load file characters
 
@@ -122,7 +120,42 @@ namespace LangPadData.NotebookNT
 
         public void Save(string filePath)
         {
+            var tempFolder = new TempFolderNT(true);
 
+            // Create data.txt KeyValues
+            var dataFileLines = new List<KvLine>
+            {
+                new KvLine(KvLineType.Comment, "LangPad Notebook Info"),
+                new KvLine(KvLineType.KeyValue, "Title", Title),
+                new KvLine(KvLineType.KeyValue, "Language", Language),
+                new KvLine(KvLineType.KeyValue, "Author", Author),
+                new KvLine(KvLineType.KeyValue, "Website", Website),
+                new KvLine(KvLineType.KeyValue, "NTVersion", NT_VERSION.ToString()),
+                new KvLine(KvLineType.Blank),
+                new KvLine(KvLineType.Comment, "Pages")
+            };
+
+            // Add each page's data to data.txt
+            for (var i = 0; i < Pages.Count; i++)
+            {
+                var page = Pages[i];
+                // Add page title data in data.txt
+                dataFileLines.Add(new KvLine(KvLineType.KeyValue, "Page" + i, KeyValue.FormatString(page.Title)));
+                // Add page file to the pages folder
+                File.WriteAllText(tempFolder.GetPagePath(i), page.Rtf);
+            }
+
+            // Write data.txt, info.txt, and custom_symbols.txt
+            // to the disk
+            KeyValue.WriteFile(tempFolder.DataFile, dataFileLines);
+            File.WriteAllText(tempFolder.InfoFile, Info);
+            File.WriteAllText(tempFolder.CustomSymbolsFile, CustomSymbols);
+
+            // Write dictionary to the disk
+            Dictionary.Save(tempFolder.DictionaryFile);
+
+            // Create zip file containing the temp folder's contents
+            ZipFile.CreateFromDirectory(tempFolder.RootFolder, filePath, CompressionLevel.Fastest, false);
         }
     }
 }

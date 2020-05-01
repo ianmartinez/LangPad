@@ -233,6 +233,24 @@ Module NotebookController
     End Sub
 
     ''' <summary>
+    ''' Save the current notebook to a path.
+    ''' </summary>
+    ''' 
+    ''' <param name="FilePath">The path to save the current notebook to.</param>
+    Public Sub SaveNotebook(FilePath As String)
+        ' Save all data from the UI into the
+        ' notebook
+        SavePages()
+        If DictionaryForm.Loaded = False Then
+            RefreshDictionary()
+        End If
+        DictionaryForm.SaveDictionary()
+
+        ' Save the notebook
+        CurrentNotebook.Save(FilePath)
+    End Sub
+
+    ''' <summary>
     ''' Insert a page to the current notebook.
     ''' </summary>
     ''' 

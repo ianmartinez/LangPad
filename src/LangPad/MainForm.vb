@@ -40,6 +40,7 @@ Public Class MainForm
                         Dim AllowOpen As Boolean = True
                         Dim OpenFile As New NotebookFile()
                         OpenFile.Open(FileName)
+
                         If OpenFile.NTSpecificationVersion > NotebookNT.NT_VERSION Then
                             If Not MessageBox.Show("The notebook file you are trying to open is from LangPad " + OpenFile.ProgramVersion.ToString() + ", which is newer than the version you are currently using. " +
                                 " This can lead to unexpected results. Are you sure you want to continue?", "File from LangPad " + OpenFile.ProgramVersion.ToString(), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
@@ -543,9 +544,8 @@ Public Class MainForm
 
                 ThornNotebook.Save(SaveDialog.FileName)
             Else
-                CurrentNotebook.Save(SaveDialog.FileName)
+                SaveNotebook(SaveDialog.FileName)
                 CurrentFilePath = SaveDialog.FileName
-                CurrentNotebook.Modified = False
                 SetTitle()
             End If
 
@@ -573,8 +573,7 @@ Public Class MainForm
                 CurrentRtb.SelectionStart = 0
                 CurrentRtb.SelectionLength = 0
             Else
-                CurrentNotebook.Save(CurrentFilePath)
-                CurrentNotebook.Modified = False
+                SaveNotebook(CurrentFilePath)
                 SetTitle()
             End If
         End If
