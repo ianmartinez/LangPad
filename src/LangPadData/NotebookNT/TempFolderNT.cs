@@ -2,15 +2,47 @@
 
 namespace LangPadData.NotebookNT
 {
+    /// <summary>
+    /// Create a temp folder for opening/saving files in the
+    /// NT 1.x-2.x file format (*.nt).
+    /// </summary>
     public class TempFolderNT
     {
+        /// <summary>
+        /// The root folder of the file.
+        /// </summary>
         public readonly string RootFolder;
+
+        /// <summary>
+        /// The folder storing the notebook pages.
+        /// </summary>
         public readonly string PagesFolder;
+
+        /// <summary>
+        /// The data.txt file.
+        /// </summary>
         public readonly string DataFile;
+
+        /// <summary>
+        /// The info.txt file.
+        /// </summary>
         public readonly string InfoFile;
-        public readonly string CustomSymbolsFile;
+
+        /// <summary>
+        /// The custom_symbols.txt file.
+        /// </summary>
+        public readonly string CharactersFile;
+
+        /// <summary>
+        /// The dictionary file.
+        /// </summary>
         public readonly string DictionaryFile;
 
+        /// <summary>
+        /// Create a new temp folder with a random GUID.
+        /// </summary>
+        /// 
+        /// <param name="createSubdirs">If the subdirectories should be created.</param>
         public TempFolderNT(bool createSubdirs)
         {
             RootFolder = TempFolder.GetNewTempFolderRoot();
@@ -20,7 +52,7 @@ namespace LangPadData.NotebookNT
                 Directory.CreateDirectory(PagesFolder);
             DataFile = Path.Combine(RootFolder, "data.txt");
             InfoFile = Path.Combine(RootFolder, "info.txt");
-            CustomSymbolsFile = Path.Combine(RootFolder, "custom_symbols.txt");
+            CharactersFile = Path.Combine(RootFolder, "custom_symbols.txt");
             DictionaryFile = Path.Combine(RootFolder, "dictionary.txt");
         }
 

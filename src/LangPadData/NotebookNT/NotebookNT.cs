@@ -147,8 +147,8 @@ namespace LangPadData.NotebookNT
             // The first release of the notebook format lacked embedded
             // custom symbols, so check if they exist before trying to
             // load them
-            if (File.Exists(tempFolder.CustomSymbolsFile))
-                Characters = Lines.Get(File.ReadAllText(tempFolder.CustomSymbolsFile)).ToList();
+            if (File.Exists(tempFolder.CharactersFile))
+                Characters = Lines.Get(File.ReadAllText(tempFolder.CharactersFile)).ToList();
 
             // Load dictionary
 
@@ -200,7 +200,7 @@ namespace LangPadData.NotebookNT
             // to the disk
             KeyValue.WriteFile(tempFolder.DataFile, dataFileLines);
             File.WriteAllText(tempFolder.InfoFile, Info);
-            File.WriteAllText(tempFolder.CustomSymbolsFile, string.Join("\n", Characters));
+            File.WriteAllText(tempFolder.CharactersFile, string.Join("\n", Characters));
 
             // Write dictionary to the disk
             Dictionary.Save(tempFolder.DictionaryFile);
