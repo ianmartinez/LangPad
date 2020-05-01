@@ -417,7 +417,7 @@ Partial Class NotebookEditor
         Me.PropertiesTab.Padding = New System.Windows.Forms.Padding(1, 1, 3, 1)
         Me.PropertiesTab.Size = New System.Drawing.Size(332, 437)
         Me.PropertiesTab.TabIndex = 0
-        Me.PropertiesTab.Text = "Properties"
+        Me.PropertiesTab.Text = "Notebook Info"
         Me.PropertiesTab.UseVisualStyleBackColor = True
         '
         'NotebookEditor

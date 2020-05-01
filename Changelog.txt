@@ -30,7 +30,7 @@ Version 11.0 (June 30)
    **• Re-add themes
    • Adding, removing, renaming, and changing the order of pages are all *much* faster
    • Pages are now inserted after the current page, not at the end of the notebook
-   • Smaller sidebar that has been split into two tabs: pages and properties
+   • Smaller sidebar that has been split into two tabs: pages and notebook info
    • Move sidebar to the left side
    • Improved splash screen
    • Major refactoring to have a more consistent naming scheme and remove old junk
