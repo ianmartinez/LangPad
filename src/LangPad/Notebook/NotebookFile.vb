@@ -186,14 +186,6 @@ Module NotebookFileAccess
             NewNotebook.WordDictionary.Open(DictionaryFile)
         End If
 
-        If NewNotebook.CustomSymbols <> "" Then
-            CharEditWindow.CharEdit.FilePanel.Controls.Clear()
-
-            For Each FileChar As String In CurrentNotebookCharacters
-                CharEditWindow.CharEdit.InsertCharacterButton(FileChar, CharEditWindow.CharEdit.FilePanel)
-            Next
-        End If
-
         Return NewNotebook
     End Function
 End Module
