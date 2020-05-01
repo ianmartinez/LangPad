@@ -68,7 +68,7 @@ namespace LangPadData
 
         public static string Search(Dictionary<string, string> data, string key)
         {
-            return data[key] ?? "";
+            return data.ContainsKey(key) ? data[key] : "";
         }
 
         public static string GetValue(string data, string key)
