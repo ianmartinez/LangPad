@@ -247,8 +247,13 @@ Public Class CharacterEditor
 
         Dim CurrentPos As Integer = TextBox.SelectionStart
         Dim SelectionLength As Integer = TextBox.SelectionLength
-
-        ' Insert a bracket before
+        Dim SelectionText = TextBox.SelectedText
+        ' If the selections ends with '\n', remove the
+        ' final end line character so that the brackets
+        ' don't wrap to the next line when they shouldn't
+        If SelectionText.EndsWith(vbLf) Then
+            SelectionLength -= 1
+        End If
         TextBox.SelectionLength = 0
 
         ' If it's an RTB, copy the style of the start of the selection
@@ -259,9 +264,10 @@ Public Class CharacterEditor
             Rtf.SelectionBackColor = SelectionBackColor
         End If
 
+        ' Insert bracket before
         InsertText(TextBox, BracketOpen)
 
-        ' Insert a bracket after
+        ' Insert bracket after
         TextBox.SelectionStart = CurrentPos + SelectionLength + BracketOpen.Length
         InsertText(TextBox, BracketClose)
 
