@@ -69,45 +69,45 @@ namespace LangPadUI.Themes
         public Color MenuButtonPressedShadow { get; set; } = Color.FromArgb(225, 215, 230, 238);
 
 
-        public static GraphicsPath GetRoundedRectanglePath(Rectangle Area, int Roundness)
+        public static GraphicsPath GetRoundedRectanglePath(Rectangle area, int radius)
         {
-            GraphicsPath RoundedRectanglePath = new GraphicsPath();
+            GraphicsPath roundedRectPath = new GraphicsPath();
 
-            if (Area.Width < Roundness * 2 || Area.Height < Roundness * 2)
+            if (area.Width < radius * 2 || area.Height < radius * 2)
             {
-                RoundedRectanglePath.AddEllipse(Area);
-                return RoundedRectanglePath;
+                roundedRectPath.AddEllipse(area);
+                return roundedRectPath;
             }
 
-            PointF[] CurvePoints = new[] { new PointF(Area.X, Area.Y + Roundness),
-                                           new PointF(Area.X + Roundness / (float)3, Area.Y + Roundness / (float)3),
-                                           new PointF(Area.X + Roundness, Area.Y) };
+            PointF[] CurvePoints = new[] { new PointF(area.X, area.Y + radius),
+                                           new PointF(area.X + radius / (float)3, area.Y + radius / (float)3),
+                                           new PointF(area.X + radius, area.Y) };
 
-            RoundedRectanglePath.AddCurve(CurvePoints, 1);
-            RoundedRectanglePath.AddLine(CurvePoints[2], new PointF(Area.Right - Roundness, Area.Y));
+            roundedRectPath.AddCurve(CurvePoints, 1);
+            roundedRectPath.AddLine(CurvePoints[2], new PointF(area.Right - radius, area.Y));
 
-            CurvePoints[0] = new PointF(Area.Right - Roundness, Area.Y);
-            CurvePoints[1] = new PointF(Area.Right - Roundness / (float)3, Area.Y + Roundness / (float)3);
-            CurvePoints[2] = new PointF(Area.Right, Area.Y + Roundness);
+            CurvePoints[0] = new PointF(area.Right - radius, area.Y);
+            CurvePoints[1] = new PointF(area.Right - radius / (float)3, area.Y + radius / (float)3);
+            CurvePoints[2] = new PointF(area.Right, area.Y + radius);
 
-            RoundedRectanglePath.AddCurve(CurvePoints, 1);
-            RoundedRectanglePath.AddLine(CurvePoints[2], new PointF(Area.Right, Area.Bottom - Roundness));
+            roundedRectPath.AddCurve(CurvePoints, 1);
+            roundedRectPath.AddLine(CurvePoints[2], new PointF(area.Right, area.Bottom - radius));
 
-            CurvePoints[0] = new PointF(Area.Right, Area.Bottom - Roundness);
-            CurvePoints[1] = new PointF(Area.Right - Roundness / (float)3, Area.Bottom - Roundness / (float)3);
-            CurvePoints[2] = new PointF(Area.Right - Roundness, Area.Bottom);
+            CurvePoints[0] = new PointF(area.Right, area.Bottom - radius);
+            CurvePoints[1] = new PointF(area.Right - radius / (float)3, area.Bottom - radius / (float)3);
+            CurvePoints[2] = new PointF(area.Right - radius, area.Bottom);
 
-            RoundedRectanglePath.AddCurve(CurvePoints, 1);
-            RoundedRectanglePath.AddLine(CurvePoints[2], new PointF(Area.X + Roundness, Area.Bottom));
+            roundedRectPath.AddCurve(CurvePoints, 1);
+            roundedRectPath.AddLine(CurvePoints[2], new PointF(area.X + radius, area.Bottom));
 
-            CurvePoints[0] = new PointF(Area.X + Roundness, Area.Bottom);
-            CurvePoints[1] = new PointF(Area.X + Roundness / (float)3, Area.Bottom - Roundness / (float)3);
-            CurvePoints[2] = new PointF(Area.X, Area.Bottom - Roundness);
+            CurvePoints[0] = new PointF(area.X + radius, area.Bottom);
+            CurvePoints[1] = new PointF(area.X + radius / (float)3, area.Bottom - radius / (float)3);
+            CurvePoints[2] = new PointF(area.X, area.Bottom - radius);
 
-            RoundedRectanglePath.AddCurve(CurvePoints, 1);
-            RoundedRectanglePath.AddLine(CurvePoints[2], new PointF(Area.X, Area.Y + Roundness));
+            roundedRectPath.AddCurve(CurvePoints, 1);
+            roundedRectPath.AddLine(CurvePoints[2], new PointF(area.X, area.Y + radius));
 
-            return RoundedRectanglePath;
+            return roundedRectPath;
         }
 
         public static void DrawRoundedRectangle(Graphics g, Rectangle rect, int radius, Color color)
