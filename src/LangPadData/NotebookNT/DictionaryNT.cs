@@ -56,7 +56,7 @@ namespace LangPadData.NotebookNT
             var dictionaryLines = new List<KvLine>
             {
                 new KvLine(KvLineType.Comment, "Dictionary"),
-                new KvLine(KvLineType.Comment, "NT Version:" + NotebookNT.NT_VERSION),
+                new KvLine(KvLineType.Comment, "NT Version:" + NotebookNT.SPEC_VERSION),
                 new KvLine(KvLineType.Blank)
             };
 

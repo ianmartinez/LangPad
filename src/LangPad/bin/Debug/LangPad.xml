@@ -423,7 +423,38 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
 </member>
 <member name="T:LangPad.AppTheme">
  <summary>
- Handles the application's theme and icons.
+ Handles the application's theme.
+ </summary>
+</member>
+<member name="M:LangPad.AppTheme.InitThemes">
+ <summary>
+ Load all of the available themes and apply
+ the user's selected theme, if valid.
+ </summary>
+</member>
+<member name="M:LangPad.AppTheme.InitMainFormTheme">
+ <summary>
+ Add the controls to be themed for the main form.
+ </summary>
+</member>
+<member name="M:LangPad.AppTheme.InitRtfEditorFormTheme">
+ <summary>
+ Add the controls to be themed for the RTF editor.
+ </summary>
+</member>
+<member name="M:LangPad.AppTheme.InitDictionaryFormTheme">
+ <summary>
+ Add the controls to be themed for the dictionary form.
+ </summary>
+</member>
+<member name="M:LangPad.AppTheme.InitCharEditTheme">
+ <summary>
+ Add the controls to be themed for the character editor.
+ </summary>
+</member>
+<member name="T:LangPad.Messages">
+ <summary>
+ Show standard message boxes used throughout LangPad.
  </summary>
 </member>
 <member name="T:LangPad.NotebookController">

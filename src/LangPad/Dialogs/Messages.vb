@@ -6,7 +6,7 @@ Module Messages
     Public Function CheckNtVersion(Notebook As NotebookNT) As Boolean
         Dim AllowOpen = True
 
-        If Notebook.NtSpecVersion > NotebookNT.NT_VERSION Then
+        If Notebook.NtSpecVersion > NotebookNT.SPEC_VERSION Then
             If Not MessageBox.Show("The notebook file you are trying to open is from a newer version of LangPad than the version you are currently using." +
                                 " This can lead to unexpected results. Are you sure you want to continue?", "File from Newer Version", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
                 AllowOpen = False

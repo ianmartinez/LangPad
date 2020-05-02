@@ -15,7 +15,7 @@ namespace LangPadData.NotebookNT
         /// The version of the NT file format that this
         /// class saves in.
         /// </summary>
-        public const double NT_VERSION = 2.1;
+        public const double SPEC_VERSION = 2.1;
 
         /// <summary>
         /// If the notebook has been modified since
@@ -32,7 +32,7 @@ namespace LangPadData.NotebookNT
         /// The version of NT file format that this
         /// file was opened as.
         /// </summary>
-        public double NtSpecVersion { get; set; } = NT_VERSION;
+        public double NtSpecVersion { get; set; } = SPEC_VERSION;
 
         /// <summary>
         /// The title of the notebook.
@@ -181,7 +181,7 @@ namespace LangPadData.NotebookNT
                 new KvLine(KvLineType.KeyValue, "Language", Language),
                 new KvLine(KvLineType.KeyValue, "Author", Author),
                 new KvLine(KvLineType.KeyValue, "Website", Website),
-                new KvLine(KvLineType.KeyValue, "NTVersion", NT_VERSION.ToString()),
+                new KvLine(KvLineType.KeyValue, "NTVersion", SPEC_VERSION.ToString()),
                 new KvLine(KvLineType.Blank),
                 new KvLine(KvLineType.Comment, "Pages")
             };
