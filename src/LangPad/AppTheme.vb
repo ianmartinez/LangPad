@@ -18,6 +18,7 @@ Module AppTheme
             InitMainFormTheme()
             InitRtfEditorFormTheme()
             InitDictionaryFormTheme()
+            InitCharEditTheme()
 
             ' Get saved theme
             Dim SavedTheme = Themer.GetTheme(My.Settings.Theme)
