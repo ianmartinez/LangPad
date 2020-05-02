@@ -5,6 +5,10 @@
 Module AppTheme
     Public Themer As ThemeManager = Nothing
 
+    ''' <summary>
+    ''' Load all of the available themes and apply
+    ''' the user's selected theme, if valid.
+    ''' </summary>
     Public Sub InitThemes()
         If Themer Is Nothing Then ' No themes have been loaded yet
             Themer = New ThemeManager()
@@ -42,6 +46,9 @@ Module AppTheme
         End If
     End Sub
 
+    ''' <summary>
+    ''' Add the controls to be themed for the main form.
+    ''' </summary>
     Private Sub InitMainFormTheme()
         Themer.AddForm(MainForm)
         Themer.AddMenu(MainForm.MainMenu)
@@ -55,12 +62,18 @@ Module AppTheme
         Themer.AddToolStripContainer(MainForm.NotebookEditorPanel.DocumentToolStripContainer)
     End Sub
 
+    ''' <summary>
+    ''' Add the controls to be themed for the RTF editor.
+    ''' </summary>
     Private Sub InitRtfEditorFormTheme()
         Themer.AddForm(RtfEditorForm)
         Themer.AddToolStripContainer(RtfEditorForm.MainToolStripContainer)
         Themer.AddToolStrip(RtfEditorForm.MainToolStrip)
     End Sub
 
+    ''' <summary>
+    ''' Add the controls to be themed for the dictionary form.
+    ''' </summary>
     Private Sub InitDictionaryFormTheme()
         Themer.AddForm(DictionaryForm)
         Themer.AddToolStripContainer(DictionaryForm.MainToolStripContainer)
@@ -68,6 +81,9 @@ Module AppTheme
         Themer.AddGrid(DictionaryForm.DictionaryGrid)
     End Sub
 
+    ''' <summary>
+    ''' Add the controls to be themed for the character editor.
+    ''' </summary>
     Private Sub InitCharEditTheme()
         Themer.AddToolStrip(CharEditWindow.CharEdit.FileToolStrip,
                             CharEditWindow.CharEdit.LocalToolStrip,
