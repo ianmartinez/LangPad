@@ -1,6 +1,6 @@
 ﻿Imports LangPadUI.Themes
 ''' <summary>
-''' Handles the application's theme and icons.
+''' Handles the application's theme.
 ''' </summary>
 Module AppTheme
     Public Themer As ThemeManager = Nothing
