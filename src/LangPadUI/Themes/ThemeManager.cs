@@ -31,7 +31,8 @@ namespace LangPadUI.Themes
         private readonly List<ToolStripContainer> toolStripContainerList = new List<ToolStripContainer>();
         private readonly List<ToolStrip> toolStripList = new List<ToolStrip>();
         private readonly List<Control> panelList = new List<Control>();
-        private readonly List<Form> formList = new List<Form>();
+        private readonly List<Control> formList = new List<Control>();
+        private readonly List<DataGridView> gridList = new List<DataGridView>();
 
         public ThemeManager()
         {
@@ -64,6 +65,12 @@ namespace LangPadUI.Themes
                 panel.ForeColor = theme.PanelTextColor;
             }
 
+            foreach (var grid in gridList)
+            {
+                grid.BackgroundColor = theme.FormBackColor;
+                grid.ForeColor = theme.FormTextColor;
+            }
+
             foreach (var form in formList)
             {
                 form.BackColor = theme.FormBackColor;
@@ -83,18 +90,12 @@ namespace LangPadUI.Themes
 
         public void AddMenu(params MenuStrip[] menus)
         {
-            foreach (var menu in menus)
-            {
-                menuList.Add(menu);
-            }
+            menuList.AddRange(menus);
         }
 
         public void AddContextMenu(params ContextMenuStrip[] contextMenus)
         {
-            foreach (var menu in contextMenus)
-            {
-                contextMenuList.Add(menu);
-            }
+            contextMenuList.AddRange(contextMenus);
         }
 
         public void AddToolStripContainer(params ToolStripContainer[] containers)
@@ -116,26 +117,22 @@ namespace LangPadUI.Themes
 
         public void AddToolStrip(params ToolStrip[] toolStrips)
         {
-            foreach (var toolStrip in toolStrips)
-            {
-                toolStripList.Add(toolStrip);
-            }
+            toolStripList.AddRange(toolStrips);
         }
 
         public void AddPanel(params Control[] panels)
         {
-            foreach (var panel in panels)
-            {
-                panelList.Add(panel);
-            }
+            panelList.AddRange(panels);
         }
 
-        public void AddForm(params Form[] forms)
+        public void AddForm(params Control[] forms)
         {
-            foreach (var form in forms)
-            {
-                formList.Add(form);
-            }
+            formList.AddRange(forms);
+        }
+
+        public void AddGrid(params DataGridView[] grids)
+        {
+            gridList.AddRange(grids);
         }
 
         public void RenderToolStripPanel(object sender, PaintEventArgs e)

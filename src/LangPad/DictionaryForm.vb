@@ -8,9 +8,6 @@ Imports LangPadUI.Themes
 Public Class DictionaryForm
     Dim CurrentTextbox As TextBox
     Public Loaded As Boolean = False
-    Public Color1 As Color
-    Public Color2 As Color
-    Public VerticalMenuGradient As Boolean = False
 
     Private Sub DictionaryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetIcons()
@@ -18,22 +15,10 @@ Public Class DictionaryForm
         SetDisplayFont()
         Loaded = True
         KeyPreview = True
-    End Sub
-
-    Public Sub SetTheme(Theme As Theme)
-        Color1 = Theme.PanelBackColor
-        Color2 = Theme.PanelBackColor
-        VerticalMenuGradient = Theme.HasVerticalMenuGradient
-        BackColor = Theme.PanelBackColor
-        DictionaryGrid.BackgroundColor = Theme.PanelBackColor
-
-        MainToolStrip.Renderer = Theme.ToolStripRenderer
 
         ' Center buttons relative to text boxes
         ' Because Windows' scaling throws them off
         FindButton.Top = FindTextBox.Top - (FindButton.Height / 2 - FindTextBox.Height / 2)
-
-        Refresh()
     End Sub
 
     Public Sub SetIcons()
@@ -49,18 +34,6 @@ Public Class DictionaryForm
         FontToolStripButton.Image = IconManager.Get("font", IconSize.Large, Res)
         ResetFontToolStripButton.Image = IconManager.Get("restart", IconSize.Large, Res)
         FindToolStripButton.Image = IconManager.Get("edit-find", IconSize.Large, Res)
-    End Sub
-
-    Private Sub MainToolStripContainer_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles MainToolStripContainer.TopToolStripPanel.Paint,
-        MainToolStripContainer.BottomToolStripPanel.Paint, MainToolStripContainer.LeftToolStripPanel.Paint, MainToolStripContainer.RightToolStripPanel.Paint
-        Dim Rect As New Rectangle(0, 0, MainToolStripContainer.Width, Height)
-        Dim FillBrush As New LinearGradientBrush(Rect, Color1, Color2, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
-        e.Graphics.FillRectangle(FillBrush, Rect)
-    End Sub
-
-    Private Sub MainToolStripContainer_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles MainToolStripContainer.TopToolStripPanel.SizeChanged,
-        MainToolStripContainer.BottomToolStripPanel.SizeChanged, MainToolStripContainer.LeftToolStripPanel.SizeChanged, MainToolStripContainer.RightToolStripPanel.SizeChanged
-        MainToolStripContainer.Invalidate()
     End Sub
 
     Public Sub SetDisplayFont()

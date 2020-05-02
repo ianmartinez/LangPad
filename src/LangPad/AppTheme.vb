@@ -17,6 +17,7 @@ Module AppTheme
             ' Init forms
             InitMainFormTheme()
             InitRtfEditorFormTheme()
+            InitDictionaryFormTheme()
 
             ' Get saved theme
             Dim SavedTheme = Themer.GetTheme(My.Settings.Theme)
@@ -43,5 +44,12 @@ Module AppTheme
         Themer.AddForm(RtfEditorForm)
         Themer.AddToolStripContainer(RtfEditorForm.MainToolStripContainer)
         Themer.AddToolStrip(RtfEditorForm.MainToolStrip)
+    End Sub
+
+    Private Sub InitDictionaryFormTheme()
+        Themer.AddForm(DictionaryForm)
+        Themer.AddToolStripContainer(DictionaryForm.MainToolStripContainer)
+        Themer.AddToolStrip(DictionaryForm.MainToolStrip)
+        Themer.AddGrid(DictionaryForm.DictionaryGrid)
     End Sub
 End Module

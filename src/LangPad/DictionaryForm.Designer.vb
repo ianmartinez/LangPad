@@ -69,7 +69,7 @@ Partial Class DictionaryForm
         Me.DictionaryGrid.AllowUserToAddRows = False
         Me.DictionaryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DictionaryGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DictionaryGrid.BackgroundColor = System.Drawing.Color.White
+        Me.DictionaryGrid.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DictionaryGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DictionaryGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DictionaryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -137,23 +137,14 @@ Partial Class DictionaryForm
         'MainToolStripContainer
         '
         '
-        'MainToolStripContainer.BottomToolStripPanel
-        '
-        '
         'MainToolStripContainer.ContentPanel
         '
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.DictionaryGrid)
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.FindReplaceDialog)
         Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1332, 808)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        '
-        'MainToolStripContainer.LeftToolStripPanel
-        '
         Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 0)
         Me.MainToolStripContainer.Name = "MainToolStripContainer"
-        '
-        'MainToolStripContainer.RightToolStripPanel
-        '
         Me.MainToolStripContainer.Size = New System.Drawing.Size(1332, 849)
         Me.MainToolStripContainer.TabIndex = 75
         Me.MainToolStripContainer.Text = "MainToolStripContainer"

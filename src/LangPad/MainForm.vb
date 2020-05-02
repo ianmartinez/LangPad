@@ -235,7 +235,6 @@ Public Class MainForm
     End Sub
 
     Public Sub SetTheme(Theme As Theme)
-        DictionaryForm.SetTheme(Theme)
         NotebookEditorPanel.SetTheme(Theme)
         CharEditWindow.CharEdit.SetTheme(Theme)
     End Sub

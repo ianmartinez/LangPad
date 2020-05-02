@@ -24,7 +24,7 @@ namespace LangPadUI.Themes
         public Color Color2 { get; set; } = Color.FromArgb(255, 255, 255, 255);
         public Color PanelBackColor { get; set; } = Color.FromArgb(255, 245, 245, 245);
         public Color PanelTextColor { get; set; } = Color.Black;
-        public Color FormBackColor { get; set; } = Color.FromArgb(255, 245, 245, 245);
+        public Color FormBackColor { get; set; } = Color.Red;
         public Color FormTextColor { get; set; } = Color.Black;
         public bool HasVerticalMenuGradient { get; set; } = false;
         public int ButtonRadius { get; set; } = 1;
