@@ -19,7 +19,7 @@ Module AppInstance
     ''' <summary>
     ''' The theme of the application's interface.
     ''' </summary>
-    Public ApplicationTheme As Theme
+    Public ApplicationTheme As OldTheme
 
     ''' <summary>
     ''' The local characters as a string array.

@@ -20,7 +20,7 @@ Public Class DictionaryForm
         KeyPreview = True
     End Sub
 
-    Public Sub SetTheme(Theme As Theme)
+    Public Sub SetTheme(Theme As OldTheme)
         Color1 = Theme.PanelBack
         Color2 = Theme.PanelBack
         VerticalMenuGradient = Theme.VerticalMenuGradient

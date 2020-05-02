@@ -40,7 +40,6 @@ namespace LangPadUI.Themes
         public static Color GlacierSelected1 = Color.FromArgb(100, 223, 242, 252);
         public static Color GlacierSelected2 = Color.FromArgb(205, 223, 242, 252);
         public static Color GlacierSelectedBorder = Color.FromArgb(225, 148, 188, 209);
-        public static Color GlacierSelectedShadow = Color.FromArgb(225, 240, 240, 240);
 
         public static Color GlacierDrop1 = Color.FromArgb(100, 180, 198, 207);
         public static Color GlacierDrop2 = Color.FromArgb(205, 180, 198, 207);
@@ -104,35 +103,6 @@ namespace LangPadUI.Themes
             e.Graphics.DrawRectangle(borderPen, rect4);
         }
 
-        // Render Checkmark 
-       /*protected override void OnRenderItemCheck(ToolStripItemImageRenderEventArgs e)
-        {
-            var imgSize = e.ImageRectangle.Size;
-
-            if (e.Item.Image != null)
-                imgSize = e.Item.Image.Size;
-
-            // MyBase.OnRenderItemCheck(e)
-            Rectangle rect = new Rectangle(3, 1, imgSize.Width + 4, imgSize.Height + 4);
-            Rectangle rect2 = new Rectangle(4, 2, imgSize.Width + 2, imgSize.Height + 2);
-            if (e.Item.Selected)
-            {
-                SolidBrush b = new SolidBrush(GlacierColors.GlacierToolstripBtn_Border);
-                SolidBrush b2 = new SolidBrush(GlacierColors.GlacierCheckBG);
-
-                e.Graphics.FillRectangle(b, rect);
-                e.Graphics.FillRectangle(b2, rect2);
-            }
-            else
-            {
-                SolidBrush b = new SolidBrush(GlacierColors.GlacierSelectedBG_Drop_Border);
-                SolidBrush b2 = new SolidBrush(GlacierColors.GlacierCheckBG);
-
-                e.Graphics.FillRectangle(b, rect);
-                e.Graphics.FillRectangle(b2, rect2);
-            }
-        }*/
-
         // Render separator
         protected override void OnRenderSeparator(ToolStripSeparatorRenderEventArgs e)
         {
@@ -170,8 +140,8 @@ namespace LangPadUI.Themes
                     LinearGradientBrush b = new LinearGradientBrush(rect, GlacierColors.GlacierSelected1, GlacierColors.GlacierSelected2, LinearGradientMode.Vertical);
 
                     e.Graphics.FillRectangle(b, rect);
-                    Theme.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 1, GlacierColors.GlacierToolstripBtn_Border);
-                    Theme.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 1, GlacierColors.GlacierSelectedShadow);
+                    OldTheme.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 1, GlacierColors.GlacierToolstripBtn_Border);
+                    OldTheme.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 1, GlacierColors.GlacierSelectedShadow);
                     e.Item.ForeColor = Color.Black;
                 }
                 else if (e.Item.IsOnDropDown && e.Item.Selected)
@@ -182,7 +152,7 @@ namespace LangPadUI.Themes
                     LinearGradientBrush b = new LinearGradientBrush(rect, GlacierColors.GlacierSelected1, GlacierColors.GlacierSelected2, LinearGradientMode.Vertical);
 
                     e.Graphics.FillRectangle(b, rect);
-                    Theme.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 1, GlacierColors.GlacierToolstripBtn_Border);
+                    OldTheme.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 1, GlacierColors.GlacierToolstripBtn_Border);
                     e.Item.ForeColor = Color.Black;
                 }
 
@@ -193,8 +163,8 @@ namespace LangPadUI.Themes
                     LinearGradientBrush b = new LinearGradientBrush(rect, GlacierColors.GlacierDrop1, GlacierColors.GlacierDrop2, LinearGradientMode.Vertical);
 
                     e.Graphics.FillRectangle(b, rect);
-                    Theme.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 1, GlacierColors.GlacierSelectedBG_Drop_Border);
-                    Theme.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 1, GlacierColors.GlacierDropShadow);
+                    OldTheme.DrawRoundedRectangle(e.Graphics, rect.Left - 1, rect.Top - 1, rect.Width, rect.Height + 1, 1, GlacierColors.GlacierSelectedBG_Drop_Border);
+                    OldTheme.DrawRoundedRectangle(e.Graphics, rect.Left - 2, rect.Top - 2, rect.Width + 2, rect.Height + 3, 1, GlacierColors.GlacierDropShadow);
                     e.Item.ForeColor = Color.Black;
                 }
             }

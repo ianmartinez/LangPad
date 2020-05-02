@@ -222,7 +222,7 @@ Public Class MainForm
         SelectAllContextMenuItem.Image = IconManager.Get("edit-select-all", IconSize.Small, Res)
     End Sub
 
-    Public Sub SetTheme(Theme As Theme)
+    Public Sub SetTheme(Theme As OldTheme)
         Color1 = Theme.Color1
         Color2 = Theme.Color2
         VerticalMenuGradient = Theme.VerticalMenuGradient
