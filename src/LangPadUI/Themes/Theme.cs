@@ -19,9 +19,9 @@ namespace LangPadUI.Themes
         /**
          * Main colors
          */
-        public Color Color1 { get; set; } = Color.Gray;
-        public Color Color2 { get; set; } = Color.Gray;
-        public Color PanelBackColor { get; set; } = Color.WhiteSmoke;
+        public Color Color1 { get; set; } = Color.FromArgb(255, 255, 255, 255);
+        public Color Color2 { get; set; } = Color.FromArgb(255, 255, 255, 255);
+        public Color PanelBackColor { get; set; } = Color.FromArgb(255, 245, 245, 245);
         public Color PanelTextColor { get; set; } = Color.Black;
         public bool HasVerticalMenuGradient { get; set; } = false;
         public int ButtonRadius { get; set; } = 1;
