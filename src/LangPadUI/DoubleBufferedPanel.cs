@@ -2,6 +2,10 @@
 
 namespace LangPadUI
 {
+    /// <summary>
+    /// A Panel that is double-buffered by default, to have
+    /// less artifacts than the default Panel.
+    /// </summary>
     public class DoubleBufferedPanel : Panel
     {
         public DoubleBufferedPanel()
