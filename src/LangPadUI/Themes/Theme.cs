@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace LangPadUI.Themes
 {
@@ -65,7 +66,6 @@ namespace LangPadUI.Themes
         public Color MenuButtonPressedColor2 { get; set; } = Color.FromArgb(205, 180, 198, 207);
         public Color MenuButtonPressedBorder { get; set; } = Color.FromArgb(225, 145, 160, 167);
         public Color MenuButtonPressedShadow { get; set; } = Color.FromArgb(225, 215, 230, 238);
-
 
 
         public static GraphicsPath GetRoundedRectanglePath(Rectangle Area, int Roundness)

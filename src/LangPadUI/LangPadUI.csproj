@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="Themes\LightTheme.cs" />
     <Compile Include="Themes\Theme.cs" />
+    <Compile Include="Themes\ThemeManager.cs" />
     <Compile Include="Themes\ThemeMenuRenderer.cs" />
     <Compile Include="Themes\ThemeToolStripRenderer.cs" />
   </ItemGroup>

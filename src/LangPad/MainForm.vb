@@ -7,10 +7,11 @@ Imports LangPadData.NotebookNT
 
 Public Class MainForm
     Public WithEvents CurrentRtb As New ExtendedRichTextBox()
-    Private ReadOnly ColorPicker As New ColorDialog
+    Private ReadOnly ColorPicker As New ColorDialog With {
+        .FullOpen = True
+    }
     Private CurrentFilePath As String
     Private LastPrintedCharPos As Integer
-    Public Title As String
     Public DisableFontChange As Boolean
     Public IsLoading As Boolean = False
     Public LastFocused As TextBoxBase
@@ -23,9 +24,12 @@ Public Class MainForm
         ' while showing progress on the splash screen.
         LoadApplication()
 
-        Text = GetAppDisplayName()
-        Title = Text
+        ' Set scaling size for context menus
         MainContextMenu.ImageScalingSize = New Size(16, 16)
+
+        ' Adjust the sidebar dimensions
+        SplitLayoutPanel.Panel1Collapsed = False
+        SplitLayoutPanel.SplitterDistance = NotebookEditorPanel.MinimumSize.Width
 
         ' Load the file that the program was sent, if any
         If My.Application.CommandLineArgs.Count > 0 Then
@@ -33,9 +37,10 @@ Public Class MainForm
                 Dim FileName As String = My.Application.CommandLineArgs(0)
                 Dim FileExt As String = Path.GetExtension(FileName).ToLower()
 
+                ' If it's an RTF or TXT file, import it as a page
                 If FileExt = ".rtf" OrElse FileExt = ".txt" Then
                     ImportPage(0, FileName)
-                Else
+                Else ' Try to open it as a notebook
                     Try
                         Dim OpenFile As New NotebookNT()
                         OpenFile.Open(FileName)
@@ -59,12 +64,14 @@ Public Class MainForm
             InsertPage(0, "Untitled")
         End If
 
+        ' Update the window title
         SetTitle()
-        SplitLayoutPanel.Panel1Collapsed = False
-        SelectedDocument_TextChanged(Me, e)
-        KeyPreview = True
 
-        SplitLayoutPanel.SplitterDistance = NotebookEditorPanel.MinimumSize.Width
+        ' Update any counters associated with the selected document
+        SelectedDocument_TextChanged(Me, e)
+
+        ' Get key previews on this form
+        KeyPreview = True
 
         ' Add indent options
         For i As Integer = 0 To 100
@@ -79,6 +86,9 @@ Public Class MainForm
         ApplicationTheme = New LightTheme()
         SetTheme(ApplicationTheme)
         ThemeCombo.SelectedItem = My.Settings.Theme
+
+        ' Set icons
+        SetIcons()
 
         ' Add handlers for the color panel buttons
         For Each ColorButton As Button In ColorLayoutPanel.Controls
@@ -98,9 +108,6 @@ Public Class MainForm
         Dim CharToolX = Math.Min(ScreenX, Location.X + Width + 20)
         CharEditWindow.Location = New Point(CharToolX, Location.Y)
         CharEditWindow.Height = Height
-
-        ColorPicker.FullOpen = True
-        SetIcons()
 
         ' Set shortcut key display text
         ZoomInToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl++"
@@ -265,11 +272,10 @@ Public Class MainForm
     End Sub
 
     Public Sub SetTitle()
-        If CurrentFilePath = "" Then
-            Text = Title
+        If String.IsNullOrEmpty(CurrentFilePath) Then
+            Text = GetAppDisplayName()
         Else
-            Dim FileName As String = CurrentFilePath.Split("\").GetValue(CurrentFilePath.Split("\").Count - 1)
-            Text = Title & " - " & FileName
+            Text = GetAppDisplayName() & " - " & Path.GetFileName(CurrentFilePath)
         End If
     End Sub
 
