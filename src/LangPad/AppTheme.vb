@@ -26,8 +26,18 @@ Module AppTheme
                 SavedTheme = New LightTheme()
             End If
 
+            ' Add each theme to the theme combo
+            MainForm.ThemeCombo.Items.Clear()
+            For Each Theme In Themer.Themes
+                MainForm.ThemeCombo.Items.Add(Theme.Name)
+            Next
+
             ' Apply saved theme
             Themer.CurrentTheme = SavedTheme
+
+            ' Set the theme combo to be the current theme
+            MainForm.ThemeCombo.SelectedItem = Themer.CurrentTheme.Name
+
         End If
     End Sub
 
@@ -55,5 +65,13 @@ Module AppTheme
         Themer.AddToolStripContainer(DictionaryForm.MainToolStripContainer)
         Themer.AddToolStrip(DictionaryForm.MainToolStrip)
         Themer.AddGrid(DictionaryForm.DictionaryGrid)
+    End Sub
+
+    Private Sub InitCharEditTheme()
+        Themer.AddForm(CharEditWindow, CharEditWindow.CharEdit)
+        Themer.AddToolStrip(CharEditWindow.CharEdit.FileToolStrip,
+                            CharEditWindow.CharEdit.LocalToolStrip,
+                            CharEditWindow.CharEdit.SearchToolStrip)
+        Themer.AddContextMenu(CharEditWindow.CharEdit.CharButtonMenu)
     End Sub
 End Module

@@ -1,5 +1,4 @@
 ﻿Imports System.IO
-Imports LangPadUI.Themes
 Imports LangPadUI
 Imports LangPadData
 
@@ -9,9 +8,6 @@ Public Class CharacterEditor
     Public Property Character As String
     Private ReadOnly AccentsList As List(Of String) = New List(Of String)
     Private AccentsString As String = ""
-    Public Color1 As Color
-    Public Color2 As Color
-    Public VerticalMenuGradient As Boolean = False
 
     Private Sub CharacterEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetIcons()
@@ -32,18 +28,6 @@ Public Class CharacterEditor
         InsertCharacterButton("X", BracketsPanel, "Remove Brackets", False, False, CharacterType.Bracket, Color.Red)
         InsertCharacterButton("/◌/", BracketsPanel, "Broad Transcription", False, False, CharacterType.Bracket)
         InsertCharacterButton("[◌]", BracketsPanel, "Narrow Transcription", False, False, CharacterType.Bracket)
-    End Sub
-
-    Public Sub SetTheme(WindowTheme As Theme)
-        Color1 = WindowTheme.PanelBackColor
-        Color2 = WindowTheme.PanelBackColor
-        VerticalMenuGradient = WindowTheme.HasVerticalMenuGradient
-        FileToolStrip.Renderer = WindowTheme.ToolStripRenderer
-        LocalToolStrip.Renderer = WindowTheme.ToolStripRenderer
-        SearchToolStrip.Renderer = WindowTheme.ToolStripRenderer
-        CharButtonMenu.Renderer = WindowTheme.MenuRenderer
-
-        Refresh()
     End Sub
 
     Public Sub SetIcons()

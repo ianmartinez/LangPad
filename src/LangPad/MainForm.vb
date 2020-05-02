@@ -79,10 +79,7 @@ Public Class MainForm
         MainToolStrip.Location = New Point(0, 0)
 
         ' Set theme
-        ApplicationTheme = New LightTheme()
-        SetTheme(ApplicationTheme)
         InitThemes()
-        ThemeCombo.SelectedItem = My.Settings.Theme
 
         ' Set icons
         SetIcons()
@@ -233,10 +230,6 @@ Public Class MainForm
         SelectAllContextMenuItem.Image = IconManager.Get("edit-select-all", IconSize.Small, Res)
     End Sub
 
-    Public Sub SetTheme(Theme As Theme)
-        CharEditWindow.CharEdit.SetTheme(Theme)
-    End Sub
-
     Public Sub SetTitle()
         If String.IsNullOrEmpty(CurrentFilePath) Then
             Text = GetAppDisplayName()
@@ -310,7 +303,7 @@ Public Class MainForm
 
         CharEditWindow.Close()
         If DictionaryForm IsNot Nothing Then DictionaryForm.Close()
-        My.Settings.Theme = ThemeCombo.SelectedItem
+        My.Settings.Theme = Themer.CurrentTheme.Name
         My.Settings.Save()
     End Sub
 
@@ -954,10 +947,15 @@ Public Class MainForm
     End Sub
 
     Private Sub ThemeCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ThemeCombo.SelectedIndexChanged
-        If ThemeCombo.SelectedItem.ToString().Equals("Glacier") Then
-            SetTheme(New LightTheme())
+        Dim ThemeName = ThemeCombo.SelectedItem.ToString()
+        Dim MatchingTheme = Themer.GetTheme(ThemeName)
+
+        ' Try to find a theme matching the selected
+        ' text, if not default to the light theme
+        If Not MatchingTheme Is Nothing Then
+            Themer.CurrentTheme = MatchingTheme
         Else
-            SetTheme(New LightTheme())
+            Themer.CurrentTheme = New LightTheme()
         End If
     End Sub
 
