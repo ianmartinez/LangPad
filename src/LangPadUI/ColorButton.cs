@@ -5,6 +5,13 @@ using System.Windows.Forms;
 
 namespace LangPadUI
 {
+    /// <summary>
+    /// A button that displays a box with a color that can
+    /// be changed by the user with a color dialog when it
+    /// is clicked.
+    /// 
+    /// Fires a ColorChanged event when the color is changed.
+    /// </summary>
     public class ColorButton : Button
     {
         private ColorDialog dlgColor;
