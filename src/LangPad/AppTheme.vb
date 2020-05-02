@@ -24,6 +24,7 @@ Module AppTheme
             If SavedTheme Is Nothing Then
                 SavedTheme = New LightTheme()
             End If
+
             ' Apply saved theme
             Themer.CurrentTheme = SavedTheme
         End If
@@ -39,6 +40,8 @@ Module AppTheme
     End Sub
 
     Private Sub InitRtfEditorFormTheme()
-
+        Themer.AddForm(RtfEditorForm)
+        Themer.AddToolStripContainer(RtfEditorForm.MainToolStripContainer)
+        Themer.AddToolStrip(RtfEditorForm.MainToolStrip)
     End Sub
 End Module
