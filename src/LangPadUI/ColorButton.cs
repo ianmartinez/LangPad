@@ -14,29 +14,28 @@ namespace LangPadUI
     /// </summary>
     public class ColorButton : Button
     {
-        private ColorDialog dlgColor;
+        private ColorDialog colorDialog;
+        private Bitmap ColorBitmap;
+        private Color color;
+
         public event ColorChangedEventHandler ColorChanged;
         public delegate void ColorChangedEventHandler(object sender, EventArgs e);
-
-        private Color mColor;
+        public bool RightClickMode { get; set; }
         public Color Color
         {
             get
             {
-                return mColor;
+                return color;
             }
             set
             {
-                mColor = value;
+                color = value;
                 GenerateColorBitmap();
                 Image = ColorBitmap;
                 ColorChanged?.Invoke(this, null);
             }
         }
 
-        public bool RightClickMode { get; set; }
-
-        private Bitmap ColorBitmap;
         private void GenerateColorBitmap()
         {
             ColorBitmap = new Bitmap(32, 32);
@@ -64,9 +63,8 @@ namespace LangPadUI
 
         private void InitializeComponent()
         {
-            dlgColor = new ColorDialog();
-            SuspendLayout();
-            dlgColor.FullOpen = true;
+            colorDialog = new ColorDialog();
+            colorDialog.FullOpen = true;
             MouseDown += ColorButton_MouseDown;
         }
 
@@ -76,9 +74,9 @@ namespace LangPadUI
                 return;
             else
             {
-                dlgColor.Color = Color;
-                if (dlgColor.ShowDialog() == DialogResult.OK)
-                    Color = dlgColor.Color;
+                colorDialog.Color = Color;
+                if (colorDialog.ShowDialog() == DialogResult.OK)
+                    Color = colorDialog.Color;
             }
         }
     }
