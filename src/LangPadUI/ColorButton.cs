@@ -14,8 +14,8 @@ namespace LangPadUI
     /// </summary>
     public class ColorButton : Button
     {
-        private ColorDialog colorDialog;
-        private Bitmap ColorBitmap;
+        private readonly ColorDialog colorDialog = new ColorDialog { FullOpen = true };
+        private Bitmap colorBitmap;
         private Color color;
 
         public event ColorChangedEventHandler ColorChanged;
@@ -31,20 +31,9 @@ namespace LangPadUI
             {
                 color = value;
                 GenerateColorBitmap();
-                Image = ColorBitmap;
+                Image = colorBitmap;
                 ColorChanged?.Invoke(this, null);
             }
-        }
-
-        private void GenerateColorBitmap()
-        {
-            ColorBitmap = new Bitmap(32, 32);
-            Graphics ColorGraphics = Graphics.FromImage(ColorBitmap);
-            Rectangle ColorRectangle = new Rectangle(1, 1, ColorBitmap.Width - 2, ColorBitmap.Height - 2);
-            ColorGraphics.CompositingQuality = CompositingQuality.HighQuality;
-            ColorGraphics.SmoothingMode = SmoothingMode.AntiAlias;
-            ColorGraphics.FillRectangle(new SolidBrush(Color), ColorRectangle);
-            ColorGraphics.DrawRectangle(new Pen(new SolidBrush(Color.FromArgb(100, 0, 0, 0))), ColorRectangle);
         }
 
         public ColorButton()
@@ -55,23 +44,36 @@ namespace LangPadUI
             MinimumSize = new Size(32, 32);
         }
 
+        private void GenerateColorBitmap()
+        {
+            colorBitmap = new Bitmap(32, 32);
+
+            Graphics g = Graphics.FromImage(colorBitmap);
+            g.CompositingQuality = CompositingQuality.HighQuality;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+
+            Rectangle rect = new Rectangle(1, 1, colorBitmap.Width - 2, colorBitmap.Height - 2);
+            g.FillRectangle(new SolidBrush(Color), rect);
+            g.DrawRectangle(new Pen(Color.FromArgb(100, 0, 0, 0)), rect);
+        }
+
         private void ColorButton_Resize(object sender, EventArgs e)
         {
             GenerateColorBitmap();
-            Image = ColorBitmap;
+            Image = colorBitmap;
         }
 
         private void InitializeComponent()
         {
-            colorDialog = new ColorDialog();
-            colorDialog.FullOpen = true;
             MouseDown += ColorButton_MouseDown;
         }
 
         private void ColorButton_MouseDown(object sender, MouseEventArgs e)
         {
             if (RightClickMode && !(e.Button == MouseButtons.Right))
+            {
                 return;
+            }
             else
             {
                 colorDialog.Color = Color;
