@@ -18,9 +18,21 @@ namespace LangPadUI
         private Bitmap colorBitmap;
         private Color color;
 
+        /// <summary>
+        /// Fired when the color is changed by the user.
+        /// </summary>
         public event ColorChangedEventHandler ColorChanged;
         public delegate void ColorChangedEventHandler(object sender, EventArgs e);
+
+        /// <summary>
+        /// If the color picker is opened by right clicking the button
+        /// instead of left clicking.
+        /// </summary>
         public bool RightClickMode { get; set; }
+
+        /// <summary>
+        /// The current color of the color button.
+        /// </summary>
         public Color Color
         {
             get
