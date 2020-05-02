@@ -237,26 +237,9 @@ Public Class MainForm
     Public Sub SetTheme(Theme As Theme)
         RtfEditorForm.SetTheme(Theme)
         DictionaryForm.SetTheme(Theme)
-
-
         NotebookEditorPanel.SetTheme(Theme)
         CharEditWindow.CharEdit.SetTheme(Theme)
-
-        'Refresh()
     End Sub
-
-    'Private Sub MainToolStripContainer_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles MainToolStripContainer.TopToolStripPanel.Paint,
-    '    MainToolStripContainer.BottomToolStripPanel.Paint, MainToolStripContainer.LeftToolStripPanel.Paint, MainToolStripContainer.RightToolStripPanel.Paint
-    '    Dim g As Graphics = e.Graphics
-    '    Dim rect As New Rectangle(0, 0, MainToolStripContainer.Width, Height)
-    '    Dim b As New LinearGradientBrush(rect, BackColor, BackColor, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
-    '    g.FillRectangle(b, rect)
-    'End Sub
-
-    'Private Sub MainToolStripContainer_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles MainToolStripContainer.TopToolStripPanel.SizeChanged,
-    '    MainToolStripContainer.BottomToolStripPanel.SizeChanged, MainToolStripContainer.LeftToolStripPanel.SizeChanged, MainToolStripContainer.RightToolStripPanel.SizeChanged
-    '    MainToolStripContainer.Invalidate()
-    'End Sub
 
     Public Sub SetTitle()
         If String.IsNullOrEmpty(CurrentFilePath) Then
