@@ -1,9 +1,13 @@
-Version 11.1 (TBD)
-   **• Frequently used characters tab
+Version 11.2 (TBD)
    **• Export pages to Markdown
    **• Export dictionary to Markdown
    **• Copy text as Markdown
+   
+Version 11.1 (TBD)
+   **• Frequently used characters tab
+   **• Recent notebooks in file menu
    **• Export all pages wizard
+   **• Settings are preserved between versions
 
 Version 11.0 (June 30)
    • Easier resizing of images before insertion
@@ -33,9 +37,11 @@ Version 11.0 (June 30)
    • Smaller sidebar that has been split into two tabs: pages and notebook info
    • Move sidebar to the left side
    • Improved splash screen
-   • Complete re-write of file handling code
    • Notebook files are now optimized for compression speed over compression density
    • Major refactoring to have a more consistent naming scheme and remove old junk
+   • Complete re-write of file handling code   
+   • Complete re-write of theming code   
+   **• Refactor style code
    • Bug Fix: Old Language Pad 4.x-5.x files could not be opened
    • Bug Fix: Fix bad performance when changing font styles on a page that has large images 
    • Bug Fix: Word count wouldn't update automatically when opening a new file
