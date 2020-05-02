@@ -3,6 +3,11 @@ using System.Drawing.Drawing2D;
 
 namespace LangPadUI.Themes
 {
+    /// <summary>
+    /// A class storing all of the color and renderer resources
+    /// needed for a LangPad theme. Also contains static functions
+    /// to make creating some theme graphics easier.
+    /// </summary>
     public abstract class Theme
     {
         public string Name { get; set; }
