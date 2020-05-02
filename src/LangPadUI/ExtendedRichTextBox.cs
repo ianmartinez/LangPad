@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 namespace LangPadUI
 {
     // Most of this is not my own code:
-    // This entire file is made from various projects on CodeProject smashed together along with some of my own code
+    // It is made from various projects on CodeProject smashed together, along with some of my own code
 
     /// <summary>
     /// The rich text box print control class was developed by Microsoft, information about
@@ -26,7 +26,6 @@ namespace LangPadUI
     /// purpose of this extension was specifically to facilitate printing the contents
     /// of a rich text box control.
     /// </remarks>
-
     public class ExtendedRichTextBox : RichTextBox
     {
         [DllImport("user32.dll", CharSet = CharSet.Auto)]

@@ -2,6 +2,10 @@
 
 namespace LangPadUI
 {
+    /// <summary>
+    /// A FlowLayoutPanel that is double-buffered by default, to have
+    /// less artifacts than the default FlowLayoutPanel.
+    /// </summary>
     public class DoubleBufferedFlowLayoutPanel : FlowLayoutPanel
     {
         public DoubleBufferedFlowLayoutPanel()
