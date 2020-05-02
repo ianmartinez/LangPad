@@ -69,7 +69,6 @@ Module AppTheme
     End Sub
 
     Private Sub InitCharEditTheme()
-        Themer.AddForm(CharEditWindow, CharEditWindow.CharEdit)
         Themer.AddToolStrip(CharEditWindow.CharEdit.FileToolStrip,
                             CharEditWindow.CharEdit.LocalToolStrip,
                             CharEditWindow.CharEdit.SearchToolStrip)
