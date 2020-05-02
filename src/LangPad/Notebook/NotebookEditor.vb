@@ -1,25 +1,11 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports LangPadUI
-Imports LangPadUI.Themes
 
 Public Class NotebookEditor
-    Public Color1 As Color
-    Public Color2 As Color
-    Public VerticalMenuGradient As Boolean = False
-
     Private Sub NotebookEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GoButton.Location = New Point(GoButton.Location.X, WebsiteTextBox.Location.Y)
         GoButton.Height = WebsiteTextBox.Height
         SetIcons()
-    End Sub
-
-    Public Sub SetTheme(Theme As Theme)
-        Color1 = Theme.PanelBackColor
-        Color2 = Theme.PanelBackColor
-        VerticalMenuGradient = Theme.HasVerticalMenuGradient
-        DocumentToolStrip.Renderer = Theme.ToolStripRenderer
-
-        Refresh()
     End Sub
 
     Public Sub SetIcons()
@@ -113,20 +99,6 @@ Public Class NotebookEditor
 
     Private Sub ExportToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportToolStripButton.Click
         MainForm.ExportPageToolStripMenuItem_Click(Me, e)
-    End Sub
-
-    Private Sub MainToolStripContainer_TopToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles DocumentToolStripContainer.TopToolStripPanel.Paint,
-            DocumentToolStripContainer.BottomToolStripPanel.Paint, DocumentToolStripContainer.LeftToolStripPanel.Paint, DocumentToolStripContainer.RightToolStripPanel.Paint
-
-        Dim Rect As New Rectangle(0, 0, DocumentToolStripContainer.Width, Height)
-        Dim FillBrush As New LinearGradientBrush(Rect, Color1, Color2, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
-        e.Graphics.FillRectangle(FillBrush, Rect)
-    End Sub
-
-    Private Sub MainToolStripContainer_TopToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles DocumentToolStripContainer.TopToolStripPanel.SizeChanged,
-            DocumentToolStripContainer.BottomToolStripPanel.SizeChanged, DocumentToolStripContainer.LeftToolStripPanel.SizeChanged, DocumentToolStripContainer.RightToolStripPanel.SizeChanged
-
-        DocumentToolStripContainer.Invalidate()
     End Sub
 
     Private Sub GoButton_Click(sender As Object, e As EventArgs) Handles GoButton.Click

@@ -1,5 +1,4 @@
-﻿Imports System.Drawing.Drawing2D
-Imports System.IO
+﻿Imports System.IO
 Imports LangPadData
 Imports LangPadUI
 Imports LangPadUI.Themes
@@ -235,7 +234,6 @@ Public Class MainForm
     End Sub
 
     Public Sub SetTheme(Theme As Theme)
-        NotebookEditorPanel.SetTheme(Theme)
         CharEditWindow.CharEdit.SetTheme(Theme)
     End Sub
 

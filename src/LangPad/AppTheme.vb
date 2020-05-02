@@ -38,6 +38,10 @@ Module AppTheme
         Themer.AddToolStrip(MainForm.MainToolStrip, MainForm.DataToolStrip)
         Themer.AddContextMenu(MainForm.MainContextMenu)
         Themer.AddPanel(MainForm.ColorPanel, MainForm.FindReplacePanel)
+
+        ' Noteobook editor
+        Themer.AddToolStrip(MainForm.NotebookEditorPanel.DocumentToolStrip)
+        Themer.AddToolStripContainer(MainForm.NotebookEditorPanel.DocumentToolStripContainer)
     End Sub
 
     Private Sub InitRtfEditorFormTheme()

@@ -146,8 +146,18 @@ namespace LangPadUI.Themes
 
         public void HandleToolStripPanelSizeChange(object sender, EventArgs e)
         {
-            var container = (ToolStripContainer)(sender as ToolStripPanel).Parent;
-            container.Invalidate();
+
+            if (sender is ToolStripContainer)
+            {
+                var container = (ToolStripContainer)sender;
+                container.Invalidate();
+            }
+            else if (sender is ToolStripPanel)
+            {
+                var panel = sender as ToolStripPanel;
+                var container = (ToolStripContainer)panel.Parent;
+                container.Invalidate();
+            }
         }
     }
 }
