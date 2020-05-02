@@ -45,9 +45,9 @@ namespace LangPadUI.Themes
             //base.OnRenderToolStripBackground(e);
             LinearGradientBrush background = new LinearGradientBrush(e.AffectedBounds, theme.ToolStripBackColor1, theme.ToolStripBackColor2, LinearGradientMode.Vertical);
             SolidBrush shadow = new SolidBrush(theme.ToolStripShadowColor);
-            Rectangle rect = new Rectangle(0, e.ToolStrip.Height - 2, e.ToolStrip.Width, 1);
+            Rectangle shadowRect = new Rectangle(0, e.ToolStrip.Height - 2, e.ToolStrip.Width, 1);
             e.Graphics.FillRectangle(background, e.AffectedBounds);
-            e.Graphics.FillRectangle(shadow, rect);
+            e.Graphics.FillRectangle(shadow, shadowRect);
         }
 
         protected override void OnRenderButtonBackground(ToolStripItemRenderEventArgs e)
