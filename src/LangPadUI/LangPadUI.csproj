@@ -66,8 +66,10 @@
     <Compile Include="ColorButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Themes\GlacierTheme.cs" />
+    <Compile Include="Themes\LightTheme.cs" />
     <Compile Include="Themes\Theme.cs" />
+    <Compile Include="Themes\ThemeMenuRenderer.cs" />
+    <Compile Include="Themes\ThemeToolStripRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

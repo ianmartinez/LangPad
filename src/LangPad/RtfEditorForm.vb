@@ -12,12 +12,12 @@ Public Class RtfEditorForm
         SetIcons()
     End Sub
 
-    Public Sub SetTheme(Theme As OldTheme)
-        Color1 = Theme.PanelBack
-        Color2 = Theme.PanelBack
-        VerticalMenuGradient = Theme.VerticalMenuGradient
-        BackColor = Theme.PanelBack
-        MainToolStrip.Renderer = Theme.GetToolStripRenderer()
+    Public Sub SetTheme(Theme As Theme)
+        Color1 = Theme.PanelBackColor
+        Color2 = Theme.PanelBackColor
+        VerticalMenuGradient = Theme.HasVerticalMenuGradient
+        BackColor = Theme.PanelBackColor
+        MainToolStrip.Renderer = Theme.ToolStripRenderer
 
         Refresh()
     End Sub

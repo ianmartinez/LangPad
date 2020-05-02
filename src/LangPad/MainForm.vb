@@ -76,7 +76,7 @@ Public Class MainForm
         MainToolStrip.Location = New Point(0, 0)
 
         ' Set theme
-        ApplicationTheme = New GlacierTheme()
+        ApplicationTheme = New LightTheme()
         SetTheme(ApplicationTheme)
         ThemeCombo.SelectedItem = My.Settings.Theme
 
@@ -222,21 +222,21 @@ Public Class MainForm
         SelectAllContextMenuItem.Image = IconManager.Get("edit-select-all", IconSize.Small, Res)
     End Sub
 
-    Public Sub SetTheme(Theme As OldTheme)
+    Public Sub SetTheme(Theme As Theme)
         Color1 = Theme.Color1
         Color2 = Theme.Color2
-        VerticalMenuGradient = Theme.VerticalMenuGradient
+        VerticalMenuGradient = Theme.HasVerticalMenuGradient
 
-        MainMenu.Renderer = Theme.GetMenuRenderer()
-        MainToolStrip.Renderer = Theme.GetToolStripRenderer()
-        DataToolStrip.Renderer = Theme.GetToolStripRenderer()
-        MainContextMenu.Renderer = Theme.GetMenuRenderer()
+        MainMenu.Renderer = Theme.MenuRenderer
+        MainToolStrip.Renderer = Theme.ToolStripRenderer
+        DataToolStrip.Renderer = Theme.ToolStripRenderer
+        MainContextMenu.Renderer = Theme.MenuRenderer
         RtfEditorForm.SetTheme(Theme)
         DictionaryForm.SetTheme(Theme)
-        BackColor = Theme.PanelBack
-        ColorPanel.ForeColor = Theme.PanelText
-        FindReplaceDialog.BackColor = Theme.PanelBack
-        FindReplaceDialog.ForeColor = Theme.PanelText
+        BackColor = Theme.PanelBackColor
+        ColorPanel.ForeColor = Theme.PanelTextColor
+        FindReplaceDialog.BackColor = Theme.PanelBackColor
+        FindReplaceDialog.ForeColor = Theme.PanelTextColor
 
         ' Center buttons relative to text boxes
         ' Because Windows' scaling throws them off
@@ -247,12 +247,6 @@ Public Class MainForm
 
         NotebookEditorPanel.SetTheme(Theme)
         CharEditWindow.CharEdit.SetTheme(Theme)
-        AboutDialog.BackColor = Theme.DialogBack
-        PageNameDialog.BackColor = Theme.DialogBack
-        CustomZoomDialog.BackColor = Theme.DialogBack
-        ExportHtmlDialog.BackColor = Theme.DialogBack
-        SettingsDialog.BackColor = Theme.DialogBack
-        StyleDialog.BackColor = Theme.DialogBack
 
         Refresh()
     End Sub
@@ -989,9 +983,9 @@ Public Class MainForm
 
     Private Sub ThemeCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ThemeCombo.SelectedIndexChanged
         If ThemeCombo.SelectedItem.ToString().Equals("Glacier") Then
-            SetTheme(New GlacierTheme)
+            SetTheme(New LightTheme())
         Else
-            SetTheme(New GlacierTheme)
+            SetTheme(New LightTheme())
         End If
     End Sub
 

@@ -6,7 +6,7 @@ namespace LangPadUI.Themes
 {
     public class ThemeToolStripRenderer : ToolStripProfessionalRenderer
     {
-        private Theme theme;
+        private readonly Theme theme;
 
         public ThemeToolStripRenderer(Theme theme) : base()
         {

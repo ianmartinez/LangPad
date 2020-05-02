@@ -13,11 +13,11 @@ Public Class NotebookEditor
         SetIcons()
     End Sub
 
-    Public Sub SetTheme(Theme As OldTheme)
-        Color1 = Theme.PanelBack
-        Color2 = Theme.PanelBack
-        VerticalMenuGradient = Theme.VerticalMenuGradient
-        DocumentToolStrip.Renderer = Theme.GetToolStripRenderer()
+    Public Sub SetTheme(Theme As Theme)
+        Color1 = Theme.PanelBackColor
+        Color2 = Theme.PanelBackColor
+        VerticalMenuGradient = Theme.HasVerticalMenuGradient
+        DocumentToolStrip.Renderer = Theme.ToolStripRenderer
 
         Refresh()
     End Sub

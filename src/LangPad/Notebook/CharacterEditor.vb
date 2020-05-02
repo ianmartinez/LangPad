@@ -34,14 +34,14 @@ Public Class CharacterEditor
         InsertCharacterButton("[◌]", BracketsPanel, "Narrow Transcription", False, False, CharacterType.Bracket)
     End Sub
 
-    Public Sub SetTheme(Theme As OldTheme)
-        Color1 = Theme.PanelBack
-        Color2 = Theme.PanelBack
-        VerticalMenuGradient = Theme.VerticalMenuGradient
-        FileToolStrip.Renderer = Theme.GetToolStripRenderer()
-        LocalToolStrip.Renderer = Theme.GetToolStripRenderer()
-        SearchToolStrip.Renderer = Theme.GetToolStripRenderer()
-        CharButtonMenu.Renderer = Theme.GetMenuRenderer()
+    Public Sub SetTheme(WindowTheme As Theme)
+        Color1 = WindowTheme.PanelBackColor
+        Color2 = WindowTheme.PanelBackColor
+        VerticalMenuGradient = WindowTheme.HasVerticalMenuGradient
+        FileToolStrip.Renderer = WindowTheme.ToolStripRenderer
+        LocalToolStrip.Renderer = WindowTheme.ToolStripRenderer
+        SearchToolStrip.Renderer = WindowTheme.ToolStripRenderer
+        CharButtonMenu.Renderer = WindowTheme.MenuRenderer
 
         Refresh()
     End Sub

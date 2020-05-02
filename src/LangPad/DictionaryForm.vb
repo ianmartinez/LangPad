@@ -20,14 +20,14 @@ Public Class DictionaryForm
         KeyPreview = True
     End Sub
 
-    Public Sub SetTheme(Theme As OldTheme)
-        Color1 = Theme.PanelBack
-        Color2 = Theme.PanelBack
-        VerticalMenuGradient = Theme.VerticalMenuGradient
-        BackColor = Theme.PanelBack
-        DictionaryGrid.BackgroundColor = Theme.PanelBack
+    Public Sub SetTheme(Theme As Theme)
+        Color1 = Theme.PanelBackColor
+        Color2 = Theme.PanelBackColor
+        VerticalMenuGradient = Theme.HasVerticalMenuGradient
+        BackColor = Theme.PanelBackColor
+        DictionaryGrid.BackgroundColor = Theme.PanelBackColor
 
-        MainToolStrip.Renderer = Theme.GetToolStripRenderer()
+        MainToolStrip.Renderer = Theme.ToolStripRenderer
 
         ' Center buttons relative to text boxes
         ' Because Windows' scaling throws them off
