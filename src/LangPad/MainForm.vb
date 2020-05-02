@@ -15,9 +15,6 @@ Public Class MainForm
     Public DisableFontChange As Boolean
     Public IsLoading As Boolean = False
     Public LastFocused As TextBoxBase
-    Public Color1 As Color
-    Public Color2 As Color
-    Public VerticalMenuGradient As Boolean = False
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Load all of the characters and other resources and check for updates,
@@ -85,6 +82,7 @@ Public Class MainForm
         ' Set theme
         ApplicationTheme = New LightTheme()
         SetTheme(ApplicationTheme)
+        InitThemes()
         ThemeCombo.SelectedItem = My.Settings.Theme
 
         ' Set icons
@@ -108,6 +106,13 @@ Public Class MainForm
         Dim CharToolX = Math.Min(ScreenX, Location.X + Width + 20)
         CharEditWindow.Location = New Point(CharToolX, Location.Y)
         CharEditWindow.Height = Height
+
+        ' Center buttons relative to text boxes
+        ' Because Windows' scaling throws them off
+        FindButton.Top = FindTextBox.Top - (FindButton.Height / 2 - FindTextBox.Height / 2)
+        FindNextButton.Top = FindTextBox.Top - (FindNextButton.Height / 2 - FindTextBox.Height / 2)
+        ReplaceButton.Top = FindTextBox.Top - (ReplaceButton.Height / 2 - FindTextBox.Height / 2)
+        ReplaceAllButton.Top = FindTextBox.Top - (ReplaceAllButton.Height / 2 - FindTextBox.Height / 2)
 
         ' Set shortcut key display text
         ZoomInToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl++"
@@ -230,46 +235,28 @@ Public Class MainForm
     End Sub
 
     Public Sub SetTheme(Theme As Theme)
-        Color1 = Theme.Color1
-        Color2 = Theme.Color2
-        VerticalMenuGradient = Theme.HasVerticalMenuGradient
-
-        MainMenu.Renderer = Theme.MenuRenderer
-        MainToolStrip.Renderer = Theme.ToolStripRenderer
-        DataToolStrip.Renderer = Theme.ToolStripRenderer
-        MainContextMenu.Renderer = Theme.MenuRenderer
         RtfEditorForm.SetTheme(Theme)
         DictionaryForm.SetTheme(Theme)
-        BackColor = Theme.PanelBackColor
-        ColorPanel.ForeColor = Theme.PanelTextColor
-        FindReplaceDialog.BackColor = Theme.PanelBackColor
-        FindReplaceDialog.ForeColor = Theme.PanelTextColor
 
-        ' Center buttons relative to text boxes
-        ' Because Windows' scaling throws them off
-        FindButton.Top = FindTextBox.Top - (FindButton.Height / 2 - FindTextBox.Height / 2)
-        FindNextButton.Top = FindTextBox.Top - (FindNextButton.Height / 2 - FindTextBox.Height / 2)
-        ReplaceButton.Top = FindTextBox.Top - (ReplaceButton.Height / 2 - FindTextBox.Height / 2)
-        ReplaceAllButton.Top = FindTextBox.Top - (ReplaceAllButton.Height / 2 - FindTextBox.Height / 2)
 
         NotebookEditorPanel.SetTheme(Theme)
         CharEditWindow.CharEdit.SetTheme(Theme)
 
-        Refresh()
+        'Refresh()
     End Sub
 
-    Private Sub MainToolStripContainer_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles MainToolStripContainer.TopToolStripPanel.Paint,
-        MainToolStripContainer.BottomToolStripPanel.Paint, MainToolStripContainer.LeftToolStripPanel.Paint, MainToolStripContainer.RightToolStripPanel.Paint
-        Dim g As Graphics = e.Graphics
-        Dim rect As New Rectangle(0, 0, MainToolStripContainer.Width, Height)
-        Dim b As New LinearGradientBrush(rect, BackColor, BackColor, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
-        g.FillRectangle(b, rect)
-    End Sub
+    'Private Sub MainToolStripContainer_ToolStripPanel_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles MainToolStripContainer.TopToolStripPanel.Paint,
+    '    MainToolStripContainer.BottomToolStripPanel.Paint, MainToolStripContainer.LeftToolStripPanel.Paint, MainToolStripContainer.RightToolStripPanel.Paint
+    '    Dim g As Graphics = e.Graphics
+    '    Dim rect As New Rectangle(0, 0, MainToolStripContainer.Width, Height)
+    '    Dim b As New LinearGradientBrush(rect, BackColor, BackColor, If(VerticalMenuGradient, LinearGradientMode.Vertical, LinearGradientMode.Horizontal))
+    '    g.FillRectangle(b, rect)
+    'End Sub
 
-    Private Sub MainToolStripContainer_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles MainToolStripContainer.TopToolStripPanel.SizeChanged,
-        MainToolStripContainer.BottomToolStripPanel.SizeChanged, MainToolStripContainer.LeftToolStripPanel.SizeChanged, MainToolStripContainer.RightToolStripPanel.SizeChanged
-        MainToolStripContainer.Invalidate()
-    End Sub
+    'Private Sub MainToolStripContainer_ToolStripPanel_SizeChanged(ByVal sender As Object, ByVal e As EventArgs) Handles MainToolStripContainer.TopToolStripPanel.SizeChanged,
+    '    MainToolStripContainer.BottomToolStripPanel.SizeChanged, MainToolStripContainer.LeftToolStripPanel.SizeChanged, MainToolStripContainer.RightToolStripPanel.SizeChanged
+    '    MainToolStripContainer.Invalidate()
+    'End Sub
 
     Public Sub SetTitle()
         If String.IsNullOrEmpty(CurrentFilePath) Then
@@ -672,8 +659,8 @@ Public Class MainForm
     End Sub
 
     Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindToolStripMenuItem.Click
-        FindReplaceDialog.Visible = FindReplaceDialog.Visible Xor True
-        If FindReplaceDialog.Visible = True Then FindTextBox.Focus()
+        FindReplacePanel.Visible = FindReplacePanel.Visible Xor True
+        If FindReplacePanel.Visible = True Then FindTextBox.Focus()
     End Sub
 
     Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click

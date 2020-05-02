@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -30,6 +31,12 @@ namespace LangPadUI.Themes
         private readonly List<ToolStripContainer> toolStripContainerList = new List<ToolStripContainer>();
         private readonly List<ToolStrip> toolStripList = new List<ToolStrip>();
         private readonly List<Control> panelList = new List<Control>();
+        private readonly List<Form> formList = new List<Form>();
+
+        public ThemeManager()
+        {
+            Themes = new List<Theme> { new LightTheme() };
+        }
 
         private void RefreshTheme()
         {
@@ -56,6 +63,22 @@ namespace LangPadUI.Themes
                 panel.BackColor = theme.PanelBackColor;
                 panel.ForeColor = theme.PanelTextColor;
             }
+
+            foreach (var form in formList)
+            {
+                form.BackColor = theme.FormBackColor;
+                form.ForeColor = theme.FormTextColor;
+                form.Refresh();
+            }
+        }
+
+        public Theme GetTheme(string themeName)
+        {
+            foreach (var theme in Themes)
+                if (theme.Name.Equals(themeName))
+                    return theme;
+
+            return null;
         }
 
         public void AddMenu(params MenuStrip[] menus)
@@ -79,10 +102,15 @@ namespace LangPadUI.Themes
             foreach (var container in containers)
             {
                 toolStripContainerList.Add(container);
+
+                // Render panels
                 container.TopToolStripPanel.Paint += RenderToolStripPanel;
                 container.BottomToolStripPanel.Paint += RenderToolStripPanel;
                 container.LeftToolStripPanel.Paint += RenderToolStripPanel;
                 container.RightToolStripPanel.Paint += RenderToolStripPanel;
+
+                // Invalidate on resize
+                container.SizeChanged += HandleToolStripPanelSizeChange;
             }
         }
 
@@ -102,6 +130,14 @@ namespace LangPadUI.Themes
             }
         }
 
+        public void AddForm(params Form[] forms)
+        {
+            foreach (var form in forms)
+            {
+                formList.Add(form);
+            }
+        }
+
         public void RenderToolStripPanel(object sender, PaintEventArgs e)
         {
             var container = (ToolStripContainer)(sender as ToolStripPanel).Parent;
@@ -111,7 +147,7 @@ namespace LangPadUI.Themes
             e.Graphics.FillRectangle(background, rect);
         }
 
-        public void HandleToolStripPanelSizeChange(object sender, PaintEventArgs e)
+        public void HandleToolStripPanelSizeChange(object sender, EventArgs e)
         {
             var container = (ToolStripContainer)(sender as ToolStripPanel).Parent;
             container.Invalidate();
