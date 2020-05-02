@@ -4,6 +4,9 @@ using System.Windows.Forms;
 
 namespace LangPadUI.Themes
 {
+    /// <summary>
+    /// Render a menu based on a theme.
+    /// </summary>
     public class ThemeMenuRenderer : ToolStripRenderer
     {
         private readonly Theme theme;

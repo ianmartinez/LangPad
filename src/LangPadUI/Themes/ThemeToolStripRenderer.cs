@@ -4,6 +4,9 @@ using System.Windows.Forms;
 
 namespace LangPadUI.Themes
 {
+    /// <summary>
+    /// Render a tool strip based on a theme.
+    /// </summary>
     public class ThemeToolStripRenderer : ToolStripProfessionalRenderer
     {
         private readonly Theme theme;

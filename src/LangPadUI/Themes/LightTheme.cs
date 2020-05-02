@@ -1,5 +1,8 @@
 ﻿namespace LangPadUI.Themes
 {
+    /// <summary>
+    /// The default light theme.
+    /// </summary>
     public class LightTheme : Theme
     {
         public LightTheme() : base("Light")

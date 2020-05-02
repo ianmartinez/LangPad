@@ -6,6 +6,13 @@ using System.Windows.Forms;
 
 namespace LangPadUI.Themes
 {
+    /// <summary>
+    /// A list of controls and a list of themes to apply them 
+    /// to. 
+    /// 
+    /// Keeps track of the current theme and triggers redraws of
+    /// themed controls when it is changed.
+    /// </summary>
     public class ThemeManager
     {
         private Theme theme;
