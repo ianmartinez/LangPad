@@ -12,6 +12,7 @@ namespace LangPadUI.Themes
         {
             FormBackColor = Color.FromArgb(255, 250, 247, 245);
             PanelBackColor = FormBackColor;
+            PanelBorderColor = Color.FromArgb(255, 213, 206, 194);
 
             // Tool strip
             ToolStripTextColor = Color.FromArgb(255, 41, 33, 30);

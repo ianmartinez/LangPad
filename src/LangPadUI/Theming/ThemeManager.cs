@@ -39,6 +39,7 @@ namespace LangPadUI.Theming
         private readonly List<ToolStripContainer> toolStripContainerList = new List<ToolStripContainer>();
         private readonly List<ToolStrip> toolStripList = new List<ToolStrip>();
         private readonly List<Control> panelList = new List<Control>();
+        private readonly List<Control> panelBorderList = new List<Control>();
         private readonly List<Control> formList = new List<Control>();
         private readonly List<DataGridView> gridList = new List<DataGridView>();
 
@@ -75,6 +76,11 @@ namespace LangPadUI.Theming
             {
                 panel.BackColor = theme.PanelBackColor;
                 panel.ForeColor = theme.PanelTextColor;
+            }
+
+            foreach (var panelBorder in panelBorderList)
+            {
+                panelBorder.BackColor = theme.PanelBorderColor;
             }
 
             foreach (var grid in gridList)
@@ -135,6 +141,11 @@ namespace LangPadUI.Theming
         public void AddPanel(params Control[] panels)
         {
             panelList.AddRange(panels);
+        }
+
+        public void AddPanelBorder(params Control[] panelBorders)
+        {
+            panelBorderList.AddRange(panelBorders);
         }
 
         public void AddForm(params Control[] forms)

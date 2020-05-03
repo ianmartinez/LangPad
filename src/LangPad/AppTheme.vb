@@ -58,6 +58,7 @@ Module AppTheme
         Themer.AddToolStrip(MainForm.MainToolStrip, MainForm.DataToolStrip)
         Themer.AddContextMenu(MainForm.MainContextMenu)
         Themer.AddPanel(MainForm.ColorPanel, MainForm.FindReplacePanel)
+        Themer.AddPanelBorder(MainForm.CurrentPageContainerBorder)
 
         ' Noteobook editor
         Themer.AddToolStrip(MainForm.NotebookEditorPanel.DocumentToolStrip)
