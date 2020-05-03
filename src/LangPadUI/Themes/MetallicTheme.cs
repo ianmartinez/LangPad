@@ -26,6 +26,9 @@ namespace LangPadUI.Themes
             ToolStripInsetColor = Color.FromArgb(40, 255, 255, 255);
             ToolStripSeparatorColor = ToolStripBorderColor;
             ToolStripSeparatorShadowColor = Color.FromArgb(80, 255, 255, 255);
+
+            // Menu
+            MenuBarBackColor2 = Color.FromArgb(230, 230, 230);
         }
     }
 }
