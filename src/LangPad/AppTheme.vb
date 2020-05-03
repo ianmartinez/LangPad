@@ -91,13 +91,13 @@ Module AppTheme
     ''' Add the controls to be themed for the character editor.
     ''' </summary>
     Private Sub InitCharEditTheme()
-        Themer.AddForm(CharEditWindow, CharEditWindow.CharEdit)
+        Themer.AddForm(CharEditWindow, CharEditWindow.CharEdit,
+                       CharEditWindow.CharEdit.ModifyCharGroupBox,
+                       CharEditWindow.CharEdit.AccentGroupBox)
         Themer.AddToolStrip(CharEditWindow.CharEdit.FileToolStrip,
                             CharEditWindow.CharEdit.LocalToolStrip,
                             CharEditWindow.CharEdit.SearchToolStrip)
         Themer.AddContextMenu(CharEditWindow.CharEdit.CharButtonMenu)
-        Themer.AddPanel(CharEditWindow.CharEdit.ModifyCharGroupBox,
-                        CharEditWindow.CharEdit.AccentGroupBox)
         Themer.AddTab(CharEditWindow.CharEdit.LocalTab,
                       CharEditWindow.CharEdit.FileTab,
                       CharEditWindow.CharEdit.ExtendedTab,

@@ -12,7 +12,7 @@ namespace LangPadUI.Themes
         {
             FormBackColor = Color.FromArgb(255, 230, 230, 230);
             FormTextColor = Color.Black;
-            PanelBackColor = Color.FromArgb(255, 240, 240, 240);
+            PanelBackColor = Color.FromArgb(255, 230, 230, 230);
             PanelTextColor = Color.Black;
             PanelBorderColor = Color.FromArgb(130, 130, 130);
             TabBackColor = Color.FromArgb(255, 234, 234, 234);

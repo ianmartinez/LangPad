@@ -717,6 +717,7 @@ Partial Class CharacterEditor
         '
         'AccentGroupBox
         '
+        Me.AccentGroupBox.BackColor = System.Drawing.Color.Transparent
         Me.AccentGroupBox.Controls.Add(Me.AccentsPanel)
         Me.AccentGroupBox.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AccentGroupBox.Location = New System.Drawing.Point(9, 250)
@@ -742,6 +743,7 @@ Partial Class CharacterEditor
         '
         'ModifyCharGroupBox
         '
+        Me.ModifyCharGroupBox.BackColor = System.Drawing.Color.Transparent
         Me.ModifyCharGroupBox.Controls.Add(Me.ClearButton)
         Me.ModifyCharGroupBox.Controls.Add(Me.AffricateButton)
         Me.ModifyCharGroupBox.Controls.Add(Me.LowercaseButton)
