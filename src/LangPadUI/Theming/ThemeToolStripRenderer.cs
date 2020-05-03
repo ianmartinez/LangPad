@@ -7,7 +7,7 @@ namespace LangPadUI.Theming
     /// <summary>
     /// Render a tool strip based on a theme.
     /// </summary>
-    public class ThemeToolStripRenderer : ToolStripProfessionalRenderer
+    public class ThemeToolStripRenderer : ToolStripSystemRenderer
     {
         private readonly Theme theme;
 
