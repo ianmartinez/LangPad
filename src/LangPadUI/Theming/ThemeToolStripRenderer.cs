@@ -47,7 +47,7 @@ namespace LangPadUI.Theming
         {
             //base.OnRenderToolStripBackground(e);
             LinearGradientBrush background = new LinearGradientBrush(e.AffectedBounds, theme.ToolStripBackColor1, theme.ToolStripBackColor2, LinearGradientMode.Vertical);
-            SolidBrush shadow = new SolidBrush(theme.ToolStripShadowColor);
+            SolidBrush shadow = new SolidBrush(theme.ToolStripInsetColor);
             Rectangle shadowRect = new Rectangle(0, e.ToolStrip.Height - 2, e.ToolStrip.Width, 1);
             Rectangle rect = new Rectangle(e.AffectedBounds.X, e.AffectedBounds.Y, e.AffectedBounds.Width + 1, e.AffectedBounds.Height + 1);
             e.Graphics.FillRectangle(background, rect);

@@ -71,23 +71,14 @@ Partial Class NotebookEditor
         'DocumentToolStripContainer
         '
         '
-        'DocumentToolStripContainer.BottomToolStripPanel
-        '
-        '
         'DocumentToolStripContainer.ContentPanel
         '
         Me.DocumentToolStripContainer.ContentPanel.Controls.Add(Me.ListBoxContainerPanel)
-        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(328, 394)
+        Me.DocumentToolStripContainer.ContentPanel.Size = New System.Drawing.Size(330, 394)
         Me.DocumentToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        '
-        'DocumentToolStripContainer.LeftToolStripPanel
-        '
         Me.DocumentToolStripContainer.Location = New System.Drawing.Point(1, 1)
         Me.DocumentToolStripContainer.Name = "DocumentToolStripContainer"
-        '
-        'DocumentToolStripContainer.RightToolStripPanel
-        '
-        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(328, 435)
+        Me.DocumentToolStripContainer.Size = New System.Drawing.Size(330, 435)
         Me.DocumentToolStripContainer.TabIndex = 81
         Me.DocumentToolStripContainer.Text = "MainToolStripContainer"
         '
@@ -104,7 +95,7 @@ Partial Class NotebookEditor
         Me.ListBoxContainerPanel.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
         Me.ListBoxContainerPanel.Name = "ListBoxContainerPanel"
         Me.ListBoxContainerPanel.Padding = New System.Windows.Forms.Padding(2, 0, 0, 0)
-        Me.ListBoxContainerPanel.Size = New System.Drawing.Size(328, 394)
+        Me.ListBoxContainerPanel.Size = New System.Drawing.Size(330, 394)
         Me.ListBoxContainerPanel.TabIndex = 80
         '
         'PagesListBox
@@ -117,7 +108,7 @@ Partial Class NotebookEditor
         Me.PagesListBox.ItemHeight = 20
         Me.PagesListBox.Location = New System.Drawing.Point(2, 0)
         Me.PagesListBox.Name = "PagesListBox"
-        Me.PagesListBox.Size = New System.Drawing.Size(326, 394)
+        Me.PagesListBox.Size = New System.Drawing.Size(328, 394)
         Me.PagesListBox.TabIndex = 15
         '
         'DocumentToolStrip
@@ -129,7 +120,7 @@ Partial Class NotebookEditor
         Me.DocumentToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.DocumentToolStrip.Name = "DocumentToolStrip"
         Me.DocumentToolStrip.Padding = New System.Windows.Forms.Padding(0)
-        Me.DocumentToolStrip.Size = New System.Drawing.Size(328, 41)
+        Me.DocumentToolStrip.Size = New System.Drawing.Size(330, 41)
         Me.DocumentToolStrip.Stretch = True
         Me.DocumentToolStrip.TabIndex = 0
         '
@@ -403,7 +394,7 @@ Partial Class NotebookEditor
         Me.PagesTab.Controls.Add(Me.DocumentToolStripContainer)
         Me.PagesTab.Location = New System.Drawing.Point(4, 29)
         Me.PagesTab.Name = "PagesTab"
-        Me.PagesTab.Padding = New System.Windows.Forms.Padding(1, 1, 3, 1)
+        Me.PagesTab.Padding = New System.Windows.Forms.Padding(1)
         Me.PagesTab.Size = New System.Drawing.Size(332, 437)
         Me.PagesTab.TabIndex = 1
         Me.PagesTab.Text = "Pages"

@@ -39,9 +39,9 @@ namespace LangPadUI.Theming
         public Color ToolStripSeparatorColor { get; set; } = Color.FromArgb(255, 203, 204, 205);
         public Color ToolStripSeparatorShadowColor { get; set; } = Color.FromArgb(255, 255, 255, 255);
         public Color ToolStripBorderColor { get; set; } = Color.FromArgb(255, 245, 245, 245);
-        public Color ToolStripBackColor1 { get; set; } = Color.FromArgb(0, 250, 250, 250);
-        public Color ToolStripBackColor2 { get; set; } = Color.FromArgb(0, 242, 242, 242);
-        public Color ToolStripShadowColor { get; set; } = Color.FromArgb(255, 245, 245, 245);
+        public Color ToolStripBackColor1 { get; set; } = Color.Transparent;
+        public Color ToolStripBackColor2 { get; set; } = Color.Transparent;
+        public Color ToolStripInsetColor { get; set; } = Color.FromArgb(255, 245, 245, 245);
         public Color ToolStripButtonSelectedColor1 { get; set; } = Color.FromArgb(100, 223, 242, 252);
         public Color ToolStripButtonSelectedColor2 { get; set; } = Color.FromArgb(205, 223, 242, 252);
         public Color ToolStripButtonSelectedBorder { get; set; } = Color.FromArgb(225, 148, 188, 209);
