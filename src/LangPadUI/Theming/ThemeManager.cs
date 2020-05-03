@@ -50,7 +50,7 @@ namespace LangPadUI.Theming
                 new DefaultLightTheme(),
                 new DesertTheme(),
                 new LunaTheme(),
-                new MetallicTheme(),
+                new CoolGrayTheme(),
                 new WhiteoutTheme()
             };
         }

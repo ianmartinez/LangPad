@@ -6,23 +6,23 @@ namespace LangPadUI.Themes
     /// <summary>
     /// A dark gray theme.
     /// </summary>
-    public class MetallicTheme : Theme
+    public class CoolGrayTheme : Theme
     {
-        public MetallicTheme() : base("Metallic")
+        public CoolGrayTheme() : base("Cool Gray")
         {
-            FormBackColor = Color.FromArgb(255, 230, 230, 230);
+            FormBackColor = Color.FromArgb(255, 230, 230, 235);
             FormTextColor = Color.Black;
-            PanelBackColor = Color.FromArgb(255, 230, 230, 230);
+            PanelBackColor = Color.FromArgb(255, 230, 230, 235);
             PanelTextColor = Color.Black;
             PanelBorderColor = Color.FromArgb(130, 130, 130);
-            TabBackColor = Color.FromArgb(255, 234, 234, 234);
+            TabBackColor = Color.FromArgb(255, 234, 234, 237);
             TabTextColor = FormTextColor;
 
             // Tool strip
             ToolStripTextColor = Color.FromArgb(255, 20, 20, 20);
-            ToolStripBorderColor = Color.FromArgb(255, 145, 145, 145);
-            ToolStripBackColor1 = Color.FromArgb(255, 230, 230, 230);
-            ToolStripBackColor2 = Color.FromArgb(255, 200, 200, 200);
+            ToolStripBorderColor = Color.FromArgb(255, 145, 145, 149);
+            ToolStripBackColor1 = Color.FromArgb(255, 230, 230, 235);
+            ToolStripBackColor2 = Color.FromArgb(255, 200, 200, 205);
             ToolStripInsetColor = Color.FromArgb(40, 255, 255, 255);
             ToolStripSeparatorColor = ToolStripBorderColor;
             ToolStripSeparatorShadowColor = Color.FromArgb(80, 255, 255, 255);

@@ -258,7 +258,9 @@ Public Class MainForm
 
     Public Sub SelectedDocument_TextChanged(sender As Object, e As EventArgs) Handles CurrentRtb.TextChanged
         UpdateWordCount()
-        RtfEditorForm.RtfCodeTextBox.Text = CurrentRtb.Rtf
+        If RtfEditorForm.Visible Then
+            RtfEditorForm.RtfCodeTextBox.Text = CurrentRtb.Rtf
+        End If
     End Sub
 
     Private Sub MainForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
