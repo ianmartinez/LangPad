@@ -632,6 +632,7 @@ Partial Class MainForm
         '
         'ToolStripSeparator15
         '
+        Me.ToolStripSeparator15.ForeColor = System.Drawing.Color.Red
         Me.ToolStripSeparator15.Name = "ToolStripSeparator15"
         Me.ToolStripSeparator15.Size = New System.Drawing.Size(6, 41)
         '

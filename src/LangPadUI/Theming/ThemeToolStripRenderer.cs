@@ -30,7 +30,7 @@ namespace LangPadUI.Theming
 
         protected override void OnRenderSeparator(ToolStripSeparatorRenderEventArgs e)
         {
-            base.OnRenderSeparator(e);
+            //base.OnRenderSeparator(e);
             if (e.ToolStrip.Orientation == Orientation.Vertical)
             {
                 Rectangle separatorRect = new Rectangle(2, 3, e.Item.Width - 4, 1);

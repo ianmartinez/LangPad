@@ -13,10 +13,11 @@ namespace LangPadUI.Themes
             FormBackColor = Color.White;
             PanelBackColor = FormBackColor;
             ToolStripBorderColor = FormBackColor;
-            ToolStripSeparatorColor = Color.FromArgb(30, 0, 0, 0);
+            ToolStripSeparatorColor = Color.FromArgb(255, 210, 210, 210);
             ToolStripBackColor1 = FormBackColor;
             ToolStripBackColor2 = FormBackColor;
             ToolStripInsetColor = FormBackColor;
+            ToolStripSeparatorShadowColor = FormBackColor;
         }
     }
 }

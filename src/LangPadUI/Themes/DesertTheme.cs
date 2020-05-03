@@ -19,8 +19,8 @@ namespace LangPadUI.Themes
             ToolStripBackColor1 = Color.FromArgb(255, 242, 235, 232);
             ToolStripBackColor2 = Color.FromArgb(255, 234, 224, 219);
             ToolStripInsetColor = Color.Transparent;
-            ToolStripSeparatorColor = ToolStripBorderColor;
-            ToolStripSeparatorShadowColor = Color.FromArgb(50, 255, 255, 255);
+            ToolStripSeparatorColor = Color.FromArgb(255, 170, 153, 146);
+            ToolStripSeparatorShadowColor = Color.FromArgb(80, 255, 255, 255);
             ToolStripButtonSelectedColor1 = Color.FromArgb(100, 204, 193, 188);
             ToolStripButtonSelectedColor2 = Color.FromArgb(205, 204, 193, 188);
             ToolStripButtonSelectedBorderColor = Color.FromArgb(255, 204, 193, 188);
