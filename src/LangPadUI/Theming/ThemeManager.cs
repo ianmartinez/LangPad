@@ -49,6 +49,7 @@ namespace LangPadUI.Theming
             Themes = new List<Theme> {
                 new DefaultLightTheme(),
                 new DesertTheme(),
+                new LunaTheme(),
                 new MetallicTheme(),
                 new WhiteoutTheme()
             };

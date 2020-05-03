@@ -4,7 +4,7 @@ using System.Drawing;
 namespace LangPadUI.Themes
 {
     /// <summary>
-    /// A darker theme.
+    /// A dark gray theme.
     /// </summary>
     public class MetallicTheme : Theme
     {

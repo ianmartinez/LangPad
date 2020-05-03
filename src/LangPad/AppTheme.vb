@@ -52,12 +52,12 @@ Module AppTheme
     ''' Add the controls to be themed for the main form.
     ''' </summary>
     Private Sub InitMainFormTheme()
-        Themer.AddForm(MainForm)
+        Themer.AddForm(MainForm, MainForm.SplitLayoutPanel,
+                       MainForm.ColorPanel, MainForm.FindReplacePanel)
         Themer.AddMenu(MainForm.MainMenu)
         Themer.AddToolStripContainer(MainForm.MainToolStripContainer)
         Themer.AddToolStrip(MainForm.MainToolStrip, MainForm.DataToolStrip)
         Themer.AddContextMenu(MainForm.MainContextMenu)
-        Themer.AddPanel(MainForm.ColorPanel, MainForm.FindReplacePanel)
         Themer.AddPanelBorder(MainForm.CurrentPageContainerBorder)
         Themer.AddTab(MainForm.NotebookEditorPanel.PagesTab,
                       MainForm.NotebookEditorPanel.PropertiesTab,
@@ -91,7 +91,7 @@ Module AppTheme
     ''' Add the controls to be themed for the character editor.
     ''' </summary>
     Private Sub InitCharEditTheme()
-        Themer.AddForm(CharEditWindow, CharEditWindow.CharEdit,
+        Themer.AddPanel(CharEditWindow, CharEditWindow.CharEdit,
                        CharEditWindow.CharEdit.ModifyCharGroupBox,
                        CharEditWindow.CharEdit.AccentGroupBox)
         Themer.AddToolStrip(CharEditWindow.CharEdit.FileToolStrip,

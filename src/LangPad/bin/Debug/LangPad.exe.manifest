@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cRAzyo4A5JpnzXBXaEWPQosmdK4c/peYlF9hbQ8Mk9s=</dsig:DigestValue>
+        <dsig:DigestValue>7DNY9E+99KWDSaQmWslrdGkzMkjGfLqN0xHbjCh+VNk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPadUI.dll" size="1630720">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPadUI.dll" size="1631744">
       <assemblyIdentity name="LangPadUI" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hp/+wsSvBsv5aJEKYLRzbwTqmqMdhUWgla0xAtETYus=</dsig:DigestValue>
+        <dsig:DigestValue>HFzL1Hz6X5Qqv9mzFEnxnrBDc7l/8JtcWu/EX2s0KFM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

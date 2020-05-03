@@ -58,6 +58,7 @@ namespace LangPadUI.Theming
          * Menu colors
          */
         public Color MenuTextColor { get; set; } = Color.Black;
+        public Color MenuBarBorderColor { get; set; } = Color.Transparent;
         public Color MenuBarBackColor1 { get; set; } = Color.FromArgb(255, 255, 255, 255);
         public Color MenuBarBackColor2 { get; set; } = Color.FromArgb(0, 242, 242, 242);
         public Color MenuBackColor { get; set; } = Color.FromArgb(255, 246, 246, 246);

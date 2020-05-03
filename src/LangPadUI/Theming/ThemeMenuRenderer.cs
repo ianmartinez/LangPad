@@ -34,6 +34,8 @@ namespace LangPadUI.Theming
             var gradientMode = theme.HasVerticalMenuGradient ? LinearGradientMode.Vertical : LinearGradientMode.Horizontal;
             LinearGradientBrush background = new LinearGradientBrush(e.AffectedBounds, theme.MenuBarBackColor1, theme.MenuBarBackColor2, gradientMode);
             e.Graphics.FillRectangle(background, e.AffectedBounds);
+            Pen border = new Pen(theme.MenuBarBorderColor);
+            e.Graphics.DrawRectangle(border, e.AffectedBounds);
         }
 
         protected override void OnRenderImageMargin(ToolStripRenderEventArgs e)
@@ -61,7 +63,7 @@ namespace LangPadUI.Theming
 
             // Border
             Pen menuBorder = new Pen(theme.MenuBorderColor);
-            Rectangle menuBorderRect = new Rectangle(0, 1, e.ToolStrip.Width - 1, e.ToolStrip.Height - 2);
+            Rectangle menuBorderRect = new Rectangle(0, 0, e.ToolStrip.Width - 1, e.ToolStrip.Height - 1);
             e.Graphics.DrawRectangle(menuBorder, menuBorderRect);
         }
 
