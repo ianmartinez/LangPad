@@ -59,6 +59,8 @@ Module AppTheme
         Themer.AddContextMenu(MainForm.MainContextMenu)
         Themer.AddPanel(MainForm.ColorPanel, MainForm.FindReplacePanel)
         Themer.AddPanelBorder(MainForm.CurrentPageContainerBorder)
+        Themer.AddTab(MainForm.NotebookEditorPanel.PagesTab,
+                      MainForm.NotebookEditorPanel.PropertiesTab)
 
         ' Noteobook editor
         Themer.AddToolStrip(MainForm.NotebookEditorPanel.DocumentToolStrip)
@@ -93,5 +95,19 @@ Module AppTheme
                             CharEditWindow.CharEdit.LocalToolStrip,
                             CharEditWindow.CharEdit.SearchToolStrip)
         Themer.AddContextMenu(CharEditWindow.CharEdit.CharButtonMenu)
+        Themer.AddPanel(CharEditWindow.CharEdit.ModifyCharGroupBox,
+                        CharEditWindow.CharEdit.AccentGroupBox)
+        Themer.AddTab(CharEditWindow.CharEdit.LocalTab,
+                      CharEditWindow.CharEdit.FileTab,
+                      CharEditWindow.CharEdit.ExtendedTab,
+                      CharEditWindow.CharEdit.IpaTab,
+                      CharEditWindow.CharEdit.ConsonantsTab,
+                      CharEditWindow.CharEdit.AffricatesTab,
+                      CharEditWindow.CharEdit.VowelsTab,
+                      CharEditWindow.CharEdit.ToneIntonationTab,
+                      CharEditWindow.CharEdit.DiacriticsTab,
+                      CharEditWindow.CharEdit.SuprasegmentalsTab,
+                      CharEditWindow.CharEdit.BracketsTab,
+                      CharEditWindow.CharEdit.SearchTab)
     End Sub
 End Module

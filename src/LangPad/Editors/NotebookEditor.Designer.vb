@@ -255,6 +255,7 @@ Partial Class NotebookEditor
         'GoButton
         '
         Me.GoButton.Dock = System.Windows.Forms.DockStyle.Right
+        Me.GoButton.ForeColor = System.Drawing.Color.Black
         Me.GoButton.Location = New System.Drawing.Point(188, 0)
         Me.GoButton.Margin = New System.Windows.Forms.Padding(3, 3, 0, 3)
         Me.GoButton.MinimumSize = New System.Drawing.Size(80, 0)

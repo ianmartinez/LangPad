@@ -51,7 +51,7 @@ Partial Class CharacterEditor
         Me.GreekPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.IpaTab = New System.Windows.Forms.TabPage()
         Me.IpaTabControl = New System.Windows.Forms.TabControl()
-        Me.ConsonantsTabPage = New System.Windows.Forms.TabPage()
+        Me.ConsonantsTab = New System.Windows.Forms.TabPage()
         Me.ConsonantsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.AffricatesTab = New System.Windows.Forms.TabPage()
         Me.AffricatesPanel = New System.Windows.Forms.FlowLayoutPanel()
@@ -120,7 +120,7 @@ Partial Class CharacterEditor
         Me.GreekTab.SuspendLayout()
         Me.IpaTab.SuspendLayout()
         Me.IpaTabControl.SuspendLayout()
-        Me.ConsonantsTabPage.SuspendLayout()
+        Me.ConsonantsTab.SuspendLayout()
         Me.AffricatesTab.SuspendLayout()
         Me.VowelsTab.SuspendLayout()
         Me.ToneIntonationTab.SuspendLayout()
@@ -442,7 +442,7 @@ Partial Class CharacterEditor
         '
         'IpaTabControl
         '
-        Me.IpaTabControl.Controls.Add(Me.ConsonantsTabPage)
+        Me.IpaTabControl.Controls.Add(Me.ConsonantsTab)
         Me.IpaTabControl.Controls.Add(Me.AffricatesTab)
         Me.IpaTabControl.Controls.Add(Me.VowelsTab)
         Me.IpaTabControl.Controls.Add(Me.ToneIntonationTab)
@@ -458,13 +458,13 @@ Partial Class CharacterEditor
         '
         'ConsonantsTabPage
         '
-        Me.ConsonantsTabPage.Controls.Add(Me.ConsonantsLayoutPanel)
-        Me.ConsonantsTabPage.Location = New System.Drawing.Point(4, 29)
-        Me.ConsonantsTabPage.Name = "ConsonantsTabPage"
-        Me.ConsonantsTabPage.Size = New System.Drawing.Size(518, 206)
-        Me.ConsonantsTabPage.TabIndex = 0
-        Me.ConsonantsTabPage.Text = "Consonants"
-        Me.ConsonantsTabPage.UseVisualStyleBackColor = True
+        Me.ConsonantsTab.Controls.Add(Me.ConsonantsLayoutPanel)
+        Me.ConsonantsTab.Location = New System.Drawing.Point(4, 29)
+        Me.ConsonantsTab.Name = "ConsonantsTabPage"
+        Me.ConsonantsTab.Size = New System.Drawing.Size(518, 206)
+        Me.ConsonantsTab.TabIndex = 0
+        Me.ConsonantsTab.Text = "Consonants"
+        Me.ConsonantsTab.UseVisualStyleBackColor = True
         '
         'ConsonantsLayoutPanel
         '
@@ -672,6 +672,7 @@ Partial Class CharacterEditor
         'SearchQueryTextBox
         '
         Me.SearchQueryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.SearchQueryTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SearchQueryTextBox.Name = "SearchQueryTextBox"
         Me.SearchQueryTextBox.Size = New System.Drawing.Size(180, 41)
         '
@@ -771,6 +772,7 @@ Partial Class CharacterEditor
         Me.AffricateButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.AffricateButton.BackColor = System.Drawing.Color.Transparent
         Me.AffricateButton.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AffricateButton.ForeColor = System.Drawing.Color.Black
         Me.AffricateButton.Location = New System.Drawing.Point(286, 32)
         Me.AffricateButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.AffricateButton.Name = "AffricateButton"
@@ -784,6 +786,7 @@ Partial Class CharacterEditor
         '
         Me.LowercaseButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LowercaseButton.BackColor = System.Drawing.Color.Transparent
+        Me.LowercaseButton.ForeColor = System.Drawing.Color.Black
         Me.LowercaseButton.Location = New System.Drawing.Point(58, 32)
         Me.LowercaseButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LowercaseButton.Name = "LowercaseButton"
@@ -796,6 +799,7 @@ Partial Class CharacterEditor
         '
         Me.UppercaseButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.UppercaseButton.BackColor = System.Drawing.Color.Transparent
+        Me.UppercaseButton.ForeColor = System.Drawing.Color.Black
         Me.UppercaseButton.Location = New System.Drawing.Point(172, 32)
         Me.UppercaseButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.UppercaseButton.Name = "UppercaseButton"
@@ -824,6 +828,7 @@ Partial Class CharacterEditor
         '
         Me.AddToLocalButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.AddToLocalButton.BackColor = System.Drawing.Color.Transparent
+        Me.AddToLocalButton.ForeColor = System.Drawing.Color.Black
         Me.AddToLocalButton.Location = New System.Drawing.Point(298, 80)
         Me.AddToLocalButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.AddToLocalButton.Name = "AddToLocalButton"
@@ -837,6 +842,7 @@ Partial Class CharacterEditor
         Me.CharacterButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CharacterButton.BackColor = System.Drawing.Color.Transparent
         Me.CharacterButton.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CharacterButton.ForeColor = System.Drawing.Color.Black
         Me.CharacterButton.Location = New System.Drawing.Point(56, 5)
         Me.CharacterButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CharacterButton.Name = "CharacterButton"
@@ -872,6 +878,7 @@ Partial Class CharacterEditor
         '
         Me.AddToFileButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.AddToFileButton.BackColor = System.Drawing.Color.Transparent
+        Me.AddToFileButton.ForeColor = System.Drawing.Color.Black
         Me.AddToFileButton.Location = New System.Drawing.Point(390, 80)
         Me.AddToFileButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.AddToFileButton.Name = "AddToFileButton"
@@ -893,6 +900,7 @@ Partial Class CharacterEditor
         '
         Me.CopyToClipboardButton.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CopyToClipboardButton.BackColor = System.Drawing.Color.Transparent
+        Me.CopyToClipboardButton.ForeColor = System.Drawing.Color.Black
         Me.CopyToClipboardButton.Location = New System.Drawing.Point(184, 80)
         Me.CopyToClipboardButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CopyToClipboardButton.Name = "CopyToClipboardButton"
@@ -1019,8 +1027,8 @@ Partial Class CharacterEditor
         Me.GreekTab.ResumeLayout(False)
         Me.IpaTab.ResumeLayout(False)
         Me.IpaTabControl.ResumeLayout(False)
-        Me.ConsonantsTabPage.ResumeLayout(False)
-        Me.ConsonantsTabPage.PerformLayout()
+        Me.ConsonantsTab.ResumeLayout(False)
+        Me.ConsonantsTab.PerformLayout()
         Me.AffricatesTab.ResumeLayout(False)
         Me.VowelsTab.ResumeLayout(False)
         Me.ToneIntonationTab.ResumeLayout(False)
@@ -1058,7 +1066,7 @@ Partial Class CharacterEditor
     Friend WithEvents LatinPanel As FlowLayoutPanel
     Friend WithEvents IpaTab As TabPage
     Friend WithEvents IpaTabControl As TabControl
-    Friend WithEvents ConsonantsTabPage As TabPage
+    Friend WithEvents ConsonantsTab As TabPage
     Friend WithEvents ConsonantsLayoutPanel As FlowLayoutPanel
     Friend WithEvents AffricatesTab As TabPage
     Friend WithEvents AffricatesPanel As FlowLayoutPanel

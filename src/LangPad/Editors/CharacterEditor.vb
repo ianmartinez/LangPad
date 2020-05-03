@@ -148,7 +148,8 @@ Public Class CharacterEditor
             .Margin = New Padding(1),
             .Padding = New Padding(0),
             .MinimumSize = New Size(45, 45),
-            .BackColor = Color.Transparent
+            .BackColor = Color.Transparent,
+            .ForeColor = Color.Black
         }
         AddHandler AccentButton.Click, AddressOf ToggleAccent
         AccentsPanel.Controls.Add(AccentButton)

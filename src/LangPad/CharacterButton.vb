@@ -17,6 +17,8 @@
         Dim IPAMin = New Size(45, 45)
 
         Padding = IPAPadding
+        ForeColor = Color.White
+        BackColor = Color.Transparent
         Font = IPAFont
         AutoSize = True
         MinimumSize = IPAMin
