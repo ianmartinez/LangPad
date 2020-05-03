@@ -30,12 +30,13 @@ namespace LangPadUI.Theming
         public Color PanelTextColor { get; set; } = Color.Black;
         public Color FormBackColor { get; set; } = Color.FromArgb(255, 245, 245, 245);
         public Color FormTextColor { get; set; } = Color.Black;
-        public bool HasVerticalMenuGradient { get; set; } = false;
+        public bool HasVerticalMenuGradient { get; set; } = true;
         public int ButtonRadius { get; set; } = 1;
 
         /**
          * ToolStrip colors
          */
+        public bool HasVerticalToolbarGradient { get; set; } = true;
         public Color ToolStripTextColor { get; set; } = Color.Black;
         public Color ToolStripSeparatorColor { get; set; } = Color.FromArgb(255, 203, 204, 205);
         public Color ToolStripSeparatorShadowColor { get; set; } = Color.FromArgb(255, 255, 255, 255);

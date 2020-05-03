@@ -30,8 +30,9 @@ namespace LangPadUI.Theming
 
         protected override void OnRenderToolStripBackground(ToolStripRenderEventArgs e)
         {
-            base.OnRenderToolStripBackground(e);
-            LinearGradientBrush background = new LinearGradientBrush(e.AffectedBounds, theme.MenuBarBackColor1, theme.MenuBarBackColor2, LinearGradientMode.Vertical);
+            //base.OnRenderToolStripBackground(e);
+            var gradientMode = theme.HasVerticalMenuGradient ? LinearGradientMode.Vertical : LinearGradientMode.Horizontal;
+            LinearGradientBrush background = new LinearGradientBrush(e.AffectedBounds, theme.MenuBarBackColor1, theme.MenuBarBackColor2, gradientMode);
             e.Graphics.FillRectangle(background, e.AffectedBounds);
         }
 

@@ -58,7 +58,11 @@ namespace LangPadUI.Theming
         protected override void OnRenderToolStripBackground(ToolStripRenderEventArgs e)
         {
             //base.OnRenderToolStripBackground(e);
-            LinearGradientBrush background = new LinearGradientBrush(e.AffectedBounds, theme.ToolStripBackColor1, theme.ToolStripBackColor2, LinearGradientMode.Vertical);
+            var gradientMode = theme.HasVerticalToolbarGradient ? LinearGradientMode.Vertical : LinearGradientMode.Horizontal;
+            if (e.ToolStrip.Orientation == Orientation.Vertical) // Flip if other orientation
+                gradientMode = theme.HasVerticalToolbarGradient ? LinearGradientMode.Horizontal : LinearGradientMode.Vertical;
+
+            LinearGradientBrush background = new LinearGradientBrush(e.AffectedBounds, theme.ToolStripBackColor1, theme.ToolStripBackColor2, gradientMode);
             SolidBrush shadow = new SolidBrush(theme.ToolStripInsetColor);
             Rectangle shadowRect = new Rectangle(0, e.ToolStrip.Height - 2, e.ToolStrip.Width, 1);
             Rectangle rect = new Rectangle(e.AffectedBounds.X, e.AffectedBounds.Y, e.AffectedBounds.Width + 1, e.AffectedBounds.Height + 1);
