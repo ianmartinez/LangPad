@@ -66,6 +66,7 @@
     <Compile Include="ColorButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RtbStyle.cs" />
     <Compile Include="Themes\LightTheme.cs" />
     <Compile Include="Themes\Theme.cs" />
     <Compile Include="Themes\ThemeManager.cs" />

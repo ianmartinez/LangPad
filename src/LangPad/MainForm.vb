@@ -646,41 +646,7 @@ Public Class MainForm
     End Sub
 
     Private Sub DefaultStyleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DefaultStyleToolStripMenuItem.Click
-        If CurrentRtb.SelectionLength = 0 Then Exit Sub
-
-        SuspendLayout()
-
-        Dim TempRTF As New ExtendedRichTextBox With {
-            .Rtf = CurrentRtb.Rtf,
-            .SelectionStart = CurrentRtb.SelectionStart,
-            .SelectionLength = CurrentRtb.SelectionLength,
-            .SelectionFont = New Font("Calibri", 11),
-            .SelectionColor = Color.Black,
-            .SelectionBackColor = Color.White,
-            .SelectionAlignment = HorizontalAlignment.Left,
-            .SelectionIndent = 0,
-            .SelectionHangingIndent = 0,
-            .BulletIndent = 0,
-            .SelectionCharOffset = 0
-        }
-
-        Dim CurrentPos As Integer = CurrentRtb.SelectionStart
-        Dim CurrentLength As Integer = CurrentRtb.SelectionLength
-        Dim OldClip As Object = Clipboard.GetDataObject()
-
-        CurrentRtb.SelectAll()
-        TempRTF.SelectAll()
-        TempRTF.Copy()
-        CurrentRtb.Paste()
-        Clipboard.SetDataObject(OldClip)
-
-        CurrentRtb.SelectionStart = CurrentPos
-        CurrentRtb.SelectionLength = CurrentLength
-
-        TempRTF.Dispose()
-        ResumeLayout()
-
-        CurrentRtb.SelectionAlignment = HorizontalAlignment.Left
+        CurrentRtb.ApplySelectionStyle(New RtbStyle())
     End Sub
 
     Private Sub EditStyleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditStyleToolStripMenuItem.Click
