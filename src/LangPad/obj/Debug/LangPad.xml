@@ -452,27 +452,41 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Add the controls to be themed for the character editor.
  </summary>
 </member>
+<member name="T:LangPad.CharacterInsertion">
+ <summary>
+ Handles the insertion and deletion of characters in
+ text boxes.
+ </summary>
+</member>
+<member name="M:LangPad.CharacterInsertion.InsertText(System.Windows.Forms.TextBoxBase,System.String)">
+ <summary>
+ Insert text into a text box.
+ </summary>
+ 
+ <param name="TextBox">The text box to insert into.</param>
+ <param name="Text">The text to insert.</param>
+</member>
 <member name="M:LangPad.CharacterInsertion.SelectWord(System.Windows.Forms.TextBoxBase,System.Char,System.Char)">
  <summary>
  Select a string in a textbox between two characters. 
  </summary>
  
- <param name="TextBox">The TextBox</param>
+ <param name="TextBox">The text box.</param>
  <param name="StartChar">The character before the word.</param>
  <param name="EndChar">The character after the word.</param>
 </member>
 <member name="M:LangPad.CharacterInsertion.InsertBrackets(System.Windows.Forms.TextBoxBase,System.String,System.String)">
  <summary>
- Insert a pair of brackets.
+ Insert a pair of brackets surrounding the current selection or word.
  </summary>
  
- <param name="TextBox">The textbox to insert into.</param>
+ <param name="TextBox">The text box to insert into.</param>
  <param name="BracketOpen">The opening bracket.</param>
  <param name="BracketClose">The closing bracket.</param>
 </member>
 <member name="M:LangPad.CharacterInsertion.RemoveBrackets(System.Windows.Forms.TextBoxBase,System.String,System.String)">
  <summary>
- Remove a set of brackets.
+ Remove a set of brackets from the current selection or word.
  </summary>
  
  <param name="TextBox">The text box to remove the brackets from.</param>
@@ -481,7 +495,7 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
 </member>
 <member name="M:LangPad.CharacterInsertion.RemoveAllBrackets(System.Windows.Forms.TextBoxBase)">
  <summary>
- Remove all brackets from a textbox.
+ Remove all brackets from the current selection or word.
  </summary>
  
  <param name="TextBox">The textbox to remove the brackets from.</param>

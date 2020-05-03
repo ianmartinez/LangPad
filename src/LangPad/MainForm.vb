@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 Imports LangPadData
 Imports LangPadUI
-Imports LangPadUI.Themes
+Imports LangPadUI.Theming
 Imports LangPadData.NotebookNT
 
 Public Class MainForm
@@ -857,7 +857,7 @@ Public Class MainForm
         If Not MatchingTheme Is Nothing Then
             Themer.CurrentTheme = MatchingTheme
         Else
-            Themer.CurrentTheme = New LightTheme()
+            Themer.CurrentTheme = New Themes.LightTheme()
         End If
     End Sub
 

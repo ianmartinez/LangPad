@@ -67,11 +67,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="RtbStyle.cs" />
+    <Compile Include="Themes\DarkTheme.cs" />
     <Compile Include="Themes\LightTheme.cs" />
-    <Compile Include="Themes\Theme.cs" />
-    <Compile Include="Themes\ThemeManager.cs" />
-    <Compile Include="Themes\ThemeMenuRenderer.cs" />
-    <Compile Include="Themes\ThemeToolStripRenderer.cs" />
+    <Compile Include="Theming\Theme.cs" />
+    <Compile Include="Theming\ThemeManager.cs" />
+    <Compile Include="Theming\ThemeMenuRenderer.cs" />
+    <Compile Include="Theming\ThemeToolStripRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

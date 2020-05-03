@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace LangPadUI.Themes
+namespace LangPadUI.Theming
 {
     /// <summary>
     /// A class storing all of the color and renderer resources

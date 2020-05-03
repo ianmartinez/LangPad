@@ -1,4 +1,5 @@
-﻿Imports LangPadUI.Themes
+﻿Imports LangPadUI
+Imports LangPadUI.Theming
 
 ''' <summary>
 ''' Handles the application's theme.
@@ -29,7 +30,7 @@ Module AppTheme
             Dim SavedTheme = Themer.GetTheme(My.Settings.Theme)
             ' Default to light theme if none found
             If SavedTheme Is Nothing Then
-                SavedTheme = New LightTheme()
+                SavedTheme = New Themes.LightTheme()
             End If
 
             ' Add each theme to the theme combo

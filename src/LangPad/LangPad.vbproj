@@ -125,7 +125,7 @@
     <Compile Include="AppLoad.vb" />
     <Compile Include="CharacterInsertion.vb" />
     <Compile Include="Converters\KeyValueConverter.vb" />
-    <Compile Include="Dialogs\Messages.vb" />
+    <Compile Include="Messages.vb" />
     <Compile Include="NotebookController.vb" />
     <Compile Include="AutoUpdater.vb" />
     <Compile Include="CharacterEditorToolWindow.Designer.vb">

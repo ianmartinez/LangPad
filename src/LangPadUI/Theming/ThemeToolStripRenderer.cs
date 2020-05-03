@@ -2,7 +2,7 @@
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace LangPadUI.Themes
+namespace LangPadUI.Theming
 {
     /// <summary>
     /// Render a tool strip based on a theme.
@@ -39,7 +39,7 @@ namespace LangPadUI.Themes
         {
             //base.OnRenderToolStripBorder(e)
             Pen shadow = new Pen(theme.ToolStripBorderColor);
-            Rectangle rect = new Rectangle(e.AffectedBounds.X, e.AffectedBounds.Y, e.AffectedBounds.Width - 1, e.AffectedBounds.Height);
+            Rectangle rect = new Rectangle(e.AffectedBounds.X, e.AffectedBounds.Y, e.AffectedBounds.Width - 1, e.AffectedBounds.Height-1);
             e.Graphics.DrawRectangle(shadow, rect);
         }
 
@@ -49,7 +49,8 @@ namespace LangPadUI.Themes
             LinearGradientBrush background = new LinearGradientBrush(e.AffectedBounds, theme.ToolStripBackColor1, theme.ToolStripBackColor2, LinearGradientMode.Vertical);
             SolidBrush shadow = new SolidBrush(theme.ToolStripShadowColor);
             Rectangle shadowRect = new Rectangle(0, e.ToolStrip.Height - 2, e.ToolStrip.Width, 1);
-            e.Graphics.FillRectangle(background, e.AffectedBounds);
+            Rectangle rect = new Rectangle(e.AffectedBounds.X, e.AffectedBounds.Y, e.AffectedBounds.Width + 1, e.AffectedBounds.Height + 1);
+            e.Graphics.FillRectangle(background, rect);
             e.Graphics.FillRectangle(shadow, shadowRect);
         }
 

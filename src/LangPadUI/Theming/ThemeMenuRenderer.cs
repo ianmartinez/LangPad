@@ -2,7 +2,7 @@
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace LangPadUI.Themes
+namespace LangPadUI.Theming
 {
     /// <summary>
     /// Render a menu based on a theme.

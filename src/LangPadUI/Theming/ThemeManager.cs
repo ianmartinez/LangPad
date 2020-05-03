@@ -1,10 +1,11 @@
-﻿using System;
+﻿using LangPadUI.Themes;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace LangPadUI.Themes
+namespace LangPadUI.Theming
 {
     /// <summary>
     /// A list of controls and a list of themes to apply them 
@@ -43,7 +44,10 @@ namespace LangPadUI.Themes
 
         public ThemeManager()
         {
-            Themes = new List<Theme> { new LightTheme() };
+            Themes = new List<Theme> {
+                new LightTheme(),
+                new DesertTheme()
+            };
         }
 
         private void RefreshTheme()

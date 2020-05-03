@@ -1,4 +1,6 @@
-﻿namespace LangPadUI.Themes
+﻿using LangPadUI.Theming;
+
+namespace LangPadUI.Themes
 {
     /// <summary>
     /// The default light theme.

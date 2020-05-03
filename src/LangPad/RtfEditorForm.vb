@@ -1,6 +1,6 @@
 ﻿Imports System.Drawing.Drawing2D
 Imports LangPadUI
-Imports LangPadUI.Themes
+Imports LangPadUI.Theming
 
 Public Class RtfEditorForm
     Private Sub RtfEditorForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -1,4 +1,4 @@
-﻿Imports LangPadUI.Themes
+﻿Imports LangPadUI.Theming
 
 Public NotInheritable Class SplashScreenForm
     Private Sub SplashScreenForm_Load(sender As Object, e As EventArgs) Handles Me.Load
