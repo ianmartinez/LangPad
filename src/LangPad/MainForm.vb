@@ -9,9 +9,7 @@ Public Class MainForm
     Private ReadOnly ColorPicker As New ColorDialog With {
         .FullOpen = True
     }
-    Private CurrentFilePath As String
     Private LastPrintedCharPos As Integer
-    Public DisableFontChange As Boolean
     Public IsLoading As Boolean = False
     Public LastFocused As TextBoxBase
 
@@ -238,8 +236,7 @@ Public Class MainForm
         End If
     End Sub
 
-
-    Private Sub PrintDocument1_BeginPrint(ByVal sender As Object, ByVal e As Printing.PrintEventArgs) Handles PagePrintDocument.BeginPrint
+    Private Sub PagePrintDocument_BeginPrint(ByVal sender As Object, ByVal e As Printing.PrintEventArgs) Handles PagePrintDocument.BeginPrint
         LastPrintedCharPos = 0
     End Sub
 
@@ -378,24 +375,7 @@ Public Class MainForm
             End If
         End If
 
-        Dim NewNotebook = New NotebookNT With {
-            .Pages = New List(Of PageNT)
-        }
-
-        RtbList.Clear()
-        NotebookEditorPanel.PagesListBox.Items.Clear()
-
-        Dim NewPage = New PageNT With {
-            .Title = "Untitled",
-            .Rtf = ""
-        }
-
-        NewNotebook.Pages.Add(NewPage)
-        NewNotebook.Dictionary = New DictionaryNT()
-        CharEditWindow.CharEdit.FilePanel.Controls.Clear() ' Reset character editor file tab
-
-        CurrentFilePath = ""
-        CurrentNotebook = NewNotebook
+        NewNotebook()
         SetTitle()
     End Sub
 
@@ -452,7 +432,7 @@ Public Class MainForm
             If SaveDialog.FileName.EndsWith(".thw") Then
                 MessageBox.Show("This file is being exported to the new Thorn Writer format. This is not compatible with LangPad.")
 
-                Dim ThornNotebook = New LangPadData.NotebookNTX.NotebookNTX With {
+                Dim ThornNotebook = New NotebookNTX.NotebookNTX With {
                     .Title = CurrentNotebook.Title,
                     .Language = CurrentNotebook.Language,
                     .Author = CurrentNotebook.Author,
@@ -463,7 +443,7 @@ Public Class MainForm
                 }
 
                 For Each Page In CurrentNotebook.Pages
-                    Dim ThornPage As New LangPadData.NotebookNTX.PageNTX With {
+                    Dim ThornPage As New NotebookNTX.PageNTX With {
                         .Title = Page.Title,
                         .Content = RtfPipe.Rtf.ToHtml(Page.Rtf).ToString()
                     }
@@ -472,7 +452,7 @@ Public Class MainForm
                 Next
 
                 For Each Word In CurrentNotebook.Dictionary.Words
-                    Dim ThornWord As New LangPadData.NotebookNTX.DictionaryWordNTX With {
+                    Dim ThornWord As New NotebookNTX.DictionaryWordNTX With {
                         .Definition = Word.Definition,
                         .Notes = Word.Notes,
                         .Pronunciation = Word.Pronunciation,
@@ -587,9 +567,9 @@ Public Class MainForm
     End Sub
 
     Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
-        If Clipboard.ContainsImage Then
+        If Clipboard.ContainsImage Then ' Image data
             InsertImage(Clipboard.GetImage())
-        ElseIf Clipboard.ContainsFileDropList() Then
+        ElseIf Clipboard.ContainsFileDropList() Then ' Image pasted from File Explorer
             Dim DataObject As IDataObject = Clipboard.GetDataObject()
 
             If DataObject.GetDataPresent(DataFormats.FileDrop) Then
@@ -1034,8 +1014,6 @@ Public Class MainForm
     End Sub
 
     Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
-        DisableFontChange = True
-
         Dim FontPicker As New FontDialog With {
             .AllowSimulations = True,
             .ShowColor = True,
@@ -1048,8 +1026,6 @@ Public Class MainForm
             CurrentRtb.SelectionColor = FontPicker.Color
             CurrentRtb.SelectionFont = FontPicker.Font
         End If
-
-        DisableFontChange = False
     End Sub
 
     Private Sub SubscriptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubscriptToolStripMenuItem.Click

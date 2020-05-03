@@ -7,6 +7,7 @@ Imports LangPadUI
 ''' Handles operations on the current notebook used by LangPad.
 ''' </summary>
 Module NotebookController
+    Public CurrentFilePath As String = ""
     Public RtbList As New List(Of ExtendedRichTextBox)
     ''' <summary>
     ''' If the first tab has been updated on the main form.
@@ -223,6 +224,16 @@ Module NotebookController
     Public Function PageInRange(Index As Integer) As Boolean
         Return Index >= 0 And Index < CurrentNotebook.Pages.Count
     End Function
+
+    ''' <summary>
+    ''' Create and load a new notebook with a single page.
+    ''' </summary>
+    Public Sub NewNotebook()
+        CurrentNotebook = New NotebookNT()
+        InsertPage(0, "Untitled")
+        CurrentNotebook.Modified = False
+        CurrentFilePath = ""
+    End Sub
 
     ''' <summary>
     ''' Save the pages in the current notebook.

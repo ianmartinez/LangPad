@@ -539,6 +539,11 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  
  <returns>If a page exists at that index.</returns>
 </member>
+<member name="M:LangPad.NotebookController.NewNotebook">
+ <summary>
+ Create and load a new notebook with a single page.
+ </summary>
+</member>
 <member name="M:LangPad.NotebookController.SavePages">
  <summary>
  Save the pages in the current notebook.
