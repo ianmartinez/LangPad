@@ -654,41 +654,18 @@ Public Class MainForm
     End Sub
 
     Private Sub ApplyStyleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplyStyleToolStripMenuItem.Click
-        If CurrentRtb.SelectionLength = 0 Then Exit Sub
-
-        SuspendLayout()
-
-        Dim TempRTF As New ExtendedRichTextBox With {
-            .Rtf = CurrentRtb.Rtf,
-            .SelectionStart = CurrentRtb.SelectionStart,
-            .SelectionLength = CurrentRtb.SelectionLength,
-            .SelectionFont = StyleDialog.StyleFont,
-            .SelectionColor = StyleDialog.StyleColor,
-            .SelectionBackColor = StyleDialog.StyleHighlight,
-            .SelectionAlignment = StyleDialog.StyleAlignment,
-            .SelectionIndent = StyleDialog.StyleIndent,
-            .SelectionHangingIndent = StyleDialog.StyleHangingIndent,
+        Dim Style As New RtbStyle With {
+            .Font = StyleDialog.StyleFont,
+            .Color = StyleDialog.StyleColor,
+            .HighlightColor = StyleDialog.StyleHighlight,
+            .Alignment = StyleDialog.StyleAlignment,
+            .Indent = StyleDialog.StyleIndent,
+            .HangingIndent = StyleDialog.StyleHangingIndent,
             .BulletIndent = StyleDialog.StyleBulletIndent,
-            .SelectionCharOffset = StyleDialog.StyleCharOffset
+            .CharOffset = StyleDialog.StyleCharOffset
         }
 
-        Dim CurrentPos As Integer = CurrentRtb.SelectionStart
-        Dim CurrentLength As Integer = CurrentRtb.SelectionLength
-        Dim OldClip As Object = Clipboard.GetDataObject
-
-        CurrentRtb.SelectAll()
-        TempRTF.SelectAll()
-        TempRTF.Copy()
-        CurrentRtb.Paste()
-        Clipboard.SetDataObject(OldClip)
-
-        CurrentRtb.SelectionStart = CurrentPos
-        CurrentRtb.SelectionLength = CurrentLength
-
-        TempRTF.Dispose()
-        ResumeLayout()
-
-        CurrentRtb.SelectionAlignment = StyleDialog.StyleAlignment
+        CurrentRtb.ApplySelectionStyle(Style)
     End Sub
 
     Private Sub TextColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TextColorToolStripMenuItem.Click

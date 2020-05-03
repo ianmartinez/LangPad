@@ -713,6 +713,7 @@ namespace LangPadUI
             tempRtb.SelectionAlignment = style.Alignment;
             tempRtb.SelectionIndent = style.Indent;
             tempRtb.SelectionHangingIndent = style.HangingIndent;
+            tempRtb.BulletIndent = style.BulletIndent;
             tempRtb.SelectionCharOffset = style.CharOffset;
             tempRtb.SelectAll();
 
