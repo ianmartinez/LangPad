@@ -12,6 +12,8 @@ namespace LangPadUI.Themes
         {
             ButtonRadius = 0;
             FormBackColor = Color.FromArgb(249, 245, 232);
+            PanelBackColor = Color.FromArgb(249, 248, 244);
+            PanelTextColor = Color.Black;
             PanelBorderColor = Color.FromArgb(109, 106, 88);
             TabBackColor = Color.White;
 
@@ -32,10 +34,10 @@ namespace LangPadUI.Themes
 
             // Menu
             MenuBackColor = Color.FromArgb(254, 250, 245);
-            MenuTextColor = Color.FromArgb(0, 5, 36);
+            MenuTextColor = Color.FromArgb(0, 2, 9);
             MenuBorderColor = Color.FromArgb(16, 42, 103);
-            MenuBarBackColor1 = Color.FromArgb(186, 212, 249);
-            MenuBarBackColor2 = Color.FromArgb(158, 190, 245);
+            MenuBarBackColor1 = Color.FromArgb(174, 202, 247);
+            MenuBarBackColor2 = Color.FromArgb(174, 202, 247);
             MenuBarBorderColor = Color.FromArgb(169, 200, 247);
             MenuSeparatorColor = Color.FromArgb(121, 141, 168);
             MenuSeparatorShadowColor = Color.FromArgb(50, 255, 255, 255);
