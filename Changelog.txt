@@ -47,6 +47,7 @@ Version 11.0 (June 30)
    • Bug Fix: Word count wouldn't update automatically when opening a new file
    • Bug Fix: Pages with the same name couldn't be imported without changing the name
    • Bug Fix: Undo/redo would sometimes leave text selected incorrectly
+   • Bug Fix: Replace all couldn't be undone
    • Bug Fix: The bar above on affricate buttons in the character editor could sometimes be clipped off
    • Bug Fix: Minor alignment issue on color panel with one button
    • Bug Fix: Encoding on exported HTML pages wasn't UTF-8 by default in some browsers

@@ -285,29 +285,25 @@ Public Class MainForm
     End Sub
 
     Private Sub FindButton_Click(sender As Object, e As EventArgs) Handles FindButton.Click
-        Dim SearchType As CompareMethod = CompareMethod.Text
-        Dim StartPosition As Integer = InStr(1, CurrentRtb.Text, FindTextBox.Text, SearchType)
-
-        If StartPosition = 0 Then
+        Dim StartPosition As Integer = CurrentRtb.Text.IndexOf(FindTextBox.Text, 0)
+        If StartPosition = -1 Then
             ShowNotFoundDialog(FindTextBox.Text)
             Exit Sub
         End If
 
-        CurrentRtb.Select(StartPosition - 1, FindTextBox.Text.Length)
+        CurrentRtb.Select(StartPosition, FindTextBox.Text.Length)
         CurrentRtb.ScrollToCaret()
-
     End Sub
 
     Private Sub FindNextButton_Click(sender As Object, e As EventArgs) Handles FindNextButton.Click
-        Dim SearchType As CompareMethod = CompareMethod.Text
-        Dim StartPosition As Integer = InStr(StartPosition, CurrentRtb.Text, FindTextBox.Text, SearchType)
-
-        If StartPosition = 0 Then
+        Dim SelectionEnd = CurrentRtb.SelectionStart + CurrentRtb.SelectionLength - 1
+        Dim StartPosition As Integer = CurrentRtb.Text.IndexOf(FindTextBox.Text, SelectionEnd)
+        If StartPosition = -1 Then
             ShowNotFoundDialog(FindTextBox.Text)
             Exit Sub
         End If
 
-        CurrentRtb.Select(StartPosition - 1, FindTextBox.Text.Length)
+        CurrentRtb.Select(StartPosition, FindTextBox.Text.Length)
         CurrentRtb.ScrollToCaret()
     End Sub
 
@@ -316,24 +312,21 @@ Public Class MainForm
             CurrentRtb.SelectedText = ReplaceTextBox.Text
         End If
 
-        Dim SearchType As CompareMethod = CompareMethod.Text
-        Dim StartPosition As Integer = InStr(StartPosition, CurrentRtb.Text, FindTextBox.Text, SearchType)
-
-        If StartPosition = 0 Then
+        Dim StartPosition As Integer = CurrentRtb.Text.IndexOf(FindTextBox.Text, StartPosition)
+        If StartPosition = -1 Then
             ShowNotFoundDialog(FindTextBox.Text)
             Exit Sub
         End If
 
-        CurrentRtb.Select(StartPosition - 1, FindTextBox.Text.Length)
+        CurrentRtb.Select(StartPosition, FindTextBox.Text.Length)
         CurrentRtb.ScrollToCaret()
-
     End Sub
 
     Private Sub ReplaceAllButton_Click(sender As Object, e As EventArgs) Handles ReplaceAllButton.Click
         Dim CurrentStart As Integer = CurrentRtb.SelectionStart
         Dim CurrentLength As Integer = CurrentRtb.SelectionLength
-
-        CurrentRtb.Rtf = Replace(CurrentRtb.Rtf, Trim(FindTextBox.Text), Trim(ReplaceTextBox.Text))
+        CurrentRtb.SelectAll()
+        CurrentRtb.SelectedRtf = Replace(CurrentRtb.Rtf, FindTextBox.Text, ReplaceTextBox.Text)
         CurrentRtb.SelectionStart = CurrentStart
         CurrentRtb.SelectionLength = CurrentLength
     End Sub

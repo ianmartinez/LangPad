@@ -58,7 +58,8 @@ Module AppTheme
         Themer.AddToolStripContainer(MainForm.MainToolStripContainer)
         Themer.AddToolStrip(MainForm.MainToolStrip, MainForm.DataToolStrip)
         Themer.AddContextMenu(MainForm.MainContextMenu)
-        Themer.AddPanelBorder(MainForm.CurrentPageContainerBorder)
+        Themer.AddPanelBorder(MainForm.CurrentPageContainerBorder,
+                              MainForm.NotebookEditorPanel.PageListBoxContainerPanel)
         Themer.AddTab(MainForm.NotebookEditorPanel.PagesTab,
                       MainForm.NotebookEditorPanel.PropertiesTab,
                       MainForm.NotebookEditorPanel.PagesListBox)
