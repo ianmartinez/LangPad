@@ -100,8 +100,8 @@ namespace LangPadUI.Theming
                     // If item is menu header and selected
                     LinearGradientBrush background = new LinearGradientBrush(backgroundRect, theme.MenuButtonSelectedColor1, theme.MenuButtonSelectedColor2, LinearGradientMode.Vertical);
                     e.Graphics.FillRectangle(background, backgroundRect);
-                    Theme.DrawRoundedRectangle(e.Graphics, borderRect, theme.ButtonRadius, theme.MenuButtonSelectedBorder);
-                    Theme.DrawRoundedRectangle(e.Graphics, shadowRect, theme.ButtonRadius, theme.MenuButtonSelectedShadow);
+                    Theme.DrawRoundedRectangle(e.Graphics, borderRect, theme.ButtonRadius, theme.MenuButtonSelectedBorderColor);
+                    Theme.DrawRoundedRectangle(e.Graphics, shadowRect, theme.ButtonRadius, theme.MenuButtonSelectedInsetColor);
                     e.Item.ForeColor = theme.MenuTextColor;
                 }
                 else if (e.Item.IsOnDropDown && e.Item.Selected)
@@ -109,7 +109,7 @@ namespace LangPadUI.Theming
                     // If item is NOT menu header (but sub-item) and selected
                     LinearGradientBrush background = new LinearGradientBrush(backgroundRect, theme.MenuButtonSelectedColor1, theme.MenuButtonSelectedColor2, LinearGradientMode.Vertical);
                     e.Graphics.FillRectangle(background, backgroundRect);
-                    Theme.DrawRoundedRectangle(e.Graphics, borderRect, theme.ButtonRadius, theme.MenuButtonSelectedBorder);
+                    Theme.DrawRoundedRectangle(e.Graphics, borderRect, theme.ButtonRadius, theme.MenuButtonSelectedBorderColor);
                     e.Item.ForeColor = theme.MenuTextColor;
                 }
 
@@ -118,8 +118,8 @@ namespace LangPadUI.Theming
                     // If item is menu header and menu is dropped down
                     LinearGradientBrush background = new LinearGradientBrush(backgroundRect, theme.MenuButtonPressedColor1, theme.MenuButtonPressedColor2, LinearGradientMode.Vertical);
                     e.Graphics.FillRectangle(background, backgroundRect);
-                    Theme.DrawRoundedRectangle(e.Graphics, borderRect, theme.ButtonRadius, theme.MenuButtonPressedBorder);
-                    Theme.DrawRoundedRectangle(e.Graphics, shadowRect, theme.ButtonRadius, theme.MenuButtonPressedShadow);
+                    Theme.DrawRoundedRectangle(e.Graphics, borderRect, theme.ButtonRadius, theme.MenuButtonPressedBorderColor);
+                    Theme.DrawRoundedRectangle(e.Graphics, shadowRect, theme.ButtonRadius, theme.MenuButtonPressedInsetColor);
                     e.Item.ForeColor = theme.MenuTextColor;
                 }
             }

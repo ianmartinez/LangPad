@@ -87,6 +87,7 @@ Module AppTheme
     ''' Add the controls to be themed for the character editor.
     ''' </summary>
     Private Sub InitCharEditTheme()
+        Themer.AddForm(CharEditWindow, CharEditWindow.CharEdit)
         Themer.AddToolStrip(CharEditWindow.CharEdit.FileToolStrip,
                             CharEditWindow.CharEdit.LocalToolStrip,
                             CharEditWindow.CharEdit.SearchToolStrip)

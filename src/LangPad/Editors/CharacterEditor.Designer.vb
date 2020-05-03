@@ -63,6 +63,8 @@ Partial Class CharacterEditor
         Me.DiacriticsPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.SuprasegmentalsTab = New System.Windows.Forms.TabPage()
         Me.SuprasegmentalsPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.BracketsTab = New System.Windows.Forms.TabPage()
+        Me.BracketsPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.SearchTab = New System.Windows.Forms.TabPage()
         Me.SearchToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.SearchCharPanel = New System.Windows.Forms.FlowLayoutPanel()
@@ -100,8 +102,6 @@ Partial Class CharacterEditor
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SaveDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenDialog = New System.Windows.Forms.OpenFileDialog()
-        Me.BracketsTab = New System.Windows.Forms.TabPage()
-        Me.BracketsPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.CharCategoriesTab.SuspendLayout()
         Me.LocalTab.SuspendLayout()
         Me.LocalToolStripContainer.ContentPanel.SuspendLayout()
@@ -126,6 +126,7 @@ Partial Class CharacterEditor
         Me.ToneIntonationTab.SuspendLayout()
         Me.DiacriticsTab.SuspendLayout()
         Me.SuprasegmentalsTab.SuspendLayout()
+        Me.BracketsTab.SuspendLayout()
         Me.SearchTab.SuspendLayout()
         Me.SearchToolStripContainer.ContentPanel.SuspendLayout()
         Me.SearchToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -140,7 +141,6 @@ Partial Class CharacterEditor
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        Me.BracketsTab.SuspendLayout()
         Me.SuspendLayout()
         '
         'CharCategoriesTab
@@ -389,7 +389,7 @@ Partial Class CharacterEditor
         Me.CyrillicTab.Controls.Add(Me.CyrillicPanel)
         Me.CyrillicTab.Location = New System.Drawing.Point(4, 29)
         Me.CyrillicTab.Name = "CyrillicTab"
-        Me.CyrillicTab.Size = New System.Drawing.Size(486, 206)
+        Me.CyrillicTab.Size = New System.Drawing.Size(518, 206)
         Me.CyrillicTab.TabIndex = 5
         Me.CyrillicTab.Text = "Cyrillic"
         Me.CyrillicTab.UseVisualStyleBackColor = True
@@ -403,7 +403,7 @@ Partial Class CharacterEditor
         Me.CyrillicPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.CyrillicPanel.Name = "CyrillicPanel"
         Me.CyrillicPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.CyrillicPanel.Size = New System.Drawing.Size(486, 206)
+        Me.CyrillicPanel.Size = New System.Drawing.Size(518, 206)
         Me.CyrillicPanel.TabIndex = 8
         '
         'GreekTab
@@ -411,7 +411,7 @@ Partial Class CharacterEditor
         Me.GreekTab.Controls.Add(Me.GreekPanel)
         Me.GreekTab.Location = New System.Drawing.Point(4, 29)
         Me.GreekTab.Name = "GreekTab"
-        Me.GreekTab.Size = New System.Drawing.Size(486, 206)
+        Me.GreekTab.Size = New System.Drawing.Size(518, 206)
         Me.GreekTab.TabIndex = 1
         Me.GreekTab.Text = "Greek"
         Me.GreekTab.UseVisualStyleBackColor = True
@@ -425,7 +425,7 @@ Partial Class CharacterEditor
         Me.GreekPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.GreekPanel.Name = "GreekPanel"
         Me.GreekPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.GreekPanel.Size = New System.Drawing.Size(486, 206)
+        Me.GreekPanel.Size = New System.Drawing.Size(518, 206)
         Me.GreekPanel.TabIndex = 8
         '
         'IpaTab
@@ -591,6 +591,30 @@ Partial Class CharacterEditor
         Me.SuprasegmentalsPanel.Size = New System.Drawing.Size(510, 196)
         Me.SuprasegmentalsPanel.TabIndex = 9
         '
+        'BracketsTab
+        '
+        Me.BracketsTab.Controls.Add(Me.BracketsPanel)
+        Me.BracketsTab.Location = New System.Drawing.Point(4, 29)
+        Me.BracketsTab.Name = "BracketsTab"
+        Me.BracketsTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.BracketsTab.Size = New System.Drawing.Size(534, 249)
+        Me.BracketsTab.TabIndex = 5
+        Me.BracketsTab.Text = "Brackets"
+        Me.BracketsTab.UseVisualStyleBackColor = True
+        '
+        'BracketsPanel
+        '
+        Me.BracketsPanel.AutoScroll = True
+        Me.BracketsPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
+        Me.BracketsPanel.AutoSize = True
+        Me.BracketsPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BracketsPanel.Location = New System.Drawing.Point(3, 3)
+        Me.BracketsPanel.Margin = New System.Windows.Forms.Padding(6)
+        Me.BracketsPanel.Name = "BracketsPanel"
+        Me.BracketsPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
+        Me.BracketsPanel.Size = New System.Drawing.Size(528, 243)
+        Me.BracketsPanel.TabIndex = 8
+        '
         'SearchTab
         '
         Me.SearchTab.Controls.Add(Me.SearchToolStripContainer)
@@ -648,7 +672,6 @@ Partial Class CharacterEditor
         'SearchQueryTextBox
         '
         Me.SearchQueryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SearchQueryTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.SearchQueryTextBox.Name = "SearchQueryTextBox"
         Me.SearchQueryTextBox.Size = New System.Drawing.Size(180, 41)
         '
@@ -733,6 +756,7 @@ Partial Class CharacterEditor
         'ClearButton
         '
         Me.ClearButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ClearButton.BackColor = System.Drawing.Color.Transparent
         Me.ClearButton.ForeColor = System.Drawing.Color.Firebrick
         Me.ClearButton.Location = New System.Drawing.Point(370, 32)
         Me.ClearButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -740,10 +764,12 @@ Partial Class CharacterEditor
         Me.ClearButton.Size = New System.Drawing.Size(98, 49)
         Me.ClearButton.TabIndex = 79
         Me.ClearButton.Text = "Clear"
+        Me.ClearButton.UseVisualStyleBackColor = False
         '
         'AffricateButton
         '
         Me.AffricateButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.AffricateButton.BackColor = System.Drawing.Color.Transparent
         Me.AffricateButton.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AffricateButton.Location = New System.Drawing.Point(286, 32)
         Me.AffricateButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -752,26 +778,31 @@ Partial Class CharacterEditor
         Me.AffricateButton.TabIndex = 78
         Me.AffricateButton.Text = "◌͡◌"
         Me.MainTooltip.SetToolTip(Me.AffricateButton, "Toggle Affricate")
+        Me.AffricateButton.UseVisualStyleBackColor = False
         '
         'LowercaseButton
         '
         Me.LowercaseButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LowercaseButton.BackColor = System.Drawing.Color.Transparent
         Me.LowercaseButton.Location = New System.Drawing.Point(58, 32)
         Me.LowercaseButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.LowercaseButton.Name = "LowercaseButton"
         Me.LowercaseButton.Size = New System.Drawing.Size(105, 49)
         Me.LowercaseButton.TabIndex = 78
         Me.LowercaseButton.Text = "Lowercase"
+        Me.LowercaseButton.UseVisualStyleBackColor = False
         '
         'UppercaseButton
         '
         Me.UppercaseButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.UppercaseButton.BackColor = System.Drawing.Color.Transparent
         Me.UppercaseButton.Location = New System.Drawing.Point(172, 32)
         Me.UppercaseButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.UppercaseButton.Name = "UppercaseButton"
         Me.UppercaseButton.Size = New System.Drawing.Size(105, 49)
         Me.UppercaseButton.TabIndex = 77
         Me.UppercaseButton.Text = "Uppercase"
+        Me.UppercaseButton.UseVisualStyleBackColor = False
         '
         'TopPanel
         '
@@ -792,16 +823,19 @@ Partial Class CharacterEditor
         'AddToLocalButton
         '
         Me.AddToLocalButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.AddToLocalButton.BackColor = System.Drawing.Color.Transparent
         Me.AddToLocalButton.Location = New System.Drawing.Point(298, 80)
         Me.AddToLocalButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.AddToLocalButton.Name = "AddToLocalButton"
         Me.AddToLocalButton.Size = New System.Drawing.Size(82, 49)
         Me.AddToLocalButton.TabIndex = 1
         Me.AddToLocalButton.Text = "Local"
+        Me.AddToLocalButton.UseVisualStyleBackColor = False
         '
         'CharacterButton
         '
         Me.CharacterButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.CharacterButton.BackColor = System.Drawing.Color.Transparent
         Me.CharacterButton.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CharacterButton.Location = New System.Drawing.Point(56, 5)
         Me.CharacterButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -809,7 +843,7 @@ Partial Class CharacterEditor
         Me.CharacterButton.Size = New System.Drawing.Size(120, 125)
         Me.CharacterButton.TabIndex = 88
         Me.CharacterButton.Text = "a"
-        Me.CharacterButton.UseVisualStyleBackColor = True
+        Me.CharacterButton.UseVisualStyleBackColor = False
         '
         'CharacterTextBox
         '
@@ -837,12 +871,14 @@ Partial Class CharacterEditor
         'AddToFileButton
         '
         Me.AddToFileButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.AddToFileButton.BackColor = System.Drawing.Color.Transparent
         Me.AddToFileButton.Location = New System.Drawing.Point(390, 80)
         Me.AddToFileButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.AddToFileButton.Name = "AddToFileButton"
         Me.AddToFileButton.Size = New System.Drawing.Size(78, 49)
         Me.AddToFileButton.TabIndex = 76
         Me.AddToFileButton.Text = "File"
+        Me.AddToFileButton.UseVisualStyleBackColor = False
         '
         'SmartReplaceIndicator
         '
@@ -856,12 +892,14 @@ Partial Class CharacterEditor
         'CopyToClipboardButton
         '
         Me.CopyToClipboardButton.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.CopyToClipboardButton.BackColor = System.Drawing.Color.Transparent
         Me.CopyToClipboardButton.Location = New System.Drawing.Point(184, 80)
         Me.CopyToClipboardButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CopyToClipboardButton.Name = "CopyToClipboardButton"
         Me.CopyToClipboardButton.Size = New System.Drawing.Size(105, 49)
         Me.CopyToClipboardButton.TabIndex = 79
         Me.CopyToClipboardButton.Text = "Clipboard"
+        Me.CopyToClipboardButton.UseVisualStyleBackColor = False
         '
         'CharButtonMenu
         '
@@ -946,30 +984,6 @@ Partial Class CharacterEditor
         '
         Me.OpenDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
         '
-        'BracketsTab
-        '
-        Me.BracketsTab.Controls.Add(Me.BracketsPanel)
-        Me.BracketsTab.Location = New System.Drawing.Point(4, 29)
-        Me.BracketsTab.Name = "BracketsTab"
-        Me.BracketsTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.BracketsTab.Size = New System.Drawing.Size(534, 249)
-        Me.BracketsTab.TabIndex = 5
-        Me.BracketsTab.Text = "Brackets"
-        Me.BracketsTab.UseVisualStyleBackColor = True
-        '
-        'BracketsPanel
-        '
-        Me.BracketsPanel.AutoScroll = True
-        Me.BracketsPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.BracketsPanel.AutoSize = True
-        Me.BracketsPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BracketsPanel.Location = New System.Drawing.Point(3, 3)
-        Me.BracketsPanel.Margin = New System.Windows.Forms.Padding(6)
-        Me.BracketsPanel.Name = "BracketsPanel"
-        Me.BracketsPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
-        Me.BracketsPanel.Size = New System.Drawing.Size(528, 243)
-        Me.BracketsPanel.TabIndex = 8
-        '
         'CharacterEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -1012,6 +1026,8 @@ Partial Class CharacterEditor
         Me.ToneIntonationTab.ResumeLayout(False)
         Me.DiacriticsTab.ResumeLayout(False)
         Me.SuprasegmentalsTab.ResumeLayout(False)
+        Me.BracketsTab.ResumeLayout(False)
+        Me.BracketsTab.PerformLayout()
         Me.SearchTab.ResumeLayout(False)
         Me.SearchToolStripContainer.ContentPanel.ResumeLayout(False)
         Me.SearchToolStripContainer.ContentPanel.PerformLayout()
@@ -1031,8 +1047,6 @@ Partial Class CharacterEditor
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        Me.BracketsTab.ResumeLayout(False)
-        Me.BracketsTab.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

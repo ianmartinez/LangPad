@@ -16,6 +16,18 @@ namespace LangPadUI.Theming
             this.theme = theme;
         }
 
+        protected override void InitializeItem(ToolStripItem item)
+        {
+            base.InitializeItem(item);
+            item.ForeColor = theme.ToolStripTextColor;
+        }
+
+        protected override void Initialize(ToolStrip toolStrip)
+        {
+            base.Initialize(toolStrip);
+            toolStrip.ForeColor = theme.ToolStripTextColor;
+        }
+
         protected override void OnRenderSeparator(ToolStripSeparatorRenderEventArgs e)
         {
             base.OnRenderSeparator(e);
@@ -63,14 +75,14 @@ namespace LangPadUI.Theming
             if (e.Item.Selected || ((ToolStripButton)e.Item).Checked)
             {
                 LinearGradientBrush background = new LinearGradientBrush(rect, theme.ToolStripButtonSelectedColor1, theme.ToolStripButtonSelectedColor2, LinearGradientMode.Vertical);
-                Pen border = new Pen(theme.ToolStripButtonSelectedBorder);
+                Pen border = new Pen(theme.ToolStripButtonSelectedBorderColor);
                 e.Graphics.FillRectangle(background, rect);
                 e.Graphics.DrawRectangle(border, rectBorder);
             }
             if (e.Item.Pressed)
             {
                 LinearGradientBrush background = new LinearGradientBrush(rect, theme.ToolStripButtonPressedColor1, theme.ToolStripButtonPressedColor2, LinearGradientMode.Vertical);
-                Pen border = new Pen(theme.ToolStripButtonPressedBorder);
+                Pen border = new Pen(theme.ToolStripButtonPressedBorderColor);
                 e.Graphics.FillRectangle(background, rect);
                 e.Graphics.DrawRectangle(border, rectBorder);
             }

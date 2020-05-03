@@ -147,7 +147,8 @@ Public Class CharacterEditor
             .Font = New Font("Calibri", 18, FontStyle.Regular),
             .Margin = New Padding(1),
             .Padding = New Padding(0),
-            .MinimumSize = New Size(45, 45)
+            .MinimumSize = New Size(45, 45),
+            .BackColor = Color.Transparent
         }
         AddHandler AccentButton.Click, AddressOf ToggleAccent
         AccentsPanel.Controls.Add(AccentButton)

@@ -36,6 +36,7 @@ namespace LangPadUI.Theming
         /**
          * ToolStrip colors
          */
+        public Color ToolStripTextColor { get; set; } = Color.Black;
         public Color ToolStripSeparatorColor { get; set; } = Color.FromArgb(255, 203, 204, 205);
         public Color ToolStripSeparatorShadowColor { get; set; } = Color.FromArgb(255, 255, 255, 255);
         public Color ToolStripBorderColor { get; set; } = Color.FromArgb(255, 245, 245, 245);
@@ -44,10 +45,10 @@ namespace LangPadUI.Theming
         public Color ToolStripInsetColor { get; set; } = Color.FromArgb(255, 245, 245, 245);
         public Color ToolStripButtonSelectedColor1 { get; set; } = Color.FromArgb(100, 223, 242, 252);
         public Color ToolStripButtonSelectedColor2 { get; set; } = Color.FromArgb(205, 223, 242, 252);
-        public Color ToolStripButtonSelectedBorder { get; set; } = Color.FromArgb(225, 148, 188, 209);
+        public Color ToolStripButtonSelectedBorderColor { get; set; } = Color.FromArgb(225, 148, 188, 209);
         public Color ToolStripButtonPressedColor1 { get; set; } = Color.FromArgb(100, 180, 198, 207);
         public Color ToolStripButtonPressedColor2 { get; set; } = Color.FromArgb(205, 180, 198, 207);
-        public Color ToolStripButtonPressedBorder { get; set; } = Color.FromArgb(225, 145, 160, 167);
+        public Color ToolStripButtonPressedBorderColor { get; set; } = Color.FromArgb(225, 145, 160, 167);
 
         /**
          * Menu colors
@@ -66,12 +67,12 @@ namespace LangPadUI.Theming
         public Color MenuSeparatorShadowColor { get; set; } = Color.FromArgb(100, 255, 255, 255);
         public Color MenuButtonSelectedColor1 { get; set; } = Color.FromArgb(100, 223, 242, 252);
         public Color MenuButtonSelectedColor2 { get; set; } = Color.FromArgb(205, 223, 242, 252);
-        public Color MenuButtonSelectedBorder { get; set; } = Color.FromArgb(225, 148, 188, 209);
-        public Color MenuButtonSelectedShadow { get; set; } = Color.FromArgb(225, 240, 240, 240);
+        public Color MenuButtonSelectedBorderColor { get; set; } = Color.FromArgb(225, 148, 188, 209);
+        public Color MenuButtonSelectedInsetColor { get; set; } = Color.FromArgb(225, 240, 240, 240);
         public Color MenuButtonPressedColor1 { get; set; } = Color.FromArgb(100, 180, 198, 207);
         public Color MenuButtonPressedColor2 { get; set; } = Color.FromArgb(205, 180, 198, 207);
-        public Color MenuButtonPressedBorder { get; set; } = Color.FromArgb(225, 145, 160, 167);
-        public Color MenuButtonPressedShadow { get; set; } = Color.FromArgb(225, 215, 230, 238);
+        public Color MenuButtonPressedBorderColor { get; set; } = Color.FromArgb(225, 145, 160, 167);
+        public Color MenuButtonPressedInsetColor { get; set; } = Color.FromArgb(225, 215, 230, 238);
 
 
         public static GraphicsPath GetRoundedRectanglePath(Rectangle area, int radius)
