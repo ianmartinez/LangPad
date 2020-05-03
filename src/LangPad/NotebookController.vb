@@ -145,6 +145,11 @@ Module NotebookController
             MainForm.CurrentPageContainer.Controls.Add(MainForm.CurrentRtb)
             ' Draw focus to current RTB
             MainForm.CurrentRtb.Select()
+
+            ' Update RTF editor
+            If RtfEditorForm.Visible Then
+                RtfEditorForm.RtfCodeTextBox.Text = MainForm.CurrentRtb.Rtf
+            End If
         End If
 
         UpdatePageStats()

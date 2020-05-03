@@ -46,4 +46,10 @@ Public Class RtfEditorForm
         MainForm.CurrentRtb.Rtf = RtfCodeTextBox.Text
         RtfCodeTextBox.Text = MainForm.CurrentRtb.Rtf
     End Sub
+
+    Private Sub RtfEditorForm_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+        If Visible Then
+            RtfCodeTextBox.Text = MainForm.CurrentRtb.Rtf
+        End If
+    End Sub
 End Class
