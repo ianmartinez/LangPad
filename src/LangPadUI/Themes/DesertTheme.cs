@@ -16,7 +16,7 @@ namespace LangPadUI.Themes
 
             // Tool strip
             ToolStripTextColor = Color.FromArgb(255, 41, 33, 30);
-            ToolStripBorderColor = Color.FromArgb(255, 213, 206, 194);
+            ToolStripBorderColor = PanelBorderColor;
             ToolStripBackColor1 = Color.FromArgb(255, 242, 235, 232);
             ToolStripBackColor2 = Color.FromArgb(255, 234, 224, 219);
             ToolStripInsetColor = Color.Transparent;
@@ -36,7 +36,7 @@ namespace LangPadUI.Themes
             MenuArrowColor = MenuTextColor;
             MenuBorderColor = Color.FromArgb(255, 193, 186, 174);
             MenuBarBackColor2 = Color.FromArgb(255, 243, 236, 233);
-            MenuSeparatorColor = ToolStripSeparatorColor;
+            MenuSeparatorColor = Color.FromArgb(255, 228, 221, 209);
             MenuSeparatorShadowColor = ToolStripSeparatorShadowColor;
             MenuButtonSelectedColor1 = ToolStripButtonSelectedColor1;
             MenuButtonSelectedColor2 = ToolStripButtonSelectedColor2;
