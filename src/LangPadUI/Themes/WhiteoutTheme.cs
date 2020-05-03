@@ -18,6 +18,15 @@ namespace LangPadUI.Themes
             ToolStripBackColor2 = FormBackColor;
             ToolStripInsetColor = FormBackColor;
             ToolStripSeparatorShadowColor = FormBackColor;
+
+            // Menus
+            MenuBackColor = FormBackColor;
+            MenuBorderColor = Color.FromArgb(220, 220, 220);
+            MenuImageMarginBackColor1 = Color.FromArgb(250, 250, 250);
+            MenuImageMarginBackColor2 = Color.FromArgb(240, 240, 240);
+            MenuImageMarginBorderColor = MenuBorderColor;
+            MenuImageMarginInsetColor = Color.White;
+            MenuSeparatorColor = Color.FromArgb(225, 225, 225);
         }
     }
 }

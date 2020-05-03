@@ -60,7 +60,8 @@ Module AppTheme
         Themer.AddPanel(MainForm.ColorPanel, MainForm.FindReplacePanel)
         Themer.AddPanelBorder(MainForm.CurrentPageContainerBorder)
         Themer.AddTab(MainForm.NotebookEditorPanel.PagesTab,
-                      MainForm.NotebookEditorPanel.PropertiesTab)
+                      MainForm.NotebookEditorPanel.PropertiesTab,
+                      MainForm.NotebookEditorPanel.PagesListBox)
 
         ' Noteobook editor
         Themer.AddToolStrip(MainForm.NotebookEditorPanel.DocumentToolStrip)

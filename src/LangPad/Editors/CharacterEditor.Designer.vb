@@ -456,11 +456,11 @@ Partial Class CharacterEditor
         Me.IpaTabControl.Size = New System.Drawing.Size(526, 239)
         Me.IpaTabControl.TabIndex = 72
         '
-        'ConsonantsTabPage
+        'ConsonantsTab
         '
         Me.ConsonantsTab.Controls.Add(Me.ConsonantsLayoutPanel)
         Me.ConsonantsTab.Location = New System.Drawing.Point(4, 29)
-        Me.ConsonantsTab.Name = "ConsonantsTabPage"
+        Me.ConsonantsTab.Name = "ConsonantsTab"
         Me.ConsonantsTab.Size = New System.Drawing.Size(518, 206)
         Me.ConsonantsTab.TabIndex = 0
         Me.ConsonantsTab.Text = "Consonants"
@@ -678,6 +678,8 @@ Partial Class CharacterEditor
         '
         'CharSearchInLabel
         '
+        Me.CharSearchInLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.CharSearchInLabel.ForeColor = System.Drawing.Color.Black
         Me.CharSearchInLabel.Name = "CharSearchInLabel"
         Me.CharSearchInLabel.Size = New System.Drawing.Size(26, 36)
         Me.CharSearchInLabel.Text = "in"
