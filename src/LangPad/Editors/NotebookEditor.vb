@@ -26,6 +26,7 @@ Public Class NotebookEditor
             CurrentNotebook.Title = TitleTextBox.Text
             CurrentNotebook.Modified = True
         End If
+
         DictionaryForm.Text = If(TitleTextBox.Text = "", "Dictionary", "Dictionary - " + TitleTextBox.Text)
     End Sub
 

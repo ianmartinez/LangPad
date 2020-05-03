@@ -8,7 +8,7 @@ namespace LangPadUI
     /// </summary>
     public class RtbStyle
     {
-        public Font Font { get; set; } = new Font("Calibri", 12);
+        public Font Font { get; set; } = new Font("Calibri", 11);
         public Color Color { get; set; } = Color.Black;
         public Color HighlightColor { get; set; } = Color.Transparent;
         public HorizontalAlignment Alignment { get; set; } = HorizontalAlignment.Left;

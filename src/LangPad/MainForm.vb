@@ -1078,19 +1078,19 @@ Public Class MainForm
     End Sub
 
     Private Sub InsertTabToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InsertTabToolStripMenuItem.Click
-        CharEditWindow.CharEdit.InsertText(CurrentRtb, vbTab)
+        InsertText(CurrentRtb, vbTab)
     End Sub
 
     Private Sub BroadTranscriptionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BroadTranscriptionToolStripMenuItem.Click
-        CharEditWindow.CharEdit.InsertBracket(CurrentRtb, "/", "/")
+        InsertBrackets(CurrentRtb, "/", "/")
     End Sub
 
     Private Sub NarrowTranscriptionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NarrowTranscriptionToolStripMenuItem.Click
-        CharEditWindow.CharEdit.InsertBracket(CurrentRtb, "[", "]")
+        InsertBrackets(CurrentRtb, "[", "]")
     End Sub
 
     Private Sub RemoveBracketsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveBracketsToolStripMenuItem.Click
-        CharEditWindow.CharEdit.RemoveBrackets(CurrentRtb)
+        RemoveAllBrackets(CurrentRtb)
     End Sub
 
     Private Sub CurrentRtb_SelectionChanged(sender As Object, e As EventArgs) Handles CurrentRtb.SelectionChanged

@@ -123,6 +123,7 @@
   <ItemGroup>
     <Compile Include="AppTheme.vb" />
     <Compile Include="AppLoad.vb" />
+    <Compile Include="CharacterInsertion.vb" />
     <Compile Include="Converters\KeyValueConverter.vb" />
     <Compile Include="Dialogs\Messages.vb" />
     <Compile Include="NotebookController.vb" />
@@ -179,10 +180,10 @@
     </Compile>
     <Compile Include="Converters\MarkdownConverter.vb" />
     <Compile Include="ImageResizer.vb" />
-    <Compile Include="Notebook\CharacterEditor.Designer.vb">
+    <Compile Include="Editors\CharacterEditor.Designer.vb">
       <DependentUpon>CharacterEditor.vb</DependentUpon>
     </Compile>
-    <Compile Include="Notebook\CharacterEditor.vb">
+    <Compile Include="Editors\CharacterEditor.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DictionaryForm.Designer.vb">
@@ -221,10 +222,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Notebook\NotebookEditor.Designer.vb">
+    <Compile Include="Editors\NotebookEditor.Designer.vb">
       <DependentUpon>NotebookEditor.vb</DependentUpon>
     </Compile>
-    <Compile Include="Notebook\NotebookEditor.vb">
+    <Compile Include="Editors\NotebookEditor.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SplashScreenForm.Designer.vb">
@@ -278,10 +279,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Notebook\CharacterEditor.resx">
+    <EmbeddedResource Include="Editors\CharacterEditor.resx">
       <DependentUpon>CharacterEditor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Notebook\NotebookEditor.resx">
+    <EmbeddedResource Include="Editors\NotebookEditor.resx">
       <DependentUpon>NotebookEditor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreenForm.resx">
@@ -365,12 +366,12 @@
   <ItemGroup>
     <PublishFile Include="AppIcon.ico">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>

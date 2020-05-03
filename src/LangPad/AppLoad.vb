@@ -1,5 +1,4 @@
 ﻿Imports LangPadData
-Imports LangPadUI
 
 Module AppLoad
     Public Sub UpdateSplash(ProgressValue As Integer, ProgressText As String)

@@ -452,6 +452,40 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Add the controls to be themed for the character editor.
  </summary>
 </member>
+<member name="M:LangPad.CharacterInsertion.SelectWord(System.Windows.Forms.TextBoxBase,System.Char,System.Char)">
+ <summary>
+ Select a string in a textbox between two characters. 
+ </summary>
+ 
+ <param name="TextBox">The TextBox</param>
+ <param name="StartChar">The character before the word.</param>
+ <param name="EndChar">The character after the word.</param>
+</member>
+<member name="M:LangPad.CharacterInsertion.InsertBrackets(System.Windows.Forms.TextBoxBase,System.String,System.String)">
+ <summary>
+ Insert a pair of brackets.
+ </summary>
+ 
+ <param name="TextBox">The textbox to insert into.</param>
+ <param name="BracketOpen">The opening bracket.</param>
+ <param name="BracketClose">The closing bracket.</param>
+</member>
+<member name="M:LangPad.CharacterInsertion.RemoveBrackets(System.Windows.Forms.TextBoxBase,System.String,System.String)">
+ <summary>
+ Remove a set of brackets.
+ </summary>
+ 
+ <param name="TextBox">The text box to remove the brackets from.</param>
+ <param name="BracketStart">The starting bracket.</param>
+ <param name="BracketEnd">The closing bracket.</param>
+</member>
+<member name="M:LangPad.CharacterInsertion.RemoveAllBrackets(System.Windows.Forms.TextBoxBase)">
+ <summary>
+ Remove all brackets from a textbox.
+ </summary>
+ 
+ <param name="TextBox">The textbox to remove the brackets from.</param>
+</member>
 <member name="T:LangPad.Messages">
  <summary>
  Show standard message boxes used throughout LangPad.
@@ -688,15 +722,6 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="preserveAspect">If the aspect ratio should be preserved</param>
  
  <returns>The width value of the new rectangle.</returns>
-</member>
-<member name="M:LangPad.CharacterEditor.SelectWord(System.Windows.Forms.TextBoxBase,System.Char,System.Char)">
- <summary>
- Select a string in a textbox between two characters. 
- </summary>
- 
- <param name="TextBox">The TextBox</param>
- <param name="StartChar">The character before the word.</param>
- <param name="EndChar">The character after the word.</param>
 </member>
 <member name="T:LangPad.AppInstance">
  <summary>

@@ -1,4 +1,5 @@
 ﻿Imports LangPadUI.Themes
+
 ''' <summary>
 ''' Handles the application's theme.
 ''' </summary>
