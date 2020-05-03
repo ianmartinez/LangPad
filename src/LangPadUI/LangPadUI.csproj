@@ -68,7 +68,7 @@
     </Compile>
     <Compile Include="RtbStyle.cs" />
     <Compile Include="Themes\DesertTheme.cs" />
-    <Compile Include="Themes\LightTheme.cs" />
+    <Compile Include="Themes\DefaultTheme.cs" />
     <Compile Include="Theming\Theme.cs" />
     <Compile Include="Theming\ThemeManager.cs" />
     <Compile Include="Theming\ThemeMenuRenderer.cs" />

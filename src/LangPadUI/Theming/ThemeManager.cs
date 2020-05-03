@@ -45,7 +45,7 @@ namespace LangPadUI.Theming
         public ThemeManager()
         {
             Themes = new List<Theme> {
-                new LightTheme(),
+                new DefaultTheme(),
                 new DesertTheme()
             };
         }
