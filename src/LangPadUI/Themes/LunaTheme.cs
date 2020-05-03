@@ -53,8 +53,6 @@ namespace LangPadUI.Themes
             MenuButtonPressedInsetColor = Color.Transparent;
             MenuButtonPressedColor1 = ToolStripButtonPressedColor1;
             MenuButtonPressedColor2 = ToolStripButtonPressedColor2;
-
-
         }
     }
 }
