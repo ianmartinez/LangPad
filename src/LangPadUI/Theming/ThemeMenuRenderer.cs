@@ -38,7 +38,7 @@ namespace LangPadUI.Theming
 
         protected override void OnRenderImageMargin(ToolStripRenderEventArgs e)
         {
-            base.OnRenderImageMargin(e);
+            //base.OnRenderImageMargin(e);
 
             // Fill background of menu
             SolidBrush menuBack = new SolidBrush(theme.MenuBackColor);
@@ -67,7 +67,7 @@ namespace LangPadUI.Theming
 
         protected override void OnRenderSeparator(ToolStripSeparatorRenderEventArgs e)
         {
-            base.OnRenderSeparator(e);
+            //base.OnRenderSeparator(e);
             int offset = 0;
 
             SolidBrush separator = new SolidBrush(theme.MenuSeparatorColor);
@@ -87,8 +87,7 @@ namespace LangPadUI.Theming
 
         protected override void OnRenderMenuItemBackground(ToolStripItemRenderEventArgs e)
         {
-            base.OnRenderMenuItemBackground(e);
-
+           //base.OnRenderMenuItemBackground(e);
             e.Item.ForeColor = theme.MenuTextColor;
             Rectangle backgroundRect = new Rectangle(4, 2, e.Item.Width - 6, e.Item.Height - 4);
             Rectangle borderRect = new Rectangle(backgroundRect.Left - 1, backgroundRect.Top - 1, backgroundRect.Width, backgroundRect.Height + 1);
