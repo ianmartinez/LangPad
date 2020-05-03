@@ -680,5 +680,21 @@ namespace LangPadUI
 
             ResumeLayout();
         }
+
+        /// <summary>
+        /// Apply a style to the selection.
+        /// </summary>
+        /// 
+        /// <param name="style">The style to apply.</param>
+        public void ApplySelectionStyle(RtbStyle style)
+        {
+            SelectionFont = style.Font;
+            SelectionColor = style.Color;
+            SelectionBackColor = style.HighlightColor;
+            SelectionAlignment = style.Alignment;
+            SelectionIndent = style.Indent;
+            SelectionHangingIndent = style.HangingIndent;
+            SelectionCharOffset = style.CharOffset;
+        }
     }
 }

@@ -633,8 +633,7 @@ Public Class MainForm
 
     Private Sub ImageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImageToolStripMenuItem.Click
         If OpenImageDialog.ShowDialog() = DialogResult.OK Then
-            Dim Img As Image = Image.FromFile(OpenImageDialog.FileName)
-            InsertImage(Img)
+            InsertImage(Image.FromFile(OpenImageDialog.FileName))
         End If
     End Sub
 
