@@ -52,6 +52,7 @@ namespace LangPadUI.Theming
                 new DesertTheme(),
                 new LunaTheme(),
                 new MetallicTheme(),
+                new OliveTheme(),
                 new WhiteoutTheme()
             };
         }

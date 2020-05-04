@@ -69,9 +69,10 @@
     <Compile Include="RtbStyle.cs" />
     <Compile Include="Themes\DesertTheme.cs" />
     <Compile Include="Themes\DefaultLightTheme.cs" />
-    <Compile Include="Themes\LunaTheme.cs" />
     <Compile Include="Themes\CoolGrayTheme.cs" />
+    <Compile Include="Themes\LunaTheme.cs" />
     <Compile Include="Themes\MetallicTheme.cs" />
+    <Compile Include="Themes\OliveTheme.cs" />
     <Compile Include="Themes\WhiteoutTheme.cs" />
     <Compile Include="Theming\Theme.cs" />
     <Compile Include="Theming\ThemeManager.cs" />
