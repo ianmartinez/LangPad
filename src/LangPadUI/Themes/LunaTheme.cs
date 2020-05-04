@@ -35,10 +35,10 @@ namespace LangPadUI.Themes
             // Menu
             MenuBackColor = Color.FromArgb(254, 250, 245);
             MenuTextColor = Color.FromArgb(0, 2, 9);
-            MenuBorderColor = Color.FromArgb(16, 42, 103);
+            MenuBorderColor = Color.FromArgb(81, 124, 185);
             MenuBarBackColor1 = Color.FromArgb(176, 203, 248);
             MenuBarBackColor2 = MenuBarBackColor1;
-            MenuBarBorderColor = Color.FromArgb(169, 200, 247);
+            MenuBarBorderColor = Color.FromArgb(121, 141, 168);
             MenuSeparatorColor = Color.FromArgb(121, 141, 168);
             MenuSeparatorShadowColor = Color.FromArgb(10, 255, 255, 255);
             MenuImageMarginBackColor1 = Color.FromArgb(192, 206, 243);
