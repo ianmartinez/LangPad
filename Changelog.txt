@@ -1,8 +1,11 @@
-Version 11.2 (TBD)
-   **• Export pages to Markdown
-   **• Export dictionary to Markdown
-   **• Copy text as Markdown
+Version 12.0 (TBD)
+   **• Move from RTF to HTML based format
+   **• IPA table generation   
+   **• Dictionary table generation
    
+Version 11.2 (TBD)   
+   **• Sections in dictionary
+
 Version 11.1 (TBD)
    **• Frequently used characters tab
    **• Recent notebooks in file menu
