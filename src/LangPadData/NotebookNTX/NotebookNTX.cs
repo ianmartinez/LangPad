@@ -4,7 +4,12 @@ using System.IO.Compression;
 using static LangPadData.KeyValue;
 
 namespace LangPadData.NotebookNTX
-{
+{    
+    /// <summary>
+     /// A notebook in the NT 3.x file format (*.ntx), which
+     /// is planned to replace the *.nt format. It is still
+     /// in development.
+     /// </summary>
     public class NotebookNTX
     {
         public const double CurrentSpec = 3.0;
@@ -52,7 +57,7 @@ namespace LangPadData.NotebookNTX
             File.WriteAllText(temp.PagesFile, Write(pagesFile));
             File.WriteAllText(temp.DictionaryFile, NotebookDictionary.Save());
 
-            ZipFile.CreateFromDirectory(temp.RootFolder, filePath, CompressionLevel.Optimal, false);
+            ZipFile.CreateFromDirectory(temp.RootFolder, filePath, CompressionLevel.Fastest, false);
         }
     }
 }
