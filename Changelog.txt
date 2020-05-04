@@ -28,7 +28,6 @@ Version 11.0 (June 30)
    • Show current line in status bar
    • Add options to wrap selected text in brackets [] and // or remove brackets
    • Add shortcut keys to wrap text in brackets
-   **• Dictionary appears above main window
    • Zoom in increments of 0.2 (a less drastic jump)   
    • The page title of HTML documents now matches their name in LangPad
    • Now has a dedicated installer
