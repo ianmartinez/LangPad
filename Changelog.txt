@@ -24,6 +24,7 @@ Version 11.0 (June 30)
    • Show current line in status bar
    • Add options to wrap selected text in brackets [] and // or remove brackets
    • Add shortcut keys to wrap text in brackets
+   **• Dictionary appears above main window
    • Zoom in increments of 0.2 (a less drastic jump)   
    • The page title of HTML documents now matches their name in LangPad
    • Now has a dedicated installer
@@ -31,17 +32,17 @@ Version 11.0 (June 30)
    • PageNameDialog title changes depending on the mode (add/duplicate/rename page)
    • PageNameDialog text box is now automatically focused when opened
    • Add Patreon, GitHub, and website links to about box
-   **• Add themes: Default Light, Desert, Metatllic, Moss, Luna, Storm, and Whiteout 
+   • Add themes: Default Light, Cool Gray, Desert, Luna, Metallic, Luna, Olive, and Whiteout 
    • Adding, removing, renaming, and changing the order of pages are all *much* faster
    • Pages are now inserted after the current page, not at the end of the notebook
    • Smaller sidebar that has been split into two tabs: pages and notebook info
    • Move sidebar to the left side
+   • Refactor text style code
    • Improved splash screen
    • Notebook files are now optimized for compression speed over compression density
    • Major refactoring to have a more consistent naming scheme and remove old junk
    • Complete re-write of file handling code   
    • Complete re-write of theming code   
-   **• Refactor style code
    • Bug Fix: Old Language Pad 4.x-5.x files could not be opened
    • Bug Fix: Fix bad performance when changing font styles on a page that has large images 
    • Bug Fix: Word count wouldn't update automatically when opening a new file
