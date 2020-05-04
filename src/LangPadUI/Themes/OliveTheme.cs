@@ -12,7 +12,7 @@ namespace LangPadUI.Themes
     {
         public OliveTheme()
         {
-            Name = "Olive Green";
+            Name = "Olive";
 
             // Tool strip
             ToolStripTextColor = Color.FromArgb(255, 20, 20, 20);
@@ -20,7 +20,7 @@ namespace LangPadUI.Themes
             ToolStripBackColor1 = Color.FromArgb(255, 255, 237);
             ToolStripBackColor2 = Color.FromArgb(186, 200, 147);
             ToolStripInsetColor = Color.FromArgb(40, 255, 255, 255);
-            ToolStripSeparatorColor = Color.FromArgb(97, 127, 89);
+            ToolStripSeparatorColor = Color.FromArgb(127, 157, 119);
             ToolStripSeparatorShadowColor = Color.FromArgb(244, 246, 224);
 
             // Menu
