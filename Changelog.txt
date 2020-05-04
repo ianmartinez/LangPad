@@ -32,7 +32,6 @@ Version 11.0 (June 30)
    • PageNameDialog title changes depending on the mode (add/duplicate/rename page)
    • PageNameDialog text box is now automatically focused when opened
    • Add Patreon, GitHub, and website links to about box
-   • Add themes: Default Light, Cool Gray, Desert, Luna, Metallic, Luna, Olive, and Whiteout 
    • Adding, removing, renaming, and changing the order of pages are all *much* faster
    • Pages are now inserted after the current page, not at the end of the notebook
    • Smaller sidebar that has been split into two tabs: pages and notebook info
@@ -43,6 +42,7 @@ Version 11.0 (June 30)
    • Major refactoring to have a more consistent naming scheme and remove old junk
    • Complete re-write of file handling code   
    • Complete re-write of theming code   
+   • Add themes: Default Light, Cool Gray, Desert, Luna, Metallic, Luna, Olive, and Whiteout 
    • Bug Fix: Old Language Pad 4.x-5.x files could not be opened
    • Bug Fix: Fix bad performance when changing font styles on a page that has large images 
    • Bug Fix: Word count wouldn't update automatically when opening a new file

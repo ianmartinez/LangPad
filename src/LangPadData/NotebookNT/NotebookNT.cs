@@ -15,7 +15,7 @@ namespace LangPadData.NotebookNT
         /// The version of the NT file format that this
         /// class saves in.
         /// </summary>
-        public const double SPEC_VERSION = 2.1;
+        public const double SPEC_VERSION = 2.2;
 
         /// <summary>
         /// If the notebook has been modified since
