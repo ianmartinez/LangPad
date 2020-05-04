@@ -21,7 +21,7 @@ namespace LangPadUI.Themes
             ToolStripTextColor = Color.FromArgb(255, 20, 20, 20);
             ToolStripBorderColor = Color.FromArgb(81, 124, 185);
             ToolStripBackColor1 = Color.FromArgb(222, 236, 255);
-            ToolStripBackColor2 = Color.FromArgb(136, 174, 230);
+            ToolStripBackColor2 = Color.FromArgb(156, 194, 250);
             ToolStripInsetColor = Color.FromArgb(40, 255, 255, 255);
             ToolStripSeparatorColor = Color.FromArgb(106, 140, 203);
             ToolStripSeparatorShadowColor = Color.FromArgb(241, 249, 255);
@@ -36,11 +36,11 @@ namespace LangPadUI.Themes
             MenuBackColor = Color.FromArgb(254, 250, 245);
             MenuTextColor = Color.FromArgb(0, 2, 9);
             MenuBorderColor = Color.FromArgb(16, 42, 103);
-            MenuBarBackColor1 = Color.FromArgb(174, 202, 247);
-            MenuBarBackColor2 = Color.FromArgb(174, 202, 247);
+            MenuBarBackColor1 = Color.FromArgb(176, 203, 248);
+            MenuBarBackColor2 = MenuBarBackColor1;
             MenuBarBorderColor = Color.FromArgb(169, 200, 247);
             MenuSeparatorColor = Color.FromArgb(121, 141, 168);
-            MenuSeparatorShadowColor = Color.FromArgb(50, 255, 255, 255);
+            MenuSeparatorShadowColor = Color.FromArgb(10, 255, 255, 255);
             MenuImageMarginBackColor1 = Color.FromArgb(192, 206, 243);
             MenuImageMarginBackColor2 = Color.FromArgb(139, 177, 224);
             MenuImageMarginBorderColor = Color.FromArgb(124, 164, 222);
