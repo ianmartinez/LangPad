@@ -239,7 +239,7 @@ Partial Class NotebookEditor
         Me.InfoTextBox.Name = "InfoTextBox"
         Me.InfoTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.InfoTextBox.Size = New System.Drawing.Size(286, 91)
-        Me.InfoTextBox.TabIndex = 5
+        Me.InfoTextBox.TabIndex = 6
         '
         'Label3
         '
@@ -261,7 +261,7 @@ Partial Class NotebookEditor
         Me.GoButton.MinimumSize = New System.Drawing.Size(80, 0)
         Me.GoButton.Name = "GoButton"
         Me.GoButton.Size = New System.Drawing.Size(94, 35)
-        Me.GoButton.TabIndex = 79
+        Me.GoButton.TabIndex = 5
         Me.GoButton.Text = "Go"
         Me.GoButton.UseVisualStyleBackColor = True
         '
@@ -272,7 +272,7 @@ Partial Class NotebookEditor
         Me.WebsiteTextBox.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.WebsiteTextBox.Name = "WebsiteTextBox"
         Me.WebsiteTextBox.Size = New System.Drawing.Size(286, 26)
-        Me.WebsiteTextBox.TabIndex = 3
+        Me.WebsiteTextBox.TabIndex = 4
         '
         'LanguageTextBox
         '
@@ -281,7 +281,7 @@ Partial Class NotebookEditor
         Me.LanguageTextBox.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.LanguageTextBox.Name = "LanguageTextBox"
         Me.LanguageTextBox.Size = New System.Drawing.Size(286, 26)
-        Me.LanguageTextBox.TabIndex = 80
+        Me.LanguageTextBox.TabIndex = 2
         '
         'Label5
         '
@@ -301,7 +301,7 @@ Partial Class NotebookEditor
         Me.AuthorTextBox.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
         Me.AuthorTextBox.Name = "AuthorTextBox"
         Me.AuthorTextBox.Size = New System.Drawing.Size(286, 26)
-        Me.AuthorTextBox.TabIndex = 2
+        Me.AuthorTextBox.TabIndex = 3
         '
         'TitleTextBox
         '
