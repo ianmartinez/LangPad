@@ -6,16 +6,15 @@ namespace LangPadUI
 {
     public class CharacterButton : Button
     {
-        private readonly System.ComponentModel.IContainer components;
         private readonly IpaToolTip CharButtonTooltip = new IpaToolTip();
 
         /// <summary>
         /// Create a new button representing a character.
         /// </summary>
         /// 
-        /// <param name="CharName">The name of the character.</param>
-        /// <param name="MultiLine">If the description is on multiple lines.</param>
-        public CharacterButton(string CharName = "", bool MultiLine = true)
+        /// <param name="charName">The name of the character.</param>
+        /// <param name="multiLine">If the description is on multiple lines.</param>
+        public CharacterButton(string charName = "", bool multiLine = true)
         {
             Padding = new Padding(0);
             ForeColor = Color.White;
@@ -26,7 +25,7 @@ namespace LangPadUI
             Margin = new Padding(3, 3, 3, 6);
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             UseCompatibleTextRendering = true;
-            CharButtonTooltip.CharName = MultiLine ? CharName.Replace("/", "\n") : CharName;
+            CharButtonTooltip.CharName = multiLine ? charName.Replace("/", "\n") : charName;
             TextChanged += CharacterButton_TextChanged;
         }
 

@@ -8,7 +8,13 @@ namespace LangPadUI
     {
         private readonly IpaToolTip CharButtonTooltip = new IpaToolTip();
 
-        public AccentCheckButton(string CharName = "", bool MultiLine = true)
+        /// <summary>
+        /// Create a new check box button representing an accent mark.
+        /// </summary>
+        /// 
+        /// <param name="charName">The name of the character.</param>
+        /// <param name="multiLine">If the description is on multiple lines.</param>
+        public AccentCheckButton(string charName = "", bool multiLine = true)
         {
             Padding = new Padding(0);
             Font = new Font("Calibri", 14, FontStyle.Regular);
@@ -18,7 +24,7 @@ namespace LangPadUI
             Appearance = Appearance.Button;
             TextAlign = ContentAlignment.MiddleCenter;
             UseCompatibleTextRendering = true;
-            CharButtonTooltip.CharName = MultiLine ? CharName.Replace("/", "\n") : CharName;
+            CharButtonTooltip.CharName = multiLine ? charName.Replace("/", "\n") : charName;
             TextChanged += AccentCheckButton_TextChanged;
         }
 

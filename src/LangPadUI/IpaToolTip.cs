@@ -52,7 +52,7 @@ namespace LangPadUI
             var nameCenterX = e.Bounds.Left + ((e.Bounds.Width / 2) - (charNameSize.Width / 2));
             var centerY = (e.Bounds.Top) + (hasCharName ? charNameSize.Height + 6 + 3 : 0);
             var textSize = TextRenderer.MeasureText(e.ToolTipText, textFont);
-            var textCenterX = (int)Math.Round(e.Bounds.Left + ((double)e.Bounds.Width / 2) - ((double)textSize.Width / 2));
+            var textCenterX = (int)Math.Round(e.Bounds.Left + 3 + ((double)(e.Bounds.Width) / 2) - ((double)textSize.Width / 2));
 
             // Draw the name
             if (hasCharName)
