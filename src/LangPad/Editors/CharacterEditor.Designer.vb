@@ -24,7 +24,7 @@ Partial Class CharacterEditor
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CharacterEditor))
-        Me.CharCategoriesTab = New System.Windows.Forms.TabControl()
+        Me.CharCategoriesTabs = New System.Windows.Forms.TabControl()
         Me.LocalTab = New System.Windows.Forms.TabPage()
         Me.LocalToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.LocalPanel = New System.Windows.Forms.FlowLayoutPanel()
@@ -102,7 +102,8 @@ Partial Class CharacterEditor
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SaveDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenDialog = New System.Windows.Forms.OpenFileDialog()
-        Me.CharCategoriesTab.SuspendLayout()
+        Me.ShortcutsTab = New System.Windows.Forms.TabPage()
+        Me.CharCategoriesTabs.SuspendLayout()
         Me.LocalTab.SuspendLayout()
         Me.LocalToolStripContainer.ContentPanel.SuspendLayout()
         Me.LocalToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -143,22 +144,23 @@ Partial Class CharacterEditor
         Me.SplitContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'CharCategoriesTab
+        'CharCategoriesTabs
         '
-        Me.CharCategoriesTab.Controls.Add(Me.LocalTab)
-        Me.CharCategoriesTab.Controls.Add(Me.FileTab)
-        Me.CharCategoriesTab.Controls.Add(Me.ExtendedTab)
-        Me.CharCategoriesTab.Controls.Add(Me.IpaTab)
-        Me.CharCategoriesTab.Controls.Add(Me.BracketsTab)
-        Me.CharCategoriesTab.Controls.Add(Me.SearchTab)
-        Me.CharCategoriesTab.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CharCategoriesTab.Location = New System.Drawing.Point(0, 0)
-        Me.CharCategoriesTab.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.CharCategoriesTab.Multiline = True
-        Me.CharCategoriesTab.Name = "CharCategoriesTab"
-        Me.CharCategoriesTab.SelectedIndex = 0
-        Me.CharCategoriesTab.Size = New System.Drawing.Size(542, 282)
-        Me.CharCategoriesTab.TabIndex = 74
+        Me.CharCategoriesTabs.Controls.Add(Me.LocalTab)
+        Me.CharCategoriesTabs.Controls.Add(Me.FileTab)
+        Me.CharCategoriesTabs.Controls.Add(Me.ExtendedTab)
+        Me.CharCategoriesTabs.Controls.Add(Me.IpaTab)
+        Me.CharCategoriesTabs.Controls.Add(Me.BracketsTab)
+        Me.CharCategoriesTabs.Controls.Add(Me.ShortcutsTab)
+        Me.CharCategoriesTabs.Controls.Add(Me.SearchTab)
+        Me.CharCategoriesTabs.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CharCategoriesTabs.Location = New System.Drawing.Point(0, 0)
+        Me.CharCategoriesTabs.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CharCategoriesTabs.Multiline = True
+        Me.CharCategoriesTabs.Name = "CharCategoriesTabs"
+        Me.CharCategoriesTabs.SelectedIndex = 0
+        Me.CharCategoriesTabs.Size = New System.Drawing.Size(542, 282)
+        Me.CharCategoriesTabs.TabIndex = 74
         '
         'LocalTab
         '
@@ -982,7 +984,7 @@ Partial Class CharacterEditor
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.CharCategoriesTab)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.CharCategoriesTabs)
         Me.SplitContainer1.Size = New System.Drawing.Size(542, 708)
         Me.SplitContainer1.SplitterDistance = 420
         Me.SplitContainer1.SplitterWidth = 6
@@ -996,6 +998,16 @@ Partial Class CharacterEditor
         '
         Me.OpenDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
         '
+        'ShortcutsTab
+        '
+        Me.ShortcutsTab.Location = New System.Drawing.Point(4, 29)
+        Me.ShortcutsTab.Name = "ShortcutsTab"
+        Me.ShortcutsTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.ShortcutsTab.Size = New System.Drawing.Size(534, 249)
+        Me.ShortcutsTab.TabIndex = 6
+        Me.ShortcutsTab.Text = "Shortcuts"
+        Me.ShortcutsTab.UseVisualStyleBackColor = True
+        '
         'CharacterEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -1006,7 +1018,7 @@ Partial Class CharacterEditor
         Me.MinimumSize = New System.Drawing.Size(510, 0)
         Me.Name = "CharacterEditor"
         Me.Size = New System.Drawing.Size(542, 708)
-        Me.CharCategoriesTab.ResumeLayout(False)
+        Me.CharCategoriesTabs.ResumeLayout(False)
         Me.LocalTab.ResumeLayout(False)
         Me.LocalToolStripContainer.ContentPanel.ResumeLayout(False)
         Me.LocalToolStripContainer.TopToolStripPanel.ResumeLayout(False)
@@ -1063,7 +1075,7 @@ Partial Class CharacterEditor
 
     End Sub
 
-    Friend WithEvents CharCategoriesTab As TabControl
+    Friend WithEvents CharCategoriesTabs As TabControl
     Friend WithEvents FileTab As TabPage
     Friend WithEvents LocalTab As TabPage
     Friend WithEvents ExtendedTab As TabPage
@@ -1141,4 +1153,5 @@ Partial Class CharacterEditor
     Friend WithEvents MainTooltip As ToolTip
     Friend WithEvents BracketsTab As TabPage
     Friend WithEvents BracketsPanel As FlowLayoutPanel
+    Friend WithEvents ShortcutsTab As TabPage
 End Class
