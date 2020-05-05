@@ -26,7 +26,7 @@ Module AppInstance
     ''' </summary>
     Public ReadOnly Property AppLocalCharacters As String()
         Get
-            Return My.Settings.CustomSymbols.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+            Return My.Settings.CustomCharacters.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
         End Get
     End Property
 

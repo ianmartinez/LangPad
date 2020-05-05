@@ -57,12 +57,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property CustomSymbols() As String
+        Public Property CustomCharacters() As String
             Get
-                Return CType(Me("CustomSymbols"),String)
+                Return CType(Me("CustomCharacters"),String)
             End Get
             Set
-                Me("CustomSymbols") = value
+                Me("CustomCharacters") = value
             End Set
         End Property
         
@@ -80,7 +80,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("DefaultLight")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Default Light")>  _
         Public Property Theme() As String
             Get
                 Return CType(Me("Theme"),String)
@@ -147,6 +147,138 @@ Namespace My
             End Get
             Set
                 Me("DictionaryFontColor") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Setting() As String
+            Get
+                Return CType(Me("Setting"),String)
+            End Get
+            Set
+                Me("Setting") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Ctrl0() As String
+            Get
+                Return CType(Me("Ctrl0"),String)
+            End Get
+            Set
+                Me("Ctrl0") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Ctrl1() As String
+            Get
+                Return CType(Me("Ctrl1"),String)
+            End Get
+            Set
+                Me("Ctrl1") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Ctrl2() As String
+            Get
+                Return CType(Me("Ctrl2"),String)
+            End Get
+            Set
+                Me("Ctrl2") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Ctrl3() As String
+            Get
+                Return CType(Me("Ctrl3"),String)
+            End Get
+            Set
+                Me("Ctrl3") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Ctrl4() As String
+            Get
+                Return CType(Me("Ctrl4"),String)
+            End Get
+            Set
+                Me("Ctrl4") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Ctrl5() As String
+            Get
+                Return CType(Me("Ctrl5"),String)
+            End Get
+            Set
+                Me("Ctrl5") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Ctrl6() As String
+            Get
+                Return CType(Me("Ctrl6"),String)
+            End Get
+            Set
+                Me("Ctrl6") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Ctrl7() As String
+            Get
+                Return CType(Me("Ctrl7"),String)
+            End Get
+            Set
+                Me("Ctrl7") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Ctrl8() As String
+            Get
+                Return CType(Me("Ctrl8"),String)
+            End Get
+            Set
+                Me("Ctrl8") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Ctrl9() As String
+            Get
+                Return CType(Me("Ctrl9"),String)
+            End Get
+            Set
+                Me("Ctrl9") = value
             End Set
         End Property
     End Class

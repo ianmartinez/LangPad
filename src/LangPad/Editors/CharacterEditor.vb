@@ -92,7 +92,7 @@ Public Class CharacterEditor
     Public Sub AddToLocal(Character As String)
         If AppLocalCharacters.Contains(Character) Then Exit Sub
 
-        My.Settings.CustomSymbols = My.Settings.CustomSymbols & Environment.NewLine & Character
+        My.Settings.CustomCharacters = My.Settings.CustomCharacters & Environment.NewLine & Character
         RefreshLocal()
     End Sub
 
@@ -302,7 +302,7 @@ Public Class CharacterEditor
             Dim LocalChars As List(Of String) = AppLocalCharacters.ToList()
             If LocalChars.Contains(CurrentButton.Text) Then
                 LocalChars.Remove(CurrentButton.Text)
-                My.Settings.CustomSymbols = String.Join(Environment.NewLine, LocalChars.ToArray())
+                My.Settings.CustomCharacters = String.Join(Environment.NewLine, LocalChars.ToArray())
                 RefreshLocal()
             End If
         End If
@@ -327,7 +327,7 @@ Public Class CharacterEditor
 
     Private Sub ClearLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ClearLocalToolStripButton.Click
         If ConfirmClear() = DialogResult.Yes Then
-            My.Settings.CustomSymbols = ""
+            My.Settings.CustomCharacters = ""
             RefreshLocal()
         End If
     End Sub
@@ -353,9 +353,9 @@ Public Class CharacterEditor
 
     Private Sub ImportLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportLocalToolStripButton.Click
         If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Dim LocalChars = Lines.Get(My.Settings.CustomSymbols).ToList()
+            Dim LocalChars = Lines.Get(My.Settings.CustomCharacters).ToList()
             ImportFile(OpenDialog.FileName, LocalChars)
-            My.Settings.CustomSymbols = String.Join(vbLf, LocalChars)
+            My.Settings.CustomCharacters = String.Join(vbLf, LocalChars)
             My.Settings.Save()
             RefreshLocal()
         End If
@@ -370,7 +370,7 @@ Public Class CharacterEditor
 
     Private Sub ExportLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportLocalToolStripButton.Click
         If SaveDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            File.WriteAllText(SaveDialog.FileName, My.Settings.CustomSymbols)
+            File.WriteAllText(SaveDialog.FileName, My.Settings.CustomCharacters)
         End If
     End Sub
 
