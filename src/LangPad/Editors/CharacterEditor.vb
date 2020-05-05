@@ -37,16 +37,7 @@ Public Class CharacterEditor
         Next
 
         ' Load each shortcut button config from settings
-        ShortcutButton1.CharValue = My.Settings.Ctrl1
-        ShortcutButton2.CharValue = My.Settings.Ctrl2
-        ShortcutButton3.CharValue = My.Settings.Ctrl3
-        ShortcutButton4.CharValue = My.Settings.Ctrl4
-        ShortcutButton5.CharValue = My.Settings.Ctrl5
-        ShortcutButton6.CharValue = My.Settings.Ctrl6
-        ShortcutButton7.CharValue = My.Settings.Ctrl7
-        ShortcutButton8.CharValue = My.Settings.Ctrl8
-        ShortcutButton9.CharValue = My.Settings.Ctrl9
-        ShortcutButton0.CharValue = My.Settings.Ctrl0
+        LoadShortcutKeys()
     End Sub
 
     Public Sub SetIcons()
@@ -65,6 +56,19 @@ Public Class CharacterEditor
         ' Search
         SearchToolStripButton.Image = IconManager.Get("edit-find", IconSize.Small, Res)
         Refresh()
+    End Sub
+
+    Private Sub LoadShortcutKeys()
+        ShortcutButton1.CharValue = My.Settings.Ctrl1
+        ShortcutButton2.CharValue = My.Settings.Ctrl2
+        ShortcutButton3.CharValue = My.Settings.Ctrl3
+        ShortcutButton4.CharValue = My.Settings.Ctrl4
+        ShortcutButton5.CharValue = My.Settings.Ctrl5
+        ShortcutButton6.CharValue = My.Settings.Ctrl6
+        ShortcutButton7.CharValue = My.Settings.Ctrl7
+        ShortcutButton8.CharValue = My.Settings.Ctrl8
+        ShortcutButton9.CharValue = My.Settings.Ctrl9
+        ShortcutButton0.CharValue = My.Settings.Ctrl0
     End Sub
 
     Private Sub UpdateResult()
@@ -558,7 +562,7 @@ Public Class CharacterEditor
         My.Settings.Ctrl0 = CharValue
     End Sub
 
-    Private Sub ResetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem.Click
+    Private Sub ResetKeyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetKeyToolStripMenuItem.Click
         Dim CurrentItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
         Dim CurrentContextMenu As ContextMenuStrip = CType(CurrentItem.Owner, ContextMenuStrip)
         Dim CurrentButton As ShortcutButton = CType(CurrentContextMenu.SourceControl, ShortcutButton)
@@ -566,5 +570,25 @@ Public Class CharacterEditor
             My.Settings.Item(CurrentButton.SettingsValue) = ""
         End If
         CurrentButton.CharValue = ""
+    End Sub
+
+    Private Sub ResetAllKeysToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetAllKeysToolStripMenuItem.Click
+        Dim ConfirmReset = MessageBox.Show("Are you sure you want to reset all key shortcuts? This cannot be undone.", "Confirm", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation)
+        If ConfirmReset = DialogResult.Yes Then
+            ' Reset settings
+            My.Settings.Ctrl1 = ""
+            My.Settings.Ctrl2 = ""
+            My.Settings.Ctrl3 = ""
+            My.Settings.Ctrl4 = ""
+            My.Settings.Ctrl5 = ""
+            My.Settings.Ctrl6 = ""
+            My.Settings.Ctrl7 = ""
+            My.Settings.Ctrl8 = ""
+            My.Settings.Ctrl9 = ""
+            My.Settings.Ctrl0 = ""
+
+            ' Reload buttons
+            LoadShortcutKeys()
+        End If
     End Sub
 End Class

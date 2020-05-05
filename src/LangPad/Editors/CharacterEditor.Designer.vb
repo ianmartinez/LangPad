@@ -116,7 +116,7 @@ Partial Class CharacterEditor
         Me.SaveDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenDialog = New System.Windows.Forms.OpenFileDialog()
         Me.ShortcutButtonMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ResetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetKeyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SmartReplaceIndicator = New LangPadUI.DoubleBufferedPanel()
         Me.ShortcutButton1 = New LangPadUI.ShortcutButton()
         Me.ShortcutButton2 = New LangPadUI.ShortcutButton()
@@ -128,6 +128,7 @@ Partial Class CharacterEditor
         Me.ShortcutButton8 = New LangPadUI.ShortcutButton()
         Me.ShortcutButton9 = New LangPadUI.ShortcutButton()
         Me.ShortcutButton0 = New LangPadUI.ShortcutButton()
+        Me.ResetAllKeysToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CharCategoriesTabs.SuspendLayout()
         Me.LocalTab.SuspendLayout()
         Me.LocalToolStripContainer.ContentPanel.SuspendLayout()
@@ -1126,15 +1127,15 @@ Partial Class CharacterEditor
         'ShortcutButtonMenu
         '
         Me.ShortcutButtonMenu.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.ShortcutButtonMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResetToolStripMenuItem})
+        Me.ShortcutButtonMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResetKeyToolStripMenuItem, Me.ResetAllKeysToolStripMenuItem})
         Me.ShortcutButtonMenu.Name = "CharButtonMenu"
-        Me.ShortcutButtonMenu.Size = New System.Drawing.Size(127, 36)
+        Me.ShortcutButtonMenu.Size = New System.Drawing.Size(241, 101)
         '
-        'ResetToolStripMenuItem
+        'ResetKeyToolStripMenuItem
         '
-        Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
-        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(126, 32)
-        Me.ResetToolStripMenuItem.Text = "Reset"
+        Me.ResetKeyToolStripMenuItem.Name = "ResetKeyToolStripMenuItem"
+        Me.ResetKeyToolStripMenuItem.Size = New System.Drawing.Size(240, 32)
+        Me.ResetKeyToolStripMenuItem.Text = "Reset Key"
         '
         'SmartReplaceIndicator
         '
@@ -1264,6 +1265,12 @@ Partial Class CharacterEditor
         Me.ShortcutButton0.ShortcutText = "CTRL+0"
         Me.ShortcutButton0.Size = New System.Drawing.Size(90, 110)
         Me.ShortcutButton0.TabIndex = 9
+        '
+        'ResetAllKeysToolStripMenuItem
+        '
+        Me.ResetAllKeysToolStripMenuItem.Name = "ResetAllKeysToolStripMenuItem"
+        Me.ResetAllKeysToolStripMenuItem.Size = New System.Drawing.Size(240, 32)
+        Me.ResetAllKeysToolStripMenuItem.Text = "Reset All Keys"
         '
         'CharacterEditor
         '
@@ -1439,5 +1446,6 @@ Partial Class CharacterEditor
     Friend WithEvents CTRL9ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CTRL0ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShortcutButtonMenu As ContextMenuStrip
-    Friend WithEvents ResetToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResetKeyToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResetAllKeysToolStripMenuItem As ToolStripMenuItem
 End Class
