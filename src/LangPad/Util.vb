@@ -25,7 +25,7 @@ Module Util
     ''' 
     ''' <returns>The number of words.</returns>
     Public Function WordCount(Text As String) As Integer
-        Return Text.Trim().Split(New Char() {" "c}, StringSplitOptions.RemoveEmptyEntries).Length
+        Return Text.Trim().Split({" ", vbTab, vbCr, vbLf}, StringSplitOptions.RemoveEmptyEntries).Length
     End Function
 
     ''' <summary>
