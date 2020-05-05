@@ -19,6 +19,7 @@ Version 11.0 (June 30)
    • Display shortcut keys on menus
    • Added tons of shortcut keys to make all across the program
    • Custom characters can be assigned to keys CTRL+1 to CTRL+0
+   **• Character insertion now respects caps lock
    • Allow the adjustment of bullet indent
    • Support hanging indent
    • Reset indent menu option
