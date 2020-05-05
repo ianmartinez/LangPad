@@ -21,6 +21,7 @@ namespace LangPadUI
             set
             {
                 ShortcutKeyLabel.Text = value;
+                CharButton.CharName = string.Format("Insert with {0}", value);
             }
         }
 
