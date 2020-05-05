@@ -205,7 +205,7 @@ Public Class CharacterEditor
     End Sub
 
     Public Sub ShortcutKeyInsert(e As KeyEventArgs)
-        If e.Modifiers = Keys.Control Then
+        If e.Control Then
             Select Case e.KeyCode
                 Case Keys.D1
                     InsertInCurrentTextBox(ShortcutButton1.CharButton, False)
