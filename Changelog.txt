@@ -18,7 +18,7 @@ Version 11.0 (June 30)
    • Pressing CTRL+S on character editor and dictionary now saves the notebook
    • Display shortcut keys on menus
    • Added tons of shortcut keys to make all across the program
-   **• TAB to increase indent and SHIFT + TAB to decrease indent when at start of line
+   **• Custom characters can be assigned to keys CTRL+1 to CTRL+0
    • Allow the adjustment of bullet indent
    • Support hanging indent
    • Reset indent menu option
