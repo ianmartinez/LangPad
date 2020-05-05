@@ -229,8 +229,6 @@ Partial Class MainForm
         Me.SubscriptToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SuperscriptToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BaselineToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator24 = New System.Windows.Forms.ToolStripSeparator()
-        Me.InsertTabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem23 = New System.Windows.Forms.ToolStripSeparator()
@@ -1548,8 +1546,8 @@ Partial Class MainForm
         '
         Me.ZoomToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ZoomToolStripMenuItem.Name = "ZoomToolStripMenuItem"
-        Me.ZoomToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D0), System.Windows.Forms.Keys)
-        Me.ZoomToolStripMenuItem.Size = New System.Drawing.Size(335, 34)
+        Me.ZoomToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Oemtilde), System.Windows.Forms.Keys)
+        Me.ZoomToolStripMenuItem.Size = New System.Drawing.Size(336, 34)
         Me.ZoomToolStripMenuItem.Text = "100% Zoom"
         '
         'EditZoomToolStripMenuItem
@@ -1876,7 +1874,7 @@ Partial Class MainForm
         '
         'FormatToolStripMenuItem
         '
-        Me.FormatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.ToolStripSeparator18, Me.AlignLeftToolStripMenuItem, Me.AlignCenterToolStripMenuItem, Me.AlignRightToolStripMenuItem, Me.ToolStripSeparator19, Me.BoldToolStripMenuItem, Me.ItalicToolStripMenuItem, Me.UnderlineToolStripMenuItem, Me.StrikeToolStripMenuItem, Me.ToolStripSeparator20, Me.IncreaseIndentToolStripMenuItem, Me.DecreaseIndentToolStripMenuItem, Me.ResetIndentToolStripMenuItem, Me.ToolStripSeparator22, Me.IncreaseBulletIndentToolStripMenuItem, Me.DecreaseBulletIndentToolStripMenuItem, Me.ResetBulletIndentToolStripMenuItem, Me.ToolStripSeparator23, Me.IncreaseHangingIndentToolStripMenuItem, Me.DecreaseHangingIndentToolStripMenuItem, Me.ResetHangingIndentToolStripMenuItem, Me.ToolStripSeparator17, Me.SubscriptToolStripMenuItem, Me.SuperscriptToolStripMenuItem, Me.BaselineToolStripMenuItem, Me.ToolStripSeparator24, Me.InsertTabToolStripMenuItem})
+        Me.FormatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.ToolStripSeparator18, Me.AlignLeftToolStripMenuItem, Me.AlignCenterToolStripMenuItem, Me.AlignRightToolStripMenuItem, Me.ToolStripSeparator19, Me.BoldToolStripMenuItem, Me.ItalicToolStripMenuItem, Me.UnderlineToolStripMenuItem, Me.StrikeToolStripMenuItem, Me.ToolStripSeparator20, Me.IncreaseIndentToolStripMenuItem, Me.DecreaseIndentToolStripMenuItem, Me.ResetIndentToolStripMenuItem, Me.ToolStripSeparator22, Me.IncreaseBulletIndentToolStripMenuItem, Me.DecreaseBulletIndentToolStripMenuItem, Me.ResetBulletIndentToolStripMenuItem, Me.ToolStripSeparator23, Me.IncreaseHangingIndentToolStripMenuItem, Me.DecreaseHangingIndentToolStripMenuItem, Me.ResetHangingIndentToolStripMenuItem, Me.ToolStripSeparator17, Me.SubscriptToolStripMenuItem, Me.SuperscriptToolStripMenuItem, Me.BaselineToolStripMenuItem})
         Me.FormatToolStripMenuItem.Name = "FormatToolStripMenuItem"
         Me.FormatToolStripMenuItem.Size = New System.Drawing.Size(58, 29)
         Me.FormatToolStripMenuItem.Text = "Text"
@@ -1965,6 +1963,7 @@ Partial Class MainForm
         '
         Me.IncreaseIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.IncreaseIndentToolStripMenuItem.Name = "IncreaseIndentToolStripMenuItem"
+        Me.IncreaseIndentToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Tab), System.Windows.Forms.Keys)
         Me.IncreaseIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.IncreaseIndentToolStripMenuItem.Text = "Increase Indent"
         '
@@ -1972,6 +1971,8 @@ Partial Class MainForm
         '
         Me.DecreaseIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.DecreaseIndentToolStripMenuItem.Name = "DecreaseIndentToolStripMenuItem"
+        Me.DecreaseIndentToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.Tab), System.Windows.Forms.Keys)
         Me.DecreaseIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.DecreaseIndentToolStripMenuItem.Text = "Decrease Indent"
         Me.DecreaseIndentToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -1992,7 +1993,6 @@ Partial Class MainForm
         '
         Me.IncreaseBulletIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.IncreaseBulletIndentToolStripMenuItem.Name = "IncreaseBulletIndentToolStripMenuItem"
-        Me.IncreaseBulletIndentToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Tab), System.Windows.Forms.Keys)
         Me.IncreaseBulletIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.IncreaseBulletIndentToolStripMenuItem.Text = "Increase Bullet Indent"
         '
@@ -2000,8 +2000,6 @@ Partial Class MainForm
         '
         Me.DecreaseBulletIndentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.DecreaseBulletIndentToolStripMenuItem.Name = "DecreaseBulletIndentToolStripMenuItem"
-        Me.DecreaseBulletIndentToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.Tab), System.Windows.Forms.Keys)
         Me.DecreaseBulletIndentToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.DecreaseBulletIndentToolStripMenuItem.Text = "Decrease Bullet Indent"
         Me.DecreaseBulletIndentToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2073,19 +2071,6 @@ Partial Class MainForm
             Or System.Windows.Forms.Keys.Right), System.Windows.Forms.Keys)
         Me.BaselineToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
         Me.BaselineToolStripMenuItem.Text = "Baseline"
-        '
-        'ToolStripSeparator24
-        '
-        Me.ToolStripSeparator24.Name = "ToolStripSeparator24"
-        Me.ToolStripSeparator24.Size = New System.Drawing.Size(424, 6)
-        '
-        'InsertTabToolStripMenuItem
-        '
-        Me.InsertTabToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.InsertTabToolStripMenuItem.Name = "InsertTabToolStripMenuItem"
-        Me.InsertTabToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D1), System.Windows.Forms.Keys)
-        Me.InsertTabToolStripMenuItem.Size = New System.Drawing.Size(427, 34)
-        Me.InsertTabToolStripMenuItem.Text = "Insert Tab"
         '
         'ToolsToolStripMenuItem
         '
@@ -2379,8 +2364,6 @@ Partial Class MainForm
     Friend WithEvents ResetIndentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ResetBulletIndentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ResetHangingIndentToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator24 As ToolStripSeparator
-    Friend WithEvents InsertTabToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LinguisticsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CharacterEditorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator25 As ToolStripSeparator

@@ -105,6 +105,7 @@ Public Class MainForm
         ' Set shortcut key display text
         ZoomInToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl++"
         ZoomOutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+-"
+        ZoomToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+`"
 
         ' The file hasn't been modified yet
         CurrentNotebook.Modified = False
@@ -1052,10 +1053,6 @@ Public Class MainForm
 
     Private Sub ResetHangingIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetHangingIndentToolStripMenuItem.Click
         CurrentRtb.SelectionHangingIndent = 0
-    End Sub
-
-    Private Sub InsertTabToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InsertTabToolStripMenuItem.Click
-        InsertText(CurrentRtb, vbTab)
     End Sub
 
     Private Sub BroadTranscriptionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BroadTranscriptionToolStripMenuItem.Click

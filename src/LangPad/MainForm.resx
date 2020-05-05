@@ -851,18 +851,18 @@
   <data name="DecreaseIndentToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
-        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
+        BYYABzZ5dAx0gDTYcKKBc4WwSuakKZp507ZARegIXMrlVAtnry7afeWPeuGMvVBRrMDLy0sCmABzCGFg
         qPpCteAHnF4V5rrVS480n3r6f+7tT/+V82bvZXAuUMLArsXcIPXAxGcFtOA/EXgH2AKcoL6eiTu0Ncys
-        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
+        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
 </value>
   </data>
   <data name="IncreaseIndentToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
