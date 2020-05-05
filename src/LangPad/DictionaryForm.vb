@@ -237,6 +237,8 @@ Public Class DictionaryForm
     Private Sub DictionaryForm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown, DictionaryGrid.KeyDown
         If (e.KeyCode = Keys.S AndAlso e.Modifiers = Keys.Control) Then
             MainForm.FileSave()
+        Else
+            CharEditWindow.CharEdit.ShortcutKeyInsert(e)
         End If
     End Sub
 End Class

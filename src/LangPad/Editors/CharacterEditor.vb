@@ -204,6 +204,33 @@ Public Class CharacterEditor
         End If
     End Sub
 
+    Public Sub ShortcutKeyInsert(e As KeyEventArgs)
+        If e.Modifiers = Keys.Control Then
+            Select Case e.KeyCode
+                Case Keys.D1
+                    InsertInCurrentTextBox(ShortcutButton1.CharButton, False)
+                Case Keys.D2
+                    InsertInCurrentTextBox(ShortcutButton2.CharButton, False)
+                Case Keys.D3
+                    InsertInCurrentTextBox(ShortcutButton3.CharButton, False)
+                Case Keys.D4
+                    InsertInCurrentTextBox(ShortcutButton4.CharButton, False)
+                Case Keys.D5
+                    InsertInCurrentTextBox(ShortcutButton5.CharButton, False)
+                Case Keys.D6
+                    InsertInCurrentTextBox(ShortcutButton6.CharButton, False)
+                Case Keys.D7
+                    InsertInCurrentTextBox(ShortcutButton7.CharButton, False)
+                Case Keys.D8
+                    InsertInCurrentTextBox(ShortcutButton8.CharButton, False)
+                Case Keys.D9
+                    InsertInCurrentTextBox(ShortcutButton9.CharButton, False)
+                Case Keys.D0
+                    InsertInCurrentTextBox(ShortcutButton0.CharButton, False)
+            End Select
+        End If
+    End Sub
+
     Public Sub BracketButtonClick(sender As Object, e As EventArgs)
         Dim BracketButton As Button = CType(sender, Button)
         Dim CurrentTextBox = GetCurrentTexbox()
