@@ -44,7 +44,6 @@ Module AppTheme
 
             ' Set the theme combo to be the current theme
             MainForm.ThemeCombo.SelectedItem = Themer.CurrentTheme.Name
-
         End If
     End Sub
 

@@ -32,7 +32,7 @@ Public Class CharacterEditor
         Dim ShortcutButtons = {ShortcutButton1, ShortcutButton2, ShortcutButton3, ShortcutButton4, ShortcutButton5,
             ShortcutButton6, ShortcutButton7, ShortcutButton8, ShortcutButton9, ShortcutButton0}
         For Each ShortcutButton As ShortcutButton In ShortcutButtons
-            AddHandler ShortcutButton.MouseClick, AddressOf CharacterButtonClick
+            AddHandler ShortcutButton.CharButton.Click, AddressOf CharacterButtonClick
             ShortcutButton.ContextMenuStrip = ShortcutButtonMenu
         Next
 
@@ -148,9 +148,9 @@ Public Class CharacterEditor
         }
 
         If CharType = CharacterType.Bracket Then
-            AddHandler CharButton.MouseClick, AddressOf BracketButtonClick
+            AddHandler CharButton.Click, AddressOf BracketButtonClick
         Else
-            AddHandler CharButton.MouseClick, AddressOf CharacterButtonClick
+            AddHandler CharButton.Click, AddressOf CharacterButtonClick
             CharButton.ContextMenuStrip = CharButtonMenu
         End If
 
@@ -183,16 +183,23 @@ Public Class CharacterEditor
         ElseIf My.Computer.Keyboard.CtrlKeyDown Then
             AddToLocal(CharButton.Text)
         Else
-            Dim CurrentTextBox = GetCurrentTexbox()
-            Dim ButtonText = CharButton.Text.Replace("◌", "")
+            InsertInCurrentTextBox(CharButton)
+        End If
+    End Sub
 
-            If CurrentTextBox IsNot Nothing Then
-                If My.Computer.Keyboard.ShiftKeyDown Then
-                    ButtonText = ButtonText.ToUpper()
-                End If
+    Public Sub InsertInCurrentTextBox(SourceButton As Button, Optional GrabFocus As Boolean = True)
+        Dim CurrentTextBox = GetCurrentTexbox()
+        Dim ButtonText = SourceButton.Text.Replace("◌", "")
 
-                InsertText(CurrentTextBox, ButtonText)
-                Show()
+        If CurrentTextBox IsNot Nothing Then
+            If My.Computer.Keyboard.ShiftKeyDown Then
+                ButtonText = ButtonText.ToUpper()
+            End If
+
+            InsertText(CurrentTextBox, ButtonText)
+
+            If GrabFocus Then
+                CharEditWindow.Focus()
             End If
         End If
     End Sub
@@ -200,6 +207,7 @@ Public Class CharacterEditor
     Public Sub BracketButtonClick(sender As Object, e As EventArgs)
         Dim BracketButton As Button = CType(sender, Button)
         Dim CurrentTextBox = GetCurrentTexbox()
+        CharEditWindow.Focus()
         Dim InsertButton = BracketButton.Text.Contains("◌")
 
         If InsertButton Then

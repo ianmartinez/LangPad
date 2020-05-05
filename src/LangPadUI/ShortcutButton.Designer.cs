@@ -28,41 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.shortcutKeyLabel = new System.Windows.Forms.Label();
-            this.charButton = new LangPadUI.CharacterButton();
+            this.ShortcutKeyLabel = new System.Windows.Forms.Label();
+            this.CharButton = new LangPadUI.CharacterButton();
             this.separatorMain = new LangPadUI.DoubleBufferedPanel();
             this.SuspendLayout();
             // 
-            // shortcutKeyLabel
+            // ShortcutKeyLabel
             // 
-            this.shortcutKeyLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.shortcutKeyLabel.Location = new System.Drawing.Point(4, 83);
-            this.shortcutKeyLabel.Margin = new System.Windows.Forms.Padding(4);
-            this.shortcutKeyLabel.Name = "shortcutKeyLabel";
-            this.shortcutKeyLabel.Size = new System.Drawing.Size(82, 23);
-            this.shortcutKeyLabel.TabIndex = 1;
-            this.shortcutKeyLabel.Text = "CTRL+0";
-            this.shortcutKeyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ShortcutKeyLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ShortcutKeyLabel.Location = new System.Drawing.Point(4, 83);
+            this.ShortcutKeyLabel.Margin = new System.Windows.Forms.Padding(4);
+            this.ShortcutKeyLabel.Name = "ShortcutKeyLabel";
+            this.ShortcutKeyLabel.Size = new System.Drawing.Size(82, 23);
+            this.ShortcutKeyLabel.TabIndex = 1;
+            this.ShortcutKeyLabel.Text = "CTRL+0";
+            this.ShortcutKeyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // charButton
+            // CharButton
             // 
-            this.charButton.AutoSize = true;
-            this.charButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.charButton.BackColor = System.Drawing.Color.Transparent;
-            this.charButton.CharName = "";
-            this.charButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.charButton.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.charButton.ForeColor = System.Drawing.Color.Black;
-            this.charButton.Location = new System.Drawing.Point(4, 4);
-            this.charButton.Margin = new System.Windows.Forms.Padding(4);
-            this.charButton.MinimumSize = new System.Drawing.Size(45, 45);
-            this.charButton.Multiline = true;
-            this.charButton.Name = "charButton";
-            this.charButton.Size = new System.Drawing.Size(82, 74);
-            this.charButton.TabIndex = 0;
-            this.charButton.Text = "a";
-            this.charButton.UseCompatibleTextRendering = true;
-            this.charButton.UseVisualStyleBackColor = false;
+            this.CharButton.AutoSize = true;
+            this.CharButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CharButton.BackColor = System.Drawing.Color.Transparent;
+            this.CharButton.CharName = "";
+            this.CharButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CharButton.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
+            this.CharButton.ForeColor = System.Drawing.Color.Black;
+            this.CharButton.Location = new System.Drawing.Point(4, 4);
+            this.CharButton.Margin = new System.Windows.Forms.Padding(4);
+            this.CharButton.MinimumSize = new System.Drawing.Size(45, 45);
+            this.CharButton.Multiline = true;
+            this.CharButton.Name = "CharButton";
+            this.CharButton.Size = new System.Drawing.Size(82, 74);
+            this.CharButton.TabIndex = 0;
+            this.CharButton.Text = "a";
+            this.CharButton.UseCompatibleTextRendering = true;
+            this.CharButton.UseVisualStyleBackColor = false;
             // 
             // separatorMain
             // 
@@ -77,9 +77,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.charButton);
+            this.Controls.Add(this.CharButton);
             this.Controls.Add(this.separatorMain);
-            this.Controls.Add(this.shortcutKeyLabel);
+            this.Controls.Add(this.ShortcutKeyLabel);
             this.Name = "ShortcutButton";
             this.Padding = new System.Windows.Forms.Padding(4);
             this.Size = new System.Drawing.Size(90, 110);
@@ -89,9 +89,8 @@
         }
 
         #endregion
-
-        private CharacterButton charButton;
-        private System.Windows.Forms.Label shortcutKeyLabel;
+        private System.Windows.Forms.Label ShortcutKeyLabel;
         private DoubleBufferedPanel separatorMain;
+        public CharacterButton CharButton;
     }
 }

@@ -15,7 +15,6 @@
 
         Set(value As Func(Of TextBoxBase))
             _GetCurrentTexbox = Function()
-                                    CharEditWindow.Focus()
                                     Return value()
                                 End Function
 

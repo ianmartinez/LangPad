@@ -1074,4 +1074,22 @@ Public Class MainForm
     Private Sub PatreonToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PatreonToolStripMenuItem.Click
         GoToPatreon()
     End Sub
+
+    Private Sub MainForm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        Dim CharEdit = CharEditWindow.CharEdit
+        If e.Modifiers = Keys.Control Then
+            Select Case e.KeyCode
+                Case Keys.D1
+                Case Keys.D2
+                    CharEdit.InsertInCurrentTextBox(CharEdit.ShortcutButton2.CharButton, False)
+                Case Keys.D3
+                Case Keys.D4
+                Case Keys.D5
+                Case Keys.D6
+                Case Keys.D7
+                Case Keys.D8
+                Case Keys.D9
+            End Select
+        End If
+    End Sub
 End Class

@@ -9,18 +9,18 @@ namespace LangPadUI
             InitializeComponent();
         }
 
-        public bool HasChar => !string.IsNullOrEmpty(charButton.Text);
+        public bool HasChar => !string.IsNullOrEmpty(CharButton.Text);
 
         public string ShortcutText
         {
             get
             {
-                return shortcutKeyLabel.Text;
+                return ShortcutKeyLabel.Text;
             }
 
             set
             {
-                shortcutKeyLabel.Text = value;
+                ShortcutKeyLabel.Text = value;
             }
         }
 
@@ -28,12 +28,12 @@ namespace LangPadUI
         {
             get
             {
-                return charButton.Text;
+                return CharButton.Text;
             }
 
             set
             {
-                charButton.Text = value;
+                CharButton.Text = value;
             }
         }
 
