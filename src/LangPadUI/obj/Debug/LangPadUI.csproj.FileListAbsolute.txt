@@ -15,4 +15,4 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.csproj
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.dll
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.pdb
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\bin\Debug\LangPadUI.pdb
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.csprojAssemblyReference.cache
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.ShortcutButton.resources

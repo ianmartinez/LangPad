@@ -13,8 +13,8 @@ namespace LangPadUI
         /// </summary>
         /// 
         /// <param name="charName">The name of the character.</param>
-        /// <param name="multiLine">If the description is on multiple lines.</param>
-        public AccentCheckButton(string charName = "", bool multiLine = true)
+        /// <param name="multiline">If the description is on multiple lines.</param>
+        public AccentCheckButton(string charName = "", bool multiline = true)
         {
             Padding = new Padding(0);
             Font = new Font("Calibri", 14, FontStyle.Regular);
@@ -24,7 +24,7 @@ namespace LangPadUI
             Appearance = Appearance.Button;
             TextAlign = ContentAlignment.MiddleCenter;
             UseCompatibleTextRendering = true;
-            CharButtonTooltip.CharName = multiLine ? charName.Replace("/", "\n") : charName;
+            CharButtonTooltip.CharName = multiline ? charName.Replace("/", "\n") : charName;
             TextChanged += AccentCheckButton_TextChanged;
         }
 
