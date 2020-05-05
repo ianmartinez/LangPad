@@ -293,7 +293,7 @@ Public Class MainForm
     End Sub
 
     Private Sub FindNextButton_Click(sender As Object, e As EventArgs) Handles FindNextButton.Click
-        Dim SelectionEnd = CurrentRtb.SelectionStart + CurrentRtb.SelectionLength - 1
+        Dim SelectionEnd = CurrentRtb.SelectionStart + Math.Max(0, CurrentRtb.SelectionLength - 1)
         Dim StartPosition As Integer = CurrentRtb.Text.IndexOf(FindTextBox.Text, SelectionEnd)
         If StartPosition = -1 Then
             ShowNotFoundDialog(FindTextBox.Text)
