@@ -27,6 +27,26 @@ Public Class CharacterEditor
         InsertCharacterButton("X", BracketsPanel, "Remove Brackets", False, False, CharacterType.Bracket, Color.Red)
         InsertCharacterButton("/◌/", BracketsPanel, "Broad Transcription", False, False, CharacterType.Bracket)
         InsertCharacterButton("[◌]", BracketsPanel, "Narrow Transcription", False, False, CharacterType.Bracket)
+
+        ' Attach event handlers to shortcut buttons
+        Dim ShortcutButtons = {ShortcutButton1, ShortcutButton2, ShortcutButton3, ShortcutButton4, ShortcutButton5,
+            ShortcutButton6, ShortcutButton7, ShortcutButton8, ShortcutButton9, ShortcutButton0}
+        For Each ShortcutButton As ShortcutButton In ShortcutButtons
+            AddHandler ShortcutButton.MouseClick, AddressOf CharacterButtonClick
+            ShortcutButton.ContextMenuStrip = ShortcutButtonMenu
+        Next
+
+        ' Load each shortcut button config from settings
+        ShortcutButton1.CharValue = My.Settings.Ctrl1
+        ShortcutButton2.CharValue = My.Settings.Ctrl2
+        ShortcutButton3.CharValue = My.Settings.Ctrl3
+        ShortcutButton4.CharValue = My.Settings.Ctrl4
+        ShortcutButton5.CharValue = My.Settings.Ctrl5
+        ShortcutButton6.CharValue = My.Settings.Ctrl6
+        ShortcutButton7.CharValue = My.Settings.Ctrl7
+        ShortcutButton8.CharValue = My.Settings.Ctrl8
+        ShortcutButton9.CharValue = My.Settings.Ctrl9
+        ShortcutButton0.CharValue = My.Settings.Ctrl0
     End Sub
 
     Public Sub SetIcons()
@@ -214,9 +234,14 @@ Public Class CharacterEditor
         Return CType(sender, Button).Text
     End Function
 
-    Private Function GetButtonTextFromMenu(sender As Object) As String
+    Private Function GetButtonTextFromMenu(sender As Object, Optional subMenu As Boolean = False) As String
         Dim CurrentItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
-        Dim CurrentContextMenu As ContextMenuStrip = CType(CurrentItem.Owner, ContextMenuStrip)
+        Dim CurrentContextMenu As ContextMenuStrip
+        If subMenu Then
+            CurrentContextMenu = CType(CurrentItem.OwnerItem.Owner, ContextMenuStrip)
+        Else
+            CurrentContextMenu = CType(CurrentItem.Owner, ContextMenuStrip)
+        End If
         Return GetButtonText(CurrentContextMenu.SourceControl).Replace("◌", "")
     End Function
 
@@ -312,11 +337,11 @@ Public Class CharacterEditor
         Dim CurrentMenu As ContextMenuStrip = CType(sender, ContextMenuStrip)
         Dim CurrentButton = CType(CurrentMenu.SourceControl, CharacterButton)
 
-        RemoveCharSplitter.Visible = False
+        RemoveCharSeparator.Visible = False
         RemoveToolStripMenuItem.Visible = False
 
         If CurrentButton.Parent Is FilePanel Or CurrentButton.Parent Is LocalPanel Then
-            RemoveCharSplitter.Visible = True
+            RemoveCharSeparator.Visible = True
             RemoveToolStripMenuItem.Visible = True
         End If
     End Sub
@@ -436,5 +461,75 @@ Public Class CharacterEditor
         AccentsPanel.AutoScroll = False
         Refresh()
         AccentsPanel.AutoScroll = True
+    End Sub
+
+    Private Sub CTRL1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL1ToolStripMenuItem.Click
+        Dim CharValue = GetButtonTextFromMenu(sender, True)
+        ShortcutButton1.CharValue = CharValue
+        My.Settings.Ctrl1 = CharValue
+    End Sub
+
+    Private Sub CTRL2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL2ToolStripMenuItem.Click
+        Dim CharValue = GetButtonTextFromMenu(sender, True)
+        ShortcutButton2.CharValue = CharValue
+        My.Settings.Ctrl2 = CharValue
+    End Sub
+
+    Private Sub CTRL3ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL3ToolStripMenuItem.Click
+        Dim CharValue = GetButtonTextFromMenu(sender, True)
+        ShortcutButton3.CharValue = CharValue
+        My.Settings.Ctrl3 = CharValue
+    End Sub
+
+    Private Sub CTRL4ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL4ToolStripMenuItem.Click
+        Dim CharValue = GetButtonTextFromMenu(sender, True)
+        ShortcutButton4.CharValue = CharValue
+        My.Settings.Ctrl4 = CharValue
+    End Sub
+
+    Private Sub CTRL5ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL5ToolStripMenuItem.Click
+        Dim CharValue = GetButtonTextFromMenu(sender, True)
+        ShortcutButton5.CharValue = CharValue
+        My.Settings.Ctrl5 = CharValue
+    End Sub
+
+    Private Sub CTRL6ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL6ToolStripMenuItem.Click
+        Dim CharValue = GetButtonTextFromMenu(sender, True)
+        ShortcutButton6.CharValue = CharValue
+        My.Settings.Ctrl6 = CharValue
+    End Sub
+
+    Private Sub CTRL7ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL7ToolStripMenuItem.Click
+        Dim CharValue = GetButtonTextFromMenu(sender, True)
+        ShortcutButton7.CharValue = CharValue
+        My.Settings.Ctrl7 = CharValue
+    End Sub
+
+    Private Sub CTRL8ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL8ToolStripMenuItem.Click
+        Dim CharValue = GetButtonTextFromMenu(sender, True)
+        ShortcutButton8.CharValue = CharValue
+        My.Settings.Ctrl8 = CharValue
+    End Sub
+
+    Private Sub CTRL9ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL9ToolStripMenuItem.Click
+        Dim CharValue = GetButtonTextFromMenu(sender, True)
+        ShortcutButton9.CharValue = CharValue
+        My.Settings.Ctrl9 = CharValue
+    End Sub
+
+    Private Sub CTRL0ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL0ToolStripMenuItem.Click
+        Dim CharValue = GetButtonTextFromMenu(sender, True)
+        ShortcutButton0.CharValue = CharValue
+        My.Settings.Ctrl0 = CharValue
+    End Sub
+
+    Private Sub ResetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem.Click
+        Dim CurrentItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
+        Dim CurrentContextMenu As ContextMenuStrip = CType(CurrentItem.Owner, ContextMenuStrip)
+        Dim CurrentButton As ShortcutButton = CType(CurrentContextMenu.SourceControl, ShortcutButton)
+        If Not String.IsNullOrEmpty(CurrentButton.SettingsValue) Then
+            My.Settings.Item(CurrentButton.SettingsValue) = ""
+        End If
+        CurrentButton.CharValue = ""
     End Sub
 End Class

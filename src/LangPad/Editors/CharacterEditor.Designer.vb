@@ -65,6 +65,8 @@ Partial Class CharacterEditor
         Me.SuprasegmentalsPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.BracketsTab = New System.Windows.Forms.TabPage()
         Me.BracketsPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.ShortcutsTab = New System.Windows.Forms.TabPage()
+        Me.ShortcutsPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.SearchTab = New System.Windows.Forms.TabPage()
         Me.SearchToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.SearchCharPanel = New System.Windows.Forms.FlowLayoutPanel()
@@ -87,22 +89,45 @@ Partial Class CharacterEditor
         Me.CharacterTextBox = New System.Windows.Forms.TextBox()
         Me.SmartReplaceCheck = New System.Windows.Forms.CheckBox()
         Me.AddToFileButton = New System.Windows.Forms.Button()
-        Me.SmartReplaceIndicator = New LangPadUI.DoubleBufferedPanel()
         Me.CopyToClipboardButton = New System.Windows.Forms.Button()
         Me.CharButtonMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.AddToEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReplaceEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CopyCharSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.CopyToClipboardMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToFileMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToLocalMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RemoveCharSplitter = New System.Windows.Forms.ToolStripSeparator()
+        Me.ShortcutKeySeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.ShortcutKeyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CTRL1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CTRL2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CTRL3ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CTRL4ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CTRL5ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CTRL6ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CTRL7ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CTRL8ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CTRL9ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CTRL0ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RemoveCharSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.RemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainTooltip = New System.Windows.Forms.ToolTip(Me.components)
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SaveDialog = New System.Windows.Forms.SaveFileDialog()
         Me.OpenDialog = New System.Windows.Forms.OpenFileDialog()
-        Me.ShortcutsTab = New System.Windows.Forms.TabPage()
+        Me.ShortcutButtonMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ResetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SmartReplaceIndicator = New LangPadUI.DoubleBufferedPanel()
+        Me.ShortcutButton1 = New LangPadUI.ShortcutButton()
+        Me.ShortcutButton2 = New LangPadUI.ShortcutButton()
+        Me.ShortcutButton3 = New LangPadUI.ShortcutButton()
+        Me.ShortcutButton4 = New LangPadUI.ShortcutButton()
+        Me.ShortcutButton5 = New LangPadUI.ShortcutButton()
+        Me.ShortcutButton6 = New LangPadUI.ShortcutButton()
+        Me.ShortcutButton7 = New LangPadUI.ShortcutButton()
+        Me.ShortcutButton8 = New LangPadUI.ShortcutButton()
+        Me.ShortcutButton9 = New LangPadUI.ShortcutButton()
+        Me.ShortcutButton0 = New LangPadUI.ShortcutButton()
         Me.CharCategoriesTabs.SuspendLayout()
         Me.LocalTab.SuspendLayout()
         Me.LocalToolStripContainer.ContentPanel.SuspendLayout()
@@ -128,6 +153,8 @@ Partial Class CharacterEditor
         Me.DiacriticsTab.SuspendLayout()
         Me.SuprasegmentalsTab.SuspendLayout()
         Me.BracketsTab.SuspendLayout()
+        Me.ShortcutsTab.SuspendLayout()
+        Me.ShortcutsPanel.SuspendLayout()
         Me.SearchTab.SuspendLayout()
         Me.SearchToolStripContainer.ContentPanel.SuspendLayout()
         Me.SearchToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -142,6 +169,7 @@ Partial Class CharacterEditor
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.ShortcutButtonMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'CharCategoriesTabs
@@ -617,6 +645,40 @@ Partial Class CharacterEditor
         Me.BracketsPanel.Size = New System.Drawing.Size(528, 243)
         Me.BracketsPanel.TabIndex = 8
         '
+        'ShortcutsTab
+        '
+        Me.ShortcutsTab.Controls.Add(Me.ShortcutsPanel)
+        Me.ShortcutsTab.Location = New System.Drawing.Point(4, 29)
+        Me.ShortcutsTab.Name = "ShortcutsTab"
+        Me.ShortcutsTab.Padding = New System.Windows.Forms.Padding(3)
+        Me.ShortcutsTab.Size = New System.Drawing.Size(534, 249)
+        Me.ShortcutsTab.TabIndex = 6
+        Me.ShortcutsTab.Text = "Shortcuts"
+        Me.ShortcutsTab.UseVisualStyleBackColor = True
+        '
+        'ShortcutsPanel
+        '
+        Me.ShortcutsPanel.AutoScroll = True
+        Me.ShortcutsPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
+        Me.ShortcutsPanel.AutoSize = True
+        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton1)
+        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton2)
+        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton3)
+        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton4)
+        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton5)
+        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton6)
+        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton7)
+        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton8)
+        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton9)
+        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton0)
+        Me.ShortcutsPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ShortcutsPanel.Location = New System.Drawing.Point(3, 3)
+        Me.ShortcutsPanel.Margin = New System.Windows.Forms.Padding(6)
+        Me.ShortcutsPanel.Name = "ShortcutsPanel"
+        Me.ShortcutsPanel.Padding = New System.Windows.Forms.Padding(6, 6, 0, 6)
+        Me.ShortcutsPanel.Size = New System.Drawing.Size(528, 243)
+        Me.ShortcutsPanel.TabIndex = 9
+        '
         'SearchTab
         '
         Me.SearchTab.Controls.Add(Me.SearchToolStripContainer)
@@ -893,15 +955,6 @@ Partial Class CharacterEditor
         Me.AddToFileButton.Text = "File"
         Me.AddToFileButton.UseVisualStyleBackColor = False
         '
-        'SmartReplaceIndicator
-        '
-        Me.SmartReplaceIndicator.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.SmartReplaceIndicator.BackColor = System.Drawing.Color.DimGray
-        Me.SmartReplaceIndicator.Location = New System.Drawing.Point(184, 6)
-        Me.SmartReplaceIndicator.Name = "SmartReplaceIndicator"
-        Me.SmartReplaceIndicator.Size = New System.Drawing.Size(21, 23)
-        Me.SmartReplaceIndicator.TabIndex = 87
-        '
         'CopyToClipboardButton
         '
         Me.CopyToClipboardButton.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -918,9 +971,9 @@ Partial Class CharacterEditor
         'CharButtonMenu
         '
         Me.CharButtonMenu.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.CharButtonMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToEditorCharacterMenuItem, Me.ReplaceEditorCharacterMenuItem, Me.ToolStripSeparator1, Me.CopyToClipboardMenuItem, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem, Me.RemoveCharSplitter, Me.RemoveToolStripMenuItem})
+        Me.CharButtonMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToEditorCharacterMenuItem, Me.ReplaceEditorCharacterMenuItem, Me.CopyCharSeparator, Me.CopyToClipboardMenuItem, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem, Me.ShortcutKeySeparator, Me.ShortcutKeyToolStripMenuItem, Me.RemoveCharSeparator, Me.RemoveToolStripMenuItem})
         Me.CharButtonMenu.Name = "CharButtonMenu"
-        Me.CharButtonMenu.Size = New System.Drawing.Size(276, 208)
+        Me.CharButtonMenu.Size = New System.Drawing.Size(276, 246)
         '
         'AddToEditorCharacterMenuItem
         '
@@ -934,10 +987,10 @@ Partial Class CharacterEditor
         Me.ReplaceEditorCharacterMenuItem.Size = New System.Drawing.Size(275, 32)
         Me.ReplaceEditorCharacterMenuItem.Text = "Replace Editor Character"
         '
-        'ToolStripSeparator1
+        'CopyCharSeparator
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(272, 6)
+        Me.CopyCharSeparator.Name = "CopyCharSeparator"
+        Me.CopyCharSeparator.Size = New System.Drawing.Size(272, 6)
         '
         'CopyToClipboardMenuItem
         '
@@ -958,10 +1011,82 @@ Partial Class CharacterEditor
         Me.CopyToLocalMenuItem.Size = New System.Drawing.Size(275, 32)
         Me.CopyToLocalMenuItem.Text = "Copy to Local"
         '
-        'RemoveCharSplitter
+        'ShortcutKeySeparator
         '
-        Me.RemoveCharSplitter.Name = "RemoveCharSplitter"
-        Me.RemoveCharSplitter.Size = New System.Drawing.Size(272, 6)
+        Me.ShortcutKeySeparator.Name = "ShortcutKeySeparator"
+        Me.ShortcutKeySeparator.Size = New System.Drawing.Size(272, 6)
+        '
+        'ShortcutKeyToolStripMenuItem
+        '
+        Me.ShortcutKeyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CTRL1ToolStripMenuItem, Me.CTRL2ToolStripMenuItem, Me.CTRL3ToolStripMenuItem, Me.CTRL4ToolStripMenuItem, Me.CTRL5ToolStripMenuItem, Me.CTRL6ToolStripMenuItem, Me.CTRL7ToolStripMenuItem, Me.CTRL8ToolStripMenuItem, Me.CTRL9ToolStripMenuItem, Me.CTRL0ToolStripMenuItem})
+        Me.ShortcutKeyToolStripMenuItem.Name = "ShortcutKeyToolStripMenuItem"
+        Me.ShortcutKeyToolStripMenuItem.Size = New System.Drawing.Size(275, 32)
+        Me.ShortcutKeyToolStripMenuItem.Text = "Shortcut Key"
+        '
+        'CTRL1ToolStripMenuItem
+        '
+        Me.CTRL1ToolStripMenuItem.Name = "CTRL1ToolStripMenuItem"
+        Me.CTRL1ToolStripMenuItem.Size = New System.Drawing.Size(175, 34)
+        Me.CTRL1ToolStripMenuItem.Text = "CTRL+1"
+        '
+        'CTRL2ToolStripMenuItem
+        '
+        Me.CTRL2ToolStripMenuItem.Name = "CTRL2ToolStripMenuItem"
+        Me.CTRL2ToolStripMenuItem.Size = New System.Drawing.Size(175, 34)
+        Me.CTRL2ToolStripMenuItem.Text = "CTRL+2"
+        '
+        'CTRL3ToolStripMenuItem
+        '
+        Me.CTRL3ToolStripMenuItem.Name = "CTRL3ToolStripMenuItem"
+        Me.CTRL3ToolStripMenuItem.Size = New System.Drawing.Size(175, 34)
+        Me.CTRL3ToolStripMenuItem.Text = "CTRL+3"
+        '
+        'CTRL4ToolStripMenuItem
+        '
+        Me.CTRL4ToolStripMenuItem.Name = "CTRL4ToolStripMenuItem"
+        Me.CTRL4ToolStripMenuItem.Size = New System.Drawing.Size(175, 34)
+        Me.CTRL4ToolStripMenuItem.Text = "CTRL+4"
+        '
+        'CTRL5ToolStripMenuItem
+        '
+        Me.CTRL5ToolStripMenuItem.Name = "CTRL5ToolStripMenuItem"
+        Me.CTRL5ToolStripMenuItem.Size = New System.Drawing.Size(175, 34)
+        Me.CTRL5ToolStripMenuItem.Text = "CTRL+5"
+        '
+        'CTRL6ToolStripMenuItem
+        '
+        Me.CTRL6ToolStripMenuItem.Name = "CTRL6ToolStripMenuItem"
+        Me.CTRL6ToolStripMenuItem.Size = New System.Drawing.Size(175, 34)
+        Me.CTRL6ToolStripMenuItem.Text = "CTRL+6"
+        '
+        'CTRL7ToolStripMenuItem
+        '
+        Me.CTRL7ToolStripMenuItem.Name = "CTRL7ToolStripMenuItem"
+        Me.CTRL7ToolStripMenuItem.Size = New System.Drawing.Size(175, 34)
+        Me.CTRL7ToolStripMenuItem.Text = "CTRL+7"
+        '
+        'CTRL8ToolStripMenuItem
+        '
+        Me.CTRL8ToolStripMenuItem.Name = "CTRL8ToolStripMenuItem"
+        Me.CTRL8ToolStripMenuItem.Size = New System.Drawing.Size(175, 34)
+        Me.CTRL8ToolStripMenuItem.Text = "CTRL+8"
+        '
+        'CTRL9ToolStripMenuItem
+        '
+        Me.CTRL9ToolStripMenuItem.Name = "CTRL9ToolStripMenuItem"
+        Me.CTRL9ToolStripMenuItem.Size = New System.Drawing.Size(175, 34)
+        Me.CTRL9ToolStripMenuItem.Text = "CTRL+9"
+        '
+        'CTRL0ToolStripMenuItem
+        '
+        Me.CTRL0ToolStripMenuItem.Name = "CTRL0ToolStripMenuItem"
+        Me.CTRL0ToolStripMenuItem.Size = New System.Drawing.Size(175, 34)
+        Me.CTRL0ToolStripMenuItem.Text = "CTRL+0"
+        '
+        'RemoveCharSeparator
+        '
+        Me.RemoveCharSeparator.Name = "RemoveCharSeparator"
+        Me.RemoveCharSeparator.Size = New System.Drawing.Size(272, 6)
         '
         'RemoveToolStripMenuItem
         '
@@ -998,15 +1123,147 @@ Partial Class CharacterEditor
         '
         Me.OpenDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
         '
-        'ShortcutsTab
+        'ShortcutButtonMenu
         '
-        Me.ShortcutsTab.Location = New System.Drawing.Point(4, 29)
-        Me.ShortcutsTab.Name = "ShortcutsTab"
-        Me.ShortcutsTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.ShortcutsTab.Size = New System.Drawing.Size(534, 249)
-        Me.ShortcutsTab.TabIndex = 6
-        Me.ShortcutsTab.Text = "Shortcuts"
-        Me.ShortcutsTab.UseVisualStyleBackColor = True
+        Me.ShortcutButtonMenu.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.ShortcutButtonMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResetToolStripMenuItem})
+        Me.ShortcutButtonMenu.Name = "CharButtonMenu"
+        Me.ShortcutButtonMenu.Size = New System.Drawing.Size(127, 36)
+        '
+        'ResetToolStripMenuItem
+        '
+        Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(126, 32)
+        Me.ResetToolStripMenuItem.Text = "Reset"
+        '
+        'SmartReplaceIndicator
+        '
+        Me.SmartReplaceIndicator.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.SmartReplaceIndicator.BackColor = System.Drawing.Color.DimGray
+        Me.SmartReplaceIndicator.Location = New System.Drawing.Point(184, 6)
+        Me.SmartReplaceIndicator.Name = "SmartReplaceIndicator"
+        Me.SmartReplaceIndicator.Size = New System.Drawing.Size(21, 23)
+        Me.SmartReplaceIndicator.TabIndex = 87
+        '
+        'ShortcutButton1
+        '
+        Me.ShortcutButton1.BackColor = System.Drawing.Color.Transparent
+        Me.ShortcutButton1.CharValue = ""
+        Me.ShortcutButton1.Location = New System.Drawing.Point(9, 9)
+        Me.ShortcutButton1.Name = "ShortcutButton1"
+        Me.ShortcutButton1.Padding = New System.Windows.Forms.Padding(4)
+        Me.ShortcutButton1.SettingsValue = "Ctrl1"
+        Me.ShortcutButton1.ShortcutText = "CTRL+1"
+        Me.ShortcutButton1.Size = New System.Drawing.Size(90, 110)
+        Me.ShortcutButton1.TabIndex = 0
+        '
+        'ShortcutButton2
+        '
+        Me.ShortcutButton2.BackColor = System.Drawing.Color.Transparent
+        Me.ShortcutButton2.CharValue = ""
+        Me.ShortcutButton2.Location = New System.Drawing.Point(105, 9)
+        Me.ShortcutButton2.Name = "ShortcutButton2"
+        Me.ShortcutButton2.Padding = New System.Windows.Forms.Padding(4)
+        Me.ShortcutButton2.SettingsValue = "Ctrl2"
+        Me.ShortcutButton2.ShortcutText = "CTRL+2"
+        Me.ShortcutButton2.Size = New System.Drawing.Size(90, 110)
+        Me.ShortcutButton2.TabIndex = 1
+        '
+        'ShortcutButton3
+        '
+        Me.ShortcutButton3.BackColor = System.Drawing.Color.Transparent
+        Me.ShortcutButton3.CharValue = ""
+        Me.ShortcutButton3.Location = New System.Drawing.Point(201, 9)
+        Me.ShortcutButton3.Name = "ShortcutButton3"
+        Me.ShortcutButton3.Padding = New System.Windows.Forms.Padding(4)
+        Me.ShortcutButton3.SettingsValue = "Ctrl3"
+        Me.ShortcutButton3.ShortcutText = "CTRL+3"
+        Me.ShortcutButton3.Size = New System.Drawing.Size(90, 110)
+        Me.ShortcutButton3.TabIndex = 2
+        '
+        'ShortcutButton4
+        '
+        Me.ShortcutButton4.BackColor = System.Drawing.Color.Transparent
+        Me.ShortcutButton4.CharValue = ""
+        Me.ShortcutButton4.Location = New System.Drawing.Point(297, 9)
+        Me.ShortcutButton4.Name = "ShortcutButton4"
+        Me.ShortcutButton4.Padding = New System.Windows.Forms.Padding(4)
+        Me.ShortcutButton4.SettingsValue = "Ctrl4"
+        Me.ShortcutButton4.ShortcutText = "CTRL+4"
+        Me.ShortcutButton4.Size = New System.Drawing.Size(90, 110)
+        Me.ShortcutButton4.TabIndex = 3
+        '
+        'ShortcutButton5
+        '
+        Me.ShortcutButton5.BackColor = System.Drawing.Color.Transparent
+        Me.ShortcutButton5.CharValue = ""
+        Me.ShortcutButton5.Location = New System.Drawing.Point(393, 9)
+        Me.ShortcutButton5.Name = "ShortcutButton5"
+        Me.ShortcutButton5.Padding = New System.Windows.Forms.Padding(4)
+        Me.ShortcutButton5.SettingsValue = "Ctrl5"
+        Me.ShortcutButton5.ShortcutText = "CTRL+5"
+        Me.ShortcutButton5.Size = New System.Drawing.Size(90, 110)
+        Me.ShortcutButton5.TabIndex = 4
+        '
+        'ShortcutButton6
+        '
+        Me.ShortcutButton6.BackColor = System.Drawing.Color.Transparent
+        Me.ShortcutButton6.CharValue = ""
+        Me.ShortcutButton6.Location = New System.Drawing.Point(9, 125)
+        Me.ShortcutButton6.Name = "ShortcutButton6"
+        Me.ShortcutButton6.Padding = New System.Windows.Forms.Padding(4)
+        Me.ShortcutButton6.SettingsValue = "Ctrl6"
+        Me.ShortcutButton6.ShortcutText = "CTRL+6"
+        Me.ShortcutButton6.Size = New System.Drawing.Size(90, 110)
+        Me.ShortcutButton6.TabIndex = 5
+        '
+        'ShortcutButton7
+        '
+        Me.ShortcutButton7.BackColor = System.Drawing.Color.Transparent
+        Me.ShortcutButton7.CharValue = ""
+        Me.ShortcutButton7.Location = New System.Drawing.Point(105, 125)
+        Me.ShortcutButton7.Name = "ShortcutButton7"
+        Me.ShortcutButton7.Padding = New System.Windows.Forms.Padding(4)
+        Me.ShortcutButton7.SettingsValue = "Ctrl7"
+        Me.ShortcutButton7.ShortcutText = "CTRL+7"
+        Me.ShortcutButton7.Size = New System.Drawing.Size(90, 110)
+        Me.ShortcutButton7.TabIndex = 6
+        '
+        'ShortcutButton8
+        '
+        Me.ShortcutButton8.BackColor = System.Drawing.Color.Transparent
+        Me.ShortcutButton8.CharValue = ""
+        Me.ShortcutButton8.Location = New System.Drawing.Point(201, 125)
+        Me.ShortcutButton8.Name = "ShortcutButton8"
+        Me.ShortcutButton8.Padding = New System.Windows.Forms.Padding(4)
+        Me.ShortcutButton8.SettingsValue = "Ctrl8"
+        Me.ShortcutButton8.ShortcutText = "CTRL+8"
+        Me.ShortcutButton8.Size = New System.Drawing.Size(90, 110)
+        Me.ShortcutButton8.TabIndex = 7
+        '
+        'ShortcutButton9
+        '
+        Me.ShortcutButton9.BackColor = System.Drawing.Color.Transparent
+        Me.ShortcutButton9.CharValue = ""
+        Me.ShortcutButton9.Location = New System.Drawing.Point(297, 125)
+        Me.ShortcutButton9.Name = "ShortcutButton9"
+        Me.ShortcutButton9.Padding = New System.Windows.Forms.Padding(4)
+        Me.ShortcutButton9.SettingsValue = "Ctrl9"
+        Me.ShortcutButton9.ShortcutText = "CTRL+9"
+        Me.ShortcutButton9.Size = New System.Drawing.Size(90, 110)
+        Me.ShortcutButton9.TabIndex = 8
+        '
+        'ShortcutButton0
+        '
+        Me.ShortcutButton0.BackColor = System.Drawing.Color.Transparent
+        Me.ShortcutButton0.CharValue = ""
+        Me.ShortcutButton0.Location = New System.Drawing.Point(393, 125)
+        Me.ShortcutButton0.Name = "ShortcutButton0"
+        Me.ShortcutButton0.Padding = New System.Windows.Forms.Padding(4)
+        Me.ShortcutButton0.SettingsValue = "Ctrl0"
+        Me.ShortcutButton0.ShortcutText = "CTRL+0"
+        Me.ShortcutButton0.Size = New System.Drawing.Size(90, 110)
+        Me.ShortcutButton0.TabIndex = 9
         '
         'CharacterEditor
         '
@@ -1052,6 +1309,9 @@ Partial Class CharacterEditor
         Me.SuprasegmentalsTab.ResumeLayout(False)
         Me.BracketsTab.ResumeLayout(False)
         Me.BracketsTab.PerformLayout()
+        Me.ShortcutsTab.ResumeLayout(False)
+        Me.ShortcutsTab.PerformLayout()
+        Me.ShortcutsPanel.ResumeLayout(False)
         Me.SearchTab.ResumeLayout(False)
         Me.SearchToolStripContainer.ContentPanel.ResumeLayout(False)
         Me.SearchToolStripContainer.ContentPanel.PerformLayout()
@@ -1071,6 +1331,7 @@ Partial Class CharacterEditor
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.ShortcutButtonMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1106,7 +1367,7 @@ Partial Class CharacterEditor
     Friend WithEvents CharacterButton As Button
     Friend WithEvents CharButtonMenu As ContextMenuStrip
     Friend WithEvents ReplaceEditorCharacterMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents CopyCharSeparator As ToolStripSeparator
     Friend WithEvents CopyToFileMenuItem As ToolStripMenuItem
     Friend WithEvents CopyToLocalMenuItem As ToolStripMenuItem
     Friend WithEvents CopyToClipboardMenuItem As ToolStripMenuItem
@@ -1128,7 +1389,7 @@ Partial Class CharacterEditor
     Friend WithEvents SuprasegmentalsTab As TabPage
     Friend WithEvents SuprasegmentalsPanel As FlowLayoutPanel
     Friend WithEvents ClearButton As Button
-    Friend WithEvents RemoveCharSplitter As ToolStripSeparator
+    Friend WithEvents RemoveCharSeparator As ToolStripSeparator
     Friend WithEvents RemoveToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FileToolStripContainer As ToolStripContainer
     Friend WithEvents FileToolStrip As ToolStrip
@@ -1154,4 +1415,29 @@ Partial Class CharacterEditor
     Friend WithEvents BracketsTab As TabPage
     Friend WithEvents BracketsPanel As FlowLayoutPanel
     Friend WithEvents ShortcutsTab As TabPage
+    Friend WithEvents ShortcutsPanel As FlowLayoutPanel
+    Friend WithEvents ShortcutButton1 As LangPadUI.ShortcutButton
+    Friend WithEvents ShortcutButton2 As LangPadUI.ShortcutButton
+    Friend WithEvents ShortcutButton3 As LangPadUI.ShortcutButton
+    Friend WithEvents ShortcutButton4 As LangPadUI.ShortcutButton
+    Friend WithEvents ShortcutButton5 As LangPadUI.ShortcutButton
+    Friend WithEvents ShortcutButton6 As LangPadUI.ShortcutButton
+    Friend WithEvents ShortcutButton7 As LangPadUI.ShortcutButton
+    Friend WithEvents ShortcutButton8 As LangPadUI.ShortcutButton
+    Friend WithEvents ShortcutButton9 As LangPadUI.ShortcutButton
+    Friend WithEvents ShortcutButton0 As LangPadUI.ShortcutButton
+    Friend WithEvents ShortcutKeySeparator As ToolStripSeparator
+    Friend WithEvents ShortcutKeyToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CTRL1ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CTRL2ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CTRL3ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CTRL4ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CTRL5ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CTRL6ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CTRL7ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CTRL8ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CTRL9ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CTRL0ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ShortcutButtonMenu As ContextMenuStrip
+    Friend WithEvents ResetToolStripMenuItem As ToolStripMenuItem
 End Class

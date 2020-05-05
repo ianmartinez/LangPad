@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace LangPadUI
 {
@@ -16,5 +8,35 @@ namespace LangPadUI
         {
             InitializeComponent();
         }
+
+        public bool HasChar => !string.IsNullOrEmpty(charButton.Text);
+
+        public string ShortcutText
+        {
+            get
+            {
+                return shortcutKeyLabel.Text;
+            }
+
+            set
+            {
+                shortcutKeyLabel.Text = value;
+            }
+        }
+
+        public string CharValue
+        {
+            get
+            {
+                return charButton.Text;
+            }
+
+            set
+            {
+                charButton.Text = value;
+            }
+        }
+
+        public string SettingsValue { get; set; } = "";
     }
 }

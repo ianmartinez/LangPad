@@ -98,7 +98,8 @@ Module AppTheme
         Themer.AddToolStrip(CharEditWindow.CharEdit.FileToolStrip,
                             CharEditWindow.CharEdit.LocalToolStrip,
                             CharEditWindow.CharEdit.SearchToolStrip)
-        Themer.AddContextMenu(CharEditWindow.CharEdit.CharButtonMenu)
+        Themer.AddContextMenu(CharEditWindow.CharEdit.CharButtonMenu,
+                              CharEditWindow.CharEdit.ShortcutButtonMenu)
         Themer.AddTab(CharEditWindow.CharEdit.LocalTab,
                       CharEditWindow.CharEdit.FileTab,
                       CharEditWindow.CharEdit.ExtendedTab,
