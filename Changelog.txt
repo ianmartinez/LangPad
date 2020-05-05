@@ -49,6 +49,7 @@ Version 11.0 (June 30)
    • Bug Fix: Old Language Pad 4.x-5.x files could not be opened
    • Bug Fix: Fix bad performance when changing font styles on a page that has large images 
    • Bug Fix: Word count wouldn't update automatically when opening a new file
+   • Bug Fix: Word count didn't include words separated by tab or newline
    • Bug Fix: Pages with the same name couldn't be imported without changing the name
    • Bug Fix: Undo/redo would sometimes leave text selected incorrectly
    • Bug Fix: Replace all couldn't be undone

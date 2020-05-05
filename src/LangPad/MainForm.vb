@@ -67,12 +67,6 @@ Public Class MainForm
         ' Get key previews on this form
         KeyPreview = True
 
-        ' Add indent options
-        For i As Integer = 0 To 100
-            IndentToolStripComboBox.Items.Add(i)
-        Next
-        IndentToolStripComboBox.SelectedItem = 1
-
         ' Reset toolstrip location
         MainToolStrip.Location = New Point(0, 0)
 
@@ -147,7 +141,8 @@ Public Class MainForm
         AlignCenterToolStripButton.Image = IconManager.Get("format-justify-center", IconSize.Large, Res)
         AlignRightToolStripButton.Image = IconManager.Get("format-justify-right", IconSize.Large, Res)
 
-        IndentToolStripButton.Image = IconManager.Get("format-indent-more", IconSize.Large, Res)
+        DecreaseIndentToolStripButton.Image = IconManager.Get("format-indent-less", IconSize.Large, Res)
+        IncreaseIndentToolStripButton.Image = IconManager.Get("format-indent-more", IconSize.Large, Res)
 
         ' File Menu
         NewToolStripMenuItem.Image = IconManager.Get("document-new", IconSize.Small, Res)
@@ -823,8 +818,12 @@ Public Class MainForm
         AlignRightToolStripButton_Click(Me, e)
     End Sub
 
-    Private Sub IndentToolStripButton_Click(sender As Object, e As EventArgs) Handles IndentToolStripButton.Click
-        CurrentRtb.SelectionIndent = IndentToolStripComboBox.SelectedItem
+    Private Sub DecreaseIndentToolStripButton_Click(sender As Object, e As EventArgs) Handles DecreaseIndentToolStripButton.Click
+        DecreaseIndentToolStripMenuItem_Click(Me, e)
+    End Sub
+
+    Private Sub IncreaseIndentToolStripButton_Click(sender As Object, e As EventArgs) Handles IncreaseIndentToolStripButton.Click
+        IncreaseIndentToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub BoldToolStripButton_Click(sender As Object, e As EventArgs) Handles BoldToolStripButton.Click
@@ -1021,23 +1020,6 @@ Public Class MainForm
     Private Sub DecreaseIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DecreaseIndentToolStripMenuItem.Click
         Dim NewIndent = CurrentRtb.SelectionIndent - 30
         CurrentRtb.SelectionIndent = NewIndent
-    End Sub
-
-    Private Sub SelectedDocument_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CurrentRtb.KeyPress
-        ' Suppress tab character insertion
-        If e.KeyChar = Chr(9) Then ' Tab
-            e.Handled = True
-        End If
-    End Sub
-
-    Private Sub SelectedDocument_KeyUp(sender As Object, e As KeyEventArgs) Handles CurrentRtb.KeyUp
-        If Not e.Control Then ' CTRL + TAB/ CTRL + SHIFT + TAB handle bullet indent
-            If e.KeyCode = Keys.Tab AndAlso Not e.Modifiers = Keys.Shift Then
-                IncreaseIndentToolStripMenuItem_Click(Me, e)
-            ElseIf e.Modifiers = Keys.Shift AndAlso e.KeyCode = Keys.Tab Then
-                DecreaseIndentToolStripMenuItem_Click(Me, e)
-            End If
-        End If
     End Sub
 
     Private Sub IncreaseBulletIndentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IncreaseBulletIndentToolStripMenuItem.Click
