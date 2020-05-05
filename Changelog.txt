@@ -43,6 +43,7 @@ Version 11.0 (June 30)
    • Improved splash screen
    • Notebook files are now optimized for compression speed over compression density
    • Major refactoring to have a more consistent naming scheme and remove old junk
+   • Convert all custom controls to C#
    • Complete re-write of file handling code   
    • Complete re-write of theming code   
    • Add themes: Default Light, Cool Gray, Desert, Luna, Metallic, Luna, Olive, and Whiteout 

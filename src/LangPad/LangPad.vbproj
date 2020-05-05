@@ -234,9 +234,6 @@
     <Compile Include="SplashScreenForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CharacterButton.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Util.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -287,9 +284,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreenForm.resx">
       <DependentUpon>SplashScreenForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CharacterButton.resx">
-      <DependentUpon>CharacterButton.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

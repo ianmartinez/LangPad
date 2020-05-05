@@ -807,14 +807,6 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Opens the website link.
  </summary>
 </member>
-<member name="M:LangPad.CharacterButton.#ctor(System.Object,System.Object)">
- <summary>
- Create a new button representing a character.
- </summary>
- 
- <param name="CharName">The name of the character.</param>
- <param name="MultiLine">If the description is multiple lines.</param>
-</member>
 <member name="T:LangPad.Util">
  <summary>
  Module containing various utility methods.

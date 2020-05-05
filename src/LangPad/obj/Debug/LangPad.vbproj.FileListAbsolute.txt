@@ -48,7 +48,6 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.Resources.
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CharacterEditor.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.NotebookEditor.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.SplashScreenForm.resources
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CharacterButton.resources
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.GenerateResource.cache
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.CoreCompileInputs.cache
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe.config
