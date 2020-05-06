@@ -1,5 +1,5 @@
 ﻿''' <summary>
-''' Handles conversion to HTML
+''' Handles conversion to HTML.
 ''' </summary>
 Module HtmlConverter
     ''' <summary>

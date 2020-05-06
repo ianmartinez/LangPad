@@ -63,19 +63,11 @@ Public Class NotebookEditor
     End Sub
 
     Private Sub PageUpToolStripButton_Click(sender As Object, e As EventArgs) Handles PageUpToolStripButton.Click
-        SavePages()
-
-        If PagesListBox.SelectedIndex > 0 Then
-            MovePage(CurrentPageIndex, CurrentPageIndex - 1)
-        End If
+        MovePageUp(CurrentPageIndex)
     End Sub
 
     Private Sub PageDownToolStripButton_Click(sender As Object, e As EventArgs) Handles PageDownToolStripButton.Click
-        SavePages()
-
-        If PagesListBox.SelectedIndex < CurrentNotebook.Pages.Count - 1 Then
-            MovePage(CurrentPageIndex, CurrentPageIndex + 1)
-        End If
+        MovePageDown(CurrentPageIndex)
     End Sub
 
     Private Sub AddToolStripButton_Click(sender As Object, e As EventArgs) Handles AddToolStripButton.Click

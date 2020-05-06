@@ -418,6 +418,35 @@ Module NotebookController
     End Sub
 
     ''' <summary>
+    ''' Increment a page's index by 1. If it is already the last page,
+    ''' nothing happens.
+    ''' </summary>
+    ''' 
+    ''' <param name="OldIndex">The index of the page to move.</param>
+    Public Sub MovePageDown(OldIndex As Integer)
+        SavePages()
+
+        If OldIndex < CurrentNotebook.Pages.Count - 1 Then
+            MovePage(OldIndex, OldIndex + 1)
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Decrement a page's index by 1. If it is already the first page,
+    ''' nothing happens.
+    ''' </summary>
+    ''' 
+    ''' <param name="OldIndex">The index of the page to move.</param>
+    Public Sub MovePageUp(OldIndex As Integer)
+        SavePages()
+
+        If OldIndex > 0 Then
+            MovePage(OldIndex, OldIndex - 1)
+        End If
+    End Sub
+
+
+    ''' <summary>
     ''' Create an ExtendedRichTextBox with the right settings for
     ''' a LangPad page.
     ''' </summary>

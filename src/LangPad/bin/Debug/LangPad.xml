@@ -500,6 +500,12 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  
  <param name="TextBox">The textbox to remove the brackets from.</param>
 </member>
+<member name="T:LangPad.KeyValueConverter">
+ <summary>
+ Old functions for interpreting values from
+ KeyValue files, to be re-written later.
+ </summary>
+</member>
 <member name="T:LangPad.Messages">
  <summary>
  Show standard message boxes used throughout LangPad.
@@ -656,6 +662,22 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="OldIndex">The index of the page to move.</param>
  <param name="NewIndex">The index to move the page to.</param>
 </member>
+<member name="M:LangPad.NotebookController.MovePageDown(System.Int32)">
+ <summary>
+ Increment a page's index by 1. If it is already the last page,
+ nothing happens.
+ </summary>
+ 
+ <param name="OldIndex">The index of the page to move.</param>
+</member>
+<member name="M:LangPad.NotebookController.MovePageUp(System.Int32)">
+ <summary>
+ Decrement a page's index by 1. If it is already the first page,
+ nothing happens.
+ </summary>
+ 
+ <param name="OldIndex">The index of the page to move.</param>
+</member>
 <member name="M:LangPad.NotebookController.CreateNotebookRtb(System.String)">
  <summary>
  Create an ExtendedRichTextBox with the right settings for
@@ -678,7 +700,7 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
 </member>
 <member name="T:LangPad.HtmlConverter">
  <summary>
- Handles conversion to HTML
+ Handles conversion to HTML.
  </summary>
 </member>
 <member name="M:LangPad.HtmlConverter.RtfToHtml(System.String,System.String,System.Boolean)">

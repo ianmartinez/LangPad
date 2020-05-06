@@ -1078,4 +1078,12 @@ Public Class MainForm
     Private Sub MainForm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         CharEditWindow.CharEdit.ShortcutKeyInsert(e)
     End Sub
+
+    Private Sub MovePageUpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MovePageUpToolStripMenuItem.Click
+        MovePageUp(CurrentPageIndex)
+    End Sub
+
+    Private Sub MovePageDownToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MovePageDownToolStripMenuItem.Click
+        MovePageDown(CurrentPageIndex)
+    End Sub
 End Class
