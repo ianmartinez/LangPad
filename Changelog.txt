@@ -65,6 +65,7 @@ Version 11.0 (June 30, 2020)
    • Bug Fix: Minor alignment issue on color panel with one button
    • Bug Fix: Encoding on exported HTML pages wasn't UTF-8 by default in some browsers
    • Bug Fix: Invalid files opened with the open file dialog are now handled properly
+   • Bug Fix: Character editor would sometimes appear behind the current window after clicking the button to open it
    
 ﻿Version 10.0 (April 8, 2020)
    • Full HiDPI support

@@ -935,6 +935,7 @@ Public Class MainForm
     End Sub
 
     Private Sub CharacterEditorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripMenuItem.Click
+        CharEditWindow.Hide()
         CharEditWindow.Show()
     End Sub
 
