@@ -182,6 +182,8 @@ Public Class MainForm
         RenamePageToolStripMenuItem.Image = IconManager.Get("edit", IconSize.Small, Res)
         PreviousPageToolStripMenuItem.Image = IconManager.Get("go-previous", IconSize.Small, Res)
         NextPageToolStripMenuItem.Image = IconManager.Get("go-next", IconSize.Small, Res)
+        MovePageUpToolStripMenuItem.Image = IconManager.Get("go-up", IconSize.Small, Res)
+        MovePageDownToolStripMenuItem.Image = IconManager.Get("go-down", IconSize.Small, Res)
         DictionaryMenuItem.Image = IconManager.Get("dictionary", IconSize.Small, Res)
 
         ' Linguistics

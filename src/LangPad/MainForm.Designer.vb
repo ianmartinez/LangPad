@@ -42,7 +42,6 @@ Partial Class MainForm
         Me.DeselectAllContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitLayoutPanel = New System.Windows.Forms.SplitContainer()
         Me.PropertiesContainerPanel = New LangPadUI.DoubleBufferedPanel()
-        Me.NotebookEditorPanel = New LangPad.NotebookEditor()
         Me.CurrentPageContainerBorder = New LangPadUI.DoubleBufferedPanel()
         Me.CurrentPageContainer = New LangPadUI.DoubleBufferedPanel()
         Me.FindReplacePanel = New LangPadUI.DoubleBufferedPanel()
@@ -240,6 +239,7 @@ Partial Class MainForm
         Me.ToolStripSeparator24 = New System.Windows.Forms.ToolStripSeparator()
         Me.MovePageUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovePageDownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotebookEditorPanel = New LangPad.NotebookEditor()
         Me.MainContextMenu.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
@@ -386,15 +386,6 @@ Partial Class MainForm
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
         Me.PropertiesContainerPanel.Size = New System.Drawing.Size(340, 833)
         Me.PropertiesContainerPanel.TabIndex = 13
-        '
-        'NotebookEditorPanel
-        '
-        Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
-        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
-        Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
-        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 833)
-        Me.NotebookEditorPanel.TabIndex = 0
         '
         'CurrentPageContainerBorder
         '
@@ -2086,19 +2077,19 @@ Partial Class MainForm
         '
         Me.UpdateToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
-        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(190, 34)
         Me.UpdateToolStripMenuItem.Text = "Update..."
         '
         'ToolStripMenuItem23
         '
         Me.ToolStripMenuItem23.Name = "ToolStripMenuItem23"
-        Me.ToolStripMenuItem23.Size = New System.Drawing.Size(267, 6)
+        Me.ToolStripMenuItem23.Size = New System.Drawing.Size(187, 6)
         '
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(190, 34)
         Me.SettingsToolStripMenuItem.Text = "Settings..."
         '
         'HelpToolStripMenuItem
@@ -2147,6 +2138,15 @@ Partial Class MainForm
         Me.MovePageDownToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Down), System.Windows.Forms.Keys)
         Me.MovePageDownToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
         Me.MovePageDownToolStripMenuItem.Text = "Move Page Down"
+        '
+        'NotebookEditorPanel
+        '
+        Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
+        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
+        Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
+        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 833)
+        Me.NotebookEditorPanel.TabIndex = 0
         '
         'MainForm
         '
