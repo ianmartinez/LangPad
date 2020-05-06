@@ -77,9 +77,10 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub DictionaryGrid_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles DictionaryGrid.RowPostPaint
+        ' Draw row numbers
         Dim Grid As DataGridView = CType(sender, DataGridView)
         Dim RowIndex As String = (e.RowIndex + 1).ToString()
-        Dim RowFont As Font = Font
+        Dim RowFont As Font = New Font(Font, FontStyle.Bold)
 
         Dim CenterFormat = New StringFormat With {
             .Alignment = StringAlignment.Center,
@@ -95,6 +96,7 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub OpenToolStripButton_Click(sender As Object, e As EventArgs) Handles OpenToolStripButton.Click
+        OpenToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click

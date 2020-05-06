@@ -22,7 +22,11 @@ Partial Class DictionaryForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DictionaryForm))
         Me.DictionaryGrid = New System.Windows.Forms.DataGridView()
         Me.Word = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -98,29 +102,51 @@ Partial Class DictionaryForm
         'DictionaryGrid
         '
         Me.DictionaryGrid.AllowUserToAddRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DictionaryGrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DictionaryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DictionaryGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DictionaryGrid.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DictionaryGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DictionaryGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DictionaryGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DictionaryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DictionaryGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Word, Me.Pronunciation, Me.Definition, Me.Notes})
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DictionaryGrid.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DictionaryGrid.DefaultCellStyle = DataGridViewCellStyle3
         Me.DictionaryGrid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DictionaryGrid.GridColor = System.Drawing.Color.Gainsboro
         Me.DictionaryGrid.Location = New System.Drawing.Point(0, 54)
         Me.DictionaryGrid.Name = "DictionaryGrid"
         Me.DictionaryGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DictionaryGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DictionaryGrid.RowHeadersWidth = 62
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
+        Me.DictionaryGrid.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DictionaryGrid.RowTemplate.Height = 24
-        Me.DictionaryGrid.Size = New System.Drawing.Size(1332, 721)
+        Me.DictionaryGrid.Size = New System.Drawing.Size(1332, 718)
         Me.DictionaryGrid.TabIndex = 3
         '
         'Word
@@ -128,28 +154,28 @@ Partial Class DictionaryForm
         Me.Word.HeaderText = "Word"
         Me.Word.MinimumWidth = 8
         Me.Word.Name = "Word"
-        Me.Word.Width = 83
+        Me.Word.Width = 87
         '
         'Pronunciation
         '
         Me.Pronunciation.HeaderText = "Pronunciation"
         Me.Pronunciation.MinimumWidth = 8
         Me.Pronunciation.Name = "Pronunciation"
-        Me.Pronunciation.Width = 142
+        Me.Pronunciation.Width = 155
         '
         'Definition
         '
         Me.Definition.HeaderText = "Definition"
         Me.Definition.MinimumWidth = 8
         Me.Definition.Name = "Definition"
-        Me.Definition.Width = 112
+        Me.Definition.Width = 122
         '
         'Notes
         '
         Me.Notes.HeaderText = "Notes"
         Me.Notes.MinimumWidth = 8
         Me.Notes.Name = "Notes"
-        Me.Notes.Width = 87
+        Me.Notes.Width = 92
         '
         'OpenDialog
         '
@@ -172,11 +198,11 @@ Partial Class DictionaryForm
         '
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.DictionaryGrid)
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.FindReplaceDialog)
-        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1332, 775)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1332, 772)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 33)
+        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 36)
         Me.MainToolStripContainer.Name = "MainToolStripContainer"
-        Me.MainToolStripContainer.Size = New System.Drawing.Size(1332, 816)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(1332, 813)
         Me.MainToolStripContainer.TabIndex = 75
         Me.MainToolStripContainer.Text = "MainToolStripContainer"
         '
@@ -407,7 +433,7 @@ Partial Class DictionaryForm
         Me.MainMenu.Location = New System.Drawing.Point(0, 0)
         Me.MainMenu.Name = "MainMenu"
         Me.MainMenu.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MainMenu.Size = New System.Drawing.Size(1332, 33)
+        Me.MainMenu.Size = New System.Drawing.Size(1332, 36)
         Me.MainMenu.TabIndex = 76
         Me.MainMenu.Text = "MenuStrip1"
         '
@@ -415,7 +441,7 @@ Partial Class DictionaryForm
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.OpenToolStripMenuItem, Me.ToolStripSeparator5, Me.SaveToolStripMenuItem, Me.SaveAsToolStripMenuItem, Me.ToolStripSeparator6, Me.ExportToHtmlToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(54, 29)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(54, 32)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'NewToolStripMenuItem
@@ -424,7 +450,7 @@ Partial Class DictionaryForm
         Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(362, 34)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(358, 34)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'OpenToolStripMenuItem
@@ -433,13 +459,13 @@ Partial Class DictionaryForm
         Me.OpenToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(362, 34)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(358, 34)
         Me.OpenToolStripMenuItem.Text = "Open..."
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(359, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(355, 6)
         '
         'SaveToolStripMenuItem
         '
@@ -447,7 +473,7 @@ Partial Class DictionaryForm
         Me.SaveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(362, 34)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(358, 34)
         Me.SaveToolStripMenuItem.Text = "Save Notebook"
         '
         'SaveAsToolStripMenuItem
@@ -456,13 +482,13 @@ Partial Class DictionaryForm
         Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
         Me.SaveAsToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(362, 34)
+        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(358, 34)
         Me.SaveAsToolStripMenuItem.Text = "Save As..."
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(359, 6)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(355, 6)
         '
         'ExportToHtmlToolStripMenuItem
         '
@@ -477,7 +503,7 @@ Partial Class DictionaryForm
         '
         Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FindToolStripMenuItem, Me.ToolStripSeparator7, Me.SelectAllToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(58, 29)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(58, 32)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'FindToolStripMenuItem
@@ -492,28 +518,28 @@ Partial Class DictionaryForm
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditDisplayFontToolStripMenuItem, Me.ResetDisplayFontToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(65, 29)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(65, 32)
         Me.ViewToolStripMenuItem.Text = "View"
         '
         'EditDisplayFontToolStripMenuItem
         '
         Me.EditDisplayFontToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.EditDisplayFontToolStripMenuItem.Name = "EditDisplayFontToolStripMenuItem"
-        Me.EditDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(260, 34)
+        Me.EditDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
         Me.EditDisplayFontToolStripMenuItem.Text = "Display Font..."
         '
         'ResetDisplayFontToolStripMenuItem
         '
         Me.ResetDisplayFontToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ResetDisplayFontToolStripMenuItem.Name = "ResetDisplayFontToolStripMenuItem"
-        Me.ResetDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(260, 34)
+        Me.ResetDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
         Me.ResetDisplayFontToolStripMenuItem.Text = "Reset Display Font"
         '
         'WordToolStripMenuItem
         '
         Me.WordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddWordToolStripMenuItem, Me.RemoveWordToolStripMenuItem, Me.ToolStripSeparator8, Me.EditWordToolStripMenuItem, Me.EditPronunciationToolStripMenuItem, Me.EditDefinitionToolStripMenuItem, Me.EditNotesToolStripMenuItem})
         Me.WordToolStripMenuItem.Name = "WordToolStripMenuItem"
-        Me.WordToolStripMenuItem.Size = New System.Drawing.Size(72, 29)
+        Me.WordToolStripMenuItem.Size = New System.Drawing.Size(72, 32)
         Me.WordToolStripMenuItem.Text = "Word"
         '
         'AddWordToolStripMenuItem
@@ -573,7 +599,7 @@ Partial Class DictionaryForm
         '
         Me.LinguisticsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharacterEditorToolStripMenuItem, Me.ToolStripSeparator25, Me.BroadTranscriptionToolStripMenuItem, Me.NarrowTranscriptionToolStripMenuItem, Me.RemoveBracketsToolStripMenuItem})
         Me.LinguisticsToolStripMenuItem.Name = "LinguisticsToolStripMenuItem"
-        Me.LinguisticsToolStripMenuItem.Size = New System.Drawing.Size(109, 29)
+        Me.LinguisticsToolStripMenuItem.Size = New System.Drawing.Size(109, 32)
         Me.LinguisticsToolStripMenuItem.Text = "Linguistics"
         '
         'CharacterEditorToolStripMenuItem
