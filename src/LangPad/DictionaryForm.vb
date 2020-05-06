@@ -33,6 +33,7 @@ Public Class DictionaryForm
         EditDisplayFontToolStripMenuItem.Image = IconManager.Get("font", IconSize.Small, Res)
         ResetDisplayFontToolStripMenuItem.Image = IconManager.Get("restart", IconSize.Small, Res)
         FindToolStripMenuItem.Image = IconManager.Get("edit-find", IconSize.Small, Res)
+        SelectAllToolStripMenuItem.Image = IconManager.Get("edit-select-all", IconSize.Small, Res)
 
         ' Toolbar
         NewToolStripButton.Image = IconManager.Get("document-new", IconSize.Large, Res)
@@ -381,5 +382,9 @@ Public Class DictionaryForm
         Next
 
         SelectCells(OldSelected)
+    End Sub
+
+    Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
+        DictionaryGrid.SelectAll()
     End Sub
 End Class
