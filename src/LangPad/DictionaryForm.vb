@@ -289,6 +289,7 @@ Public Class DictionaryForm
         Dim NewRowIndex = DictionaryGrid.Rows.Add(1)
         DictionaryGrid.ClearSelection()
         DictionaryGrid.Rows(NewRowIndex).Selected = True
+        EditCellInCurrentRow(0)
         CurrentNotebook.Modified = True
     End Sub
 
@@ -309,6 +310,16 @@ Public Class DictionaryForm
         End If
     End Sub
 
+    Private Sub EditSelectedCell()
+        If (DictionaryGrid.SelectedCells.Count > 0) Then
+            Dim CurrentCell = DictionaryGrid.SelectedCells(0)
+            If CurrentCell IsNot Nothing Then
+                DictionaryGrid.CurrentCell = CurrentCell
+                DictionaryGrid.BeginEdit(True)
+            End If
+        End If
+    End Sub
+
     Private Sub EditWordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditWordToolStripMenuItem.Click
         EditCellInCurrentRow(0)
     End Sub
@@ -323,5 +334,26 @@ Public Class DictionaryForm
 
     Private Sub EditNotesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditNotesToolStripMenuItem.Click
         EditCellInCurrentRow(3)
+    End Sub
+
+    Private Sub BroadTranscriptionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BroadTranscriptionToolStripMenuItem.Click
+        EditSelectedCell()
+        If CurrentTextbox IsNot Nothing Then
+            InsertBrackets(CurrentTextbox, "/", "/")
+        End If
+    End Sub
+
+    Private Sub NarrowTranscriptionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NarrowTranscriptionToolStripMenuItem.Click
+        EditSelectedCell()
+        If CurrentTextbox IsNot Nothing Then
+            InsertBrackets(CurrentTextbox, "[", "]")
+        End If
+    End Sub
+
+    Private Sub RemoveBracketsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveBracketsToolStripMenuItem.Click
+        EditSelectedCell()
+        If CurrentTextbox IsNot Nothing Then
+            RemoveAllBrackets(CurrentTextbox)
+        End If
     End Sub
 End Class
