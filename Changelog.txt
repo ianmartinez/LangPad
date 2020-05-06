@@ -11,6 +11,7 @@ Version 11.1 (TBD)
    **• Recent notebooks in file menu
    **• Export all pages wizard
    **• Settings are preserved between versions
+   **• No longer use VB.NET's My.Settings 
    **• Allow adjustment of file compression level
 
 Version 11.0 (June 30, 2020)
