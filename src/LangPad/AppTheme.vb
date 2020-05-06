@@ -82,6 +82,7 @@ Module AppTheme
     ''' </summary>
     Private Sub InitDictionaryFormTheme()
         Themer.AddForm(DictionaryForm)
+        Themer.AddMenu(DictionaryForm.MainMenu)
         Themer.AddToolStripContainer(DictionaryForm.MainToolStripContainer)
         Themer.AddToolStrip(DictionaryForm.MainToolStrip)
         Themer.AddGrid(DictionaryForm.DictionaryGrid)

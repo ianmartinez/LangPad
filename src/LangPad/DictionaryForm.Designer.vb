@@ -56,12 +56,41 @@ Partial Class DictionaryForm
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.FindToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.SaveHtmlDialog = New System.Windows.Forms.SaveFileDialog()
+        Me.MainMenu = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ExportToHtmlToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FindToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditDisplayFontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetDisplayFontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddWordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RemoveWordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.EditWordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditPronunciationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditDefinitionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditNotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinguisticsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CharacterEditorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator25 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BroadTranscriptionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NarrowTranscriptionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RemoveBracketsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DictionaryGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MainToolStripContainer.ContentPanel.SuspendLayout()
         Me.MainToolStripContainer.TopToolStripPanel.SuspendLayout()
         Me.MainToolStripContainer.SuspendLayout()
         Me.FindReplaceDialog.SuspendLayout()
         Me.MainToolStrip.SuspendLayout()
+        Me.MainMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'DictionaryGrid
@@ -89,7 +118,7 @@ Partial Class DictionaryForm
         Me.DictionaryGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DictionaryGrid.RowHeadersWidth = 62
         Me.DictionaryGrid.RowTemplate.Height = 24
-        Me.DictionaryGrid.Size = New System.Drawing.Size(1332, 754)
+        Me.DictionaryGrid.Size = New System.Drawing.Size(1332, 721)
         Me.DictionaryGrid.TabIndex = 3
         '
         'Word
@@ -141,11 +170,11 @@ Partial Class DictionaryForm
         '
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.DictionaryGrid)
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.FindReplaceDialog)
-        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1332, 808)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1332, 775)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 0)
+        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 33)
         Me.MainToolStripContainer.Name = "MainToolStripContainer"
-        Me.MainToolStripContainer.Size = New System.Drawing.Size(1332, 849)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(1332, 816)
         Me.MainToolStripContainer.TabIndex = 75
         Me.MainToolStripContainer.Text = "MainToolStripContainer"
         '
@@ -234,7 +263,7 @@ Partial Class DictionaryForm
         'MainToolStrip
         '
         Me.MainToolStrip.CanOverflow = False
-        Me.MainToolStrip.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MainToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.MainToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ExportHtmlToolStripButton, Me.ToolStripSeparator1, Me.CharacterEditorToolStripButton, Me.ToolStripSeparator2, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.ToolStripSeparator3, Me.FontToolStripButton, Me.ResetFontToolStripButton, Me.ToolStripSeparator4, Me.FindToolStripButton})
@@ -312,7 +341,7 @@ Partial Class DictionaryForm
         Me.AddToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.AddToolStripButton.Name = "AddToolStripButton"
         Me.AddToolStripButton.Size = New System.Drawing.Size(36, 36)
-        Me.AddToolStripButton.Text = "Add"
+        Me.AddToolStripButton.Text = "Add Word"
         '
         'RemoveToolStripButton
         '
@@ -322,7 +351,7 @@ Partial Class DictionaryForm
         Me.RemoveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RemoveToolStripButton.Name = "RemoveToolStripButton"
         Me.RemoveToolStripButton.Size = New System.Drawing.Size(36, 36)
-        Me.RemoveToolStripButton.Text = "Remove"
+        Me.RemoveToolStripButton.Text = "Remove Word"
         '
         'ToolStripSeparator3
         '
@@ -368,12 +397,230 @@ Partial Class DictionaryForm
         '
         Me.SaveHtmlDialog.Filter = "HTML Page (*.html)|*.html|Text files (*.txt)|*.txt|All files (*.*)|*.*"
         '
+        'MainMenu
+        '
+        Me.MainMenu.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
+        Me.MainMenu.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.MainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.WordToolStripMenuItem, Me.LinguisticsToolStripMenuItem})
+        Me.MainMenu.Location = New System.Drawing.Point(0, 0)
+        Me.MainMenu.Name = "MainMenu"
+        Me.MainMenu.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MainMenu.Size = New System.Drawing.Size(1332, 33)
+        Me.MainMenu.TabIndex = 76
+        Me.MainMenu.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.OpenToolStripMenuItem, Me.ToolStripSeparator5, Me.SaveToolStripMenuItem, Me.SaveAsToolStripMenuItem, Me.ToolStripSeparator6, Me.ExportToHtmlToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(54, 29)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'NewToolStripMenuItem
+        '
+        Me.NewToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
+        Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(362, 34)
+        Me.NewToolStripMenuItem.Text = "New"
+        '
+        'OpenToolStripMenuItem
+        '
+        Me.OpenToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.OpenToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
+        Me.OpenToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(362, 34)
+        Me.OpenToolStripMenuItem.Text = "Open..."
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(359, 6)
+        '
+        'SaveToolStripMenuItem
+        '
+        Me.SaveToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.SaveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+        Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(362, 34)
+        Me.SaveToolStripMenuItem.Text = "Save Notebook"
+        '
+        'SaveAsToolStripMenuItem
+        '
+        Me.SaveAsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
+        Me.SaveAsToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(362, 34)
+        Me.SaveAsToolStripMenuItem.Text = "Save As..."
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(359, 6)
+        '
+        'ExportToHtmlToolStripMenuItem
+        '
+        Me.ExportToHtmlToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ExportToHtmlToolStripMenuItem.Name = "ExportToHtmlToolStripMenuItem"
+        Me.ExportToHtmlToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
+        Me.ExportToHtmlToolStripMenuItem.Size = New System.Drawing.Size(362, 34)
+        Me.ExportToHtmlToolStripMenuItem.Text = "Export to HTML..."
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FindToolStripMenuItem})
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(58, 29)
+        Me.EditToolStripMenuItem.Text = "Edit"
+        '
+        'FindToolStripMenuItem
+        '
+        Me.FindToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.FindToolStripMenuItem.Name = "FindToolStripMenuItem"
+        Me.FindToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
+        Me.FindToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.FindToolStripMenuItem.Text = "Find"
+        '
+        'ViewToolStripMenuItem
+        '
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditDisplayFontToolStripMenuItem, Me.ResetDisplayFontToolStripMenuItem})
+        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(65, 29)
+        Me.ViewToolStripMenuItem.Text = "View"
+        '
+        'EditDisplayFontToolStripMenuItem
+        '
+        Me.EditDisplayFontToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.EditDisplayFontToolStripMenuItem.Name = "EditDisplayFontToolStripMenuItem"
+        Me.EditDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.EditDisplayFontToolStripMenuItem.Text = "Display Font..."
+        '
+        'ResetDisplayFontToolStripMenuItem
+        '
+        Me.ResetDisplayFontToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ResetDisplayFontToolStripMenuItem.Name = "ResetDisplayFontToolStripMenuItem"
+        Me.ResetDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.ResetDisplayFontToolStripMenuItem.Text = "Reset Display Font"
+        '
+        'WordToolStripMenuItem
+        '
+        Me.WordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddWordToolStripMenuItem, Me.RemoveWordToolStripMenuItem, Me.ToolStripSeparator8, Me.EditWordToolStripMenuItem, Me.EditPronunciationToolStripMenuItem, Me.EditDefinitionToolStripMenuItem, Me.EditNotesToolStripMenuItem})
+        Me.WordToolStripMenuItem.Name = "WordToolStripMenuItem"
+        Me.WordToolStripMenuItem.Size = New System.Drawing.Size(72, 29)
+        Me.WordToolStripMenuItem.Text = "Word"
+        '
+        'AddWordToolStripMenuItem
+        '
+        Me.AddWordToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.AddWordToolStripMenuItem.Name = "AddWordToolStripMenuItem"
+        Me.AddWordToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.W), System.Windows.Forms.Keys)
+        Me.AddWordToolStripMenuItem.Size = New System.Drawing.Size(319, 34)
+        Me.AddWordToolStripMenuItem.Text = "Add Word"
+        '
+        'RemoveWordToolStripMenuItem
+        '
+        Me.RemoveWordToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.RemoveWordToolStripMenuItem.Name = "RemoveWordToolStripMenuItem"
+        Me.RemoveWordToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
+        Me.RemoveWordToolStripMenuItem.Size = New System.Drawing.Size(319, 34)
+        Me.RemoveWordToolStripMenuItem.Text = "Remove Word"
+        '
+        'ToolStripSeparator8
+        '
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(316, 6)
+        '
+        'EditWordToolStripMenuItem
+        '
+        Me.EditWordToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.EditWordToolStripMenuItem.Name = "EditWordToolStripMenuItem"
+        Me.EditWordToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
+        Me.EditWordToolStripMenuItem.Size = New System.Drawing.Size(319, 34)
+        Me.EditWordToolStripMenuItem.Text = "Edit Word"
+        '
+        'EditPronunciationToolStripMenuItem
+        '
+        Me.EditPronunciationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.EditPronunciationToolStripMenuItem.Name = "EditPronunciationToolStripMenuItem"
+        Me.EditPronunciationToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
+        Me.EditPronunciationToolStripMenuItem.Size = New System.Drawing.Size(319, 34)
+        Me.EditPronunciationToolStripMenuItem.Text = "Edit Pronunciation"
+        '
+        'EditDefinitionToolStripMenuItem
+        '
+        Me.EditDefinitionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.EditDefinitionToolStripMenuItem.Name = "EditDefinitionToolStripMenuItem"
+        Me.EditDefinitionToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.EditDefinitionToolStripMenuItem.Size = New System.Drawing.Size(319, 34)
+        Me.EditDefinitionToolStripMenuItem.Text = "Edit Definition"
+        '
+        'EditNotesToolStripMenuItem
+        '
+        Me.EditNotesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.EditNotesToolStripMenuItem.Name = "EditNotesToolStripMenuItem"
+        Me.EditNotesToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
+        Me.EditNotesToolStripMenuItem.Size = New System.Drawing.Size(319, 34)
+        Me.EditNotesToolStripMenuItem.Text = "Edit Notes"
+        '
+        'LinguisticsToolStripMenuItem
+        '
+        Me.LinguisticsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharacterEditorToolStripMenuItem, Me.ToolStripSeparator25, Me.BroadTranscriptionToolStripMenuItem, Me.NarrowTranscriptionToolStripMenuItem, Me.RemoveBracketsToolStripMenuItem})
+        Me.LinguisticsToolStripMenuItem.Name = "LinguisticsToolStripMenuItem"
+        Me.LinguisticsToolStripMenuItem.Size = New System.Drawing.Size(109, 29)
+        Me.LinguisticsToolStripMenuItem.Text = "Linguistics"
+        '
+        'CharacterEditorToolStripMenuItem
+        '
+        Me.CharacterEditorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.CharacterEditorToolStripMenuItem.Name = "CharacterEditorToolStripMenuItem"
+        Me.CharacterEditorToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6
+        Me.CharacterEditorToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.CharacterEditorToolStripMenuItem.Text = "Character Editor..."
+        '
+        'ToolStripSeparator25
+        '
+        Me.ToolStripSeparator25.Name = "ToolStripSeparator25"
+        Me.ToolStripSeparator25.Size = New System.Drawing.Size(412, 6)
+        '
+        'BroadTranscriptionToolStripMenuItem
+        '
+        Me.BroadTranscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.BroadTranscriptionToolStripMenuItem.Name = "BroadTranscriptionToolStripMenuItem"
+        Me.BroadTranscriptionToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
+        Me.BroadTranscriptionToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.BroadTranscriptionToolStripMenuItem.Text = "Broad Transcription /◌/"
+        '
+        'NarrowTranscriptionToolStripMenuItem
+        '
+        Me.NarrowTranscriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.NarrowTranscriptionToolStripMenuItem.Name = "NarrowTranscriptionToolStripMenuItem"
+        Me.NarrowTranscriptionToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
+        Me.NarrowTranscriptionToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.NarrowTranscriptionToolStripMenuItem.Text = "Narrow Transcription [◌]"
+        '
+        'RemoveBracketsToolStripMenuItem
+        '
+        Me.RemoveBracketsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.RemoveBracketsToolStripMenuItem.Name = "RemoveBracketsToolStripMenuItem"
+        Me.RemoveBracketsToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
+        Me.RemoveBracketsToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
+        Me.RemoveBracketsToolStripMenuItem.Text = "Remove Brackets"
+        '
         'DictionaryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1332, 849)
         Me.Controls.Add(Me.MainToolStripContainer)
+        Me.Controls.Add(Me.MainMenu)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "DictionaryForm"
@@ -388,7 +635,10 @@ Partial Class DictionaryForm
         Me.FindReplaceDialog.PerformLayout()
         Me.MainToolStrip.ResumeLayout(False)
         Me.MainToolStrip.PerformLayout()
+        Me.MainMenu.ResumeLayout(False)
+        Me.MainMenu.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DictionaryGrid As DataGridView
@@ -423,4 +673,32 @@ Partial Class DictionaryForm
     Friend WithEvents WordRadio As RadioButton
     Friend WithEvents FontToolStripButton As ToolStripButton
     Friend WithEvents ResetFontToolStripButton As ToolStripButton
+    Friend WithEvents MainMenu As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
+    Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SaveAsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
+    Friend WithEvents ExportToHtmlToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FindToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditDisplayFontToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResetDisplayFontToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents WordToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddWordToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RemoveWordToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
+    Friend WithEvents EditWordToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditPronunciationToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditDefinitionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditNotesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LinguisticsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CharacterEditorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator25 As ToolStripSeparator
+    Friend WithEvents BroadTranscriptionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NarrowTranscriptionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RemoveBracketsToolStripMenuItem As ToolStripMenuItem
 End Class

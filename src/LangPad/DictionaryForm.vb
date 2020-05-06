@@ -22,6 +22,19 @@ Public Class DictionaryForm
     Public Sub SetIcons()
         Dim Res As IconResolution = GetIconResolution()
 
+        ' Menu
+        NewToolStripMenuItem.Image = IconManager.Get("document-new", IconSize.Small, Res)
+        OpenToolStripMenuItem.Image = IconManager.Get("document-open", IconSize.Small, Res)
+        SaveToolStripMenuItem.Image = IconManager.Get("document-save", IconSize.Small, Res)
+        ExportToHtmlToolStripMenuItem.Image = IconManager.Get("filetype-html", IconSize.Small, Res)
+        CharacterEditorToolStripMenuItem.Image = IconManager.Get("language", IconSize.Small, Res)
+        AddWordToolStripMenuItem.Image = IconManager.Get("list-add", IconSize.Small, Res)
+        RemoveWordToolStripMenuItem.Image = IconManager.Get("list-remove", IconSize.Small, Res)
+        EditDisplayFontToolStripMenuItem.Image = IconManager.Get("font", IconSize.Small, Res)
+        ResetDisplayFontToolStripMenuItem.Image = IconManager.Get("restart", IconSize.Small, Res)
+        FindToolStripMenuItem.Image = IconManager.Get("edit-find", IconSize.Small, Res)
+
+        ' Toolbar
         NewToolStripButton.Image = IconManager.Get("document-new", IconSize.Large, Res)
         OpenToolStripButton.Image = IconManager.Get("document-open", IconSize.Large, Res)
         SaveToolStripButton.Image = IconManager.Get("document-save", IconSize.Large, Res)
@@ -77,76 +90,26 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
-        If MessageBox.Show("This cannot be undone. Are you sure you want to continue? ", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes Then
-            DictionaryGrid.Rows.Clear()
-        End If
+        NewToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub OpenToolStripButton_Click(sender As Object, e As EventArgs) Handles OpenToolStripButton.Click
-        If OpenDialog.ShowDialog = DialogResult.OK Then
-            If Path.GetExtension(OpenDialog.FileName).ToLower() = ".csv" Then
-                CurrentNotebook.Dictionary.OpenCsv(OpenDialog.FileName)
-            Else
-                CurrentNotebook.Dictionary.Open(OpenDialog.FileName)
-            End If
-
-            RefreshDictionary()
-        End If
     End Sub
 
     Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
-        SaveDictionary()
-        If SaveDialog.ShowDialog = DialogResult.OK Then
-            If Path.GetExtension(SaveDialog.FileName).ToLower() = ".csv" Then
-                Dim Writer As New StreamWriter(New FileStream(SaveDialog.FileName, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
-                Dim ColCount As Integer = DictionaryGrid.Columns.Count
-
-                For i As Integer = 0 To ColCount - 1
-                    Writer.Write(DictionaryGrid.Columns(i).Name.ToString().ToUpper() + ",")
-                Next
-                Writer.WriteLine()
-
-                ' Write rows to CSV
-                For i As Integer = 0 To DictionaryGrid.Rows.Count - 1
-                    For j As Integer = 0 To ColCount - 1
-                        If DictionaryGrid.Rows(i).Cells(j).Value IsNot Nothing Then
-                            Writer.Write(DictionaryGrid.Rows(i).Cells(j).Value + ",")
-                        Else
-                            Writer.Write(",")
-                        End If
-                    Next
-
-                    Writer.WriteLine()
-                Next
-                Writer.Close()
-            Else
-                CurrentNotebook.Dictionary.Save(SaveDialog.FileName)
-            End If
-        End If
+        SaveAsToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub AddToolStripButton_Click(sender As Object, e As EventArgs) Handles AddToolStripButton.Click
-        DictionaryGrid.Rows.Add(1)
-        CurrentNotebook.Modified = True
+        AddWordToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub RemoveToolStripButton_Click(sender As Object, e As EventArgs) Handles RemoveToolStripButton.Click
-        If DictionaryGrid.CurrentCell IsNot Nothing Then
-            DictionaryGrid.Rows.RemoveAt(DictionaryGrid.CurrentCell.RowIndex)
-            CurrentNotebook.Modified = True
-        End If
+        RemoveWordToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub FontToolStripButton_Click(sender As Object, e As EventArgs) Handles FontToolStripButton.Click
-        FontPicker.Color = DictionaryGrid.DefaultCellStyle.ForeColor
-        FontPicker.Font = DictionaryGrid.DefaultCellStyle.Font
-
-        If FontPicker.ShowDialog = DialogResult.OK Then
-            My.Settings.DictionaryFont = FontPicker.Font
-            My.Settings.DictionaryFontColor = FontPicker.Color
-            My.Settings.Save()
-            SetDisplayFont()
-        End If
+        EditDisplayFontToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub DictionaryForm_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
@@ -159,16 +122,11 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub ExportHtmlToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportHtmlToolStripButton.Click
-        SaveDictionary()
-        If SaveHtmlDialog.ShowDialog = DialogResult.OK Then
-            ExportHtmlDialog.FilePath = SaveHtmlDialog.FileName
-            ExportHtmlDialog.ShowDialog()
-        End If
+        ExportHtmlToolStripButton_Click(Me, e)
     End Sub
 
     Private Sub FindToolStripButton_Click(sender As Object, e As EventArgs) Handles FindToolStripButton.Click
-        FindReplaceDialog.Visible = FindReplaceDialog.Visible Xor True
-        If FindReplaceDialog.Visible = True Then FindTextBox.Focus()
+        FindToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub FindButton_Click(sender As Object, e As EventArgs) Handles FindButton.Click
@@ -202,7 +160,7 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub CharacterEditorToolStripButton_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripButton.Click
-        CharEditWindow.Show()
+        CharacterEditorToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub DictionaryForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
@@ -218,10 +176,7 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub ResetFontToolStripButton_Click(sender As Object, e As EventArgs) Handles ResetFontToolStripButton.Click
-        My.Settings.DictionaryFont = New Font("Calibri", 9, FontStyle.Regular)
-        My.Settings.DictionaryFontColor = Color.Black
-        My.Settings.Save()
-        SetDisplayFont()
+        ResetDisplayFontToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub DictionaryForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -235,10 +190,110 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub DictionaryForm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown, DictionaryGrid.KeyDown
-        If (e.KeyCode = Keys.S AndAlso e.Modifiers = Keys.Control) Then
-            MainForm.FileSave()
-        Else
-            CharEditWindow.CharEdit.ShortcutKeyInsert(e)
+        CharEditWindow.CharEdit.ShortcutKeyInsert(e)
+    End Sub
+
+    Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
+        If MessageBox.Show("This cannot be undone. Are you sure you want to continue? ", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes Then
+            DictionaryGrid.Rows.Clear()
+        End If
+    End Sub
+
+    Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
+        If OpenDialog.ShowDialog = DialogResult.OK Then
+            If Path.GetExtension(OpenDialog.FileName).ToLower() = ".csv" Then
+                CurrentNotebook.Dictionary.OpenCsv(OpenDialog.FileName)
+            Else
+                CurrentNotebook.Dictionary.Open(OpenDialog.FileName)
+            End If
+
+            RefreshDictionary()
+        End If
+    End Sub
+
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        MainForm.FileSave()
+    End Sub
+
+    Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsToolStripMenuItem.Click
+        SaveDictionary()
+
+        If SaveDialog.ShowDialog() = DialogResult.OK Then
+            If Path.GetExtension(SaveDialog.FileName).ToLower() = ".csv" Then
+                Dim Writer As New StreamWriter(New FileStream(SaveDialog.FileName, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
+                Dim ColCount As Integer = DictionaryGrid.Columns.Count
+
+                For i As Integer = 0 To ColCount - 1
+                    Writer.Write(DictionaryGrid.Columns(i).Name.ToString().ToUpper() + ",")
+                Next
+                Writer.WriteLine()
+
+                ' Write rows to CSV
+                For i As Integer = 0 To DictionaryGrid.Rows.Count - 1
+                    For j As Integer = 0 To ColCount - 1
+                        If DictionaryGrid.Rows(i).Cells(j).Value IsNot Nothing Then
+                            Writer.Write(DictionaryGrid.Rows(i).Cells(j).Value + ",")
+                        Else
+                            Writer.Write(",")
+                        End If
+                    Next
+
+                    Writer.WriteLine()
+                Next
+                Writer.Close()
+            Else
+                CurrentNotebook.Dictionary.Save(SaveDialog.FileName)
+            End If
+        End If
+    End Sub
+
+    Private Sub ExportToHtmlToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportToHtmlToolStripMenuItem.Click
+        SaveDictionary()
+        If SaveHtmlDialog.ShowDialog = DialogResult.OK Then
+            ExportHtmlDialog.FilePath = SaveHtmlDialog.FileName
+            ExportHtmlDialog.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub CharacterEditorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripMenuItem.Click
+        CharEditWindow.Show()
+    End Sub
+
+    Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindToolStripMenuItem.Click
+        FindReplaceDialog.Visible = FindReplaceDialog.Visible Xor True
+        If FindReplaceDialog.Visible = True Then FindTextBox.Focus()
+    End Sub
+
+    Private Sub EditDisplayFontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditDisplayFontToolStripMenuItem.Click
+        FontPicker.Color = DictionaryGrid.DefaultCellStyle.ForeColor
+        FontPicker.Font = DictionaryGrid.DefaultCellStyle.Font
+
+        If FontPicker.ShowDialog = DialogResult.OK Then
+            My.Settings.DictionaryFont = FontPicker.Font
+            My.Settings.DictionaryFontColor = FontPicker.Color
+            My.Settings.Save()
+            SetDisplayFont()
+        End If
+    End Sub
+
+    Private Sub ResetDisplayFontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetDisplayFontToolStripMenuItem.Click
+        My.Settings.DictionaryFont = New Font("Calibri", 9, FontStyle.Regular)
+        My.Settings.DictionaryFontColor = Color.Black
+        My.Settings.Save()
+        SetDisplayFont()
+    End Sub
+
+    Private Sub AddWordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddWordToolStripMenuItem.Click
+        Dim NewRowIndex = DictionaryGrid.Rows.Add(1)
+        DictionaryGrid.ClearSelection()
+        DictionaryGrid.Rows(NewRowIndex).Selected = True
+        CurrentNotebook.Modified = True
+    End Sub
+
+    Private Sub RemoveWordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveWordToolStripMenuItem.Click
+        If DictionaryGrid.CurrentCell IsNot Nothing Then
+            DictionaryGrid.Rows.RemoveAt(DictionaryGrid.CurrentCell.RowIndex)
+            CurrentNotebook.Modified = True
         End If
     End Sub
 End Class
