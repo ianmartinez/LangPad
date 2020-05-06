@@ -19,6 +19,7 @@ Version 11.0 (June 30, 2020)
    • Pressing CTRL+S on character editor and dictionary now saves the notebook
    • Display shortcut keys on menus
    **• Add menu and shortcut keys to dictionary
+   **• The currently selected word is deleted instead of the last one
    • New words are automatically selected in dictionary
    • Added tons of shortcut keys to make all across the program
    • Custom characters can be assigned to keys CTRL+1 to CTRL+0

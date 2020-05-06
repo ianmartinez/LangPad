@@ -190,7 +190,9 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub DictionaryForm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown, DictionaryGrid.KeyDown
-        CharEditWindow.CharEdit.ShortcutKeyInsert(e)
+        If e.Modifiers = Keys.Control Then
+            CharEditWindow.CharEdit.ShortcutKeyInsert(e)
+        End If
     End Sub
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
@@ -294,6 +296,16 @@ Public Class DictionaryForm
         If DictionaryGrid.CurrentCell IsNot Nothing Then
             DictionaryGrid.Rows.RemoveAt(DictionaryGrid.CurrentCell.RowIndex)
             CurrentNotebook.Modified = True
+        End If
+    End Sub
+
+    Private Sub EditWordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditWordToolStripMenuItem.Click
+        If (DictionaryGrid.SelectedRows.Count > 0) Then
+            Dim CurrentRow = DictionaryGrid.SelectedRows(0)
+            If CurrentRow IsNot Nothing Then
+                DictionaryGrid.CurrentCell = CurrentRow.Cells(0)
+                DictionaryGrid.BeginEdit(True)
+            End If
         End If
     End Sub
 End Class
