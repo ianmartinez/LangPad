@@ -26,8 +26,9 @@ Public Class DictionaryForm
 
         ' Menu
         NewToolStripMenuItem.Image = IconManager.Get("document-new", IconSize.Small, Res)
-        OpenToolStripMenuItem.Image = IconManager.Get("document-open", IconSize.Small, Res)
+        ImportToolStripMenuItem.Image = IconManager.Get("document-import", IconSize.Small, Res)
         SaveToolStripMenuItem.Image = IconManager.Get("document-save", IconSize.Small, Res)
+        ExportToolStripMenuItem.Image = IconManager.Get("document-export", IconSize.Small, Res)
         ExportToHtmlToolStripMenuItem.Image = IconManager.Get("filetype-html", IconSize.Small, Res)
         CharacterEditorToolStripMenuItem.Image = IconManager.Get("language", IconSize.Small, Res)
         AddWordToolStripMenuItem.Image = IconManager.Get("list-add", IconSize.Small, Res)
@@ -39,8 +40,8 @@ Public Class DictionaryForm
 
         ' Toolbar
         NewToolStripButton.Image = IconManager.Get("document-new", IconSize.Large, Res)
-        OpenToolStripButton.Image = IconManager.Get("document-open", IconSize.Large, Res)
-        SaveToolStripButton.Image = IconManager.Get("document-save", IconSize.Large, Res)
+        ImportToolStripButton.Image = IconManager.Get("document-import", IconSize.Large, Res)
+        ExportToolStripButton.Image = IconManager.Get("document-export", IconSize.Large, Res)
         ExportHtmlToolStripButton.Image = IconManager.Get("filetype-html", IconSize.Large, Res)
         CharacterEditorToolStripButton.Image = IconManager.Get("language", IconSize.Large, Res)
         AddToolStripButton.Image = IconManager.Get("list-add", IconSize.Large, Res)
@@ -97,11 +98,11 @@ Public Class DictionaryForm
         NewToolStripMenuItem_Click(Me, e)
     End Sub
 
-    Private Sub OpenToolStripButton_Click(sender As Object, e As EventArgs) Handles OpenToolStripButton.Click
-        OpenToolStripMenuItem_Click(Me, e)
+    Private Sub ImportToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportToolStripButton.Click
+        ImportToolStripMenuItem_Click(Me, e)
     End Sub
 
-    Private Sub SaveToolStripButton_Click(sender As Object, e As EventArgs) Handles SaveToolStripButton.Click
+    Private Sub ExportToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportToolStripButton.Click
         SaveAsToolStripMenuItem_Click(Me, e)
     End Sub
 
@@ -207,23 +208,24 @@ Public Class DictionaryForm
         End If
     End Sub
 
-    Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
+    Private Sub ImportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportToolStripMenuItem.Click
         If OpenDialog.ShowDialog = DialogResult.OK Then
             If Path.GetExtension(OpenDialog.FileName).ToLower() = ".csv" Then
-                CurrentNotebook.Dictionary.OpenCsv(OpenDialog.FileName)
+                CurrentNotebook.Dictionary.OpenCsv(OpenDialog.FileName, False)
             Else
-                CurrentNotebook.Dictionary.Open(OpenDialog.FileName)
+                CurrentNotebook.Dictionary.Open(OpenDialog.FileName, False)
             End If
 
             RefreshDictionary()
+            CurrentNotebook.Modified = True
         End If
     End Sub
 
-    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+    Private Sub ExportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportToolStripMenuItem.Click
         MainForm.FileSave()
     End Sub
 
-    Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsToolStripMenuItem.Click
+    Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportToolStripMenuItem.Click
         SaveDictionary()
 
         If SaveDialog.ShowDialog() = DialogResult.OK Then

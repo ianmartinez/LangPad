@@ -19,16 +19,18 @@ namespace LangPadData.NotebookNT
         /// </summary>
         /// 
         /// <param name="filePath">The path of the dictionary file.</param>
-        public void Open(string filePath)
+        /// <param name="replaceExisting">If the current words should be replaced.</param>
+        public void Open(string filePath, bool replaceExisting = true)
         {
-            // Reset words
-            Words = new List<WordNT>();
+            // Reset words if replaceExisting
+            if (replaceExisting)
+                Words = new List<WordNT>();
 
             var lines = KeyValue.ReadFile(filePath);
-            foreach(var line in lines)
+            foreach (var line in lines)
             {
                 var lineCols = line.Value.Split('|');
-                if(line.Key.StartsWith("Word") && lineCols.Length == 4) // Valid format
+                if (line.Key.StartsWith("Word") && lineCols.Length == 4) // Valid format
                 {
                     var newWord = new WordNT
                     {
@@ -72,28 +74,29 @@ namespace LangPadData.NotebookNT
                 dictionaryLines.Add(new KvLine(KvLineType.KeyValue, "Word " + i, lineValue));
             }
 
-           KeyValue.WriteFile(filePath, dictionaryLines);
+            KeyValue.WriteFile(filePath, dictionaryLines);
         }
 
         /// <summary>
-        /// Save the dictionary to a CSV file for use in other
-        /// programs.
+        /// Open a CSV file as a dictionary.
         /// </summary>
         /// 
-        /// <param name="filePath">The file to save to.</param>
-        public void OpenCsv(string filePath)
+        /// <param name="filePath">The file to open.</param>
+        /// <param name="replaceExisting">If the current words should be replaced.</param>
+        public void OpenCsv(string filePath, bool replaceExisting = true)
         {
-            // Reset words
-            Words = new List<WordNT>();
+            // Reset words if replaceExisting
+            if (replaceExisting)
+                Words = new List<WordNT>();
 
             var lines = Lines.Get(File.ReadAllText(filePath));
-            foreach(var line in lines)
+            foreach (var line in lines)
             {
                 var isHeader = line.Trim().Equals("Word,Pronunciation,Definition,Notes");
-                if(!isHeader)
+                if (!isHeader)
                 {
                     var lineCols = line.Split(',');
-                    if(lineCols.Length >= 4)
+                    if (lineCols.Length >= 4)
                     {
                         var newWord = new WordNT
                         {

@@ -22,6 +22,7 @@ Version 11.0 (June 30, 2020)
    • New words are automatically selected in dictionary
    • Added alternating colors to dictionary grid 
    • Default dictionary display font is now larger
+   • Opening a dictionary now adds the new words to the current dictionary, instead of replacing them
    • Added tons of shortcut keys to make all across the program
    • Custom characters can be assigned to keys CTRL+1 to CTRL+0
    • Character insertion now respects caps lock
