@@ -647,7 +647,7 @@ namespace LangPadUI
 
             // For some reason, the RTB control doesn't copy over '\n' sometimes,
             // so if that's the case add it in
-            if(SelectedText.EndsWith("\n") != tempRtb.SelectedText.EndsWith("\n"))
+            if (SelectedText.EndsWith("\n") != tempRtb.SelectedText.EndsWith("\n"))
             {
                 tempRtb.AppendText("\n");
                 tempRtb.SelectAll();
@@ -690,45 +690,59 @@ namespace LangPadUI
         {
             SuspendLayout();
 
-            // Create temp RTB for the style operation, with the selected 
-            // text as its content
-            var tempRtb = new ExtendedRichTextBox
+            if (SelectionLength > 0)
             {
-                Rtf = SelectedRtf
-            };
-            tempRtb.SelectAll();
-
-            // For some reason, the RTB control doesn't copy over '\n' sometimes,
-            // so if that's the case add it in
-            if (SelectedText.EndsWith("\n") != tempRtb.SelectedText.EndsWith("\n"))
-            {
-                tempRtb.AppendText("\n");
+                // Create temp RTB for the style operation, with the selected 
+                // text as its content
+                var tempRtb = new ExtendedRichTextBox
+                {
+                    Rtf = SelectedRtf
+                };
                 tempRtb.SelectAll();
+
+                // For some reason, the RTB control doesn't copy over '\n' sometimes,
+                // so if that's the case add it in
+                if (SelectedText.EndsWith("\n") != tempRtb.SelectedText.EndsWith("\n"))
+                {
+                    tempRtb.AppendText("\n");
+                    tempRtb.SelectAll();
+                }
+
+                // Apply the style on the temp RTB
+                tempRtb.SelectionFont = style.Font;
+                tempRtb.SelectionColor = style.Color;
+                tempRtb.SelectionBackColor = style.HighlightColor;
+                tempRtb.SelectionAlignment = style.Alignment;
+                tempRtb.SelectionIndent = style.Indent;
+                tempRtb.SelectionHangingIndent = style.HangingIndent;
+                tempRtb.BulletIndent = style.BulletIndent;
+                tempRtb.SelectionCharOffset = style.CharOffset;
+                tempRtb.SelectAll();
+
+                // Store old selection positions
+                var oldStartPos = SelectionStart;
+                var oldStartLength = SelectionLength;
+
+                // Copy over the formatted text from the tempRtb
+                SelectedRtf = tempRtb.SelectedRtf;
+
+                // Restore the old selection 
+                Select(oldStartPos, oldStartLength);
+
+                // Dispose of temp RTB
+                tempRtb.Dispose();
             }
-
-            // Apply the style on the temp RTB
-            tempRtb.SelectionFont = style.Font;
-            tempRtb.SelectionColor = style.Color;
-            tempRtb.SelectionBackColor = style.HighlightColor;
-            tempRtb.SelectionAlignment = style.Alignment;
-            tempRtb.SelectionIndent = style.Indent;
-            tempRtb.SelectionHangingIndent = style.HangingIndent;
-            tempRtb.BulletIndent = style.BulletIndent;
-            tempRtb.SelectionCharOffset = style.CharOffset;
-            tempRtb.SelectAll();
-
-            // Store old selection positions
-            var oldStartPos = SelectionStart;
-            var oldStartLength = SelectionLength;
-
-            // Copy over the formatted text from the tempRtb
-            SelectedRtf = tempRtb.SelectedRtf;
-
-            // Restore the old selection 
-            Select(oldStartPos, oldStartLength);
-
-            // Dispose of temp RTB
-            tempRtb.Dispose();
+            else
+            {
+                SelectionFont = style.Font;
+                SelectionColor = style.Color;
+                SelectionBackColor = style.HighlightColor;
+                SelectionAlignment = style.Alignment;
+                SelectionIndent = style.Indent;
+                SelectionHangingIndent = style.HangingIndent;
+                BulletIndent = style.BulletIndent;
+                SelectionCharOffset = style.CharOffset;
+            }
 
             ResumeLayout();
         }
