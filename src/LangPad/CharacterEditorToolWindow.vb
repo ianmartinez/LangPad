@@ -51,4 +51,14 @@
             MainForm.FileSave()
         End If
     End Sub
+
+    ''' <summary>
+    ''' If visible, hide and show again.
+    ''' </summary>
+    Public Sub Reshow()
+        If Visible Then
+            Hide()
+            Show()
+        End If
+    End Sub
 End Class

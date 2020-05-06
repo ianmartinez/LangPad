@@ -698,6 +698,11 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Check for updates and display a dialog if there are any
  </summary>
 </member>
+<member name="M:LangPad.CharacterEditorToolWindow.Reshow">
+ <summary>
+ If visible, hide and show again.
+ </summary>
+</member>
 <member name="T:LangPad.HtmlConverter">
  <summary>
  Handles conversion to HTML.

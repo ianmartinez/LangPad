@@ -187,6 +187,7 @@ Public Class DictionaryForm
         If MainForm IsNot Nothing Then
             CharEditWindow.TargetForm = MainForm
             MainForm.Activate()
+            CharEditWindow.Reshow()
         End If
         SaveDictionary()
         Hide()

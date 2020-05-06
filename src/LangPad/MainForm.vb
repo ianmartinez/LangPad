@@ -917,6 +917,7 @@ Public Class MainForm
     Public Sub DictionaryMenuItem_Click(sender As Object, e As EventArgs) Handles DictionaryMenuItem.Click
         DictionaryForm.Show()
         DictionaryForm.Activate()
+        CharEditWindow.Reshow()
     End Sub
 
     Public Sub MainForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
