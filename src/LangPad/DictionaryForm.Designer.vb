@@ -233,7 +233,8 @@ Partial Class DictionaryForm
         '
         'MainToolStrip
         '
-        Me.MainToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.MainToolStrip.CanOverflow = False
+        Me.MainToolStrip.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.MainToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ExportHtmlToolStripButton, Me.ToolStripSeparator1, Me.CharacterEditorToolStripButton, Me.ToolStripSeparator2, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.ToolStripSeparator3, Me.FontToolStripButton, Me.ResetFontToolStripButton, Me.ToolStripSeparator4, Me.FindToolStripButton})

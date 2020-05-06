@@ -55,9 +55,6 @@ Partial Class RtfEditorForm
         'MainToolStripContainer
         '
         '
-        'MainToolStripContainer.BottomToolStripPanel
-        '
-        '
         'MainToolStripContainer.ContentPanel
         '
         Me.MainToolStripContainer.ContentPanel.BackColor = System.Drawing.SystemColors.ControlDark
@@ -65,14 +62,8 @@ Partial Class RtfEditorForm
         Me.MainToolStripContainer.ContentPanel.Padding = New System.Windows.Forms.Padding(0, 1, 0, 0)
         Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1020, 736)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        '
-        'MainToolStripContainer.LeftToolStripPanel
-        '
         Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 0)
         Me.MainToolStripContainer.Name = "MainToolStripContainer"
-        '
-        'MainToolStripContainer.RightToolStripPanel
-        '
         Me.MainToolStripContainer.Size = New System.Drawing.Size(1020, 777)
         Me.MainToolStripContainer.TabIndex = 2
         Me.MainToolStripContainer.Text = "MainToolStripContainer"
@@ -116,7 +107,7 @@ Partial Class RtfEditorForm
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 41)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 23)
         '
         'CutToolStripButton
         '
@@ -151,7 +142,7 @@ Partial Class RtfEditorForm
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 41)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 23)
         '
         'RefreshToolStripButton
         '
