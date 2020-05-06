@@ -18,6 +18,7 @@ Version 11.0 (June 30, 2020)
    • Easier resizing of images before insertion
    • Pressing CTRL+S on character editor and dictionary now saves the notebook
    • Display shortcut keys on menus
+   **• Add menu a shortcut keys to dictionary
    • Added tons of shortcut keys to make all across the program
    • Custom characters can be assigned to keys CTRL+1 to CTRL+0
    • Character insertion now respects caps lock
