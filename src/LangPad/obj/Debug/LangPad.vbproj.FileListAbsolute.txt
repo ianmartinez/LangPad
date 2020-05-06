@@ -60,7 +60,6 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.dl
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.dll
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadData.dll
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadUI.dll
-C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\ReverseMarkdown.dll
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\RtfPipe.dll
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadData.pdb
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadUI.pdb

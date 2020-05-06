@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPad.exe" size="1100288">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPad.exe" size="1099776">
       <assemblyIdentity name="LangPad" version="11.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/y0SAdKiWo2g5SjFhb+c1wbTd7z1SpxaXlFgOHJu3zs=</dsig:DigestValue>
+        <dsig:DigestValue>YFjjGahK+cuV/UEjpdPAkleBsbEPpiYHLS00hzbC2Bw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -99,18 +99,6 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>PeaB+yHLBg9PpPmhLbZw4ckG+8vYvgf9vkwcvT98uBU=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReverseMarkdown.dll" size="23040">
-      <assemblyIdentity name="ReverseMarkdown" version="3.11.0.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JYPUS8A8JKSXyQBS1JqtAjI19fp5zTo9wakgmOLHUvA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

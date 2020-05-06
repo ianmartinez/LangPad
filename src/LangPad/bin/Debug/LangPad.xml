@@ -693,11 +693,6 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  
  <returns>The RTF that has been converted to HTML.</returns>
 </member>
-<member name="T:LangPad.MarkdownConverter">
- <summary>
- Handles the conversion to Markdown
- </summary>
-</member>
 <member name="T:LangPad.ImageResizer">
  <summary>
  Module handling the resizing of images.

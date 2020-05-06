@@ -90,9 +90,6 @@
       <HintPath>..\packages\HtmlAgilityPack.1.11.23\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
-    <Reference Include="ReverseMarkdown, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ReverseMarkdown.3.11.0\lib\net46\ReverseMarkdown.dll</HintPath>
-    </Reference>
     <Reference Include="RtfPipe, Version=1.0.7388.1242, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RtfPipe.1.0.7388.1242\lib\net45\RtfPipe.dll</HintPath>
     </Reference>
@@ -178,7 +175,6 @@
     <Compile Include="Dialogs\ImportImageDialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Converters\MarkdownConverter.vb" />
     <Compile Include="ImageResizer.vb" />
     <Compile Include="Editors\CharacterEditor.Designer.vb">
       <DependentUpon>CharacterEditor.vb</DependentUpon>
