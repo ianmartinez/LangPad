@@ -50,7 +50,7 @@ Partial Class CharacterEditorToolWindow
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Characters"
+        Me.Text = "Character Editor"
         Me.ResumeLayout(False)
 
     End Sub
