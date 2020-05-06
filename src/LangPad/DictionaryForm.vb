@@ -387,6 +387,12 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
-        DictionaryGrid.SelectAll()
+        If DictionaryGrid.IsCurrentCellInEditMode Then
+            If CurrentTextbox IsNot Nothing Then
+                CurrentTextbox.SelectAll()
+            End If
+        Else
+            DictionaryGrid.SelectAll()
+        End If
     End Sub
 End Class
