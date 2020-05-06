@@ -43,6 +43,7 @@ Version 11.0 (June 30, 2020)
    • Pages are now inserted after the current page, not at the end of the notebook
    • Smaller sidebar that has been split into two tabs: pages and notebook info
    • Move sidebar to the left side
+   • Toolbar icons now flow instead of having overflow menus
    • Refactor text style code
    • Improved splash screen
    • Notebook files are now optimized for compression speed over compression density

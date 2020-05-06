@@ -113,7 +113,8 @@ Partial Class NotebookEditor
         '
         'DocumentToolStrip
         '
-        Me.DocumentToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.DocumentToolStrip.CanOverflow = False
+        Me.DocumentToolStrip.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DocumentToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.DocumentToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.DocumentToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageUpToolStripButton, Me.PageDownToolStripButton, Me.ToolStripSeparator1, Me.AddToolStripButton, Me.RemoveToolStripButton, Me.DuplicateToolStripButton, Me.ToolStripSeparator3, Me.RenameToolStripButton, Me.ToolStripSeparator2, Me.ImportToolStripButton, Me.ExportToolStripButton})

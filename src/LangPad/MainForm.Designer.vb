@@ -177,8 +177,15 @@ Partial Class MainForm
         Me.ImportPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExportPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.FirstPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreviousPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NextPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LastPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator24 = New System.Windows.Forms.ToolStripSeparator()
+        Me.MovePageToTopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MovePageUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MovePageDownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MovePageToBottomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator21 = New System.Windows.Forms.ToolStripSeparator()
         Me.DictionaryMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinguisticsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -236,14 +243,7 @@ Partial Class MainForm
         Me.PatreonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator27 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator24 = New System.Windows.Forms.ToolStripSeparator()
-        Me.MovePageUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MovePageDownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MovePageToTopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MovePageToBottomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotebookEditorPanel = New LangPad.NotebookEditor()
-        Me.FirstPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LastPageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainContextMenu.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
@@ -375,7 +375,7 @@ Partial Class MainForm
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.CurrentPageContainerBorder)
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.FindReplacePanel)
         Me.SplitLayoutPanel.Panel2.Controls.Add(Me.ColorPanel)
-        Me.SplitLayoutPanel.Size = New System.Drawing.Size(1356, 833)
+        Me.SplitLayoutPanel.Size = New System.Drawing.Size(1356, 830)
         Me.SplitLayoutPanel.SplitterDistance = 340
         Me.SplitLayoutPanel.SplitterWidth = 3
         Me.SplitLayoutPanel.TabIndex = 1
@@ -388,7 +388,7 @@ Partial Class MainForm
         Me.PropertiesContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PropertiesContainerPanel.Location = New System.Drawing.Point(0, 0)
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
-        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(340, 833)
+        Me.PropertiesContainerPanel.Size = New System.Drawing.Size(340, 830)
         Me.PropertiesContainerPanel.TabIndex = 13
         '
         'CurrentPageContainerBorder
@@ -399,7 +399,7 @@ Partial Class MainForm
         Me.CurrentPageContainerBorder.Location = New System.Drawing.Point(0, 166)
         Me.CurrentPageContainerBorder.Name = "CurrentPageContainerBorder"
         Me.CurrentPageContainerBorder.Padding = New System.Windows.Forms.Padding(1)
-        Me.CurrentPageContainerBorder.Size = New System.Drawing.Size(1013, 667)
+        Me.CurrentPageContainerBorder.Size = New System.Drawing.Size(1013, 664)
         Me.CurrentPageContainerBorder.TabIndex = 76
         '
         'CurrentPageContainer
@@ -409,7 +409,7 @@ Partial Class MainForm
         Me.CurrentPageContainer.Location = New System.Drawing.Point(1, 1)
         Me.CurrentPageContainer.Name = "CurrentPageContainer"
         Me.CurrentPageContainer.Padding = New System.Windows.Forms.Padding(3)
-        Me.CurrentPageContainer.Size = New System.Drawing.Size(1011, 665)
+        Me.CurrentPageContainer.Size = New System.Drawing.Size(1011, 662)
         Me.CurrentPageContainer.TabIndex = 75
         '
         'FindReplacePanel
@@ -939,11 +939,11 @@ Partial Class MainForm
         'MainToolStripContainer.ContentPanel
         '
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.SplitLayoutPanel)
-        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1356, 833)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1356, 830)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 33)
+        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 36)
         Me.MainToolStripContainer.Name = "MainToolStripContainer"
-        Me.MainToolStripContainer.Size = New System.Drawing.Size(1356, 911)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(1356, 908)
         Me.MainToolStripContainer.TabIndex = 74
         '
         'MainToolStripContainer.TopToolStripPanel
@@ -1032,10 +1032,12 @@ Partial Class MainForm
         '
         'MainToolStrip
         '
+        Me.MainToolStrip.CanOverflow = False
         Me.MainToolStrip.Dock = System.Windows.Forms.DockStyle.None
         Me.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.MainToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.MainToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.toolStripSeparator, Me.CutToolStripButton, Me.CopyToolStripButton, Me.PasteToolStripButton, Me.PastePlainToolStripButton, Me.toolStripSeparator2, Me.UndoToolStripButton, Me.RedoToolStripButton, Me.ToolStripSeparator9, Me.CharacterEditorToolStripButton, Me.DictionaryToolStripButton, Me.ToolStripSeparator14, Me.FontToolStripButton, Me.ToolStripSeparator15, Me.BoldToolStripButton, Me.ItalicToolStripButton, Me.UnderlineToolStripButton, Me.StrikeToolStripButton, Me.ToolStripSeparator5, Me.AlignLeftToolStripButton, Me.AlignCenterToolStripButton, Me.AlignRightToolStripButton, Me.ToolStripSeparator8, Me.DecreaseIndentToolStripButton, Me.IncreaseIndentToolStripButton})
+        Me.MainToolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
         Me.MainToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.MainToolStrip.MinimumSize = New System.Drawing.Size(0, 38)
         Me.MainToolStrip.Name = "MainToolStrip"
@@ -1301,12 +1303,13 @@ Partial Class MainForm
         '
         'MainMenu
         '
+        Me.MainMenu.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MainMenu.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.MainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.PageToolStripMenuItem, Me.LinguisticsToolStripMenuItem, Me.InsertToolStripMenuItem, Me.StyleToolStripMenuItem, Me.FormatToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MainMenu.Location = New System.Drawing.Point(0, 0)
         Me.MainMenu.Name = "MainMenu"
         Me.MainMenu.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MainMenu.Size = New System.Drawing.Size(1356, 33)
+        Me.MainMenu.Size = New System.Drawing.Size(1356, 36)
         Me.MainMenu.TabIndex = 75
         Me.MainMenu.Text = "MenuStrip1"
         '
@@ -1314,7 +1317,7 @@ Partial Class MainForm
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.NewWindowToolStripMenuItem, Me.OpenToolStripMenuItem, Me.toolStripSeparator3, Me.SaveToolStripMenuItem, Me.SaveAsToolStripMenuItem, Me.toolStripSeparator4, Me.PrintToolStripMenuItem, Me.PrintPreviewToolStripMenuItem, Me.PageSetupToolStripMenuItem, Me.ToolStripMenuItem22, Me.RTFEditorToolStripMenuItem, Me.ToolStripSeparator16, Me.QuitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(54, 29)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(54, 32)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'NewToolStripMenuItem
@@ -1425,7 +1428,7 @@ Partial Class MainForm
         '
         Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoToolStripMenuItem, Me.RedoToolStripMenuItem, Me.toolStripSeparator6, Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.PastePlainToolStripMenuItem, Me.ToolStripMenuItem25, Me.FindToolStripMenuItem, Me.toolStripSeparator7, Me.SelectAllToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(58, 29)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(58, 32)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'UndoToolStripMenuItem
@@ -1515,7 +1518,7 @@ Partial Class MainForm
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ZoomInToolStripMenuItem, Me.ZoomOutToolStripMenuItem, Me.ToolStripMenuItem27, Me.ZoomToolStripMenuItem, Me.EditZoomToolStripMenuItem, Me.ToolStripMenuItem26, Me.WordWrapToolStripMenuItem, Me.ToolStripMenuItem1, Me.FullModeToolStripMenuItem, Me.MinimalModeToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToggleSidebarToolStripMenuItem, Me.ToggleStatusbarToolStripMenuItem, Me.ToggleToolbarToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(65, 29)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(65, 32)
         Me.ViewToolStripMenuItem.Text = "View"
         '
         'ZoomInToolStripMenuItem
@@ -1616,7 +1619,7 @@ Partial Class MainForm
         '
         Me.PageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddPageToolStripMenuItem, Me.RemovePageToolStripMenuItem, Me.DuplicatePageToolStripMenuItem, Me.DuplicateAndNameToolStripMenuItem, Me.ToolStripMenuItem28, Me.RenamePageToolStripMenuItem, Me.ToolStripMenuItem29, Me.ImportPageToolStripMenuItem, Me.ExportPageToolStripMenuItem, Me.ToolStripMenuItem3, Me.FirstPageToolStripMenuItem, Me.PreviousPageToolStripMenuItem, Me.NextPageToolStripMenuItem, Me.LastPageToolStripMenuItem, Me.ToolStripSeparator24, Me.MovePageToTopToolStripMenuItem, Me.MovePageUpToolStripMenuItem, Me.MovePageDownToolStripMenuItem, Me.MovePageToBottomToolStripMenuItem, Me.ToolStripSeparator21, Me.DictionaryMenuItem})
         Me.PageToolStripMenuItem.Name = "PageToolStripMenuItem"
-        Me.PageToolStripMenuItem.Size = New System.Drawing.Size(109, 29)
+        Me.PageToolStripMenuItem.Size = New System.Drawing.Size(109, 32)
         Me.PageToolStripMenuItem.Text = "Notebook"
         '
         'AddPageToolStripMenuItem
@@ -1693,6 +1696,15 @@ Partial Class MainForm
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
         Me.ToolStripMenuItem3.Size = New System.Drawing.Size(439, 6)
         '
+        'FirstPageToolStripMenuItem
+        '
+        Me.FirstPageToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.FirstPageToolStripMenuItem.Name = "FirstPageToolStripMenuItem"
+        Me.FirstPageToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.Left), System.Windows.Forms.Keys)
+        Me.FirstPageToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
+        Me.FirstPageToolStripMenuItem.Text = "First Page"
+        '
         'PreviousPageToolStripMenuItem
         '
         Me.PreviousPageToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -1708,6 +1720,54 @@ Partial Class MainForm
         Me.NextPageToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Right), System.Windows.Forms.Keys)
         Me.NextPageToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
         Me.NextPageToolStripMenuItem.Text = "Next Page"
+        '
+        'LastPageToolStripMenuItem
+        '
+        Me.LastPageToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.LastPageToolStripMenuItem.Name = "LastPageToolStripMenuItem"
+        Me.LastPageToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.Right), System.Windows.Forms.Keys)
+        Me.LastPageToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
+        Me.LastPageToolStripMenuItem.Text = "Last Page"
+        '
+        'ToolStripSeparator24
+        '
+        Me.ToolStripSeparator24.Name = "ToolStripSeparator24"
+        Me.ToolStripSeparator24.Size = New System.Drawing.Size(439, 6)
+        '
+        'MovePageToTopToolStripMenuItem
+        '
+        Me.MovePageToTopToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.MovePageToTopToolStripMenuItem.Name = "MovePageToTopToolStripMenuItem"
+        Me.MovePageToTopToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.Up), System.Windows.Forms.Keys)
+        Me.MovePageToTopToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
+        Me.MovePageToTopToolStripMenuItem.Text = "Move Page to Top"
+        '
+        'MovePageUpToolStripMenuItem
+        '
+        Me.MovePageUpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.MovePageUpToolStripMenuItem.Name = "MovePageUpToolStripMenuItem"
+        Me.MovePageUpToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Up), System.Windows.Forms.Keys)
+        Me.MovePageUpToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
+        Me.MovePageUpToolStripMenuItem.Text = "Move Page Up"
+        '
+        'MovePageDownToolStripMenuItem
+        '
+        Me.MovePageDownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.MovePageDownToolStripMenuItem.Name = "MovePageDownToolStripMenuItem"
+        Me.MovePageDownToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Down), System.Windows.Forms.Keys)
+        Me.MovePageDownToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
+        Me.MovePageDownToolStripMenuItem.Text = "Move Page Down"
+        '
+        'MovePageToBottomToolStripMenuItem
+        '
+        Me.MovePageToBottomToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.MovePageToBottomToolStripMenuItem.Name = "MovePageToBottomToolStripMenuItem"
+        Me.MovePageToBottomToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.Down), System.Windows.Forms.Keys)
+        Me.MovePageToBottomToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
+        Me.MovePageToBottomToolStripMenuItem.Text = "Move Page to Bottom"
         '
         'ToolStripSeparator21
         '
@@ -1726,7 +1786,7 @@ Partial Class MainForm
         '
         Me.LinguisticsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharacterEditorToolStripMenuItem, Me.ToolStripSeparator25, Me.BroadTranscriptionToolStripMenuItem, Me.NarrowTranscriptionToolStripMenuItem, Me.RemoveBracketsToolStripMenuItem})
         Me.LinguisticsToolStripMenuItem.Name = "LinguisticsToolStripMenuItem"
-        Me.LinguisticsToolStripMenuItem.Size = New System.Drawing.Size(109, 29)
+        Me.LinguisticsToolStripMenuItem.Size = New System.Drawing.Size(109, 32)
         Me.LinguisticsToolStripMenuItem.Text = "Linguistics"
         '
         'CharacterEditorToolStripMenuItem
@@ -1773,7 +1833,7 @@ Partial Class MainForm
         '
         Me.InsertToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImageToolStripMenuItem, Me.ToolStripMenuItem32, Me.InsertBulletsToolStripMenuItem, Me.RemoveBulletsToolStripMenuItem})
         Me.InsertToolStripMenuItem.Name = "InsertToolStripMenuItem"
-        Me.InsertToolStripMenuItem.Size = New System.Drawing.Size(72, 29)
+        Me.InsertToolStripMenuItem.Size = New System.Drawing.Size(72, 32)
         Me.InsertToolStripMenuItem.Text = "Insert"
         '
         'ImageToolStripMenuItem
@@ -1812,7 +1872,7 @@ Partial Class MainForm
         '
         Me.StyleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColorPanelToolStripMenuItem, Me.ToolStripSeparator13, Me.TextColorToolStripMenuItem, Me.HighlightToolStripMenuItem, Me.ToolStripMenuItem24, Me.EditStyleToolStripMenuItem, Me.DefaultStyleToolStripMenuItem, Me.ApplyStyleToolStripMenuItem})
         Me.StyleToolStripMenuItem.Name = "StyleToolStripMenuItem"
-        Me.StyleToolStripMenuItem.Size = New System.Drawing.Size(65, 29)
+        Me.StyleToolStripMenuItem.Size = New System.Drawing.Size(65, 32)
         Me.StyleToolStripMenuItem.Text = "Style"
         '
         'ColorPanelToolStripMenuItem
@@ -1873,7 +1933,7 @@ Partial Class MainForm
         '
         Me.FormatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FontToolStripMenuItem, Me.ToolStripSeparator18, Me.AlignLeftToolStripMenuItem, Me.AlignCenterToolStripMenuItem, Me.AlignRightToolStripMenuItem, Me.ToolStripSeparator19, Me.BoldToolStripMenuItem, Me.ItalicToolStripMenuItem, Me.UnderlineToolStripMenuItem, Me.StrikeToolStripMenuItem, Me.ToolStripSeparator20, Me.IncreaseIndentToolStripMenuItem, Me.DecreaseIndentToolStripMenuItem, Me.ResetIndentToolStripMenuItem, Me.ToolStripSeparator22, Me.IncreaseBulletIndentToolStripMenuItem, Me.DecreaseBulletIndentToolStripMenuItem, Me.ResetBulletIndentToolStripMenuItem, Me.ToolStripSeparator23, Me.IncreaseHangingIndentToolStripMenuItem, Me.DecreaseHangingIndentToolStripMenuItem, Me.ResetHangingIndentToolStripMenuItem, Me.ToolStripSeparator17, Me.SubscriptToolStripMenuItem, Me.SuperscriptToolStripMenuItem, Me.BaselineToolStripMenuItem})
         Me.FormatToolStripMenuItem.Name = "FormatToolStripMenuItem"
-        Me.FormatToolStripMenuItem.Size = New System.Drawing.Size(58, 29)
+        Me.FormatToolStripMenuItem.Size = New System.Drawing.Size(58, 32)
         Me.FormatToolStripMenuItem.Text = "Text"
         '
         'FontToolStripMenuItem
@@ -2073,7 +2133,7 @@ Partial Class MainForm
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateToolStripMenuItem, Me.ToolStripMenuItem23, Me.SettingsToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(69, 29)
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(69, 32)
         Me.ToolsToolStripMenuItem.Text = "Tools"
         '
         'UpdateToolStripMenuItem
@@ -2099,7 +2159,7 @@ Partial Class MainForm
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PatreonToolStripMenuItem, Me.ToolStripSeparator27, Me.AboutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(65, 29)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(65, 32)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'PatreonToolStripMenuItem
@@ -2121,71 +2181,14 @@ Partial Class MainForm
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(282, 34)
         Me.AboutToolStripMenuItem.Text = "About..."
         '
-        'ToolStripSeparator24
-        '
-        Me.ToolStripSeparator24.Name = "ToolStripSeparator24"
-        Me.ToolStripSeparator24.Size = New System.Drawing.Size(439, 6)
-        '
-        'MovePageUpToolStripMenuItem
-        '
-        Me.MovePageUpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.MovePageUpToolStripMenuItem.Name = "MovePageUpToolStripMenuItem"
-        Me.MovePageUpToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Up), System.Windows.Forms.Keys)
-        Me.MovePageUpToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
-        Me.MovePageUpToolStripMenuItem.Text = "Move Page Up"
-        '
-        'MovePageDownToolStripMenuItem
-        '
-        Me.MovePageDownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.MovePageDownToolStripMenuItem.Name = "MovePageDownToolStripMenuItem"
-        Me.MovePageDownToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Down), System.Windows.Forms.Keys)
-        Me.MovePageDownToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
-        Me.MovePageDownToolStripMenuItem.Text = "Move Page Down"
-        '
-        'MovePageToTopToolStripMenuItem
-        '
-        Me.MovePageToTopToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.MovePageToTopToolStripMenuItem.Name = "MovePageToTopToolStripMenuItem"
-        Me.MovePageToTopToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.Up), System.Windows.Forms.Keys)
-        Me.MovePageToTopToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
-        Me.MovePageToTopToolStripMenuItem.Text = "Move Page to Top"
-        '
-        'MovePageToBottomToolStripMenuItem
-        '
-        Me.MovePageToBottomToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.MovePageToBottomToolStripMenuItem.Name = "MovePageToBottomToolStripMenuItem"
-        Me.MovePageToBottomToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.Down), System.Windows.Forms.Keys)
-        Me.MovePageToBottomToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
-        Me.MovePageToBottomToolStripMenuItem.Text = "Move Page to Bottom"
-        '
         'NotebookEditorPanel
         '
         Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
-        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(330, 470)
+        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(312, 470)
         Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
-        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 833)
+        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 830)
         Me.NotebookEditorPanel.TabIndex = 0
-        '
-        'FirstPageToolStripMenuItem
-        '
-        Me.FirstPageToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.FirstPageToolStripMenuItem.Name = "FirstPageToolStripMenuItem"
-        Me.FirstPageToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.Left), System.Windows.Forms.Keys)
-        Me.FirstPageToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
-        Me.FirstPageToolStripMenuItem.Text = "First Page"
-        '
-        'LastPageToolStripMenuItem
-        '
-        Me.LastPageToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.LastPageToolStripMenuItem.Name = "LastPageToolStripMenuItem"
-        Me.LastPageToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.Right), System.Windows.Forms.Keys)
-        Me.LastPageToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
-        Me.LastPageToolStripMenuItem.Text = "Last Page"
         '
         'MainForm
         '

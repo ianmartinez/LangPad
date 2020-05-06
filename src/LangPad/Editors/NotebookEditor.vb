@@ -19,6 +19,16 @@ Public Class NotebookEditor
         RenameToolStripButton.Image = IconManager.Get("edit", IconSize.Small, Res)
         ImportToolStripButton.Image = IconManager.Get("document-import", IconSize.Small, Res)
         ExportToolStripButton.Image = IconManager.Get("document-export", IconSize.Small, Res)
+        AdjustMinWidth()
+    End Sub
+
+    Public Sub AdjustMinWidth()
+        Dim MinWidth = 0
+        For Each ToolItem As ToolStripItem In DocumentToolStrip.Items
+            MinWidth += (ToolItem.Width + 2)
+        Next
+
+        MinimumSize = New Size(MinWidth, MinimumSize.Height)
     End Sub
 
     Private Sub TitleTextBox_TextChanged(sender As Object, e As EventArgs) Handles TitleTextBox.TextChanged

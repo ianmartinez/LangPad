@@ -21,10 +21,6 @@ Public Class MainForm
         ' Set scaling size for context menus
         MainContextMenu.ImageScalingSize = New Size(16, 16)
 
-        ' Adjust the sidebar dimensions
-        SplitLayoutPanel.Panel1Collapsed = False
-        SplitLayoutPanel.SplitterDistance = NotebookEditorPanel.MinimumSize.Width
-
         ' Load the file that the program was sent, if any
         If My.Application.CommandLineArgs.Count > 0 Then
             If File.Exists(My.Application.CommandLineArgs(0)) Then
@@ -76,6 +72,10 @@ Public Class MainForm
         ' Set icons
         SetIcons()
 
+        ' Adjust the sidebar dimensions
+        SplitLayoutPanel.Panel1Collapsed = False
+        SplitLayoutPanel.SplitterDistance = NotebookEditorPanel.MinimumSize.Width
+
         ' Add handlers for the color panel buttons
         For Each ColorButton As Button In ColorLayoutPanel.Controls
             If TypeOf ColorButton Is ColorButton Then
@@ -114,6 +114,8 @@ Public Class MainForm
     Public Sub SetIcons()
         Dim Res As IconResolution = GetIconResolution()
         NotebookEditorPanel.SetIcons()
+
+        SplitLayoutPanel.Panel1MinSize = NotebookEditorPanel.MinimumSize.Width
 
         ' Toolstrip
         NewToolStripButton.Image = IconManager.Get("document-new", IconSize.Large, Res)
