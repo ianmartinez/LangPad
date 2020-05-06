@@ -38,6 +38,7 @@ Version 11.0 (June 30, 2020)
    • PageNameDialog text box is now automatically focused when opened
    • Add Patreon, GitHub, and website links to about box
    • Adding, removing, renaming, and changing the order of pages are all *much* faster
+   • Added menu items to move pages to top and bottom
    • Pages are now inserted after the current page, not at the end of the notebook
    • Smaller sidebar that has been split into two tabs: pages and notebook info
    • Move sidebar to the left side

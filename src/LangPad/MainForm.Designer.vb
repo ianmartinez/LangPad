@@ -240,6 +240,8 @@ Partial Class MainForm
         Me.MovePageUpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovePageDownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotebookEditorPanel = New LangPad.NotebookEditor()
+        Me.MovePageToTopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MovePageToBottomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainContextMenu.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
@@ -1611,7 +1613,7 @@ Partial Class MainForm
         '
         'PageToolStripMenuItem
         '
-        Me.PageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddPageToolStripMenuItem, Me.RemovePageToolStripMenuItem, Me.DuplicatePageToolStripMenuItem, Me.DuplicateAndNameToolStripMenuItem, Me.ToolStripMenuItem28, Me.RenamePageToolStripMenuItem, Me.ToolStripMenuItem29, Me.ImportPageToolStripMenuItem, Me.ExportPageToolStripMenuItem, Me.ToolStripMenuItem3, Me.PreviousPageToolStripMenuItem, Me.NextPageToolStripMenuItem, Me.ToolStripSeparator24, Me.MovePageUpToolStripMenuItem, Me.MovePageDownToolStripMenuItem, Me.ToolStripSeparator21, Me.DictionaryMenuItem})
+        Me.PageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddPageToolStripMenuItem, Me.RemovePageToolStripMenuItem, Me.DuplicatePageToolStripMenuItem, Me.DuplicateAndNameToolStripMenuItem, Me.ToolStripMenuItem28, Me.RenamePageToolStripMenuItem, Me.ToolStripMenuItem29, Me.ImportPageToolStripMenuItem, Me.ExportPageToolStripMenuItem, Me.ToolStripMenuItem3, Me.PreviousPageToolStripMenuItem, Me.NextPageToolStripMenuItem, Me.ToolStripSeparator24, Me.MovePageToTopToolStripMenuItem, Me.MovePageUpToolStripMenuItem, Me.MovePageDownToolStripMenuItem, Me.MovePageToBottomToolStripMenuItem, Me.ToolStripSeparator21, Me.DictionaryMenuItem})
         Me.PageToolStripMenuItem.Name = "PageToolStripMenuItem"
         Me.PageToolStripMenuItem.Size = New System.Drawing.Size(109, 29)
         Me.PageToolStripMenuItem.Text = "Notebook"
@@ -2148,6 +2150,22 @@ Partial Class MainForm
         Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 833)
         Me.NotebookEditorPanel.TabIndex = 0
         '
+        'MovePageToTopToolStripMenuItem
+        '
+        Me.MovePageToTopToolStripMenuItem.Name = "MovePageToTopToolStripMenuItem"
+        Me.MovePageToTopToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.Up), System.Windows.Forms.Keys)
+        Me.MovePageToTopToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
+        Me.MovePageToTopToolStripMenuItem.Text = "Move Page to Top"
+        '
+        'MovePageToBottomToolStripMenuItem
+        '
+        Me.MovePageToBottomToolStripMenuItem.Name = "MovePageToBottomToolStripMenuItem"
+        Me.MovePageToBottomToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.Down), System.Windows.Forms.Keys)
+        Me.MovePageToBottomToolStripMenuItem.Size = New System.Drawing.Size(442, 34)
+        Me.MovePageToBottomToolStripMenuItem.Text = "Move Page to Bottom"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -2405,4 +2423,6 @@ Partial Class MainForm
     Friend WithEvents ToolStripSeparator24 As ToolStripSeparator
     Friend WithEvents MovePageUpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MovePageDownToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MovePageToTopToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MovePageToBottomToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -182,8 +182,10 @@ Public Class MainForm
         RenamePageToolStripMenuItem.Image = IconManager.Get("edit", IconSize.Small, Res)
         PreviousPageToolStripMenuItem.Image = IconManager.Get("go-previous", IconSize.Small, Res)
         NextPageToolStripMenuItem.Image = IconManager.Get("go-next", IconSize.Small, Res)
+        MovePageToTopToolStripMenuItem.Image = IconManager.Get("go-top", IconSize.Small, Res)
         MovePageUpToolStripMenuItem.Image = IconManager.Get("go-up", IconSize.Small, Res)
         MovePageDownToolStripMenuItem.Image = IconManager.Get("go-down", IconSize.Small, Res)
+        MovePageToBottomToolStripMenuItem.Image = IconManager.Get("go-bottom", IconSize.Small, Res)
         DictionaryMenuItem.Image = IconManager.Get("dictionary", IconSize.Small, Res)
 
         ' Linguistics
@@ -1087,5 +1089,13 @@ Public Class MainForm
 
     Private Sub MovePageDownToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MovePageDownToolStripMenuItem.Click
         MovePageDown(CurrentPageIndex)
+    End Sub
+
+    Private Sub MovePageToTopToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MovePageToTopToolStripMenuItem.Click
+        MovePage(CurrentPageIndex, 0)
+    End Sub
+
+    Private Sub MovePageToBottomToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MovePageToBottomToolStripMenuItem.Click
+        MovePage(CurrentPageIndex, CurrentNotebook.Pages.Count - 1)
     End Sub
 End Class
