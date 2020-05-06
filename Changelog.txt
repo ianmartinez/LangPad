@@ -29,7 +29,6 @@ Version 11.0 (June 30, 2020)
    • Paste images directly from File Explorer
    • Show current line in status bar
    • Add options to wrap selected text in brackets [] and // or remove brackets
-   • Add shortcut keys to wrap text in brackets
    • Zoom in increments of 0.2 (a less drastic jump)   
    • The page title of HTML documents now matches their name in LangPad
    • Now has a dedicated installer
@@ -39,6 +38,7 @@ Version 11.0 (June 30, 2020)
    • Add Patreon, GitHub, and website links to about box
    • Adding, removing, renaming, and changing the order of pages are all *much* faster
    • Added menu items to move pages to top and bottom
+   • Added menu items to go to the first and last page
    • Pages are now inserted after the current page, not at the end of the notebook
    • Smaller sidebar that has been split into two tabs: pages and notebook info
    • Move sidebar to the left side
