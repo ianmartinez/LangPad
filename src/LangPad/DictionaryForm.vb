@@ -17,6 +17,8 @@ Public Class DictionaryForm
         ' Center buttons relative to text boxes
         ' Because Windows' scaling throws them off
         FindButton.Top = FindTextBox.Top - (FindButton.Height / 2 - FindTextBox.Height / 2)
+
+        GridBorder.Padding = New Padding(0)
     End Sub
 
     Public Sub SetIcons()
@@ -267,8 +269,14 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindToolStripMenuItem.Click
-        FindReplaceDialog.Visible = FindReplaceDialog.Visible Xor True
-        If FindReplaceDialog.Visible = True Then FindTextBox.Focus()
+        If FindReplaceDialog.Visible Then ' Hide it
+            FindReplaceDialog.Visible = False
+            GridBorder.Padding = New Padding(0)
+        Else ' Show it
+            FindReplaceDialog.Visible = True
+            FindTextBox.Focus()
+            GridBorder.Padding = New Padding(0, 1, 0, 0)
+        End If
     End Sub
 
     Private Sub EditDisplayFontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditDisplayFontToolStripMenuItem.Click

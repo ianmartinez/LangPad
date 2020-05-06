@@ -85,6 +85,7 @@ Module AppTheme
         Themer.AddMenu(DictionaryForm.MainMenu)
         Themer.AddToolStripContainer(DictionaryForm.MainToolStripContainer)
         Themer.AddToolStrip(DictionaryForm.MainToolStrip)
+        Themer.AddPanelBorder(DictionaryForm.GridBorder)
         Themer.AddGrid(DictionaryForm.DictionaryGrid)
     End Sub
 

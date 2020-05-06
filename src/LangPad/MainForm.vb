@@ -918,6 +918,7 @@ Public Class MainForm
         DictionaryForm.Show()
         DictionaryForm.Activate()
         CharEditWindow.Reshow()
+        DictionaryForm.Activate()
     End Sub
 
     Public Sub MainForm_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated

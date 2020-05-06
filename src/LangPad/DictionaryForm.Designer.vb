@@ -71,6 +71,8 @@ Partial Class DictionaryForm
         Me.ExportToHtmlToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FindToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditDisplayFontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetDisplayFontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -88,8 +90,7 @@ Partial Class DictionaryForm
         Me.BroadTranscriptionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NarrowTranscriptionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RemoveBracketsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
-        Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GridBorder = New LangPadUI.DoubleBufferedPanel()
         CType(Me.DictionaryGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MainToolStripContainer.ContentPanel.SuspendLayout()
         Me.MainToolStripContainer.TopToolStripPanel.SuspendLayout()
@@ -97,6 +98,7 @@ Partial Class DictionaryForm
         Me.FindReplaceDialog.SuspendLayout()
         Me.MainToolStrip.SuspendLayout()
         Me.MainMenu.SuspendLayout()
+        Me.GridBorder.SuspendLayout()
         Me.SuspendLayout()
         '
         'DictionaryGrid
@@ -130,7 +132,7 @@ Partial Class DictionaryForm
         Me.DictionaryGrid.DefaultCellStyle = DataGridViewCellStyle3
         Me.DictionaryGrid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DictionaryGrid.GridColor = System.Drawing.Color.Gainsboro
-        Me.DictionaryGrid.Location = New System.Drawing.Point(0, 54)
+        Me.DictionaryGrid.Location = New System.Drawing.Point(1, 1)
         Me.DictionaryGrid.Name = "DictionaryGrid"
         Me.DictionaryGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -146,7 +148,7 @@ Partial Class DictionaryForm
         DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
         Me.DictionaryGrid.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DictionaryGrid.RowTemplate.Height = 24
-        Me.DictionaryGrid.Size = New System.Drawing.Size(1332, 721)
+        Me.DictionaryGrid.Size = New System.Drawing.Size(1330, 719)
         Me.DictionaryGrid.TabIndex = 3
         '
         'Word
@@ -196,7 +198,7 @@ Partial Class DictionaryForm
         '
         'MainToolStripContainer.ContentPanel
         '
-        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.DictionaryGrid)
+        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.GridBorder)
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.FindReplaceDialog)
         Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1332, 775)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
@@ -511,8 +513,21 @@ Partial Class DictionaryForm
         Me.FindToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.FindToolStripMenuItem.Name = "FindToolStripMenuItem"
         Me.FindToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
-        Me.FindToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.FindToolStripMenuItem.Size = New System.Drawing.Size(248, 34)
         Me.FindToolStripMenuItem.Text = "Find"
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(245, 6)
+        '
+        'SelectAllToolStripMenuItem
+        '
+        Me.SelectAllToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
+        Me.SelectAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(248, 34)
+        Me.SelectAllToolStripMenuItem.Text = "Select All"
         '
         'ViewToolStripMenuItem
         '
@@ -525,14 +540,14 @@ Partial Class DictionaryForm
         '
         Me.EditDisplayFontToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.EditDisplayFontToolStripMenuItem.Name = "EditDisplayFontToolStripMenuItem"
-        Me.EditDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.EditDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(260, 34)
         Me.EditDisplayFontToolStripMenuItem.Text = "Display Font..."
         '
         'ResetDisplayFontToolStripMenuItem
         '
         Me.ResetDisplayFontToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ResetDisplayFontToolStripMenuItem.Name = "ResetDisplayFontToolStripMenuItem"
-        Me.ResetDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.ResetDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(260, 34)
         Me.ResetDisplayFontToolStripMenuItem.Text = "Reset Display Font"
         '
         'WordToolStripMenuItem
@@ -642,18 +657,16 @@ Partial Class DictionaryForm
         Me.RemoveBracketsToolStripMenuItem.Size = New System.Drawing.Size(415, 34)
         Me.RemoveBracketsToolStripMenuItem.Text = "Remove Brackets"
         '
-        'ToolStripSeparator7
+        'GridBorder
         '
-        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(267, 6)
-        '
-        'SelectAllToolStripMenuItem
-        '
-        Me.SelectAllToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
-        Me.SelectAllToolStripMenuItem.Text = "Select All"
+        Me.GridBorder.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.GridBorder.Controls.Add(Me.DictionaryGrid)
+        Me.GridBorder.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridBorder.Location = New System.Drawing.Point(0, 54)
+        Me.GridBorder.Name = "GridBorder"
+        Me.GridBorder.Padding = New System.Windows.Forms.Padding(1)
+        Me.GridBorder.Size = New System.Drawing.Size(1332, 721)
+        Me.GridBorder.TabIndex = 77
         '
         'DictionaryForm
         '
@@ -678,6 +691,7 @@ Partial Class DictionaryForm
         Me.MainToolStrip.PerformLayout()
         Me.MainMenu.ResumeLayout(False)
         Me.MainMenu.PerformLayout()
+        Me.GridBorder.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -744,4 +758,5 @@ Partial Class DictionaryForm
     Friend WithEvents RemoveBracketsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
     Friend WithEvents SelectAllToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GridBorder As LangPadUI.DoubleBufferedPanel
 End Class
