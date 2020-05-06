@@ -292,7 +292,7 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub ResetDisplayFontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetDisplayFontToolStripMenuItem.Click
-        My.Settings.DictionaryFont = New Font("Calibri", 9, FontStyle.Regular)
+        My.Settings.DictionaryFont = New Font("Calibri", 10, FontStyle.Regular)
         My.Settings.DictionaryFontColor = Color.Black
         My.Settings.Save()
         SetDisplayFont()

@@ -128,7 +128,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Calibri, 9pt")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Calibri, 10pt")>  _
         Public Property DictionaryFont() As Global.System.Drawing.Font
             Get
                 Return CType(Me("DictionaryFont"),Global.System.Drawing.Font)
