@@ -22,7 +22,7 @@ Partial Class DictionaryForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DictionaryForm))
         Me.DictionaryGrid = New System.Windows.Forms.DataGridView()
         Me.Word = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -103,14 +103,14 @@ Partial Class DictionaryForm
         Me.DictionaryGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DictionaryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DictionaryGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Word, Me.Pronunciation, Me.Definition, Me.Notes})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DictionaryGrid.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DictionaryGrid.DefaultCellStyle = DataGridViewCellStyle8
         Me.DictionaryGrid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DictionaryGrid.GridColor = System.Drawing.Color.Gainsboro
         Me.DictionaryGrid.Location = New System.Drawing.Point(0, 54)
@@ -497,14 +497,14 @@ Partial Class DictionaryForm
         '
         Me.EditDisplayFontToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.EditDisplayFontToolStripMenuItem.Name = "EditDisplayFontToolStripMenuItem"
-        Me.EditDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.EditDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(260, 34)
         Me.EditDisplayFontToolStripMenuItem.Text = "Display Font..."
         '
         'ResetDisplayFontToolStripMenuItem
         '
         Me.ResetDisplayFontToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ResetDisplayFontToolStripMenuItem.Name = "ResetDisplayFontToolStripMenuItem"
-        Me.ResetDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.ResetDisplayFontToolStripMenuItem.Size = New System.Drawing.Size(260, 34)
         Me.ResetDisplayFontToolStripMenuItem.Text = "Reset Display Font"
         '
         'WordToolStripMenuItem
@@ -563,7 +563,7 @@ Partial Class DictionaryForm
         '
         Me.EditNotesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.EditNotesToolStripMenuItem.Name = "EditNotesToolStripMenuItem"
-        Me.EditNotesToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
+        Me.EditNotesToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
         Me.EditNotesToolStripMenuItem.Size = New System.Drawing.Size(319, 34)
         Me.EditNotesToolStripMenuItem.Text = "Edit Notes"
         '

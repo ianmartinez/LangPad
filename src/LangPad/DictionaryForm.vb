@@ -189,7 +189,7 @@ Public Class DictionaryForm
         Hide()
     End Sub
 
-    Private Sub DictionaryForm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown, DictionaryGrid.KeyDown
+    Private Sub DictionaryForm_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown ', DictionaryGrid.KeyDown
         If e.Modifiers = Keys.Control Then
             CharEditWindow.CharEdit.ShortcutKeyInsert(e)
         End If
@@ -299,13 +299,29 @@ Public Class DictionaryForm
         End If
     End Sub
 
-    Private Sub EditWordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditWordToolStripMenuItem.Click
+    Private Sub EditCellInCurrentRow(CellCol As Integer)
         If (DictionaryGrid.SelectedRows.Count > 0) Then
             Dim CurrentRow = DictionaryGrid.SelectedRows(0)
             If CurrentRow IsNot Nothing Then
-                DictionaryGrid.CurrentCell = CurrentRow.Cells(0)
+                DictionaryGrid.CurrentCell = CurrentRow.Cells(CellCol)
                 DictionaryGrid.BeginEdit(True)
             End If
         End If
+    End Sub
+
+    Private Sub EditWordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditWordToolStripMenuItem.Click
+        EditCellInCurrentRow(0)
+    End Sub
+
+    Private Sub EditPronunciationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditPronunciationToolStripMenuItem.Click
+        EditCellInCurrentRow(1)
+    End Sub
+
+    Private Sub EditDefinitionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditDefinitionToolStripMenuItem.Click
+        EditCellInCurrentRow(2)
+    End Sub
+
+    Private Sub EditNotesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditNotesToolStripMenuItem.Click
+        EditCellInCurrentRow(3)
     End Sub
 End Class
