@@ -180,8 +180,10 @@ Public Class MainForm
         ImportPageToolStripMenuItem.Image = IconManager.Get("document-import", IconSize.Small, Res)
         ExportPageToolStripMenuItem.Image = IconManager.Get("document-export", IconSize.Small, Res)
         RenamePageToolStripMenuItem.Image = IconManager.Get("edit", IconSize.Small, Res)
+        FirstPageToolStripMenuItem.Image = IconManager.Get("go-first", IconSize.Small, Res)
         PreviousPageToolStripMenuItem.Image = IconManager.Get("go-previous", IconSize.Small, Res)
         NextPageToolStripMenuItem.Image = IconManager.Get("go-next", IconSize.Small, Res)
+        LastPageToolStripMenuItem.Image = IconManager.Get("go-last", IconSize.Small, Res)
         MovePageToTopToolStripMenuItem.Image = IconManager.Get("go-top", IconSize.Small, Res)
         MovePageUpToolStripMenuItem.Image = IconManager.Get("go-up", IconSize.Small, Res)
         MovePageDownToolStripMenuItem.Image = IconManager.Get("go-down", IconSize.Small, Res)
@@ -1097,5 +1099,13 @@ Public Class MainForm
 
     Private Sub MovePageToBottomToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MovePageToBottomToolStripMenuItem.Click
         MovePage(CurrentPageIndex, CurrentNotebook.Pages.Count - 1)
+    End Sub
+
+    Private Sub FirstPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FirstPageToolStripMenuItem.Click
+        CurrentPageIndex = 0
+    End Sub
+
+    Private Sub LastPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LastPageToolStripMenuItem.Click
+        CurrentPageIndex = CurrentNotebook.Pages.Count - 1
     End Sub
 End Class
