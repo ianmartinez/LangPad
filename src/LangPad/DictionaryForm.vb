@@ -310,14 +310,19 @@ Public Class DictionaryForm
         End If
     End Sub
 
-    Private Sub EditSelectedCell()
-        If (DictionaryGrid.SelectedCells.Count > 0) Then
-            Dim CurrentCell = DictionaryGrid.SelectedCells(0)
-            If CurrentCell IsNot Nothing Then
-                DictionaryGrid.CurrentCell = CurrentCell
-                DictionaryGrid.BeginEdit(True)
-            End If
+    Private Sub EditCell(Cell As DataGridViewCell)
+        If Cell IsNot Nothing Then
+            DictionaryGrid.CurrentCell = Cell
+            DictionaryGrid.BeginEdit(True)
         End If
+    End Sub
+
+    Private Sub SelectCells(Cells As DataGridViewSelectedCellCollection)
+        For Each Cell As DataGridViewCell In Cells
+            If Cell IsNot Nothing Then
+                Cell.Selected = True
+            End If
+        Next
     End Sub
 
     Private Sub EditWordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditWordToolStripMenuItem.Click
@@ -337,23 +342,44 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub BroadTranscriptionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BroadTranscriptionToolStripMenuItem.Click
-        EditSelectedCell()
-        If CurrentTextbox IsNot Nothing Then
-            InsertBrackets(CurrentTextbox, "/", "/")
-        End If
+        Dim OldSelected = DictionaryGrid.SelectedCells
+
+        For Each Cell In DictionaryGrid.SelectedCells
+            EditCell(Cell)
+
+            If CurrentTextbox IsNot Nothing Then
+                InsertBrackets(CurrentTextbox, "/", "/")
+            End If
+        Next
+
+        SelectCells(OldSelected)
     End Sub
 
     Private Sub NarrowTranscriptionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NarrowTranscriptionToolStripMenuItem.Click
-        EditSelectedCell()
-        If CurrentTextbox IsNot Nothing Then
-            InsertBrackets(CurrentTextbox, "[", "]")
-        End If
+        Dim OldSelected = DictionaryGrid.SelectedCells
+
+        For Each Cell In DictionaryGrid.SelectedCells
+            EditCell(Cell)
+
+            If CurrentTextbox IsNot Nothing Then
+                InsertBrackets(CurrentTextbox, "[", "]")
+            End If
+        Next
+
+        SelectCells(OldSelected)
     End Sub
 
     Private Sub RemoveBracketsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveBracketsToolStripMenuItem.Click
-        EditSelectedCell()
-        If CurrentTextbox IsNot Nothing Then
-            RemoveAllBrackets(CurrentTextbox)
-        End If
+        Dim OldSelected = DictionaryGrid.SelectedCells
+
+        For Each Cell In DictionaryGrid.SelectedCells
+            EditCell(Cell)
+
+            If CurrentTextbox IsNot Nothing Then
+                RemoveAllBrackets(CurrentTextbox)
+            End If
+        Next
+
+        SelectCells(OldSelected)
     End Sub
 End Class
