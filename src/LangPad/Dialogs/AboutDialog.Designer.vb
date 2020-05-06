@@ -29,6 +29,8 @@ Partial Class AboutDialog
         Me.LicenseTextBox = New System.Windows.Forms.TextBox()
         Me.ChangelogTab = New System.Windows.Forms.TabPage()
         Me.ChangelogTextBox = New System.Windows.Forms.TextBox()
+        Me.CreditsTab = New System.Windows.Forms.TabPage()
+        Me.CreditsTextBox = New System.Windows.Forms.TextBox()
         Me.MainTooltip = New System.Windows.Forms.ToolTip(Me.components)
         Me.MainTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.HeaderBorderPanel = New LangPadUI.DoubleBufferedPanel()
@@ -39,17 +41,15 @@ Partial Class AboutDialog
         Me.GitHubButton = New System.Windows.Forms.Button()
         Me.PatreonButton = New System.Windows.Forms.Button()
         Me.WebsiteButton = New System.Windows.Forms.Button()
-        Me.CreditsTab = New System.Windows.Forms.TabPage()
-        Me.CreditsTextBox = New System.Windows.Forms.TextBox()
         Me.MainTabControl.SuspendLayout()
         Me.LicenseTab.SuspendLayout()
         Me.ChangelogTab.SuspendLayout()
+        Me.CreditsTab.SuspendLayout()
         Me.MainTableLayoutPanel.SuspendLayout()
         Me.HeaderBorderPanel.SuspendLayout()
         Me.HeaderPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ButtonTableLayout.SuspendLayout()
-        Me.CreditsTab.SuspendLayout()
         Me.SuspendLayout()
         '
         'MainTabControl
@@ -120,6 +120,33 @@ Partial Class AboutDialog
         Me.ChangelogTextBox.Size = New System.Drawing.Size(842, 554)
         Me.ChangelogTextBox.TabIndex = 8
         Me.ChangelogTextBox.Text = resources.GetString("ChangelogTextBox.Text")
+        '
+        'CreditsTab
+        '
+        Me.CreditsTab.Controls.Add(Me.CreditsTextBox)
+        Me.CreditsTab.Location = New System.Drawing.Point(4, 29)
+        Me.CreditsTab.Name = "CreditsTab"
+        Me.CreditsTab.Padding = New System.Windows.Forms.Padding(9)
+        Me.CreditsTab.Size = New System.Drawing.Size(860, 572)
+        Me.CreditsTab.TabIndex = 2
+        Me.CreditsTab.Text = "Credits"
+        Me.CreditsTab.UseVisualStyleBackColor = True
+        '
+        'CreditsTextBox
+        '
+        Me.CreditsTextBox.BackColor = System.Drawing.Color.White
+        Me.CreditsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.CreditsTextBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CreditsTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CreditsTextBox.Location = New System.Drawing.Point(9, 9)
+        Me.CreditsTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CreditsTextBox.Multiline = True
+        Me.CreditsTextBox.Name = "CreditsTextBox"
+        Me.CreditsTextBox.ReadOnly = True
+        Me.CreditsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.CreditsTextBox.Size = New System.Drawing.Size(842, 554)
+        Me.CreditsTextBox.TabIndex = 8
+        Me.CreditsTextBox.Text = resources.GetString("CreditsTextBox.Text")
         '
         'MainTableLayoutPanel
         '
@@ -257,33 +284,6 @@ Partial Class AboutDialog
         Me.WebsiteButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.WebsiteButton.UseVisualStyleBackColor = True
         '
-        'CreditsTab
-        '
-        Me.CreditsTab.Controls.Add(Me.CreditsTextBox)
-        Me.CreditsTab.Location = New System.Drawing.Point(4, 29)
-        Me.CreditsTab.Name = "CreditsTab"
-        Me.CreditsTab.Padding = New System.Windows.Forms.Padding(9)
-        Me.CreditsTab.Size = New System.Drawing.Size(860, 572)
-        Me.CreditsTab.TabIndex = 2
-        Me.CreditsTab.Text = "Credits"
-        Me.CreditsTab.UseVisualStyleBackColor = True
-        '
-        'CreditsTextBox
-        '
-        Me.CreditsTextBox.BackColor = System.Drawing.Color.White
-        Me.CreditsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.CreditsTextBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CreditsTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.CreditsTextBox.Location = New System.Drawing.Point(9, 9)
-        Me.CreditsTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.CreditsTextBox.Multiline = True
-        Me.CreditsTextBox.Name = "CreditsTextBox"
-        Me.CreditsTextBox.ReadOnly = True
-        Me.CreditsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.CreditsTextBox.Size = New System.Drawing.Size(842, 554)
-        Me.CreditsTextBox.TabIndex = 8
-        Me.CreditsTextBox.Text = resources.GetString("CreditsTextBox.Text")
-        '
         'AboutDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -304,6 +304,8 @@ Partial Class AboutDialog
         Me.LicenseTab.PerformLayout()
         Me.ChangelogTab.ResumeLayout(False)
         Me.ChangelogTab.PerformLayout()
+        Me.CreditsTab.ResumeLayout(False)
+        Me.CreditsTab.PerformLayout()
         Me.MainTableLayoutPanel.ResumeLayout(False)
         Me.MainTableLayoutPanel.PerformLayout()
         Me.HeaderBorderPanel.ResumeLayout(False)
@@ -311,8 +313,6 @@ Partial Class AboutDialog
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ButtonTableLayout.ResumeLayout(False)
         Me.ButtonTableLayout.PerformLayout()
-        Me.CreditsTab.ResumeLayout(False)
-        Me.CreditsTab.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

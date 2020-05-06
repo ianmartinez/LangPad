@@ -196,7 +196,7 @@ Public Class CharacterEditor
         Dim ButtonText = SourceButton.Text.Replace("◌", "")
 
         If CurrentTextBox IsNot Nothing Then
-            If My.Computer.Keyboard.ShiftKeyDown Then
+            If My.Computer.Keyboard.ShiftKeyDown OrElse My.Computer.Keyboard.CapsLock Then
                 ButtonText = ButtonText.ToUpper()
             End If
 
@@ -451,14 +451,12 @@ Public Class CharacterEditor
         Select Case SearchModeString
             Case "All"
                 SearchMode = CharacterType.All
-
             Case "Extended Latin"
                 SearchMode = CharacterType.ExtendedLatin
             Case "Extended Cyrillic"
                 SearchMode = CharacterType.ExtendedCyrillic
             Case "Extended Greek"
                 SearchMode = CharacterType.ExtendedGreek
-
             Case "IPA (All)"
                 SearchMode = CharacterType.IPAAll
             Case "IPA Consonants"
