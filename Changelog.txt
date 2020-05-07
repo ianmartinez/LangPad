@@ -56,7 +56,7 @@ Version 11.0 (June 30, 2020)
    • Complete re-write of theming code   
    • Add themes: Default Light, Cool Gray, Desert, Luna, Metallic, Luna, Olive, and Whiteout 
    • Bug Fix: Old Language Pad 4.x-5.x files could not be opened
-   • Bug Fix: Fix bad performance when changing font styles on a page that has large images 
+   • Bug Fix: Bad performance when changing font styles on a page that has large images 
    • Bug Fix: Word count wouldn't update automatically when opening a new file
    • Bug Fix: Word count didn't include words separated by tab or newline
    • Bug Fix: Pages with the same name couldn't be imported without changing the name
