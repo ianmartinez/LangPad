@@ -100,7 +100,7 @@ namespace LangPadData.NotebookNT
                 NtSpecVersion = 1;
             else
                 if (double.TryParse(ntVersionStr, out double parsedNtVersion))
-                    NtSpecVersion = parsedNtVersion;
+                NtSpecVersion = parsedNtVersion;
 
             // Reset pages
             Pages = new List<PageNT>();
@@ -159,6 +159,10 @@ namespace LangPadData.NotebookNT
             // if it exists before trying to load it
             if (File.Exists(tempFolder.DictionaryFile))
                 Dictionary.Open(tempFolder.DictionaryFile);
+
+            // 4.0 also lack an info.txt, so check for that too
+            if (File.Exists(tempFolder.InfoFile))
+                Info = File.ReadAllText(tempFolder.InfoFile);
 
             Modified = false;
             DocumentPath = filePath;
