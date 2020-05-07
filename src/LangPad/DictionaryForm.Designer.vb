@@ -38,7 +38,7 @@ Partial Class DictionaryForm
         Me.FontPicker = New System.Windows.Forms.FontDialog()
         Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.GridBorder = New LangPadUI.DoubleBufferedPanel()
-        Me.FindReplaceDialog = New LangPadUI.DoubleBufferedPanel()
+        Me.FindReplacePanel = New LangPadUI.DoubleBufferedPanel()
         Me.StartsWithCheck = New System.Windows.Forms.CheckBox()
         Me.DefinitionRadio = New System.Windows.Forms.RadioButton()
         Me.WordRadio = New System.Windows.Forms.RadioButton()
@@ -95,7 +95,7 @@ Partial Class DictionaryForm
         Me.MainToolStripContainer.TopToolStripPanel.SuspendLayout()
         Me.MainToolStripContainer.SuspendLayout()
         Me.GridBorder.SuspendLayout()
-        Me.FindReplaceDialog.SuspendLayout()
+        Me.FindReplacePanel.SuspendLayout()
         Me.MainToolStrip.SuspendLayout()
         Me.MainMenu.SuspendLayout()
         Me.SuspendLayout()
@@ -198,7 +198,7 @@ Partial Class DictionaryForm
         'MainToolStripContainer.ContentPanel
         '
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.GridBorder)
-        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.FindReplaceDialog)
+        Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.FindReplacePanel)
         Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1178, 570)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 33)
@@ -224,19 +224,19 @@ Partial Class DictionaryForm
         '
         'FindReplaceDialog
         '
-        Me.FindReplaceDialog.BackColor = System.Drawing.Color.Transparent
-        Me.FindReplaceDialog.Controls.Add(Me.StartsWithCheck)
-        Me.FindReplaceDialog.Controls.Add(Me.DefinitionRadio)
-        Me.FindReplaceDialog.Controls.Add(Me.WordRadio)
-        Me.FindReplaceDialog.Controls.Add(Me.FindTextBox)
-        Me.FindReplaceDialog.Controls.Add(Me.Label17)
-        Me.FindReplaceDialog.Controls.Add(Me.FindButton)
-        Me.FindReplaceDialog.Dock = System.Windows.Forms.DockStyle.Top
-        Me.FindReplaceDialog.Location = New System.Drawing.Point(0, 0)
-        Me.FindReplaceDialog.Name = "FindReplaceDialog"
-        Me.FindReplaceDialog.Size = New System.Drawing.Size(1178, 54)
-        Me.FindReplaceDialog.TabIndex = 75
-        Me.FindReplaceDialog.Visible = False
+        Me.FindReplacePanel.BackColor = System.Drawing.Color.Transparent
+        Me.FindReplacePanel.Controls.Add(Me.StartsWithCheck)
+        Me.FindReplacePanel.Controls.Add(Me.DefinitionRadio)
+        Me.FindReplacePanel.Controls.Add(Me.WordRadio)
+        Me.FindReplacePanel.Controls.Add(Me.FindTextBox)
+        Me.FindReplacePanel.Controls.Add(Me.Label17)
+        Me.FindReplacePanel.Controls.Add(Me.FindButton)
+        Me.FindReplacePanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.FindReplacePanel.Location = New System.Drawing.Point(0, 0)
+        Me.FindReplacePanel.Name = "FindReplaceDialog"
+        Me.FindReplacePanel.Size = New System.Drawing.Size(1178, 54)
+        Me.FindReplacePanel.TabIndex = 75
+        Me.FindReplacePanel.Visible = False
         '
         'StartsWithCheck
         '
@@ -680,8 +680,8 @@ Partial Class DictionaryForm
         Me.MainToolStripContainer.ResumeLayout(False)
         Me.MainToolStripContainer.PerformLayout()
         Me.GridBorder.ResumeLayout(False)
-        Me.FindReplaceDialog.ResumeLayout(False)
-        Me.FindReplaceDialog.PerformLayout()
+        Me.FindReplacePanel.ResumeLayout(False)
+        Me.FindReplacePanel.PerformLayout()
         Me.MainToolStrip.ResumeLayout(False)
         Me.MainToolStrip.PerformLayout()
         Me.MainMenu.ResumeLayout(False)
@@ -711,7 +711,7 @@ Partial Class DictionaryForm
     Friend WithEvents Notes As DataGridViewTextBoxColumn
     Friend WithEvents ExportHtmlToolStripButton As ToolStripButton
     Friend WithEvents SaveHtmlDialog As SaveFileDialog
-    Friend WithEvents FindReplaceDialog As LangPadUI.DoubleBufferedPanel
+    Friend WithEvents FindReplacePanel As LangPadUI.DoubleBufferedPanel
     Friend WithEvents FindTextBox As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents FindButton As Button

@@ -271,11 +271,12 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindToolStripMenuItem.Click
-        If FindReplaceDialog.Visible Then ' Hide it
-            FindReplaceDialog.Visible = False
+        If FindReplacePanel.Visible Then ' Hide it
+            FindReplacePanel.Visible = False
             GridBorder.Padding = New Padding(0)
+            DictionaryGrid.Focus()
         Else ' Show it
-            FindReplaceDialog.Visible = True
+            FindReplacePanel.Visible = True
             FindTextBox.Focus()
             GridBorder.Padding = New Padding(0, 1, 0, 0)
         End If

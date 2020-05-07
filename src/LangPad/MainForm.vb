@@ -595,8 +595,13 @@ Public Class MainForm
     End Sub
 
     Private Sub FindToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindToolStripMenuItem.Click
-        FindReplacePanel.Visible = FindReplacePanel.Visible Xor True
-        If FindReplacePanel.Visible = True Then FindTextBox.Focus()
+        If FindReplacePanel.Visible Then ' Hide it
+            FindReplacePanel.Visible = False
+            CurrentRtb.Focus()
+        Else ' Show it
+            FindReplacePanel.Visible = True
+            FindTextBox.Focus()
+        End If
     End Sub
 
     Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
