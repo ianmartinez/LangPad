@@ -1435,7 +1435,6 @@ Partial Class MainForm
         '
         Me.UndoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
-        Me.UndoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
         Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(300, 34)
         Me.UndoToolStripMenuItem.Text = "Undo"
         '
@@ -1443,7 +1442,6 @@ Partial Class MainForm
         '
         Me.RedoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
-        Me.RedoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
         Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(300, 34)
         Me.RedoToolStripMenuItem.Text = "Redo"
         '
@@ -1457,7 +1455,6 @@ Partial Class MainForm
         Me.CutToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
-        Me.CutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
         Me.CutToolStripMenuItem.Size = New System.Drawing.Size(300, 34)
         Me.CutToolStripMenuItem.Text = "Cut"
         '
@@ -1466,7 +1463,6 @@ Partial Class MainForm
         Me.CopyToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CopyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-        Me.CopyToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
         Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(300, 34)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
@@ -1475,7 +1471,6 @@ Partial Class MainForm
         Me.PasteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-        Me.PasteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
         Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(300, 34)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
@@ -1510,7 +1505,6 @@ Partial Class MainForm
         '
         Me.SelectAllToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
         Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(300, 34)
         Me.SelectAllToolStripMenuItem.Text = "Select All"
         '

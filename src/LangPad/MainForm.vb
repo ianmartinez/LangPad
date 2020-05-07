@@ -106,6 +106,12 @@ Public Class MainForm
         ZoomInToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl++"
         ZoomOutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+-"
         ZoomToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+`"
+        UndoToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+Z"
+        RedoToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+Y"
+        CutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+X"
+        CopyToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+C"
+        PasteToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+V"
+        SelectAllToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+A"
 
         ' The file hasn't been modified yet
         CurrentNotebook.Modified = False
