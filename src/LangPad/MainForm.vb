@@ -824,7 +824,7 @@ Public Class MainForm
     End Sub
 
     Private Sub AlignRightToolStripButton_Click(sender As Object, e As EventArgs) Handles AlignRightToolStripButton.Click
-        AlignRightToolStripButton_Click(Me, e)
+        AlignRightToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub DecreaseIndentToolStripButton_Click(sender As Object, e As EventArgs) Handles DecreaseIndentToolStripButton.Click
