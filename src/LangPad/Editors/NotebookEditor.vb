@@ -1,5 +1,4 @@
-﻿Imports System.Drawing.Drawing2D
-Imports LangPadUI
+﻿Imports LangPadUI
 
 Public Class NotebookEditor
     Private Sub NotebookEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load

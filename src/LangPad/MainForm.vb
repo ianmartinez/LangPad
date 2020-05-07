@@ -1,7 +1,6 @@
 ﻿Imports System.IO
 Imports LangPadData
 Imports LangPadUI
-Imports LangPadUI.Theming
 Imports LangPadData.NotebookNT
 
 Public Class MainForm
