@@ -80,7 +80,7 @@ Partial Class MainForm
         Me.rbHighlight = New System.Windows.Forms.RadioButton()
         Me.TextColorRadio = New System.Windows.Forms.RadioButton()
         Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
-        Me.DataToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.StatusBarToolStrip = New System.Windows.Forms.ToolStrip()
         Me.CharCountToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
         Me.WordCountToolStripLabel = New System.Windows.Forms.ToolStripLabel()
@@ -258,7 +258,7 @@ Partial Class MainForm
         Me.MainToolStripContainer.ContentPanel.SuspendLayout()
         Me.MainToolStripContainer.TopToolStripPanel.SuspendLayout()
         Me.MainToolStripContainer.SuspendLayout()
-        Me.DataToolStrip.SuspendLayout()
+        Me.StatusBarToolStrip.SuspendLayout()
         Me.MainToolStrip.SuspendLayout()
         Me.MainMenu.SuspendLayout()
         Me.SuspendLayout()
@@ -934,7 +934,7 @@ Partial Class MainForm
         '
         'MainToolStripContainer.BottomToolStripPanel
         '
-        Me.MainToolStripContainer.BottomToolStripPanel.Controls.Add(Me.DataToolStrip)
+        Me.MainToolStripContainer.BottomToolStripPanel.Controls.Add(Me.StatusBarToolStrip)
         '
         'MainToolStripContainer.ContentPanel
         '
@@ -950,18 +950,18 @@ Partial Class MainForm
         '
         Me.MainToolStripContainer.TopToolStripPanel.Controls.Add(Me.MainToolStrip)
         '
-        'DataToolStrip
+        'StatusBarToolStrip
         '
-        Me.DataToolStrip.Dock = System.Windows.Forms.DockStyle.None
-        Me.DataToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.DataToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.DataToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel, Me.ToolStripSeparator26, Me.CurrentLineToolStripLabel, Me.ToolStripSeparator11, Me.PageCountLabel, Me.ToolStripSeparator12, Me.ToolStripLabel1, Me.ThemeCombo})
-        Me.DataToolStrip.Location = New System.Drawing.Point(0, 0)
-        Me.DataToolStrip.Name = "DataToolStrip"
-        Me.DataToolStrip.Padding = New System.Windows.Forms.Padding(2)
-        Me.DataToolStrip.Size = New System.Drawing.Size(1356, 37)
-        Me.DataToolStrip.Stretch = True
-        Me.DataToolStrip.TabIndex = 2
+        Me.StatusBarToolStrip.Dock = System.Windows.Forms.DockStyle.None
+        Me.StatusBarToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.StatusBarToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
+        Me.StatusBarToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharCountToolStripLabel, Me.ToolStripSeparator10, Me.WordCountToolStripLabel, Me.ToolStripSeparator26, Me.CurrentLineToolStripLabel, Me.ToolStripSeparator11, Me.PageCountLabel, Me.ToolStripSeparator12, Me.ToolStripLabel1, Me.ThemeCombo})
+        Me.StatusBarToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.StatusBarToolStrip.Name = "StatusBarToolStrip"
+        Me.StatusBarToolStrip.Padding = New System.Windows.Forms.Padding(2)
+        Me.StatusBarToolStrip.Size = New System.Drawing.Size(1356, 37)
+        Me.StatusBarToolStrip.Stretch = True
+        Me.StatusBarToolStrip.TabIndex = 2
         '
         'CharCountToolStripLabel
         '
@@ -2215,8 +2215,8 @@ Partial Class MainForm
         Me.MainToolStripContainer.TopToolStripPanel.PerformLayout()
         Me.MainToolStripContainer.ResumeLayout(False)
         Me.MainToolStripContainer.PerformLayout()
-        Me.DataToolStrip.ResumeLayout(False)
-        Me.DataToolStrip.PerformLayout()
+        Me.StatusBarToolStrip.ResumeLayout(False)
+        Me.StatusBarToolStrip.PerformLayout()
         Me.MainToolStrip.ResumeLayout(False)
         Me.MainToolStrip.PerformLayout()
         Me.MainMenu.ResumeLayout(False)
@@ -2317,7 +2317,7 @@ Partial Class MainForm
     Friend WithEvents PastePlainToolStripButton As ToolStripButton
     Friend WithEvents UndoToolStripButton As ToolStripButton
     Friend WithEvents RedoToolStripButton As ToolStripButton
-    Friend WithEvents DataToolStrip As ToolStrip
+    Friend WithEvents StatusBarToolStrip As ToolStrip
     Friend WithEvents CharCountToolStripLabel As ToolStripLabel
     Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
     Friend WithEvents WordCountToolStripLabel As ToolStripLabel

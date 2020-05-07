@@ -897,23 +897,19 @@ Public Class MainForm
     End Sub
 
     Private Sub ToggleStatusbarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToggleStatusbarToolStripMenuItem.Click
-        DataToolStrip.Visible = DataToolStrip.Visible Xor True
+        StatusBarToolStrip.Visible = StatusBarToolStrip.Visible Xor True
     End Sub
 
     Private Sub FullModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FullModeToolStripMenuItem.Click
         SplitLayoutPanel.Panel1Collapsed = False
-        MainToolStripContainer.TopToolStripPanelVisible = True
-        MainToolStripContainer.BottomToolStripPanelVisible = True
-        MainToolStripContainer.LeftToolStripPanelVisible = True
-        MainToolStripContainer.RightToolStripPanelVisible = True
+        MainToolStrip.Visible = True
+        StatusBarToolStrip.Visible = True
     End Sub
 
     Private Sub MinimalModeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimalModeToolStripMenuItem.Click
         SplitLayoutPanel.Panel1Collapsed = True
-        MainToolStripContainer.TopToolStripPanelVisible = False
-        MainToolStripContainer.BottomToolStripPanelVisible = False
-        MainToolStripContainer.LeftToolStripPanelVisible = False
-        MainToolStripContainer.RightToolStripPanelVisible = False
+        MainToolStrip.Visible = False
+        StatusBarToolStrip.Visible = False
     End Sub
 
     Private Sub TransparentColorButton_Click(sender As Object, e As EventArgs) Handles TransparentColorButton.Click

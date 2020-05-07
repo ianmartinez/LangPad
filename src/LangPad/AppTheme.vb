@@ -55,7 +55,7 @@ Module AppTheme
                        MainForm.ColorPanel, MainForm.FindReplacePanel)
         Themer.AddMenu(MainForm.MainMenu)
         Themer.AddToolStripContainer(MainForm.MainToolStripContainer)
-        Themer.AddToolStrip(MainForm.MainToolStrip, MainForm.DataToolStrip)
+        Themer.AddToolStrip(MainForm.MainToolStrip, MainForm.StatusBarToolStrip)
         Themer.AddContextMenu(MainForm.MainContextMenu)
         Themer.AddPanelBorder(MainForm.CurrentPageContainerBorder,
                               MainForm.NotebookEditorPanel.PageListBoxContainerPanel)
