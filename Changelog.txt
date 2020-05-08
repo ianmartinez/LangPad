@@ -36,6 +36,7 @@ Version 11.0 (June 30, 2020)
    • Add options to wrap selected text in brackets [] and // or remove brackets
    • Zoom in increments of 0.2 (a less drastic jump)   
    • The page title of HTML documents now matches their name in LangPad
+   **• Exported HTML tables from the dictionary can now have their colors changed
    • Now has a dedicated installer
    • Use AutoUpdater.NET instead of custom autoupdater
    • PageNameDialog title changes depending on the mode (add/duplicate/rename page)
