@@ -103,7 +103,7 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub ExportToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportToolStripButton.Click
-        SaveAsToolStripMenuItem_Click(Me, e)
+        ExportToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub AddToolStripButton_Click(sender As Object, e As EventArgs) Handles AddToolStripButton.Click
@@ -221,11 +221,11 @@ Public Class DictionaryForm
         End If
     End Sub
 
-    Private Sub ExportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportToolStripMenuItem.Click
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
         MainForm.FileSave()
     End Sub
 
-    Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportToolStripMenuItem.Click
+    Private Sub ExportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportToolStripMenuItem.Click
         SaveDictionary()
 
         If SaveDialog.ShowDialog() = DialogResult.OK Then

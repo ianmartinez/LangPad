@@ -111,5 +111,15 @@ namespace LangPadData.NotebookNT
                 }
             }
         }
+
+        public void SaveCsv(string filePath)
+        {
+
+        }
+
+        public void SaveHtml(string filePath)
+        {
+            
+        }
     }
 }
