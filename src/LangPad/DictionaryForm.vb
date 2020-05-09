@@ -230,27 +230,7 @@ Public Class DictionaryForm
 
         If SaveDialog.ShowDialog() = DialogResult.OK Then
             If Path.GetExtension(SaveDialog.FileName).ToLower() = ".csv" Then
-                Dim Writer As New StreamWriter(New FileStream(SaveDialog.FileName, FileMode.Create, FileAccess.ReadWrite), Encoding.UTF8)
-                Dim ColCount As Integer = DictionaryGrid.Columns.Count
-
-                For i As Integer = 0 To ColCount - 1
-                    Writer.Write(DictionaryGrid.Columns(i).Name.ToString().ToUpper() + ",")
-                Next
-                Writer.WriteLine()
-
-                ' Write rows to CSV
-                For i As Integer = 0 To DictionaryGrid.Rows.Count - 1
-                    For j As Integer = 0 To ColCount - 1
-                        If DictionaryGrid.Rows(i).Cells(j).Value IsNot Nothing Then
-                            Writer.Write(DictionaryGrid.Rows(i).Cells(j).Value + ",")
-                        Else
-                            Writer.Write(",")
-                        End If
-                    Next
-
-                    Writer.WriteLine()
-                Next
-                Writer.Close()
+                CurrentNotebook.Dictionary.SaveCsv(SaveDialog.FileName)
             Else
                 CurrentNotebook.Dictionary.Save(SaveDialog.FileName)
             End If

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace LangPadData.NotebookNT
 {
@@ -90,9 +91,14 @@ namespace LangPadData.NotebookNT
                 Words = new List<WordNT>();
 
             var lines = Lines.Get(File.ReadAllText(filePath));
-            foreach (var line in lines)
+
+            // Loop through each line and add a word to the dictionary
+            // if it's in a valid format
+            for (var i = 0; i < lines.Length; i++)
             {
-                var isHeader = line.Trim().Equals("Word,Pronunciation,Definition,Notes");
+                var line = lines[i];
+                var isHeader = i == 0 && line.Trim().ToLower().Equals("word,pronunciation,definition,notes");
+
                 if (!isHeader)
                 {
                     var lineCols = line.Split(',');
@@ -112,14 +118,30 @@ namespace LangPadData.NotebookNT
             }
         }
 
+        /// <summary>
+        /// Save the dictionary as a CSV (Comma-Separated Values)  file.
+        /// </summary>
+        /// 
+        /// <param name="filePath">The file to save to.</param>
         public void SaveCsv(string filePath)
         {
+            var lines = new List<string>();
+            var colFormat = "{0},{1},{2},{3}";
 
+            // Add header
+            lines.Add(string.Format(colFormat, "word", "pronunciation", "definition", "notes").ToUpper());
+
+            // Add each word
+            foreach (var word in Words)
+                lines.Add(string.Format("{0},{1},{2},{3}", word.Word, word.Pronunciation, word.Definition, word.Notes));
+
+            // Write to CSV
+            File.WriteAllLines(filePath, lines, Encoding.UTF8);
         }
 
         public void SaveHtml(string filePath)
         {
-            
+
         }
     }
 }

@@ -11,6 +11,8 @@ Version 11.1 (TBD)
    **• Recent notebooks in file menu
    **• Export all pages wizard
    **• Settings are preserved between versions
+   **• The columns used when exporting a CSV file can be customized
+   **• A CSV file can now be exported with/without a header
    **• No longer use VB.NET's My.Settings 
    **• Allow adjustment of file compression level
 
