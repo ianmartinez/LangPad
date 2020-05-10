@@ -1,13 +1,13 @@
-Version 12.0 (TBD)
+**Version 12.0 (TBD)
    **• Move from RTF to HTML based format
    **• IPA table generation   
    **• Dictionary table generation
    
-Version 11.2 (TBD)   
+**Version 11.2 (TBD)   
    **• Sections in dictionary
    **• Undo/redo in dictionary
 
-Version 11.1 (TBD)
+**Version 11.1 (TBD)
    **• Frequently used characters tab
    **• Recent notebooks in file menu
    **• Export all pages wizard
@@ -17,7 +17,7 @@ Version 11.1 (TBD)
    **• No longer use VB.NET's My.Settings 
    **• Allow adjustment of file compression level
 
-Version 11.0 (June 30, 2020)
+**Version 11.0 (June 30, 2020)
    • Easier resizing of images before insertion
    • Pressing CTRL+S on character editor and dictionary now saves the notebook
    • Display shortcut keys on menus
