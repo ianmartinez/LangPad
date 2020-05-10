@@ -4,8 +4,11 @@ LangPad is a word processor, like WordPad, that has linguistics-oriented feature
 
   • Easily insert IPA characters    
   • Easily insert other symbols and custom symbols     
-  • Easily apply accent marks      
+  • Easily apply accent marks       
+  • Add and remove transcription brackets
+  • Easily apply accent marks    
   • Pages are stored in a "notebook" that you can add and remove pages from     
   • A built in dictionary to store your words in along with the notebook         
   • Ability to import and export CSV files for dictionaries   
-  • Export dictionary to html tables
+  • Export dictionary to HTML tables
+  • Export pages to HTML
