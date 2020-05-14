@@ -1,23 +1,4 @@
-**Version 12.0 (TBD)
-   **• Move from RTF to HTML based format
-   **• IPA table generation   
-   **• Dictionary table generation
-   
-**Version 11.2 (TBD)   
-   **• Sections in dictionary
-   **• Undo/redo in dictionary
-
-**Version 11.1 (TBD)
-   **• Frequently used characters tab
-   **• Recent notebooks in file menu
-   **• Export all pages wizard
-   **• Settings are preserved between versions
-   **• The columns used when exporting a CSV file can be customized
-   **• A CSV file can now be exported with/without a header
-   **• No longer use VB.NET's My.Settings 
-   **• Allow adjustment of file compression level
-
-**Version 11.0 (June 30, 2020)
+Version 11.0 (June 30, 2020)
    • Easier resizing of images before insertion
    • Pressing CTRL+S on character editor and dictionary now saves the notebook
    • Display shortcut keys on menus
@@ -39,7 +20,6 @@
    • Add options to wrap selected text in brackets [] and // or remove brackets
    • Zoom in increments of 0.2 (a less drastic jump)   
    • The page title of HTML documents now matches their name in LangPad
-   **• Exported HTML tables from the dictionary can now have their colors changed
    • Now has a dedicated installer
    • Use AutoUpdater.NET instead of custom autoupdater
    • PageNameDialog title changes depending on the mode (add/duplicate/rename page)
