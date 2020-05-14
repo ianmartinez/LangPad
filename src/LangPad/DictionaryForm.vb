@@ -128,7 +128,7 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub ExportHtmlToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportHtmlToolStripButton.Click
-        ExportHtmlToolStripButton_Click(Me, e)
+        ExportToHtmlToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub FindToolStripButton_Click(sender As Object, e As EventArgs) Handles FindToolStripButton.Click
