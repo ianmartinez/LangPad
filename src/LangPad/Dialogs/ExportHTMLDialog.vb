@@ -7,6 +7,11 @@ Public Class ExportHtmlDialog
     Private Sub ExportHtmlDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TitleTextBox.Text = CurrentNotebook.Language
         DescriptionTextBox.Text = CurrentNotebook.Info
+        PElementCheck.Checked = True
+        WordColCheck.Checked = True
+        PronunciationColCheck.Checked = True
+        DefinitionColCheck.Checked = True
+        NotesColCheck.Checked = True
     End Sub
 
     Private Sub OkDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OkDialogButton.Click

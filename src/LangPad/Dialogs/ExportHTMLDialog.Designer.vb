@@ -196,10 +196,8 @@ Partial Class ExportHtmlDialog
         '
         'ExportHtmlDialog
         '
-        Me.AcceptButton = Me.OkDialogButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.CancelDialogButton
         Me.ClientSize = New System.Drawing.Size(699, 548)
         Me.Controls.Add(Me.PElementCheck)
         Me.Controls.Add(Me.DescriptionTextBox)
