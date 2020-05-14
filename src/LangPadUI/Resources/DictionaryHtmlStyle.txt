@@ -1,0 +1,40 @@
+		<style type="text/css">
+			body {
+				padding: 1em;
+			}
+
+			table {
+				width: 100%;
+				font-family: verdana, arial, sans-serif;
+				font-size: 11px;
+				color: #333333;
+				border-width: 1px;
+				border-color: #383838;
+				border-collapse: collapse;
+			}
+
+			table th {
+				border-width: 1px;
+				padding: 8px;
+				border-style: solid;
+				border-color: #000000;
+				background-color: #525252;
+				color: #ffffff;
+			}
+
+			table tr:hover td {
+				cursor: pointer;
+			}
+
+			table tr:nth-child(even) td{
+				background-color: #e3e3e3;
+			}
+
+			table td {
+				border-width: 1px;
+				padding: 8px;
+				border-style: solid;
+				border-color: #b6b6b6;
+				background-color: #ffffff;
+			}
+		</style>

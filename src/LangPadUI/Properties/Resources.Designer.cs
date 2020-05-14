@@ -59,5 +59,65 @@ namespace LangPadUI.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;en&quot;&gt;
+        ///	&lt;head&gt;
+        ///		&lt;meta charset=&quot;utf-8&quot;&gt;
+        ///		&lt;title&gt;{0}&lt;/title&gt;
+        ///	&lt;/head&gt;
+        ///	&lt;body&gt;
+        ///		&lt;h1&gt;{0}&lt;/h1&gt;
+        ///		&lt;div&gt;
+        ///{1}
+        ///		&lt;/div&gt;
+        ///{2}
+        ///{3}
+        ///	&lt;/body&gt;
+        ///&lt;/html&gt;.
+        /// </summary>
+        internal static string DictionaryHtmlBase {
+            get {
+                return ResourceManager.GetString("DictionaryHtmlBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 		&lt;style type=&quot;text/css&quot;&gt;
+        ///			body {
+        ///				padding: 1em;
+        ///			}
+        ///
+        ///			table {
+        ///				width: 100%;
+        ///				font-family: verdana, arial, sans-serif;
+        ///				font-size: 11px;
+        ///				color: #333333;
+        ///				border-width: 1px;
+        ///				border-color: #383838;
+        ///				border-collapse: collapse;
+        ///			}
+        ///
+        ///			table th {
+        ///				border-width: 1px;
+        ///				padding: 8px;
+        ///				border-style: solid;
+        ///				border-color: #000000;
+        ///				background-color: #525252;
+        ///				color: #ffffff;
+        ///			}
+        ///
+        ///			table tr:hover td {
+        ///				cursor: pointer;
+        ///			}
+        ///
+        ///			table  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DictionaryHtmlStyle {
+            get {
+                return ResourceManager.GetString("DictionaryHtmlStyle", resourceCulture);
+            }
+        }
     }
 }
