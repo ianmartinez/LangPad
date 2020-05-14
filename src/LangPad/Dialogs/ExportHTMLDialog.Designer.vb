@@ -35,6 +35,7 @@ Partial Class ExportHtmlDialog
         Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PElementCheck = New System.Windows.Forms.CheckBox()
+        Me.SaveHtmlDialog = New System.Windows.Forms.SaveFileDialog()
         Me.ButtonTableLayout.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -189,6 +190,10 @@ Partial Class ExportHtmlDialog
         Me.PElementCheck.Text = "Make <p> element with each new line"
         Me.PElementCheck.UseVisualStyleBackColor = True
         '
+        'SaveHtmlDialog
+        '
+        Me.SaveHtmlDialog.Filter = "HTML Page (*.html)|*.html|Text files (*.txt)|*.txt|All files (*.*)|*.*"
+        '
         'ExportHtmlDialog
         '
         Me.AcceptButton = Me.OkDialogButton
@@ -231,4 +236,5 @@ Partial Class ExportHtmlDialog
     Friend WithEvents DescriptionTextBox As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents PElementCheck As CheckBox
+    Friend WithEvents SaveHtmlDialog As SaveFileDialog
 End Class

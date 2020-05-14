@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using LangPadData.Properties;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Runtime.Versioning;
 using System.Text;
 
 namespace LangPadData.NotebookNT
@@ -139,9 +142,97 @@ namespace LangPadData.NotebookNT
             File.WriteAllLines(filePath, lines, Encoding.UTF8);
         }
 
-        public void SaveHtml(string filePath)
+        /// <summary>
+        /// Export the current dictionary to an HTML
+        /// document, with option settings object to
+        /// customize the generated HTML.
+        /// </summary>
+        /// 
+        /// <param name="filePath">The path of the HTML file.</param>
+        /// <param name="exportSettings">The HTML rendering settings.</param>
+        public void SaveHtml(string filePath, HtmlExportSettings exportSettings = null)
         {
+            if (exportSettings == null)
+                exportSettings = new HtmlExportSettings();
 
+            // Get the sorted words
+            var sortedWords = new List<WordNT>();
+            sortedWords.AddRange(Words);
+            sortedWords.Sort();
+
+            // Create description 
+            var descriptionLines = new List<string>();
+            var descriptionIndent = "\t\t\t";
+            if (exportSettings.DescriptionParagraphs)
+            {
+                var descriptionTextLines = Lines.Get(exportSettings.Description);
+                foreach (var line in descriptionTextLines)
+                {
+                    descriptionLines.Add(string.Format("{0}<p>", descriptionIndent));
+                    descriptionLines.Add(string.Format("{0}\t{1}", descriptionIndent, line));
+                    descriptionLines.Add(string.Format("{0}</p>", descriptionIndent));
+                }
+            }
+            else
+            {
+                descriptionLines.Add(string.Format("{0}{1}", descriptionIndent, exportSettings.Description));
+            }
+
+            // Create table
+            var tableLines = new List<string>();
+            var rowIndent = "\t\t\t";
+            var rowDataIndent = "\t\t\t\t";
+
+            // If any columns selected
+            if (exportSettings.WordCol || exportSettings.PronunciationCol || exportSettings.DefinitionCol || exportSettings.NotesCol)
+            {
+                // Add header
+                tableLines.Add(string.Format("{0}<tr>", rowIndent));
+
+                if (exportSettings.WordCol)
+                    tableLines.Add(string.Format("{0}<th>Word</th>", rowDataIndent));
+
+                if (exportSettings.PronunciationCol)
+                    tableLines.Add(string.Format("{0}<th>Pronunciation</th>", rowDataIndent));
+
+                if (exportSettings.DefinitionCol)
+                    tableLines.Add(string.Format("{0}<th>Definition</th>", rowDataIndent));
+
+                if (exportSettings.NotesCol)
+                    tableLines.Add(string.Format("{0}<th>Notes</th>", rowDataIndent));
+
+                tableLines.Add(string.Format("{0}</tr>", rowIndent));
+
+                // Add each word
+                foreach (var word in sortedWords)
+                {
+                    tableLines.Add(string.Format("{0}<tr>", rowIndent));
+
+                    if (exportSettings.WordCol)
+                        tableLines.Add(string.Format("{0}<td>{1}</td>", rowDataIndent, word.Word));
+
+                    if (exportSettings.PronunciationCol)
+                        tableLines.Add(string.Format("{0}<td>{1}</td>", rowDataIndent, word.Pronunciation));
+
+                    if (exportSettings.DefinitionCol)
+                        tableLines.Add(string.Format("{0}<td>{1}</td>", rowDataIndent, word.Definition));
+
+                    if (exportSettings.NotesCol)
+                        tableLines.Add(string.Format("{0}<td>{1}</td>", rowDataIndent, word.Notes));
+
+                    tableLines.Add(string.Format("{0}</tr>", rowIndent));
+                }
+            }
+
+            // Generate html string
+            var htmlDoc = string.Format(Resources.DictionaryHtmlBase,
+                exportSettings.Title,
+                string.Join("\n", descriptionLines),
+                Resources.DictionaryHtmlStyle,
+                string.Join("\n", tableLines));
+
+            // Write to file
+            File.WriteAllText(filePath, htmlDoc);
         }
     }
 }

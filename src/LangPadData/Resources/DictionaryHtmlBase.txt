@@ -10,6 +10,8 @@
 {1}
 		</div>
 {2}
+	<table>
 {3}
+	</table>
 	</body>
 </html>

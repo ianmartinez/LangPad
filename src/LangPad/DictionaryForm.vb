@@ -239,10 +239,7 @@ Public Class DictionaryForm
 
     Private Sub ExportToHtmlToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportToHtmlToolStripMenuItem.Click
         SaveDictionary()
-        If SaveHtmlDialog.ShowDialog = DialogResult.OK Then
-            ExportHtmlDialog.FilePath = SaveHtmlDialog.FileName
-            ExportHtmlDialog.ShowDialog()
-        End If
+        ExportHtmlDialog.ShowDialog()
     End Sub
 
     Private Sub CharacterEditorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CharacterEditorToolStripMenuItem.Click
