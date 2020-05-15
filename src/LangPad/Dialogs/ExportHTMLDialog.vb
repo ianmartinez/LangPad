@@ -1,7 +1,4 @@
-﻿Imports System.IO
-Imports System.Text
-Imports LangPadData
-Imports LangPadData.NotebookNT
+﻿Imports LangPadData
 
 Public Class ExportHtmlDialog
     Private Sub ExportHtmlDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -42,6 +42,7 @@ Partial Class MainForm
         Me.DeselectAllContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitLayoutPanel = New System.Windows.Forms.SplitContainer()
         Me.PropertiesContainerPanel = New LangPadUI.DoubleBufferedPanel()
+        Me.NotebookEditorPanel = New LangPad.NotebookEditor()
         Me.CurrentPageContainerBorder = New LangPadUI.DoubleBufferedPanel()
         Me.CurrentPageContainer = New LangPadUI.DoubleBufferedPanel()
         Me.FindReplacePanel = New LangPadUI.DoubleBufferedPanel()
@@ -243,7 +244,6 @@ Partial Class MainForm
         Me.PatreonToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator27 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NotebookEditorPanel = New LangPad.NotebookEditor()
         Me.MainContextMenu.SuspendLayout()
         CType(Me.SplitLayoutPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitLayoutPanel.Panel1.SuspendLayout()
@@ -390,6 +390,15 @@ Partial Class MainForm
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
         Me.PropertiesContainerPanel.Size = New System.Drawing.Size(340, 833)
         Me.PropertiesContainerPanel.TabIndex = 13
+        '
+        'NotebookEditorPanel
+        '
+        Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
+        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(312, 470)
+        Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
+        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 833)
+        Me.NotebookEditorPanel.TabIndex = 0
         '
         'CurrentPageContainerBorder
         '
@@ -1471,6 +1480,7 @@ Partial Class MainForm
         Me.PasteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
+        Me.PasteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
         Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(300, 34)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
@@ -2174,15 +2184,6 @@ Partial Class MainForm
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(282, 34)
         Me.AboutToolStripMenuItem.Text = "About..."
-        '
-        'NotebookEditorPanel
-        '
-        Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
-        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(312, 470)
-        Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
-        Me.NotebookEditorPanel.Size = New System.Drawing.Size(340, 833)
-        Me.NotebookEditorPanel.TabIndex = 0
         '
         'MainForm
         '

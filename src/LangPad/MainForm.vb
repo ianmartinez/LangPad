@@ -571,6 +571,14 @@ Public Class MainForm
     End Sub
 
     Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
+        If NotebookEditorPanel.ContainsFocus Then
+            If TypeOf NotebookEditorPanel.ActiveControl Is TextBoxBase Then
+                Dim Editor = CType(NotebookEditorPanel.ActiveControl, TextBoxBase)
+                Editor.Paste()
+            End If
+            Exit Sub
+        End If
+
         If Clipboard.ContainsImage Then ' Image data
             InsertImage(Clipboard.GetImage())
         ElseIf Clipboard.ContainsFileDropList() Then ' Image pasted from File Explorer
