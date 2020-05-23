@@ -149,7 +149,7 @@ Partial Class DictionaryForm
         DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
         Me.DictionaryGrid.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DictionaryGrid.RowTemplate.Height = 24
-        Me.DictionaryGrid.Size = New System.Drawing.Size(1170, 508)
+        Me.DictionaryGrid.Size = New System.Drawing.Size(1170, 505)
         Me.DictionaryGrid.TabIndex = 3
         '
         'Word
@@ -201,11 +201,11 @@ Partial Class DictionaryForm
         '
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.GridBorder)
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.FindReplacePanel)
-        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1178, 570)
+        Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1178, 567)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 33)
+        Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 36)
         Me.MainToolStripContainer.Name = "MainToolStripContainer"
-        Me.MainToolStripContainer.Size = New System.Drawing.Size(1178, 611)
+        Me.MainToolStripContainer.Size = New System.Drawing.Size(1178, 608)
         Me.MainToolStripContainer.TabIndex = 75
         Me.MainToolStripContainer.Text = "MainToolStripContainer"
         '
@@ -221,7 +221,7 @@ Partial Class DictionaryForm
         Me.GridBorder.Location = New System.Drawing.Point(0, 54)
         Me.GridBorder.Name = "GridBorder"
         Me.GridBorder.Padding = New System.Windows.Forms.Padding(1)
-        Me.GridBorder.Size = New System.Drawing.Size(1178, 516)
+        Me.GridBorder.Size = New System.Drawing.Size(1178, 513)
         Me.GridBorder.TabIndex = 77
         '
         'GridContainer
@@ -232,7 +232,7 @@ Partial Class DictionaryForm
         Me.GridContainer.Location = New System.Drawing.Point(1, 1)
         Me.GridContainer.Name = "GridContainer"
         Me.GridContainer.Padding = New System.Windows.Forms.Padding(6, 6, 0, 0)
-        Me.GridContainer.Size = New System.Drawing.Size(1176, 514)
+        Me.GridContainer.Size = New System.Drawing.Size(1176, 511)
         Me.GridContainer.TabIndex = 4
         '
         'FindReplacePanel
@@ -454,7 +454,7 @@ Partial Class DictionaryForm
         Me.MainMenu.Location = New System.Drawing.Point(0, 0)
         Me.MainMenu.Name = "MainMenu"
         Me.MainMenu.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MainMenu.Size = New System.Drawing.Size(1178, 33)
+        Me.MainMenu.Size = New System.Drawing.Size(1178, 36)
         Me.MainMenu.TabIndex = 76
         Me.MainMenu.Text = "MenuStrip1"
         '
@@ -462,7 +462,7 @@ Partial Class DictionaryForm
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.SaveToolStripMenuItem, Me.ToolStripSeparator6, Me.ImportToolStripMenuItem, Me.ExportToolStripMenuItem, Me.ExportToHtmlToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(54, 29)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(54, 32)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'NewToolStripMenuItem
@@ -520,7 +520,7 @@ Partial Class DictionaryForm
         '
         Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FindToolStripMenuItem, Me.ToolStripSeparator7, Me.SelectAllToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(58, 29)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(58, 32)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'FindToolStripMenuItem
@@ -548,7 +548,7 @@ Partial Class DictionaryForm
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditDisplayFontToolStripMenuItem, Me.ResetDisplayFontToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(65, 29)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(65, 32)
         Me.ViewToolStripMenuItem.Text = "View"
         '
         'EditDisplayFontToolStripMenuItem
@@ -569,7 +569,7 @@ Partial Class DictionaryForm
         '
         Me.WordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddWordToolStripMenuItem, Me.RemoveWordToolStripMenuItem, Me.ToolStripSeparator8, Me.EditWordToolStripMenuItem, Me.EditPronunciationToolStripMenuItem, Me.EditDefinitionToolStripMenuItem, Me.EditNotesToolStripMenuItem})
         Me.WordToolStripMenuItem.Name = "WordToolStripMenuItem"
-        Me.WordToolStripMenuItem.Size = New System.Drawing.Size(72, 29)
+        Me.WordToolStripMenuItem.Size = New System.Drawing.Size(72, 32)
         Me.WordToolStripMenuItem.Text = "Word"
         '
         'AddWordToolStripMenuItem
@@ -629,7 +629,7 @@ Partial Class DictionaryForm
         '
         Me.LinguisticsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CharacterEditorToolStripMenuItem, Me.ToolStripSeparator25, Me.BroadTranscriptionToolStripMenuItem, Me.NarrowTranscriptionToolStripMenuItem, Me.RemoveBracketsToolStripMenuItem})
         Me.LinguisticsToolStripMenuItem.Name = "LinguisticsToolStripMenuItem"
-        Me.LinguisticsToolStripMenuItem.Size = New System.Drawing.Size(109, 29)
+        Me.LinguisticsToolStripMenuItem.Size = New System.Drawing.Size(109, 32)
         Me.LinguisticsToolStripMenuItem.Text = "Linguistics"
         '
         'CharacterEditorToolStripMenuItem
