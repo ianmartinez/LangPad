@@ -21,7 +21,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="DictionaryFont" Type="System.Drawing.Font" Scope="User">
-      <Value Profile="(Default)">Calibri, 10pt</Value>
+      <Value Profile="(Default)">Calibri, 11pt</Value>
     </Setting>
     <Setting Name="DictionaryFontColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">Black</Value>

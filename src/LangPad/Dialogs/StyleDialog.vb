@@ -8,7 +8,6 @@ Public Class StyleDialog
     Public StyleColor As Color = Color.Black
     Public StyleHighlight As Color = Color.White
     Public StyleIndent As Integer = 0
-    Public StyleBulletIndent As Integer = 0
     Public StyleHangingIndent As Integer = 0
     Public StyleCharOffset As Integer = 0
     Public UpdatingColor As Boolean = False
@@ -28,14 +27,12 @@ Public Class StyleDialog
         PreviewRtb.SelectionBackColor = StyleHighlight
         PreviewRtb.SelectionAlignment = StyleAlignment
         PreviewRtb.SelectionIndent = StyleIndent
-        PreviewRtb.BulletIndent = StyleBulletIndent
         PreviewRtb.SelectionHangingIndent = StyleHangingIndent
         PreviewRtb.SelectionCharOffset = StyleCharOffset
         PreviewRtb.DeselectAll()
 
         IndentNud.Value = StyleIndent
         HangingIndentNud.Value = StyleHangingIndent
-        BulletIndentNud.Value = StyleBulletIndent
         OffsetNud.Value = StyleCharOffset
 
         If Not UpdatingColor Then
@@ -57,7 +54,6 @@ Public Class StyleDialog
         OffsetButton.Image = IconManager.Get("align-vertical-center", IconSize.Small, Res)
         IndentButton.Image = IconManager.Get("format-indent-more", IconSize.Small, Res)
         HangingIndentButton.Image = IconManager.Get("format-indent-more", IconSize.Small, Res)
-        BulletIndentButton.Image = IconManager.Get("format-indent-more", IconSize.Small, Res)
         FontButton.Image = IconManager.Get("font", IconSize.Small, Res)
     End Sub
 
@@ -73,7 +69,6 @@ Public Class StyleDialog
             StyleAlignment = CType([Enum].Parse(GetType(HorizontalAlignment), KeyValue.Search(FileResults, "Align")), HorizontalAlignment)
             StyleIndent = KeyValue.Search(FileResults, "Indent")
             StyleHangingIndent = KeyValue.Search(FileResults, "HangingIndent")
-            StyleBulletIndent = KeyValue.Search(FileResults, "BulletIndentIndent")
 
             ColorButton.Color = StyleColor
             HighlightButton.Color = StyleHighlight
@@ -93,7 +88,6 @@ Public Class StyleDialog
             FileData += String.Format("Align={0}", StyleAlignment) & Environment.NewLine
             FileData += String.Format("Indent={0}", StyleIndent) & Environment.NewLine
             FileData += String.Format("HangingIndent={0}", StyleHangingIndent) & Environment.NewLine
-            FileData += String.Format("BulletIndent={0}", StyleBulletIndent) & Environment.NewLine
             File.WriteAllText(SaveDialog.FileName, FileData)
 
             ApplyStyle()
@@ -154,11 +148,6 @@ Public Class StyleDialog
         ApplyStyle()
     End Sub
 
-    Private Sub BulletIndentButton_Click(sender As Object, e As EventArgs) Handles BulletIndentButton.Click
-        StyleBulletIndent = BulletIndentNud.Value
-        ApplyStyle()
-    End Sub
-
     Private Sub OffsetButton_Click(sender As Object, e As EventArgs) Handles OffsetButton.Click, OffsetButton.Click
         StyleCharOffset = OffsetNud.Value
         ApplyStyle()
@@ -170,12 +159,10 @@ Public Class StyleDialog
         StyleColor = Color.Black
         StyleHighlight = Color.White
         StyleIndent = 0
-        StyleBulletIndent = 0
         StyleHangingIndent = 0
         StyleCharOffset = 0
 
         IndentNud.Value = StyleIndent
-        BulletIndentNud.Value = StyleBulletIndent
         HangingIndentNud.Value = StyleHangingIndent
         OffsetNud.Value = StyleCharOffset
         ApplyStyle()

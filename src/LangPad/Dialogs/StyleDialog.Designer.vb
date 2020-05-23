@@ -44,13 +44,10 @@ Partial Class StyleDialog
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.OpenButton = New System.Windows.Forms.Button()
         Me.HangingIndentNud = New System.Windows.Forms.NumericUpDown()
-        Me.BulletIndentNud = New System.Windows.Forms.NumericUpDown()
-        Me.BulletIndentButton = New System.Windows.Forms.Button()
         Me.PreviewPanel.SuspendLayout()
         CType(Me.IndentNud, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OffsetNud, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HangingIndentNud, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BulletIndentNud, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PreviewRtb
@@ -285,34 +282,11 @@ Partial Class StyleDialog
         Me.HangingIndentNud.Size = New System.Drawing.Size(114, 26)
         Me.HangingIndentNud.TabIndex = 14
         '
-        'BulletIndentNud
-        '
-        Me.BulletIndentNud.Location = New System.Drawing.Point(349, 411)
-        Me.BulletIndentNud.Name = "BulletIndentNud"
-        Me.BulletIndentNud.Size = New System.Drawing.Size(114, 26)
-        Me.BulletIndentNud.TabIndex = 16
-        '
-        'BulletIndentButton
-        '
-        Me.BulletIndentButton.BackColor = System.Drawing.Color.Transparent
-        Me.BulletIndentButton.Image = CType(resources.GetObject("BulletIndentButton.Image"), System.Drawing.Image)
-        Me.BulletIndentButton.Location = New System.Drawing.Point(480, 396)
-        Me.BulletIndentButton.Name = "BulletIndentButton"
-        Me.BulletIndentButton.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.BulletIndentButton.Size = New System.Drawing.Size(170, 54)
-        Me.BulletIndentButton.TabIndex = 17
-        Me.BulletIndentButton.Text = "Bullet Indent"
-        Me.BulletIndentButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.MainToolTip.SetToolTip(Me.BulletIndentButton, "Hanging Indent")
-        Me.BulletIndentButton.UseVisualStyleBackColor = False
-        '
         'StyleDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(662, 461)
-        Me.Controls.Add(Me.BulletIndentNud)
-        Me.Controls.Add(Me.BulletIndentButton)
         Me.Controls.Add(Me.HangingIndentNud)
         Me.Controls.Add(Me.HangingIndentButton)
         Me.Controls.Add(Me.DeleteAllButton)
@@ -341,7 +315,6 @@ Partial Class StyleDialog
         CType(Me.IndentNud, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OffsetNud, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.HangingIndentNud, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BulletIndentNud, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -365,6 +338,4 @@ Partial Class StyleDialog
     Friend WithEvents OpenButton As Button
     Friend WithEvents HangingIndentNud As NumericUpDown
     Friend WithEvents HangingIndentButton As Button
-    Friend WithEvents BulletIndentNud As NumericUpDown
-    Friend WithEvents BulletIndentButton As Button
 End Class

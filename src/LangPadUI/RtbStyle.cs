@@ -14,7 +14,6 @@ namespace LangPadUI
         public HorizontalAlignment Alignment { get; set; } = HorizontalAlignment.Left;
         public int Indent { get; set; } = 0;
         public int HangingIndent { get; set; } = 0;
-        public int BulletIndent { get; set; } = 0;
         public int CharOffset { get; set; } = 0;
     }
 }

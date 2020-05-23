@@ -681,7 +681,6 @@ Public Class MainForm
             .Alignment = StyleDialog.StyleAlignment,
             .Indent = StyleDialog.StyleIndent,
             .HangingIndent = StyleDialog.StyleHangingIndent,
-            .BulletIndent = StyleDialog.StyleBulletIndent,
             .CharOffset = StyleDialog.StyleCharOffset
         }
 

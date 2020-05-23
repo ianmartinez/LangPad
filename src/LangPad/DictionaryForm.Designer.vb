@@ -38,6 +38,7 @@ Partial Class DictionaryForm
         Me.FontPicker = New System.Windows.Forms.FontDialog()
         Me.MainToolStripContainer = New System.Windows.Forms.ToolStripContainer()
         Me.GridBorder = New LangPadUI.DoubleBufferedPanel()
+        Me.GridContainer = New LangPadUI.DoubleBufferedPanel()
         Me.FindReplacePanel = New LangPadUI.DoubleBufferedPanel()
         Me.StartsWithCheck = New System.Windows.Forms.CheckBox()
         Me.DefinitionRadio = New System.Windows.Forms.RadioButton()
@@ -94,6 +95,7 @@ Partial Class DictionaryForm
         Me.MainToolStripContainer.TopToolStripPanel.SuspendLayout()
         Me.MainToolStripContainer.SuspendLayout()
         Me.GridBorder.SuspendLayout()
+        Me.GridContainer.SuspendLayout()
         Me.FindReplacePanel.SuspendLayout()
         Me.MainToolStrip.SuspendLayout()
         Me.MainMenu.SuspendLayout()
@@ -102,7 +104,7 @@ Partial Class DictionaryForm
         'DictionaryGrid
         '
         Me.DictionaryGrid.AllowUserToAddRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(248, Byte), Integer))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
         Me.DictionaryGrid.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DictionaryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
@@ -111,9 +113,9 @@ Partial Class DictionaryForm
         Me.DictionaryGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DictionaryGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(232, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
@@ -129,14 +131,15 @@ Partial Class DictionaryForm
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DictionaryGrid.DefaultCellStyle = DataGridViewCellStyle3
         Me.DictionaryGrid.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DictionaryGrid.GridColor = System.Drawing.Color.Gainsboro
-        Me.DictionaryGrid.Location = New System.Drawing.Point(1, 1)
+        Me.DictionaryGrid.EnableHeadersVisualStyles = False
+        Me.DictionaryGrid.GridColor = System.Drawing.Color.Gray
+        Me.DictionaryGrid.Location = New System.Drawing.Point(6, 6)
         Me.DictionaryGrid.Name = "DictionaryGrid"
         Me.DictionaryGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(232, Byte), Integer))
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
@@ -146,7 +149,7 @@ Partial Class DictionaryForm
         DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
         Me.DictionaryGrid.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DictionaryGrid.RowTemplate.Height = 24
-        Me.DictionaryGrid.Size = New System.Drawing.Size(1176, 514)
+        Me.DictionaryGrid.Size = New System.Drawing.Size(1170, 508)
         Me.DictionaryGrid.TabIndex = 3
         '
         'Word
@@ -154,28 +157,28 @@ Partial Class DictionaryForm
         Me.Word.HeaderText = "Word"
         Me.Word.MinimumWidth = 8
         Me.Word.Name = "Word"
-        Me.Word.Width = 87
+        Me.Word.Width = 86
         '
         'Pronunciation
         '
         Me.Pronunciation.HeaderText = "Pronunciation"
         Me.Pronunciation.MinimumWidth = 8
         Me.Pronunciation.Name = "Pronunciation"
-        Me.Pronunciation.Width = 155
+        Me.Pronunciation.Width = 154
         '
         'Definition
         '
         Me.Definition.HeaderText = "Definition"
         Me.Definition.MinimumWidth = 8
         Me.Definition.Name = "Definition"
-        Me.Definition.Width = 122
+        Me.Definition.Width = 121
         '
         'Notes
         '
         Me.Notes.HeaderText = "Notes"
         Me.Notes.MinimumWidth = 8
         Me.Notes.Name = "Notes"
-        Me.Notes.Width = 92
+        Me.Notes.Width = 91
         '
         'OpenDialog
         '
@@ -213,13 +216,24 @@ Partial Class DictionaryForm
         'GridBorder
         '
         Me.GridBorder.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.GridBorder.Controls.Add(Me.DictionaryGrid)
+        Me.GridBorder.Controls.Add(Me.GridContainer)
         Me.GridBorder.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GridBorder.Location = New System.Drawing.Point(0, 54)
         Me.GridBorder.Name = "GridBorder"
         Me.GridBorder.Padding = New System.Windows.Forms.Padding(1)
         Me.GridBorder.Size = New System.Drawing.Size(1178, 516)
         Me.GridBorder.TabIndex = 77
+        '
+        'GridContainer
+        '
+        Me.GridContainer.BackColor = System.Drawing.SystemColors.Control
+        Me.GridContainer.Controls.Add(Me.DictionaryGrid)
+        Me.GridContainer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridContainer.Location = New System.Drawing.Point(1, 1)
+        Me.GridContainer.Name = "GridContainer"
+        Me.GridContainer.Padding = New System.Windows.Forms.Padding(6, 6, 0, 0)
+        Me.GridContainer.Size = New System.Drawing.Size(1176, 514)
+        Me.GridContainer.TabIndex = 4
         '
         'FindReplacePanel
         '
@@ -434,6 +448,7 @@ Partial Class DictionaryForm
         '
         'MainMenu
         '
+        Me.MainMenu.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MainMenu.ImageScalingSize = New System.Drawing.Size(32, 32)
         Me.MainMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.WordToolStripMenuItem, Me.LinguisticsToolStripMenuItem})
         Me.MainMenu.Location = New System.Drawing.Point(0, 0)
@@ -675,6 +690,7 @@ Partial Class DictionaryForm
         Me.MainToolStripContainer.ResumeLayout(False)
         Me.MainToolStripContainer.PerformLayout()
         Me.GridBorder.ResumeLayout(False)
+        Me.GridContainer.ResumeLayout(False)
         Me.FindReplacePanel.ResumeLayout(False)
         Me.FindReplacePanel.PerformLayout()
         Me.MainToolStrip.ResumeLayout(False)
@@ -746,4 +762,5 @@ Partial Class DictionaryForm
     Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
     Friend WithEvents SelectAllToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GridBorder As LangPadUI.DoubleBufferedPanel
+    Friend WithEvents GridContainer As LangPadUI.DoubleBufferedPanel
 End Class

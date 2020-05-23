@@ -1,7 +1,4 @@
-Before release:
-- Dictionary table header font should match display font
-
-Version 11.0 (June 30, 2020)
+Version 11.0 (May 23, 2020)
    • Easier resizing of images before insertion
    • Pressing CTRL+S on character editor and dictionary now saves the notebook
    • Display shortcut keys on menus

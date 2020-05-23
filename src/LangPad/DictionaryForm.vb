@@ -54,6 +54,13 @@ Public Class DictionaryForm
     Public Sub SetDisplayFont()
         DictionaryGrid.DefaultCellStyle.Font = My.Settings.DictionaryFont
         DictionaryGrid.DefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
+        DictionaryGrid.RowsDefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
+        DictionaryGrid.AlternatingRowsDefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
+        DictionaryGrid.RowHeadersDefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
+        Dim HeaderFont = New Font(My.Settings.DictionaryFont, FontStyle.Bold)
+        DictionaryGrid.ColumnHeadersDefaultCellStyle.Font = HeaderFont
+        DictionaryGrid.ColumnHeadersDefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
+        DictionaryGrid.Refresh()
     End Sub
 
     Public Sub SaveDictionary()
@@ -83,7 +90,7 @@ Public Class DictionaryForm
         ' Draw row numbers
         Dim Grid As DataGridView = CType(sender, DataGridView)
         Dim RowIndex As String = (e.RowIndex + 1).ToString()
-        Dim RowFont As Font = New Font(Font, FontStyle.Bold)
+        Dim RowFont As Font = New Font(DictionaryGrid.ColumnHeadersDefaultCellStyle.Font, FontStyle.Bold)
 
         Dim CenterFormat = New StringFormat With {
             .Alignment = StringAlignment.Center,
@@ -91,7 +98,7 @@ Public Class DictionaryForm
         }
 
         Dim headerBounds As Rectangle = New Rectangle(e.RowBounds.Left, e.RowBounds.Top, Grid.RowHeadersWidth, e.RowBounds.Height)
-        e.Graphics.DrawString(RowIndex, RowFont, SystemBrushes.ControlText, headerBounds, CenterFormat)
+        e.Graphics.DrawString(RowIndex, RowFont, New SolidBrush(My.Settings.DictionaryFontColor), headerBounds, CenterFormat)
     End Sub
 
     Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
@@ -272,7 +279,7 @@ Public Class DictionaryForm
     End Sub
 
     Private Sub ResetDisplayFontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetDisplayFontToolStripMenuItem.Click
-        My.Settings.DictionaryFont = New Font("Calibri", 10, FontStyle.Regular)
+        My.Settings.DictionaryFont = New Font("Calibri", 11, FontStyle.Regular)
         My.Settings.DictionaryFontColor = Color.Black
         My.Settings.Save()
         SetDisplayFont()
