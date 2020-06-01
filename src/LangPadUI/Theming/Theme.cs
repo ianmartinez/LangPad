@@ -79,7 +79,14 @@ namespace LangPadUI.Theming
         public Color MenuButtonPressedBorderColor { get; set; } = Color.FromArgb(225, 145, 160, 167);
         public Color MenuButtonPressedInsetColor { get; set; } = Color.FromArgb(225, 215, 230, 238);
 
-
+        /// <summary>
+        /// Create a rounded rectangle path.
+        /// </summary>
+        /// 
+        /// <param name="area">The rectangle's area.</param>
+        /// <param name="radius">The border radius.</param>
+        /// 
+        /// <returns>The path of the rounded rectangle.</returns>
         public static GraphicsPath GetRoundedRectanglePath(Rectangle area, int radius)
         {
             GraphicsPath roundedRectPath = new GraphicsPath();

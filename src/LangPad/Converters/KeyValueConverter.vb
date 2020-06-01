@@ -3,33 +3,51 @@
 ''' KeyValue files, to be re-written later.
 ''' </summary>
 Module KeyValueConverter
-    Public Function FromCompatibleColor(ByVal SourceSter As String) As Color
-        If SourceSter.Split(","c).Length = 4 Then
-            Return Color.FromArgb(Integer.Parse(SourceSter.Split(","c)(0)), Integer.Parse(SourceSter.Split(","c)(1)), Integer.Parse(SourceSter.Split(","c)(2)), Integer.Parse(SourceSter.Split(","c)(3)))
-        ElseIf SourceSter.Split(","c).Length = 3 Then
-            Return Color.FromArgb(Integer.Parse(SourceSter.Split(","c)(0)), Integer.Parse(SourceSter.Split(","c)(1)), Integer.Parse(SourceSter.Split(","c)(2)))
-        ElseIf SourceSter.StartsWith("#") Then
-            Return ColorTranslator.FromHtml(SourceSter)
-        ElseIf SourceSter.StartsWith("~") Then
-            Dim LightnessValue As Integer = Integer.Parse(SourceSter.Remove(0, 1))
+
+    ''' <summary>
+    ''' Convert from a serialized color to a color object.
+    ''' </summary>
+    ''' 
+    ''' <param name="SourceStr">The serialized color.</param>
+    ''' 
+    ''' <returns>The color that was parsed.</returns>
+    Public Function FromCompatibleColor(ByVal SourceStr As String) As Color
+        Dim ColorParts = SourceStr.Split(","c)
+        If ColorParts.Length = 4 Then
+            Return Color.FromArgb(Integer.Parse((0)), Integer.Parse(ColorParts(1)), Integer.Parse(ColorParts(2)), Integer.Parse(ColorParts(3)))
+        ElseIf ColorParts.Length = 3 Then
+            Return Color.FromArgb(Integer.Parse(ColorParts(0)), Integer.Parse(ColorParts(1)), Integer.Parse(ColorParts(2)))
+        ElseIf SourceStr.StartsWith("#") Then
+            Return ColorTranslator.FromHtml(SourceStr)
+        ElseIf SourceStr.StartsWith("~") Then
+            Dim LightnessValue As Integer = Integer.Parse(SourceStr.Remove(0, 1))
             Return Color.FromArgb(LightnessValue, LightnessValue, LightnessValue)
-        ElseIf SourceSter = "$NULL" Then
+        ElseIf SourceStr = "$NULL" Then
             Return Color.Transparent
-        ElseIf SourceSter = "$0" Then
+        ElseIf SourceStr = "$0" Then
             Return Color.Transparent
-        ElseIf SourceSter = "$1" Then
+        ElseIf SourceStr = "$1" Then
             Return Color.White
-        ElseIf SourceSter = "$2" Then
+        ElseIf SourceStr = "$2" Then
             Return Color.Black
         Else
             Return Color.Transparent
         End If
     End Function
 
+    ''' <summary>
+    ''' Convert from a serialized font to a font object.
+    ''' </summary>
+    ''' 
+    ''' <param name="SourceStr">The serialized font.</param>
+    ''' 
+    ''' <returns>The font that was parsed.</returns>
     Public Function FromCompatibleFont(ByVal SourceStr As String) As Font
-        Dim Name As String = SourceStr.Split("|"c)(0)
-        Dim Size As Single = (Single.Parse(SourceStr.Split("|"c)(1)))
-        Dim FontStyle As FontStyle = CType([Enum].Parse(GetType(FontStyle), SourceStr.Split("|"c)(2)), FontStyle)
+        Dim FontParts = SourceStr.Split("|"c)
+        Dim Name As String = FontParts(0)
+        Dim Size As Single = (Single.Parse(FontParts(1)))
+        Dim FontStyle As FontStyle = CType([Enum].Parse(GetType(FontStyle), FontParts(2)), FontStyle)
+
         Return New Font(Name, Size, FontStyle)
     End Function
 End Module

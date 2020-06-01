@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace LangPadUI
 {
+    /// <summary>
+    /// A tooltip displayed when hovering over a character button.
+    /// </summary>
     public class IpaToolTip : ToolTip
     {
         private readonly Font charNameFont = new Font("Calibri", 12, FontStyle.Regular);

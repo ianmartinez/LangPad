@@ -4,6 +4,10 @@ using System.Windows.Forms;
 
 namespace LangPadUI
 {
+    /// <summary>
+    /// A character button in the character editor that is inserts a
+    /// character into the target textbox when clicked.
+    /// </summary>
     public class CharacterButton : Button
     {
         private string charName = "";

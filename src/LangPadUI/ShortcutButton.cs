@@ -2,6 +2,9 @@
 
 namespace LangPadUI
 {
+    /// <summary>
+    /// A button displaying one of the customizable shortcut keys available.
+    /// </summary>
     public partial class ShortcutButton : UserControl
     {
         public ShortcutButton()
