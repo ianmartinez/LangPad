@@ -18,6 +18,9 @@ namespace LangPadUI.Theming
     {
         private Theme theme;
 
+        /// <summary>
+        /// The current theme being used by the application.
+        /// </summary>
         public Theme CurrentTheme
         {
             get

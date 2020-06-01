@@ -51,7 +51,6 @@
     <Compile Include="CharacterButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FormAppearance.cs" />
     <Compile Include="DoubleBufferedFlowLayoutPanel.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -1,11 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LangPadData
 {
+    /// <summary>
+    /// Static class with common functions dealing with lines in strings.
+    /// </summary>
     public static class Lines
     {
+
+        /// <summary>
+        /// Get an array of lines a string, removing empty lines.
+        /// </summary>
+        /// 
+        /// <param name="data">The string to get the lines from.</param>
+        /// 
+        /// <returns>The array of non-empty lines in the string.</returns>
         public static string[] Get(string data)
         {
             return data.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
