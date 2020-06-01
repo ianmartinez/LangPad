@@ -24,6 +24,8 @@ Public Class ExportHtmlDialog
             }
 
             CurrentNotebook.Dictionary.SaveHtml(SaveHtmlDialog.FileName, ExportSettings)
+
+            ' Open HTML in browser when finished
             Process.Start(SaveHtmlDialog.FileName)
         End If
 

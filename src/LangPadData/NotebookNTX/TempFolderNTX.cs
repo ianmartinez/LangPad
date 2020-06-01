@@ -3,6 +3,16 @@ using System.IO;
 
 namespace LangPadData.NotebookNTX
 {
+
+    /// <summary>
+    /// The temp folders for the future NTX file format (*.ntx), designed to replace
+    /// the NT format (NotebookNT, DictionaryNT, etc.). It is based around HTML
+    /// page data instead of RTF page data, and contains many other breaking features
+    /// that make it incompatible with the current format.
+    /// 
+    /// It is a work in progress and the NT format is still used by the actual 
+    /// program for the time being.
+    /// </summary>
     public class TempFolderNTX
     {
         public readonly string RootFolder;

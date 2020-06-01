@@ -106,10 +106,12 @@ Public Class NotebookEditor
     Private Sub GoButton_Click(sender As Object, e As EventArgs) Handles GoButton.Click
         If String.IsNullOrWhiteSpace(WebsiteTextBox.Text) Then Exit Sub
 
-        If Not WebsiteTextBox.Text.StartsWith("http://") Then
-            Process.Start("http://" & WebsiteTextBox.Text)
-        Else
+        ' Make sure the URL is in a valid syntax before 
+        ' attempting to open it
+        If WebsiteTextBox.Text.StartsWith("http://") OrElse WebsiteTextBox.Text.StartsWith("https://") Then
             Process.Start(WebsiteTextBox.Text)
+        Else
+            Process.Start("http://" & WebsiteTextBox.Text)
         End If
     End Sub
 

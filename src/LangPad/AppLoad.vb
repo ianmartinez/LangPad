@@ -1,6 +1,15 @@
 ﻿Imports LangPadData
 
+''' <summary>
+''' Load all of the controls in the character editor and check for updates at startup.
+''' </summary>
 Module AppLoad
+    ''' <summary>
+    ''' Update the splash screen.
+    ''' </summary>
+    ''' 
+    ''' <param name="ProgressValue">The progress bar value.</param>
+    ''' <param name="ProgressText">The progress text saying what is currently being loaded.</param>
     Public Sub UpdateSplash(ProgressValue As Integer, ProgressText As String)
         SplashScreenForm.Invoke(Sub()
                                     SplashScreenForm.LoadingLabel.Text = ProgressText
@@ -9,6 +18,9 @@ Module AppLoad
                                 End Sub)
     End Sub
 
+    ''' <summary>
+    ''' Load the application.
+    ''' </summary>
     Public Sub LoadApplication()
         SplashScreenForm.Show()
 

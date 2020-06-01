@@ -1,5 +1,11 @@
 ﻿Imports LangPadUI
 
+''' <summary>
+''' A form that shows the raw RTF data of the current page open in the main window.
+''' 
+''' The RTF can be edited manually and when the refresh button is clicked, it 
+''' will update the RTF data of the current page on the main window.
+''' </summary>
 Public Class RtfEditorForm
     Private Sub RtfEditorForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RtfCodeTextBox.Text = MainForm.CurrentRtb.Rtf

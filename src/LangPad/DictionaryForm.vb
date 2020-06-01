@@ -51,6 +51,9 @@ Public Class DictionaryForm
         FindToolStripButton.Image = IconManager.Get("edit-find", IconSize.Large, Res)
     End Sub
 
+    ''' <summary>
+    ''' Set the display font (the font the table renders in)
+    ''' </summary>
     Public Sub SetDisplayFont()
         DictionaryGrid.DefaultCellStyle.Font = My.Settings.DictionaryFont
         DictionaryGrid.DefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
@@ -63,6 +66,9 @@ Public Class DictionaryForm
         DictionaryGrid.Refresh()
     End Sub
 
+    ''' <summary>
+    ''' Save the table's current state into the current dictionary
+    ''' </summary>
     Public Sub SaveDictionary()
         CurrentNotebook.Dictionary.Words.Clear()
         For i = 0 To DictionaryGrid.RowCount - 1
@@ -82,10 +88,17 @@ Public Class DictionaryForm
         Next
     End Sub
 
+    ''' <summary>
+    ''' Change the target textbox of the character editor 
+    ''' to be the current cell of the table.
+    ''' </summary>
     Private Sub DictionaryGrid_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles DictionaryGrid.EditingControlShowing
         CurrentTextbox = e.Control
     End Sub
 
+    ''' <summary>
+    ''' Draw row numbers on the table.
+    ''' </summary>
     Private Sub DictionaryGrid_RowPostPaint(sender As Object, e As DataGridViewRowPostPaintEventArgs) Handles DictionaryGrid.RowPostPaint
         ' Draw row numbers
         Dim Grid As DataGridView = CType(sender, DataGridView)

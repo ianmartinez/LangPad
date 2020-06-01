@@ -564,14 +564,20 @@ Public Class CharacterEditor
         Dim CurrentItem As ToolStripMenuItem = CType(sender, ToolStripMenuItem)
         Dim CurrentContextMenu As ContextMenuStrip = CType(CurrentItem.Owner, ContextMenuStrip)
         Dim CurrentButton As ShortcutButton = CType(CurrentContextMenu.SourceControl, ShortcutButton)
+
         If Not String.IsNullOrEmpty(CurrentButton.SettingsValue) Then
             My.Settings.Item(CurrentButton.SettingsValue) = ""
         End If
+
         CurrentButton.CharValue = ""
     End Sub
 
     Private Sub ResetAllKeysToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetAllKeysToolStripMenuItem.Click
-        Dim ConfirmReset = MessageBox.Show("Are you sure you want to reset all key shortcuts? This cannot be undone.", "Confirm", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation)
+        Dim ConfirmReset = MessageBox.Show("Are you sure you want to reset all key shortcuts? This cannot be undone.",
+                                           "Confirm",
+                                           MessageBoxButtons.YesNoCancel,
+                                           MessageBoxIcon.Exclamation)
+
         If ConfirmReset = DialogResult.Yes Then
             ' Reset settings
             My.Settings.Ctrl1 = ""
