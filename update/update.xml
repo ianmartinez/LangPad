@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <item>
-    <version>10.1.0.0</version>
-    <url>https://github.com/ianmartinez/LangPad/raw/master/Release/LanguagePad10.zip</url>
+    <version>11.1.0.0</version>
+    <url>https://github.com/ianmartinez/LangPad/raw/master/installer/LangPad_11_1_Final_Setup.exe</url>
     <changelog>https://raw.githubusercontent.com/ianmartinez/LangPad/master/Changelog.txt</changelog>
     <mandatory>false</mandatory>
 </item>
