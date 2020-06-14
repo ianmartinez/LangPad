@@ -76,8 +76,7 @@ Module AppLoad
         Next
 
         UpdateSplash(80, "Loading Local Custom Characters...")
-        Dim LocalCharacters As String() = My.Settings.CustomCharacters.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
-        For Each LocalCharacter As String In LocalCharacters
+        For Each LocalCharacter As String In AppLocalCharacters
             CharEditWindow.CharEdit.InsertCharacterButton(LocalCharacter, CharEditWindow.CharEdit.LocalPanel)
         Next
 
