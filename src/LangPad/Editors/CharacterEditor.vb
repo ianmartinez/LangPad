@@ -405,13 +405,13 @@ Public Class CharacterEditor
     End Sub
 
     Private Sub ImportFile(FileName As String, ByRef Characters As List(Of String))
-        Dim Lines As String() = File.ReadAllText(FileName).Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+        Dim Lines As String() = LangPadData.Lines.Get(File.ReadAllText(FileName))
 
-        For i = 0 To Lines.Length - 1
-            If Lines.GetValue(i) = "" Then Continue For
-            If Characters.Contains(Lines.GetValue(i)) Then Continue For
+        For Each Line In Lines
+            If String.IsNullOrEmpty(Line) Then Continue For
+            If Characters.Contains(Line) Then Continue For
 
-            Characters.Add(Lines.GetValue(i))
+            Characters.Add(Line)
         Next
     End Sub
 

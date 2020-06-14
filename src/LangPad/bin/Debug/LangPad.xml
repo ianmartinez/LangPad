@@ -452,6 +452,24 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Add the controls to be themed for the character editor.
  </summary>
 </member>
+<member name="T:LangPad.AppLoad">
+ <summary>
+ Load all of the controls in the character editor and check for updates at startup.
+ </summary>
+</member>
+<member name="M:LangPad.AppLoad.UpdateSplash(System.Int32,System.String)">
+ <summary>
+ Update the splash screen.
+ </summary>
+ 
+ <param name="ProgressValue">The progress bar value.</param>
+ <param name="ProgressText">The progress text saying what is currently being loaded.</param>
+</member>
+<member name="M:LangPad.AppLoad.LoadApplication">
+ <summary>
+ Load the application.
+ </summary>
+</member>
 <member name="T:LangPad.CharacterInsertion">
  <summary>
  Handles the insertion and deletion of characters in
@@ -505,6 +523,24 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Old functions for interpreting values from
  KeyValue files, to be re-written later.
  </summary>
+</member>
+<member name="M:LangPad.KeyValueConverter.FromCompatibleColor(System.String)">
+ <summary>
+ Convert from a serialized color to a color object.
+ </summary>
+ 
+ <param name="SourceStr">The serialized color.</param>
+ 
+ <returns>The color that was parsed.</returns>
+</member>
+<member name="M:LangPad.KeyValueConverter.FromCompatibleFont(System.String)">
+ <summary>
+ Convert from a serialized font to a font object.
+ </summary>
+ 
+ <param name="SourceStr">The serialized font.</param>
+ 
+ <returns>The font that was parsed.</returns>
 </member>
 <member name="T:LangPad.Messages">
  <summary>
@@ -698,6 +734,32 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  Check for updates and display a dialog if there are any
  </summary>
 </member>
+<member name="P:LangPad.CharacterEditorToolWindow.GetCurrentTexbox">
+ <summary>
+ The current text box that text will be inserted into.
+ </summary>
+</member>
+<member name="P:LangPad.CharacterEditorToolWindow.TargetForm">
+ <summary>
+ The target form of the character editor.
+ </summary>
+</member>
+<member name="M:LangPad.CharacterEditorToolWindow.SetIcons">
+ <summary>
+ Update the icons to match the current resolution.
+ </summary>
+</member>
+<member name="M:LangPad.CharacterEditorToolWindow.CharacterEditorToolWindow_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+ <summary>
+ Catch closing events to prevent the window from closing automatically
+ when it shouldn't.
+ </summary>
+</member>
+<member name="M:LangPad.CharacterEditorToolWindow.CharacterEditorToolWindow_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ Catch CTRL+S to enable saving on forms besides the main one.
+ </summary>
+</member>
 <member name="M:LangPad.CharacterEditorToolWindow.Reshow">
  <summary>
  If visible, hide and show again.
@@ -758,6 +820,35 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  <param name="preserveAspect">If the aspect ratio should be preserved</param>
  
  <returns>The width value of the new rectangle.</returns>
+</member>
+<member name="M:LangPad.DictionaryForm.SetDisplayFont">
+ <summary>
+ Set the display font (the font the table renders in)
+ </summary>
+</member>
+<member name="M:LangPad.DictionaryForm.SaveDictionary">
+ <summary>
+ Save the table's current state into the current dictionary
+ </summary>
+</member>
+<member name="M:LangPad.DictionaryForm.DictionaryGrid_EditingControlShowing(System.Object,System.Windows.Forms.DataGridViewEditingControlShowingEventArgs)">
+ <summary>
+ Change the target textbox of the character editor 
+ to be the current cell of the table.
+ </summary>
+</member>
+<member name="M:LangPad.DictionaryForm.DictionaryGrid_RowPostPaint(System.Object,System.Windows.Forms.DataGridViewRowPostPaintEventArgs)">
+ <summary>
+ Draw row numbers on the table.
+ </summary>
+</member>
+<member name="T:LangPad.RtfEditorForm">
+ <summary>
+ A form that shows the raw RTF data of the current page open in the main window.
+ 
+ The RTF can be edited manually and when the refresh button is clicked, it 
+ will update the RTF data of the current page on the main window.
+ </summary>
 </member>
 <member name="T:LangPad.AppInstance">
  <summary>

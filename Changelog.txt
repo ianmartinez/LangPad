@@ -1,3 +1,7 @@
+Version 11.0 (TBD)
+   • Bug Fix:  https:// URLs in the website field wouldn't open
+   • Bug Fix: Character files imported from the character editor weren't imported correctly
+   
 Version 11.0 (May 23, 2020)
    • Easier resizing of images before insertion
    • Pressing CTRL+S on character editor and dictionary now saves the notebook

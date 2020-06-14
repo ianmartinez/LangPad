@@ -1,4 +1,5 @@
-﻿Imports LangPadUI
+﻿Imports LangPadData
+Imports LangPadUI
 Imports LangPadUI.Theming
 
 ''' <summary>
@@ -26,7 +27,7 @@ Module AppInstance
     ''' </summary>
     Public ReadOnly Property AppLocalCharacters As String()
         Get
-            Return My.Settings.CustomCharacters.Split({Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries)
+            Return Lines.Get(My.Settings.CustomCharacters)
         End Get
     End Property
 
