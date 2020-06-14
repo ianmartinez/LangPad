@@ -5,9 +5,9 @@
  
 ; Versioning
 #define AppVersionType "_Final"
-#define AppVersion "11.0"   
-#define AppVersionStr "11_0"   
-#define AppReleaseFolder "..\release\11.0"
+#define AppVersion "11.1"   
+#define AppVersionStr "11_1"   
+#define AppReleaseFolder "..\release\11.1"
 
 [Setup]
 AppId={{F5A132A7-7583-4EBE-8E45-B90D8BC79B19}

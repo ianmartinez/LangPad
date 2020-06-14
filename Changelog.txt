@@ -1,4 +1,4 @@
-Version 11.0 (TBD)
+Version 11.1 (June 14, 2020)
    • Bug Fix:  https:// URLs in the website field wouldn't open
    • Bug Fix: Character files imported from the character editor weren't imported correctly
    
