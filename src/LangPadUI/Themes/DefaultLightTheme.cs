@@ -3,14 +3,14 @@
 namespace LangPadUI.Themes
 {
     /// <summary>
-    /// The default light theme.
+    /// The Default theme.
     /// </summary>
-    public class DefaultLightTheme : Theme
+    public class DefaultTheme : Theme
     {
-        public DefaultLightTheme() : base("Default Light")
+        public DefaultTheme() : base("Default")
         {
             /* 
-             * The default light theme is uses the theme colors that
+             * The Default theme is uses the theme colors that
              * come with the Theme class.
              */
         }

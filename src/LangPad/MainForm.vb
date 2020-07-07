@@ -880,7 +880,7 @@ Public Class MainForm
         If Not MatchingTheme Is Nothing Then
             Themer.CurrentTheme = MatchingTheme
         Else
-            Themer.CurrentTheme = New Themes.DefaultLightTheme()
+            Themer.CurrentTheme = New Themes.DefaultTheme()
         End If
     End Sub
 

@@ -30,7 +30,7 @@ Module AppTheme
             Dim SavedTheme = Themer.GetTheme(My.Settings.Theme)
             ' Default to light theme if none found
             If SavedTheme Is Nothing Then
-                SavedTheme = New Themes.DefaultLightTheme()
+                SavedTheme = New Themes.DefaultTheme()
             End If
 
             ' Add each theme to the theme combo

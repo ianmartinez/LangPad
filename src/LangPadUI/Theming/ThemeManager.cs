@@ -50,7 +50,7 @@ namespace LangPadUI.Theming
         public ThemeManager()
         {
             Themes = new List<Theme> {
-                new DefaultLightTheme(),
+                new DefaultTheme(),
                 new CoolGrayTheme(),
                 new DesertTheme(),
                 new LunaTheme(),

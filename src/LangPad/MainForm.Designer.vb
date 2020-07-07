@@ -363,7 +363,7 @@ Partial Class MainForm
         Me.SplitLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitLayoutPanel.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.SplitLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.SplitLayoutPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SplitLayoutPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.SplitLayoutPanel.Name = "SplitLayoutPanel"
         '
         'SplitLayoutPanel.Panel1
@@ -387,7 +387,7 @@ Partial Class MainForm
         Me.PropertiesContainerPanel.Controls.Add(Me.NotebookEditorPanel)
         Me.PropertiesContainerPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PropertiesContainerPanel.Location = New System.Drawing.Point(0, 0)
-        Me.PropertiesContainerPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PropertiesContainerPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.PropertiesContainerPanel.Name = "PropertiesContainerPanel"
         Me.PropertiesContainerPanel.Size = New System.Drawing.Size(340, 1011)
         Me.PropertiesContainerPanel.TabIndex = 13
@@ -396,10 +396,10 @@ Partial Class MainForm
         '
         Me.NotebookEditorPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NotebookEditorPanel.Location = New System.Drawing.Point(0, 0)
-        Me.NotebookEditorPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(440, 564)
+        Me.NotebookEditorPanel.Margin = New System.Windows.Forms.Padding(5)
+        Me.NotebookEditorPanel.MinimumSize = New System.Drawing.Size(360, 564)
         Me.NotebookEditorPanel.Name = "NotebookEditorPanel"
-        Me.NotebookEditorPanel.Size = New System.Drawing.Size(440, 1011)
+        Me.NotebookEditorPanel.Size = New System.Drawing.Size(360, 1011)
         Me.NotebookEditorPanel.TabIndex = 0
         '
         'CurrentPageContainerBorder
@@ -408,7 +408,7 @@ Partial Class MainForm
         Me.CurrentPageContainerBorder.Controls.Add(Me.CurrentPageContainer)
         Me.CurrentPageContainerBorder.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CurrentPageContainerBorder.Location = New System.Drawing.Point(0, 199)
-        Me.CurrentPageContainerBorder.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CurrentPageContainerBorder.Margin = New System.Windows.Forms.Padding(4)
         Me.CurrentPageContainerBorder.Name = "CurrentPageContainerBorder"
         Me.CurrentPageContainerBorder.Padding = New System.Windows.Forms.Padding(1)
         Me.CurrentPageContainerBorder.Size = New System.Drawing.Size(1313, 812)
@@ -419,9 +419,9 @@ Partial Class MainForm
         Me.CurrentPageContainer.BackColor = System.Drawing.SystemColors.Window
         Me.CurrentPageContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CurrentPageContainer.Location = New System.Drawing.Point(1, 1)
-        Me.CurrentPageContainer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CurrentPageContainer.Margin = New System.Windows.Forms.Padding(4)
         Me.CurrentPageContainer.Name = "CurrentPageContainer"
-        Me.CurrentPageContainer.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CurrentPageContainer.Padding = New System.Windows.Forms.Padding(4)
         Me.CurrentPageContainer.Size = New System.Drawing.Size(1311, 810)
         Me.CurrentPageContainer.TabIndex = 75
         '
@@ -438,7 +438,7 @@ Partial Class MainForm
         Me.FindReplacePanel.Controls.Add(Me.FindButton)
         Me.FindReplacePanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.FindReplacePanel.Location = New System.Drawing.Point(0, 134)
-        Me.FindReplacePanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FindReplacePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.FindReplacePanel.Name = "FindReplacePanel"
         Me.FindReplacePanel.Size = New System.Drawing.Size(1313, 65)
         Me.FindReplacePanel.TabIndex = 72
@@ -448,7 +448,7 @@ Partial Class MainForm
         '
         Me.FindNextButton.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.FindNextButton.Location = New System.Drawing.Point(730, 10)
-        Me.FindNextButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FindNextButton.Margin = New System.Windows.Forms.Padding(4)
         Me.FindNextButton.Name = "FindNextButton"
         Me.FindNextButton.Size = New System.Drawing.Size(143, 44)
         Me.FindNextButton.TabIndex = 69
@@ -459,7 +459,7 @@ Partial Class MainForm
         '
         Me.ReplaceAllButton.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.ReplaceAllButton.Location = New System.Drawing.Point(1030, 10)
-        Me.ReplaceAllButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ReplaceAllButton.Margin = New System.Windows.Forms.Padding(4)
         Me.ReplaceAllButton.Name = "ReplaceAllButton"
         Me.ReplaceAllButton.Size = New System.Drawing.Size(143, 44)
         Me.ReplaceAllButton.TabIndex = 71
@@ -469,7 +469,7 @@ Partial Class MainForm
         'ReplaceTextBox
         '
         Me.ReplaceTextBox.Location = New System.Drawing.Point(372, 17)
-        Me.ReplaceTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ReplaceTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.ReplaceTextBox.Name = "ReplaceTextBox"
         Me.ReplaceTextBox.Size = New System.Drawing.Size(202, 29)
         Me.ReplaceTextBox.TabIndex = 67
@@ -478,7 +478,7 @@ Partial Class MainForm
         '
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(275, 20)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(89, 25)
         Me.Label18.TabIndex = 85
@@ -487,7 +487,7 @@ Partial Class MainForm
         'FindTextBox
         '
         Me.FindTextBox.Location = New System.Drawing.Point(73, 17)
-        Me.FindTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FindTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.FindTextBox.Name = "FindTextBox"
         Me.FindTextBox.Size = New System.Drawing.Size(195, 29)
         Me.FindTextBox.TabIndex = 66
@@ -496,7 +496,7 @@ Partial Class MainForm
         '
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(11, 20)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(56, 25)
         Me.Label17.TabIndex = 83
@@ -506,7 +506,7 @@ Partial Class MainForm
         '
         Me.ReplaceButton.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.ReplaceButton.Location = New System.Drawing.Point(880, 10)
-        Me.ReplaceButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ReplaceButton.Margin = New System.Windows.Forms.Padding(4)
         Me.ReplaceButton.Name = "ReplaceButton"
         Me.ReplaceButton.Size = New System.Drawing.Size(143, 44)
         Me.ReplaceButton.TabIndex = 70
@@ -517,7 +517,7 @@ Partial Class MainForm
         '
         Me.FindButton.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.FindButton.Location = New System.Drawing.Point(582, 10)
-        Me.FindButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FindButton.Margin = New System.Windows.Forms.Padding(4)
         Me.FindButton.Name = "FindButton"
         Me.FindButton.Size = New System.Drawing.Size(143, 44)
         Me.FindButton.TabIndex = 68
@@ -532,7 +532,7 @@ Partial Class MainForm
         Me.ColorPanel.Controls.Add(Me.TextColorRadio)
         Me.ColorPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.ColorPanel.Location = New System.Drawing.Point(0, 0)
-        Me.ColorPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorPanel.Name = "ColorPanel"
         Me.ColorPanel.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
         Me.ColorPanel.Size = New System.Drawing.Size(1313, 134)
@@ -568,9 +568,9 @@ Partial Class MainForm
         Me.ColorLayoutPanel.Controls.Add(Me.ColorButton19)
         Me.ColorLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ColorLayoutPanel.Location = New System.Drawing.Point(0, 61)
-        Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.ColorLayoutPanel.Margin = New System.Windows.Forms.Padding(7)
         Me.ColorLayoutPanel.Name = "ColorLayoutPanel"
-        Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.ColorLayoutPanel.Padding = New System.Windows.Forms.Padding(7)
         Me.ColorLayoutPanel.Size = New System.Drawing.Size(1313, 71)
         Me.ColorLayoutPanel.TabIndex = 70
         '
@@ -597,7 +597,7 @@ Partial Class MainForm
         Me.ColorButton1.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton1.Image = CType(resources.GetObject("ColorButton1.Image"), System.Drawing.Image)
         Me.ColorButton1.Location = New System.Drawing.Point(65, 11)
-        Me.ColorButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton1.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton1.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton1.Name = "ColorButton1"
         Me.ColorButton1.Padding = New System.Windows.Forms.Padding(2)
@@ -614,7 +614,7 @@ Partial Class MainForm
         Me.ColorButton2.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton2.Image = CType(resources.GetObject("ColorButton2.Image"), System.Drawing.Image)
         Me.ColorButton2.Location = New System.Drawing.Point(117, 11)
-        Me.ColorButton2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton2.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton2.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton2.Name = "ColorButton2"
         Me.ColorButton2.Padding = New System.Windows.Forms.Padding(2)
@@ -631,7 +631,7 @@ Partial Class MainForm
         Me.ColorButton3.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton3.Image = CType(resources.GetObject("ColorButton3.Image"), System.Drawing.Image)
         Me.ColorButton3.Location = New System.Drawing.Point(169, 11)
-        Me.ColorButton3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton3.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton3.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton3.Name = "ColorButton3"
         Me.ColorButton3.Padding = New System.Windows.Forms.Padding(2)
@@ -648,7 +648,7 @@ Partial Class MainForm
         Me.ColorButton4.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton4.Image = CType(resources.GetObject("ColorButton4.Image"), System.Drawing.Image)
         Me.ColorButton4.Location = New System.Drawing.Point(221, 11)
-        Me.ColorButton4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton4.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton4.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton4.Name = "ColorButton4"
         Me.ColorButton4.Padding = New System.Windows.Forms.Padding(2)
@@ -665,7 +665,7 @@ Partial Class MainForm
         Me.ColorButton5.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton5.Image = CType(resources.GetObject("ColorButton5.Image"), System.Drawing.Image)
         Me.ColorButton5.Location = New System.Drawing.Point(273, 11)
-        Me.ColorButton5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton5.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton5.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton5.Name = "ColorButton5"
         Me.ColorButton5.Padding = New System.Windows.Forms.Padding(2)
@@ -682,7 +682,7 @@ Partial Class MainForm
         Me.ColorButton6.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton6.Image = CType(resources.GetObject("ColorButton6.Image"), System.Drawing.Image)
         Me.ColorButton6.Location = New System.Drawing.Point(325, 11)
-        Me.ColorButton6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton6.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton6.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton6.Name = "ColorButton6"
         Me.ColorButton6.Padding = New System.Windows.Forms.Padding(2)
@@ -699,7 +699,7 @@ Partial Class MainForm
         Me.ColorButton7.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton7.Image = CType(resources.GetObject("ColorButton7.Image"), System.Drawing.Image)
         Me.ColorButton7.Location = New System.Drawing.Point(377, 11)
-        Me.ColorButton7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton7.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton7.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton7.Name = "ColorButton7"
         Me.ColorButton7.Padding = New System.Windows.Forms.Padding(2)
@@ -716,7 +716,7 @@ Partial Class MainForm
         Me.ColorButton8.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton8.Image = CType(resources.GetObject("ColorButton8.Image"), System.Drawing.Image)
         Me.ColorButton8.Location = New System.Drawing.Point(429, 11)
-        Me.ColorButton8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton8.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton8.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton8.Name = "ColorButton8"
         Me.ColorButton8.Padding = New System.Windows.Forms.Padding(2)
@@ -733,7 +733,7 @@ Partial Class MainForm
         Me.ColorButton9.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton9.Image = CType(resources.GetObject("ColorButton9.Image"), System.Drawing.Image)
         Me.ColorButton9.Location = New System.Drawing.Point(481, 11)
-        Me.ColorButton9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton9.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton9.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton9.Name = "ColorButton9"
         Me.ColorButton9.Padding = New System.Windows.Forms.Padding(2)
@@ -750,7 +750,7 @@ Partial Class MainForm
         Me.ColorButton10.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton10.Image = CType(resources.GetObject("ColorButton10.Image"), System.Drawing.Image)
         Me.ColorButton10.Location = New System.Drawing.Point(533, 11)
-        Me.ColorButton10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton10.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton10.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton10.Name = "ColorButton10"
         Me.ColorButton10.Padding = New System.Windows.Forms.Padding(2)
@@ -767,7 +767,7 @@ Partial Class MainForm
         Me.ColorButton11.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton11.Image = CType(resources.GetObject("ColorButton11.Image"), System.Drawing.Image)
         Me.ColorButton11.Location = New System.Drawing.Point(585, 11)
-        Me.ColorButton11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton11.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton11.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton11.Name = "ColorButton11"
         Me.ColorButton11.Padding = New System.Windows.Forms.Padding(2)
@@ -784,7 +784,7 @@ Partial Class MainForm
         Me.ColorButton12.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton12.Image = CType(resources.GetObject("ColorButton12.Image"), System.Drawing.Image)
         Me.ColorButton12.Location = New System.Drawing.Point(637, 11)
-        Me.ColorButton12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton12.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton12.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton12.Name = "ColorButton12"
         Me.ColorButton12.Padding = New System.Windows.Forms.Padding(2)
@@ -801,7 +801,7 @@ Partial Class MainForm
         Me.ColorButton20.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton20.Image = CType(resources.GetObject("ColorButton20.Image"), System.Drawing.Image)
         Me.ColorButton20.Location = New System.Drawing.Point(689, 11)
-        Me.ColorButton20.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton20.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton20.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton20.Name = "ColorButton20"
         Me.ColorButton20.Padding = New System.Windows.Forms.Padding(2)
@@ -818,7 +818,7 @@ Partial Class MainForm
         Me.ColorButton21.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton21.Image = CType(resources.GetObject("ColorButton21.Image"), System.Drawing.Image)
         Me.ColorButton21.Location = New System.Drawing.Point(741, 11)
-        Me.ColorButton21.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton21.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton21.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton21.Name = "ColorButton21"
         Me.ColorButton21.Padding = New System.Windows.Forms.Padding(2)
@@ -835,7 +835,7 @@ Partial Class MainForm
         Me.ColorButton13.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton13.Image = CType(resources.GetObject("ColorButton13.Image"), System.Drawing.Image)
         Me.ColorButton13.Location = New System.Drawing.Point(793, 11)
-        Me.ColorButton13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton13.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton13.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton13.Name = "ColorButton13"
         Me.ColorButton13.Padding = New System.Windows.Forms.Padding(2)
@@ -852,7 +852,7 @@ Partial Class MainForm
         Me.ColorButton14.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton14.Image = CType(resources.GetObject("ColorButton14.Image"), System.Drawing.Image)
         Me.ColorButton14.Location = New System.Drawing.Point(845, 11)
-        Me.ColorButton14.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton14.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton14.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton14.Name = "ColorButton14"
         Me.ColorButton14.Padding = New System.Windows.Forms.Padding(2)
@@ -869,7 +869,7 @@ Partial Class MainForm
         Me.ColorButton15.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton15.Image = CType(resources.GetObject("ColorButton15.Image"), System.Drawing.Image)
         Me.ColorButton15.Location = New System.Drawing.Point(897, 11)
-        Me.ColorButton15.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton15.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton15.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton15.Name = "ColorButton15"
         Me.ColorButton15.Padding = New System.Windows.Forms.Padding(2)
@@ -886,7 +886,7 @@ Partial Class MainForm
         Me.ColorButton16.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton16.Image = CType(resources.GetObject("ColorButton16.Image"), System.Drawing.Image)
         Me.ColorButton16.Location = New System.Drawing.Point(949, 11)
-        Me.ColorButton16.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton16.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton16.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton16.Name = "ColorButton16"
         Me.ColorButton16.Padding = New System.Windows.Forms.Padding(2)
@@ -903,7 +903,7 @@ Partial Class MainForm
         Me.ColorButton17.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton17.Image = CType(resources.GetObject("ColorButton17.Image"), System.Drawing.Image)
         Me.ColorButton17.Location = New System.Drawing.Point(1001, 11)
-        Me.ColorButton17.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton17.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton17.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton17.Name = "ColorButton17"
         Me.ColorButton17.Padding = New System.Windows.Forms.Padding(2)
@@ -920,7 +920,7 @@ Partial Class MainForm
         Me.ColorButton18.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton18.Image = CType(resources.GetObject("ColorButton18.Image"), System.Drawing.Image)
         Me.ColorButton18.Location = New System.Drawing.Point(1053, 11)
-        Me.ColorButton18.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton18.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton18.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton18.Name = "ColorButton18"
         Me.ColorButton18.Padding = New System.Windows.Forms.Padding(2)
@@ -937,7 +937,7 @@ Partial Class MainForm
         Me.ColorButton19.Dock = System.Windows.Forms.DockStyle.Left
         Me.ColorButton19.Image = CType(resources.GetObject("ColorButton19.Image"), System.Drawing.Image)
         Me.ColorButton19.Location = New System.Drawing.Point(1105, 11)
-        Me.ColorButton19.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ColorButton19.Margin = New System.Windows.Forms.Padding(4)
         Me.ColorButton19.MinimumSize = New System.Drawing.Size(44, 43)
         Me.ColorButton19.Name = "ColorButton19"
         Me.ColorButton19.Padding = New System.Windows.Forms.Padding(2)
@@ -952,7 +952,7 @@ Partial Class MainForm
         Me.rbHighlight.AutoSize = True
         Me.rbHighlight.BackColor = System.Drawing.Color.Transparent
         Me.rbHighlight.Location = New System.Drawing.Point(98, 17)
-        Me.rbHighlight.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbHighlight.Margin = New System.Windows.Forms.Padding(4)
         Me.rbHighlight.Name = "rbHighlight"
         Me.rbHighlight.Size = New System.Drawing.Size(112, 29)
         Me.rbHighlight.TabIndex = 1
@@ -965,7 +965,7 @@ Partial Class MainForm
         Me.TextColorRadio.BackColor = System.Drawing.Color.Transparent
         Me.TextColorRadio.Checked = True
         Me.TextColorRadio.Location = New System.Drawing.Point(11, 17)
-        Me.TextColorRadio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextColorRadio.Margin = New System.Windows.Forms.Padding(4)
         Me.TextColorRadio.Name = "TextColorRadio"
         Me.TextColorRadio.Size = New System.Drawing.Size(76, 29)
         Me.TextColorRadio.TabIndex = 0
@@ -983,11 +983,11 @@ Partial Class MainForm
         'MainToolStripContainer.ContentPanel
         '
         Me.MainToolStripContainer.ContentPanel.Controls.Add(Me.SplitLayoutPanel)
-        Me.MainToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MainToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.MainToolStripContainer.ContentPanel.Size = New System.Drawing.Size(1657, 1011)
         Me.MainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainToolStripContainer.Location = New System.Drawing.Point(0, 38)
-        Me.MainToolStripContainer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MainToolStripContainer.Margin = New System.Windows.Forms.Padding(4)
         Me.MainToolStripContainer.Name = "MainToolStripContainer"
         Me.MainToolStripContainer.Size = New System.Drawing.Size(1657, 1095)
         Me.MainToolStripContainer.TabIndex = 74
@@ -2233,7 +2233,7 @@ Partial Class MainForm
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MainMenu
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MainForm"
         Me.Text = "LangPad X.x"
         Me.MainContextMenu.ResumeLayout(False)

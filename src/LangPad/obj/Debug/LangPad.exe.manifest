@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>B7feosYq81k+OkyZWe8Wbtd6Go2rF/Db6J1/HWkrI5o=</dsig:DigestValue>
+        <dsig:DigestValue>4zvF7JxL/tX/k9PB4tLO1i7wvkRdjKT9R9aFKkEkHE8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPadUI.dll" size="1638400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPadUI.dll" size="1637888">
       <assemblyIdentity name="LangPadUI" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pZTRVu7ZkuHaaCPnLMAzdJ6oxW1IuDQ+8tUna6IYV6I=</dsig:DigestValue>
+        <dsig:DigestValue>AtZvF1klKSfgF9bHo9UyDD+dXUQ2WEk/Vtbv2tQxrMA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -132,13 +132,13 @@
       <dsig:DigestValue>Cvm5mG9ym8N0K3DKPyXvFn5066K0S860+fPr91VbHuk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LangPad.exe.config" size="4522">
+  <file name="LangPad.exe.config" size="4516">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>l12EjG3tQzlZrBdL7Q1ZevUdJM9fZCfUqq4GQmywgMQ=</dsig:DigestValue>
+      <dsig:DigestValue>l8QwePXbX91izXNsHJGwehmiKXkulccaMEl70VFHtPc=</dsig:DigestValue>
     </hash>
   </file>
   <asmv3:application xmlns="urn:schemas-microsoft-com:asm.v1">

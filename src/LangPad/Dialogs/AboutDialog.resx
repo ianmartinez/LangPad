@@ -174,7 +174,7 @@ Version 11.0 (May 23, 2020)
    • Convert all custom controls to C#
    • Complete re-write of file handling code   
    • Complete re-write of theming code   
-   • Add themes: Default Light, Cool Gray, Desert, Luna, Metallic, Luna, Olive, and Whiteout 
+   • Add themes: Default, Cool Gray, Desert, Luna, Metallic, Luna, Olive, and Whiteout 
    • Bug Fix: Old Language Pad 4.x-5.x files could not be opened
    • Bug Fix: Bad performance when changing font styles on a page that has large images 
    • Bug Fix: Word count wouldn't update automatically when opening a new file
