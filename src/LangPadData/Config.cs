@@ -6,9 +6,9 @@ namespace LangPadData
 {
     public static class Config
     {
-        private static string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        private static string AppFolder = Path.Combine(AppData, "LangPad");
-        private static string SettingsFilePath = Path.Combine(AppFolder, "LangPad.config");
+        private static readonly string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        private static readonly string AppFolder = Path.Combine(AppData, "LangPad");
+        private static readonly string SettingsFilePath = Path.Combine(AppFolder, "LangPad.config");
         private static Dictionary<string, string> Settings; 
 
         public static bool HasLoaded => Settings != null;
@@ -31,10 +31,8 @@ namespace LangPadData
         {
             var lines = new List<KvLine>();
             lines.Add(new KvLine(KvLineType.Comment, "LangPad Configuration"));
-
             foreach (var setting in Settings)
                 lines.Add(new KvLine(KvLineType.KeyValue, setting.Key, setting.Value));
-
             KeyValue.WriteFile(SettingsFilePath, lines);
         }
 
