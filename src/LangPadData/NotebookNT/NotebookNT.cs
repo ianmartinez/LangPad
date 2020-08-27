@@ -150,8 +150,7 @@ namespace LangPadData.NotebookNT
             if (File.Exists(tempFolder.CharactersFile))
                 Characters = Lines.Get(File.ReadAllText(tempFolder.CharactersFile)).ToList();
 
-            // Load dictionary
-
+            // === Load dictionary ===
             // Reset dictionary
             Dictionary = new DictionaryNT();
 
@@ -160,7 +159,7 @@ namespace LangPadData.NotebookNT
             if (File.Exists(tempFolder.DictionaryFile))
                 Dictionary.Open(tempFolder.DictionaryFile);
 
-            // 4.0 also lack an info.txt, so check for that too
+            // 4.0 also lacks an info.txt, so check for that too
             if (File.Exists(tempFolder.InfoFile))
                 Info = File.ReadAllText(tempFolder.InfoFile);
 

@@ -102,11 +102,12 @@ namespace LangPadData
         /// 
         /// <param name="data">The key/value dictionary.</param>
         /// <param name="key">The key to search for.</param>
+        /// <param name="fallback">The fallback value if the key was not found.</param>
         /// 
         /// <returns>The value matching the key.</returns>
-        public static string Search(Dictionary<string, string> data, string key)
+        public static string Search(Dictionary<string, string> data, string key, string fallback = "")
         {
-            return data.ContainsKey(key) ? data[key] : "";
+            return data.ContainsKey(key) ? data[key] : fallback;
         }
 
         /// <summary>

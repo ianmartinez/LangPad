@@ -1,4 +1,5 @@
-﻿Imports LangPadData
+﻿Imports System.Configuration
+Imports LangPadData
 
 ''' <summary>
 ''' Load all of the controls in the character editor and check for updates at startup.
@@ -22,6 +23,10 @@ Module AppLoad
     ''' Load the application.
     ''' </summary>
     Public Sub LoadApplication()
+        Config.LoadSettingsFile()
+        Dim Settings = Config.Test
+        Config.Test = "new value"
+
         SplashScreenForm.Show()
 
         BeginOperation(MainForm)
