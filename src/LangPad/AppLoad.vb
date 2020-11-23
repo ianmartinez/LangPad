@@ -23,12 +23,7 @@ Module AppLoad
     ''' Load the application.
     ''' </summary>
     Public Sub LoadApplication()
-        Config.LoadSettingsFile()
-        Dim Settings = Config.Test
-        Config.Test = "new value"
-
         SplashScreenForm.Show()
-
         BeginOperation(MainForm)
         BeginOperation(CharEditWindow)
 
@@ -81,19 +76,19 @@ Module AppLoad
         Next
 
         UpdateSplash(80, "Loading Local Custom Characters...")
-        For Each LocalCharacter As String In AppLocalCharacters
+        For Each LocalCharacter As String In Config.LocalChars
             CharEditWindow.CharEdit.InsertCharacterButton(LocalCharacter, CharEditWindow.CharEdit.LocalPanel)
         Next
 
         UpdateSplash(90, "Loading Smart Replace...")
-        If My.Settings.SmartReplace = True Then
+        If Config.SmartReplace = True Then
             SplashScreenForm.LoadingLabel.Text = "Loading Smart Replace..."
             For Each pair As KeyValuePair(Of String, String) In KeyValue.Read(My.Resources.SmartReplace)
                 SmartReplaceList.Add(pair.Key, pair.Value)
             Next
         End If
 
-        If My.Settings.Updates = True Then
+        If Config.UpdateOnStartup = True Then
             UpdateSplash(95, "Checking for Updates...")
             SplashScreenForm.LoadingLabel.Text = "Checking for updates..."
             CheckForUpdates()

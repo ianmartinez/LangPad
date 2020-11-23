@@ -1,0 +1,11 @@
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadData\bin\Debug\netstandard2.1\LangPadData.deps.json
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadData\bin\Debug\netstandard2.1\LangPadData.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadData\bin\Debug\netstandard2.1\LangPadData.pdb
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.1\LangPadData.csprojAssemblyReference.cache
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.1\LangPadData.Properties.Resources.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.1\LangPadData.csproj.GenerateResource.cache
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.1\LangPadData.AssemblyInfoInputs.cache
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.1\LangPadData.AssemblyInfo.cs
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.1\LangPadData.csproj.CoreCompileInputs.cache
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.1\LangPadData.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadData\obj\Debug\netstandard2.1\LangPadData.pdb

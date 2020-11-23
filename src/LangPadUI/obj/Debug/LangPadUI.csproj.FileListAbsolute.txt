@@ -17,3 +17,13 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.csproj
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.csproj.CoreCompileInputs.cache
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.dll
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.pdb
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadUI\bin\Debug\LangPadUI.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadUI\bin\Debug\LangPadUI.pdb
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.csprojAssemblyReference.cache
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.Properties.Resources.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.ColorButton.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.ShortcutButton.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.csproj.GenerateResource.cache
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.csproj.CoreCompileInputs.cache
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\LangPadUI.pdb

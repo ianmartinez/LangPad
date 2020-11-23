@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Text
+Imports LangPadData
 Imports LangPadData.NotebookNT
 Imports LangPadUI
 
@@ -10,7 +11,7 @@ Public Class DictionaryForm
     Private Sub DictionaryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SetIcons()
         RefreshDictionary()
-        SetDisplayFont()
+        UpdateDisplayFont()
         Loaded = True
         KeyPreview = True
 
@@ -19,6 +20,9 @@ Public Class DictionaryForm
         FindButton.Top = FindTextBox.Top - (FindButton.Height / 2 - FindTextBox.Height / 2)
 
         GridBorder.Padding = New Padding(0)
+        ZoomInToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl++"
+        ZoomOutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+-"
+        ZoomToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+`"
     End Sub
 
     Public Sub SetIcons()
@@ -33,8 +37,9 @@ Public Class DictionaryForm
         CharacterEditorToolStripMenuItem.Image = IconManager.Get("language", IconSize.Small, Res)
         AddWordToolStripMenuItem.Image = IconManager.Get("list-add", IconSize.Small, Res)
         RemoveWordToolStripMenuItem.Image = IconManager.Get("list-remove", IconSize.Small, Res)
-        EditDisplayFontToolStripMenuItem.Image = IconManager.Get("font", IconSize.Small, Res)
-        ResetDisplayFontToolStripMenuItem.Image = IconManager.Get("restart", IconSize.Small, Res)
+        ZoomInToolStripMenuItem.Image = IconManager.Get("zoom-in", IconSize.Small, Res)
+        ZoomOutToolStripMenuItem.Image = IconManager.Get("zoom-out", IconSize.Small, Res)
+        ZoomToolStripMenuItem.Image = IconManager.Get("zoom-original", IconSize.Small, Res)
         FindToolStripMenuItem.Image = IconManager.Get("edit-find", IconSize.Small, Res)
         SelectAllToolStripMenuItem.Image = IconManager.Get("edit-select-all", IconSize.Small, Res)
 
@@ -46,23 +51,16 @@ Public Class DictionaryForm
         CharacterEditorToolStripButton.Image = IconManager.Get("language", IconSize.Large, Res)
         AddToolStripButton.Image = IconManager.Get("list-add", IconSize.Large, Res)
         RemoveToolStripButton.Image = IconManager.Get("list-remove", IconSize.Large, Res)
-        FontToolStripButton.Image = IconManager.Get("font", IconSize.Large, Res)
-        ResetFontToolStripButton.Image = IconManager.Get("restart", IconSize.Large, Res)
         FindToolStripButton.Image = IconManager.Get("edit-find", IconSize.Large, Res)
     End Sub
 
     ''' <summary>
-    ''' Set the display font (the font the table renders in)
+    ''' Update the display font (the font the table renders in)
     ''' </summary>
-    Public Sub SetDisplayFont()
-        DictionaryGrid.DefaultCellStyle.Font = My.Settings.DictionaryFont
-        DictionaryGrid.DefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
-        DictionaryGrid.RowsDefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
-        DictionaryGrid.AlternatingRowsDefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
-        DictionaryGrid.RowHeadersDefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
-        Dim HeaderFont = New Font(My.Settings.DictionaryFont, FontStyle.Bold)
+    Public Sub UpdateDisplayFont()
+        DictionaryGrid.DefaultCellStyle.Font = New Font("Calibri", Config.DictionaryFontSize)
+        Dim HeaderFont = New Font(DictionaryGrid.DefaultCellStyle.Font, FontStyle.Bold)
         DictionaryGrid.ColumnHeadersDefaultCellStyle.Font = HeaderFont
-        DictionaryGrid.ColumnHeadersDefaultCellStyle.ForeColor = My.Settings.DictionaryFontColor
         DictionaryGrid.Refresh()
     End Sub
 
@@ -111,7 +109,7 @@ Public Class DictionaryForm
         }
 
         Dim headerBounds As Rectangle = New Rectangle(e.RowBounds.Left, e.RowBounds.Top, Grid.RowHeadersWidth, e.RowBounds.Height)
-        e.Graphics.DrawString(RowIndex, RowFont, New SolidBrush(My.Settings.DictionaryFontColor), headerBounds, CenterFormat)
+        e.Graphics.DrawString(RowIndex, RowFont, New SolidBrush(Color.Black), headerBounds, CenterFormat)
     End Sub
 
     Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
@@ -132,10 +130,6 @@ Public Class DictionaryForm
 
     Private Sub RemoveToolStripButton_Click(sender As Object, e As EventArgs) Handles RemoveToolStripButton.Click
         RemoveWordToolStripMenuItem_Click(Me, e)
-    End Sub
-
-    Private Sub FontToolStripButton_Click(sender As Object, e As EventArgs) Handles FontToolStripButton.Click
-        EditDisplayFontToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub DictionaryForm_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
@@ -199,10 +193,6 @@ Public Class DictionaryForm
 
                                               Return CurrentTextbox
                                           End Function
-    End Sub
-
-    Private Sub ResetFontToolStripButton_Click(sender As Object, e As EventArgs) Handles ResetFontToolStripButton.Click
-        ResetDisplayFontToolStripMenuItem_Click(Me, e)
     End Sub
 
     Private Sub DictionaryForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -277,25 +267,6 @@ Public Class DictionaryForm
             FindTextBox.Focus()
             GridBorder.Padding = New Padding(0, 1, 0, 0)
         End If
-    End Sub
-
-    Private Sub EditDisplayFontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditDisplayFontToolStripMenuItem.Click
-        FontPicker.Color = DictionaryGrid.DefaultCellStyle.ForeColor
-        FontPicker.Font = DictionaryGrid.DefaultCellStyle.Font
-
-        If FontPicker.ShowDialog = DialogResult.OK Then
-            My.Settings.DictionaryFont = FontPicker.Font
-            My.Settings.DictionaryFontColor = FontPicker.Color
-            My.Settings.Save()
-            SetDisplayFont()
-        End If
-    End Sub
-
-    Private Sub ResetDisplayFontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetDisplayFontToolStripMenuItem.Click
-        My.Settings.DictionaryFont = New Font("Calibri", 11, FontStyle.Regular)
-        My.Settings.DictionaryFontColor = Color.Black
-        My.Settings.Save()
-        SetDisplayFont()
     End Sub
 
     Private Sub AddWordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddWordToolStripMenuItem.Click
@@ -404,5 +375,20 @@ Public Class DictionaryForm
         Else
             DictionaryGrid.SelectAll()
         End If
+    End Sub
+
+    Private Sub ZoomInToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomInToolStripMenuItem.Click
+        Config.DictionaryFontSize += 1
+        UpdateDisplayFont()
+    End Sub
+
+    Private Sub ZoomOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomOutToolStripMenuItem.Click
+        Config.DictionaryFontSize -= 1
+        UpdateDisplayFont()
+    End Sub
+
+    Private Sub ZoomToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ZoomToolStripMenuItem.Click
+        Config.DictionaryFontSize = Config.DefaultDictionaryFontSize
+        UpdateDisplayFont()
     End Sub
 End Class

@@ -6,7 +6,9 @@ namespace LangPadData
 {
     /// <summary>
     /// Read from Key/Value files, which are basically just INI files
-    /// without sections (i.e. '[section]' syntax).
+    /// without sections (i.e. '[section]' syntax). A lot of this
+    /// is just for backwards-compatibility with older versions of 
+    /// LangPad.
     /// 
     /// Comments are supported for lines that begin with "#" or "!".
     /// 

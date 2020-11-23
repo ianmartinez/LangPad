@@ -821,9 +821,9 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
  
  <returns>The width value of the new rectangle.</returns>
 </member>
-<member name="M:LangPad.DictionaryForm.SetDisplayFont">
+<member name="M:LangPad.DictionaryForm.UpdateDisplayFont">
  <summary>
- Set the display font (the font the table renders in)
+ Update the display font (the font the table renders in)
  </summary>
 </member>
 <member name="M:LangPad.DictionaryForm.SaveDictionary">
@@ -869,11 +869,6 @@ Close back compressed vowel/High back compressed  [rest of string was truncated]
 <member name="F:LangPad.AppInstance.ApplicationTheme">
  <summary>
  The theme of the application's interface.
- </summary>
-</member>
-<member name="P:LangPad.AppInstance.AppLocalCharacters">
- <summary>
- The local characters as a string array.
  </summary>
 </member>
 <member name="M:LangPad.AppInstance.GetIconResolution">

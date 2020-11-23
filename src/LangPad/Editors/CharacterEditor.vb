@@ -15,7 +15,7 @@ Public Class CharacterEditor
         If Character = "" Then Character = "a"
         CharacterTextBox.Text = Character
 
-        SmartReplaceCheck.Visible = My.Settings.SmartReplace
+        SmartReplaceCheck.Visible = Config.SmartReplace
         AccentsList.Clear()
         AccentsString = ""
         UpdateResult()
@@ -59,16 +59,16 @@ Public Class CharacterEditor
     End Sub
 
     Private Sub LoadShortcutKeys()
-        ShortcutButton1.CharValue = My.Settings.Ctrl1
-        ShortcutButton2.CharValue = My.Settings.Ctrl2
-        ShortcutButton3.CharValue = My.Settings.Ctrl3
-        ShortcutButton4.CharValue = My.Settings.Ctrl4
-        ShortcutButton5.CharValue = My.Settings.Ctrl5
-        ShortcutButton6.CharValue = My.Settings.Ctrl6
-        ShortcutButton7.CharValue = My.Settings.Ctrl7
-        ShortcutButton8.CharValue = My.Settings.Ctrl8
-        ShortcutButton9.CharValue = My.Settings.Ctrl9
-        ShortcutButton0.CharValue = My.Settings.Ctrl0
+        ShortcutButton1.CharValue = Config.Ctrl1
+        ShortcutButton2.CharValue = Config.Ctrl2
+        ShortcutButton3.CharValue = Config.Ctrl3
+        ShortcutButton4.CharValue = Config.Ctrl4
+        ShortcutButton5.CharValue = Config.Ctrl5
+        ShortcutButton6.CharValue = Config.Ctrl6
+        ShortcutButton7.CharValue = Config.Ctrl7
+        ShortcutButton8.CharValue = Config.Ctrl8
+        ShortcutButton9.CharValue = Config.Ctrl9
+        ShortcutButton0.CharValue = Config.Ctrl0
     End Sub
 
     Private Sub UpdateResult()
@@ -114,15 +114,13 @@ Public Class CharacterEditor
     End Sub
 
     Public Sub AddToLocal(Character As String)
-        If AppLocalCharacters.Contains(Character) Then Exit Sub
-
-        My.Settings.CustomCharacters = My.Settings.CustomCharacters & Environment.NewLine & Character
+        Config.AddLocalCharacter(Character)
         RefreshLocal()
     End Sub
 
     Public Sub RefreshLocal()
         LocalPanel.Controls.Clear()
-        For Each LocalCharacter As String In AppLocalCharacters
+        For Each LocalCharacter As String In Config.LocalChars
             InsertCharacterButton(LocalCharacter, LocalPanel)
         Next
     End Sub
@@ -182,9 +180,9 @@ Public Class CharacterEditor
     Public Sub CharacterButtonClick(sender As Object, e As EventArgs) Handles CharacterButton.Click
         Dim CharButton As Button = CType(sender, Button)
 
-        If My.Computer.Keyboard.AltKeyDown Then
+        If ModifierKeys.HasFlag(Keys.Alt) Then
             CharacterTextBox.Text += CharButton.Text.Replace("◌", "")
-        ElseIf My.Computer.Keyboard.CtrlKeyDown Then
+        ElseIf ModifierKeys.HasFlag(Keys.Control) Then
             AddToLocal(CharButton.Text)
         Else
             InsertInCurrentTextBox(CharButton)
@@ -196,7 +194,7 @@ Public Class CharacterEditor
         Dim ButtonText = SourceButton.Text.Replace("◌", "")
 
         If CurrentTextBox IsNot Nothing Then
-            If My.Computer.Keyboard.ShiftKeyDown OrElse My.Computer.Keyboard.CapsLock Then
+            If ModifierKeys.HasFlag(Keys.Shift) OrElse ModifierKeys.HasFlag(Keys.CapsLock) Then
                 ButtonText = ButtonText.ToUpper()
             End If
 
@@ -363,12 +361,8 @@ Public Class CharacterEditor
                 RefreshFile()
             End If
         ElseIf CurrentButton.Parent Is LocalPanel Then
-            Dim LocalChars As List(Of String) = AppLocalCharacters.ToList()
-            If LocalChars.Contains(CurrentButton.Text) Then
-                LocalChars.Remove(CurrentButton.Text)
-                My.Settings.CustomCharacters = String.Join(Environment.NewLine, LocalChars.ToArray())
-                RefreshLocal()
-            End If
+            Config.RemoveLocalCharacter(CurrentButton.Text)
+            RefreshLocal()
         End If
     End Sub
 
@@ -391,7 +385,7 @@ Public Class CharacterEditor
 
     Private Sub ClearLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ClearLocalToolStripButton.Click
         If ConfirmClear() = DialogResult.Yes Then
-            My.Settings.CustomCharacters = ""
+            Config.ClearLocalCharacters()
             RefreshLocal()
         End If
     End Sub
@@ -417,10 +411,9 @@ Public Class CharacterEditor
 
     Private Sub ImportLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportLocalToolStripButton.Click
         If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            Dim LocalChars = Lines.Get(My.Settings.CustomCharacters).ToList()
+            Dim LocalChars = Config.LocalChars
             ImportFile(OpenDialog.FileName, LocalChars)
-            My.Settings.CustomCharacters = String.Join(vbLf, LocalChars)
-            My.Settings.Save()
+            Config.LocalCharsString = String.Join(vbLf, LocalChars)
             RefreshLocal()
         End If
     End Sub
@@ -434,7 +427,7 @@ Public Class CharacterEditor
 
     Private Sub ExportLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportLocalToolStripButton.Click
         If SaveDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
-            File.WriteAllText(SaveDialog.FileName, My.Settings.CustomCharacters)
+            File.WriteAllText(SaveDialog.FileName, Config.LocalCharsString)
         End If
     End Sub
 
@@ -503,61 +496,61 @@ Public Class CharacterEditor
     Private Sub CTRL1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL1ToolStripMenuItem.Click
         Dim CharValue = GetButtonTextFromMenu(sender, True)
         ShortcutButton1.CharValue = CharValue
-        My.Settings.Ctrl1 = CharValue
+        Config.Ctrl1 = CharValue
     End Sub
 
     Private Sub CTRL2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL2ToolStripMenuItem.Click
         Dim CharValue = GetButtonTextFromMenu(sender, True)
         ShortcutButton2.CharValue = CharValue
-        My.Settings.Ctrl2 = CharValue
+        Config.Ctrl2 = CharValue
     End Sub
 
     Private Sub CTRL3ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL3ToolStripMenuItem.Click
         Dim CharValue = GetButtonTextFromMenu(sender, True)
         ShortcutButton3.CharValue = CharValue
-        My.Settings.Ctrl3 = CharValue
+        Config.Ctrl3 = CharValue
     End Sub
 
     Private Sub CTRL4ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL4ToolStripMenuItem.Click
         Dim CharValue = GetButtonTextFromMenu(sender, True)
         ShortcutButton4.CharValue = CharValue
-        My.Settings.Ctrl4 = CharValue
+        Config.Ctrl4 = CharValue
     End Sub
 
     Private Sub CTRL5ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL5ToolStripMenuItem.Click
         Dim CharValue = GetButtonTextFromMenu(sender, True)
         ShortcutButton5.CharValue = CharValue
-        My.Settings.Ctrl5 = CharValue
+        Config.Ctrl5 = CharValue
     End Sub
 
     Private Sub CTRL6ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL6ToolStripMenuItem.Click
         Dim CharValue = GetButtonTextFromMenu(sender, True)
         ShortcutButton6.CharValue = CharValue
-        My.Settings.Ctrl6 = CharValue
+        Config.Ctrl6 = CharValue
     End Sub
 
     Private Sub CTRL7ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL7ToolStripMenuItem.Click
         Dim CharValue = GetButtonTextFromMenu(sender, True)
         ShortcutButton7.CharValue = CharValue
-        My.Settings.Ctrl7 = CharValue
+        Config.Ctrl7 = CharValue
     End Sub
 
     Private Sub CTRL8ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL8ToolStripMenuItem.Click
         Dim CharValue = GetButtonTextFromMenu(sender, True)
         ShortcutButton8.CharValue = CharValue
-        My.Settings.Ctrl8 = CharValue
+        Config.Ctrl8 = CharValue
     End Sub
 
     Private Sub CTRL9ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL9ToolStripMenuItem.Click
         Dim CharValue = GetButtonTextFromMenu(sender, True)
         ShortcutButton9.CharValue = CharValue
-        My.Settings.Ctrl9 = CharValue
+        Config.Ctrl9 = CharValue
     End Sub
 
     Private Sub CTRL0ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CTRL0ToolStripMenuItem.Click
         Dim CharValue = GetButtonTextFromMenu(sender, True)
         ShortcutButton0.CharValue = CharValue
-        My.Settings.Ctrl0 = CharValue
+        Config.Ctrl0 = CharValue
     End Sub
 
     Private Sub ResetKeyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetKeyToolStripMenuItem.Click
@@ -566,7 +559,7 @@ Public Class CharacterEditor
         Dim CurrentButton As ShortcutButton = CType(CurrentContextMenu.SourceControl, ShortcutButton)
 
         If Not String.IsNullOrEmpty(CurrentButton.SettingsValue) Then
-            My.Settings.Item(CurrentButton.SettingsValue) = ""
+            Config.GetProperty(CurrentButton.SettingsValue).SetValue(Nothing, "")
         End If
 
         CurrentButton.CharValue = ""
@@ -580,16 +573,16 @@ Public Class CharacterEditor
 
         If ConfirmReset = DialogResult.Yes Then
             ' Reset settings
-            My.Settings.Ctrl1 = ""
-            My.Settings.Ctrl2 = ""
-            My.Settings.Ctrl3 = ""
-            My.Settings.Ctrl4 = ""
-            My.Settings.Ctrl5 = ""
-            My.Settings.Ctrl6 = ""
-            My.Settings.Ctrl7 = ""
-            My.Settings.Ctrl8 = ""
-            My.Settings.Ctrl9 = ""
-            My.Settings.Ctrl0 = ""
+            Config.Ctrl1 = ""
+            Config.Ctrl2 = ""
+            Config.Ctrl3 = ""
+            Config.Ctrl4 = ""
+            Config.Ctrl5 = ""
+            Config.Ctrl6 = ""
+            Config.Ctrl7 = ""
+            Config.Ctrl8 = ""
+            Config.Ctrl9 = ""
+            Config.Ctrl0 = ""
 
             ' Reload buttons
             LoadShortcutKeys()

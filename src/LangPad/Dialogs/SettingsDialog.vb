@@ -1,15 +1,16 @@
-﻿Public Class SettingsDialog
+﻿Imports LangPadData
+
+Public Class SettingsDialog
     Private Sub SettingsDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UpdatesOnStartupCheck.Checked = My.Settings.Updates
-        LargeIconsCheck.Checked = My.Settings.HiDPI
-        ShowCharEditCheck.Checked = My.Settings.ShowCharacterEditorOnStartup
+        UpdatesOnStartupCheck.Checked = Config.UpdateOnStartup
+        LargeIconsCheck.Checked = Config.HiDPI
+        ShowCharEditCheck.Checked = Config.ShowCharacterEditorOnStartup
     End Sub
 
     Private Sub OkDialogButton_Click(sender As Object, e As EventArgs) Handles OkDialogButton.Click
-        My.Settings.Updates = UpdatesOnStartupCheck.Checked
-        My.Settings.HiDPI = LargeIconsCheck.Checked
-        My.Settings.ShowCharacterEditorOnStartup = ShowCharEditCheck.Checked
-        My.Settings.Save()
+        Config.UpdateOnStartup = UpdatesOnStartupCheck.Checked
+        Config.HiDPI = LargeIconsCheck.Checked
+        Config.ShowCharacterEditorOnStartup = ShowCharEditCheck.Checked
 
         ' Refresh icons to DPI setting
         MainForm.SetIcons()

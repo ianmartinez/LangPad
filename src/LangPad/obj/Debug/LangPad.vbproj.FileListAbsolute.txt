@@ -73,3 +73,44 @@ C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.Cop
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.exe
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.xml
 C:\Users\ianma\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.pdb
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe.config
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe.manifest
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.application
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.exe
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.pdb
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPad.xml
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadData.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadUI.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\RtfPipe.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadData.pdb
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\LangPadUI.pdb
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.pdb
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\AutoUpdater.NET.xml
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbprojAssemblyReference.cache
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CharacterEditorToolWindow.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.AboutDialog.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.PageNameDialog.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CustomZoomDialog.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.SettingsDialog.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.StyleDialog.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.ImportImageDialog.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.DictionaryForm.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.ExportHtmlDialog.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.MainForm.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.RtfEditorForm.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.Resources.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.CharacterEditor.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.NotebookEditor.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.SplashScreenForm.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.GenerateResource.cache
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.CoreCompileInputs.cache
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.exe.manifest
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.application
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.vbproj.CopyComplete
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.exe
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.xml
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src\LangPad\obj\Debug\LangPad.pdb

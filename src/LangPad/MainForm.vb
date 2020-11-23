@@ -84,11 +84,11 @@ Public Class MainForm
         Next
 
         ' Show character editor to the right of this form
-        If My.Settings.ShowCharacterEditorOnStartup Then
+        If Config.ShowCharacterEditorOnStartup Then
             CharEditWindow.Show()
         End If
         CharEditWindow.TargetForm = Me
-        Dim ScreenWidth As Integer = My.Computer.Screen.Bounds.Width
+        Dim ScreenWidth As Integer = Screen.PrimaryScreen.Bounds.Width
         Dim ScreenX As Integer = ScreenWidth - 20 - CharEditWindow.Width
         Dim CharToolX = Math.Min(ScreenX, Location.X + Width + 20)
         CharEditWindow.Location = New Point(CharToolX, Location.Y)
@@ -291,8 +291,7 @@ Public Class MainForm
 
         CharEditWindow.Close()
         If DictionaryForm IsNot Nothing Then DictionaryForm.Close()
-        My.Settings.Theme = Themer.CurrentTheme.Name
-        My.Settings.Save()
+        Config.Theme = Themer.CurrentTheme.Name
     End Sub
 
     Private Sub FindButton_Click(sender As Object, e As EventArgs) Handles FindButton.Click

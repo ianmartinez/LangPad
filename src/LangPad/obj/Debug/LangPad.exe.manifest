@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="LangPad.exe" version="11.1.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="LangPad.exe" version="11.2.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="AppIcon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="LangPad" version="11.1.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="LangPad" version="11.2.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="LangPad.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -67,26 +67,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPad.exe" size="1119232">
-      <assemblyIdentity name="LangPad" version="11.1.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPad.exe" size="1114112">
+      <assemblyIdentity name="LangPad" version="11.2.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NZOWS3eJs4aVI28pA8VxY3jDqPwAxu3L7dw3o0zDbao=</dsig:DigestValue>
+        <dsig:DigestValue>xbcaJTSKH6Q03fqy8ePxtT11EtepkqjiMxbePVCk2dA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPadData.dll" size="27136">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LangPadData.dll" size="30208">
       <assemblyIdentity name="LangPadData" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zeYlWMYRcHyLSzDZ7e9/3PN0KRuPmnyzUmoXHqJyAP8=</dsig:DigestValue>
+        <dsig:DigestValue>8wDWEzlK91REvAloka0OlwB0S6AHet5lBhA3yWvHXbY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ErtB+K9LFILuZc9Ty+fSQlWU5tquZ0IqDskew+DSXZE=</dsig:DigestValue>
+        <dsig:DigestValue>UX4NuUKNoLnIbUVuyQGVnxc3cYNrxgiBOK/j/zoDIHs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -132,13 +132,13 @@
       <dsig:DigestValue>Cvm5mG9ym8N0K3DKPyXvFn5066K0S860+fPr91VbHuk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LangPad.exe.config" size="4516">
+  <file name="LangPad.exe.config" size="1775">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>l8QwePXbX91izXNsHJGwehmiKXkulccaMEl70VFHtPc=</dsig:DigestValue>
+      <dsig:DigestValue>Z5E2IIRbe3znSNpmfI5WarBlxI+rk0uA4PyUif2VE+o=</dsig:DigestValue>
     </hash>
   </file>
   <asmv3:application xmlns="urn:schemas-microsoft-com:asm.v1">

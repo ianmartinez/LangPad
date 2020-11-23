@@ -1,4 +1,5 @@
-﻿Imports LangPadUI
+﻿Imports LangPadData
+Imports LangPadUI
 Imports LangPadUI.Theming
 
 ''' <summary>
@@ -27,7 +28,7 @@ Module AppTheme
             InitCharEditTheme()
 
             ' Get saved theme
-            Dim SavedTheme = Themer.GetTheme(My.Settings.Theme)
+            Dim SavedTheme = Themer.GetTheme(Config.Theme)
             ' Default to light theme if none found
             If SavedTheme Is Nothing Then
                 SavedTheme = New Themes.DefaultTheme()

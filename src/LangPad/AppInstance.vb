@@ -23,21 +23,12 @@ Module AppInstance
     Public ApplicationTheme As Theme
 
     ''' <summary>
-    ''' The local characters as a string array.
-    ''' </summary>
-    Public ReadOnly Property AppLocalCharacters As String()
-        Get
-            Return Lines.Get(My.Settings.CustomCharacters)
-        End Get
-    End Property
-
-    ''' <summary>
     ''' Get the icon resolution set by the user.
     ''' </summary>
     ''' 
     ''' <returns>The user's icon resolution.</returns>
     Public Function GetIconResolution() As IconResolution
-        If My.Settings.HiDPI Then
+        If Config.HiDPI Then
             Return IconResolution.HiDPI
         Else
             Return IconResolution.Normal
