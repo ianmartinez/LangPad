@@ -1,0 +1,56 @@
+﻿using LangPad.Appearance;
+using System.Drawing;
+
+namespace LangPad.Appearance.Themes
+{
+    /// <summary>
+    /// A brownish theme.
+    /// </summary>
+    public class DesertTheme : Theme
+    {
+        public DesertTheme() : base("Desert")
+        {
+            FormBackColor = Color.FromArgb(255, 250, 247, 245);
+            PanelBackColor = FormBackColor;
+            PanelBorderColor = Color.FromArgb(255, 213, 206, 194);
+
+            // Tool strip
+            ToolStripTextColor = Color.FromArgb(255, 41, 33, 30);
+            ToolStripBorderColor = Color.FromArgb(255, 198, 181, 175);
+            ToolStripBackColor1 = Color.FromArgb(255, 242, 235, 232);
+            ToolStripBackColor2 = Color.FromArgb(255, 211, 193, 186);
+            ToolStripInsetColor = Color.Transparent;
+            ToolStripSeparatorColor = Color.FromArgb(255, 153, 139, 134);
+            ToolStripSeparatorShadowColor = Color.FromArgb(80, 255, 255, 255);
+            ToolStripButtonSelectedColor1 = Color.FromArgb(100, 204, 193, 188);
+            ToolStripButtonSelectedColor2 = Color.FromArgb(205, 204, 193, 188);
+            ToolStripButtonSelectedBorderColor = Color.FromArgb(255, 204, 193, 188);
+            ToolStripButtonPressedColor1 = Color.FromArgb(100, 175, 169, 166);
+            ToolStripButtonPressedColor2 = Color.FromArgb(205, 175, 169, 166);
+            ToolStripButtonPressedBorderColor = Color.FromArgb(225, 175, 169, 166);
+
+
+            // Menu
+            MenuBackColor = PanelBackColor;
+            MenuTextColor = ToolStripTextColor;
+            MenuArrowColor = MenuTextColor;
+            MenuBorderColor = ToolStripSeparatorColor;
+            MenuBarBackColor2 = Color.FromArgb(255, 243, 236, 233);
+            MenuSeparatorColor = ToolStripSeparatorColor;
+            MenuSeparatorShadowColor = ToolStripSeparatorShadowColor;
+            MenuButtonSelectedColor1 = ToolStripButtonSelectedColor1;
+            MenuButtonSelectedColor2 = ToolStripButtonSelectedColor2;
+            MenuButtonSelectedBorderColor = ToolStripButtonSelectedBorderColor;
+            MenuButtonPressedColor1 = ToolStripButtonPressedColor1;
+            MenuButtonPressedColor2 = ToolStripButtonPressedColor2;
+            MenuButtonPressedBorderColor = ToolStripButtonPressedBorderColor;
+            MenuButtonPressedInsetColor = Color.FromArgb(100, 255, 255, 255);
+
+            // Menu image margin
+            MenuImageMarginBackColor1 = ToolStripBackColor1;
+            MenuImageMarginBackColor2 = ToolStripBackColor2;
+            MenuImageMarginBorderColor = ToolStripSeparatorColor;
+            MenuImageMarginInsetColor = Color.FromArgb(90, 255, 255, 255);
+        }
+    }
+}
