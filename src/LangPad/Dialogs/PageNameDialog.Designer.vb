@@ -34,19 +34,20 @@ Partial Class PageNameDialog
         '
         Me.Label1.AutoSize = True
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label1.Location = New System.Drawing.Point(9, 5)
+        Me.Label1.Location = New System.Drawing.Point(8, 4)
         Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 6)
-        Me.Label1.Size = New System.Drawing.Size(55, 26)
+        Me.Label1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 5)
+        Me.Label1.Size = New System.Drawing.Size(49, 22)
         Me.Label1.TabIndex = 73
         Me.Label1.Text = "Name:"
         '
         'NameTextBox
         '
         Me.NameTextBox.Dock = System.Windows.Forms.DockStyle.Top
-        Me.NameTextBox.Location = New System.Drawing.Point(9, 31)
+        Me.NameTextBox.Location = New System.Drawing.Point(8, 26)
+        Me.NameTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.NameTextBox.Name = "NameTextBox"
-        Me.NameTextBox.Size = New System.Drawing.Size(282, 26)
+        Me.NameTextBox.Size = New System.Drawing.Size(251, 22)
         Me.NameTextBox.TabIndex = 0
         '
         'ButtonTableLayout
@@ -59,13 +60,13 @@ Partial Class PageNameDialog
         Me.ButtonTableLayout.Controls.Add(Me.OkDialogButton, 0, 0)
         Me.ButtonTableLayout.Controls.Add(Me.CancelDialogButton, 1, 0)
         Me.ButtonTableLayout.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ButtonTableLayout.Location = New System.Drawing.Point(9, 82)
-        Me.ButtonTableLayout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ButtonTableLayout.Location = New System.Drawing.Point(8, 64)
+        Me.ButtonTableLayout.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ButtonTableLayout.Name = "ButtonTableLayout"
-        Me.ButtonTableLayout.Padding = New System.Windows.Forms.Padding(0, 9, 0, 5)
+        Me.ButtonTableLayout.Padding = New System.Windows.Forms.Padding(0, 7, 0, 4)
         Me.ButtonTableLayout.RowCount = 1
         Me.ButtonTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.ButtonTableLayout.Size = New System.Drawing.Size(282, 56)
+        Me.ButtonTableLayout.Size = New System.Drawing.Size(251, 46)
         Me.ButtonTableLayout.TabIndex = 74
         '
         'OkDialogButton
@@ -73,10 +74,11 @@ Partial Class PageNameDialog
         Me.OkDialogButton.AutoSize = True
         Me.OkDialogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.OkDialogButton.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.OkDialogButton.Location = New System.Drawing.Point(3, 12)
+        Me.OkDialogButton.Location = New System.Drawing.Point(3, 9)
+        Me.OkDialogButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.OkDialogButton.Name = "OkDialogButton"
-        Me.OkDialogButton.Padding = New System.Windows.Forms.Padding(3)
-        Me.OkDialogButton.Size = New System.Drawing.Size(135, 36)
+        Me.OkDialogButton.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.OkDialogButton.Size = New System.Drawing.Size(119, 31)
         Me.OkDialogButton.TabIndex = 1
         Me.OkDialogButton.Text = "OK"
         Me.OkDialogButton.UseVisualStyleBackColor = True
@@ -87,10 +89,11 @@ Partial Class PageNameDialog
         Me.CancelDialogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.CancelDialogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.CancelDialogButton.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CancelDialogButton.Location = New System.Drawing.Point(144, 12)
+        Me.CancelDialogButton.Location = New System.Drawing.Point(128, 9)
+        Me.CancelDialogButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CancelDialogButton.Name = "CancelDialogButton"
-        Me.CancelDialogButton.Padding = New System.Windows.Forms.Padding(3)
-        Me.CancelDialogButton.Size = New System.Drawing.Size(135, 36)
+        Me.CancelDialogButton.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CancelDialogButton.Size = New System.Drawing.Size(120, 31)
         Me.CancelDialogButton.TabIndex = 0
         Me.CancelDialogButton.Text = "Cancel"
         Me.CancelDialogButton.UseVisualStyleBackColor = True
@@ -98,19 +101,19 @@ Partial Class PageNameDialog
         'PageNameDialog
         '
         Me.AcceptButton = Me.OkDialogButton
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.CancelDialogButton
-        Me.ClientSize = New System.Drawing.Size(300, 143)
+        Me.ClientSize = New System.Drawing.Size(267, 114)
         Me.Controls.Add(Me.NameTextBox)
         Me.Controls.Add(Me.ButtonTableLayout)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "PageNameDialog"
-        Me.Padding = New System.Windows.Forms.Padding(9, 5, 9, 5)
+        Me.Padding = New System.Windows.Forms.Padding(8, 4, 8, 4)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.ButtonTableLayout.ResumeLayout(False)

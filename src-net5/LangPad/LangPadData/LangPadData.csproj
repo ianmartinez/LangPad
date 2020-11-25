@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\DictionaryHtmlBase.txt" />
+    <None Remove="Resources\DictionaryHtmlStyle.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\DictionaryHtmlBase.txt" />
+    <EmbeddedResource Include="Resources\DictionaryHtmlStyle.txt" />
+  </ItemGroup>
+
+</Project>

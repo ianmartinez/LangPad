@@ -2,8 +2,8 @@ Version 12.0 (TBD, 2021)
    • Port to .NET 5
    • Convert remaining code to  C#
    • Move from RTF-based files to HTML-based files
-   • Support for tables
    • Embedded resources
+   • Publish on Microsoft Store
 
 Version 11.1 (June 14, 2020)
    • Bug Fix:  https:// URLs in the website field wouldn't open

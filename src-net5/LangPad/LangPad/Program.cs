@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,18 @@ namespace LangPad
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
+
+            // Once run is complete, clean up temp folder
+            try
+            {
+                if (Directory.Exists(App.DataFolder))
+                    Directory.Delete(App.DataFolder, true);
+            }
+            catch (Exception)
+            {
+                // Folder delete failed, but we still want
+                // to close, so ignore it
+            }
         }
     }
 }

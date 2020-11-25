@@ -15,3 +15,14 @@ C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\obj\Debu
 C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\obj\Debug\netcoreapp3.1\LangPad.genruntimeconfig.cache
 C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\obj\Debug\netcoreapp3.1\LangPad.Controls.ColorButton.resources
 C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\obj\Debug\netcoreapp3.1\LangPad.Controls.ShortcutButton.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\obj\Debug\netcoreapp3.1\LangPad.Properties.Resources.resources
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\bin\Debug\netcoreapp3.1\x86\WebView2Loader.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\bin\Debug\netcoreapp3.1\x64\WebView2Loader.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\bin\Debug\netcoreapp3.1\arm64\WebView2Loader.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\bin\Debug\netcoreapp3.1\Microsoft.Web.WebView2.Core.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\bin\Debug\netcoreapp3.1\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\bin\Debug\netcoreapp3.1\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\WebView2Loader.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\LangPad\obj\Debug\netcoreapp3.1\LangPad.csproj.CopyComplete
