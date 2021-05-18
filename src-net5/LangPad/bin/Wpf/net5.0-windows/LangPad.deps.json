@@ -1,0 +1,221 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "LangPad/12.0.0": {
+        "dependencies": {
+          "Eto.Forms": "2.5.11",
+          "Eto.Platform.Wpf": "2.5.11",
+          "LangPadData": "1.0.0",
+          "Microsoft.Web.WebView2": "1.0.818.41"
+        },
+        "runtime": {
+          "LangPad.dll": {}
+        }
+      },
+      "Eto.Forms/2.5.11": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Eto.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.7803.18648"
+          }
+        }
+      },
+      "Eto.Platform.Wpf/2.5.11": {
+        "dependencies": {
+          "Eto.Forms": "2.5.11",
+          "Extended.Wpf.Toolkit": "3.6.0",
+          "Windows7APICodePack-Shell": "1.1.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Eto.Wpf.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.7803.18648"
+          }
+        }
+      },
+      "Extended.Wpf.Toolkit/3.6.0": {
+        "runtime": {
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
+          },
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
+          },
+          "lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
+          },
+          "lib/net40/Xceed.Wpf.AvalonDock.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
+          },
+          "lib/net40/Xceed.Wpf.Toolkit.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
+          }
+        },
+        "resources": {
+          "lib/net40/de/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net40/es/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net40/fr/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net40/hu/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net40/it/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net40/pt-BR/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net40/ro/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net40/ru/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net40/sv/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net40/zh-Hans/Xceed.Wpf.AvalonDock.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2/1.0.818.41": {
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
+            "assemblyVersion": "1.0.818.41",
+            "fileVersion": "1.0.818.41"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll": {
+            "assemblyVersion": "1.0.818.41",
+            "fileVersion": "1.0.818.41"
+          },
+          "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
+            "assemblyVersion": "1.0.818.41",
+            "fileVersion": "1.0.818.41"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.818.41"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.818.41"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.818.41"
+          }
+        }
+      },
+      "System.ComponentModel.Annotations/4.7.0": {},
+      "Windows7APICodePack-Core/1.1.0": {
+        "runtime": {
+          "lib/Microsoft.WindowsAPICodePack.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "Windows7APICodePack-Shell/1.1.0": {
+        "dependencies": {
+          "Windows7APICodePack-Core": "1.1.0"
+        },
+        "runtime": {
+          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
+      "LangPadData/1.0.0": {
+        "runtime": {
+          "LangPadData.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LangPad/12.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Eto.Forms/2.5.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M7NHdVxgicUE8BjpHkZJO+SPSTgcxTg28Xe20FIzHA2s48U7Al0l22hLIwMFE56Ul6e18WMkkAlgnZWuJY0SLg==",
+      "path": "eto.forms/2.5.11",
+      "hashPath": "eto.forms.2.5.11.nupkg.sha512"
+    },
+    "Eto.Platform.Wpf/2.5.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f2lz9fDsQAQ3aMjIJH+g/41M5AKe9f0fNPFK52/N/h4/moM0GqdjPKchl5JsQXth+YyGC1Y00c/i2hcFtO8F/Q==",
+      "path": "eto.platform.wpf/2.5.11",
+      "hashPath": "eto.platform.wpf.2.5.11.nupkg.sha512"
+    },
+    "Extended.Wpf.Toolkit/3.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-flfPS2rtbCCXJv7m43MXBJWaPN0RsVRQn3MZO2VmMjs4pOHzL7WnsaSXbs0OHTLj71SA/+T4hdZC8f4FhvJSkA==",
+      "path": "extended.wpf.toolkit/3.6.0",
+      "hashPath": "extended.wpf.toolkit.3.6.0.nupkg.sha512"
+    },
+    "Microsoft.Web.WebView2/1.0.818.41": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fOEZCzNHDtWuNGgOWaA7lD0UkiFXJGhWXEBwqsw9sMrx4QXl8SqNX7qVNYdJrbGvpf3B67CGO3WuUI2z3Yai5w==",
+      "path": "microsoft.web.webview2/1.0.818.41",
+      "hashPath": "microsoft.web.webview2.1.0.818.41.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
+      "path": "system.componentmodel.annotations/4.7.0",
+      "hashPath": "system.componentmodel.annotations.4.7.0.nupkg.sha512"
+    },
+    "Windows7APICodePack-Core/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-T0cccZ6PQcauKk+rU8zSSIQuDjKPhAsyu8u0MDaa3hggA00tk/CcJ6ukzzKaXrXyHYzFbDAWdUdlLE4NSUdWnA==",
+      "path": "windows7apicodepack-core/1.1.0",
+      "hashPath": "windows7apicodepack-core.1.1.0.nupkg.sha512"
+    },
+    "Windows7APICodePack-Shell/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IVlZAP3MPktm/aNl0gptCAnfm0IblGvWu0J7b8zu7Di9Lc9Ep0ABu8757X1n5GACk/UIAg+tUCQGYQ2hWqWV7A==",
+      "path": "windows7apicodepack-shell/1.1.0",
+      "hashPath": "windows7apicodepack-shell.1.1.0.nupkg.sha512"
+    },
+    "LangPadData/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
