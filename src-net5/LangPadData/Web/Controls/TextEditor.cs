@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Timers;
 
 namespace LangPadData.Web.Controls
 {
@@ -25,17 +24,18 @@ namespace LangPadData.Web.Controls
     {
         private readonly IWebViewManager ViewManager;
         private readonly IWebViewManager PreviewViewManager;
-        private Timer PreviewTimer;
+        private ITimer PreviewTimer;
         public event EventHandler<EventArgs> ContentChanged;
 
-        public TextEditor(IWebViewManager viewManager, IWebViewManager previewViewManager = null)
+        public TextEditor(IWebViewManager viewManager, IWebViewManager previewViewManager = null, ITimer timer = null)
         {
             ViewManager = viewManager;
             PreviewViewManager = previewViewManager;
+            PreviewTimer = timer;
 
             LoadTextEditDocument();
 
-            if (previewViewManager != null)
+            if (previewViewManager != null && timer != null)
                 LoadPreview();
         }
 
@@ -139,7 +139,7 @@ namespace LangPadData.Web.Controls
         private void LoadPreview()
         {
             // Refresh the preview every .5 seconds
-            PreviewTimer = new Timer(500);
+            PreviewTimer.Interval = 0.5;
             PreviewTimer.Elapsed += (sender, e) => RefreshPreview();
             PreviewTimer.Start();
         }

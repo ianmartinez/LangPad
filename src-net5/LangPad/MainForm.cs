@@ -56,7 +56,7 @@ namespace LangPad
             // Set managers
             PreviewManager = new EtoWebViewManager(DocumentPreview);
             EditManager = new EtoWebViewManager(DocumentEditor);
-            PageEditor = new TextEditor(EditManager, PreviewManager);
+            PageEditor = new TextEditor(EditManager, PreviewManager, new EtoTimer());
             PageEditor.ContentChanged += OnContentChanged;
 
             var documentBase = ResourceFiles.DocumentBase;
