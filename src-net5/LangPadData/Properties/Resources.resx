@@ -118,10 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DictionaryHtmlBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dictionaryhtmlbase.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="ayu_mirage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\editor\lib\theme\ayu-mirage.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="DictionaryHtmlStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dictionaryhtmlstyle.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="base16_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\editor\lib\theme\base16-dark.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="CodeMirrorCss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\editor\lib\codemirror.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="CodeMirrorJs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\editor\lib\codemirror.js;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="DictionaryBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\dictionarybase.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="DictionaryStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\dictionarystyle.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="DocumentBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\documentbase.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="DocumentStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\documentstyle.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="ModeCss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\editor\lib\mode\css\css.js;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;iso-8859-1</value>
+  </data>
+  <data name="ModeHtmlMixed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\editor\lib\mode\htmlmixed\htmlmixed.js;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="ModeJavaScript" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\editor\lib\mode\javascript\javascript.js;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="ModeXml" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\editor\lib\mode\xml\xml.js;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="TextEditorCss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\editor\texteditor.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="TextEditorHtml" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\editor\texteditor.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="TextEditorJs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\editor\texteditor.js;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="ttcn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\editor\lib\theme\ttcn.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
 </root>
