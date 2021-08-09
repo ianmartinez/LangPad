@@ -11,7 +11,7 @@
           "Eto.Forms": "2.5.11",
           "Eto.Platform.Wpf": "2.5.11",
           "LangPadData": "1.0.0",
-          "Microsoft.Web.WebView2": "1.0.818.41"
+          "Microsoft.Web.WebView2": "1.0.902.49"
         },
         "runtime": {
           "LangPad.dll": {}
@@ -97,36 +97,36 @@
           }
         }
       },
-      "Microsoft.Web.WebView2/1.0.818.41": {
+      "Microsoft.Web.WebView2/1.0.902.49": {
         "runtime": {
           "lib/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll": {
-            "assemblyVersion": "1.0.818.41",
-            "fileVersion": "1.0.818.41"
+            "assemblyVersion": "1.0.902.49",
+            "fileVersion": "1.0.902.49"
           },
           "lib/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll": {
-            "assemblyVersion": "1.0.818.41",
-            "fileVersion": "1.0.818.41"
+            "assemblyVersion": "1.0.902.49",
+            "fileVersion": "1.0.902.49"
           },
           "lib/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll": {
-            "assemblyVersion": "1.0.818.41",
-            "fileVersion": "1.0.818.41"
+            "assemblyVersion": "1.0.902.49",
+            "fileVersion": "1.0.902.49"
           }
         },
         "runtimeTargets": {
           "runtimes/win-arm64/native/WebView2Loader.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "1.0.818.41"
+            "fileVersion": "1.0.902.49"
           },
           "runtimes/win-x64/native/WebView2Loader.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "1.0.818.41"
+            "fileVersion": "1.0.902.49"
           },
           "runtimes/win-x86/native/WebView2Loader.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "1.0.818.41"
+            "fileVersion": "1.0.902.49"
           }
         }
       },
@@ -184,12 +184,12 @@
       "path": "extended.wpf.toolkit/3.6.0",
       "hashPath": "extended.wpf.toolkit.3.6.0.nupkg.sha512"
     },
-    "Microsoft.Web.WebView2/1.0.818.41": {
+    "Microsoft.Web.WebView2/1.0.902.49": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-fOEZCzNHDtWuNGgOWaA7lD0UkiFXJGhWXEBwqsw9sMrx4QXl8SqNX7qVNYdJrbGvpf3B67CGO3WuUI2z3Yai5w==",
-      "path": "microsoft.web.webview2/1.0.818.41",
-      "hashPath": "microsoft.web.webview2.1.0.818.41.nupkg.sha512"
+      "sha512": "sha512-54GMzepT0Z52wqdNuycUn1DYg/pH2z0UaQKcqT21L5A/rZIL9laabM6GhPxW/QeD9pk3AmbE65NVlXsJRDJ+8w==",
+      "path": "microsoft.web.webview2/1.0.902.49",
+      "hashPath": "microsoft.web.webview2.1.0.902.49.nupkg.sha512"
     },
     "System.ComponentModel.Annotations/4.7.0": {
       "type": "package",

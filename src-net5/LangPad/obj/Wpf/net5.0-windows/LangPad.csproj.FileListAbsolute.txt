@@ -24,7 +24,6 @@ C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\bin\Wpf\net5.0-w
 C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\bin\Wpf\net5.0-windows\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\bin\Wpf\net5.0-windows\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\bin\Wpf\net5.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\obj\Wpf\net5.0-windows\LangPad.csprojAssemblyReference.cache
 C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\obj\Wpf\net5.0-windows\LangPad.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\obj\Wpf\net5.0-windows\LangPad.AssemblyInfoInputs.cache
 C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\obj\Wpf\net5.0-windows\LangPad.AssemblyInfo.cs
@@ -44,3 +43,4 @@ C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\obj\Wpf\net5.0-w
 C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\obj\Wpf\net5.0-windows\LangPad.csproj.GenerateResource.cache
 C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\bin\Wpf\net5.0-windows\LangPadData.dll
 C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\bin\Wpf\net5.0-windows\LangPadData.pdb
+C:\Users\Ian Martinez\Documents\GitHub\LangPad\src-net5\LangPad\obj\Wpf\net5.0-windows\LangPad.csproj.AssemblyReference.cache
