@@ -7,6 +7,15 @@ Imports LangPadUI.Theming
 ''' </summary>
 Module AppInstance
     ''' <summary>
+    ''' Get the current version of the application.
+    ''' </summary>
+    ''' 
+    ''' <returns>The current version.</returns>
+    Public Function GetCurrentVersion() As Version
+        Return New Version(12, 0, 0)
+    End Function
+
+    ''' <summary>
     ''' The character editor tools window used between windows.
     ''' </summary>
     Public CharEditWindow As CharacterEditorToolWindow = New CharacterEditorToolWindow()
@@ -36,15 +45,6 @@ Module AppInstance
     End Function
 
     ''' <summary>
-    ''' Get the current version of the application.
-    ''' </summary>
-    ''' 
-    ''' <returns>The current version.</returns>
-    Public Function GetCurrentVersion() As Version
-        Return Reflection.Assembly.GetEntryAssembly().GetName().Version
-    End Function
-
-    ''' <summary>
     ''' Get the application version, formatted as a string.
     ''' </summary>
     ''' 
@@ -68,22 +68,20 @@ Module AppInstance
     ''' Opens the Patreon link.
     ''' </summary>
     Public Sub GoToPatreon()
-        Process.Start("https://www.patreon.com/ianmartinez")
+        OpenUrl("https://www.patreon.com/ianmartinez")
     End Sub
-
 
     ''' <summary>
     ''' Opens the GitHub link.
     ''' </summary>
     Public Sub GoToGitHub()
-        Process.Start("https://github.com/ianmartinez/LangPad")
+        OpenUrl("https://github.com/ianmartinez/LangPad")
     End Sub
-
 
     ''' <summary>
     ''' Opens the website link.
     ''' </summary>
     Public Sub GoToWebsite()
-        Process.Start("http://www.ianmtz.com/LangPad")
+        OpenUrl("http://www.ianmtz.com/LangPad")
     End Sub
 End Module

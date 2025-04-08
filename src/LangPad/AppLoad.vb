@@ -1,5 +1,4 @@
-﻿Imports System.Configuration
-Imports LangPadData
+﻿Imports LangPadData
 
 ''' <summary>
 ''' Load all of the controls in the character editor and check for updates at startup.

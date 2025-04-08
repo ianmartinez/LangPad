@@ -2,35 +2,34 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace LangPadUI
+namespace LangPadUI;
+
+public class AccentCheckButton : CheckBox
 {
-    public class AccentCheckButton : CheckBox
+    private readonly IpaToolTip CharButtonTooltip = new();
+
+    /// <summary>
+    /// Create a new check box button representing an accent mark.
+    /// </summary>
+    /// 
+    /// <param name="charName">The name of the character.</param>
+    /// <param name="multiline">If the description is on multiple lines.</param>
+    public AccentCheckButton(string charName = "", bool multiline = true)
     {
-        private readonly IpaToolTip CharButtonTooltip = new IpaToolTip();
+        Padding = new Padding(0);
+        Font = new Font("Calibri", 14, FontStyle.Regular);
+        AutoSize = true;
+        MinimumSize = new Size(45, 32);
+        Margin = new Padding(1);
+        Appearance = Appearance.Button;
+        TextAlign = ContentAlignment.MiddleCenter;
+        UseCompatibleTextRendering = true;
+        CharButtonTooltip.CharName = multiline ? charName.Replace("/", "\n") : charName;
+        TextChanged += AccentCheckButton_TextChanged;
+    }
 
-        /// <summary>
-        /// Create a new check box button representing an accent mark.
-        /// </summary>
-        /// 
-        /// <param name="charName">The name of the character.</param>
-        /// <param name="multiline">If the description is on multiple lines.</param>
-        public AccentCheckButton(string charName = "", bool multiline = true)
-        {
-            Padding = new Padding(0);
-            Font = new Font("Calibri", 14, FontStyle.Regular);
-            AutoSize = true;
-            MinimumSize = new Size(45, 32);
-            Margin = new Padding(1);
-            Appearance = Appearance.Button;
-            TextAlign = ContentAlignment.MiddleCenter;
-            UseCompatibleTextRendering = true;
-            CharButtonTooltip.CharName = multiline ? charName.Replace("/", "\n") : charName;
-            TextChanged += AccentCheckButton_TextChanged;
-        }
-
-        private void AccentCheckButton_TextChanged(object sender, EventArgs e)
-        {
-            CharButtonTooltip.SetToolTip(this, Text);
-        }
+    private void AccentCheckButton_TextChanged(object sender, EventArgs e)
+    {
+        CharButtonTooltip.SetToolTip(this, Text);
     }
 }

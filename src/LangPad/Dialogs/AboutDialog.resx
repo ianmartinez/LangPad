@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+  <!--
     Microsoft ResX Schema 
-    
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="LicenseTextBox.Text" xml:space="preserve">
-    <value>Copyright (c) 2012-2020, Ian Martinez
+    <value>Copyright (c) 2012-2024, Ian Martinez
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -482,7 +482,7 @@ Version 2.0 (May 10, 2015)
    • Accent mark dialog redesigned
    • Add to custom symbols button in accent mark dialog
    • Macron Below in accent mark dialog
-   • Bug Fix: Images appeared distored when pasting
+   • Bug Fix: Images appeared distorted when pasting
    • Bug Fix: Errors when changing certain fonts
    
 Version 1.1 (May 3, 2015)
@@ -1590,7 +1590,7 @@ Version 1.0 (April 24, 2015)
   <data name="PictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACbYSURBVHhe7Z0J
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACbYSURBVHhe7Z0J
         dFzllefVPTN9JqjKu7xgW5alkrzvC94XWbLl3QYDCWExBsJiQ8BAwMYYBUkGYqC7M52k6ZwMHZNOd8OQ
         7pkMoUnAnW6GZBIChZKjEAyYjEzO6cRQMiBjynb8zf8+fRbf++pKLtX6vap7z/mdcE783nfv/e7/X+/V
         8lQiISEhISEhISEhISEhISEhISEhIeF07J86rLSxKjT0gZr+lYKQK2jmaPb0GEpkKx4o7z+wKVK6sqkq
@@ -1806,7 +1806,7 @@ Version 1.0 (April 24, 2015)
         5DB0/qbrzUu3vG5du73i9uBw6PCdkeiR0TvsO1N3U+6+uJd5b+H+xgfoB0UPpR5WPFJ81PCz7s9to5aj
         p8dcx/ofBz++P84af/ZLxi/vJwqekJ9UTKpMNk+ZTZ2adp++8XTl04ln6c8WZgp/lf619rnO8x9+c/yt
         fzZiduIF/8Wn30teyr889GrZq565gLlHr1NfL8wXvZF/c/gt423fu/B3kwtZ77HvKz/ofuj+6PPxwafU
-        T5/+BQOY8/xvJtwPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEXUlEQVRYR+2Vb0xTVxjGi3bJ4pcN+WCk
+        T5/+BQOY8/xvJtwPAAAACXBIWXMAAAsSAAALEgHS3X78AAAEXUlEQVRYR+2Vb0xTVxjGi3bJ4pcN+WCk
         3P6hFlQGpYw6WcA4U7ahxA3NSBbm/qWLZnM6jNtcppkKjEmMc9kyUMp0Whc1dY4izACrtSvoUMfGBjLA
         qOiEFh0KlMg++O4513O7gpvmFk384JP8cu855z3P+95zzr1X8UD3vbQazTpQBV7WqNUP8e7/FeLMoBwc
         UQvCHePvKBi1AuKcBsvAFuAEHuAGDlAIvgE3gBSfwm3CF0x6QgzlYuE24QsmDWNM5ZDMbcITDHSgP8RQ
@@ -1831,7 +1831,7 @@ Version 1.0 (April 24, 2015)
   <data name="PatreonButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAbNJREFUWEftlD9Lw1AcRVOooIuC4KYIIjjVQXAQu4ggFBRB2gr+mXRoEETQwU13
+        wgAADsIBFShKgAAAAbNJREFUWEftlD9Lw1AcRVOooIuC4KYIIjjVQXAQu4ggFBRB2gr+mXRoEETQwU13
         P4Cok1/AzUmdxKmoiKOTs+AgDjYtxPPgJ0le2rwkdRDphTO9vHMvaYnVyZ9JV64wA3cac3LcNK7rWrVK
         cQIO4AJu4RrOYB165VFzKCuCq7Eqx6EgnwRV6EbwAYe1SqlbrrUOZbEGuPaKKt+GupTE4REGRdE8lMUa
         gGjHJ07CCwyIJhzKjAMQTEFDhGm4bNjLYtNCWeQAxy5nEFQ1YRrmRRkMZZEDuJjXRGm5EmUwlJkGHGmi
@@ -1844,7 +1844,7 @@ Version 1.0 (April 24, 2015)
   <data name="WebsiteButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAanSURBVFhH7VZb
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAanSURBVFhH7VZb
         UJTnGbbNaabJRa9606tmJk160xtbAypyCAKCnIRFYV3YJUBABTTUahQVE+sYBHcRhEXOIAILRA4KIjiG
         tE7UqNlpjTl4yFCrez7vsof/X5++3/JrZBZPaW46k2fmGb7v/d73ed7//Q/Lop/x/wXgF6H77vw2RK6J
         WFGjz4k6YtzJGFFnzGExdsZyhOyfDosb8dJSuTYq9qi5L7vP8c0HU27fx//wov4yB+VlHw5d8KL8rNsn

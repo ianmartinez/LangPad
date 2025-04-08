@@ -1,0 +1,11 @@
+﻿[*.cs]
+indent_style = space
+indent_size = 4
+# CA1416: Validate platform compatibility
+dotnet_diagnostic.CA1416.severity = silent
+
+[*.vb]
+indent_style = space
+indent_size = 4
+# Default severity for all analyzer diagnostics
+dotnet_analyzer_diagnostic.severity = silent

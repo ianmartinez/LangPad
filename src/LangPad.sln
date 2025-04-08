@@ -1,17 +1,21 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28729.10
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "LangPad", "LangPad\LangPad.vbproj", "{96451D96-1492-4D4A-BCA2-C65DE80255D2}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "LangPad", "LangPad\LangPad.vbproj", "{96451D96-1492-4D4A-BCA2-C65DE80255D2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DA608AB5-9BA3-4FA3-B347-EAB5E040F9C8} = {DA608AB5-9BA3-4FA3-B347-EAB5E040F9C8}
 		{8BD8A7F1-C880-41CC-8485-B132DDAD924A} = {8BD8A7F1-C880-41CC-8485-B132DDAD924A}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LangPadUI", "LangPadUI\LangPadUI.csproj", "{8BD8A7F1-C880-41CC-8485-B132DDAD924A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangPadUI", "LangPadUI\LangPadUI.csproj", "{8BD8A7F1-C880-41CC-8485-B132DDAD924A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LangPadData", "LangPadData\LangPadData.csproj", "{DA608AB5-9BA3-4FA3-B347-EAB5E040F9C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C1013C5-2981-4BD8-8FDD-1D6F2D4ED3D1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

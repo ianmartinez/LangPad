@@ -58,7 +58,7 @@ Public Class StyleDialog
     End Sub
 
     Private Sub OpenButton_Click(sender As Object, e As EventArgs) Handles OpenButton.Click
-        If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If OpenDialog.ShowDialog = DialogResult.OK Then
             Dim FileData As String = File.ReadAllText(OpenDialog.FileName)
             Dim FileResults = KeyValue.Read(FileData)
 
@@ -78,16 +78,16 @@ Public Class StyleDialog
     End Sub
 
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
-        If SaveDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If SaveDialog.ShowDialog = DialogResult.OK Then
             Dim FileData As String = ""
 
-            FileData += String.Format("Font={0}|{1}|{2}", StyleFont.Name, StyleFont.Size, StyleFont.Style.ToString) & Environment.NewLine
-            FileData += String.Format("Color={0}", ColorTranslator.ToHtml(StyleColor)) & Environment.NewLine
-            FileData += String.Format("Highlight={0}", ColorTranslator.ToHtml(StyleHighlight)) & Environment.NewLine
-            FileData += String.Format("CharOffset={0}", StyleCharOffset) & Environment.NewLine
-            FileData += String.Format("Align={0}", StyleAlignment) & Environment.NewLine
-            FileData += String.Format("Indent={0}", StyleIndent) & Environment.NewLine
-            FileData += String.Format("HangingIndent={0}", StyleHangingIndent) & Environment.NewLine
+            FileData += $"Font={StyleFont.Name }|{StyleFont.Size }|{StyleFont.Style.ToString }" & Environment.NewLine
+            FileData += $"Color={ColorTranslator.ToHtml(StyleColor) }" & Environment.NewLine
+            FileData += $"Highlight={ColorTranslator.ToHtml(StyleHighlight) }" & Environment.NewLine
+            FileData += $"CharOffset={StyleCharOffset }" & Environment.NewLine
+            FileData += $"Align={StyleAlignment }" & Environment.NewLine
+            FileData += $"Indent={StyleIndent }" & Environment.NewLine
+            FileData += $"HangingIndent={StyleHangingIndent }" & Environment.NewLine
             File.WriteAllText(SaveDialog.FileName, FileData)
 
             ApplyStyle()
@@ -116,7 +116,7 @@ Public Class StyleDialog
             .Font = StyleFont
         }
 
-        If FontPicker.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If FontPicker.ShowDialog() = DialogResult.OK Then
             StyleFont = FontPicker.Font
         End If
 

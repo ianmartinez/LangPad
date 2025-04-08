@@ -109,9 +109,9 @@ Public Class NotebookEditor
         ' Make sure the URL is in a valid syntax before 
         ' attempting to open it
         If WebsiteTextBox.Text.StartsWith("http://") OrElse WebsiteTextBox.Text.StartsWith("https://") Then
-            Process.Start(WebsiteTextBox.Text)
+            OpenUrl(WebsiteTextBox.Text)
         Else
-            Process.Start("http://" & WebsiteTextBox.Text)
+            OpenUrl("http://" & WebsiteTextBox.Text)
         End If
     End Sub
 

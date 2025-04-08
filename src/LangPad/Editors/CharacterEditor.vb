@@ -55,6 +55,7 @@ Public Class CharacterEditor
 
         ' Search
         SearchToolStripButton.Image = IconManager.Get("edit-find", IconSize.Small, Res)
+
         Refresh()
     End Sub
 
@@ -368,14 +369,26 @@ Public Class CharacterEditor
 
     Private Sub CharButtonMenu_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles CharButtonMenu.Opening
         Dim CurrentMenu As ContextMenuStrip = CType(sender, ContextMenuStrip)
-        Dim CurrentButton = CType(CurrentMenu.SourceControl, CharacterButton)
+        Dim CurrentButton = CType(CurrentMenu.SourceControl, Button)
 
         RemoveCharSeparator.Visible = False
         RemoveToolStripMenuItem.Visible = False
 
+        ' Only show remove option if it can be removed
         If CurrentButton.Parent Is FilePanel Or CurrentButton.Parent Is LocalPanel Then
             RemoveCharSeparator.Visible = True
             RemoveToolStripMenuItem.Visible = True
+        End If
+
+        ' Don't show add to editor items when this button is the editor button
+        If CurrentButton Is CharacterButton Then
+            AddToEditorCharacterMenuItem.Visible = False
+            ReplaceEditorCharacterMenuItem.Visible = False
+            CopyCharSeparator.Visible = False
+        Else
+            AddToEditorCharacterMenuItem.Visible = True
+            ReplaceEditorCharacterMenuItem.Visible = True
+            CopyCharSeparator.Visible = True
         End If
     End Sub
 
@@ -410,7 +423,7 @@ Public Class CharacterEditor
     End Sub
 
     Private Sub ImportLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportLocalToolStripButton.Click
-        If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If OpenDialog.ShowDialog = DialogResult.OK Then
             Dim LocalChars = Config.LocalChars
             ImportFile(OpenDialog.FileName, LocalChars)
             Config.LocalCharsString = String.Join(vbLf, LocalChars)
@@ -419,20 +432,20 @@ Public Class CharacterEditor
     End Sub
 
     Private Sub ImportFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ImportFileToolStripButton.Click
-        If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If OpenDialog.ShowDialog = DialogResult.OK Then
             ImportFile(OpenDialog.FileName, CurrentNotebook.Characters)
             RefreshFile()
         End If
     End Sub
 
     Private Sub ExportLocalToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportLocalToolStripButton.Click
-        If SaveDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If SaveDialog.ShowDialog = DialogResult.OK Then
             File.WriteAllText(SaveDialog.FileName, Config.LocalCharsString)
         End If
     End Sub
 
     Private Sub ExportFileToolStripButton_Click(sender As Object, e As EventArgs) Handles ExportFileToolStripButton.Click
-        If SaveDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If SaveDialog.ShowDialog = DialogResult.OK Then
             File.WriteAllText(SaveDialog.FileName, String.Join(vbLf, CurrentNotebook.Characters))
         End If
     End Sub

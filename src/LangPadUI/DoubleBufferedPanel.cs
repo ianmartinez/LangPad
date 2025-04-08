@@ -1,19 +1,18 @@
 ﻿using System.Windows.Forms;
 
-namespace LangPadUI
+namespace LangPadUI;
+
+/// <summary>
+/// A Panel that is double-buffered by default, to have
+/// less artifacts than the default Panel.
+/// </summary>
+public class DoubleBufferedPanel : Panel
 {
-    /// <summary>
-    /// A Panel that is double-buffered by default, to have
-    /// less artifacts than the default Panel.
-    /// </summary>
-    public class DoubleBufferedPanel : Panel
+    public DoubleBufferedPanel()
     {
-        public DoubleBufferedPanel()
-        {
-            DoubleBuffered = true;
-            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            SetStyle(ControlStyles.ResizeRedraw, true);
-        }
+        DoubleBuffered = true;
+        SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+        SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+        SetStyle(ControlStyles.ResizeRedraw, true);
     }
 }

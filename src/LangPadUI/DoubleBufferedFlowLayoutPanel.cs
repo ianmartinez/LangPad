@@ -1,19 +1,18 @@
 ﻿using System.Windows.Forms;
 
-namespace LangPadUI
+namespace LangPadUI;
+
+/// <summary>
+/// A FlowLayoutPanel that is double-buffered by default, to have
+/// less artifacts than the default FlowLayoutPanel.
+/// </summary>
+public class DoubleBufferedFlowLayoutPanel : FlowLayoutPanel
 {
-    /// <summary>
-    /// A FlowLayoutPanel that is double-buffered by default, to have
-    /// less artifacts than the default FlowLayoutPanel.
-    /// </summary>
-    public class DoubleBufferedFlowLayoutPanel : FlowLayoutPanel
+    public DoubleBufferedFlowLayoutPanel()
     {
-        public DoubleBufferedFlowLayoutPanel()
-        {
-            DoubleBuffered = true;
-            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            SetStyle(ControlStyles.ResizeRedraw, true);
-        }
+        DoubleBuffered = true;
+        SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+        SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+        SetStyle(ControlStyles.ResizeRedraw, true);
     }
 }

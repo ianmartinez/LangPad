@@ -22,36 +22,36 @@ Partial Class CharacterEditorToolWindow
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.CharEdit = New LangPad.CharacterEditor()
-        Me.SuspendLayout
-        '
-        'CharEdit
-        '
-        Me.CharEdit.Character = "a"
-        Me.CharEdit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CharEdit.Location = New System.Drawing.Point(0, 0)
-        Me.CharEdit.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.CharEdit.MinimumSize = New System.Drawing.Size(440, 0)
-        Me.CharEdit.Name = "CharEdit"
-        Me.CharEdit.Size = New System.Drawing.Size(508, 1151)
-        Me.CharEdit.TabIndex = 0
-        '
-        'CharacterEditorToolWindow
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(508, 1151)
-        Me.Controls.Add(Me.CharEdit)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "CharacterEditorToolWindow"
-        Me.ShowIcon = False
-        Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Character Editor"
-        Me.ResumeLayout(False)
+        CharEdit = New CharacterEditor()
+        SuspendLayout()
+        ' 
+        ' CharEdit
+        ' 
+        CharEdit.Character = "a"
+        CharEdit.Dock = DockStyle.Fill
+        CharEdit.Location = New Point(0, 0)
+        CharEdit.Margin = New Padding(5, 8, 5, 8)
+        CharEdit.MinimumSize = New Size(391, 0)
+        CharEdit.Name = "CharEdit"
+        CharEdit.Size = New Size(492, 853)
+        CharEdit.TabIndex = 0
+        ' 
+        ' CharacterEditorToolWindow
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(492, 853)
+        Controls.Add(CharEdit)
+        FormBorderStyle = FormBorderStyle.SizableToolWindow
+        Margin = New Padding(4, 5, 4, 5)
+        MaximizeBox = False
+        MinimizeBox = False
+        Name = "CharacterEditorToolWindow"
+        ShowIcon = False
+        ShowInTaskbar = False
+        StartPosition = FormStartPosition.CenterParent
+        Text = "Character Editor"
+        ResumeLayout(False)
 
     End Sub
 

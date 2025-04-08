@@ -262,7 +262,7 @@ Public Class MainForm
     Private Sub SelectedDocument_LinkClicked(sender As Object, e As LinkClickedEventArgs) Handles CurrentRtb.LinkClicked
         Dim Link As String = e.LinkText
         If Not (Link.StartsWith("http://") Or Link.StartsWith("https://")) Then Link = "https://" & Link
-        Process.Start(Link)
+        OpenUrl(Link)
     End Sub
 
     Public Sub SelectedDocument_TextChanged(sender As Object, e As EventArgs) Handles CurrentRtb.TextChanged
@@ -280,7 +280,7 @@ Public Class MainForm
 
             If Mode = DialogResult.Yes Then
                 HasSaved = FileSave()
-            ElseIf Mode = Windows.Forms.DialogResult.Cancel Then
+            ElseIf Mode = DialogResult.Cancel Then
                 e.Cancel = True
             End If
 
@@ -369,7 +369,7 @@ Public Class MainForm
 
             If Mode = DialogResult.Yes Then
                 HasSaved = FileSave()
-            ElseIf Mode = Windows.Forms.DialogResult.Cancel Then
+            ElseIf Mode = DialogResult.Cancel Then
                 Exit Sub
             End If
 
@@ -390,7 +390,7 @@ Public Class MainForm
 
             If Mode = DialogResult.Yes Then
                 HasSaved = FileSave()
-            ElseIf Mode = Windows.Forms.DialogResult.Cancel Then
+            ElseIf Mode = DialogResult.Cancel Then
                 Exit Sub
             End If
 
@@ -399,7 +399,7 @@ Public Class MainForm
             End If
         End If
 
-        If OpenDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If OpenDialog.ShowDialog = DialogResult.OK Then
             If Not File.Exists(OpenDialog.FileName) Then
                 MessageBox.Show("Please select a valid file.")
                 Exit Sub
@@ -428,7 +428,7 @@ Public Class MainForm
     Public Function FileSaveAs() As Boolean
         Dim SavedFile As Boolean = False
 
-        If SaveDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If SaveDialog.ShowDialog = DialogResult.OK Then
             Cursor = Cursors.WaitCursor
             If SaveDialog.FileName = "" Then Return False
 
@@ -516,7 +516,7 @@ Public Class MainForm
     Private Sub PrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintToolStripMenuItem.Click
         PrintDocumentDialog.Document = PagePrintDocument
 
-        If PrintDocumentDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If PrintDocumentDialog.ShowDialog() = DialogResult.OK Then
             PagePrintDocument.Print()
         End If
     End Sub
@@ -734,7 +734,7 @@ Public Class MainForm
     End Sub
 
     Public Sub ImportPageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportPageToolStripMenuItem.Click
-        If OpenPageDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If OpenPageDialog.ShowDialog() = DialogResult.OK Then
             SavePages()
             ImportPage(CurrentPageIndex, OpenPageDialog.FileName)
         End If
@@ -749,7 +749,7 @@ Public Class MainForm
         Next
 
         SavePageDialog.FileName = PageFileName
-        If SavePageDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If SavePageDialog.ShowDialog = DialogResult.OK Then
             If SavePageDialog.FileName = "" Then Exit Sub
 
             Dim ExportExt = Path.GetExtension(SavePageDialog.FileName).ToUpper()
@@ -985,7 +985,7 @@ Public Class MainForm
             .Font = CurrentRtb.SelectionFont
         }
 
-        If FontPicker.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If FontPicker.ShowDialog() = DialogResult.OK Then
             CurrentRtb.SelectionColor = FontPicker.Color
             CurrentRtb.SelectionFont = FontPicker.Font
         End If

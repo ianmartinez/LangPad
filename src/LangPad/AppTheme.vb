@@ -64,7 +64,7 @@ Module AppTheme
                       MainForm.NotebookEditorPanel.PropertiesTab,
                       MainForm.NotebookEditorPanel.PagesListBox)
 
-        ' Noteobook editor
+        ' Notebook editor
         Themer.AddToolStrip(MainForm.NotebookEditorPanel.DocumentToolStrip)
         Themer.AddToolStripContainer(MainForm.NotebookEditorPanel.DocumentToolStripContainer)
     End Sub

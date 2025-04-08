@@ -1,0 +1,14 @@
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\bin\Debug\net8.0-windows\LangPadUI.deps.json
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\bin\Debug\net8.0-windows\LangPadUI.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\bin\Debug\net8.0-windows\LangPadUI.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\net8.0-windows\LangPadUI.ColorButton.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\net8.0-windows\LangPadUI.Properties.Resources.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\net8.0-windows\LangPadUI.ShortcutButton.resources
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\net8.0-windows\LangPadUI.csproj.GenerateResource.cache
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\net8.0-windows\LangPadUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\net8.0-windows\LangPadUI.csproj.CoreCompileInputs.cache
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\net8.0-windows\LangPadUI.sourcelink.json
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\net8.0-windows\LangPadUI.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\net8.0-windows\refint\LangPadUI.dll
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\net8.0-windows\LangPadUI.pdb
+C:\Users\ianma\Documents\GitHub\LangPad\src\LangPadUI\obj\Debug\net8.0-windows\ref\LangPadUI.dll

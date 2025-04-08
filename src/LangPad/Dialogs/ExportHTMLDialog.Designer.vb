@@ -72,7 +72,7 @@ Partial Class ExportHtmlDialog
         '
         Me.CancelDialogButton.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.CancelDialogButton.BackColor = System.Drawing.Color.Transparent
-        Me.CancelDialogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.CancelDialogButton.DialogResult = DialogResult.Cancel
         Me.CancelDialogButton.Location = New System.Drawing.Point(114, 5)
         Me.CancelDialogButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CancelDialogButton.Name = "CancelDialogButton"

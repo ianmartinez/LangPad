@@ -49,4 +49,16 @@ Module Util
         TargetForm.Enabled = True
         TargetForm.ResumeLayout()
     End Sub
+
+    ''' <summary>
+    ''' Open a URL in the default browser.
+    ''' </summary>
+    ''' 
+    ''' <param name="Url">The URL.</param>
+    Public Sub OpenUrl(Url As String)
+        Dim ProcessInfo = New ProcessStartInfo(Url) With {
+            .UseShellExecute = True
+        }
+        Process.Start(ProcessInfo)
+    End Sub
 End Module

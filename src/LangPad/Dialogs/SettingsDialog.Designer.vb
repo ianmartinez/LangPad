@@ -74,7 +74,7 @@ Partial Class SettingsDialog
         'CancelDialogButton
         '
         Me.CancelDialogButton.BackColor = System.Drawing.Color.Transparent
-        Me.CancelDialogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.CancelDialogButton.DialogResult = DialogResult.Cancel
         Me.CancelDialogButton.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CancelDialogButton.Location = New System.Drawing.Point(112, 3)
         Me.CancelDialogButton.Name = "CancelDialogButton"

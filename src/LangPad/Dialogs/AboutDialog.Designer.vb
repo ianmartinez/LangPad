@@ -22,307 +22,299 @@ Partial Class AboutDialog
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AboutDialog))
-        Me.MainTabControl = New System.Windows.Forms.TabControl()
-        Me.LicenseTab = New System.Windows.Forms.TabPage()
-        Me.LicenseTextBox = New System.Windows.Forms.TextBox()
-        Me.ChangelogTab = New System.Windows.Forms.TabPage()
-        Me.ChangelogTextBox = New System.Windows.Forms.TextBox()
-        Me.CreditsTab = New System.Windows.Forms.TabPage()
-        Me.CreditsTextBox = New System.Windows.Forms.TextBox()
-        Me.MainTooltip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.MainTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.HeaderBorderPanel = New LangPadUI.DoubleBufferedPanel()
-        Me.HeaderPanel = New LangPadUI.DoubleBufferedPanel()
-        Me.LangPadLabel = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ButtonTableLayout = New System.Windows.Forms.TableLayoutPanel()
-        Me.GitHubButton = New System.Windows.Forms.Button()
-        Me.PatreonButton = New System.Windows.Forms.Button()
-        Me.WebsiteButton = New System.Windows.Forms.Button()
-        Me.MainTabControl.SuspendLayout()
-        Me.LicenseTab.SuspendLayout()
-        Me.ChangelogTab.SuspendLayout()
-        Me.CreditsTab.SuspendLayout()
-        Me.MainTableLayoutPanel.SuspendLayout()
-        Me.HeaderBorderPanel.SuspendLayout()
-        Me.HeaderPanel.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ButtonTableLayout.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'MainTabControl
-        '
-        Me.MainTabControl.Controls.Add(Me.LicenseTab)
-        Me.MainTabControl.Controls.Add(Me.ChangelogTab)
-        Me.MainTabControl.Controls.Add(Me.CreditsTab)
-        Me.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainTabControl.Location = New System.Drawing.Point(9, 355)
-        Me.MainTabControl.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.MainTabControl.Name = "MainTabControl"
-        Me.MainTabControl.SelectedIndex = 0
-        Me.MainTabControl.Size = New System.Drawing.Size(1158, 766)
-        Me.MainTabControl.TabIndex = 9
-        '
-        'LicenseTab
-        '
-        Me.LicenseTab.Controls.Add(Me.LicenseTextBox)
-        Me.LicenseTab.Location = New System.Drawing.Point(8, 39)
-        Me.LicenseTab.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.LicenseTab.Name = "LicenseTab"
-        Me.LicenseTab.Padding = New System.Windows.Forms.Padding(12, 11, 12, 11)
-        Me.LicenseTab.Size = New System.Drawing.Size(1142, 719)
-        Me.LicenseTab.TabIndex = 0
-        Me.LicenseTab.Text = "License"
-        Me.LicenseTab.UseVisualStyleBackColor = True
-        '
-        'LicenseTextBox
-        '
-        Me.LicenseTextBox.BackColor = System.Drawing.Color.White
-        Me.LicenseTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.LicenseTextBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LicenseTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.LicenseTextBox.Location = New System.Drawing.Point(12, 11)
-        Me.LicenseTextBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.LicenseTextBox.Multiline = True
-        Me.LicenseTextBox.Name = "LicenseTextBox"
-        Me.LicenseTextBox.ReadOnly = True
-        Me.LicenseTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.LicenseTextBox.Size = New System.Drawing.Size(1118, 697)
-        Me.LicenseTextBox.TabIndex = 7
-        Me.LicenseTextBox.Text = resources.GetString("LicenseTextBox.Text")
-        '
-        'ChangelogTab
-        '
-        Me.ChangelogTab.Controls.Add(Me.ChangelogTextBox)
-        Me.ChangelogTab.Location = New System.Drawing.Point(8, 39)
-        Me.ChangelogTab.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.ChangelogTab.Name = "ChangelogTab"
-        Me.ChangelogTab.Padding = New System.Windows.Forms.Padding(12, 11, 12, 11)
-        Me.ChangelogTab.Size = New System.Drawing.Size(1141, 709)
-        Me.ChangelogTab.TabIndex = 1
-        Me.ChangelogTab.Text = "Changelog"
-        Me.ChangelogTab.UseVisualStyleBackColor = True
-        '
-        'ChangelogTextBox
-        '
-        Me.ChangelogTextBox.BackColor = System.Drawing.Color.White
-        Me.ChangelogTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ChangelogTextBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ChangelogTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ChangelogTextBox.Location = New System.Drawing.Point(12, 11)
-        Me.ChangelogTextBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.ChangelogTextBox.Multiline = True
-        Me.ChangelogTextBox.Name = "ChangelogTextBox"
-        Me.ChangelogTextBox.ReadOnly = True
-        Me.ChangelogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.ChangelogTextBox.Size = New System.Drawing.Size(1117, 687)
-        Me.ChangelogTextBox.TabIndex = 8
-        Me.ChangelogTextBox.Text = resources.GetString("ChangelogTextBox.Text")
-        '
-        'CreditsTab
-        '
-        Me.CreditsTab.Controls.Add(Me.CreditsTextBox)
-        Me.CreditsTab.Location = New System.Drawing.Point(8, 39)
-        Me.CreditsTab.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.CreditsTab.Name = "CreditsTab"
-        Me.CreditsTab.Padding = New System.Windows.Forms.Padding(12, 11, 12, 11)
-        Me.CreditsTab.Size = New System.Drawing.Size(1141, 709)
-        Me.CreditsTab.TabIndex = 2
-        Me.CreditsTab.Text = "Credits"
-        Me.CreditsTab.UseVisualStyleBackColor = True
-        '
-        'CreditsTextBox
-        '
-        Me.CreditsTextBox.BackColor = System.Drawing.Color.White
-        Me.CreditsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.CreditsTextBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CreditsTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.CreditsTextBox.Location = New System.Drawing.Point(12, 11)
-        Me.CreditsTextBox.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.CreditsTextBox.Multiline = True
-        Me.CreditsTextBox.Name = "CreditsTextBox"
-        Me.CreditsTextBox.ReadOnly = True
-        Me.CreditsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.CreditsTextBox.Size = New System.Drawing.Size(1117, 687)
-        Me.CreditsTextBox.TabIndex = 8
-        Me.CreditsTextBox.Text = resources.GetString("CreditsTextBox.Text")
-        '
-        'MainTableLayoutPanel
-        '
-        Me.MainTableLayoutPanel.ColumnCount = 1
-        Me.MainTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.MainTableLayoutPanel.Controls.Add(Me.HeaderBorderPanel, 0, 0)
-        Me.MainTableLayoutPanel.Controls.Add(Me.ButtonTableLayout, 0, 1)
-        Me.MainTableLayoutPanel.Controls.Add(Me.MainTabControl, 0, 2)
-        Me.MainTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MainTableLayoutPanel.Location = New System.Drawing.Point(8, 8)
-        Me.MainTableLayoutPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.MainTableLayoutPanel.Name = "MainTableLayoutPanel"
-        Me.MainTableLayoutPanel.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.MainTableLayoutPanel.RowCount = 3
-        Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 225.0!))
-        Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.MainTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.MainTableLayoutPanel.Size = New System.Drawing.Size(1176, 1131)
-        Me.MainTableLayoutPanel.TabIndex = 77
-        '
-        'HeaderBorderPanel
-        '
-        Me.HeaderBorderPanel.BackColor = System.Drawing.Color.Black
-        Me.HeaderBorderPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.HeaderBorderPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.HeaderBorderPanel.Controls.Add(Me.HeaderPanel)
-        Me.HeaderBorderPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HeaderBorderPanel.Location = New System.Drawing.Point(8, 8)
-        Me.HeaderBorderPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.HeaderBorderPanel.Name = "HeaderBorderPanel"
-        Me.HeaderBorderPanel.Padding = New System.Windows.Forms.Padding(1)
-        Me.HeaderBorderPanel.Size = New System.Drawing.Size(1160, 217)
-        Me.HeaderBorderPanel.TabIndex = 76
-        '
-        'HeaderPanel
-        '
-        Me.HeaderPanel.BackgroundImage = CType(resources.GetObject("HeaderPanel.BackgroundImage"), System.Drawing.Image)
-        Me.HeaderPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.HeaderPanel.Controls.Add(Me.LangPadLabel)
-        Me.HeaderPanel.Controls.Add(Me.PictureBox1)
-        Me.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HeaderPanel.Location = New System.Drawing.Point(1, 1)
-        Me.HeaderPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.HeaderPanel.Name = "HeaderPanel"
-        Me.HeaderPanel.Padding = New System.Windows.Forms.Padding(21, 40, 21, 40)
-        Me.HeaderPanel.Size = New System.Drawing.Size(1156, 213)
-        Me.HeaderPanel.TabIndex = 77
-        '
-        'LangPadLabel
-        '
-        Me.LangPadLabel.BackColor = System.Drawing.Color.Transparent
-        Me.LangPadLabel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LangPadLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
-        Me.LangPadLabel.ForeColor = System.Drawing.Color.White
-        Me.LangPadLabel.Location = New System.Drawing.Point(184, 40)
-        Me.LangPadLabel.Margin = New System.Windows.Forms.Padding(12, 6, 5, 6)
-        Me.LangPadLabel.Name = "LangPadLabel"
-        Me.LangPadLabel.Padding = New System.Windows.Forms.Padding(21, 2, 0, 0)
-        Me.LangPadLabel.Size = New System.Drawing.Size(951, 133)
-        Me.LangPadLabel.TabIndex = 12
-        Me.LangPadLabel.Text = "LangPad"
-        Me.LangPadLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox1.Location = New System.Drawing.Point(21, 40)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(163, 133)
-        Me.PictureBox1.TabIndex = 13
-        Me.PictureBox1.TabStop = False
-        '
-        'ButtonTableLayout
-        '
-        Me.ButtonTableLayout.AutoSize = True
-        Me.ButtonTableLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ButtonTableLayout.ColumnCount = 3
-        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.ButtonTableLayout.Controls.Add(Me.GitHubButton, 0, 0)
-        Me.ButtonTableLayout.Controls.Add(Me.PatreonButton, 0, 0)
-        Me.ButtonTableLayout.Controls.Add(Me.WebsiteButton, 1, 0)
-        Me.ButtonTableLayout.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ButtonTableLayout.Location = New System.Drawing.Point(9, 235)
-        Me.ButtonTableLayout.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.ButtonTableLayout.Name = "ButtonTableLayout"
-        Me.ButtonTableLayout.Padding = New System.Windows.Forms.Padding(0, 11, 0, 6)
-        Me.ButtonTableLayout.RowCount = 1
-        Me.ButtonTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.ButtonTableLayout.Size = New System.Drawing.Size(1158, 108)
-        Me.ButtonTableLayout.TabIndex = 78
-        '
-        'GitHubButton
-        '
-        Me.GitHubButton.AutoSize = True
-        Me.GitHubButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.GitHubButton.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GitHubButton.Image = CType(resources.GetObject("GitHubButton.Image"), System.Drawing.Image)
-        Me.GitHubButton.Location = New System.Drawing.Point(390, 15)
-        Me.GitHubButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GitHubButton.Name = "GitHubButton"
-        Me.GitHubButton.Padding = New System.Windows.Forms.Padding(8, 8, 8, 8)
-        Me.GitHubButton.Size = New System.Drawing.Size(378, 83)
-        Me.GitHubButton.TabIndex = 2
-        Me.GitHubButton.Text = "GitHub"
-        Me.GitHubButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.GitHubButton.UseVisualStyleBackColor = True
-        '
-        'PatreonButton
-        '
-        Me.PatreonButton.AutoSize = True
-        Me.PatreonButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.PatreonButton.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PatreonButton.Image = CType(resources.GetObject("PatreonButton.Image"), System.Drawing.Image)
-        Me.PatreonButton.Location = New System.Drawing.Point(4, 15)
-        Me.PatreonButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.PatreonButton.Name = "PatreonButton"
-        Me.PatreonButton.Padding = New System.Windows.Forms.Padding(8, 8, 8, 8)
-        Me.PatreonButton.Size = New System.Drawing.Size(378, 83)
-        Me.PatreonButton.TabIndex = 1
-        Me.PatreonButton.Text = "Support on Patreon"
-        Me.PatreonButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.PatreonButton.UseVisualStyleBackColor = True
-        '
-        'WebsiteButton
-        '
-        Me.WebsiteButton.AutoSize = True
-        Me.WebsiteButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.WebsiteButton.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebsiteButton.Image = CType(resources.GetObject("WebsiteButton.Image"), System.Drawing.Image)
-        Me.WebsiteButton.Location = New System.Drawing.Point(776, 15)
-        Me.WebsiteButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.WebsiteButton.Name = "WebsiteButton"
-        Me.WebsiteButton.Padding = New System.Windows.Forms.Padding(8, 8, 8, 8)
-        Me.WebsiteButton.Size = New System.Drawing.Size(378, 83)
-        Me.WebsiteButton.TabIndex = 3
-        Me.WebsiteButton.Text = "Website"
-        Me.WebsiteButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.WebsiteButton.UseVisualStyleBackColor = True
-        '
-        'AboutDialog
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1192, 1151)
-        Me.Controls.Add(Me.MainTableLayoutPanel)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "AboutDialog"
-        Me.Padding = New System.Windows.Forms.Padding(8, 8, 8, 12)
-        Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "About"
-        Me.MainTabControl.ResumeLayout(False)
-        Me.LicenseTab.ResumeLayout(False)
-        Me.LicenseTab.PerformLayout()
-        Me.ChangelogTab.ResumeLayout(False)
-        Me.ChangelogTab.PerformLayout()
-        Me.CreditsTab.ResumeLayout(False)
-        Me.CreditsTab.PerformLayout()
-        Me.MainTableLayoutPanel.ResumeLayout(False)
-        Me.MainTableLayoutPanel.PerformLayout()
-        Me.HeaderBorderPanel.ResumeLayout(False)
-        Me.HeaderPanel.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ButtonTableLayout.ResumeLayout(False)
-        Me.ButtonTableLayout.PerformLayout()
-        Me.ResumeLayout(False)
+        MainTabControl = New TabControl()
+        LicenseTab = New TabPage()
+        LicenseTextBox = New TextBox()
+        ChangelogTab = New TabPage()
+        ChangelogTextBox = New TextBox()
+        CreditsTab = New TabPage()
+        CreditsTextBox = New TextBox()
+        MainTooltip = New ToolTip(components)
+        MainTableLayoutPanel = New TableLayoutPanel()
+        HeaderBorderPanel = New LangPadUI.DoubleBufferedPanel()
+        HeaderPanel = New LangPadUI.DoubleBufferedPanel()
+        LangPadLabel = New Label()
+        PictureBox1 = New PictureBox()
+        ButtonTableLayout = New TableLayoutPanel()
+        GitHubButton = New Button()
+        PatreonButton = New Button()
+        WebsiteButton = New Button()
+        MainTabControl.SuspendLayout()
+        LicenseTab.SuspendLayout()
+        ChangelogTab.SuspendLayout()
+        CreditsTab.SuspendLayout()
+        MainTableLayoutPanel.SuspendLayout()
+        HeaderBorderPanel.SuspendLayout()
+        HeaderPanel.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        ButtonTableLayout.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' MainTabControl
+        ' 
+        MainTabControl.Controls.Add(LicenseTab)
+        MainTabControl.Controls.Add(ChangelogTab)
+        MainTabControl.Controls.Add(CreditsTab)
+        MainTabControl.Dock = DockStyle.Fill
+        MainTabControl.Location = New Point(6, 292)
+        MainTabControl.Margin = New Padding(3, 5, 3, 5)
+        MainTabControl.Name = "MainTabControl"
+        MainTabControl.SelectedIndex = 0
+        MainTabControl.Size = New Size(773, 617)
+        MainTabControl.TabIndex = 9
+        ' 
+        ' LicenseTab
+        ' 
+        LicenseTab.Controls.Add(LicenseTextBox)
+        LicenseTab.Location = New Point(4, 29)
+        LicenseTab.Margin = New Padding(3, 5, 3, 5)
+        LicenseTab.Name = "LicenseTab"
+        LicenseTab.Padding = New Padding(8, 9, 8, 9)
+        LicenseTab.Size = New Size(765, 584)
+        LicenseTab.TabIndex = 0
+        LicenseTab.Text = "License"
+        LicenseTab.UseVisualStyleBackColor = True
+        ' 
+        ' LicenseTextBox
+        ' 
+        LicenseTextBox.BackColor = Color.White
+        LicenseTextBox.BorderStyle = BorderStyle.None
+        LicenseTextBox.Dock = DockStyle.Fill
+        LicenseTextBox.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        LicenseTextBox.Location = New Point(8, 9)
+        LicenseTextBox.Margin = New Padding(3, 5, 3, 5)
+        LicenseTextBox.Multiline = True
+        LicenseTextBox.Name = "LicenseTextBox"
+        LicenseTextBox.ReadOnly = True
+        LicenseTextBox.ScrollBars = ScrollBars.Vertical
+        LicenseTextBox.Size = New Size(749, 566)
+        LicenseTextBox.TabIndex = 7
+        LicenseTextBox.Text = resources.GetString("LicenseTextBox.Text")
+        ' 
+        ' ChangelogTab
+        ' 
+        ChangelogTab.Controls.Add(ChangelogTextBox)
+        ChangelogTab.Location = New Point(4, 29)
+        ChangelogTab.Margin = New Padding(3, 5, 3, 5)
+        ChangelogTab.Name = "ChangelogTab"
+        ChangelogTab.Padding = New Padding(8, 9, 8, 9)
+        ChangelogTab.Size = New Size(765, 584)
+        ChangelogTab.TabIndex = 1
+        ChangelogTab.Text = "Changelog"
+        ChangelogTab.UseVisualStyleBackColor = True
+        ' 
+        ' ChangelogTextBox
+        ' 
+        ChangelogTextBox.BackColor = Color.White
+        ChangelogTextBox.BorderStyle = BorderStyle.None
+        ChangelogTextBox.Dock = DockStyle.Fill
+        ChangelogTextBox.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        ChangelogTextBox.Location = New Point(8, 9)
+        ChangelogTextBox.Margin = New Padding(3, 5, 3, 5)
+        ChangelogTextBox.Multiline = True
+        ChangelogTextBox.Name = "ChangelogTextBox"
+        ChangelogTextBox.ReadOnly = True
+        ChangelogTextBox.ScrollBars = ScrollBars.Vertical
+        ChangelogTextBox.Size = New Size(749, 566)
+        ChangelogTextBox.TabIndex = 8
+        ChangelogTextBox.Text = resources.GetString("ChangelogTextBox.Text")
+        ' 
+        ' CreditsTab
+        ' 
+        CreditsTab.Controls.Add(CreditsTextBox)
+        CreditsTab.Location = New Point(4, 29)
+        CreditsTab.Name = "CreditsTab"
+        CreditsTab.Padding = New Padding(8, 9, 8, 9)
+        CreditsTab.Size = New Size(764, 584)
+        CreditsTab.TabIndex = 2
+        CreditsTab.Text = "Credits"
+        CreditsTab.UseVisualStyleBackColor = True
+        ' 
+        ' CreditsTextBox
+        ' 
+        CreditsTextBox.BackColor = Color.White
+        CreditsTextBox.BorderStyle = BorderStyle.None
+        CreditsTextBox.Dock = DockStyle.Fill
+        CreditsTextBox.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        CreditsTextBox.Location = New Point(8, 9)
+        CreditsTextBox.Margin = New Padding(3, 5, 3, 5)
+        CreditsTextBox.Multiline = True
+        CreditsTextBox.Name = "CreditsTextBox"
+        CreditsTextBox.ReadOnly = True
+        CreditsTextBox.ScrollBars = ScrollBars.Vertical
+        CreditsTextBox.Size = New Size(748, 566)
+        CreditsTextBox.TabIndex = 8
+        CreditsTextBox.Text = resources.GetString("CreditsTextBox.Text")
+        ' 
+        ' MainTableLayoutPanel
+        ' 
+        MainTableLayoutPanel.ColumnCount = 1
+        MainTableLayoutPanel.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        MainTableLayoutPanel.Controls.Add(HeaderBorderPanel, 0, 0)
+        MainTableLayoutPanel.Controls.Add(ButtonTableLayout, 0, 1)
+        MainTableLayoutPanel.Controls.Add(MainTabControl, 0, 2)
+        MainTableLayoutPanel.Dock = DockStyle.Fill
+        MainTableLayoutPanel.Location = New Point(5, 6)
+        MainTableLayoutPanel.Name = "MainTableLayoutPanel"
+        MainTableLayoutPanel.Padding = New Padding(3, 3, 3, 3)
+        MainTableLayoutPanel.RowCount = 3
+        MainTableLayoutPanel.RowStyles.Add(New RowStyle(SizeType.Absolute, 180F))
+        MainTableLayoutPanel.RowStyles.Add(New RowStyle())
+        MainTableLayoutPanel.RowStyles.Add(New RowStyle())
+        MainTableLayoutPanel.Size = New Size(785, 905)
+        MainTableLayoutPanel.TabIndex = 77
+        ' 
+        ' HeaderBorderPanel
+        ' 
+        HeaderBorderPanel.BackColor = Color.Black
+        HeaderBorderPanel.BackgroundImageLayout = ImageLayout.Stretch
+        HeaderBorderPanel.BorderStyle = BorderStyle.FixedSingle
+        HeaderBorderPanel.Controls.Add(HeaderPanel)
+        HeaderBorderPanel.Dock = DockStyle.Fill
+        HeaderBorderPanel.Location = New Point(6, 6)
+        HeaderBorderPanel.Name = "HeaderBorderPanel"
+        HeaderBorderPanel.Padding = New Padding(1)
+        HeaderBorderPanel.Size = New Size(773, 174)
+        HeaderBorderPanel.TabIndex = 76
+        ' 
+        ' HeaderPanel
+        ' 
+        HeaderPanel.BackgroundImage = CType(resources.GetObject("HeaderPanel.BackgroundImage"), Image)
+        HeaderPanel.BackgroundImageLayout = ImageLayout.Stretch
+        HeaderPanel.Controls.Add(LangPadLabel)
+        HeaderPanel.Controls.Add(PictureBox1)
+        HeaderPanel.Dock = DockStyle.Fill
+        HeaderPanel.Location = New Point(1, 1)
+        HeaderPanel.Name = "HeaderPanel"
+        HeaderPanel.Padding = New Padding(14, 32, 14, 32)
+        HeaderPanel.Size = New Size(769, 170)
+        HeaderPanel.TabIndex = 77
+        ' 
+        ' LangPadLabel
+        ' 
+        LangPadLabel.BackColor = Color.Transparent
+        LangPadLabel.Dock = DockStyle.Fill
+        LangPadLabel.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold)
+        LangPadLabel.ForeColor = Color.White
+        LangPadLabel.Location = New Point(123, 32)
+        LangPadLabel.Margin = New Padding(8, 5, 3, 5)
+        LangPadLabel.Name = "LangPadLabel"
+        LangPadLabel.Padding = New Padding(14, 2, 0, 0)
+        LangPadLabel.Size = New Size(632, 106)
+        LangPadLabel.TabIndex = 12
+        LangPadLabel.Text = "LangPad"
+        LangPadLabel.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = Color.Transparent
+        PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
+        PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
+        PictureBox1.Dock = DockStyle.Left
+        PictureBox1.Location = New Point(14, 32)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(109, 106)
+        PictureBox1.TabIndex = 13
+        PictureBox1.TabStop = False
+        ' 
+        ' ButtonTableLayout
+        ' 
+        ButtonTableLayout.AutoSize = True
+        ButtonTableLayout.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        ButtonTableLayout.ColumnCount = 3
+        ButtonTableLayout.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.33333F))
+        ButtonTableLayout.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.33333F))
+        ButtonTableLayout.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.33333F))
+        ButtonTableLayout.Controls.Add(GitHubButton, 0, 0)
+        ButtonTableLayout.Controls.Add(PatreonButton, 0, 0)
+        ButtonTableLayout.Controls.Add(WebsiteButton, 1, 0)
+        ButtonTableLayout.Dock = DockStyle.Fill
+        ButtonTableLayout.Location = New Point(6, 188)
+        ButtonTableLayout.Margin = New Padding(3, 5, 3, 5)
+        ButtonTableLayout.Name = "ButtonTableLayout"
+        ButtonTableLayout.Padding = New Padding(0, 9, 0, 5)
+        ButtonTableLayout.RowCount = 1
+        ButtonTableLayout.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        ButtonTableLayout.Size = New Size(773, 94)
+        ButtonTableLayout.TabIndex = 78
+        ' 
+        ' GitHubButton
+        ' 
+        GitHubButton.AutoSize = True
+        GitHubButton.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        GitHubButton.Dock = DockStyle.Fill
+        GitHubButton.Image = CType(resources.GetObject("GitHubButton.Image"), Image)
+        GitHubButton.Location = New Point(260, 12)
+        GitHubButton.Name = "GitHubButton"
+        GitHubButton.Padding = New Padding(5, 6, 5, 6)
+        GitHubButton.Size = New Size(251, 74)
+        GitHubButton.TabIndex = 2
+        GitHubButton.Text = "GitHub"
+        GitHubButton.TextImageRelation = TextImageRelation.ImageAboveText
+        GitHubButton.UseVisualStyleBackColor = True
+        ' 
+        ' PatreonButton
+        ' 
+        PatreonButton.AutoSize = True
+        PatreonButton.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        PatreonButton.Dock = DockStyle.Fill
+        PatreonButton.Image = CType(resources.GetObject("PatreonButton.Image"), Image)
+        PatreonButton.Location = New Point(3, 12)
+        PatreonButton.Name = "PatreonButton"
+        PatreonButton.Padding = New Padding(5, 6, 5, 6)
+        PatreonButton.Size = New Size(251, 74)
+        PatreonButton.TabIndex = 1
+        PatreonButton.Text = "Support on Patreon"
+        PatreonButton.TextImageRelation = TextImageRelation.ImageAboveText
+        PatreonButton.UseVisualStyleBackColor = True
+        ' 
+        ' WebsiteButton
+        ' 
+        WebsiteButton.AutoSize = True
+        WebsiteButton.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        WebsiteButton.Dock = DockStyle.Fill
+        WebsiteButton.Image = CType(resources.GetObject("WebsiteButton.Image"), Image)
+        WebsiteButton.Location = New Point(517, 12)
+        WebsiteButton.Name = "WebsiteButton"
+        WebsiteButton.Padding = New Padding(5, 6, 5, 6)
+        WebsiteButton.Size = New Size(253, 74)
+        WebsiteButton.TabIndex = 3
+        WebsiteButton.Text = "Website"
+        WebsiteButton.TextImageRelation = TextImageRelation.ImageAboveText
+        WebsiteButton.UseVisualStyleBackColor = True
+        ' 
+        ' AboutDialog
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(795, 921)
+        Controls.Add(MainTableLayoutPanel)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        Margin = New Padding(3, 5, 3, 5)
+        MaximizeBox = False
+        MinimizeBox = False
+        Name = "AboutDialog"
+        Padding = New Padding(5, 6, 5, 10)
+        ShowInTaskbar = False
+        StartPosition = FormStartPosition.CenterParent
+        Text = "About"
+        MainTabControl.ResumeLayout(False)
+        LicenseTab.ResumeLayout(False)
+        LicenseTab.PerformLayout()
+        ChangelogTab.ResumeLayout(False)
+        ChangelogTab.PerformLayout()
+        CreditsTab.ResumeLayout(False)
+        CreditsTab.PerformLayout()
+        MainTableLayoutPanel.ResumeLayout(False)
+        MainTableLayoutPanel.PerformLayout()
+        HeaderBorderPanel.ResumeLayout(False)
+        HeaderPanel.ResumeLayout(False)
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        ButtonTableLayout.ResumeLayout(False)
+        ButtonTableLayout.PerformLayout()
+        ResumeLayout(False)
 
     End Sub
     Friend WithEvents MainTabControl As System.Windows.Forms.TabControl

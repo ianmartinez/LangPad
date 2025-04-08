@@ -22,1352 +22,1352 @@ Partial Class CharacterEditor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CharacterEditor))
-        Me.CharCategoriesTabs = New System.Windows.Forms.TabControl()
-        Me.LocalTab = New System.Windows.Forms.TabPage()
-        Me.LocalToolStripContainer = New System.Windows.Forms.ToolStripContainer()
-        Me.LocalPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.LocalToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.ImportLocalToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ExportLocalToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ClearLocalToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.FileTab = New System.Windows.Forms.TabPage()
-        Me.FileToolStripContainer = New System.Windows.Forms.ToolStripContainer()
-        Me.FilePanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.FileToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.ImportFileToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ExportFileToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ClearFileToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ExtendedTab = New System.Windows.Forms.TabPage()
-        Me.ExtendedCharTabControl = New System.Windows.Forms.TabControl()
-        Me.LatinTab = New System.Windows.Forms.TabPage()
-        Me.LatinPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CyrillicTab = New System.Windows.Forms.TabPage()
-        Me.CyrillicPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.GreekTab = New System.Windows.Forms.TabPage()
-        Me.GreekPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.IpaTab = New System.Windows.Forms.TabPage()
-        Me.IpaTabControl = New System.Windows.Forms.TabControl()
-        Me.ConsonantsTab = New System.Windows.Forms.TabPage()
-        Me.ConsonantsLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.AffricatesTab = New System.Windows.Forms.TabPage()
-        Me.AffricatesPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.VowelsTab = New System.Windows.Forms.TabPage()
-        Me.VowelPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.ToneIntonationTab = New System.Windows.Forms.TabPage()
-        Me.ToneIntonationPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.DiacriticsTab = New System.Windows.Forms.TabPage()
-        Me.DiacriticsPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.SuprasegmentalsTab = New System.Windows.Forms.TabPage()
-        Me.SuprasegmentalsPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.BracketsTab = New System.Windows.Forms.TabPage()
-        Me.BracketsPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.ShortcutsTab = New System.Windows.Forms.TabPage()
-        Me.ShortcutsPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.ShortcutButton1 = New LangPadUI.ShortcutButton()
-        Me.ShortcutButton2 = New LangPadUI.ShortcutButton()
-        Me.ShortcutButton3 = New LangPadUI.ShortcutButton()
-        Me.ShortcutButton4 = New LangPadUI.ShortcutButton()
-        Me.ShortcutButton5 = New LangPadUI.ShortcutButton()
-        Me.ShortcutButton6 = New LangPadUI.ShortcutButton()
-        Me.ShortcutButton7 = New LangPadUI.ShortcutButton()
-        Me.ShortcutButton8 = New LangPadUI.ShortcutButton()
-        Me.ShortcutButton9 = New LangPadUI.ShortcutButton()
-        Me.ShortcutButton0 = New LangPadUI.ShortcutButton()
-        Me.SearchTab = New System.Windows.Forms.TabPage()
-        Me.SearchToolStripContainer = New System.Windows.Forms.ToolStripContainer()
-        Me.SearchCharPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.SearchToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.SearchQueryTextBox = New System.Windows.Forms.ToolStripTextBox()
-        Me.CharSearchInLabel = New System.Windows.Forms.ToolStripLabel()
-        Me.SearchModeDropDown = New System.Windows.Forms.ToolStripComboBox()
-        Me.SearchToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.ModifyCharPanel = New System.Windows.Forms.Panel()
-        Me.AccentGroupBox = New System.Windows.Forms.GroupBox()
-        Me.AccentsPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.ModifyCharGroupBox = New System.Windows.Forms.GroupBox()
-        Me.ClearButton = New System.Windows.Forms.Button()
-        Me.AffricateButton = New System.Windows.Forms.Button()
-        Me.LowercaseButton = New System.Windows.Forms.Button()
-        Me.UppercaseButton = New System.Windows.Forms.Button()
-        Me.TopPanel = New System.Windows.Forms.Panel()
-        Me.AddToLocalButton = New System.Windows.Forms.Button()
-        Me.CharacterButton = New System.Windows.Forms.Button()
-        Me.CharacterTextBox = New System.Windows.Forms.TextBox()
-        Me.SmartReplaceCheck = New System.Windows.Forms.CheckBox()
-        Me.AddToFileButton = New System.Windows.Forms.Button()
-        Me.SmartReplaceIndicator = New LangPadUI.DoubleBufferedPanel()
-        Me.CopyToClipboardButton = New System.Windows.Forms.Button()
-        Me.CharButtonMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.AddToEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReplaceEditorCharacterMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CopyCharSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.CopyToClipboardMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CopyToFileMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CopyToLocalMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ShortcutKeySeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.ShortcutKeyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CTRL1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CTRL2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CTRL3ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CTRL4ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CTRL5ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CTRL6ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CTRL7ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CTRL8ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CTRL9ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CTRL0ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RemoveCharSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.RemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MainTooltip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.SaveDialog = New System.Windows.Forms.SaveFileDialog()
-        Me.OpenDialog = New System.Windows.Forms.OpenFileDialog()
-        Me.ShortcutButtonMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ResetKeyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ResetAllKeysToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CharCategoriesTabs.SuspendLayout()
-        Me.LocalTab.SuspendLayout()
-        Me.LocalToolStripContainer.ContentPanel.SuspendLayout()
-        Me.LocalToolStripContainer.TopToolStripPanel.SuspendLayout()
-        Me.LocalToolStripContainer.SuspendLayout()
-        Me.LocalToolStrip.SuspendLayout()
-        Me.FileTab.SuspendLayout()
-        Me.FileToolStripContainer.ContentPanel.SuspendLayout()
-        Me.FileToolStripContainer.TopToolStripPanel.SuspendLayout()
-        Me.FileToolStripContainer.SuspendLayout()
-        Me.FileToolStrip.SuspendLayout()
-        Me.ExtendedTab.SuspendLayout()
-        Me.ExtendedCharTabControl.SuspendLayout()
-        Me.LatinTab.SuspendLayout()
-        Me.CyrillicTab.SuspendLayout()
-        Me.GreekTab.SuspendLayout()
-        Me.IpaTab.SuspendLayout()
-        Me.IpaTabControl.SuspendLayout()
-        Me.ConsonantsTab.SuspendLayout()
-        Me.AffricatesTab.SuspendLayout()
-        Me.VowelsTab.SuspendLayout()
-        Me.ToneIntonationTab.SuspendLayout()
-        Me.DiacriticsTab.SuspendLayout()
-        Me.SuprasegmentalsTab.SuspendLayout()
-        Me.BracketsTab.SuspendLayout()
-        Me.ShortcutsTab.SuspendLayout()
-        Me.ShortcutsPanel.SuspendLayout()
-        Me.SearchTab.SuspendLayout()
-        Me.SearchToolStripContainer.ContentPanel.SuspendLayout()
-        Me.SearchToolStripContainer.TopToolStripPanel.SuspendLayout()
-        Me.SearchToolStripContainer.SuspendLayout()
-        Me.SearchToolStrip.SuspendLayout()
-        Me.ModifyCharPanel.SuspendLayout()
-        Me.AccentGroupBox.SuspendLayout()
-        Me.ModifyCharGroupBox.SuspendLayout()
-        Me.TopPanel.SuspendLayout()
-        Me.CharButtonMenu.SuspendLayout()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer1.Panel1.SuspendLayout()
-        Me.SplitContainer1.Panel2.SuspendLayout()
-        Me.SplitContainer1.SuspendLayout()
-        Me.ShortcutButtonMenu.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'CharCategoriesTabs
-        '
-        Me.CharCategoriesTabs.Controls.Add(Me.LocalTab)
-        Me.CharCategoriesTabs.Controls.Add(Me.FileTab)
-        Me.CharCategoriesTabs.Controls.Add(Me.ExtendedTab)
-        Me.CharCategoriesTabs.Controls.Add(Me.IpaTab)
-        Me.CharCategoriesTabs.Controls.Add(Me.BracketsTab)
-        Me.CharCategoriesTabs.Controls.Add(Me.ShortcutsTab)
-        Me.CharCategoriesTabs.Controls.Add(Me.SearchTab)
-        Me.CharCategoriesTabs.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CharCategoriesTabs.Location = New System.Drawing.Point(0, 0)
-        Me.CharCategoriesTabs.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.CharCategoriesTabs.Multiline = True
-        Me.CharCategoriesTabs.Name = "CharCategoriesTabs"
-        Me.CharCategoriesTabs.SelectedIndex = 0
-        Me.CharCategoriesTabs.Size = New System.Drawing.Size(482, 141)
-        Me.CharCategoriesTabs.TabIndex = 74
-        '
-        'LocalTab
-        '
-        Me.LocalTab.Controls.Add(Me.LocalToolStripContainer)
-        Me.LocalTab.Location = New System.Drawing.Point(4, 25)
-        Me.LocalTab.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.LocalTab.Name = "LocalTab"
-        Me.LocalTab.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.LocalTab.Size = New System.Drawing.Size(474, 112)
-        Me.LocalTab.TabIndex = 1
-        Me.LocalTab.Text = "Local"
-        Me.LocalTab.UseVisualStyleBackColor = True
-        '
-        'LocalToolStripContainer
-        '
-        '
-        'LocalToolStripContainer.ContentPanel
-        '
-        Me.LocalToolStripContainer.ContentPanel.Controls.Add(Me.LocalPanel)
-        Me.LocalToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.LocalToolStripContainer.ContentPanel.Size = New System.Drawing.Size(466, 65)
-        Me.LocalToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LocalToolStripContainer.Location = New System.Drawing.Point(4, 4)
-        Me.LocalToolStripContainer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.LocalToolStripContainer.Name = "LocalToolStripContainer"
-        Me.LocalToolStripContainer.Size = New System.Drawing.Size(466, 104)
-        Me.LocalToolStripContainer.TabIndex = 83
-        '
-        'LocalToolStripContainer.TopToolStripPanel
-        '
-        Me.LocalToolStripContainer.TopToolStripPanel.Controls.Add(Me.LocalToolStrip)
-        '
-        'LocalPanel
-        '
-        Me.LocalPanel.AutoScroll = True
-        Me.LocalPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.LocalPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LocalPanel.Location = New System.Drawing.Point(0, 0)
-        Me.LocalPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.LocalPanel.Name = "LocalPanel"
-        Me.LocalPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.LocalPanel.Size = New System.Drawing.Size(466, 65)
-        Me.LocalPanel.TabIndex = 10
-        '
-        'LocalToolStrip
-        '
-        Me.LocalToolStrip.Dock = System.Windows.Forms.DockStyle.None
-        Me.LocalToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.LocalToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.LocalToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportLocalToolStripButton, Me.ExportLocalToolStripButton, Me.ToolStripSeparator2, Me.ClearLocalToolStripButton})
-        Me.LocalToolStrip.Location = New System.Drawing.Point(0, 0)
-        Me.LocalToolStrip.Name = "LocalToolStrip"
-        Me.LocalToolStrip.Size = New System.Drawing.Size(466, 39)
-        Me.LocalToolStrip.Stretch = True
-        Me.LocalToolStrip.TabIndex = 0
-        '
-        'ImportLocalToolStripButton
-        '
-        Me.ImportLocalToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ImportLocalToolStripButton.Image = CType(resources.GetObject("ImportLocalToolStripButton.Image"), System.Drawing.Image)
-        Me.ImportLocalToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ImportLocalToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ImportLocalToolStripButton.Name = "ImportLocalToolStripButton"
-        Me.ImportLocalToolStripButton.Size = New System.Drawing.Size(36, 36)
-        Me.ImportLocalToolStripButton.Text = "Import..."
-        '
-        'ExportLocalToolStripButton
-        '
-        Me.ExportLocalToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ExportLocalToolStripButton.Image = CType(resources.GetObject("ExportLocalToolStripButton.Image"), System.Drawing.Image)
-        Me.ExportLocalToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ExportLocalToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ExportLocalToolStripButton.Name = "ExportLocalToolStripButton"
-        Me.ExportLocalToolStripButton.Size = New System.Drawing.Size(36, 36)
-        Me.ExportLocalToolStripButton.Text = "Export..."
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
-        '
-        'ClearLocalToolStripButton
-        '
-        Me.ClearLocalToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ClearLocalToolStripButton.Image = CType(resources.GetObject("ClearLocalToolStripButton.Image"), System.Drawing.Image)
-        Me.ClearLocalToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ClearLocalToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ClearLocalToolStripButton.Name = "ClearLocalToolStripButton"
-        Me.ClearLocalToolStripButton.Size = New System.Drawing.Size(36, 36)
-        Me.ClearLocalToolStripButton.Text = "Clear"
-        '
-        'FileTab
-        '
-        Me.FileTab.Controls.Add(Me.FileToolStripContainer)
-        Me.FileTab.Location = New System.Drawing.Point(4, 25)
-        Me.FileTab.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.FileTab.Name = "FileTab"
-        Me.FileTab.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.FileTab.Size = New System.Drawing.Size(474, 112)
-        Me.FileTab.TabIndex = 0
-        Me.FileTab.Text = "File"
-        Me.FileTab.UseVisualStyleBackColor = True
-        '
-        'FileToolStripContainer
-        '
-        '
-        'FileToolStripContainer.ContentPanel
-        '
-        Me.FileToolStripContainer.ContentPanel.Controls.Add(Me.FilePanel)
-        Me.FileToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.FileToolStripContainer.ContentPanel.Size = New System.Drawing.Size(466, 65)
-        Me.FileToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FileToolStripContainer.Location = New System.Drawing.Point(4, 4)
-        Me.FileToolStripContainer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.FileToolStripContainer.Name = "FileToolStripContainer"
-        Me.FileToolStripContainer.Size = New System.Drawing.Size(466, 104)
-        Me.FileToolStripContainer.TabIndex = 82
-        '
-        'FileToolStripContainer.TopToolStripPanel
-        '
-        Me.FileToolStripContainer.TopToolStripPanel.Controls.Add(Me.FileToolStrip)
-        '
-        'FilePanel
-        '
-        Me.FilePanel.AutoScroll = True
-        Me.FilePanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.FilePanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FilePanel.Location = New System.Drawing.Point(0, 0)
-        Me.FilePanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.FilePanel.Name = "FilePanel"
-        Me.FilePanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.FilePanel.Size = New System.Drawing.Size(466, 65)
-        Me.FilePanel.TabIndex = 10
-        '
-        'FileToolStrip
-        '
-        Me.FileToolStrip.Dock = System.Windows.Forms.DockStyle.None
-        Me.FileToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.FileToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.FileToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportFileToolStripButton, Me.ExportFileToolStripButton, Me.ToolStripSeparator5, Me.ClearFileToolStripButton})
-        Me.FileToolStrip.Location = New System.Drawing.Point(0, 0)
-        Me.FileToolStrip.Name = "FileToolStrip"
-        Me.FileToolStrip.Size = New System.Drawing.Size(466, 39)
-        Me.FileToolStrip.Stretch = True
-        Me.FileToolStrip.TabIndex = 0
-        '
-        'ImportFileToolStripButton
-        '
-        Me.ImportFileToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ImportFileToolStripButton.Image = CType(resources.GetObject("ImportFileToolStripButton.Image"), System.Drawing.Image)
-        Me.ImportFileToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ImportFileToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ImportFileToolStripButton.Name = "ImportFileToolStripButton"
-        Me.ImportFileToolStripButton.Size = New System.Drawing.Size(36, 36)
-        Me.ImportFileToolStripButton.Text = "Import..."
-        '
-        'ExportFileToolStripButton
-        '
-        Me.ExportFileToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ExportFileToolStripButton.Image = CType(resources.GetObject("ExportFileToolStripButton.Image"), System.Drawing.Image)
-        Me.ExportFileToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ExportFileToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ExportFileToolStripButton.Name = "ExportFileToolStripButton"
-        Me.ExportFileToolStripButton.Size = New System.Drawing.Size(36, 36)
-        Me.ExportFileToolStripButton.Text = "Export..."
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 39)
-        '
-        'ClearFileToolStripButton
-        '
-        Me.ClearFileToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ClearFileToolStripButton.Image = CType(resources.GetObject("ClearFileToolStripButton.Image"), System.Drawing.Image)
-        Me.ClearFileToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ClearFileToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ClearFileToolStripButton.Name = "ClearFileToolStripButton"
-        Me.ClearFileToolStripButton.Size = New System.Drawing.Size(36, 36)
-        Me.ClearFileToolStripButton.Text = "Clear"
-        '
-        'ExtendedTab
-        '
-        Me.ExtendedTab.Controls.Add(Me.ExtendedCharTabControl)
-        Me.ExtendedTab.Location = New System.Drawing.Point(4, 25)
-        Me.ExtendedTab.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ExtendedTab.Name = "ExtendedTab"
-        Me.ExtendedTab.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ExtendedTab.Size = New System.Drawing.Size(474, 112)
-        Me.ExtendedTab.TabIndex = 2
-        Me.ExtendedTab.Text = "Extended"
-        Me.ExtendedTab.UseVisualStyleBackColor = True
-        '
-        'ExtendedCharTabControl
-        '
-        Me.ExtendedCharTabControl.Controls.Add(Me.LatinTab)
-        Me.ExtendedCharTabControl.Controls.Add(Me.CyrillicTab)
-        Me.ExtendedCharTabControl.Controls.Add(Me.GreekTab)
-        Me.ExtendedCharTabControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ExtendedCharTabControl.Location = New System.Drawing.Point(4, 4)
-        Me.ExtendedCharTabControl.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ExtendedCharTabControl.Name = "ExtendedCharTabControl"
-        Me.ExtendedCharTabControl.SelectedIndex = 0
-        Me.ExtendedCharTabControl.Size = New System.Drawing.Size(466, 104)
-        Me.ExtendedCharTabControl.TabIndex = 73
-        '
-        'LatinTab
-        '
-        Me.LatinTab.Controls.Add(Me.LatinPanel)
-        Me.LatinTab.Location = New System.Drawing.Point(4, 25)
-        Me.LatinTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.LatinTab.Name = "LatinTab"
-        Me.LatinTab.Size = New System.Drawing.Size(458, 75)
-        Me.LatinTab.TabIndex = 0
-        Me.LatinTab.Text = "Latin"
-        Me.LatinTab.UseVisualStyleBackColor = True
-        '
-        'LatinPanel
-        '
-        Me.LatinPanel.AutoScroll = True
-        Me.LatinPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.LatinPanel.AutoSize = True
-        Me.LatinPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LatinPanel.Location = New System.Drawing.Point(0, 0)
-        Me.LatinPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.LatinPanel.Name = "LatinPanel"
-        Me.LatinPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.LatinPanel.Size = New System.Drawing.Size(458, 75)
-        Me.LatinPanel.TabIndex = 9
-        '
-        'CyrillicTab
-        '
-        Me.CyrillicTab.Controls.Add(Me.CyrillicPanel)
-        Me.CyrillicTab.Location = New System.Drawing.Point(4, 25)
-        Me.CyrillicTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.CyrillicTab.Name = "CyrillicTab"
-        Me.CyrillicTab.Size = New System.Drawing.Size(460, 162)
-        Me.CyrillicTab.TabIndex = 5
-        Me.CyrillicTab.Text = "Cyrillic"
-        Me.CyrillicTab.UseVisualStyleBackColor = True
-        '
-        'CyrillicPanel
-        '
-        Me.CyrillicPanel.AutoScroll = True
-        Me.CyrillicPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.CyrillicPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CyrillicPanel.Location = New System.Drawing.Point(0, 0)
-        Me.CyrillicPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.CyrillicPanel.Name = "CyrillicPanel"
-        Me.CyrillicPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.CyrillicPanel.Size = New System.Drawing.Size(460, 162)
-        Me.CyrillicPanel.TabIndex = 8
-        '
-        'GreekTab
-        '
-        Me.GreekTab.Controls.Add(Me.GreekPanel)
-        Me.GreekTab.Location = New System.Drawing.Point(4, 25)
-        Me.GreekTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GreekTab.Name = "GreekTab"
-        Me.GreekTab.Size = New System.Drawing.Size(460, 162)
-        Me.GreekTab.TabIndex = 1
-        Me.GreekTab.Text = "Greek"
-        Me.GreekTab.UseVisualStyleBackColor = True
-        '
-        'GreekPanel
-        '
-        Me.GreekPanel.AutoScroll = True
-        Me.GreekPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.GreekPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GreekPanel.Location = New System.Drawing.Point(0, 0)
-        Me.GreekPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.GreekPanel.Name = "GreekPanel"
-        Me.GreekPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.GreekPanel.Size = New System.Drawing.Size(460, 162)
-        Me.GreekPanel.TabIndex = 8
-        '
-        'IpaTab
-        '
-        Me.IpaTab.Controls.Add(Me.IpaTabControl)
-        Me.IpaTab.Location = New System.Drawing.Point(4, 25)
-        Me.IpaTab.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.IpaTab.Name = "IpaTab"
-        Me.IpaTab.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.IpaTab.Size = New System.Drawing.Size(474, 112)
-        Me.IpaTab.TabIndex = 3
-        Me.IpaTab.Text = "IPA"
-        Me.IpaTab.UseVisualStyleBackColor = True
-        '
-        'IpaTabControl
-        '
-        Me.IpaTabControl.Controls.Add(Me.ConsonantsTab)
-        Me.IpaTabControl.Controls.Add(Me.AffricatesTab)
-        Me.IpaTabControl.Controls.Add(Me.VowelsTab)
-        Me.IpaTabControl.Controls.Add(Me.ToneIntonationTab)
-        Me.IpaTabControl.Controls.Add(Me.DiacriticsTab)
-        Me.IpaTabControl.Controls.Add(Me.SuprasegmentalsTab)
-        Me.IpaTabControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.IpaTabControl.Location = New System.Drawing.Point(4, 4)
-        Me.IpaTabControl.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.IpaTabControl.Name = "IpaTabControl"
-        Me.IpaTabControl.SelectedIndex = 0
-        Me.IpaTabControl.Size = New System.Drawing.Size(466, 104)
-        Me.IpaTabControl.TabIndex = 72
-        '
-        'ConsonantsTab
-        '
-        Me.ConsonantsTab.Controls.Add(Me.ConsonantsLayoutPanel)
-        Me.ConsonantsTab.Location = New System.Drawing.Point(4, 25)
-        Me.ConsonantsTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ConsonantsTab.Name = "ConsonantsTab"
-        Me.ConsonantsTab.Size = New System.Drawing.Size(458, 75)
-        Me.ConsonantsTab.TabIndex = 0
-        Me.ConsonantsTab.Text = "Consonants"
-        Me.ConsonantsTab.UseVisualStyleBackColor = True
-        '
-        'ConsonantsLayoutPanel
-        '
-        Me.ConsonantsLayoutPanel.AutoScroll = True
-        Me.ConsonantsLayoutPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.ConsonantsLayoutPanel.AutoSize = True
-        Me.ConsonantsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ConsonantsLayoutPanel.Location = New System.Drawing.Point(0, 0)
-        Me.ConsonantsLayoutPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.ConsonantsLayoutPanel.Name = "ConsonantsLayoutPanel"
-        Me.ConsonantsLayoutPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.ConsonantsLayoutPanel.Size = New System.Drawing.Size(458, 75)
-        Me.ConsonantsLayoutPanel.TabIndex = 7
-        '
-        'AffricatesTab
-        '
-        Me.AffricatesTab.Controls.Add(Me.AffricatesPanel)
-        Me.AffricatesTab.Location = New System.Drawing.Point(4, 25)
-        Me.AffricatesTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.AffricatesTab.Name = "AffricatesTab"
-        Me.AffricatesTab.Size = New System.Drawing.Size(460, 162)
-        Me.AffricatesTab.TabIndex = 5
-        Me.AffricatesTab.Text = "Affricates"
-        Me.AffricatesTab.UseVisualStyleBackColor = True
-        '
-        'AffricatesPanel
-        '
-        Me.AffricatesPanel.AutoScroll = True
-        Me.AffricatesPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.AffricatesPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.AffricatesPanel.Location = New System.Drawing.Point(0, 0)
-        Me.AffricatesPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.AffricatesPanel.Name = "AffricatesPanel"
-        Me.AffricatesPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.AffricatesPanel.Size = New System.Drawing.Size(460, 162)
-        Me.AffricatesPanel.TabIndex = 8
-        '
-        'VowelsTab
-        '
-        Me.VowelsTab.Controls.Add(Me.VowelPanel)
-        Me.VowelsTab.Location = New System.Drawing.Point(4, 25)
-        Me.VowelsTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.VowelsTab.Name = "VowelsTab"
-        Me.VowelsTab.Size = New System.Drawing.Size(460, 162)
-        Me.VowelsTab.TabIndex = 1
-        Me.VowelsTab.Text = "Vowels"
-        Me.VowelsTab.UseVisualStyleBackColor = True
-        '
-        'VowelPanel
-        '
-        Me.VowelPanel.AutoScroll = True
-        Me.VowelPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.VowelPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.VowelPanel.Location = New System.Drawing.Point(0, 0)
-        Me.VowelPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.VowelPanel.Name = "VowelPanel"
-        Me.VowelPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.VowelPanel.Size = New System.Drawing.Size(460, 162)
-        Me.VowelPanel.TabIndex = 8
-        '
-        'ToneIntonationTab
-        '
-        Me.ToneIntonationTab.Controls.Add(Me.ToneIntonationPanel)
-        Me.ToneIntonationTab.Location = New System.Drawing.Point(4, 25)
-        Me.ToneIntonationTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ToneIntonationTab.Name = "ToneIntonationTab"
-        Me.ToneIntonationTab.Size = New System.Drawing.Size(460, 162)
-        Me.ToneIntonationTab.TabIndex = 4
-        Me.ToneIntonationTab.Text = "Tones"
-        Me.ToneIntonationTab.UseVisualStyleBackColor = True
-        '
-        'ToneIntonationPanel
-        '
-        Me.ToneIntonationPanel.AutoScroll = True
-        Me.ToneIntonationPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.ToneIntonationPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ToneIntonationPanel.Location = New System.Drawing.Point(0, 0)
-        Me.ToneIntonationPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.ToneIntonationPanel.Name = "ToneIntonationPanel"
-        Me.ToneIntonationPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.ToneIntonationPanel.Size = New System.Drawing.Size(460, 162)
-        Me.ToneIntonationPanel.TabIndex = 10
-        '
-        'DiacriticsTab
-        '
-        Me.DiacriticsTab.Controls.Add(Me.DiacriticsPanel)
-        Me.DiacriticsTab.Location = New System.Drawing.Point(4, 25)
-        Me.DiacriticsTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.DiacriticsTab.Name = "DiacriticsTab"
-        Me.DiacriticsTab.Size = New System.Drawing.Size(460, 162)
-        Me.DiacriticsTab.TabIndex = 2
-        Me.DiacriticsTab.Text = "Diacritics"
-        Me.DiacriticsTab.UseVisualStyleBackColor = True
-        '
-        'DiacriticsPanel
-        '
-        Me.DiacriticsPanel.AutoScroll = True
-        Me.DiacriticsPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.DiacriticsPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DiacriticsPanel.Location = New System.Drawing.Point(0, 0)
-        Me.DiacriticsPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.DiacriticsPanel.Name = "DiacriticsPanel"
-        Me.DiacriticsPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.DiacriticsPanel.Size = New System.Drawing.Size(460, 162)
-        Me.DiacriticsPanel.TabIndex = 8
-        '
-        'SuprasegmentalsTab
-        '
-        Me.SuprasegmentalsTab.Controls.Add(Me.SuprasegmentalsPanel)
-        Me.SuprasegmentalsTab.Location = New System.Drawing.Point(4, 25)
-        Me.SuprasegmentalsTab.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.SuprasegmentalsTab.Name = "SuprasegmentalsTab"
-        Me.SuprasegmentalsTab.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.SuprasegmentalsTab.Size = New System.Drawing.Size(460, 162)
-        Me.SuprasegmentalsTab.TabIndex = 6
-        Me.SuprasegmentalsTab.Text = "Suprasegmentals"
-        Me.SuprasegmentalsTab.UseVisualStyleBackColor = True
-        '
-        'SuprasegmentalsPanel
-        '
-        Me.SuprasegmentalsPanel.AutoScroll = True
-        Me.SuprasegmentalsPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.SuprasegmentalsPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SuprasegmentalsPanel.Location = New System.Drawing.Point(4, 4)
-        Me.SuprasegmentalsPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.SuprasegmentalsPanel.Name = "SuprasegmentalsPanel"
-        Me.SuprasegmentalsPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.SuprasegmentalsPanel.Size = New System.Drawing.Size(452, 154)
-        Me.SuprasegmentalsPanel.TabIndex = 9
-        '
-        'BracketsTab
-        '
-        Me.BracketsTab.Controls.Add(Me.BracketsPanel)
-        Me.BracketsTab.Location = New System.Drawing.Point(4, 25)
-        Me.BracketsTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BracketsTab.Name = "BracketsTab"
-        Me.BracketsTab.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BracketsTab.Size = New System.Drawing.Size(474, 112)
-        Me.BracketsTab.TabIndex = 5
-        Me.BracketsTab.Text = "Brackets"
-        Me.BracketsTab.UseVisualStyleBackColor = True
-        '
-        'BracketsPanel
-        '
-        Me.BracketsPanel.AutoScroll = True
-        Me.BracketsPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.BracketsPanel.AutoSize = True
-        Me.BracketsPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BracketsPanel.Location = New System.Drawing.Point(3, 2)
-        Me.BracketsPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.BracketsPanel.Name = "BracketsPanel"
-        Me.BracketsPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.BracketsPanel.Size = New System.Drawing.Size(468, 108)
-        Me.BracketsPanel.TabIndex = 8
-        '
-        'ShortcutsTab
-        '
-        Me.ShortcutsTab.Controls.Add(Me.ShortcutsPanel)
-        Me.ShortcutsTab.Location = New System.Drawing.Point(4, 25)
-        Me.ShortcutsTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ShortcutsTab.Name = "ShortcutsTab"
-        Me.ShortcutsTab.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ShortcutsTab.Size = New System.Drawing.Size(474, 112)
-        Me.ShortcutsTab.TabIndex = 6
-        Me.ShortcutsTab.Text = "Shortcuts"
-        Me.ShortcutsTab.UseVisualStyleBackColor = True
-        '
-        'ShortcutsPanel
-        '
-        Me.ShortcutsPanel.AutoScroll = True
-        Me.ShortcutsPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.ShortcutsPanel.AutoSize = True
-        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton1)
-        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton2)
-        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton3)
-        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton4)
-        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton5)
-        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton6)
-        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton7)
-        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton8)
-        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton9)
-        Me.ShortcutsPanel.Controls.Add(Me.ShortcutButton0)
-        Me.ShortcutsPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ShortcutsPanel.Location = New System.Drawing.Point(3, 2)
-        Me.ShortcutsPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.ShortcutsPanel.Name = "ShortcutsPanel"
-        Me.ShortcutsPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.ShortcutsPanel.Size = New System.Drawing.Size(468, 108)
-        Me.ShortcutsPanel.TabIndex = 9
-        '
-        'ShortcutButton1
-        '
-        Me.ShortcutButton1.BackColor = System.Drawing.Color.Transparent
-        Me.ShortcutButton1.CharValue = ""
-        Me.ShortcutButton1.Location = New System.Drawing.Point(8, 7)
-        Me.ShortcutButton1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ShortcutButton1.Name = "ShortcutButton1"
-        Me.ShortcutButton1.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ShortcutButton1.SettingsValue = "Ctrl1"
-        Me.ShortcutButton1.ShortcutText = "CTRL+1"
-        Me.ShortcutButton1.Size = New System.Drawing.Size(80, 88)
-        Me.ShortcutButton1.TabIndex = 0
-        '
-        'ShortcutButton2
-        '
-        Me.ShortcutButton2.BackColor = System.Drawing.Color.Transparent
-        Me.ShortcutButton2.CharValue = ""
-        Me.ShortcutButton2.Location = New System.Drawing.Point(94, 7)
-        Me.ShortcutButton2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ShortcutButton2.Name = "ShortcutButton2"
-        Me.ShortcutButton2.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ShortcutButton2.SettingsValue = "Ctrl2"
-        Me.ShortcutButton2.ShortcutText = "CTRL+2"
-        Me.ShortcutButton2.Size = New System.Drawing.Size(80, 88)
-        Me.ShortcutButton2.TabIndex = 1
-        '
-        'ShortcutButton3
-        '
-        Me.ShortcutButton3.BackColor = System.Drawing.Color.Transparent
-        Me.ShortcutButton3.CharValue = ""
-        Me.ShortcutButton3.Location = New System.Drawing.Point(180, 7)
-        Me.ShortcutButton3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ShortcutButton3.Name = "ShortcutButton3"
-        Me.ShortcutButton3.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ShortcutButton3.SettingsValue = "Ctrl3"
-        Me.ShortcutButton3.ShortcutText = "CTRL+3"
-        Me.ShortcutButton3.Size = New System.Drawing.Size(80, 88)
-        Me.ShortcutButton3.TabIndex = 2
-        '
-        'ShortcutButton4
-        '
-        Me.ShortcutButton4.BackColor = System.Drawing.Color.Transparent
-        Me.ShortcutButton4.CharValue = ""
-        Me.ShortcutButton4.Location = New System.Drawing.Point(266, 7)
-        Me.ShortcutButton4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ShortcutButton4.Name = "ShortcutButton4"
-        Me.ShortcutButton4.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ShortcutButton4.SettingsValue = "Ctrl4"
-        Me.ShortcutButton4.ShortcutText = "CTRL+4"
-        Me.ShortcutButton4.Size = New System.Drawing.Size(80, 88)
-        Me.ShortcutButton4.TabIndex = 3
-        '
-        'ShortcutButton5
-        '
-        Me.ShortcutButton5.BackColor = System.Drawing.Color.Transparent
-        Me.ShortcutButton5.CharValue = ""
-        Me.ShortcutButton5.Location = New System.Drawing.Point(352, 7)
-        Me.ShortcutButton5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ShortcutButton5.Name = "ShortcutButton5"
-        Me.ShortcutButton5.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ShortcutButton5.SettingsValue = "Ctrl5"
-        Me.ShortcutButton5.ShortcutText = "CTRL+5"
-        Me.ShortcutButton5.Size = New System.Drawing.Size(80, 88)
-        Me.ShortcutButton5.TabIndex = 4
-        '
-        'ShortcutButton6
-        '
-        Me.ShortcutButton6.BackColor = System.Drawing.Color.Transparent
-        Me.ShortcutButton6.CharValue = ""
-        Me.ShortcutButton6.Location = New System.Drawing.Point(8, 99)
-        Me.ShortcutButton6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ShortcutButton6.Name = "ShortcutButton6"
-        Me.ShortcutButton6.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ShortcutButton6.SettingsValue = "Ctrl6"
-        Me.ShortcutButton6.ShortcutText = "CTRL+6"
-        Me.ShortcutButton6.Size = New System.Drawing.Size(80, 88)
-        Me.ShortcutButton6.TabIndex = 5
-        '
-        'ShortcutButton7
-        '
-        Me.ShortcutButton7.BackColor = System.Drawing.Color.Transparent
-        Me.ShortcutButton7.CharValue = ""
-        Me.ShortcutButton7.Location = New System.Drawing.Point(94, 99)
-        Me.ShortcutButton7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ShortcutButton7.Name = "ShortcutButton7"
-        Me.ShortcutButton7.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ShortcutButton7.SettingsValue = "Ctrl7"
-        Me.ShortcutButton7.ShortcutText = "CTRL+7"
-        Me.ShortcutButton7.Size = New System.Drawing.Size(80, 88)
-        Me.ShortcutButton7.TabIndex = 6
-        '
-        'ShortcutButton8
-        '
-        Me.ShortcutButton8.BackColor = System.Drawing.Color.Transparent
-        Me.ShortcutButton8.CharValue = ""
-        Me.ShortcutButton8.Location = New System.Drawing.Point(180, 99)
-        Me.ShortcutButton8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ShortcutButton8.Name = "ShortcutButton8"
-        Me.ShortcutButton8.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ShortcutButton8.SettingsValue = "Ctrl8"
-        Me.ShortcutButton8.ShortcutText = "CTRL+8"
-        Me.ShortcutButton8.Size = New System.Drawing.Size(80, 88)
-        Me.ShortcutButton8.TabIndex = 7
-        '
-        'ShortcutButton9
-        '
-        Me.ShortcutButton9.BackColor = System.Drawing.Color.Transparent
-        Me.ShortcutButton9.CharValue = ""
-        Me.ShortcutButton9.Location = New System.Drawing.Point(266, 99)
-        Me.ShortcutButton9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ShortcutButton9.Name = "ShortcutButton9"
-        Me.ShortcutButton9.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ShortcutButton9.SettingsValue = "Ctrl9"
-        Me.ShortcutButton9.ShortcutText = "CTRL+9"
-        Me.ShortcutButton9.Size = New System.Drawing.Size(80, 88)
-        Me.ShortcutButton9.TabIndex = 8
-        '
-        'ShortcutButton0
-        '
-        Me.ShortcutButton0.BackColor = System.Drawing.Color.Transparent
-        Me.ShortcutButton0.CharValue = ""
-        Me.ShortcutButton0.Location = New System.Drawing.Point(352, 99)
-        Me.ShortcutButton0.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ShortcutButton0.Name = "ShortcutButton0"
-        Me.ShortcutButton0.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ShortcutButton0.SettingsValue = "Ctrl0"
-        Me.ShortcutButton0.ShortcutText = "CTRL+0"
-        Me.ShortcutButton0.Size = New System.Drawing.Size(80, 88)
-        Me.ShortcutButton0.TabIndex = 9
-        '
-        'SearchTab
-        '
-        Me.SearchTab.Controls.Add(Me.SearchToolStripContainer)
-        Me.SearchTab.Location = New System.Drawing.Point(4, 25)
-        Me.SearchTab.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.SearchTab.Name = "SearchTab"
-        Me.SearchTab.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.SearchTab.Size = New System.Drawing.Size(474, 112)
-        Me.SearchTab.TabIndex = 4
-        Me.SearchTab.Text = "Search"
-        Me.SearchTab.UseVisualStyleBackColor = True
-        '
-        'SearchToolStripContainer
-        '
-        '
-        'SearchToolStripContainer.ContentPanel
-        '
-        Me.SearchToolStripContainer.ContentPanel.Controls.Add(Me.SearchCharPanel)
-        Me.SearchToolStripContainer.ContentPanel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.SearchToolStripContainer.ContentPanel.Size = New System.Drawing.Size(466, 65)
-        Me.SearchToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SearchToolStripContainer.Location = New System.Drawing.Point(4, 4)
-        Me.SearchToolStripContainer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.SearchToolStripContainer.Name = "SearchToolStripContainer"
-        Me.SearchToolStripContainer.Size = New System.Drawing.Size(466, 104)
-        Me.SearchToolStripContainer.TabIndex = 84
-        '
-        'SearchToolStripContainer.TopToolStripPanel
-        '
-        Me.SearchToolStripContainer.TopToolStripPanel.Controls.Add(Me.SearchToolStrip)
-        '
-        'SearchCharPanel
-        '
-        Me.SearchCharPanel.AutoScroll = True
-        Me.SearchCharPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.SearchCharPanel.AutoSize = True
-        Me.SearchCharPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SearchCharPanel.Location = New System.Drawing.Point(0, 0)
-        Me.SearchCharPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.SearchCharPanel.Name = "SearchCharPanel"
-        Me.SearchCharPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.SearchCharPanel.Size = New System.Drawing.Size(466, 65)
-        Me.SearchCharPanel.TabIndex = 8
-        '
-        'SearchToolStrip
-        '
-        Me.SearchToolStrip.Dock = System.Windows.Forms.DockStyle.None
-        Me.SearchToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.SearchToolStrip.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.SearchToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SearchQueryTextBox, Me.CharSearchInLabel, Me.SearchModeDropDown, Me.SearchToolStripButton})
-        Me.SearchToolStrip.Location = New System.Drawing.Point(0, 0)
-        Me.SearchToolStrip.Name = "SearchToolStrip"
-        Me.SearchToolStrip.Size = New System.Drawing.Size(466, 39)
-        Me.SearchToolStrip.Stretch = True
-        Me.SearchToolStrip.TabIndex = 0
-        '
-        'SearchQueryTextBox
-        '
-        Me.SearchQueryTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SearchQueryTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.SearchQueryTextBox.Name = "SearchQueryTextBox"
-        Me.SearchQueryTextBox.Size = New System.Drawing.Size(180, 39)
-        '
-        'CharSearchInLabel
-        '
-        Me.CharSearchInLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.CharSearchInLabel.ForeColor = System.Drawing.Color.Black
-        Me.CharSearchInLabel.Name = "CharSearchInLabel"
-        Me.CharSearchInLabel.Size = New System.Drawing.Size(21, 36)
-        Me.CharSearchInLabel.Text = "in"
-        '
-        'SearchModeDropDown
-        '
-        Me.SearchModeDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.SearchModeDropDown.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.SearchModeDropDown.Items.AddRange(New Object() {"All", "Extended Latin", "Extended Cyrillic", "Extended Greek", "IPA (All)", "IPA Consonants", "IPA Affricates", "IPA Vowels", "IPA Tones", "IPA Diacritics", "IPA Suprasegmentals"})
-        Me.SearchModeDropDown.Name = "SearchModeDropDown"
-        Me.SearchModeDropDown.Size = New System.Drawing.Size(180, 39)
-        '
-        'SearchToolStripButton
-        '
-        Me.SearchToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.SearchToolStripButton.Image = CType(resources.GetObject("SearchToolStripButton.Image"), System.Drawing.Image)
-        Me.SearchToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.SearchToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.SearchToolStripButton.Name = "SearchToolStripButton"
-        Me.SearchToolStripButton.Size = New System.Drawing.Size(36, 36)
-        Me.SearchToolStripButton.Text = "Search"
-        '
-        'ModifyCharPanel
-        '
-        Me.ModifyCharPanel.Controls.Add(Me.AccentGroupBox)
-        Me.ModifyCharPanel.Controls.Add(Me.ModifyCharGroupBox)
-        Me.ModifyCharPanel.Controls.Add(Me.TopPanel)
-        Me.ModifyCharPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ModifyCharPanel.Location = New System.Drawing.Point(0, 0)
-        Me.ModifyCharPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ModifyCharPanel.Name = "ModifyCharPanel"
-        Me.ModifyCharPanel.Padding = New System.Windows.Forms.Padding(8, 7, 8, 7)
-        Me.ModifyCharPanel.Size = New System.Drawing.Size(482, 420)
-        Me.ModifyCharPanel.TabIndex = 75
-        '
-        'AccentGroupBox
-        '
-        Me.AccentGroupBox.BackColor = System.Drawing.Color.Transparent
-        Me.AccentGroupBox.Controls.Add(Me.AccentsPanel)
-        Me.AccentGroupBox.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.AccentGroupBox.Location = New System.Drawing.Point(8, 199)
-        Me.AccentGroupBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.AccentGroupBox.Name = "AccentGroupBox"
-        Me.AccentGroupBox.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.AccentGroupBox.Size = New System.Drawing.Size(466, 214)
-        Me.AccentGroupBox.TabIndex = 78
-        Me.AccentGroupBox.TabStop = False
-        Me.AccentGroupBox.Text = "Accent Marks"
-        '
-        'AccentsPanel
-        '
-        Me.AccentsPanel.AutoScroll = True
-        Me.AccentsPanel.AutoScrollMargin = New System.Drawing.Size(0, 5)
-        Me.AccentsPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.AccentsPanel.Location = New System.Drawing.Point(4, 19)
-        Me.AccentsPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
-        Me.AccentsPanel.Name = "AccentsPanel"
-        Me.AccentsPanel.Padding = New System.Windows.Forms.Padding(5, 5, 0, 5)
-        Me.AccentsPanel.Size = New System.Drawing.Size(458, 191)
-        Me.AccentsPanel.TabIndex = 10
-        '
-        'ModifyCharGroupBox
-        '
-        Me.ModifyCharGroupBox.BackColor = System.Drawing.Color.Transparent
-        Me.ModifyCharGroupBox.Controls.Add(Me.ClearButton)
-        Me.ModifyCharGroupBox.Controls.Add(Me.AffricateButton)
-        Me.ModifyCharGroupBox.Controls.Add(Me.LowercaseButton)
-        Me.ModifyCharGroupBox.Controls.Add(Me.UppercaseButton)
-        Me.ModifyCharGroupBox.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ModifyCharGroupBox.Location = New System.Drawing.Point(8, 117)
-        Me.ModifyCharGroupBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ModifyCharGroupBox.Name = "ModifyCharGroupBox"
-        Me.ModifyCharGroupBox.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ModifyCharGroupBox.Size = New System.Drawing.Size(466, 82)
-        Me.ModifyCharGroupBox.TabIndex = 89
-        Me.ModifyCharGroupBox.TabStop = False
-        Me.ModifyCharGroupBox.Text = "Modify Character"
-        '
-        'ClearButton
-        '
-        Me.ClearButton.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ClearButton.BackColor = System.Drawing.Color.Transparent
-        Me.ClearButton.ForeColor = System.Drawing.Color.Firebrick
-        Me.ClearButton.Location = New System.Drawing.Point(329, 26)
-        Me.ClearButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ClearButton.Name = "ClearButton"
-        Me.ClearButton.Size = New System.Drawing.Size(87, 39)
-        Me.ClearButton.TabIndex = 79
-        Me.ClearButton.Text = "Clear"
-        Me.ClearButton.UseVisualStyleBackColor = False
-        '
-        'AffricateButton
-        '
-        Me.AffricateButton.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.AffricateButton.BackColor = System.Drawing.Color.Transparent
-        Me.AffricateButton.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AffricateButton.ForeColor = System.Drawing.Color.Black
-        Me.AffricateButton.Location = New System.Drawing.Point(254, 26)
-        Me.AffricateButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.AffricateButton.Name = "AffricateButton"
-        Me.AffricateButton.Size = New System.Drawing.Size(67, 39)
-        Me.AffricateButton.TabIndex = 78
-        Me.AffricateButton.Text = "◌͡◌"
-        Me.MainTooltip.SetToolTip(Me.AffricateButton, "Toggle Affricate")
-        Me.AffricateButton.UseVisualStyleBackColor = False
-        '
-        'LowercaseButton
-        '
-        Me.LowercaseButton.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.LowercaseButton.BackColor = System.Drawing.Color.Transparent
-        Me.LowercaseButton.ForeColor = System.Drawing.Color.Black
-        Me.LowercaseButton.Location = New System.Drawing.Point(52, 26)
-        Me.LowercaseButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.LowercaseButton.Name = "LowercaseButton"
-        Me.LowercaseButton.Size = New System.Drawing.Size(93, 39)
-        Me.LowercaseButton.TabIndex = 78
-        Me.LowercaseButton.Text = "Lowercase"
-        Me.LowercaseButton.UseVisualStyleBackColor = False
-        '
-        'UppercaseButton
-        '
-        Me.UppercaseButton.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.UppercaseButton.BackColor = System.Drawing.Color.Transparent
-        Me.UppercaseButton.ForeColor = System.Drawing.Color.Black
-        Me.UppercaseButton.Location = New System.Drawing.Point(153, 26)
-        Me.UppercaseButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.UppercaseButton.Name = "UppercaseButton"
-        Me.UppercaseButton.Size = New System.Drawing.Size(93, 39)
-        Me.UppercaseButton.TabIndex = 77
-        Me.UppercaseButton.Text = "Uppercase"
-        Me.UppercaseButton.UseVisualStyleBackColor = False
-        '
-        'TopPanel
-        '
-        Me.TopPanel.Controls.Add(Me.AddToLocalButton)
-        Me.TopPanel.Controls.Add(Me.CharacterButton)
-        Me.TopPanel.Controls.Add(Me.CharacterTextBox)
-        Me.TopPanel.Controls.Add(Me.SmartReplaceCheck)
-        Me.TopPanel.Controls.Add(Me.AddToFileButton)
-        Me.TopPanel.Controls.Add(Me.SmartReplaceIndicator)
-        Me.TopPanel.Controls.Add(Me.CopyToClipboardButton)
-        Me.TopPanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TopPanel.Location = New System.Drawing.Point(8, 7)
-        Me.TopPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(466, 110)
-        Me.TopPanel.TabIndex = 90
-        '
-        'AddToLocalButton
-        '
-        Me.AddToLocalButton.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.AddToLocalButton.BackColor = System.Drawing.Color.Transparent
-        Me.AddToLocalButton.ForeColor = System.Drawing.Color.Black
-        Me.AddToLocalButton.Location = New System.Drawing.Point(265, 64)
-        Me.AddToLocalButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.AddToLocalButton.Name = "AddToLocalButton"
-        Me.AddToLocalButton.Size = New System.Drawing.Size(73, 39)
-        Me.AddToLocalButton.TabIndex = 1
-        Me.AddToLocalButton.Text = "Local"
-        Me.AddToLocalButton.UseVisualStyleBackColor = False
-        '
-        'CharacterButton
-        '
-        Me.CharacterButton.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.CharacterButton.BackColor = System.Drawing.Color.Transparent
-        Me.CharacterButton.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CharacterButton.ForeColor = System.Drawing.Color.Black
-        Me.CharacterButton.Location = New System.Drawing.Point(50, 4)
-        Me.CharacterButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.CharacterButton.Name = "CharacterButton"
-        Me.CharacterButton.Size = New System.Drawing.Size(107, 100)
-        Me.CharacterButton.TabIndex = 88
-        Me.CharacterButton.Text = "a"
-        Me.CharacterButton.UseVisualStyleBackColor = False
-        '
-        'CharacterTextBox
-        '
-        Me.CharacterTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.CharacterTextBox.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CharacterTextBox.Location = New System.Drawing.Point(164, 30)
-        Me.CharacterTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.CharacterTextBox.Name = "CharacterTextBox"
-        Me.CharacterTextBox.Size = New System.Drawing.Size(251, 26)
-        Me.CharacterTextBox.TabIndex = 77
-        '
-        'SmartReplaceCheck
-        '
-        Me.SmartReplaceCheck.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.SmartReplaceCheck.AutoSize = True
-        Me.SmartReplaceCheck.Checked = True
-        Me.SmartReplaceCheck.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.SmartReplaceCheck.Location = New System.Drawing.Point(188, 4)
-        Me.SmartReplaceCheck.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.SmartReplaceCheck.Name = "SmartReplaceCheck"
-        Me.SmartReplaceCheck.Size = New System.Drawing.Size(123, 21)
-        Me.SmartReplaceCheck.TabIndex = 86
-        Me.SmartReplaceCheck.Text = "Smart Replace"
-        Me.SmartReplaceCheck.UseVisualStyleBackColor = True
-        '
-        'AddToFileButton
-        '
-        Me.AddToFileButton.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.AddToFileButton.BackColor = System.Drawing.Color.Transparent
-        Me.AddToFileButton.ForeColor = System.Drawing.Color.Black
-        Me.AddToFileButton.Location = New System.Drawing.Point(347, 64)
-        Me.AddToFileButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.AddToFileButton.Name = "AddToFileButton"
-        Me.AddToFileButton.Size = New System.Drawing.Size(69, 39)
-        Me.AddToFileButton.TabIndex = 76
-        Me.AddToFileButton.Text = "File"
-        Me.AddToFileButton.UseVisualStyleBackColor = False
-        '
-        'SmartReplaceIndicator
-        '
-        Me.SmartReplaceIndicator.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.SmartReplaceIndicator.BackColor = System.Drawing.Color.DimGray
-        Me.SmartReplaceIndicator.Location = New System.Drawing.Point(164, 5)
-        Me.SmartReplaceIndicator.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.SmartReplaceIndicator.Name = "SmartReplaceIndicator"
-        Me.SmartReplaceIndicator.Size = New System.Drawing.Size(19, 18)
-        Me.SmartReplaceIndicator.TabIndex = 87
-        '
-        'CopyToClipboardButton
-        '
-        Me.CopyToClipboardButton.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.CopyToClipboardButton.BackColor = System.Drawing.Color.Transparent
-        Me.CopyToClipboardButton.ForeColor = System.Drawing.Color.Black
-        Me.CopyToClipboardButton.Location = New System.Drawing.Point(164, 64)
-        Me.CopyToClipboardButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.CopyToClipboardButton.Name = "CopyToClipboardButton"
-        Me.CopyToClipboardButton.Size = New System.Drawing.Size(93, 39)
-        Me.CopyToClipboardButton.TabIndex = 79
-        Me.CopyToClipboardButton.Text = "Clipboard"
-        Me.CopyToClipboardButton.UseVisualStyleBackColor = False
-        '
-        'CharButtonMenu
-        '
-        Me.CharButtonMenu.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.CharButtonMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToEditorCharacterMenuItem, Me.ReplaceEditorCharacterMenuItem, Me.CopyCharSeparator, Me.CopyToClipboardMenuItem, Me.CopyToFileMenuItem, Me.CopyToLocalMenuItem, Me.ShortcutKeySeparator, Me.ShortcutKeyToolStripMenuItem, Me.RemoveCharSeparator, Me.RemoveToolStripMenuItem})
-        Me.CharButtonMenu.Name = "CharButtonMenu"
-        Me.CharButtonMenu.Size = New System.Drawing.Size(243, 190)
-        '
-        'AddToEditorCharacterMenuItem
-        '
-        Me.AddToEditorCharacterMenuItem.Name = "AddToEditorCharacterMenuItem"
-        Me.AddToEditorCharacterMenuItem.Size = New System.Drawing.Size(242, 24)
-        Me.AddToEditorCharacterMenuItem.Text = "Add to Editor Character"
-        '
-        'ReplaceEditorCharacterMenuItem
-        '
-        Me.ReplaceEditorCharacterMenuItem.Name = "ReplaceEditorCharacterMenuItem"
-        Me.ReplaceEditorCharacterMenuItem.Size = New System.Drawing.Size(242, 24)
-        Me.ReplaceEditorCharacterMenuItem.Text = "Replace Editor Character"
-        '
-        'CopyCharSeparator
-        '
-        Me.CopyCharSeparator.Name = "CopyCharSeparator"
-        Me.CopyCharSeparator.Size = New System.Drawing.Size(239, 6)
-        '
-        'CopyToClipboardMenuItem
-        '
-        Me.CopyToClipboardMenuItem.Name = "CopyToClipboardMenuItem"
-        Me.CopyToClipboardMenuItem.Size = New System.Drawing.Size(242, 24)
-        Me.CopyToClipboardMenuItem.Text = "Copy to Clipboard"
-        Me.CopyToClipboardMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
-        '
-        'CopyToFileMenuItem
-        '
-        Me.CopyToFileMenuItem.Name = "CopyToFileMenuItem"
-        Me.CopyToFileMenuItem.Size = New System.Drawing.Size(242, 24)
-        Me.CopyToFileMenuItem.Text = "Copy to File"
-        '
-        'CopyToLocalMenuItem
-        '
-        Me.CopyToLocalMenuItem.Name = "CopyToLocalMenuItem"
-        Me.CopyToLocalMenuItem.Size = New System.Drawing.Size(242, 24)
-        Me.CopyToLocalMenuItem.Text = "Copy to Local"
-        '
-        'ShortcutKeySeparator
-        '
-        Me.ShortcutKeySeparator.Name = "ShortcutKeySeparator"
-        Me.ShortcutKeySeparator.Size = New System.Drawing.Size(239, 6)
-        '
-        'ShortcutKeyToolStripMenuItem
-        '
-        Me.ShortcutKeyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CTRL1ToolStripMenuItem, Me.CTRL2ToolStripMenuItem, Me.CTRL3ToolStripMenuItem, Me.CTRL4ToolStripMenuItem, Me.CTRL5ToolStripMenuItem, Me.CTRL6ToolStripMenuItem, Me.CTRL7ToolStripMenuItem, Me.CTRL8ToolStripMenuItem, Me.CTRL9ToolStripMenuItem, Me.CTRL0ToolStripMenuItem})
-        Me.ShortcutKeyToolStripMenuItem.Name = "ShortcutKeyToolStripMenuItem"
-        Me.ShortcutKeyToolStripMenuItem.Size = New System.Drawing.Size(242, 24)
-        Me.ShortcutKeyToolStripMenuItem.Text = "Shortcut Key"
-        '
-        'CTRL1ToolStripMenuItem
-        '
-        Me.CTRL1ToolStripMenuItem.Name = "CTRL1ToolStripMenuItem"
-        Me.CTRL1ToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
-        Me.CTRL1ToolStripMenuItem.Text = "CTRL+1"
-        '
-        'CTRL2ToolStripMenuItem
-        '
-        Me.CTRL2ToolStripMenuItem.Name = "CTRL2ToolStripMenuItem"
-        Me.CTRL2ToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
-        Me.CTRL2ToolStripMenuItem.Text = "CTRL+2"
-        '
-        'CTRL3ToolStripMenuItem
-        '
-        Me.CTRL3ToolStripMenuItem.Name = "CTRL3ToolStripMenuItem"
-        Me.CTRL3ToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
-        Me.CTRL3ToolStripMenuItem.Text = "CTRL+3"
-        '
-        'CTRL4ToolStripMenuItem
-        '
-        Me.CTRL4ToolStripMenuItem.Name = "CTRL4ToolStripMenuItem"
-        Me.CTRL4ToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
-        Me.CTRL4ToolStripMenuItem.Text = "CTRL+4"
-        '
-        'CTRL5ToolStripMenuItem
-        '
-        Me.CTRL5ToolStripMenuItem.Name = "CTRL5ToolStripMenuItem"
-        Me.CTRL5ToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
-        Me.CTRL5ToolStripMenuItem.Text = "CTRL+5"
-        '
-        'CTRL6ToolStripMenuItem
-        '
-        Me.CTRL6ToolStripMenuItem.Name = "CTRL6ToolStripMenuItem"
-        Me.CTRL6ToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
-        Me.CTRL6ToolStripMenuItem.Text = "CTRL+6"
-        '
-        'CTRL7ToolStripMenuItem
-        '
-        Me.CTRL7ToolStripMenuItem.Name = "CTRL7ToolStripMenuItem"
-        Me.CTRL7ToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
-        Me.CTRL7ToolStripMenuItem.Text = "CTRL+7"
-        '
-        'CTRL8ToolStripMenuItem
-        '
-        Me.CTRL8ToolStripMenuItem.Name = "CTRL8ToolStripMenuItem"
-        Me.CTRL8ToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
-        Me.CTRL8ToolStripMenuItem.Text = "CTRL+8"
-        '
-        'CTRL9ToolStripMenuItem
-        '
-        Me.CTRL9ToolStripMenuItem.Name = "CTRL9ToolStripMenuItem"
-        Me.CTRL9ToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
-        Me.CTRL9ToolStripMenuItem.Text = "CTRL+9"
-        '
-        'CTRL0ToolStripMenuItem
-        '
-        Me.CTRL0ToolStripMenuItem.Name = "CTRL0ToolStripMenuItem"
-        Me.CTRL0ToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
-        Me.CTRL0ToolStripMenuItem.Text = "CTRL+0"
-        '
-        'RemoveCharSeparator
-        '
-        Me.RemoveCharSeparator.Name = "RemoveCharSeparator"
-        Me.RemoveCharSeparator.Size = New System.Drawing.Size(239, 6)
-        '
-        'RemoveToolStripMenuItem
-        '
-        Me.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem"
-        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(242, 24)
-        Me.RemoveToolStripMenuItem.Text = "Remove"
-        '
-        'SplitContainer1
-        '
-        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.SplitContainer1.Name = "SplitContainer1"
-        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer1.Panel1
-        '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.ModifyCharPanel)
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.CharCategoriesTabs)
-        Me.SplitContainer1.Size = New System.Drawing.Size(482, 566)
-        Me.SplitContainer1.SplitterDistance = 420
-        Me.SplitContainer1.SplitterWidth = 5
-        Me.SplitContainer1.TabIndex = 76
-        '
-        'SaveDialog
-        '
-        Me.SaveDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
-        '
-        'OpenDialog
-        '
-        Me.OpenDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
-        '
-        'ShortcutButtonMenu
-        '
-        Me.ShortcutButtonMenu.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.ShortcutButtonMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResetKeyToolStripMenuItem, Me.ResetAllKeysToolStripMenuItem})
-        Me.ShortcutButtonMenu.Name = "CharButtonMenu"
-        Me.ShortcutButtonMenu.Size = New System.Drawing.Size(171, 52)
-        '
-        'ResetKeyToolStripMenuItem
-        '
-        Me.ResetKeyToolStripMenuItem.Name = "ResetKeyToolStripMenuItem"
-        Me.ResetKeyToolStripMenuItem.Size = New System.Drawing.Size(170, 24)
-        Me.ResetKeyToolStripMenuItem.Text = "Reset Key"
-        '
-        'ResetAllKeysToolStripMenuItem
-        '
-        Me.ResetAllKeysToolStripMenuItem.Name = "ResetAllKeysToolStripMenuItem"
-        Me.ResetAllKeysToolStripMenuItem.Size = New System.Drawing.Size(170, 24)
-        Me.ResetAllKeysToolStripMenuItem.Text = "Reset All Keys"
-        '
-        'CharacterEditor
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.SplitContainer1)
-        Me.DoubleBuffered = True
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.MinimumSize = New System.Drawing.Size(453, 0)
-        Me.Name = "CharacterEditor"
-        Me.Size = New System.Drawing.Size(482, 566)
-        Me.CharCategoriesTabs.ResumeLayout(False)
-        Me.LocalTab.ResumeLayout(False)
-        Me.LocalToolStripContainer.ContentPanel.ResumeLayout(False)
-        Me.LocalToolStripContainer.TopToolStripPanel.ResumeLayout(False)
-        Me.LocalToolStripContainer.TopToolStripPanel.PerformLayout()
-        Me.LocalToolStripContainer.ResumeLayout(False)
-        Me.LocalToolStripContainer.PerformLayout()
-        Me.LocalToolStrip.ResumeLayout(False)
-        Me.LocalToolStrip.PerformLayout()
-        Me.FileTab.ResumeLayout(False)
-        Me.FileToolStripContainer.ContentPanel.ResumeLayout(False)
-        Me.FileToolStripContainer.TopToolStripPanel.ResumeLayout(False)
-        Me.FileToolStripContainer.TopToolStripPanel.PerformLayout()
-        Me.FileToolStripContainer.ResumeLayout(False)
-        Me.FileToolStripContainer.PerformLayout()
-        Me.FileToolStrip.ResumeLayout(False)
-        Me.FileToolStrip.PerformLayout()
-        Me.ExtendedTab.ResumeLayout(False)
-        Me.ExtendedCharTabControl.ResumeLayout(False)
-        Me.LatinTab.ResumeLayout(False)
-        Me.LatinTab.PerformLayout()
-        Me.CyrillicTab.ResumeLayout(False)
-        Me.GreekTab.ResumeLayout(False)
-        Me.IpaTab.ResumeLayout(False)
-        Me.IpaTabControl.ResumeLayout(False)
-        Me.ConsonantsTab.ResumeLayout(False)
-        Me.ConsonantsTab.PerformLayout()
-        Me.AffricatesTab.ResumeLayout(False)
-        Me.VowelsTab.ResumeLayout(False)
-        Me.ToneIntonationTab.ResumeLayout(False)
-        Me.DiacriticsTab.ResumeLayout(False)
-        Me.SuprasegmentalsTab.ResumeLayout(False)
-        Me.BracketsTab.ResumeLayout(False)
-        Me.BracketsTab.PerformLayout()
-        Me.ShortcutsTab.ResumeLayout(False)
-        Me.ShortcutsTab.PerformLayout()
-        Me.ShortcutsPanel.ResumeLayout(False)
-        Me.SearchTab.ResumeLayout(False)
-        Me.SearchToolStripContainer.ContentPanel.ResumeLayout(False)
-        Me.SearchToolStripContainer.ContentPanel.PerformLayout()
-        Me.SearchToolStripContainer.TopToolStripPanel.ResumeLayout(False)
-        Me.SearchToolStripContainer.TopToolStripPanel.PerformLayout()
-        Me.SearchToolStripContainer.ResumeLayout(False)
-        Me.SearchToolStripContainer.PerformLayout()
-        Me.SearchToolStrip.ResumeLayout(False)
-        Me.SearchToolStrip.PerformLayout()
-        Me.ModifyCharPanel.ResumeLayout(False)
-        Me.AccentGroupBox.ResumeLayout(False)
-        Me.ModifyCharGroupBox.ResumeLayout(False)
-        Me.TopPanel.ResumeLayout(False)
-        Me.TopPanel.PerformLayout()
-        Me.CharButtonMenu.ResumeLayout(False)
-        Me.SplitContainer1.Panel1.ResumeLayout(False)
-        Me.SplitContainer1.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer1.ResumeLayout(False)
-        Me.ShortcutButtonMenu.ResumeLayout(False)
-        Me.ResumeLayout(False)
+        CharCategoriesTabs = New TabControl()
+        LocalTab = New TabPage()
+        LocalToolStripContainer = New ToolStripContainer()
+        LocalPanel = New FlowLayoutPanel()
+        LocalToolStrip = New ToolStrip()
+        ImportLocalToolStripButton = New ToolStripButton()
+        ExportLocalToolStripButton = New ToolStripButton()
+        ToolStripSeparator2 = New ToolStripSeparator()
+        ClearLocalToolStripButton = New ToolStripButton()
+        FileTab = New TabPage()
+        FileToolStripContainer = New ToolStripContainer()
+        FilePanel = New FlowLayoutPanel()
+        FileToolStrip = New ToolStrip()
+        ImportFileToolStripButton = New ToolStripButton()
+        ExportFileToolStripButton = New ToolStripButton()
+        ToolStripSeparator5 = New ToolStripSeparator()
+        ClearFileToolStripButton = New ToolStripButton()
+        ExtendedTab = New TabPage()
+        ExtendedCharTabControl = New TabControl()
+        LatinTab = New TabPage()
+        LatinPanel = New FlowLayoutPanel()
+        CyrillicTab = New TabPage()
+        CyrillicPanel = New FlowLayoutPanel()
+        GreekTab = New TabPage()
+        GreekPanel = New FlowLayoutPanel()
+        IpaTab = New TabPage()
+        IpaTabControl = New TabControl()
+        ConsonantsTab = New TabPage()
+        ConsonantsLayoutPanel = New FlowLayoutPanel()
+        AffricatesTab = New TabPage()
+        AffricatesPanel = New FlowLayoutPanel()
+        VowelsTab = New TabPage()
+        VowelPanel = New FlowLayoutPanel()
+        ToneIntonationTab = New TabPage()
+        ToneIntonationPanel = New FlowLayoutPanel()
+        DiacriticsTab = New TabPage()
+        DiacriticsPanel = New FlowLayoutPanel()
+        SuprasegmentalsTab = New TabPage()
+        SuprasegmentalsPanel = New FlowLayoutPanel()
+        BracketsTab = New TabPage()
+        BracketsPanel = New FlowLayoutPanel()
+        ShortcutsTab = New TabPage()
+        ShortcutsPanel = New FlowLayoutPanel()
+        ShortcutButton1 = New LangPadUI.ShortcutButton()
+        ShortcutButton2 = New LangPadUI.ShortcutButton()
+        ShortcutButton3 = New LangPadUI.ShortcutButton()
+        ShortcutButton4 = New LangPadUI.ShortcutButton()
+        ShortcutButton5 = New LangPadUI.ShortcutButton()
+        ShortcutButton6 = New LangPadUI.ShortcutButton()
+        ShortcutButton7 = New LangPadUI.ShortcutButton()
+        ShortcutButton8 = New LangPadUI.ShortcutButton()
+        ShortcutButton9 = New LangPadUI.ShortcutButton()
+        ShortcutButton0 = New LangPadUI.ShortcutButton()
+        SearchTab = New TabPage()
+        SearchToolStripContainer = New ToolStripContainer()
+        SearchCharPanel = New FlowLayoutPanel()
+        SearchToolStrip = New ToolStrip()
+        SearchQueryTextBox = New ToolStripTextBox()
+        CharSearchInLabel = New ToolStripLabel()
+        SearchModeDropDown = New ToolStripComboBox()
+        SearchToolStripButton = New ToolStripButton()
+        ModifyCharPanel = New Panel()
+        AccentGroupBox = New GroupBox()
+        AccentsPanel = New FlowLayoutPanel()
+        ModifyCharGroupBox = New GroupBox()
+        ClearButton = New Button()
+        AffricateButton = New Button()
+        LowercaseButton = New Button()
+        UppercaseButton = New Button()
+        TopPanel = New Panel()
+        AddToLocalButton = New Button()
+        CharacterButton = New Button()
+        CharacterTextBox = New TextBox()
+        SmartReplaceCheck = New CheckBox()
+        AddToFileButton = New Button()
+        SmartReplaceIndicator = New LangPadUI.DoubleBufferedPanel()
+        CopyToClipboardButton = New Button()
+        CharButtonMenu = New ContextMenuStrip(components)
+        AddToEditorCharacterMenuItem = New ToolStripMenuItem()
+        ReplaceEditorCharacterMenuItem = New ToolStripMenuItem()
+        CopyCharSeparator = New ToolStripSeparator()
+        CopyToClipboardMenuItem = New ToolStripMenuItem()
+        CopyToFileMenuItem = New ToolStripMenuItem()
+        CopyToLocalMenuItem = New ToolStripMenuItem()
+        ShortcutKeySeparator = New ToolStripSeparator()
+        ShortcutKeyToolStripMenuItem = New ToolStripMenuItem()
+        CTRL1ToolStripMenuItem = New ToolStripMenuItem()
+        CTRL2ToolStripMenuItem = New ToolStripMenuItem()
+        CTRL3ToolStripMenuItem = New ToolStripMenuItem()
+        CTRL4ToolStripMenuItem = New ToolStripMenuItem()
+        CTRL5ToolStripMenuItem = New ToolStripMenuItem()
+        CTRL6ToolStripMenuItem = New ToolStripMenuItem()
+        CTRL7ToolStripMenuItem = New ToolStripMenuItem()
+        CTRL8ToolStripMenuItem = New ToolStripMenuItem()
+        CTRL9ToolStripMenuItem = New ToolStripMenuItem()
+        CTRL0ToolStripMenuItem = New ToolStripMenuItem()
+        RemoveCharSeparator = New ToolStripSeparator()
+        RemoveToolStripMenuItem = New ToolStripMenuItem()
+        MainTooltip = New ToolTip(components)
+        SplitContainer1 = New SplitContainer()
+        SaveDialog = New SaveFileDialog()
+        OpenDialog = New OpenFileDialog()
+        ShortcutButtonMenu = New ContextMenuStrip(components)
+        ResetKeyToolStripMenuItem = New ToolStripMenuItem()
+        ResetAllKeysToolStripMenuItem = New ToolStripMenuItem()
+        CharCategoriesTabs.SuspendLayout()
+        LocalTab.SuspendLayout()
+        LocalToolStripContainer.ContentPanel.SuspendLayout()
+        LocalToolStripContainer.TopToolStripPanel.SuspendLayout()
+        LocalToolStripContainer.SuspendLayout()
+        LocalToolStrip.SuspendLayout()
+        FileTab.SuspendLayout()
+        FileToolStripContainer.ContentPanel.SuspendLayout()
+        FileToolStripContainer.TopToolStripPanel.SuspendLayout()
+        FileToolStripContainer.SuspendLayout()
+        FileToolStrip.SuspendLayout()
+        ExtendedTab.SuspendLayout()
+        ExtendedCharTabControl.SuspendLayout()
+        LatinTab.SuspendLayout()
+        CyrillicTab.SuspendLayout()
+        GreekTab.SuspendLayout()
+        IpaTab.SuspendLayout()
+        IpaTabControl.SuspendLayout()
+        ConsonantsTab.SuspendLayout()
+        AffricatesTab.SuspendLayout()
+        VowelsTab.SuspendLayout()
+        ToneIntonationTab.SuspendLayout()
+        DiacriticsTab.SuspendLayout()
+        SuprasegmentalsTab.SuspendLayout()
+        BracketsTab.SuspendLayout()
+        ShortcutsTab.SuspendLayout()
+        ShortcutsPanel.SuspendLayout()
+        SearchTab.SuspendLayout()
+        SearchToolStripContainer.ContentPanel.SuspendLayout()
+        SearchToolStripContainer.TopToolStripPanel.SuspendLayout()
+        SearchToolStripContainer.SuspendLayout()
+        SearchToolStrip.SuspendLayout()
+        ModifyCharPanel.SuspendLayout()
+        AccentGroupBox.SuspendLayout()
+        ModifyCharGroupBox.SuspendLayout()
+        TopPanel.SuspendLayout()
+        CharButtonMenu.SuspendLayout()
+        CType(SplitContainer1, ComponentModel.ISupportInitialize).BeginInit()
+        SplitContainer1.Panel1.SuspendLayout()
+        SplitContainer1.Panel2.SuspendLayout()
+        SplitContainer1.SuspendLayout()
+        ShortcutButtonMenu.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' CharCategoriesTabs
+        ' 
+        CharCategoriesTabs.Controls.Add(LocalTab)
+        CharCategoriesTabs.Controls.Add(FileTab)
+        CharCategoriesTabs.Controls.Add(ExtendedTab)
+        CharCategoriesTabs.Controls.Add(IpaTab)
+        CharCategoriesTabs.Controls.Add(BracketsTab)
+        CharCategoriesTabs.Controls.Add(ShortcutsTab)
+        CharCategoriesTabs.Controls.Add(SearchTab)
+        CharCategoriesTabs.Dock = DockStyle.Fill
+        CharCategoriesTabs.Location = New Point(0, 0)
+        CharCategoriesTabs.Margin = New Padding(4, 5, 4, 5)
+        CharCategoriesTabs.Multiline = True
+        CharCategoriesTabs.Name = "CharCategoriesTabs"
+        CharCategoriesTabs.SelectedIndex = 0
+        CharCategoriesTabs.Size = New Size(482, 177)
+        CharCategoriesTabs.TabIndex = 74
+        ' 
+        ' LocalTab
+        ' 
+        LocalTab.Controls.Add(LocalToolStripContainer)
+        LocalTab.Location = New Point(4, 29)
+        LocalTab.Margin = New Padding(4, 5, 4, 5)
+        LocalTab.Name = "LocalTab"
+        LocalTab.Padding = New Padding(4, 5, 4, 5)
+        LocalTab.Size = New Size(474, 144)
+        LocalTab.TabIndex = 1
+        LocalTab.Text = "Local"
+        LocalTab.UseVisualStyleBackColor = True
+        ' 
+        ' LocalToolStripContainer
+        ' 
+        ' 
+        ' LocalToolStripContainer.ContentPanel
+        ' 
+        LocalToolStripContainer.ContentPanel.Controls.Add(LocalPanel)
+        LocalToolStripContainer.ContentPanel.Margin = New Padding(3, 2, 3, 2)
+        LocalToolStripContainer.ContentPanel.Size = New Size(466, 95)
+        LocalToolStripContainer.Dock = DockStyle.Fill
+        LocalToolStripContainer.Location = New Point(4, 5)
+        LocalToolStripContainer.Margin = New Padding(3, 2, 3, 2)
+        LocalToolStripContainer.Name = "LocalToolStripContainer"
+        LocalToolStripContainer.Size = New Size(466, 134)
+        LocalToolStripContainer.TabIndex = 83
+        ' 
+        ' LocalToolStripContainer.TopToolStripPanel
+        ' 
+        LocalToolStripContainer.TopToolStripPanel.Controls.Add(LocalToolStrip)
+        ' 
+        ' LocalPanel
+        ' 
+        LocalPanel.AutoScroll = True
+        LocalPanel.AutoScrollMargin = New Size(0, 5)
+        LocalPanel.Dock = DockStyle.Fill
+        LocalPanel.Location = New Point(0, 0)
+        LocalPanel.Margin = New Padding(5, 6, 5, 6)
+        LocalPanel.Name = "LocalPanel"
+        LocalPanel.Padding = New Padding(5, 6, 0, 6)
+        LocalPanel.Size = New Size(466, 95)
+        LocalPanel.TabIndex = 10
+        ' 
+        ' LocalToolStrip
+        ' 
+        LocalToolStrip.Dock = DockStyle.None
+        LocalToolStrip.GripStyle = ToolStripGripStyle.Hidden
+        LocalToolStrip.ImageScalingSize = New Size(32, 32)
+        LocalToolStrip.Items.AddRange(New ToolStripItem() {ImportLocalToolStripButton, ExportLocalToolStripButton, ToolStripSeparator2, ClearLocalToolStripButton})
+        LocalToolStrip.Location = New Point(0, 0)
+        LocalToolStrip.Name = "LocalToolStrip"
+        LocalToolStrip.Size = New Size(466, 39)
+        LocalToolStrip.Stretch = True
+        LocalToolStrip.TabIndex = 0
+        ' 
+        ' ImportLocalToolStripButton
+        ' 
+        ImportLocalToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image
+        ImportLocalToolStripButton.Image = CType(resources.GetObject("ImportLocalToolStripButton.Image"), Image)
+        ImportLocalToolStripButton.ImageScaling = ToolStripItemImageScaling.None
+        ImportLocalToolStripButton.ImageTransparentColor = Color.Magenta
+        ImportLocalToolStripButton.Name = "ImportLocalToolStripButton"
+        ImportLocalToolStripButton.Size = New Size(36, 36)
+        ImportLocalToolStripButton.Text = "Import..."
+        ' 
+        ' ExportLocalToolStripButton
+        ' 
+        ExportLocalToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image
+        ExportLocalToolStripButton.Image = CType(resources.GetObject("ExportLocalToolStripButton.Image"), Image)
+        ExportLocalToolStripButton.ImageScaling = ToolStripItemImageScaling.None
+        ExportLocalToolStripButton.ImageTransparentColor = Color.Magenta
+        ExportLocalToolStripButton.Name = "ExportLocalToolStripButton"
+        ExportLocalToolStripButton.Size = New Size(36, 36)
+        ExportLocalToolStripButton.Text = "Export..."
+        ' 
+        ' ToolStripSeparator2
+        ' 
+        ToolStripSeparator2.Name = "ToolStripSeparator2"
+        ToolStripSeparator2.Size = New Size(6, 39)
+        ' 
+        ' ClearLocalToolStripButton
+        ' 
+        ClearLocalToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image
+        ClearLocalToolStripButton.Image = CType(resources.GetObject("ClearLocalToolStripButton.Image"), Image)
+        ClearLocalToolStripButton.ImageScaling = ToolStripItemImageScaling.None
+        ClearLocalToolStripButton.ImageTransparentColor = Color.Magenta
+        ClearLocalToolStripButton.Name = "ClearLocalToolStripButton"
+        ClearLocalToolStripButton.Size = New Size(36, 36)
+        ClearLocalToolStripButton.Text = "Clear"
+        ' 
+        ' FileTab
+        ' 
+        FileTab.Controls.Add(FileToolStripContainer)
+        FileTab.Location = New Point(4, 29)
+        FileTab.Margin = New Padding(4, 5, 4, 5)
+        FileTab.Name = "FileTab"
+        FileTab.Padding = New Padding(4, 5, 4, 5)
+        FileTab.Size = New Size(474, 144)
+        FileTab.TabIndex = 0
+        FileTab.Text = "File"
+        FileTab.UseVisualStyleBackColor = True
+        ' 
+        ' FileToolStripContainer
+        ' 
+        ' 
+        ' FileToolStripContainer.ContentPanel
+        ' 
+        FileToolStripContainer.ContentPanel.Controls.Add(FilePanel)
+        FileToolStripContainer.ContentPanel.Margin = New Padding(3, 2, 3, 2)
+        FileToolStripContainer.ContentPanel.Size = New Size(466, 95)
+        FileToolStripContainer.Dock = DockStyle.Fill
+        FileToolStripContainer.Location = New Point(4, 5)
+        FileToolStripContainer.Margin = New Padding(3, 2, 3, 2)
+        FileToolStripContainer.Name = "FileToolStripContainer"
+        FileToolStripContainer.Size = New Size(466, 134)
+        FileToolStripContainer.TabIndex = 82
+        ' 
+        ' FileToolStripContainer.TopToolStripPanel
+        ' 
+        FileToolStripContainer.TopToolStripPanel.Controls.Add(FileToolStrip)
+        ' 
+        ' FilePanel
+        ' 
+        FilePanel.AutoScroll = True
+        FilePanel.AutoScrollMargin = New Size(0, 5)
+        FilePanel.Dock = DockStyle.Fill
+        FilePanel.Location = New Point(0, 0)
+        FilePanel.Margin = New Padding(5, 6, 5, 6)
+        FilePanel.Name = "FilePanel"
+        FilePanel.Padding = New Padding(5, 6, 0, 6)
+        FilePanel.Size = New Size(466, 95)
+        FilePanel.TabIndex = 10
+        ' 
+        ' FileToolStrip
+        ' 
+        FileToolStrip.Dock = DockStyle.None
+        FileToolStrip.GripStyle = ToolStripGripStyle.Hidden
+        FileToolStrip.ImageScalingSize = New Size(32, 32)
+        FileToolStrip.Items.AddRange(New ToolStripItem() {ImportFileToolStripButton, ExportFileToolStripButton, ToolStripSeparator5, ClearFileToolStripButton})
+        FileToolStrip.Location = New Point(0, 0)
+        FileToolStrip.Name = "FileToolStrip"
+        FileToolStrip.Size = New Size(466, 39)
+        FileToolStrip.Stretch = True
+        FileToolStrip.TabIndex = 0
+        ' 
+        ' ImportFileToolStripButton
+        ' 
+        ImportFileToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image
+        ImportFileToolStripButton.Image = CType(resources.GetObject("ImportFileToolStripButton.Image"), Image)
+        ImportFileToolStripButton.ImageScaling = ToolStripItemImageScaling.None
+        ImportFileToolStripButton.ImageTransparentColor = Color.Magenta
+        ImportFileToolStripButton.Name = "ImportFileToolStripButton"
+        ImportFileToolStripButton.Size = New Size(36, 36)
+        ImportFileToolStripButton.Text = "Import..."
+        ' 
+        ' ExportFileToolStripButton
+        ' 
+        ExportFileToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image
+        ExportFileToolStripButton.Image = CType(resources.GetObject("ExportFileToolStripButton.Image"), Image)
+        ExportFileToolStripButton.ImageScaling = ToolStripItemImageScaling.None
+        ExportFileToolStripButton.ImageTransparentColor = Color.Magenta
+        ExportFileToolStripButton.Name = "ExportFileToolStripButton"
+        ExportFileToolStripButton.Size = New Size(36, 36)
+        ExportFileToolStripButton.Text = "Export..."
+        ' 
+        ' ToolStripSeparator5
+        ' 
+        ToolStripSeparator5.Name = "ToolStripSeparator5"
+        ToolStripSeparator5.Size = New Size(6, 39)
+        ' 
+        ' ClearFileToolStripButton
+        ' 
+        ClearFileToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image
+        ClearFileToolStripButton.Image = CType(resources.GetObject("ClearFileToolStripButton.Image"), Image)
+        ClearFileToolStripButton.ImageScaling = ToolStripItemImageScaling.None
+        ClearFileToolStripButton.ImageTransparentColor = Color.Magenta
+        ClearFileToolStripButton.Name = "ClearFileToolStripButton"
+        ClearFileToolStripButton.Size = New Size(36, 36)
+        ClearFileToolStripButton.Text = "Clear"
+        ' 
+        ' ExtendedTab
+        ' 
+        ExtendedTab.Controls.Add(ExtendedCharTabControl)
+        ExtendedTab.Location = New Point(4, 29)
+        ExtendedTab.Margin = New Padding(4, 5, 4, 5)
+        ExtendedTab.Name = "ExtendedTab"
+        ExtendedTab.Padding = New Padding(4, 5, 4, 5)
+        ExtendedTab.Size = New Size(474, 144)
+        ExtendedTab.TabIndex = 2
+        ExtendedTab.Text = "Extended"
+        ExtendedTab.UseVisualStyleBackColor = True
+        ' 
+        ' ExtendedCharTabControl
+        ' 
+        ExtendedCharTabControl.Controls.Add(LatinTab)
+        ExtendedCharTabControl.Controls.Add(CyrillicTab)
+        ExtendedCharTabControl.Controls.Add(GreekTab)
+        ExtendedCharTabControl.Dock = DockStyle.Fill
+        ExtendedCharTabControl.Location = New Point(4, 5)
+        ExtendedCharTabControl.Margin = New Padding(4, 5, 4, 5)
+        ExtendedCharTabControl.Name = "ExtendedCharTabControl"
+        ExtendedCharTabControl.SelectedIndex = 0
+        ExtendedCharTabControl.Size = New Size(466, 134)
+        ExtendedCharTabControl.TabIndex = 73
+        ' 
+        ' LatinTab
+        ' 
+        LatinTab.Controls.Add(LatinPanel)
+        LatinTab.Location = New Point(4, 29)
+        LatinTab.Margin = New Padding(3, 2, 3, 2)
+        LatinTab.Name = "LatinTab"
+        LatinTab.Size = New Size(458, 101)
+        LatinTab.TabIndex = 0
+        LatinTab.Text = "Latin"
+        LatinTab.UseVisualStyleBackColor = True
+        ' 
+        ' LatinPanel
+        ' 
+        LatinPanel.AutoScroll = True
+        LatinPanel.AutoScrollMargin = New Size(0, 5)
+        LatinPanel.AutoSize = True
+        LatinPanel.Dock = DockStyle.Fill
+        LatinPanel.Location = New Point(0, 0)
+        LatinPanel.Margin = New Padding(5, 6, 5, 6)
+        LatinPanel.Name = "LatinPanel"
+        LatinPanel.Padding = New Padding(5, 6, 0, 6)
+        LatinPanel.Size = New Size(458, 101)
+        LatinPanel.TabIndex = 9
+        ' 
+        ' CyrillicTab
+        ' 
+        CyrillicTab.Controls.Add(CyrillicPanel)
+        CyrillicTab.Location = New Point(4, 29)
+        CyrillicTab.Margin = New Padding(3, 2, 3, 2)
+        CyrillicTab.Name = "CyrillicTab"
+        CyrillicTab.Size = New Size(458, 101)
+        CyrillicTab.TabIndex = 5
+        CyrillicTab.Text = "Cyrillic"
+        CyrillicTab.UseVisualStyleBackColor = True
+        ' 
+        ' CyrillicPanel
+        ' 
+        CyrillicPanel.AutoScroll = True
+        CyrillicPanel.AutoScrollMargin = New Size(0, 5)
+        CyrillicPanel.Dock = DockStyle.Fill
+        CyrillicPanel.Location = New Point(0, 0)
+        CyrillicPanel.Margin = New Padding(5, 6, 5, 6)
+        CyrillicPanel.Name = "CyrillicPanel"
+        CyrillicPanel.Padding = New Padding(5, 6, 0, 6)
+        CyrillicPanel.Size = New Size(458, 101)
+        CyrillicPanel.TabIndex = 8
+        ' 
+        ' GreekTab
+        ' 
+        GreekTab.Controls.Add(GreekPanel)
+        GreekTab.Location = New Point(4, 29)
+        GreekTab.Margin = New Padding(3, 2, 3, 2)
+        GreekTab.Name = "GreekTab"
+        GreekTab.Size = New Size(458, 101)
+        GreekTab.TabIndex = 1
+        GreekTab.Text = "Greek"
+        GreekTab.UseVisualStyleBackColor = True
+        ' 
+        ' GreekPanel
+        ' 
+        GreekPanel.AutoScroll = True
+        GreekPanel.AutoScrollMargin = New Size(0, 5)
+        GreekPanel.Dock = DockStyle.Fill
+        GreekPanel.Location = New Point(0, 0)
+        GreekPanel.Margin = New Padding(5, 6, 5, 6)
+        GreekPanel.Name = "GreekPanel"
+        GreekPanel.Padding = New Padding(5, 6, 0, 6)
+        GreekPanel.Size = New Size(458, 101)
+        GreekPanel.TabIndex = 8
+        ' 
+        ' IpaTab
+        ' 
+        IpaTab.Controls.Add(IpaTabControl)
+        IpaTab.Location = New Point(4, 29)
+        IpaTab.Margin = New Padding(4, 5, 4, 5)
+        IpaTab.Name = "IpaTab"
+        IpaTab.Padding = New Padding(4, 5, 4, 5)
+        IpaTab.Size = New Size(474, 144)
+        IpaTab.TabIndex = 3
+        IpaTab.Text = "IPA"
+        IpaTab.UseVisualStyleBackColor = True
+        ' 
+        ' IpaTabControl
+        ' 
+        IpaTabControl.Controls.Add(ConsonantsTab)
+        IpaTabControl.Controls.Add(AffricatesTab)
+        IpaTabControl.Controls.Add(VowelsTab)
+        IpaTabControl.Controls.Add(ToneIntonationTab)
+        IpaTabControl.Controls.Add(DiacriticsTab)
+        IpaTabControl.Controls.Add(SuprasegmentalsTab)
+        IpaTabControl.Dock = DockStyle.Fill
+        IpaTabControl.Location = New Point(4, 5)
+        IpaTabControl.Margin = New Padding(4, 5, 4, 5)
+        IpaTabControl.Name = "IpaTabControl"
+        IpaTabControl.SelectedIndex = 0
+        IpaTabControl.Size = New Size(466, 134)
+        IpaTabControl.TabIndex = 72
+        ' 
+        ' ConsonantsTab
+        ' 
+        ConsonantsTab.Controls.Add(ConsonantsLayoutPanel)
+        ConsonantsTab.Location = New Point(4, 29)
+        ConsonantsTab.Margin = New Padding(3, 2, 3, 2)
+        ConsonantsTab.Name = "ConsonantsTab"
+        ConsonantsTab.Size = New Size(458, 101)
+        ConsonantsTab.TabIndex = 0
+        ConsonantsTab.Text = "Consonants"
+        ConsonantsTab.UseVisualStyleBackColor = True
+        ' 
+        ' ConsonantsLayoutPanel
+        ' 
+        ConsonantsLayoutPanel.AutoScroll = True
+        ConsonantsLayoutPanel.AutoScrollMargin = New Size(0, 5)
+        ConsonantsLayoutPanel.AutoSize = True
+        ConsonantsLayoutPanel.Dock = DockStyle.Fill
+        ConsonantsLayoutPanel.Location = New Point(0, 0)
+        ConsonantsLayoutPanel.Margin = New Padding(5, 6, 5, 6)
+        ConsonantsLayoutPanel.Name = "ConsonantsLayoutPanel"
+        ConsonantsLayoutPanel.Padding = New Padding(5, 6, 0, 6)
+        ConsonantsLayoutPanel.Size = New Size(458, 101)
+        ConsonantsLayoutPanel.TabIndex = 7
+        ' 
+        ' AffricatesTab
+        ' 
+        AffricatesTab.Controls.Add(AffricatesPanel)
+        AffricatesTab.Location = New Point(4, 29)
+        AffricatesTab.Margin = New Padding(3, 2, 3, 2)
+        AffricatesTab.Name = "AffricatesTab"
+        AffricatesTab.Size = New Size(458, 101)
+        AffricatesTab.TabIndex = 5
+        AffricatesTab.Text = "Affricates"
+        AffricatesTab.UseVisualStyleBackColor = True
+        ' 
+        ' AffricatesPanel
+        ' 
+        AffricatesPanel.AutoScroll = True
+        AffricatesPanel.AutoScrollMargin = New Size(0, 5)
+        AffricatesPanel.Dock = DockStyle.Fill
+        AffricatesPanel.Location = New Point(0, 0)
+        AffricatesPanel.Margin = New Padding(5, 6, 5, 6)
+        AffricatesPanel.Name = "AffricatesPanel"
+        AffricatesPanel.Padding = New Padding(5, 6, 0, 6)
+        AffricatesPanel.Size = New Size(458, 101)
+        AffricatesPanel.TabIndex = 8
+        ' 
+        ' VowelsTab
+        ' 
+        VowelsTab.Controls.Add(VowelPanel)
+        VowelsTab.Location = New Point(4, 29)
+        VowelsTab.Margin = New Padding(3, 2, 3, 2)
+        VowelsTab.Name = "VowelsTab"
+        VowelsTab.Size = New Size(458, 101)
+        VowelsTab.TabIndex = 1
+        VowelsTab.Text = "Vowels"
+        VowelsTab.UseVisualStyleBackColor = True
+        ' 
+        ' VowelPanel
+        ' 
+        VowelPanel.AutoScroll = True
+        VowelPanel.AutoScrollMargin = New Size(0, 5)
+        VowelPanel.Dock = DockStyle.Fill
+        VowelPanel.Location = New Point(0, 0)
+        VowelPanel.Margin = New Padding(5, 6, 5, 6)
+        VowelPanel.Name = "VowelPanel"
+        VowelPanel.Padding = New Padding(5, 6, 0, 6)
+        VowelPanel.Size = New Size(458, 101)
+        VowelPanel.TabIndex = 8
+        ' 
+        ' ToneIntonationTab
+        ' 
+        ToneIntonationTab.Controls.Add(ToneIntonationPanel)
+        ToneIntonationTab.Location = New Point(4, 29)
+        ToneIntonationTab.Margin = New Padding(3, 2, 3, 2)
+        ToneIntonationTab.Name = "ToneIntonationTab"
+        ToneIntonationTab.Size = New Size(458, 101)
+        ToneIntonationTab.TabIndex = 4
+        ToneIntonationTab.Text = "Tones"
+        ToneIntonationTab.UseVisualStyleBackColor = True
+        ' 
+        ' ToneIntonationPanel
+        ' 
+        ToneIntonationPanel.AutoScroll = True
+        ToneIntonationPanel.AutoScrollMargin = New Size(0, 5)
+        ToneIntonationPanel.Dock = DockStyle.Fill
+        ToneIntonationPanel.Location = New Point(0, 0)
+        ToneIntonationPanel.Margin = New Padding(5, 6, 5, 6)
+        ToneIntonationPanel.Name = "ToneIntonationPanel"
+        ToneIntonationPanel.Padding = New Padding(5, 6, 0, 6)
+        ToneIntonationPanel.Size = New Size(458, 101)
+        ToneIntonationPanel.TabIndex = 10
+        ' 
+        ' DiacriticsTab
+        ' 
+        DiacriticsTab.Controls.Add(DiacriticsPanel)
+        DiacriticsTab.Location = New Point(4, 29)
+        DiacriticsTab.Margin = New Padding(3, 2, 3, 2)
+        DiacriticsTab.Name = "DiacriticsTab"
+        DiacriticsTab.Size = New Size(458, 101)
+        DiacriticsTab.TabIndex = 2
+        DiacriticsTab.Text = "Diacritics"
+        DiacriticsTab.UseVisualStyleBackColor = True
+        ' 
+        ' DiacriticsPanel
+        ' 
+        DiacriticsPanel.AutoScroll = True
+        DiacriticsPanel.AutoScrollMargin = New Size(0, 5)
+        DiacriticsPanel.Dock = DockStyle.Fill
+        DiacriticsPanel.Location = New Point(0, 0)
+        DiacriticsPanel.Margin = New Padding(5, 6, 5, 6)
+        DiacriticsPanel.Name = "DiacriticsPanel"
+        DiacriticsPanel.Padding = New Padding(5, 6, 0, 6)
+        DiacriticsPanel.Size = New Size(458, 101)
+        DiacriticsPanel.TabIndex = 8
+        ' 
+        ' SuprasegmentalsTab
+        ' 
+        SuprasegmentalsTab.Controls.Add(SuprasegmentalsPanel)
+        SuprasegmentalsTab.Location = New Point(4, 29)
+        SuprasegmentalsTab.Margin = New Padding(4, 5, 4, 5)
+        SuprasegmentalsTab.Name = "SuprasegmentalsTab"
+        SuprasegmentalsTab.Padding = New Padding(4, 5, 4, 5)
+        SuprasegmentalsTab.Size = New Size(458, 101)
+        SuprasegmentalsTab.TabIndex = 6
+        SuprasegmentalsTab.Text = "Suprasegmentals"
+        SuprasegmentalsTab.UseVisualStyleBackColor = True
+        ' 
+        ' SuprasegmentalsPanel
+        ' 
+        SuprasegmentalsPanel.AutoScroll = True
+        SuprasegmentalsPanel.AutoScrollMargin = New Size(0, 5)
+        SuprasegmentalsPanel.Dock = DockStyle.Fill
+        SuprasegmentalsPanel.Location = New Point(4, 5)
+        SuprasegmentalsPanel.Margin = New Padding(5, 6, 5, 6)
+        SuprasegmentalsPanel.Name = "SuprasegmentalsPanel"
+        SuprasegmentalsPanel.Padding = New Padding(5, 6, 0, 6)
+        SuprasegmentalsPanel.Size = New Size(450, 91)
+        SuprasegmentalsPanel.TabIndex = 9
+        ' 
+        ' BracketsTab
+        ' 
+        BracketsTab.Controls.Add(BracketsPanel)
+        BracketsTab.Location = New Point(4, 29)
+        BracketsTab.Margin = New Padding(3, 2, 3, 2)
+        BracketsTab.Name = "BracketsTab"
+        BracketsTab.Padding = New Padding(3, 2, 3, 2)
+        BracketsTab.Size = New Size(474, 144)
+        BracketsTab.TabIndex = 5
+        BracketsTab.Text = "Brackets"
+        BracketsTab.UseVisualStyleBackColor = True
+        ' 
+        ' BracketsPanel
+        ' 
+        BracketsPanel.AutoScroll = True
+        BracketsPanel.AutoScrollMargin = New Size(0, 5)
+        BracketsPanel.AutoSize = True
+        BracketsPanel.Dock = DockStyle.Fill
+        BracketsPanel.Location = New Point(3, 2)
+        BracketsPanel.Margin = New Padding(5, 6, 5, 6)
+        BracketsPanel.Name = "BracketsPanel"
+        BracketsPanel.Padding = New Padding(5, 6, 0, 6)
+        BracketsPanel.Size = New Size(468, 140)
+        BracketsPanel.TabIndex = 8
+        ' 
+        ' ShortcutsTab
+        ' 
+        ShortcutsTab.Controls.Add(ShortcutsPanel)
+        ShortcutsTab.Location = New Point(4, 29)
+        ShortcutsTab.Margin = New Padding(3, 2, 3, 2)
+        ShortcutsTab.Name = "ShortcutsTab"
+        ShortcutsTab.Padding = New Padding(3, 2, 3, 2)
+        ShortcutsTab.Size = New Size(474, 144)
+        ShortcutsTab.TabIndex = 6
+        ShortcutsTab.Text = "Shortcuts"
+        ShortcutsTab.UseVisualStyleBackColor = True
+        ' 
+        ' ShortcutsPanel
+        ' 
+        ShortcutsPanel.AutoScroll = True
+        ShortcutsPanel.AutoScrollMargin = New Size(0, 5)
+        ShortcutsPanel.AutoSize = True
+        ShortcutsPanel.Controls.Add(ShortcutButton1)
+        ShortcutsPanel.Controls.Add(ShortcutButton2)
+        ShortcutsPanel.Controls.Add(ShortcutButton3)
+        ShortcutsPanel.Controls.Add(ShortcutButton4)
+        ShortcutsPanel.Controls.Add(ShortcutButton5)
+        ShortcutsPanel.Controls.Add(ShortcutButton6)
+        ShortcutsPanel.Controls.Add(ShortcutButton7)
+        ShortcutsPanel.Controls.Add(ShortcutButton8)
+        ShortcutsPanel.Controls.Add(ShortcutButton9)
+        ShortcutsPanel.Controls.Add(ShortcutButton0)
+        ShortcutsPanel.Dock = DockStyle.Fill
+        ShortcutsPanel.Location = New Point(3, 2)
+        ShortcutsPanel.Margin = New Padding(5, 6, 5, 6)
+        ShortcutsPanel.Name = "ShortcutsPanel"
+        ShortcutsPanel.Padding = New Padding(5, 6, 0, 6)
+        ShortcutsPanel.Size = New Size(468, 140)
+        ShortcutsPanel.TabIndex = 9
+        ' 
+        ' ShortcutButton1
+        ' 
+        ShortcutButton1.BackColor = Color.Transparent
+        ShortcutButton1.CharValue = ""
+        ShortcutButton1.Location = New Point(8, 8)
+        ShortcutButton1.Margin = New Padding(3, 2, 3, 2)
+        ShortcutButton1.Name = "ShortcutButton1"
+        ShortcutButton1.Padding = New Padding(4)
+        ShortcutButton1.SettingsValue = "Ctrl1"
+        ShortcutButton1.ShortcutText = "CTRL+1"
+        ShortcutButton1.Size = New Size(80, 110)
+        ShortcutButton1.TabIndex = 0
+        ' 
+        ' ShortcutButton2
+        ' 
+        ShortcutButton2.BackColor = Color.Transparent
+        ShortcutButton2.CharValue = ""
+        ShortcutButton2.Location = New Point(94, 8)
+        ShortcutButton2.Margin = New Padding(3, 2, 3, 2)
+        ShortcutButton2.Name = "ShortcutButton2"
+        ShortcutButton2.Padding = New Padding(4)
+        ShortcutButton2.SettingsValue = "Ctrl2"
+        ShortcutButton2.ShortcutText = "CTRL+2"
+        ShortcutButton2.Size = New Size(80, 110)
+        ShortcutButton2.TabIndex = 1
+        ' 
+        ' ShortcutButton3
+        ' 
+        ShortcutButton3.BackColor = Color.Transparent
+        ShortcutButton3.CharValue = ""
+        ShortcutButton3.Location = New Point(180, 8)
+        ShortcutButton3.Margin = New Padding(3, 2, 3, 2)
+        ShortcutButton3.Name = "ShortcutButton3"
+        ShortcutButton3.Padding = New Padding(4)
+        ShortcutButton3.SettingsValue = "Ctrl3"
+        ShortcutButton3.ShortcutText = "CTRL+3"
+        ShortcutButton3.Size = New Size(80, 110)
+        ShortcutButton3.TabIndex = 2
+        ' 
+        ' ShortcutButton4
+        ' 
+        ShortcutButton4.BackColor = Color.Transparent
+        ShortcutButton4.CharValue = ""
+        ShortcutButton4.Location = New Point(266, 8)
+        ShortcutButton4.Margin = New Padding(3, 2, 3, 2)
+        ShortcutButton4.Name = "ShortcutButton4"
+        ShortcutButton4.Padding = New Padding(4)
+        ShortcutButton4.SettingsValue = "Ctrl4"
+        ShortcutButton4.ShortcutText = "CTRL+4"
+        ShortcutButton4.Size = New Size(80, 110)
+        ShortcutButton4.TabIndex = 3
+        ' 
+        ' ShortcutButton5
+        ' 
+        ShortcutButton5.BackColor = Color.Transparent
+        ShortcutButton5.CharValue = ""
+        ShortcutButton5.Location = New Point(352, 8)
+        ShortcutButton5.Margin = New Padding(3, 2, 3, 2)
+        ShortcutButton5.Name = "ShortcutButton5"
+        ShortcutButton5.Padding = New Padding(4)
+        ShortcutButton5.SettingsValue = "Ctrl5"
+        ShortcutButton5.ShortcutText = "CTRL+5"
+        ShortcutButton5.Size = New Size(80, 110)
+        ShortcutButton5.TabIndex = 4
+        ' 
+        ' ShortcutButton6
+        ' 
+        ShortcutButton6.BackColor = Color.Transparent
+        ShortcutButton6.CharValue = ""
+        ShortcutButton6.Location = New Point(8, 122)
+        ShortcutButton6.Margin = New Padding(3, 2, 3, 2)
+        ShortcutButton6.Name = "ShortcutButton6"
+        ShortcutButton6.Padding = New Padding(4)
+        ShortcutButton6.SettingsValue = "Ctrl6"
+        ShortcutButton6.ShortcutText = "CTRL+6"
+        ShortcutButton6.Size = New Size(80, 110)
+        ShortcutButton6.TabIndex = 5
+        ' 
+        ' ShortcutButton7
+        ' 
+        ShortcutButton7.BackColor = Color.Transparent
+        ShortcutButton7.CharValue = ""
+        ShortcutButton7.Location = New Point(94, 122)
+        ShortcutButton7.Margin = New Padding(3, 2, 3, 2)
+        ShortcutButton7.Name = "ShortcutButton7"
+        ShortcutButton7.Padding = New Padding(4)
+        ShortcutButton7.SettingsValue = "Ctrl7"
+        ShortcutButton7.ShortcutText = "CTRL+7"
+        ShortcutButton7.Size = New Size(80, 110)
+        ShortcutButton7.TabIndex = 6
+        ' 
+        ' ShortcutButton8
+        ' 
+        ShortcutButton8.BackColor = Color.Transparent
+        ShortcutButton8.CharValue = ""
+        ShortcutButton8.Location = New Point(180, 122)
+        ShortcutButton8.Margin = New Padding(3, 2, 3, 2)
+        ShortcutButton8.Name = "ShortcutButton8"
+        ShortcutButton8.Padding = New Padding(4)
+        ShortcutButton8.SettingsValue = "Ctrl8"
+        ShortcutButton8.ShortcutText = "CTRL+8"
+        ShortcutButton8.Size = New Size(80, 110)
+        ShortcutButton8.TabIndex = 7
+        ' 
+        ' ShortcutButton9
+        ' 
+        ShortcutButton9.BackColor = Color.Transparent
+        ShortcutButton9.CharValue = ""
+        ShortcutButton9.Location = New Point(266, 122)
+        ShortcutButton9.Margin = New Padding(3, 2, 3, 2)
+        ShortcutButton9.Name = "ShortcutButton9"
+        ShortcutButton9.Padding = New Padding(4)
+        ShortcutButton9.SettingsValue = "Ctrl9"
+        ShortcutButton9.ShortcutText = "CTRL+9"
+        ShortcutButton9.Size = New Size(80, 110)
+        ShortcutButton9.TabIndex = 8
+        ' 
+        ' ShortcutButton0
+        ' 
+        ShortcutButton0.BackColor = Color.Transparent
+        ShortcutButton0.CharValue = ""
+        ShortcutButton0.Location = New Point(352, 122)
+        ShortcutButton0.Margin = New Padding(3, 2, 3, 2)
+        ShortcutButton0.Name = "ShortcutButton0"
+        ShortcutButton0.Padding = New Padding(4)
+        ShortcutButton0.SettingsValue = "Ctrl0"
+        ShortcutButton0.ShortcutText = "CTRL+0"
+        ShortcutButton0.Size = New Size(80, 110)
+        ShortcutButton0.TabIndex = 9
+        ' 
+        ' SearchTab
+        ' 
+        SearchTab.Controls.Add(SearchToolStripContainer)
+        SearchTab.Location = New Point(4, 29)
+        SearchTab.Margin = New Padding(4, 5, 4, 5)
+        SearchTab.Name = "SearchTab"
+        SearchTab.Padding = New Padding(4, 5, 4, 5)
+        SearchTab.Size = New Size(474, 144)
+        SearchTab.TabIndex = 4
+        SearchTab.Text = "Search"
+        SearchTab.UseVisualStyleBackColor = True
+        ' 
+        ' SearchToolStripContainer
+        ' 
+        ' 
+        ' SearchToolStripContainer.ContentPanel
+        ' 
+        SearchToolStripContainer.ContentPanel.Controls.Add(SearchCharPanel)
+        SearchToolStripContainer.ContentPanel.Margin = New Padding(3, 2, 3, 2)
+        SearchToolStripContainer.ContentPanel.Size = New Size(466, 95)
+        SearchToolStripContainer.Dock = DockStyle.Fill
+        SearchToolStripContainer.Location = New Point(4, 5)
+        SearchToolStripContainer.Margin = New Padding(3, 2, 3, 2)
+        SearchToolStripContainer.Name = "SearchToolStripContainer"
+        SearchToolStripContainer.Size = New Size(466, 134)
+        SearchToolStripContainer.TabIndex = 84
+        ' 
+        ' SearchToolStripContainer.TopToolStripPanel
+        ' 
+        SearchToolStripContainer.TopToolStripPanel.Controls.Add(SearchToolStrip)
+        ' 
+        ' SearchCharPanel
+        ' 
+        SearchCharPanel.AutoScroll = True
+        SearchCharPanel.AutoScrollMargin = New Size(0, 5)
+        SearchCharPanel.AutoSize = True
+        SearchCharPanel.Dock = DockStyle.Fill
+        SearchCharPanel.Location = New Point(0, 0)
+        SearchCharPanel.Margin = New Padding(5, 6, 5, 6)
+        SearchCharPanel.Name = "SearchCharPanel"
+        SearchCharPanel.Padding = New Padding(5, 6, 0, 6)
+        SearchCharPanel.Size = New Size(466, 95)
+        SearchCharPanel.TabIndex = 8
+        ' 
+        ' SearchToolStrip
+        ' 
+        SearchToolStrip.Dock = DockStyle.None
+        SearchToolStrip.GripStyle = ToolStripGripStyle.Hidden
+        SearchToolStrip.ImageScalingSize = New Size(32, 32)
+        SearchToolStrip.Items.AddRange(New ToolStripItem() {SearchQueryTextBox, CharSearchInLabel, SearchModeDropDown, SearchToolStripButton})
+        SearchToolStrip.Location = New Point(0, 0)
+        SearchToolStrip.Name = "SearchToolStrip"
+        SearchToolStrip.Size = New Size(466, 39)
+        SearchToolStrip.Stretch = True
+        SearchToolStrip.TabIndex = 0
+        ' 
+        ' SearchQueryTextBox
+        ' 
+        SearchQueryTextBox.BorderStyle = BorderStyle.FixedSingle
+        SearchQueryTextBox.Name = "SearchQueryTextBox"
+        SearchQueryTextBox.Size = New Size(180, 39)
+        ' 
+        ' CharSearchInLabel
+        ' 
+        CharSearchInLabel.BackColor = Color.FromArgb(CByte(0), CByte(0), CByte(0), CByte(0))
+        CharSearchInLabel.ForeColor = Color.Black
+        CharSearchInLabel.Name = "CharSearchInLabel"
+        CharSearchInLabel.Size = New Size(21, 36)
+        CharSearchInLabel.Text = "in"
+        ' 
+        ' SearchModeDropDown
+        ' 
+        SearchModeDropDown.DropDownStyle = ComboBoxStyle.DropDownList
+        SearchModeDropDown.FlatStyle = FlatStyle.System
+        SearchModeDropDown.Items.AddRange(New Object() {"All", "Extended Latin", "Extended Cyrillic", "Extended Greek", "IPA (All)", "IPA Consonants", "IPA Affricates", "IPA Vowels", "IPA Tones", "IPA Diacritics", "IPA Suprasegmentals"})
+        SearchModeDropDown.Name = "SearchModeDropDown"
+        SearchModeDropDown.Size = New Size(180, 39)
+        ' 
+        ' SearchToolStripButton
+        ' 
+        SearchToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image
+        SearchToolStripButton.Image = CType(resources.GetObject("SearchToolStripButton.Image"), Image)
+        SearchToolStripButton.ImageScaling = ToolStripItemImageScaling.None
+        SearchToolStripButton.ImageTransparentColor = Color.Magenta
+        SearchToolStripButton.Name = "SearchToolStripButton"
+        SearchToolStripButton.Size = New Size(36, 36)
+        SearchToolStripButton.Text = "Search"
+        ' 
+        ' ModifyCharPanel
+        ' 
+        ModifyCharPanel.Controls.Add(AccentGroupBox)
+        ModifyCharPanel.Controls.Add(ModifyCharGroupBox)
+        ModifyCharPanel.Controls.Add(TopPanel)
+        ModifyCharPanel.Dock = DockStyle.Fill
+        ModifyCharPanel.Location = New Point(0, 0)
+        ModifyCharPanel.Margin = New Padding(4, 5, 4, 5)
+        ModifyCharPanel.Name = "ModifyCharPanel"
+        ModifyCharPanel.Padding = New Padding(8, 9, 8, 9)
+        ModifyCharPanel.Size = New Size(482, 525)
+        ModifyCharPanel.TabIndex = 75
+        ' 
+        ' AccentGroupBox
+        ' 
+        AccentGroupBox.BackColor = Color.Transparent
+        AccentGroupBox.Controls.Add(AccentsPanel)
+        AccentGroupBox.Dock = DockStyle.Fill
+        AccentGroupBox.Location = New Point(8, 249)
+        AccentGroupBox.Margin = New Padding(4, 5, 4, 5)
+        AccentGroupBox.Name = "AccentGroupBox"
+        AccentGroupBox.Padding = New Padding(4, 5, 4, 5)
+        AccentGroupBox.Size = New Size(466, 267)
+        AccentGroupBox.TabIndex = 78
+        AccentGroupBox.TabStop = False
+        AccentGroupBox.Text = "Accent Marks"
+        ' 
+        ' AccentsPanel
+        ' 
+        AccentsPanel.AutoScroll = True
+        AccentsPanel.AutoScrollMargin = New Size(0, 5)
+        AccentsPanel.Dock = DockStyle.Fill
+        AccentsPanel.Location = New Point(4, 25)
+        AccentsPanel.Margin = New Padding(5, 6, 5, 6)
+        AccentsPanel.Name = "AccentsPanel"
+        AccentsPanel.Padding = New Padding(5, 6, 0, 6)
+        AccentsPanel.Size = New Size(458, 237)
+        AccentsPanel.TabIndex = 10
+        ' 
+        ' ModifyCharGroupBox
+        ' 
+        ModifyCharGroupBox.BackColor = Color.Transparent
+        ModifyCharGroupBox.Controls.Add(ClearButton)
+        ModifyCharGroupBox.Controls.Add(AffricateButton)
+        ModifyCharGroupBox.Controls.Add(LowercaseButton)
+        ModifyCharGroupBox.Controls.Add(UppercaseButton)
+        ModifyCharGroupBox.Dock = DockStyle.Top
+        ModifyCharGroupBox.Location = New Point(8, 147)
+        ModifyCharGroupBox.Margin = New Padding(4, 5, 4, 5)
+        ModifyCharGroupBox.Name = "ModifyCharGroupBox"
+        ModifyCharGroupBox.Padding = New Padding(4, 5, 4, 5)
+        ModifyCharGroupBox.Size = New Size(466, 102)
+        ModifyCharGroupBox.TabIndex = 89
+        ModifyCharGroupBox.TabStop = False
+        ModifyCharGroupBox.Text = "Modify Character"
+        ' 
+        ' ClearButton
+        ' 
+        ClearButton.Anchor = AnchorStyles.Top
+        ClearButton.BackColor = Color.Transparent
+        ClearButton.ForeColor = Color.Firebrick
+        ClearButton.Location = New Point(329, 32)
+        ClearButton.Margin = New Padding(4, 5, 4, 5)
+        ClearButton.Name = "ClearButton"
+        ClearButton.Size = New Size(87, 49)
+        ClearButton.TabIndex = 79
+        ClearButton.Text = "Clear"
+        ClearButton.UseVisualStyleBackColor = False
+        ' 
+        ' AffricateButton
+        ' 
+        AffricateButton.Anchor = AnchorStyles.Top
+        AffricateButton.BackColor = Color.Transparent
+        AffricateButton.Font = New Font("Calibri", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        AffricateButton.ForeColor = Color.Black
+        AffricateButton.Location = New Point(254, 32)
+        AffricateButton.Margin = New Padding(4, 5, 4, 5)
+        AffricateButton.Name = "AffricateButton"
+        AffricateButton.Size = New Size(67, 49)
+        AffricateButton.TabIndex = 78
+        AffricateButton.Text = "◌͡◌"
+        MainTooltip.SetToolTip(AffricateButton, "Toggle Affricate")
+        AffricateButton.UseVisualStyleBackColor = False
+        ' 
+        ' LowercaseButton
+        ' 
+        LowercaseButton.Anchor = AnchorStyles.Top
+        LowercaseButton.BackColor = Color.Transparent
+        LowercaseButton.ForeColor = Color.Black
+        LowercaseButton.Location = New Point(52, 32)
+        LowercaseButton.Margin = New Padding(4, 5, 4, 5)
+        LowercaseButton.Name = "LowercaseButton"
+        LowercaseButton.Size = New Size(93, 49)
+        LowercaseButton.TabIndex = 78
+        LowercaseButton.Text = "Lowercase"
+        LowercaseButton.UseVisualStyleBackColor = False
+        ' 
+        ' UppercaseButton
+        ' 
+        UppercaseButton.Anchor = AnchorStyles.Top
+        UppercaseButton.BackColor = Color.Transparent
+        UppercaseButton.ForeColor = Color.Black
+        UppercaseButton.Location = New Point(153, 32)
+        UppercaseButton.Margin = New Padding(4, 5, 4, 5)
+        UppercaseButton.Name = "UppercaseButton"
+        UppercaseButton.Size = New Size(93, 49)
+        UppercaseButton.TabIndex = 77
+        UppercaseButton.Text = "Uppercase"
+        UppercaseButton.UseVisualStyleBackColor = False
+        ' 
+        ' TopPanel
+        ' 
+        TopPanel.Controls.Add(AddToLocalButton)
+        TopPanel.Controls.Add(CharacterButton)
+        TopPanel.Controls.Add(CharacterTextBox)
+        TopPanel.Controls.Add(SmartReplaceCheck)
+        TopPanel.Controls.Add(AddToFileButton)
+        TopPanel.Controls.Add(SmartReplaceIndicator)
+        TopPanel.Controls.Add(CopyToClipboardButton)
+        TopPanel.Dock = DockStyle.Top
+        TopPanel.Location = New Point(8, 9)
+        TopPanel.Margin = New Padding(4, 5, 4, 5)
+        TopPanel.Name = "TopPanel"
+        TopPanel.Size = New Size(466, 138)
+        TopPanel.TabIndex = 90
+        ' 
+        ' AddToLocalButton
+        ' 
+        AddToLocalButton.Anchor = AnchorStyles.Top
+        AddToLocalButton.BackColor = Color.Transparent
+        AddToLocalButton.ForeColor = Color.Black
+        AddToLocalButton.Location = New Point(265, 80)
+        AddToLocalButton.Margin = New Padding(4, 5, 4, 5)
+        AddToLocalButton.Name = "AddToLocalButton"
+        AddToLocalButton.Size = New Size(73, 49)
+        AddToLocalButton.TabIndex = 1
+        AddToLocalButton.Text = "Local"
+        AddToLocalButton.UseVisualStyleBackColor = False
+        ' 
+        ' CharacterButton
+        ' 
+        CharacterButton.Anchor = AnchorStyles.Top
+        CharacterButton.BackColor = Color.Transparent
+        CharacterButton.ContextMenuStrip = CharButtonMenu
+        CharacterButton.Font = New Font("Calibri", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        CharacterButton.ForeColor = Color.Black
+        CharacterButton.Location = New Point(50, 5)
+        CharacterButton.Margin = New Padding(4, 5, 4, 5)
+        CharacterButton.Name = "CharacterButton"
+        CharacterButton.Size = New Size(107, 125)
+        CharacterButton.TabIndex = 88
+        CharacterButton.Text = "a"
+        CharacterButton.UseVisualStyleBackColor = False
+        ' 
+        ' CharacterTextBox
+        ' 
+        CharacterTextBox.Anchor = AnchorStyles.Top
+        CharacterTextBox.Font = New Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CharacterTextBox.Location = New Point(164, 38)
+        CharacterTextBox.Margin = New Padding(4, 5, 4, 5)
+        CharacterTextBox.Name = "CharacterTextBox"
+        CharacterTextBox.Size = New Size(251, 26)
+        CharacterTextBox.TabIndex = 77
+        ' 
+        ' SmartReplaceCheck
+        ' 
+        SmartReplaceCheck.Anchor = AnchorStyles.Top
+        SmartReplaceCheck.AutoSize = True
+        SmartReplaceCheck.Checked = True
+        SmartReplaceCheck.CheckState = CheckState.Checked
+        SmartReplaceCheck.Location = New Point(188, 5)
+        SmartReplaceCheck.Margin = New Padding(3, 2, 3, 2)
+        SmartReplaceCheck.Name = "SmartReplaceCheck"
+        SmartReplaceCheck.Size = New Size(127, 24)
+        SmartReplaceCheck.TabIndex = 86
+        SmartReplaceCheck.Text = "Smart Replace"
+        SmartReplaceCheck.UseVisualStyleBackColor = True
+        ' 
+        ' AddToFileButton
+        ' 
+        AddToFileButton.Anchor = AnchorStyles.Top
+        AddToFileButton.BackColor = Color.Transparent
+        AddToFileButton.ForeColor = Color.Black
+        AddToFileButton.Location = New Point(347, 80)
+        AddToFileButton.Margin = New Padding(4, 5, 4, 5)
+        AddToFileButton.Name = "AddToFileButton"
+        AddToFileButton.Size = New Size(69, 49)
+        AddToFileButton.TabIndex = 76
+        AddToFileButton.Text = "File"
+        AddToFileButton.UseVisualStyleBackColor = False
+        ' 
+        ' SmartReplaceIndicator
+        ' 
+        SmartReplaceIndicator.Anchor = AnchorStyles.Top
+        SmartReplaceIndicator.BackColor = Color.DimGray
+        SmartReplaceIndicator.Location = New Point(164, 6)
+        SmartReplaceIndicator.Margin = New Padding(3, 2, 3, 2)
+        SmartReplaceIndicator.Name = "SmartReplaceIndicator"
+        SmartReplaceIndicator.Size = New Size(19, 22)
+        SmartReplaceIndicator.TabIndex = 87
+        ' 
+        ' CopyToClipboardButton
+        ' 
+        CopyToClipboardButton.Anchor = AnchorStyles.Top
+        CopyToClipboardButton.BackColor = Color.Transparent
+        CopyToClipboardButton.ForeColor = Color.Black
+        CopyToClipboardButton.Location = New Point(164, 80)
+        CopyToClipboardButton.Margin = New Padding(4, 5, 4, 5)
+        CopyToClipboardButton.Name = "CopyToClipboardButton"
+        CopyToClipboardButton.Size = New Size(93, 49)
+        CopyToClipboardButton.TabIndex = 79
+        CopyToClipboardButton.Text = "Clipboard"
+        CopyToClipboardButton.UseVisualStyleBackColor = False
+        ' 
+        ' CharButtonMenu
+        ' 
+        CharButtonMenu.ImageScalingSize = New Size(24, 24)
+        CharButtonMenu.Items.AddRange(New ToolStripItem() {AddToEditorCharacterMenuItem, ReplaceEditorCharacterMenuItem, CopyCharSeparator, CopyToClipboardMenuItem, CopyToFileMenuItem, CopyToLocalMenuItem, ShortcutKeySeparator, ShortcutKeyToolStripMenuItem, RemoveCharSeparator, RemoveToolStripMenuItem})
+        CharButtonMenu.Name = "CharButtonMenu"
+        CharButtonMenu.Size = New Size(243, 190)
+        ' 
+        ' AddToEditorCharacterMenuItem
+        ' 
+        AddToEditorCharacterMenuItem.Name = "AddToEditorCharacterMenuItem"
+        AddToEditorCharacterMenuItem.Size = New Size(242, 24)
+        AddToEditorCharacterMenuItem.Text = "Add to Editor Character"
+        ' 
+        ' ReplaceEditorCharacterMenuItem
+        ' 
+        ReplaceEditorCharacterMenuItem.Name = "ReplaceEditorCharacterMenuItem"
+        ReplaceEditorCharacterMenuItem.Size = New Size(242, 24)
+        ReplaceEditorCharacterMenuItem.Text = "Replace Editor Character"
+        ' 
+        ' CopyCharSeparator
+        ' 
+        CopyCharSeparator.Name = "CopyCharSeparator"
+        CopyCharSeparator.Size = New Size(239, 6)
+        ' 
+        ' CopyToClipboardMenuItem
+        ' 
+        CopyToClipboardMenuItem.Name = "CopyToClipboardMenuItem"
+        CopyToClipboardMenuItem.Size = New Size(242, 24)
+        CopyToClipboardMenuItem.Text = "Copy to Clipboard"
+        CopyToClipboardMenuItem.TextImageRelation = TextImageRelation.Overlay
+        ' 
+        ' CopyToFileMenuItem
+        ' 
+        CopyToFileMenuItem.Name = "CopyToFileMenuItem"
+        CopyToFileMenuItem.Size = New Size(242, 24)
+        CopyToFileMenuItem.Text = "Copy to File"
+        ' 
+        ' CopyToLocalMenuItem
+        ' 
+        CopyToLocalMenuItem.Name = "CopyToLocalMenuItem"
+        CopyToLocalMenuItem.Size = New Size(242, 24)
+        CopyToLocalMenuItem.Text = "Copy to Local"
+        ' 
+        ' ShortcutKeySeparator
+        ' 
+        ShortcutKeySeparator.Name = "ShortcutKeySeparator"
+        ShortcutKeySeparator.Size = New Size(239, 6)
+        ' 
+        ' ShortcutKeyToolStripMenuItem
+        ' 
+        ShortcutKeyToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CTRL1ToolStripMenuItem, CTRL2ToolStripMenuItem, CTRL3ToolStripMenuItem, CTRL4ToolStripMenuItem, CTRL5ToolStripMenuItem, CTRL6ToolStripMenuItem, CTRL7ToolStripMenuItem, CTRL8ToolStripMenuItem, CTRL9ToolStripMenuItem, CTRL0ToolStripMenuItem})
+        ShortcutKeyToolStripMenuItem.Name = "ShortcutKeyToolStripMenuItem"
+        ShortcutKeyToolStripMenuItem.Size = New Size(242, 24)
+        ShortcutKeyToolStripMenuItem.Text = "Shortcut Key"
+        ' 
+        ' CTRL1ToolStripMenuItem
+        ' 
+        CTRL1ToolStripMenuItem.Name = "CTRL1ToolStripMenuItem"
+        CTRL1ToolStripMenuItem.Size = New Size(143, 26)
+        CTRL1ToolStripMenuItem.Text = "CTRL+1"
+        ' 
+        ' CTRL2ToolStripMenuItem
+        ' 
+        CTRL2ToolStripMenuItem.Name = "CTRL2ToolStripMenuItem"
+        CTRL2ToolStripMenuItem.Size = New Size(143, 26)
+        CTRL2ToolStripMenuItem.Text = "CTRL+2"
+        ' 
+        ' CTRL3ToolStripMenuItem
+        ' 
+        CTRL3ToolStripMenuItem.Name = "CTRL3ToolStripMenuItem"
+        CTRL3ToolStripMenuItem.Size = New Size(143, 26)
+        CTRL3ToolStripMenuItem.Text = "CTRL+3"
+        ' 
+        ' CTRL4ToolStripMenuItem
+        ' 
+        CTRL4ToolStripMenuItem.Name = "CTRL4ToolStripMenuItem"
+        CTRL4ToolStripMenuItem.Size = New Size(143, 26)
+        CTRL4ToolStripMenuItem.Text = "CTRL+4"
+        ' 
+        ' CTRL5ToolStripMenuItem
+        ' 
+        CTRL5ToolStripMenuItem.Name = "CTRL5ToolStripMenuItem"
+        CTRL5ToolStripMenuItem.Size = New Size(143, 26)
+        CTRL5ToolStripMenuItem.Text = "CTRL+5"
+        ' 
+        ' CTRL6ToolStripMenuItem
+        ' 
+        CTRL6ToolStripMenuItem.Name = "CTRL6ToolStripMenuItem"
+        CTRL6ToolStripMenuItem.Size = New Size(143, 26)
+        CTRL6ToolStripMenuItem.Text = "CTRL+6"
+        ' 
+        ' CTRL7ToolStripMenuItem
+        ' 
+        CTRL7ToolStripMenuItem.Name = "CTRL7ToolStripMenuItem"
+        CTRL7ToolStripMenuItem.Size = New Size(143, 26)
+        CTRL7ToolStripMenuItem.Text = "CTRL+7"
+        ' 
+        ' CTRL8ToolStripMenuItem
+        ' 
+        CTRL8ToolStripMenuItem.Name = "CTRL8ToolStripMenuItem"
+        CTRL8ToolStripMenuItem.Size = New Size(143, 26)
+        CTRL8ToolStripMenuItem.Text = "CTRL+8"
+        ' 
+        ' CTRL9ToolStripMenuItem
+        ' 
+        CTRL9ToolStripMenuItem.Name = "CTRL9ToolStripMenuItem"
+        CTRL9ToolStripMenuItem.Size = New Size(143, 26)
+        CTRL9ToolStripMenuItem.Text = "CTRL+9"
+        ' 
+        ' CTRL0ToolStripMenuItem
+        ' 
+        CTRL0ToolStripMenuItem.Name = "CTRL0ToolStripMenuItem"
+        CTRL0ToolStripMenuItem.Size = New Size(143, 26)
+        CTRL0ToolStripMenuItem.Text = "CTRL+0"
+        ' 
+        ' RemoveCharSeparator
+        ' 
+        RemoveCharSeparator.Name = "RemoveCharSeparator"
+        RemoveCharSeparator.Size = New Size(239, 6)
+        ' 
+        ' RemoveToolStripMenuItem
+        ' 
+        RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem"
+        RemoveToolStripMenuItem.Size = New Size(242, 24)
+        RemoveToolStripMenuItem.Text = "Remove"
+        ' 
+        ' SplitContainer1
+        ' 
+        SplitContainer1.Dock = DockStyle.Fill
+        SplitContainer1.FixedPanel = FixedPanel.Panel1
+        SplitContainer1.Location = New Point(0, 0)
+        SplitContainer1.Margin = New Padding(4, 5, 4, 5)
+        SplitContainer1.Name = "SplitContainer1"
+        SplitContainer1.Orientation = Orientation.Horizontal
+        ' 
+        ' SplitContainer1.Panel1
+        ' 
+        SplitContainer1.Panel1.Controls.Add(ModifyCharPanel)
+        ' 
+        ' SplitContainer1.Panel2
+        ' 
+        SplitContainer1.Panel2.Controls.Add(CharCategoriesTabs)
+        SplitContainer1.Size = New Size(482, 708)
+        SplitContainer1.SplitterDistance = 525
+        SplitContainer1.SplitterWidth = 6
+        SplitContainer1.TabIndex = 76
+        ' 
+        ' SaveDialog
+        ' 
+        SaveDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
+        ' 
+        ' OpenDialog
+        ' 
+        OpenDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
+        ' 
+        ' ShortcutButtonMenu
+        ' 
+        ShortcutButtonMenu.ImageScalingSize = New Size(24, 24)
+        ShortcutButtonMenu.Items.AddRange(New ToolStripItem() {ResetKeyToolStripMenuItem, ResetAllKeysToolStripMenuItem})
+        ShortcutButtonMenu.Name = "CharButtonMenu"
+        ShortcutButtonMenu.Size = New Size(171, 52)
+        ' 
+        ' ResetKeyToolStripMenuItem
+        ' 
+        ResetKeyToolStripMenuItem.Name = "ResetKeyToolStripMenuItem"
+        ResetKeyToolStripMenuItem.Size = New Size(170, 24)
+        ResetKeyToolStripMenuItem.Text = "Reset Key"
+        ' 
+        ' ResetAllKeysToolStripMenuItem
+        ' 
+        ResetAllKeysToolStripMenuItem.Name = "ResetAllKeysToolStripMenuItem"
+        ResetAllKeysToolStripMenuItem.Size = New Size(170, 24)
+        ResetAllKeysToolStripMenuItem.Text = "Reset All Keys"
+        ' 
+        ' CharacterEditor
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(SplitContainer1)
+        DoubleBuffered = True
+        Margin = New Padding(4, 5, 4, 5)
+        MinimumSize = New Size(453, 0)
+        Name = "CharacterEditor"
+        Size = New Size(482, 708)
+        CharCategoriesTabs.ResumeLayout(False)
+        LocalTab.ResumeLayout(False)
+        LocalToolStripContainer.ContentPanel.ResumeLayout(False)
+        LocalToolStripContainer.TopToolStripPanel.ResumeLayout(False)
+        LocalToolStripContainer.TopToolStripPanel.PerformLayout()
+        LocalToolStripContainer.ResumeLayout(False)
+        LocalToolStripContainer.PerformLayout()
+        LocalToolStrip.ResumeLayout(False)
+        LocalToolStrip.PerformLayout()
+        FileTab.ResumeLayout(False)
+        FileToolStripContainer.ContentPanel.ResumeLayout(False)
+        FileToolStripContainer.TopToolStripPanel.ResumeLayout(False)
+        FileToolStripContainer.TopToolStripPanel.PerformLayout()
+        FileToolStripContainer.ResumeLayout(False)
+        FileToolStripContainer.PerformLayout()
+        FileToolStrip.ResumeLayout(False)
+        FileToolStrip.PerformLayout()
+        ExtendedTab.ResumeLayout(False)
+        ExtendedCharTabControl.ResumeLayout(False)
+        LatinTab.ResumeLayout(False)
+        LatinTab.PerformLayout()
+        CyrillicTab.ResumeLayout(False)
+        GreekTab.ResumeLayout(False)
+        IpaTab.ResumeLayout(False)
+        IpaTabControl.ResumeLayout(False)
+        ConsonantsTab.ResumeLayout(False)
+        ConsonantsTab.PerformLayout()
+        AffricatesTab.ResumeLayout(False)
+        VowelsTab.ResumeLayout(False)
+        ToneIntonationTab.ResumeLayout(False)
+        DiacriticsTab.ResumeLayout(False)
+        SuprasegmentalsTab.ResumeLayout(False)
+        BracketsTab.ResumeLayout(False)
+        BracketsTab.PerformLayout()
+        ShortcutsTab.ResumeLayout(False)
+        ShortcutsTab.PerformLayout()
+        ShortcutsPanel.ResumeLayout(False)
+        SearchTab.ResumeLayout(False)
+        SearchToolStripContainer.ContentPanel.ResumeLayout(False)
+        SearchToolStripContainer.ContentPanel.PerformLayout()
+        SearchToolStripContainer.TopToolStripPanel.ResumeLayout(False)
+        SearchToolStripContainer.TopToolStripPanel.PerformLayout()
+        SearchToolStripContainer.ResumeLayout(False)
+        SearchToolStripContainer.PerformLayout()
+        SearchToolStrip.ResumeLayout(False)
+        SearchToolStrip.PerformLayout()
+        ModifyCharPanel.ResumeLayout(False)
+        AccentGroupBox.ResumeLayout(False)
+        ModifyCharGroupBox.ResumeLayout(False)
+        TopPanel.ResumeLayout(False)
+        TopPanel.PerformLayout()
+        CharButtonMenu.ResumeLayout(False)
+        SplitContainer1.Panel1.ResumeLayout(False)
+        SplitContainer1.Panel2.ResumeLayout(False)
+        CType(SplitContainer1, ComponentModel.ISupportInitialize).EndInit()
+        SplitContainer1.ResumeLayout(False)
+        ShortcutButtonMenu.ResumeLayout(False)
+        ResumeLayout(False)
 
     End Sub
 

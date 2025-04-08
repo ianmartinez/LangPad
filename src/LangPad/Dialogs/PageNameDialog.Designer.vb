@@ -87,7 +87,7 @@ Partial Class PageNameDialog
         '
         Me.CancelDialogButton.AutoSize = True
         Me.CancelDialogButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.CancelDialogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.CancelDialogButton.DialogResult = DialogResult.Cancel
         Me.CancelDialogButton.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CancelDialogButton.Location = New System.Drawing.Point(128, 9)
         Me.CancelDialogButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)

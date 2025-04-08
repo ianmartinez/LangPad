@@ -1,18 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{96451D96-1492-4D4A-BCA2-C65DE80255D2}</ProjectGuid>
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
     <OutputType>WinExe</OutputType>
     <StartupObject>LangPad.My.MyApplication</StartupObject>
-    <RootNamespace>LangPad</RootNamespace>
-    <AssemblyName>LangPad</AssemblyName>
-    <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -29,40 +20,18 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>LangPad.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>LangPad.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionExplicit>On</OptionExplicit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionStrict>Off</OptionStrict>
-  </PropertyGroup>
-  <PropertyGroup>
-    <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>AppIcon.ico</ApplicationIcon>
@@ -81,248 +50,85 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <AssemblyTitle>LangPad</AssemblyTitle>
+    <Company>Ian Martinez</Company>
+    <Product>LangPad</Product>
+    <Copyright>Copyright © 2024 Ian Martinez</Copyright>
+    <AssemblyVersion>12.0.0</AssemblyVersion>
+    <FileVersion>12.0.0</FileVersion>
+    <Version>12.0.0</Version>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoUpdater.NET, Version=1.6.0.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autoupdater.NET.Official.1.6.0\lib\net40\AutoUpdater.NET.dll</HintPath>
-    </Reference>
-    <Reference Include="HtmlAgilityPack, Version=1.11.23.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.11.23\lib\Net45\HtmlAgilityPack.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualBasic.Compatibility" />
-    <Reference Include="RtfPipe, Version=1.0.7388.1242, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RtfPipe.1.0.7388.1242\lib\net45\RtfPipe.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.IO.Compression.FileSystem" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-  </ItemGroup>
-  <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Collections.Generic" />
-    <Import Include="System.Data" />
     <Import Include="System.Drawing" />
-    <Import Include="System.Diagnostics" />
     <Import Include="System.Windows.Forms" />
-    <Import Include="System.Linq" />
-    <Import Include="System.Xml.Linq" />
-    <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppTheme.vb" />
-    <Compile Include="AppLoad.vb" />
-    <Compile Include="CharacterInsertion.vb" />
-    <Compile Include="Converters\KeyValueConverter.vb" />
-    <Compile Include="Messages.vb" />
-    <Compile Include="NotebookController.vb" />
-    <Compile Include="AutoUpdater.vb" />
-    <Compile Include="CharacterEditorToolWindow.Designer.vb">
+    <Compile Update="CharacterEditorToolWindow.Designer.vb">
       <DependentUpon>CharacterEditorToolWindow.vb</DependentUpon>
     </Compile>
-    <Compile Include="CharacterEditorToolWindow.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Converters\HtmlConverter.vb" />
-    <Compile Include="Dialogs\ExportHtmlDialog.Designer.vb">
+    <Compile Update="Dialogs\ExportHtmlDialog.Designer.vb">
       <DependentUpon>ExportHtmlDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\ExportHtmlDialog.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Dialogs\AboutDialog.Designer.vb">
+    <Compile Update="Dialogs\AboutDialog.Designer.vb">
       <DependentUpon>AboutDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\AboutDialog.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\PageNameDialog.Designer.vb">
+    <Compile Update="Dialogs\PageNameDialog.Designer.vb">
       <DependentUpon>PageNameDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\PageNameDialog.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\CustomZoomDialog.Designer.vb">
+    <Compile Update="Dialogs\CustomZoomDialog.Designer.vb">
       <DependentUpon>CustomZoomDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\CustomZoomDialog.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\SettingsDialog.Designer.vb">
+    <Compile Update="Dialogs\SettingsDialog.Designer.vb">
       <DependentUpon>SettingsDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\SettingsDialog.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\StyleDialog.Designer.vb">
+    <Compile Update="Dialogs\StyleDialog.Designer.vb">
       <DependentUpon>StyleDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\StyleDialog.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\ImportImageDialog.Designer.vb">
+    <Compile Update="Dialogs\ImportImageDialog.Designer.vb">
       <DependentUpon>ImportImageDialog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\ImportImageDialog.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ImageResizer.vb" />
-    <Compile Include="Editors\CharacterEditor.Designer.vb">
+    <Compile Update="Editors\CharacterEditor.Designer.vb">
       <DependentUpon>CharacterEditor.vb</DependentUpon>
     </Compile>
-    <Compile Include="Editors\CharacterEditor.vb">
+    <Compile Update="Editors\CharacterEditor.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DictionaryForm.Designer.vb">
+    <Compile Update="DictionaryForm.Designer.vb">
       <DependentUpon>DictionaryForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="DictionaryForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.vb">
-      <DependentUpon>MainForm.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RtfEditorForm.Designer.vb">
+    <Compile Update="RtfEditorForm.Designer.vb">
       <DependentUpon>RtfEditorForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="RtfEditorForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AppInstance.vb" />
-    <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
+    <Compile Update="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
+    <Compile Update="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Settings.Designer.vb">
+    <Compile Update="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Editors\NotebookEditor.Designer.vb">
+    <Compile Update="Editors\NotebookEditor.Designer.vb">
       <DependentUpon>NotebookEditor.vb</DependentUpon>
     </Compile>
-    <Compile Include="Editors\NotebookEditor.vb">
+    <Compile Update="Editors\NotebookEditor.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SplashScreenForm.Designer.vb">
+    <Compile Update="SplashScreenForm.Designer.vb">
       <DependentUpon>SplashScreenForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="SplashScreenForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Util.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CharacterEditorToolWindow.resx">
-      <DependentUpon>CharacterEditorToolWindow.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\AboutDialog.resx">
-      <DependentUpon>AboutDialog.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\PageNameDialog.resx">
-      <DependentUpon>PageNameDialog.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\CustomZoomDialog.resx">
-      <DependentUpon>CustomZoomDialog.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\SettingsDialog.resx">
-      <DependentUpon>SettingsDialog.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\StyleDialog.resx">
-      <DependentUpon>StyleDialog.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\ImportImageDialog.resx">
-      <DependentUpon>ImportImageDialog.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DictionaryForm.resx">
-      <DependentUpon>DictionaryForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\ExportHtmlDialog.resx">
-      <DependentUpon>ExportHtmlDialog.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RtfEditorForm.resx">
-      <DependentUpon>RtfEditorForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Editors\CharacterEditor.resx">
-      <DependentUpon>CharacterEditor.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Editors\NotebookEditor.resx">
-      <DependentUpon>NotebookEditor.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreenForm.resx">
-      <DependentUpon>SplashScreenForm.vb</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="My Project\app.manifest" />
-    <None Include="My Project\Application.myapp">
+    <None Update="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\Settings.settings">
-      <CustomToolNamespace>My</CustomToolNamespace>
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Vowels.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Accents.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Affricates.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Consonants.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Other.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ToneIntonation.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SmartReplace.txt" />
-    <None Include="Resources\HtmlStyle.txt" />
-    <None Include="Resources\TableTemplate.txt" />
-    <None Include="Resources\HtmlTemplate.txt" />
-    <None Include="Resources\Common.txt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -347,10 +153,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Suprasegmentals.txt" />
-    <None Include="Resources\Cyrillic.txt" />
-    <None Include="Resources\Greek.txt" />
-    <None Include="Resources\PageExportHtml.txt" />
     <Content Include="FileIcon.ico" />
     <Content Include="AppIcon.ico" />
   </ItemGroup>
@@ -367,21 +169,14 @@
     </PublishFile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LangPadData\LangPadData.csproj">
-      <Project>{da608ab5-9ba3-4fa3-b347-eab5e040f9c8}</Project>
-      <Name>LangPadData</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LangPadUI\LangPadUI.csproj">
-      <Project>{8bd8a7f1-c880-41cc-8485-b132ddad924a}</Project>
-      <Name>LangPadUI</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\LangPadData\LangPadData.csproj" />
+    <ProjectReference Include="..\LangPadUI\LangPadUI.csproj" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <ItemGroup>
+    <PackageReference Include="Autoupdater.NET.Official" Version="1.8.6" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.61" />
+    <PackageReference Include="RtfPipe" Version="2.0.7677.4303" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+  </ItemGroup>
 </Project>

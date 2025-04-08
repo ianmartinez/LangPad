@@ -105,7 +105,7 @@ Module NotebookController
         ' Load file characters
         RefreshFileCharacters()
 
-        ' A newly loaded document isn't modfied
+        ' A newly loaded document isn't modified
         CurrentNotebook.Modified = False
         FirstTabUpdate = True
         UpdatePageStats()
