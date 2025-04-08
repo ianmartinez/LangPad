@@ -17,7 +17,7 @@ Module Messages
     End Function
 
     Public Sub ShowNotSupportedFileError(FileName As String)
-        MessageBox.Show("Cannot open '" + FileName + "'. It is not supported by LangPad.", "Invalid File", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        MessageBox.Show($"Cannot open '{FileName}'. It is not supported by LangPad.", "Invalid File", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 
     Public Function ShowModifiedWarning() As DialogResult
@@ -25,6 +25,6 @@ Module Messages
     End Function
 
     Public Sub ShowNotFoundDialog(SearchText)
-        MessageBox.Show("'" & SearchText & "' was not found.", "No Matches", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        MessageBox.Show($"'{SearchText}' was not found.", "No Matches", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
     End Sub
 End Module

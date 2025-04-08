@@ -49,8 +49,8 @@ public class NotebookNTX
             if (i > 0)
                 pagesFile.Add(new KvLine(KvLineType.Blank));
 
-            pagesFile.Add(new KvLine(KvLineType.Comment, "Page " + i));
-            pagesFile.Add(new KvLine(KvLineType.KeyValue, i + ".title", page.Title));
+            pagesFile.Add(new KvLine(KvLineType.Comment, $"Page {i}"));
+            pagesFile.Add(new KvLine(KvLineType.KeyValue, $"{i}.title", page.Title));
             File.WriteAllText(temp.GetPagePath(i), page.Content);
         }
 

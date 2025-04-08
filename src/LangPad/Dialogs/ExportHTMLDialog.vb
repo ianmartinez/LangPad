@@ -11,7 +11,7 @@ Public Class ExportHtmlDialog
         NotesColCheck.Checked = True
     End Sub
 
-    Private Sub OkDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OkDialogButton.Click
+    Private Sub OkDialogButton_Click(sender As Object, e As EventArgs) Handles OkDialogButton.Click
         If SaveHtmlDialog.ShowDialog = DialogResult.OK Then
             Dim ExportSettings = New HtmlExportSettings() With {
                 .Title = TitleTextBox.Text,
@@ -33,7 +33,7 @@ Public Class ExportHtmlDialog
         Close()
     End Sub
 
-    Private Sub CancelDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CancelDialogButton.Click
+    Private Sub CancelDialogButton_Click(sender As Object, e As EventArgs) Handles CancelDialogButton.Click
         DialogResult = DialogResult.Cancel
         Close()
     End Sub

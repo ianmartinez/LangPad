@@ -88,21 +88,21 @@ public class CharacterSearch
     /// <param name="type">The type of character to find.</param>
     /// 
     /// <returns>All characters of the given type that match the query string.</returns>
-    public CharacterInfo[] Search(string query, CharacterType type)
+    public static CharacterInfo[] Search(string query, CharacterType type)
     {
-        var terms = query.ToLower().Split(new string[] { "/" }, StringSplitOptions.RemoveEmptyEntries);
+        var terms = query.ToLower().Split(["/"], StringSplitOptions.RemoveEmptyEntries);
         var queryMatches = new List<CharacterInfo>();
 
         // Search for each query term and find the characters that match it.
-        foreach (var _term in terms)
+        foreach (var term in terms)
         {
-            foreach (var _char in Characters)
+            foreach (var character in Characters)
             {
                 // If a match is found and the character hasn't been added yet
-                if (_char.Description.ToLower().Contains(_term)
-                    && (queryMatches.Count((existingChar) => (existingChar.Description == _char.Description && existingChar.Character == _char.Character)) == 0))
+                if (character.Description.Contains(term, StringComparison.CurrentCultureIgnoreCase)
+                    && (!queryMatches.Any((existingChar) => (existingChar.Description == character.Description && existingChar.Character == character.Character))))
                 {
-                    queryMatches.Add(_char);
+                    queryMatches.Add(character);
                 }
             }
         }
@@ -112,15 +112,15 @@ public class CharacterSearch
         return type switch
         {
             CharacterType.All => [.. queryMatches],
-            CharacterType.IPAAll => (from _char in queryMatches where _char.IsIPA select _char).ToArray(),
-            _ => (from _char in queryMatches where (_char.Type == type) select _char).ToArray(),
+            CharacterType.IPAAll => [.. (from characater in queryMatches where characater.IsIPA select characater)],
+            _ => [.. (from character in queryMatches where character.Type == type select character)],
         };
     }
 
     /// <summary>
     /// Add a character to the search list so that it can show up in search results.
     /// </summary>
-    public void Add(string character, string description, CharacterType type, bool multiline)
+    public static void Add(string character, string description, CharacterType type, bool multiline)
     {
         Characters.Add(new CharacterInfo(character, description, type, multiline));
     }

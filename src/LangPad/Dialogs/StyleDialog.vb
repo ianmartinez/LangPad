@@ -81,7 +81,7 @@ Public Class StyleDialog
         If SaveDialog.ShowDialog = DialogResult.OK Then
             Dim FileData As String = ""
 
-            FileData += $"Font={StyleFont.Name }|{StyleFont.Size }|{StyleFont.Style.ToString }" & Environment.NewLine
+            FileData += $"Font={StyleFont.Name }|{StyleFont.Size }|{StyleFont.Style}{Environment.NewLine}"
             FileData += $"Color={ColorTranslator.ToHtml(StyleColor) }" & Environment.NewLine
             FileData += $"Highlight={ColorTranslator.ToHtml(StyleHighlight) }" & Environment.NewLine
             FileData += $"CharOffset={StyleCharOffset }" & Environment.NewLine

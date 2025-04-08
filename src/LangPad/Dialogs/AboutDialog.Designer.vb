@@ -58,21 +58,21 @@ Partial Class AboutDialog
         MainTabControl.Controls.Add(ChangelogTab)
         MainTabControl.Controls.Add(CreditsTab)
         MainTabControl.Dock = DockStyle.Fill
-        MainTabControl.Location = New Point(6, 292)
-        MainTabControl.Margin = New Padding(3, 5, 3, 5)
+        MainTabControl.Location = New Point(8, 355)
+        MainTabControl.Margin = New Padding(4, 6, 4, 6)
         MainTabControl.Name = "MainTabControl"
         MainTabControl.SelectedIndex = 0
-        MainTabControl.Size = New Size(773, 617)
+        MainTabControl.Size = New Size(966, 771)
         MainTabControl.TabIndex = 9
         ' 
         ' LicenseTab
         ' 
         LicenseTab.Controls.Add(LicenseTextBox)
-        LicenseTab.Location = New Point(4, 29)
-        LicenseTab.Margin = New Padding(3, 5, 3, 5)
+        LicenseTab.Location = New Point(4, 34)
+        LicenseTab.Margin = New Padding(4, 6, 4, 6)
         LicenseTab.Name = "LicenseTab"
-        LicenseTab.Padding = New Padding(8, 9, 8, 9)
-        LicenseTab.Size = New Size(765, 584)
+        LicenseTab.Padding = New Padding(10, 11, 10, 11)
+        LicenseTab.Size = New Size(958, 733)
         LicenseTab.TabIndex = 0
         LicenseTab.Text = "License"
         LicenseTab.UseVisualStyleBackColor = True
@@ -83,24 +83,24 @@ Partial Class AboutDialog
         LicenseTextBox.BorderStyle = BorderStyle.None
         LicenseTextBox.Dock = DockStyle.Fill
         LicenseTextBox.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        LicenseTextBox.Location = New Point(8, 9)
-        LicenseTextBox.Margin = New Padding(3, 5, 3, 5)
+        LicenseTextBox.Location = New Point(10, 11)
+        LicenseTextBox.Margin = New Padding(4, 6, 4, 6)
         LicenseTextBox.Multiline = True
         LicenseTextBox.Name = "LicenseTextBox"
         LicenseTextBox.ReadOnly = True
         LicenseTextBox.ScrollBars = ScrollBars.Vertical
-        LicenseTextBox.Size = New Size(749, 566)
+        LicenseTextBox.Size = New Size(938, 711)
         LicenseTextBox.TabIndex = 7
         LicenseTextBox.Text = resources.GetString("LicenseTextBox.Text")
         ' 
         ' ChangelogTab
         ' 
         ChangelogTab.Controls.Add(ChangelogTextBox)
-        ChangelogTab.Location = New Point(4, 29)
-        ChangelogTab.Margin = New Padding(3, 5, 3, 5)
+        ChangelogTab.Location = New Point(4, 34)
+        ChangelogTab.Margin = New Padding(4, 6, 4, 6)
         ChangelogTab.Name = "ChangelogTab"
-        ChangelogTab.Padding = New Padding(8, 9, 8, 9)
-        ChangelogTab.Size = New Size(765, 584)
+        ChangelogTab.Padding = New Padding(10, 11, 10, 11)
+        ChangelogTab.Size = New Size(958, 733)
         ChangelogTab.TabIndex = 1
         ChangelogTab.Text = "Changelog"
         ChangelogTab.UseVisualStyleBackColor = True
@@ -111,23 +111,24 @@ Partial Class AboutDialog
         ChangelogTextBox.BorderStyle = BorderStyle.None
         ChangelogTextBox.Dock = DockStyle.Fill
         ChangelogTextBox.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        ChangelogTextBox.Location = New Point(8, 9)
-        ChangelogTextBox.Margin = New Padding(3, 5, 3, 5)
+        ChangelogTextBox.Location = New Point(10, 11)
+        ChangelogTextBox.Margin = New Padding(4, 6, 4, 6)
         ChangelogTextBox.Multiline = True
         ChangelogTextBox.Name = "ChangelogTextBox"
         ChangelogTextBox.ReadOnly = True
         ChangelogTextBox.ScrollBars = ScrollBars.Vertical
-        ChangelogTextBox.Size = New Size(749, 566)
+        ChangelogTextBox.Size = New Size(938, 711)
         ChangelogTextBox.TabIndex = 8
         ChangelogTextBox.Text = resources.GetString("ChangelogTextBox.Text")
         ' 
         ' CreditsTab
         ' 
         CreditsTab.Controls.Add(CreditsTextBox)
-        CreditsTab.Location = New Point(4, 29)
+        CreditsTab.Location = New Point(4, 34)
+        CreditsTab.Margin = New Padding(4, 4, 4, 4)
         CreditsTab.Name = "CreditsTab"
-        CreditsTab.Padding = New Padding(8, 9, 8, 9)
-        CreditsTab.Size = New Size(764, 584)
+        CreditsTab.Padding = New Padding(10, 11, 10, 11)
+        CreditsTab.Size = New Size(958, 733)
         CreditsTab.TabIndex = 2
         CreditsTab.Text = "Credits"
         CreditsTab.UseVisualStyleBackColor = True
@@ -138,13 +139,13 @@ Partial Class AboutDialog
         CreditsTextBox.BorderStyle = BorderStyle.None
         CreditsTextBox.Dock = DockStyle.Fill
         CreditsTextBox.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        CreditsTextBox.Location = New Point(8, 9)
-        CreditsTextBox.Margin = New Padding(3, 5, 3, 5)
+        CreditsTextBox.Location = New Point(10, 11)
+        CreditsTextBox.Margin = New Padding(4, 6, 4, 6)
         CreditsTextBox.Multiline = True
         CreditsTextBox.Name = "CreditsTextBox"
         CreditsTextBox.ReadOnly = True
         CreditsTextBox.ScrollBars = ScrollBars.Vertical
-        CreditsTextBox.Size = New Size(748, 566)
+        CreditsTextBox.Size = New Size(938, 711)
         CreditsTextBox.TabIndex = 8
         CreditsTextBox.Text = resources.GetString("CreditsTextBox.Text")
         ' 
@@ -156,14 +157,15 @@ Partial Class AboutDialog
         MainTableLayoutPanel.Controls.Add(ButtonTableLayout, 0, 1)
         MainTableLayoutPanel.Controls.Add(MainTabControl, 0, 2)
         MainTableLayoutPanel.Dock = DockStyle.Fill
-        MainTableLayoutPanel.Location = New Point(5, 6)
+        MainTableLayoutPanel.Location = New Point(6, 8)
+        MainTableLayoutPanel.Margin = New Padding(4, 4, 4, 4)
         MainTableLayoutPanel.Name = "MainTableLayoutPanel"
-        MainTableLayoutPanel.Padding = New Padding(3, 3, 3, 3)
+        MainTableLayoutPanel.Padding = New Padding(4, 4, 4, 4)
         MainTableLayoutPanel.RowCount = 3
-        MainTableLayoutPanel.RowStyles.Add(New RowStyle(SizeType.Absolute, 180F))
+        MainTableLayoutPanel.RowStyles.Add(New RowStyle(SizeType.Absolute, 225F))
         MainTableLayoutPanel.RowStyles.Add(New RowStyle())
         MainTableLayoutPanel.RowStyles.Add(New RowStyle())
-        MainTableLayoutPanel.Size = New Size(785, 905)
+        MainTableLayoutPanel.Size = New Size(982, 1131)
         MainTableLayoutPanel.TabIndex = 77
         ' 
         ' HeaderBorderPanel
@@ -173,10 +175,11 @@ Partial Class AboutDialog
         HeaderBorderPanel.BorderStyle = BorderStyle.FixedSingle
         HeaderBorderPanel.Controls.Add(HeaderPanel)
         HeaderBorderPanel.Dock = DockStyle.Fill
-        HeaderBorderPanel.Location = New Point(6, 6)
+        HeaderBorderPanel.Location = New Point(8, 8)
+        HeaderBorderPanel.Margin = New Padding(4, 4, 4, 4)
         HeaderBorderPanel.Name = "HeaderBorderPanel"
         HeaderBorderPanel.Padding = New Padding(1)
-        HeaderBorderPanel.Size = New Size(773, 174)
+        HeaderBorderPanel.Size = New Size(966, 217)
         HeaderBorderPanel.TabIndex = 76
         ' 
         ' HeaderPanel
@@ -187,9 +190,10 @@ Partial Class AboutDialog
         HeaderPanel.Controls.Add(PictureBox1)
         HeaderPanel.Dock = DockStyle.Fill
         HeaderPanel.Location = New Point(1, 1)
+        HeaderPanel.Margin = New Padding(4, 4, 4, 4)
         HeaderPanel.Name = "HeaderPanel"
-        HeaderPanel.Padding = New Padding(14, 32, 14, 32)
-        HeaderPanel.Size = New Size(769, 170)
+        HeaderPanel.Padding = New Padding(18, 40, 18, 40)
+        HeaderPanel.Size = New Size(962, 213)
         HeaderPanel.TabIndex = 77
         ' 
         ' LangPadLabel
@@ -198,11 +202,11 @@ Partial Class AboutDialog
         LangPadLabel.Dock = DockStyle.Fill
         LangPadLabel.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold)
         LangPadLabel.ForeColor = Color.White
-        LangPadLabel.Location = New Point(123, 32)
-        LangPadLabel.Margin = New Padding(8, 5, 3, 5)
+        LangPadLabel.Location = New Point(154, 40)
+        LangPadLabel.Margin = New Padding(10, 6, 4, 6)
         LangPadLabel.Name = "LangPadLabel"
-        LangPadLabel.Padding = New Padding(14, 2, 0, 0)
-        LangPadLabel.Size = New Size(632, 106)
+        LangPadLabel.Padding = New Padding(18, 2, 0, 0)
+        LangPadLabel.Size = New Size(790, 133)
         LangPadLabel.TabIndex = 12
         LangPadLabel.Text = "LangPad"
         LangPadLabel.TextAlign = ContentAlignment.MiddleLeft
@@ -213,9 +217,10 @@ Partial Class AboutDialog
         PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
         PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
         PictureBox1.Dock = DockStyle.Left
-        PictureBox1.Location = New Point(14, 32)
+        PictureBox1.Location = New Point(18, 40)
+        PictureBox1.Margin = New Padding(4, 4, 4, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(109, 106)
+        PictureBox1.Size = New Size(136, 133)
         PictureBox1.TabIndex = 13
         PictureBox1.TabStop = False
         ' 
@@ -231,13 +236,13 @@ Partial Class AboutDialog
         ButtonTableLayout.Controls.Add(PatreonButton, 0, 0)
         ButtonTableLayout.Controls.Add(WebsiteButton, 1, 0)
         ButtonTableLayout.Dock = DockStyle.Fill
-        ButtonTableLayout.Location = New Point(6, 188)
-        ButtonTableLayout.Margin = New Padding(3, 5, 3, 5)
+        ButtonTableLayout.Location = New Point(8, 235)
+        ButtonTableLayout.Margin = New Padding(4, 6, 4, 6)
         ButtonTableLayout.Name = "ButtonTableLayout"
-        ButtonTableLayout.Padding = New Padding(0, 9, 0, 5)
+        ButtonTableLayout.Padding = New Padding(0, 11, 0, 6)
         ButtonTableLayout.RowCount = 1
         ButtonTableLayout.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        ButtonTableLayout.Size = New Size(773, 94)
+        ButtonTableLayout.Size = New Size(966, 108)
         ButtonTableLayout.TabIndex = 78
         ' 
         ' GitHubButton
@@ -246,10 +251,11 @@ Partial Class AboutDialog
         GitHubButton.AutoSizeMode = AutoSizeMode.GrowAndShrink
         GitHubButton.Dock = DockStyle.Fill
         GitHubButton.Image = CType(resources.GetObject("GitHubButton.Image"), Image)
-        GitHubButton.Location = New Point(260, 12)
+        GitHubButton.Location = New Point(326, 15)
+        GitHubButton.Margin = New Padding(4, 4, 4, 4)
         GitHubButton.Name = "GitHubButton"
-        GitHubButton.Padding = New Padding(5, 6, 5, 6)
-        GitHubButton.Size = New Size(251, 74)
+        GitHubButton.Padding = New Padding(6, 8, 6, 8)
+        GitHubButton.Size = New Size(314, 83)
         GitHubButton.TabIndex = 2
         GitHubButton.Text = "GitHub"
         GitHubButton.TextImageRelation = TextImageRelation.ImageAboveText
@@ -261,10 +267,11 @@ Partial Class AboutDialog
         PatreonButton.AutoSizeMode = AutoSizeMode.GrowAndShrink
         PatreonButton.Dock = DockStyle.Fill
         PatreonButton.Image = CType(resources.GetObject("PatreonButton.Image"), Image)
-        PatreonButton.Location = New Point(3, 12)
+        PatreonButton.Location = New Point(4, 15)
+        PatreonButton.Margin = New Padding(4, 4, 4, 4)
         PatreonButton.Name = "PatreonButton"
-        PatreonButton.Padding = New Padding(5, 6, 5, 6)
-        PatreonButton.Size = New Size(251, 74)
+        PatreonButton.Padding = New Padding(6, 8, 6, 8)
+        PatreonButton.Size = New Size(314, 83)
         PatreonButton.TabIndex = 1
         PatreonButton.Text = "Support on Patreon"
         PatreonButton.TextImageRelation = TextImageRelation.ImageAboveText
@@ -276,10 +283,11 @@ Partial Class AboutDialog
         WebsiteButton.AutoSizeMode = AutoSizeMode.GrowAndShrink
         WebsiteButton.Dock = DockStyle.Fill
         WebsiteButton.Image = CType(resources.GetObject("WebsiteButton.Image"), Image)
-        WebsiteButton.Location = New Point(517, 12)
+        WebsiteButton.Location = New Point(648, 15)
+        WebsiteButton.Margin = New Padding(4, 4, 4, 4)
         WebsiteButton.Name = "WebsiteButton"
-        WebsiteButton.Padding = New Padding(5, 6, 5, 6)
-        WebsiteButton.Size = New Size(253, 74)
+        WebsiteButton.Padding = New Padding(6, 8, 6, 8)
+        WebsiteButton.Size = New Size(314, 83)
         WebsiteButton.TabIndex = 3
         WebsiteButton.Text = "Website"
         WebsiteButton.TextImageRelation = TextImageRelation.ImageAboveText
@@ -287,16 +295,16 @@ Partial Class AboutDialog
         ' 
         ' AboutDialog
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(795, 921)
+        ClientSize = New Size(994, 1151)
         Controls.Add(MainTableLayoutPanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
-        Margin = New Padding(3, 5, 3, 5)
+        Margin = New Padding(4, 6, 4, 6)
         MaximizeBox = False
         MinimizeBox = False
         Name = "AboutDialog"
-        Padding = New Padding(5, 6, 5, 10)
+        Padding = New Padding(6, 8, 6, 12)
         ShowInTaskbar = False
         StartPosition = FormStartPosition.CenterParent
         Text = "About"

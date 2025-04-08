@@ -198,3 +198,10 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+
+src/LangPad/bin
+src/LangPad/obj
+src/LangPadData/bin
+src/LangPadData/obj
+src/LangPadUI/bin
+src/LangPadUI/obj

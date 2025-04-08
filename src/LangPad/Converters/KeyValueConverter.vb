@@ -11,7 +11,7 @@ Module KeyValueConverter
     ''' <param name="SourceStr">The serialized color.</param>
     ''' 
     ''' <returns>The color that was parsed.</returns>
-    Public Function FromCompatibleColor(ByVal SourceStr As String) As Color
+    Public Function FromCompatibleColor(SourceStr As String) As Color
         Dim ColorParts = SourceStr.Split(","c)
         If ColorParts.Length = 4 Then
             Return Color.FromArgb(Integer.Parse((0)), Integer.Parse(ColorParts(1)), Integer.Parse(ColorParts(2)), Integer.Parse(ColorParts(3)))
@@ -42,7 +42,7 @@ Module KeyValueConverter
     ''' <param name="SourceStr">The serialized font.</param>
     ''' 
     ''' <returns>The font that was parsed.</returns>
-    Public Function FromCompatibleFont(ByVal SourceStr As String) As Font
+    Public Function FromCompatibleFont(SourceStr As String) As Font
         Dim FontParts = SourceStr.Split("|"c)
         Dim Name As String = FontParts(0)
         Dim Size As Single = (Single.Parse(FontParts(1)))

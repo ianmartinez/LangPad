@@ -198,7 +198,7 @@ Module NotebookController
     ''' Update all stats for a page.
     ''' </summary>
     Public Sub UpdatePageStats()
-        MainForm.PageCountLabel.Text = "Page Count: " & CurrentNotebook.Pages.Count
+        MainForm.PageCountLabel.Text = $"Page Count: {CurrentNotebook.Pages.Count}"
         MainForm.WordWrapToolStripMenuItem.Checked = MainForm.CurrentRtb.WordWrap
         UpdateLineNumber()
         UpdateWordCount()
@@ -208,15 +208,15 @@ Module NotebookController
     ''' Updates the UI to reflect the character and word count of the current page.
     ''' </summary>
     Public Sub UpdateWordCount()
-        MainForm.CharCountToolStripLabel.Text = "Character Count: " & MainForm.CurrentRtb.TextLength
-        MainForm.WordCountToolStripLabel.Text = "Word Count: " & WordCount(MainForm.CurrentRtb.Text)
+        MainForm.CharCountToolStripLabel.Text = $"Character Count: {MainForm.CurrentRtb.TextLength}"
+        MainForm.WordCountToolStripLabel.Text = $"Word Count: {WordCount(MainForm.CurrentRtb.Text)}"
     End Sub
 
     ''' <summary>
     ''' Updates the UI to reflect the line number of the current page.
     ''' </summary>
     Public Sub UpdateLineNumber()
-        MainForm.CurrentLineToolStripLabel.Text = "Line: " & (MainForm.CurrentRtb.GetLineFromCharIndex(MainForm.CurrentRtb.SelectionStart) + 1)
+        MainForm.CurrentLineToolStripLabel.Text = $"Line: {MainForm.CurrentRtb.GetLineFromCharIndex(MainForm.CurrentRtb.SelectionStart) + 1}"
     End Sub
 
     ''' <summary>

@@ -14,7 +14,7 @@ Module ImageResizer
     ''' <param name="preserveAspect">If the aspect ratio of the source image should be preserved.</param>
     ''' 
     ''' <returns>A copy of the source image, resized to the new size.</returns>
-    Public Function ResizeImage(ByVal sourceImage As Image, ByVal newSize As Size, Optional ByVal preserveAspect As Boolean = True) As Image
+    Public Function ResizeImage(sourceImage As Image, newSize As Size, Optional preserveAspect As Boolean = True) As Image
         Dim AdjustedWidth = HeightAfterWidthAdjust(sourceImage.Size, newSize, preserveAspect)
         Dim AdjustedHeight = WidthAfterHeightAdjust(sourceImage.Size, newSize, preserveAspect)
 
@@ -36,7 +36,7 @@ Module ImageResizer
     ''' <param name="preserveAspect">If the aspect ratio should be preserved</param>
     ''' 
     ''' <returns>The height value of the new rectangle.</returns>
-    Public Function HeightAfterWidthAdjust(ByVal oldSize As Size, ByVal newSize As Size, ByVal preserveAspect As Boolean) As Integer
+    Public Function HeightAfterWidthAdjust(oldSize As Size, newSize As Size, preserveAspect As Boolean) As Integer
         If preserveAspect Then
             Return CDec(oldSize.Width) * newSize.Height / oldSize.Height
         Else
@@ -53,7 +53,7 @@ Module ImageResizer
     ''' <param name="preserveAspect">If the aspect ratio should be preserved</param>
     ''' 
     ''' <returns>The width value of the new rectangle.</returns>
-    Public Function WidthAfterHeightAdjust(ByVal oldSize As Size, ByVal newSize As Size, ByVal preserveAspect As Boolean) As Integer
+    Public Function WidthAfterHeightAdjust(oldSize As Size, newSize As Size, preserveAspect As Boolean) As Integer
         If preserveAspect Then
             Return CDec(oldSize.Height) * newSize.Width / oldSize.Width
         Else

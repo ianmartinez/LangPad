@@ -12,7 +12,7 @@ Public Class PageNameDialog
         NameTextBox.Width = Width - (NameTextBox.Left + NameTextBox.Margin.Left + NameTextBox.Margin.Right)
     End Sub
 
-    Private Sub OkDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OkDialogButton.Click
+    Private Sub OkDialogButton_Click(sender As Object, e As EventArgs) Handles OkDialogButton.Click
         Enabled = False
         Cursor.Current = Cursors.WaitCursor
         SavePages()
@@ -31,7 +31,7 @@ Public Class PageNameDialog
         Close()
     End Sub
 
-    Private Sub CancelDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CancelDialogButton.Click
+    Private Sub CancelDialogButton_Click(sender As Object, e As EventArgs) Handles CancelDialogButton.Click
         DialogResult = DialogResult.Cancel
         Close()
     End Sub

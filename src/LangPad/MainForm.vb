@@ -245,11 +245,11 @@ Public Class MainForm
         End If
     End Sub
 
-    Private Sub PagePrintDocument_BeginPrint(ByVal sender As Object, ByVal e As Printing.PrintEventArgs) Handles PagePrintDocument.BeginPrint
+    Private Sub PagePrintDocument_BeginPrint(sender As Object, e As Printing.PrintEventArgs) Handles PagePrintDocument.BeginPrint
         LastPrintedCharPos = 0
     End Sub
 
-    Private Sub PagePrintDocument_PrintPage(ByVal sender As Object, ByVal e As Printing.PrintPageEventArgs) Handles PagePrintDocument.PrintPage
+    Private Sub PagePrintDocument_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PagePrintDocument.PrintPage
         LastPrintedCharPos = CurrentRtb.Print(LastPrintedCharPos, CurrentRtb.TextLength, e)
 
         If LastPrintedCharPos < CurrentRtb.TextLength Then

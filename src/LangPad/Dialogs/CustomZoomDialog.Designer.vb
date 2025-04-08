@@ -36,12 +36,12 @@ Partial Class CustomZoomDialog
         ZoomNud.DecimalPlaces = 3
         ZoomNud.Dock = DockStyle.Top
         ZoomNud.Increment = New Decimal(New Integer() {1, 0, 0, 65536})
-        ZoomNud.Location = New Point(8, 31)
-        ZoomNud.Margin = New Padding(3, 2, 3, 2)
+        ZoomNud.Location = New Point(10, 39)
+        ZoomNud.Margin = New Padding(4, 2, 4, 2)
         ZoomNud.Maximum = New Decimal(New Integer() {64, 0, 0, 0})
         ZoomNud.Minimum = New Decimal(New Integer() {15626, 0, 0, 393216})
         ZoomNud.Name = "ZoomNud"
-        ZoomNud.Size = New Size(338, 27)
+        ZoomNud.Size = New Size(422, 31)
         ZoomNud.TabIndex = 6
         ZoomNud.Value = New Decimal(New Integer() {64, 0, 0, 0})
         ' 
@@ -49,10 +49,11 @@ Partial Class CustomZoomDialog
         ' 
         Label2.AutoSize = True
         Label2.Dock = DockStyle.Top
-        Label2.Location = New Point(8, 5)
+        Label2.Location = New Point(10, 6)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Padding = New Padding(0, 0, 0, 6)
-        Label2.Size = New Size(96, 26)
+        Label2.Padding = New Padding(0, 0, 0, 8)
+        Label2.Size = New Size(117, 33)
         Label2.TabIndex = 75
         Label2.Text = "Zoom Factor:"
         ' 
@@ -61,18 +62,18 @@ Partial Class CustomZoomDialog
         ButtonTableLayout.AutoSize = True
         ButtonTableLayout.AutoSizeMode = AutoSizeMode.GrowAndShrink
         ButtonTableLayout.ColumnCount = 2
-        ButtonTableLayout.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
-        ButtonTableLayout.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.0F))
+        ButtonTableLayout.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        ButtonTableLayout.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
         ButtonTableLayout.Controls.Add(OkDialogButton, 0, 0)
         ButtonTableLayout.Controls.Add(CancelDialogButton, 1, 0)
         ButtonTableLayout.Dock = DockStyle.Bottom
-        ButtonTableLayout.Location = New Point(8, 88)
-        ButtonTableLayout.Margin = New Padding(4, 5, 4, 5)
+        ButtonTableLayout.Location = New Point(10, 115)
+        ButtonTableLayout.Margin = New Padding(5, 6, 5, 6)
         ButtonTableLayout.Name = "ButtonTableLayout"
-        ButtonTableLayout.Padding = New Padding(0, 9, 0, 5)
+        ButtonTableLayout.Padding = New Padding(0, 11, 0, 6)
         ButtonTableLayout.RowCount = 1
-        ButtonTableLayout.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
-        ButtonTableLayout.Size = New Size(338, 52)
+        ButtonTableLayout.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        ButtonTableLayout.Size = New Size(422, 60)
         ButtonTableLayout.TabIndex = 76
         ' 
         ' OkDialogButton
@@ -80,11 +81,11 @@ Partial Class CustomZoomDialog
         OkDialogButton.AutoSize = True
         OkDialogButton.AutoSizeMode = AutoSizeMode.GrowAndShrink
         OkDialogButton.Dock = DockStyle.Fill
-        OkDialogButton.Location = New Point(3, 11)
-        OkDialogButton.Margin = New Padding(3, 2, 3, 2)
+        OkDialogButton.Location = New Point(4, 13)
+        OkDialogButton.Margin = New Padding(4, 2, 4, 2)
         OkDialogButton.Name = "OkDialogButton"
-        OkDialogButton.Padding = New Padding(3, 2, 3, 2)
-        OkDialogButton.Size = New Size(163, 34)
+        OkDialogButton.Padding = New Padding(4, 2, 4, 2)
+        OkDialogButton.Size = New Size(203, 39)
         OkDialogButton.TabIndex = 1
         OkDialogButton.Text = "OK"
         OkDialogButton.UseVisualStyleBackColor = True
@@ -95,11 +96,11 @@ Partial Class CustomZoomDialog
         CancelDialogButton.AutoSizeMode = AutoSizeMode.GrowAndShrink
         CancelDialogButton.DialogResult = DialogResult.Cancel
         CancelDialogButton.Dock = DockStyle.Fill
-        CancelDialogButton.Location = New Point(172, 11)
-        CancelDialogButton.Margin = New Padding(3, 2, 3, 2)
+        CancelDialogButton.Location = New Point(215, 13)
+        CancelDialogButton.Margin = New Padding(4, 2, 4, 2)
         CancelDialogButton.Name = "CancelDialogButton"
-        CancelDialogButton.Padding = New Padding(3, 2, 3, 2)
-        CancelDialogButton.Size = New Size(163, 34)
+        CancelDialogButton.Padding = New Padding(4, 2, 4, 2)
+        CancelDialogButton.Size = New Size(203, 39)
         CancelDialogButton.TabIndex = 0
         CancelDialogButton.Text = "Cancel"
         CancelDialogButton.UseVisualStyleBackColor = True
@@ -107,18 +108,18 @@ Partial Class CustomZoomDialog
         ' CustomZoomDialog
         ' 
         AcceptButton = OkDialogButton
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(354, 145)
+        ClientSize = New Size(442, 181)
         Controls.Add(ZoomNud)
         Controls.Add(ButtonTableLayout)
         Controls.Add(Label2)
         FormBorderStyle = FormBorderStyle.FixedDialog
-        Margin = New Padding(4, 5, 4, 5)
+        Margin = New Padding(5, 6, 5, 6)
         MaximizeBox = False
         MinimizeBox = False
         Name = "CustomZoomDialog"
-        Padding = New Padding(8, 5, 8, 5)
+        Padding = New Padding(10, 6, 10, 6)
         ShowInTaskbar = False
         StartPosition = FormStartPosition.CenterParent
         Text = "Custom Zoom"

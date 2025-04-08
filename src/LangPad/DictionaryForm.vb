@@ -175,7 +175,7 @@ Public Class DictionaryForm
             DictionaryGrid.Rows(CurrentPos).Selected = True
             DictionaryGrid.FirstDisplayedScrollingRowIndex = DictionaryGrid.SelectedRows(0).Index
         Else
-            MessageBox.Show("""" + FindTextBox.Text + """ was not found " + "")
+            MessageBox.Show($"""{FindTextBox.Text}"" was not found ")
         End If
     End Sub
 

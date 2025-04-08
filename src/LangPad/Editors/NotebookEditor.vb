@@ -36,7 +36,7 @@ Public Class NotebookEditor
             CurrentNotebook.Modified = True
         End If
 
-        DictionaryForm.Text = If(TitleTextBox.Text = "", "Dictionary", "Dictionary - " + TitleTextBox.Text)
+        DictionaryForm.Text = If(TitleTextBox.Text = "", "Dictionary", $"Dictionary - {TitleTextBox.Text}")
     End Sub
 
     Private Sub AuthorTextBox_TextChanged(sender As Object, e As EventArgs) Handles AuthorTextBox.TextChanged

@@ -22,173 +22,177 @@ Partial Class ImportImageDialog
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ButtonTableLayout = New System.Windows.Forms.TableLayoutPanel()
-        Me.OkDialogButton = New System.Windows.Forms.Button()
-        Me.CancelDialogButton = New System.Windows.Forms.Button()
-        Me.PreviewPictureBox = New System.Windows.Forms.PictureBox()
-        Me.WidthLabel = New System.Windows.Forms.Label()
-        Me.WidthNud = New System.Windows.Forms.NumericUpDown()
-        Me.HeightNud = New System.Windows.Forms.NumericUpDown()
-        Me.HeightLabel = New System.Windows.Forms.Label()
-        Me.LockAspectCheckBox = New System.Windows.Forms.CheckBox()
-        Me.RefreshPreviewButton = New System.Windows.Forms.Button()
-        Me.ResetSizeButton = New System.Windows.Forms.Button()
-        Me.ButtonTableLayout.SuspendLayout()
-        CType(Me.PreviewPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.WidthNud, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.HeightNud, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'ButtonTableLayout
-        '
-        Me.ButtonTableLayout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonTableLayout.ColumnCount = 2
-        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.ButtonTableLayout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.ButtonTableLayout.Controls.Add(Me.OkDialogButton, 0, 0)
-        Me.ButtonTableLayout.Controls.Add(Me.CancelDialogButton, 1, 0)
-        Me.ButtonTableLayout.Location = New System.Drawing.Point(742, 695)
-        Me.ButtonTableLayout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.ButtonTableLayout.Name = "ButtonTableLayout"
-        Me.ButtonTableLayout.RowCount = 1
-        Me.ButtonTableLayout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.ButtonTableLayout.Size = New System.Drawing.Size(219, 45)
-        Me.ButtonTableLayout.TabIndex = 0
-        '
-        'OkDialogButton
-        '
-        Me.OkDialogButton.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.OkDialogButton.Location = New System.Drawing.Point(4, 5)
-        Me.OkDialogButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.OkDialogButton.Name = "OkDialogButton"
-        Me.OkDialogButton.Size = New System.Drawing.Size(100, 35)
-        Me.OkDialogButton.TabIndex = 0
-        Me.OkDialogButton.Text = "OK"
-        '
-        'CancelDialogButton
-        '
-        Me.CancelDialogButton.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CancelDialogButton.DialogResult = DialogResult.Cancel
-        Me.CancelDialogButton.Location = New System.Drawing.Point(114, 5)
-        Me.CancelDialogButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.CancelDialogButton.Name = "CancelDialogButton"
-        Me.CancelDialogButton.Size = New System.Drawing.Size(100, 35)
-        Me.CancelDialogButton.TabIndex = 1
-        Me.CancelDialogButton.Text = "Cancel"
-        '
-        'PreviewPictureBox
-        '
-        Me.PreviewPictureBox.BackColor = System.Drawing.Color.Black
-        Me.PreviewPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PreviewPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PreviewPictureBox.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PreviewPictureBox.Location = New System.Drawing.Point(0, 0)
-        Me.PreviewPictureBox.Name = "PreviewPictureBox"
-        Me.PreviewPictureBox.Size = New System.Drawing.Size(978, 613)
-        Me.PreviewPictureBox.TabIndex = 1
-        Me.PreviewPictureBox.TabStop = False
-        '
-        'WidthLabel
-        '
-        Me.WidthLabel.AutoSize = True
-        Me.WidthLabel.Location = New System.Drawing.Point(13, 643)
-        Me.WidthLabel.Name = "WidthLabel"
-        Me.WidthLabel.Size = New System.Drawing.Size(54, 20)
-        Me.WidthLabel.TabIndex = 2
-        Me.WidthLabel.Text = "Width:"
-        '
-        'WidthNud
-        '
-        Me.WidthNud.Location = New System.Drawing.Point(73, 641)
-        Me.WidthNud.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.WidthNud.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.WidthNud.Name = "WidthNud"
-        Me.WidthNud.Size = New System.Drawing.Size(120, 26)
-        Me.WidthNud.TabIndex = 2
-        Me.WidthNud.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
-        'HeightNud
-        '
-        Me.HeightNud.Location = New System.Drawing.Point(270, 641)
-        Me.HeightNud.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.HeightNud.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.HeightNud.Name = "HeightNud"
-        Me.HeightNud.Size = New System.Drawing.Size(120, 26)
-        Me.HeightNud.TabIndex = 3
-        Me.HeightNud.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
-        'HeightLabel
-        '
-        Me.HeightLabel.AutoSize = True
-        Me.HeightLabel.Location = New System.Drawing.Point(204, 643)
-        Me.HeightLabel.Name = "HeightLabel"
-        Me.HeightLabel.Size = New System.Drawing.Size(60, 20)
-        Me.HeightLabel.TabIndex = 4
-        Me.HeightLabel.Text = "Height:"
-        '
-        'LockAspectCheckBox
-        '
-        Me.LockAspectCheckBox.AutoSize = True
-        Me.LockAspectCheckBox.Checked = True
-        Me.LockAspectCheckBox.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.LockAspectCheckBox.Location = New System.Drawing.Point(406, 642)
-        Me.LockAspectCheckBox.Name = "LockAspectCheckBox"
-        Me.LockAspectCheckBox.Size = New System.Drawing.Size(165, 24)
-        Me.LockAspectCheckBox.TabIndex = 4
-        Me.LockAspectCheckBox.Text = "Lock Aspect Ratio"
-        Me.LockAspectCheckBox.UseVisualStyleBackColor = True
-        '
-        'RefreshPreviewButton
-        '
-        Me.RefreshPreviewButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RefreshPreviewButton.Location = New System.Drawing.Point(816, 636)
-        Me.RefreshPreviewButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.RefreshPreviewButton.Name = "RefreshPreviewButton"
-        Me.RefreshPreviewButton.Size = New System.Drawing.Size(140, 35)
-        Me.RefreshPreviewButton.TabIndex = 6
-        Me.RefreshPreviewButton.Text = "Refresh Preview"
-        '
-        'ResetSizeButton
-        '
-        Me.ResetSizeButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ResetSizeButton.Location = New System.Drawing.Point(668, 636)
-        Me.ResetSizeButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.ResetSizeButton.Name = "ResetSizeButton"
-        Me.ResetSizeButton.Size = New System.Drawing.Size(140, 35)
-        Me.ResetSizeButton.TabIndex = 5
-        Me.ResetSizeButton.Text = "Reset Size"
-        '
-        'ImportImageDialog
-        '
-        Me.AcceptButton = Me.OkDialogButton
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.CancelDialogButton
-        Me.ClientSize = New System.Drawing.Size(978, 758)
-        Me.Controls.Add(Me.ResetSizeButton)
-        Me.Controls.Add(Me.RefreshPreviewButton)
-        Me.Controls.Add(Me.LockAspectCheckBox)
-        Me.Controls.Add(Me.HeightNud)
-        Me.Controls.Add(Me.HeightLabel)
-        Me.Controls.Add(Me.WidthNud)
-        Me.Controls.Add(Me.WidthLabel)
-        Me.Controls.Add(Me.PreviewPictureBox)
-        Me.Controls.Add(Me.ButtonTableLayout)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "ImportImageDialog"
-        Me.ShowIcon = False
-        Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Import Image"
-        Me.ButtonTableLayout.ResumeLayout(False)
-        CType(Me.PreviewPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.WidthNud, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.HeightNud, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        ButtonTableLayout = New TableLayoutPanel()
+        OkDialogButton = New Button()
+        CancelDialogButton = New Button()
+        PreviewPictureBox = New PictureBox()
+        WidthLabel = New Label()
+        WidthNud = New NumericUpDown()
+        HeightNud = New NumericUpDown()
+        HeightLabel = New Label()
+        LockAspectCheckBox = New CheckBox()
+        RefreshPreviewButton = New Button()
+        ResetSizeButton = New Button()
+        ButtonTableLayout.SuspendLayout()
+        CType(PreviewPictureBox, ComponentModel.ISupportInitialize).BeginInit()
+        CType(WidthNud, ComponentModel.ISupportInitialize).BeginInit()
+        CType(HeightNud, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' ButtonTableLayout
+        ' 
+        ButtonTableLayout.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        ButtonTableLayout.ColumnCount = 2
+        ButtonTableLayout.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        ButtonTableLayout.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50F))
+        ButtonTableLayout.Controls.Add(OkDialogButton, 0, 0)
+        ButtonTableLayout.Controls.Add(CancelDialogButton, 1, 0)
+        ButtonTableLayout.Location = New Point(824, 869)
+        ButtonTableLayout.Margin = New Padding(4, 6, 4, 6)
+        ButtonTableLayout.Name = "ButtonTableLayout"
+        ButtonTableLayout.RowCount = 1
+        ButtonTableLayout.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        ButtonTableLayout.Size = New Size(243, 56)
+        ButtonTableLayout.TabIndex = 0
+        ' 
+        ' OkDialogButton
+        ' 
+        OkDialogButton.Anchor = AnchorStyles.None
+        OkDialogButton.Location = New Point(5, 6)
+        OkDialogButton.Margin = New Padding(4, 6, 4, 6)
+        OkDialogButton.Name = "OkDialogButton"
+        OkDialogButton.Size = New Size(111, 44)
+        OkDialogButton.TabIndex = 0
+        OkDialogButton.Text = "OK"
+        ' 
+        ' CancelDialogButton
+        ' 
+        CancelDialogButton.Anchor = AnchorStyles.None
+        CancelDialogButton.DialogResult = DialogResult.Cancel
+        CancelDialogButton.Location = New Point(126, 6)
+        CancelDialogButton.Margin = New Padding(4, 6, 4, 6)
+        CancelDialogButton.Name = "CancelDialogButton"
+        CancelDialogButton.Size = New Size(111, 44)
+        CancelDialogButton.TabIndex = 1
+        CancelDialogButton.Text = "Cancel"
+        ' 
+        ' PreviewPictureBox
+        ' 
+        PreviewPictureBox.BackColor = Color.Black
+        PreviewPictureBox.BackgroundImageLayout = ImageLayout.Zoom
+        PreviewPictureBox.BorderStyle = BorderStyle.FixedSingle
+        PreviewPictureBox.Dock = DockStyle.Top
+        PreviewPictureBox.Location = New Point(0, 0)
+        PreviewPictureBox.Margin = New Padding(3, 4, 3, 4)
+        PreviewPictureBox.Name = "PreviewPictureBox"
+        PreviewPictureBox.Size = New Size(1087, 766)
+        PreviewPictureBox.TabIndex = 1
+        PreviewPictureBox.TabStop = False
+        ' 
+        ' WidthLabel
+        ' 
+        WidthLabel.AutoSize = True
+        WidthLabel.Location = New Point(14, 804)
+        WidthLabel.Name = "WidthLabel"
+        WidthLabel.Size = New Size(64, 25)
+        WidthLabel.TabIndex = 2
+        WidthLabel.Text = "Width:"
+        ' 
+        ' WidthNud
+        ' 
+        WidthNud.Location = New Point(81, 801)
+        WidthNud.Margin = New Padding(3, 4, 3, 4)
+        WidthNud.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        WidthNud.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        WidthNud.Name = "WidthNud"
+        WidthNud.Size = New Size(133, 31)
+        WidthNud.TabIndex = 2
+        WidthNud.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        ' 
+        ' HeightNud
+        ' 
+        HeightNud.Location = New Point(300, 801)
+        HeightNud.Margin = New Padding(3, 4, 3, 4)
+        HeightNud.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        HeightNud.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        HeightNud.Name = "HeightNud"
+        HeightNud.Size = New Size(133, 31)
+        HeightNud.TabIndex = 3
+        HeightNud.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        ' 
+        ' HeightLabel
+        ' 
+        HeightLabel.AutoSize = True
+        HeightLabel.Location = New Point(227, 804)
+        HeightLabel.Name = "HeightLabel"
+        HeightLabel.Size = New Size(69, 25)
+        HeightLabel.TabIndex = 4
+        HeightLabel.Text = "Height:"
+        ' 
+        ' LockAspectCheckBox
+        ' 
+        LockAspectCheckBox.AutoSize = True
+        LockAspectCheckBox.Checked = True
+        LockAspectCheckBox.CheckState = CheckState.Checked
+        LockAspectCheckBox.Location = New Point(451, 802)
+        LockAspectCheckBox.Margin = New Padding(3, 4, 3, 4)
+        LockAspectCheckBox.Name = "LockAspectCheckBox"
+        LockAspectCheckBox.Size = New Size(179, 29)
+        LockAspectCheckBox.TabIndex = 4
+        LockAspectCheckBox.Text = "Lock Aspect Ratio"
+        LockAspectCheckBox.UseVisualStyleBackColor = True
+        ' 
+        ' RefreshPreviewButton
+        ' 
+        RefreshPreviewButton.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        RefreshPreviewButton.Location = New Point(907, 795)
+        RefreshPreviewButton.Margin = New Padding(4, 6, 4, 6)
+        RefreshPreviewButton.Name = "RefreshPreviewButton"
+        RefreshPreviewButton.Size = New Size(156, 44)
+        RefreshPreviewButton.TabIndex = 6
+        RefreshPreviewButton.Text = "Refresh Preview"
+        ' 
+        ' ResetSizeButton
+        ' 
+        ResetSizeButton.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        ResetSizeButton.Location = New Point(742, 795)
+        ResetSizeButton.Margin = New Padding(4, 6, 4, 6)
+        ResetSizeButton.Name = "ResetSizeButton"
+        ResetSizeButton.Size = New Size(156, 44)
+        ResetSizeButton.TabIndex = 5
+        ResetSizeButton.Text = "Reset Size"
+        ' 
+        ' ImportImageDialog
+        ' 
+        AcceptButton = OkDialogButton
+        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleMode = AutoScaleMode.Font
+        CancelButton = CancelDialogButton
+        ClientSize = New Size(1087, 948)
+        Controls.Add(ResetSizeButton)
+        Controls.Add(RefreshPreviewButton)
+        Controls.Add(LockAspectCheckBox)
+        Controls.Add(HeightNud)
+        Controls.Add(HeightLabel)
+        Controls.Add(WidthNud)
+        Controls.Add(WidthLabel)
+        Controls.Add(PreviewPictureBox)
+        Controls.Add(ButtonTableLayout)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        Margin = New Padding(4, 6, 4, 6)
+        MaximizeBox = False
+        MinimizeBox = False
+        Name = "ImportImageDialog"
+        ShowIcon = False
+        ShowInTaskbar = False
+        StartPosition = FormStartPosition.CenterParent
+        Text = "Import Image"
+        ButtonTableLayout.ResumeLayout(False)
+        CType(PreviewPictureBox, ComponentModel.ISupportInitialize).EndInit()
+        CType(WidthNud, ComponentModel.ISupportInitialize).EndInit()
+        CType(HeightNud, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
     Friend WithEvents ButtonTableLayout As System.Windows.Forms.TableLayoutPanel

@@ -40,6 +40,6 @@ public class TempFolderNTX
 
     public string GetPagePath(int pageIndex)
     {
-        return Path.Combine(PagesFolder, pageIndex.ToString() + ".html");
+        return Path.Combine(PagesFolder, $"{pageIndex}.html");
     }
 }

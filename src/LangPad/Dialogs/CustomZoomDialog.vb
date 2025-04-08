@@ -7,13 +7,13 @@
         End Try
     End Sub
 
-    Private Sub OkDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OkDialogButton.Click
+    Private Sub OkDialogButton_Click(sender As Object, e As EventArgs) Handles OkDialogButton.Click
         MainForm.CurrentRtb.ZoomFactor = ZoomNud.Value
         DialogResult = DialogResult.OK
         Close()
     End Sub
 
-    Private Sub CancelDialogButton_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OkDialogButton.Click
+    Private Sub CancelDialogButton_Click(sender As Object, e As EventArgs) Handles OkDialogButton.Click
         DialogResult = DialogResult.Cancel
         Close()
     End Sub

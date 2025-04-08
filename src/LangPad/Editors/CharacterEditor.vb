@@ -164,7 +164,7 @@ Public Class CharacterEditor
         End If
     End Sub
 
-    Public Sub InsertAccentButton(ByVal text As String, ByVal charName As String)
+    Public Sub InsertAccentButton(text As String, charName As String)
         Dim AccentButton As New AccentCheckButton(charName) With {
             .Text = text,
             .Font = New Font("Calibri", 18, FontStyle.Regular),

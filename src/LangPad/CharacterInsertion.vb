@@ -9,7 +9,7 @@ Module CharacterInsertion
     ''' 
     ''' <param name="TextBox">The text box to insert into.</param>
     ''' <param name="Text">The text to insert.</param>
-    Public Sub InsertText(ByVal TextBox As TextBoxBase, ByVal Text As String)
+    Public Sub InsertText(TextBox As TextBoxBase, Text As String)
         Dim IsRtb = TypeOf TextBox Is RichTextBox
         Dim CurrentPos As Integer = TextBox.SelectionStart
 
@@ -31,7 +31,7 @@ Module CharacterInsertion
     ''' <param name="TextBox">The text box.</param>
     ''' <param name="StartChar">The character before the word.</param>
     ''' <param name="EndChar">The character after the word.</param>
-    Public Sub SelectWord(TextBox As TextBoxBase, Optional ByVal StartChar As Char = " ", Optional ByVal EndChar As Char = " ")
+    Public Sub SelectWord(TextBox As TextBoxBase, Optional StartChar As Char = " ", Optional EndChar As Char = " ")
         Dim TextChars As Char() = TextBox.Text.ToCharArray()
         Dim i As Integer = TextBox.SelectionStart - 1
 
@@ -106,7 +106,7 @@ Module CharacterInsertion
     ''' <param name="TextBox">The text box to remove the brackets from.</param>
     ''' <param name="BracketStart">The starting bracket.</param>
     ''' <param name="BracketEnd">The closing bracket.</param>
-    Public Sub RemoveBrackets(ByVal TextBox As TextBoxBase, ByVal BracketStart As String, ByVal BracketEnd As String)
+    Public Sub RemoveBrackets(TextBox As TextBoxBase, BracketStart As String, BracketEnd As String)
         If TextBox.Text.Length >= 2 AndAlso TextBox.SelectionLength = 0 Then ' Infer what the user wants selected
             ' Get the current state of the selection in the text box
             Dim OldSelLength = TextBox.SelectionLength
@@ -186,7 +186,7 @@ Module CharacterInsertion
     ''' </summary>
     ''' 
     ''' <param name="TextBox">The textbox to remove the brackets from.</param>
-    Public Sub RemoveAllBrackets(ByVal TextBox As TextBoxBase)
+    Public Sub RemoveAllBrackets(TextBox As TextBoxBase)
         RemoveBrackets(TextBox, "[", "]")
         RemoveBrackets(TextBox, "/", "/")
     End Sub

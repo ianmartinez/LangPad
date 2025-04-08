@@ -61,7 +61,7 @@ Module AppInstance
     ''' 
     ''' <returns>The display name used throughout the application.</returns>
     Public Function GetAppDisplayName() As String
-        Return "LangPad " + GetVersionString()
+        Return $"LangPad {GetVersionString()}"
     End Function
 
     ''' <summary>

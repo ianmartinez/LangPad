@@ -42,11 +42,11 @@ public class DictionaryNTX
             if (i > 0)
                 dictionaryFile.Add(new KvLine(KvLineType.Blank));
 
-            dictionaryFile.Add(new KvLine(KvLineType.Comment, "Word " + i));
-            dictionaryFile.Add(new KvLine(KvLineType.KeyValue, i + ".word", word.Word));
-            dictionaryFile.Add(new KvLine(KvLineType.KeyValue, i + ".pronunciation", word.Pronunciation));
-            dictionaryFile.Add(new KvLine(KvLineType.KeyValue, i + ".definition", word.Definition));
-            dictionaryFile.Add(new KvLine(KvLineType.KeyValue, i + ".notes", word.Notes));
+            dictionaryFile.Add(new KvLine(KvLineType.Comment, $"Word {i}"));
+            dictionaryFile.Add(new KvLine(KvLineType.KeyValue, $"{i}.word", word.Word));
+            dictionaryFile.Add(new KvLine(KvLineType.KeyValue, $"{i}.pronunciation", word.Pronunciation));
+            dictionaryFile.Add(new KvLine(KvLineType.KeyValue, $"{i}.definition", word.Definition));
+            dictionaryFile.Add(new KvLine(KvLineType.KeyValue, $"{i}.notes", word.Notes));
         }
 
         return Write(dictionaryFile);

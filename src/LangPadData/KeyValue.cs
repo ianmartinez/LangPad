@@ -109,7 +109,7 @@ public static class KeyValue
     /// <returns>The value matching the key.</returns>
     public static string Search(Dictionary<string, string> data, string key, string fallback = "")
     {
-        return data.ContainsKey(key) ? data[key] : fallback;
+        return data.TryGetValue(key, out string value) ? value : fallback;
     }
 
     /// <summary>
